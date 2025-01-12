@@ -1,0 +1,81 @@
+\doxysection{wait\+\_\+instruction.\+h}
+\hypertarget{wait__instruction_8h_source}{}\label{wait__instruction_8h_source}\index{tesseract\_command\_language/include/tesseract\_command\_language/wait\_instruction.h@{tesseract\_command\_language/include/tesseract\_command\_language/wait\_instruction.h}}
+\mbox{\hyperlink{wait__instruction_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00026\ \textcolor{preprocessor}{\#ifndef\ TESSERACT\_COMMAND\_LANGUAGE\_WAIT\_INSTRUCTION\_H}}
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#define\ TESSERACT\_COMMAND\_LANGUAGE\_WAIT\_INSTRUCTION\_H}}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#include\ <tesseract\_common/macros.h>}}
+\DoxyCodeLine{00030\ TESSERACT\_COMMON\_IGNORE\_WARNINGS\_PUSH}
+\DoxyCodeLine{00031\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00032\ \textcolor{preprocessor}{\#include\ <boost/uuid/uuid.hpp>}}
+\DoxyCodeLine{00033\ \mbox{\hyperlink{namespaceTESSERACT__COMMON__IGNORE__WARNINGS__POP}{TESSERACT\_COMMON\_IGNORE\_WARNINGS\_POP}}}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{instruction__poly_8h}{tesseract\_command\_language/poly/instruction\_poly.h}}>}}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacetesseract__planning}{tesseract\_planning}}}
+\DoxyCodeLine{00038\ \{}
+\DoxyCodeLine{00039\ \textcolor{keyword}{enum\ class}\ \mbox{\hyperlink{namespacetesseract__planning_a7edb075f70b3779a23e8cd950368c66e}{WaitInstructionType}}\ :\ \textcolor{keywordtype}{int}}
+\DoxyCodeLine{00040\ \{}
+\DoxyCodeLine{00041\ \ \ \mbox{\hyperlink{namespacetesseract__planning_a7edb075f70b3779a23e8cd950368c66ea346ff32eaa3c09983fb2ec057816d352}{TIME}}\ =\ 0,}
+\DoxyCodeLine{00042\ \ \ \mbox{\hyperlink{namespacetesseract__planning_a7edb075f70b3779a23e8cd950368c66eadca44148ee77a4455c552fc905be7ebb}{DIGITAL\_INPUT\_HIGH}}\ =\ 1,}
+\DoxyCodeLine{00043\ \ \ \mbox{\hyperlink{namespacetesseract__planning_a7edb075f70b3779a23e8cd950368c66ea5c942f17f873eec115d7cd4910778cef}{DIGITAL\_INPUT\_LOW}}\ =\ 2,}
+\DoxyCodeLine{00044\ \ \ \mbox{\hyperlink{namespacetesseract__planning_a3b7d1ebe0ca33829b8c6ca9e9e4c1ff2afd7449f3c0dae783bd8960c264eff1af}{DIGITAL\_OUTPUT\_HIGH}}\ =\ 3,}
+\DoxyCodeLine{00045\ \ \ \mbox{\hyperlink{namespacetesseract__planning_a3b7d1ebe0ca33829b8c6ca9e9e4c1ff2adc44bfe9b2ce1975d7312158278ac8df}{DIGITAL\_OUTPUT\_LOW}}\ =\ 4}
+\DoxyCodeLine{00046\ \};}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00058\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classtesseract__planning_1_1WaitInstruction}{WaitInstruction}}}
+\DoxyCodeLine{00059\ \{}
+\DoxyCodeLine{00060\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00061\ \ \ \mbox{\hyperlink{classtesseract__planning_1_1WaitInstruction_a2bc01fa60fd198d5b7389ef8aa82cb97}{WaitInstruction}}()\ =\ \textcolor{keywordflow}{default};\ \ \textcolor{comment}{//\ Required\ for\ boost\ serialization\ do\ not\ use}}
+\DoxyCodeLine{00062\ \ \ \mbox{\hyperlink{classtesseract__planning_1_1WaitInstruction_a2bc01fa60fd198d5b7389ef8aa82cb97}{WaitInstruction}}(\textcolor{keywordtype}{double}\ time);}
+\DoxyCodeLine{00063\ \ \ \mbox{\hyperlink{classtesseract__planning_1_1WaitInstruction_a2bc01fa60fd198d5b7389ef8aa82cb97}{WaitInstruction}}(\mbox{\hyperlink{namespacetesseract__planning_a7edb075f70b3779a23e8cd950368c66e}{WaitInstructionType}}\ \mbox{\hyperlink{ompl__planner__tests_8cpp_a03004818513b2a0604415827c17b9595}{type}},\ \textcolor{keywordtype}{int}\ io);}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00065\ \ \ \textcolor{keyword}{const}\ boost::uuids::uuid\&\ \mbox{\hyperlink{classtesseract__planning_1_1WaitInstruction_a5494603e578f2edd5f934b2f60728938}{getUUID}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00066\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classtesseract__planning_1_1WaitInstruction_a2f51527473425407fc6068dedc12b2d5}{setUUID}}(\textcolor{keyword}{const}\ boost::uuids::uuid\&\ uuid);}
+\DoxyCodeLine{00067\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classtesseract__planning_1_1WaitInstruction_a246c249fe99c83f7ba803e6b21cc2284}{regenerateUUID}}();}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00069\ \ \ \textcolor{keyword}{const}\ boost::uuids::uuid\&\ \mbox{\hyperlink{classtesseract__planning_1_1WaitInstruction_a70054338abe7b175ac3fc95585780926}{getParentUUID}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00070\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classtesseract__planning_1_1WaitInstruction_ad8edcef3f5fef92456ab6dd16367dd9a}{setParentUUID}}(\textcolor{keyword}{const}\ boost::uuids::uuid\&\ uuid);}
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00072\ \ \ \textcolor{keyword}{const}\ std::string\&\ \mbox{\hyperlink{classtesseract__planning_1_1WaitInstruction_ad59033b490ff18ab0f4289e1bd4eeb49}{getDescription}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00074\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classtesseract__planning_1_1WaitInstruction_a9a421b6f1c4242f178055c37489ac2cc}{setDescription}}(\textcolor{keyword}{const}\ std::string\&\ description);}
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00076\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classtesseract__planning_1_1WaitInstruction_ab557dd08a792268368780d747d13697a}{print}}(\textcolor{keyword}{const}\ std::string\&\ prefix\ =\ \textcolor{stringliteral}{"{}"{}})\ \textcolor{keyword}{const};\ \ \textcolor{comment}{//\ NOLINT}}
+\DoxyCodeLine{00077\ }
+\DoxyCodeLine{00082\ \ \ \mbox{\hyperlink{namespacetesseract__planning_a7edb075f70b3779a23e8cd950368c66e}{WaitInstructionType}}\ \mbox{\hyperlink{classtesseract__planning_1_1WaitInstruction_a35cdf30ac2ddcc49886e64ef379d4aa5}{getWaitType}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00083\ }
+\DoxyCodeLine{00088\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classtesseract__planning_1_1WaitInstruction_ad8aec76a668acf8931814ad37110a8d9}{setWaitType}}(\mbox{\hyperlink{namespacetesseract__planning_a7edb075f70b3779a23e8cd950368c66e}{WaitInstructionType}}\ \mbox{\hyperlink{ompl__planner__tests_8cpp_a03004818513b2a0604415827c17b9595}{type}});}
+\DoxyCodeLine{00089\ }
+\DoxyCodeLine{00094\ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classtesseract__planning_1_1WaitInstruction_aeef7a70c2df5776204c6224e82b25a92}{getWaitTime}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00099\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classtesseract__planning_1_1WaitInstruction_a6ac067e4ed986a86b80e6a87c9f23bec}{setWaitTime}}(\textcolor{keywordtype}{double}\ time);}
+\DoxyCodeLine{00100\ }
+\DoxyCodeLine{00105\ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classtesseract__planning_1_1WaitInstruction_ab094872c5d2ed0dc013ed3ca631cb4d2}{getWaitIO}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00106\ }
+\DoxyCodeLine{00111\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classtesseract__planning_1_1WaitInstruction_a848e03066886574ee8f8fb6347343240}{setWaitIO}}(\textcolor{keywordtype}{int}\ io);}
+\DoxyCodeLine{00112\ }
+\DoxyCodeLine{00118\ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classtesseract__planning_1_1WaitInstruction_a649c5148e2f4910b79ebc17364220325}{operator==}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classtesseract__planning_1_1WaitInstruction}{WaitInstruction}}\&\ rhs)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00119\ }
+\DoxyCodeLine{00125\ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classtesseract__planning_1_1WaitInstruction_a331eca2bea44d80b7db91852f7626944}{operator!=}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classtesseract__planning_1_1WaitInstruction}{WaitInstruction}}\&\ rhs)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00126\ }
+\DoxyCodeLine{00127\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00129\ \ \ boost::uuids::uuid\ \mbox{\hyperlink{classtesseract__planning_1_1WaitInstruction_a17f12f082d7c17c26f25ea2140c970d4}{uuid\_}}\{\};}
+\DoxyCodeLine{00131\ \ \ boost::uuids::uuid\ \mbox{\hyperlink{classtesseract__planning_1_1WaitInstruction_a070f503c85b4ea4975b4a18bdca586bb}{parent\_uuid\_}}\{\};}
+\DoxyCodeLine{00133\ \ \ std::string\ \mbox{\hyperlink{classtesseract__planning_1_1WaitInstruction_a956cddb65c04f54279fd3393046acbf5}{description\_}}\{\ \textcolor{stringliteral}{"{}Tesseract\ Wait\ Instruction"{}}\ \};}
+\DoxyCodeLine{00134\ \ \ \mbox{\hyperlink{namespacetesseract__planning_a7edb075f70b3779a23e8cd950368c66e}{WaitInstructionType}}\ \mbox{\hyperlink{classtesseract__planning_1_1WaitInstruction_a20ec599d76aa511f6df716c0d9ddeaef}{wait\_type\_}}\{\ \mbox{\hyperlink{namespacetesseract__planning_a7edb075f70b3779a23e8cd950368c66ea346ff32eaa3c09983fb2ec057816d352}{WaitInstructionType::TIME}}\ \};}
+\DoxyCodeLine{00135\ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classtesseract__planning_1_1WaitInstruction_a3a27f27a10527cb152339a2efac2b121}{wait\_time\_}}\{\ 0\ \};}
+\DoxyCodeLine{00136\ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classtesseract__planning_1_1WaitInstruction_a1c674c1e42997a5e1e57e0e2974fa722}{wait\_io\_}}\{\ -\/1\ \};}
+\DoxyCodeLine{00137\ }
+\DoxyCodeLine{00138\ \ \ \textcolor{keyword}{friend}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classtesseract__planning_1_1WaitInstruction_ac98d07dd8f7b70e16ccb9a01abf56b9c}{boost::serialization::access}};}
+\DoxyCodeLine{00139\ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{class}\ Archive>}
+\DoxyCodeLine{00140\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classtesseract__planning_1_1WaitInstruction_a26b12cb34586cd5abdb83c78b755b66e}{serialize}}(Archive\&\ ar,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ version);\ \ \textcolor{comment}{//\ NOLINT}}
+\DoxyCodeLine{00141\ \};}
+\DoxyCodeLine{00142\ \}\ \ \textcolor{comment}{//\ namespace\ tesseract\_planning}}
+\DoxyCodeLine{00143\ }
+\DoxyCodeLine{00144\ \mbox{\hyperlink{instruction__poly_8h_a4dc28033f37b499d6d9e64b1d5767973}{TESSERACT\_INSTRUCTION\_EXPORT\_KEY}}(\mbox{\hyperlink{namespacetesseract__planning}{tesseract\_planning}},\ WaitInstruction)}
+\DoxyCodeLine{00145\ }
+\DoxyCodeLine{00146\ \textcolor{preprocessor}{\#endif\ \ }\textcolor{comment}{//\ TESSERACT\_COMMAND\_LANGUAGE\_WAIT\_INSTRUCTION\_H}}
+
+\end{DoxyCode}

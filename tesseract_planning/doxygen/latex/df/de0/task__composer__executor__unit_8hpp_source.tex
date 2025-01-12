@@ -1,0 +1,400 @@
+\doxysection{task\+\_\+composer\+\_\+executor\+\_\+unit.\+hpp}
+\hypertarget{task__composer__executor__unit_8hpp_source}{}\label{task__composer__executor__unit_8hpp_source}\index{tesseract\_task\_composer/core/include/tesseract\_task\_composer/core/test\_suite/task\_composer\_executor\_unit.hpp@{tesseract\_task\_composer/core/include/tesseract\_task\_composer/core/test\_suite/task\_composer\_executor\_unit.hpp}}
+\mbox{\hyperlink{task__composer__executor__unit_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00026\ \textcolor{preprocessor}{\#ifndef\ TESSERACT\_TASK\_COMPOSER\_TASK\_COMPOSER\_EXECUTOR\_UNIT\_HPP}}
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#define\ TESSERACT\_TASK\_COMPOSER\_TASK\_COMPOSER\_EXECUTOR\_UNIT\_HPP}}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#include\ <tesseract\_common/macros.h>}}
+\DoxyCodeLine{00030\ TESSERACT\_COMMON\_IGNORE\_WARNINGS\_PUSH}
+\DoxyCodeLine{00031\ \textcolor{preprocessor}{\#include\ <gtest/gtest.h>}}
+\DoxyCodeLine{00032\ \mbox{\hyperlink{namespaceTESSERACT__COMMON__IGNORE__WARNINGS__POP}{TESSERACT\_COMMON\_IGNORE\_WARNINGS\_POP}}}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{task__composer__serialization__utils_8hpp}{tesseract\_task\_composer/core/test\_suite/task\_composer\_serialization\_utils.hpp}}>}}
+\DoxyCodeLine{00035\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{task__composer__context_8h}{tesseract\_task\_composer/core/task\_composer\_context.h}}>}}
+\DoxyCodeLine{00036\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{task__composer__future_8h}{tesseract\_task\_composer/core/task\_composer\_future.h}}>}}
+\DoxyCodeLine{00037\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{task__composer__data__storage_8h}{tesseract\_task\_composer/core/task\_composer\_data\_storage.h}}>}}
+\DoxyCodeLine{00038\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{task__composer__pipeline_8h}{tesseract\_task\_composer/core/task\_composer\_pipeline.h}}>}}
+\DoxyCodeLine{00039\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{task__composer__graph_8h}{tesseract\_task\_composer/core/task\_composer\_graph.h}}>}}
+\DoxyCodeLine{00040\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{task__composer__plugin__factory_8h}{tesseract\_task\_composer/core/task\_composer\_plugin\_factory.h}}>}}
+\DoxyCodeLine{00041\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{done__task_8h}{tesseract\_task\_composer/core/nodes/done\_task.h}}>}}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ \textcolor{preprocessor}{\#include\ <tesseract\_common/resource\_locator.h>}}
+\DoxyCodeLine{00044\ \textcolor{preprocessor}{\#include\ <tesseract\_common/yaml\_utils.h>}}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacetesseract__planning_1_1test__suite}{tesseract\_planning::test\_suite}}}
+\DoxyCodeLine{00047\ \{}
+\DoxyCodeLine{00048\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00049\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{namespacetesseract__planning_1_1test__suite_a649946c89a3a88974ce23682a200d74f}{runTaskComposerExecutorTest}}()}
+\DoxyCodeLine{00050\ \{}
+\DoxyCodeLine{00051\ \ \ \{\ \ \textcolor{comment}{//\ task}}
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{keyword}{auto}\ \mbox{\hyperlink{tesseract__task__composer__core__unit_8cpp_aff72eefedb05c0f13d6346b099a22a7f}{task}}\ =\ std::make\_unique<DoneTask>(\textcolor{stringliteral}{"{}DoneTask"{}});}
+\DoxyCodeLine{00053\ \ \ \ \ \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerExecutor_abd1fc7052da011b01d53c63c43a771c4}{tesseract\_planning::TaskComposerExecutor::UPtr}}\ \mbox{\hyperlink{tesseract__task__composer__taskflow__unit_8cpp_ab85065e5a325fc5bf8675e6c55a3e72f}{executor}}\ =\ std::make\_unique<T>(\textcolor{stringliteral}{"{}TaskComposerExecutorTests"{}},\ 3);}
+\DoxyCodeLine{00054\ \ \ \ \ \mbox{\hyperlink{command__language__utils__unit_8cpp_ac9999b1938b6048a1222396d6821eab6}{EXPECT\_EQ}}(\mbox{\hyperlink{tesseract__task__composer__taskflow__unit_8cpp_ab85065e5a325fc5bf8675e6c55a3e72f}{executor}}-\/>getName(),\ \textcolor{stringliteral}{"{}TaskComposerExecutorTests"{}});}
+\DoxyCodeLine{00055\ \ \ \ \ \mbox{\hyperlink{command__language__utils__unit_8cpp_ac9999b1938b6048a1222396d6821eab6}{EXPECT\_EQ}}(\mbox{\hyperlink{tesseract__task__composer__taskflow__unit_8cpp_ab85065e5a325fc5bf8675e6c55a3e72f}{executor}}-\/>getWorkerCount(),\ 3);}
+\DoxyCodeLine{00056\ \ \ \ \ \mbox{\hyperlink{command__language__utils__unit_8cpp_ac9999b1938b6048a1222396d6821eab6}{EXPECT\_EQ}}(\mbox{\hyperlink{tesseract__task__composer__taskflow__unit_8cpp_ab85065e5a325fc5bf8675e6c55a3e72f}{executor}}-\/>getTaskCount(),\ 0);}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{keyword}{auto}\ data\_storage\ =\ std::make\_unique<TaskComposerDataStorage>();}
+\DoxyCodeLine{00059\ \ \ \ \ \textcolor{keyword}{auto}\ future\ =\ \mbox{\hyperlink{tesseract__task__composer__taskflow__unit_8cpp_ab85065e5a325fc5bf8675e6c55a3e72f}{executor}}-\/>run(*\mbox{\hyperlink{tesseract__task__composer__core__unit_8cpp_aff72eefedb05c0f13d6346b099a22a7f}{task}},\ std::move(data\_storage));}
+\DoxyCodeLine{00060\ \ \ \ \ future-\/>wait();}
+\DoxyCodeLine{00061\ \ \ \ \ \mbox{\hyperlink{command__language__utils__unit_8cpp_a32b7bf22a514cfcff5d4e14d57ab1a8b}{EXPECT\_TRUE}}(future-\/>valid());}
+\DoxyCodeLine{00062\ \ \ \ \ \mbox{\hyperlink{command__language__utils__unit_8cpp_a32b7bf22a514cfcff5d4e14d57ab1a8b}{EXPECT\_TRUE}}(future-\/>ready());}
+\DoxyCodeLine{00063\ \ \ \ \ std::future\_status\ sd\ =\ future-\/>waitFor(std::chrono::duration<double>(1));}
+\DoxyCodeLine{00064\ \ \ \ \ \mbox{\hyperlink{command__language__utils__unit_8cpp_ac9999b1938b6048a1222396d6821eab6}{EXPECT\_EQ}}(sd,\ std::future\_status::ready);}
+\DoxyCodeLine{00065\ \ \ \ \ std::future\_status\ sc\ =\ future-\/>waitUntil(std::chrono::high\_resolution\_clock::now());}
+\DoxyCodeLine{00066\ \ \ \ \ \mbox{\hyperlink{command__language__utils__unit_8cpp_ac9999b1938b6048a1222396d6821eab6}{EXPECT\_EQ}}(sc,\ std::future\_status::ready);}
+\DoxyCodeLine{00067\ \ \ \ \ \textcolor{keyword}{auto}\ copy\_future\ =\ future-\/>copy();}
+\DoxyCodeLine{00068\ \ \ \ \ \mbox{\hyperlink{command__language__utils__unit_8cpp_a32b7bf22a514cfcff5d4e14d57ab1a8b}{EXPECT\_TRUE}}(copy\_future-\/>valid());}
+\DoxyCodeLine{00069\ \ \ \ \ \mbox{\hyperlink{command__language__utils__unit_8cpp_a32b7bf22a514cfcff5d4e14d57ab1a8b}{EXPECT\_TRUE}}(copy\_future-\/>ready());}
+\DoxyCodeLine{00070\ }
+\DoxyCodeLine{00071\ \ \ \ \ \mbox{\hyperlink{command__language__utils__unit_8cpp_a87b7f2690021fd8f1f348928f30fb2f9}{EXPECT\_FALSE}}(\mbox{\hyperlink{tesseract__task__composer__core__unit_8cpp_aff72eefedb05c0f13d6346b099a22a7f}{task}}-\/>isConditional());}
+\DoxyCodeLine{00072\ \ \ \ \ \mbox{\hyperlink{command__language__utils__unit_8cpp_ac9999b1938b6048a1222396d6821eab6}{EXPECT\_EQ}}(future-\/>context-\/>isAborted(),\ \textcolor{keyword}{false});}
+\DoxyCodeLine{00073\ \ \ \ \ \mbox{\hyperlink{command__language__utils__unit_8cpp_ac9999b1938b6048a1222396d6821eab6}{EXPECT\_EQ}}(future-\/>context-\/>isSuccessful(),\ \textcolor{keyword}{true});}
+\DoxyCodeLine{00074\ \ \ \ \ \mbox{\hyperlink{command__language__utils__unit_8cpp_ac9999b1938b6048a1222396d6821eab6}{EXPECT\_EQ}}(future-\/>context-\/>task\_infos.getInfoMap().size(),\ 1);}
+\DoxyCodeLine{00075\ \ \ \ \ \mbox{\hyperlink{command__language__utils__unit_8cpp_a32b7bf22a514cfcff5d4e14d57ab1a8b}{EXPECT\_TRUE}}(future-\/>context-\/>task\_infos.getAbortingNode().is\_nil());}
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00077\ \ \ \ \ future-\/>clear();}
+\DoxyCodeLine{00078\ \ \ \ \ \mbox{\hyperlink{command__language__utils__unit_8cpp_a87b7f2690021fd8f1f348928f30fb2f9}{EXPECT\_FALSE}}(future-\/>valid());}
+\DoxyCodeLine{00079\ }
+\DoxyCodeLine{00080\ \ \ \ \ \textcolor{comment}{//\ Serialization}}
+\DoxyCodeLine{00081\ \ \ \ \ \mbox{\hyperlink{namespacetesseract__planning_1_1test__suite_a3fbdef14cb25929313c8c35236cb7491}{test\_suite::runSerializationPointerTest}}(\mbox{\hyperlink{tesseract__task__composer__taskflow__unit_8cpp_ab85065e5a325fc5bf8675e6c55a3e72f}{executor}},\ \textcolor{stringliteral}{"{}TaskComposerExecutorTests"{}});}
+\DoxyCodeLine{00082\ \ \ \}}
+\DoxyCodeLine{00083\ }
+\DoxyCodeLine{00084\ \ \ tesseract\_common::GeneralResourceLocator\ \mbox{\hyperlink{ompl__constrained__planner__tests_8cpp_ac23cdf7d517ef4adf22863d54c6c9c65}{locator}};}
+\DoxyCodeLine{00085\ \ \ std::string\ \mbox{\hyperlink{tesseract__task__composer__core__unit_8cpp_a5d55e2558544e2ad2ea0b54f8e3d41fc}{str}}\ =\ R\textcolor{stringliteral}{"{}(task\_composer\_plugins:}}
+\DoxyCodeLine{00086\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ search\_paths:}}
+\DoxyCodeLine{00087\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ -\/\ /usr/local/lib}}
+\DoxyCodeLine{00088\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ search\_libraries:}}
+\DoxyCodeLine{00089\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ -\/\ tesseract\_task\_composer\_factories}}
+\DoxyCodeLine{00090\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ tasks:}}
+\DoxyCodeLine{00091\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ plugins:}}
+\DoxyCodeLine{00092\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ TestPipeline:}}
+\DoxyCodeLine{00093\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ class:\ PipelineTaskFactory}}
+\DoxyCodeLine{00094\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ config:}}
+\DoxyCodeLine{00095\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ conditional:\ true}}
+\DoxyCodeLine{00096\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ nodes:}}
+\DoxyCodeLine{00097\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ StartTask:}}
+\DoxyCodeLine{00098\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ class:\ StartTaskFactory}}
+\DoxyCodeLine{00099\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ config:}}
+\DoxyCodeLine{00100\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ conditional:\ false}}
+\DoxyCodeLine{00101\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ TestTask:}}
+\DoxyCodeLine{00102\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ class:\ TestTaskFactory}}
+\DoxyCodeLine{00103\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ config:}}
+\DoxyCodeLine{00104\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ conditional:\ true}}
+\DoxyCodeLine{00105\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ return\_value:\ 1}}
+\DoxyCodeLine{00106\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ inputs:}}
+\DoxyCodeLine{00107\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ port1:\ input\_data}}
+\DoxyCodeLine{00108\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ port2:\ [input\_data]}}
+\DoxyCodeLine{00109\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ outputs:}}
+\DoxyCodeLine{00110\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ port1:\ output\_data}}
+\DoxyCodeLine{00111\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ port2:\ [output\_data]}}
+\DoxyCodeLine{00112\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ DoneTask:}}
+\DoxyCodeLine{00113\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ class:\ DoneTaskFactory}}
+\DoxyCodeLine{00114\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ config:}}
+\DoxyCodeLine{00115\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ conditional:\ false}}
+\DoxyCodeLine{00116\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ AbortTask:}}
+\DoxyCodeLine{00117\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ class:\ DoneTaskFactory}}
+\DoxyCodeLine{00118\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ config:}}
+\DoxyCodeLine{00119\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ conditional:\ false}}
+\DoxyCodeLine{00120\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ edges:}}
+\DoxyCodeLine{00121\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ -\/\ source:\ StartTask}}
+\DoxyCodeLine{00122\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ destinations:\ [TestTask]}}
+\DoxyCodeLine{00123\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ -\/\ source:\ TestTask}}
+\DoxyCodeLine{00124\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ destinations:\ [AbortTask,\ DoneTask]}}
+\DoxyCodeLine{00125\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ terminals:\ [AbortTask,\ DoneTask]}}
+\DoxyCodeLine{00126\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ TestGraph:}}
+\DoxyCodeLine{00127\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ class:\ GraphTaskFactory}}
+\DoxyCodeLine{00128\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ config:}}
+\DoxyCodeLine{00129\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ conditional:\ false}}
+\DoxyCodeLine{00130\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ nodes:}}
+\DoxyCodeLine{00131\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ StartTask:}}
+\DoxyCodeLine{00132\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ class:\ StartTaskFactory}}
+\DoxyCodeLine{00133\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ config:}}
+\DoxyCodeLine{00134\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ conditional:\ false}}
+\DoxyCodeLine{00135\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ TestTask:}}
+\DoxyCodeLine{00136\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ class:\ TestTaskFactory}}
+\DoxyCodeLine{00137\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ config:}}
+\DoxyCodeLine{00138\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ conditional:\ true}}
+\DoxyCodeLine{00139\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ return\_value:\ 1}}
+\DoxyCodeLine{00140\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ inputs:}}
+\DoxyCodeLine{00141\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ port1:\ input\_data}}
+\DoxyCodeLine{00142\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ port2:\ [input\_data]}}
+\DoxyCodeLine{00143\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ outputs:}}
+\DoxyCodeLine{00144\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ port1:\ output\_data}}
+\DoxyCodeLine{00145\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ port2:\ [output\_data]}}
+\DoxyCodeLine{00146\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ DoneTask:}}
+\DoxyCodeLine{00147\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ class:\ DoneTaskFactory}}
+\DoxyCodeLine{00148\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ config:}}
+\DoxyCodeLine{00149\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ conditional:\ false}}
+\DoxyCodeLine{00150\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ AbortTask:}}
+\DoxyCodeLine{00151\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ class:\ DoneTaskFactory}}
+\DoxyCodeLine{00152\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ config:}}
+\DoxyCodeLine{00153\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ conditional:\ false}}
+\DoxyCodeLine{00154\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ edges:}}
+\DoxyCodeLine{00155\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ -\/\ source:\ StartTask}}
+\DoxyCodeLine{00156\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ destinations:\ [TestTask]}}
+\DoxyCodeLine{00157\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ -\/\ source:\ TestTask}}
+\DoxyCodeLine{00158\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ destinations:\ [AbortTask,\ DoneTask]}}
+\DoxyCodeLine{00159\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ terminals:\ [AbortTask,\ DoneTask])"{};}}
+\DoxyCodeLine{00160\ \textcolor{stringliteral}{}}
+\DoxyCodeLine{00161\ \textcolor{stringliteral}{\ \ \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerPluginFactory}{TaskComposerPluginFactory}}\ \mbox{\hyperlink{tesseract__task__composer__core__unit_8cpp_a8bba62c91929856da978fec24b8c410c}{factory}}(\mbox{\hyperlink{tesseract__task__composer__core__unit_8cpp_a5d55e2558544e2ad2ea0b54f8e3d41fc}{str}},\ \mbox{\hyperlink{ompl__constrained__planner__tests_8cpp_ac23cdf7d517ef4adf22863d54c6c9c65}{locator}});}}
+\DoxyCodeLine{00162\ \textcolor{stringliteral}{}}
+\DoxyCodeLine{00163\ \textcolor{stringliteral}{\ \ \{\ \ }\textcolor{comment}{//\ Pipeline}}
+\DoxyCodeLine{00164\ \ \ \ \ std::string\ \mbox{\hyperlink{tesseract__task__composer__core__unit_8cpp_a2454f40de1c3aa0f178336f0b1aeb497}{str2}}\ =\ R\textcolor{stringliteral}{"{}(config:}}
+\DoxyCodeLine{00165\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ conditional:\ true}}
+\DoxyCodeLine{00166\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ nodes:}}
+\DoxyCodeLine{00167\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ StartTask:}}
+\DoxyCodeLine{00168\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ task:\ TestPipeline}}
+\DoxyCodeLine{00169\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ config:}}
+\DoxyCodeLine{00170\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ conditional:\ false}}
+\DoxyCodeLine{00171\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ remapping:}}
+\DoxyCodeLine{00172\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ input\_data:\ output\_data}}
+\DoxyCodeLine{00173\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ DoneTask:}}
+\DoxyCodeLine{00174\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ class:\ DoneTaskFactory}}
+\DoxyCodeLine{00175\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ config:}}
+\DoxyCodeLine{00176\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ conditional:\ false}}
+\DoxyCodeLine{00177\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ edges:}}
+\DoxyCodeLine{00178\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ -\/\ source:\ StartTask}}
+\DoxyCodeLine{00179\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ destinations:\ [DoneTask]}}
+\DoxyCodeLine{00180\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ terminals:\ [DoneTask])"{};}}
+\DoxyCodeLine{00181\ \textcolor{stringliteral}{\ \ \ \ YAML::Node\ \mbox{\hyperlink{tesseract__task__composer__core__unit_8cpp_a01d92a800904faa16b8c1c1372c40fb3}{config}}\ =\ YAML::Load(\mbox{\hyperlink{tesseract__task__composer__core__unit_8cpp_a2454f40de1c3aa0f178336f0b1aeb497}{str2}});}}
+\DoxyCodeLine{00182\ \textcolor{stringliteral}{\ \ \ \ }\textcolor{keyword}{auto}\ \mbox{\hyperlink{tesseract__task__composer__core__unit_8cpp_a489f60cc4db2aa1e3d122f4b407de719}{pipeline}}\ =\ std::make\_unique<TaskComposerPipeline>(\textcolor{stringliteral}{"{}Pipeline"{}},\ \mbox{\hyperlink{tesseract__task__composer__core__unit_8cpp_a01d92a800904faa16b8c1c1372c40fb3}{config}}[\textcolor{stringliteral}{"{}config"{}}],\ \mbox{\hyperlink{tesseract__task__composer__core__unit_8cpp_a8bba62c91929856da978fec24b8c410c}{factory}});}
+\DoxyCodeLine{00183\ \ \ \ \ \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerExecutor_abd1fc7052da011b01d53c63c43a771c4}{tesseract\_planning::TaskComposerExecutor::UPtr}}\ \mbox{\hyperlink{tesseract__task__composer__taskflow__unit_8cpp_ab85065e5a325fc5bf8675e6c55a3e72f}{executor}}\ =\ std::make\_unique<T>(\textcolor{stringliteral}{"{}TaskComposerExecutorTests"{}},\ 3);}
+\DoxyCodeLine{00184\ \ \ \ \ \mbox{\hyperlink{command__language__utils__unit_8cpp_ac9999b1938b6048a1222396d6821eab6}{EXPECT\_EQ}}(\mbox{\hyperlink{tesseract__task__composer__taskflow__unit_8cpp_ab85065e5a325fc5bf8675e6c55a3e72f}{executor}}-\/>getName(),\ \textcolor{stringliteral}{"{}TaskComposerExecutorTests"{}});}
+\DoxyCodeLine{00185\ \ \ \ \ \mbox{\hyperlink{command__language__utils__unit_8cpp_ac9999b1938b6048a1222396d6821eab6}{EXPECT\_EQ}}(\mbox{\hyperlink{tesseract__task__composer__taskflow__unit_8cpp_ab85065e5a325fc5bf8675e6c55a3e72f}{executor}}-\/>getWorkerCount(),\ 3);}
+\DoxyCodeLine{00186\ \ \ \ \ \mbox{\hyperlink{command__language__utils__unit_8cpp_ac9999b1938b6048a1222396d6821eab6}{EXPECT\_EQ}}(\mbox{\hyperlink{tesseract__task__composer__taskflow__unit_8cpp_ab85065e5a325fc5bf8675e6c55a3e72f}{executor}}-\/>getTaskCount(),\ 0);}
+\DoxyCodeLine{00187\ }
+\DoxyCodeLine{00188\ \ \ \ \ \textcolor{keyword}{auto}\ data\_storage\ =\ std::make\_unique<TaskComposerDataStorage>();}
+\DoxyCodeLine{00189\ \ \ \ \ \textcolor{keyword}{auto}\ future\ =\ \mbox{\hyperlink{tesseract__task__composer__taskflow__unit_8cpp_ab85065e5a325fc5bf8675e6c55a3e72f}{executor}}-\/>run(*\mbox{\hyperlink{tesseract__task__composer__core__unit_8cpp_a489f60cc4db2aa1e3d122f4b407de719}{pipeline}},\ std::move(data\_storage));}
+\DoxyCodeLine{00190\ \ \ \ \ future-\/>wait();}
+\DoxyCodeLine{00191\ \ \ \ \ \mbox{\hyperlink{command__language__utils__unit_8cpp_a32b7bf22a514cfcff5d4e14d57ab1a8b}{EXPECT\_TRUE}}(future-\/>valid());}
+\DoxyCodeLine{00192\ \ \ \ \ \mbox{\hyperlink{command__language__utils__unit_8cpp_a32b7bf22a514cfcff5d4e14d57ab1a8b}{EXPECT\_TRUE}}(future-\/>ready());}
+\DoxyCodeLine{00193\ \ \ \ \ std::future\_status\ sd\ =\ future-\/>waitFor(std::chrono::duration<double>(1));}
+\DoxyCodeLine{00194\ \ \ \ \ \mbox{\hyperlink{command__language__utils__unit_8cpp_ac9999b1938b6048a1222396d6821eab6}{EXPECT\_EQ}}(sd,\ std::future\_status::ready);}
+\DoxyCodeLine{00195\ \ \ \ \ std::future\_status\ sc\ =\ future-\/>waitUntil(std::chrono::high\_resolution\_clock::now());}
+\DoxyCodeLine{00196\ \ \ \ \ \mbox{\hyperlink{command__language__utils__unit_8cpp_ac9999b1938b6048a1222396d6821eab6}{EXPECT\_EQ}}(sc,\ std::future\_status::ready);}
+\DoxyCodeLine{00197\ \ \ \ \ \textcolor{keyword}{auto}\ copy\_future\ =\ future-\/>copy();}
+\DoxyCodeLine{00198\ \ \ \ \ \mbox{\hyperlink{command__language__utils__unit_8cpp_a32b7bf22a514cfcff5d4e14d57ab1a8b}{EXPECT\_TRUE}}(copy\_future-\/>valid());}
+\DoxyCodeLine{00199\ \ \ \ \ \mbox{\hyperlink{command__language__utils__unit_8cpp_a32b7bf22a514cfcff5d4e14d57ab1a8b}{EXPECT\_TRUE}}(copy\_future-\/>ready());}
+\DoxyCodeLine{00200\ }
+\DoxyCodeLine{00201\ \ \ \ \ \mbox{\hyperlink{command__language__utils__unit_8cpp_a32b7bf22a514cfcff5d4e14d57ab1a8b}{EXPECT\_TRUE}}(\mbox{\hyperlink{tesseract__task__composer__core__unit_8cpp_a489f60cc4db2aa1e3d122f4b407de719}{pipeline}}-\/>isConditional());}
+\DoxyCodeLine{00202\ \ \ \ \ \mbox{\hyperlink{command__language__utils__unit_8cpp_ac9999b1938b6048a1222396d6821eab6}{EXPECT\_EQ}}(\mbox{\hyperlink{tesseract__task__composer__core__unit_8cpp_a489f60cc4db2aa1e3d122f4b407de719}{pipeline}}-\/>getTerminals().size(),\ 1);}
+\DoxyCodeLine{00203\ \ \ \ \ \textcolor{keyword}{auto}\ \mbox{\hyperlink{tesseract__task__composer__core__unit_8cpp_a611b7f61e296851efcc231c0bc62ebaf}{task1}}\ =\ \mbox{\hyperlink{tesseract__task__composer__core__unit_8cpp_a489f60cc4db2aa1e3d122f4b407de719}{pipeline}}-\/>getNodeByName(\textcolor{stringliteral}{"{}StartTask"{}});}
+\DoxyCodeLine{00204\ \ \ \ \ \textcolor{keyword}{auto}\ \mbox{\hyperlink{tesseract__task__composer__core__unit_8cpp_a7fdb3c783a88ac8e0987ff1f6ca8cadd}{task2}}\ =\ \mbox{\hyperlink{tesseract__task__composer__core__unit_8cpp_a489f60cc4db2aa1e3d122f4b407de719}{pipeline}}-\/>getNodeByName(\textcolor{stringliteral}{"{}DoneTask"{}});}
+\DoxyCodeLine{00205\ \ \ \ \ \mbox{\hyperlink{command__language__utils__unit_8cpp_ac9999b1938b6048a1222396d6821eab6}{EXPECT\_EQ}}(\mbox{\hyperlink{tesseract__task__composer__core__unit_8cpp_a489f60cc4db2aa1e3d122f4b407de719}{pipeline}}-\/>getTerminals(),\ std::vector<boost::uuids::uuid>(\{\ task2-\/>getUUID()\ \}));}
+\DoxyCodeLine{00206\ \ \ \ \ \mbox{\hyperlink{command__language__utils__unit_8cpp_ac9999b1938b6048a1222396d6821eab6}{EXPECT\_EQ}}(\mbox{\hyperlink{tesseract__task__composer__core__unit_8cpp_a611b7f61e296851efcc231c0bc62ebaf}{task1}}-\/>getInboundEdges().size(),\ 0);}
+\DoxyCodeLine{00207\ \ \ \ \ \mbox{\hyperlink{command__language__utils__unit_8cpp_ac9999b1938b6048a1222396d6821eab6}{EXPECT\_EQ}}(\mbox{\hyperlink{tesseract__task__composer__core__unit_8cpp_a611b7f61e296851efcc231c0bc62ebaf}{task1}}-\/>getOutboundEdges().size(),\ 1);}
+\DoxyCodeLine{00208\ \ \ \ \ \mbox{\hyperlink{command__language__utils__unit_8cpp_ac9999b1938b6048a1222396d6821eab6}{EXPECT\_EQ}}(\mbox{\hyperlink{tesseract__task__composer__core__unit_8cpp_a611b7f61e296851efcc231c0bc62ebaf}{task1}}-\/>getOutboundEdges().front(),\ \mbox{\hyperlink{tesseract__task__composer__core__unit_8cpp_a7fdb3c783a88ac8e0987ff1f6ca8cadd}{task2}}-\/>getUUID());}
+\DoxyCodeLine{00209\ \ \ \ \ \mbox{\hyperlink{command__language__utils__unit_8cpp_ac9999b1938b6048a1222396d6821eab6}{EXPECT\_EQ}}(\mbox{\hyperlink{tesseract__task__composer__core__unit_8cpp_a7fdb3c783a88ac8e0987ff1f6ca8cadd}{task2}}-\/>getInboundEdges().size(),\ 1);}
+\DoxyCodeLine{00210\ \ \ \ \ \mbox{\hyperlink{command__language__utils__unit_8cpp_ac9999b1938b6048a1222396d6821eab6}{EXPECT\_EQ}}(\mbox{\hyperlink{tesseract__task__composer__core__unit_8cpp_a7fdb3c783a88ac8e0987ff1f6ca8cadd}{task2}}-\/>getInboundEdges().front(),\ \mbox{\hyperlink{tesseract__task__composer__core__unit_8cpp_a611b7f61e296851efcc231c0bc62ebaf}{task1}}-\/>getUUID());}
+\DoxyCodeLine{00211\ \ \ \ \ \mbox{\hyperlink{command__language__utils__unit_8cpp_ac9999b1938b6048a1222396d6821eab6}{EXPECT\_EQ}}(\mbox{\hyperlink{tesseract__task__composer__core__unit_8cpp_a7fdb3c783a88ac8e0987ff1f6ca8cadd}{task2}}-\/>getOutboundEdges().size(),\ 0);}
+\DoxyCodeLine{00212\ \ \ \ \ \mbox{\hyperlink{command__language__utils__unit_8cpp_ac9999b1938b6048a1222396d6821eab6}{EXPECT\_EQ}}(future-\/>context-\/>isAborted(),\ \textcolor{keyword}{false});}
+\DoxyCodeLine{00213\ \ \ \ \ \mbox{\hyperlink{command__language__utils__unit_8cpp_ac9999b1938b6048a1222396d6821eab6}{EXPECT\_EQ}}(future-\/>context-\/>isSuccessful(),\ \textcolor{keyword}{true});}
+\DoxyCodeLine{00214\ \ \ \ \ \mbox{\hyperlink{command__language__utils__unit_8cpp_ac9999b1938b6048a1222396d6821eab6}{EXPECT\_EQ}}(future-\/>context-\/>task\_infos.getInfoMap().size(),\ 6);}
+\DoxyCodeLine{00215\ \ \ \ \ \mbox{\hyperlink{command__language__utils__unit_8cpp_a32b7bf22a514cfcff5d4e14d57ab1a8b}{EXPECT\_TRUE}}(future-\/>context-\/>task\_infos.getAbortingNode().is\_nil());}
+\DoxyCodeLine{00216\ }
+\DoxyCodeLine{00217\ \ \ \ \ future-\/>clear();}
+\DoxyCodeLine{00218\ \ \ \ \ \mbox{\hyperlink{command__language__utils__unit_8cpp_a87b7f2690021fd8f1f348928f30fb2f9}{EXPECT\_FALSE}}(future-\/>valid());}
+\DoxyCodeLine{00219\ }
+\DoxyCodeLine{00220\ \ \ \ \ \textcolor{comment}{//\ Serialization}}
+\DoxyCodeLine{00221\ \ \ \ \ \mbox{\hyperlink{namespacetesseract__planning_1_1test__suite_a3fbdef14cb25929313c8c35236cb7491}{test\_suite::runSerializationPointerTest}}(\mbox{\hyperlink{tesseract__task__composer__taskflow__unit_8cpp_ab85065e5a325fc5bf8675e6c55a3e72f}{executor}},\ \textcolor{stringliteral}{"{}TaskComposerExecutorTests"{}});}
+\DoxyCodeLine{00222\ \ \ \}}
+\DoxyCodeLine{00223\ }
+\DoxyCodeLine{00224\ \ \ \{\ \ \textcolor{comment}{//\ Graph\ with\ child\ pipeline\ task\ not\ conditional}}
+\DoxyCodeLine{00225\ \ \ \ \ std::string\ \mbox{\hyperlink{tesseract__task__composer__core__unit_8cpp_a2454f40de1c3aa0f178336f0b1aeb497}{str2}}\ =\ R\textcolor{stringliteral}{"{}(config:}}
+\DoxyCodeLine{00226\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ conditional:\ false}}
+\DoxyCodeLine{00227\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ nodes:}}
+\DoxyCodeLine{00228\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ StartTask:}}
+\DoxyCodeLine{00229\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ task:\ TestPipeline}}
+\DoxyCodeLine{00230\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ config:}}
+\DoxyCodeLine{00231\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ conditional:\ false}}
+\DoxyCodeLine{00232\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ remapping:}}
+\DoxyCodeLine{00233\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ input\_data:\ output\_data}}
+\DoxyCodeLine{00234\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ DoneTask:}}
+\DoxyCodeLine{00235\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ class:\ DoneTaskFactory}}
+\DoxyCodeLine{00236\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ config:}}
+\DoxyCodeLine{00237\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ conditional:\ false}}
+\DoxyCodeLine{00238\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ edges:}}
+\DoxyCodeLine{00239\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ -\/\ source:\ StartTask}}
+\DoxyCodeLine{00240\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ destinations:\ [DoneTask]}}
+\DoxyCodeLine{00241\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ terminals:\ [DoneTask])"{};}}
+\DoxyCodeLine{00242\ \textcolor{stringliteral}{\ \ \ \ YAML::Node\ \mbox{\hyperlink{tesseract__task__composer__core__unit_8cpp_a01d92a800904faa16b8c1c1372c40fb3}{config}}\ =\ YAML::Load(\mbox{\hyperlink{tesseract__task__composer__core__unit_8cpp_a2454f40de1c3aa0f178336f0b1aeb497}{str2}});}}
+\DoxyCodeLine{00243\ \textcolor{stringliteral}{\ \ \ \ }\textcolor{keyword}{auto}\ \mbox{\hyperlink{tesseract__task__composer__core__unit_8cpp_ae79c812e6854fd940ccc3959c8c10578}{graph}}\ =\ std::make\_unique<TaskComposerGraph>(\textcolor{stringliteral}{"{}Graph"{}},\ \mbox{\hyperlink{tesseract__task__composer__core__unit_8cpp_a01d92a800904faa16b8c1c1372c40fb3}{config}}[\textcolor{stringliteral}{"{}config"{}}],\ \mbox{\hyperlink{tesseract__task__composer__core__unit_8cpp_a8bba62c91929856da978fec24b8c410c}{factory}});}
+\DoxyCodeLine{00244\ \ \ \ \ \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerExecutor_abd1fc7052da011b01d53c63c43a771c4}{tesseract\_planning::TaskComposerExecutor::UPtr}}\ \mbox{\hyperlink{tesseract__task__composer__taskflow__unit_8cpp_ab85065e5a325fc5bf8675e6c55a3e72f}{executor}}\ =\ std::make\_unique<T>(\textcolor{stringliteral}{"{}TaskComposerExecutorTests"{}},\ 3);}
+\DoxyCodeLine{00245\ \ \ \ \ \mbox{\hyperlink{command__language__utils__unit_8cpp_ac9999b1938b6048a1222396d6821eab6}{EXPECT\_EQ}}(\mbox{\hyperlink{tesseract__task__composer__taskflow__unit_8cpp_ab85065e5a325fc5bf8675e6c55a3e72f}{executor}}-\/>getName(),\ \textcolor{stringliteral}{"{}TaskComposerExecutorTests"{}});}
+\DoxyCodeLine{00246\ \ \ \ \ \mbox{\hyperlink{command__language__utils__unit_8cpp_ac9999b1938b6048a1222396d6821eab6}{EXPECT\_EQ}}(\mbox{\hyperlink{tesseract__task__composer__taskflow__unit_8cpp_ab85065e5a325fc5bf8675e6c55a3e72f}{executor}}-\/>getWorkerCount(),\ 3);}
+\DoxyCodeLine{00247\ \ \ \ \ \mbox{\hyperlink{command__language__utils__unit_8cpp_ac9999b1938b6048a1222396d6821eab6}{EXPECT\_EQ}}(\mbox{\hyperlink{tesseract__task__composer__taskflow__unit_8cpp_ab85065e5a325fc5bf8675e6c55a3e72f}{executor}}-\/>getTaskCount(),\ 0);}
+\DoxyCodeLine{00248\ }
+\DoxyCodeLine{00249\ \ \ \ \ \textcolor{keyword}{auto}\ data\_storage\ =\ std::make\_unique<TaskComposerDataStorage>();}
+\DoxyCodeLine{00250\ \ \ \ \ \textcolor{keyword}{auto}\ future\ =\ \mbox{\hyperlink{tesseract__task__composer__taskflow__unit_8cpp_ab85065e5a325fc5bf8675e6c55a3e72f}{executor}}-\/>run(*\mbox{\hyperlink{tesseract__task__composer__core__unit_8cpp_ae79c812e6854fd940ccc3959c8c10578}{graph}},\ std::move(data\_storage));}
+\DoxyCodeLine{00251\ \ \ \ \ future-\/>wait();}
+\DoxyCodeLine{00252\ \ \ \ \ \mbox{\hyperlink{command__language__utils__unit_8cpp_a32b7bf22a514cfcff5d4e14d57ab1a8b}{EXPECT\_TRUE}}(future-\/>valid());}
+\DoxyCodeLine{00253\ \ \ \ \ \mbox{\hyperlink{command__language__utils__unit_8cpp_a32b7bf22a514cfcff5d4e14d57ab1a8b}{EXPECT\_TRUE}}(future-\/>ready());}
+\DoxyCodeLine{00254\ \ \ \ \ std::future\_status\ sd\ =\ future-\/>waitFor(std::chrono::duration<double>(1));}
+\DoxyCodeLine{00255\ \ \ \ \ \mbox{\hyperlink{command__language__utils__unit_8cpp_ac9999b1938b6048a1222396d6821eab6}{EXPECT\_EQ}}(sd,\ std::future\_status::ready);}
+\DoxyCodeLine{00256\ \ \ \ \ std::future\_status\ sc\ =\ future-\/>waitUntil(std::chrono::high\_resolution\_clock::now());}
+\DoxyCodeLine{00257\ \ \ \ \ \mbox{\hyperlink{command__language__utils__unit_8cpp_ac9999b1938b6048a1222396d6821eab6}{EXPECT\_EQ}}(sc,\ std::future\_status::ready);}
+\DoxyCodeLine{00258\ \ \ \ \ \textcolor{keyword}{auto}\ copy\_future\ =\ future-\/>copy();}
+\DoxyCodeLine{00259\ \ \ \ \ \mbox{\hyperlink{command__language__utils__unit_8cpp_a32b7bf22a514cfcff5d4e14d57ab1a8b}{EXPECT\_TRUE}}(copy\_future-\/>valid());}
+\DoxyCodeLine{00260\ \ \ \ \ \mbox{\hyperlink{command__language__utils__unit_8cpp_a32b7bf22a514cfcff5d4e14d57ab1a8b}{EXPECT\_TRUE}}(copy\_future-\/>ready());}
+\DoxyCodeLine{00261\ }
+\DoxyCodeLine{00262\ \ \ \ \ \mbox{\hyperlink{command__language__utils__unit_8cpp_a87b7f2690021fd8f1f348928f30fb2f9}{EXPECT\_FALSE}}(\mbox{\hyperlink{tesseract__task__composer__core__unit_8cpp_ae79c812e6854fd940ccc3959c8c10578}{graph}}-\/>isConditional());}
+\DoxyCodeLine{00263\ \ \ \ \ \mbox{\hyperlink{command__language__utils__unit_8cpp_ac9999b1938b6048a1222396d6821eab6}{EXPECT\_EQ}}(\mbox{\hyperlink{tesseract__task__composer__core__unit_8cpp_ae79c812e6854fd940ccc3959c8c10578}{graph}}-\/>getTerminals().size(),\ 1);}
+\DoxyCodeLine{00264\ \ \ \ \ \textcolor{keyword}{auto}\ \mbox{\hyperlink{tesseract__task__composer__core__unit_8cpp_a611b7f61e296851efcc231c0bc62ebaf}{task1}}\ =\ \mbox{\hyperlink{tesseract__task__composer__core__unit_8cpp_ae79c812e6854fd940ccc3959c8c10578}{graph}}-\/>getNodeByName(\textcolor{stringliteral}{"{}StartTask"{}});}
+\DoxyCodeLine{00265\ \ \ \ \ \textcolor{keyword}{auto}\ \mbox{\hyperlink{tesseract__task__composer__core__unit_8cpp_a7fdb3c783a88ac8e0987ff1f6ca8cadd}{task2}}\ =\ \mbox{\hyperlink{tesseract__task__composer__core__unit_8cpp_ae79c812e6854fd940ccc3959c8c10578}{graph}}-\/>getNodeByName(\textcolor{stringliteral}{"{}DoneTask"{}});}
+\DoxyCodeLine{00266\ \ \ \ \ \mbox{\hyperlink{command__language__utils__unit_8cpp_ac9999b1938b6048a1222396d6821eab6}{EXPECT\_EQ}}(\mbox{\hyperlink{tesseract__task__composer__core__unit_8cpp_ae79c812e6854fd940ccc3959c8c10578}{graph}}-\/>getTerminals(),\ std::vector<boost::uuids::uuid>(\{\ task2-\/>getUUID()\ \}));}
+\DoxyCodeLine{00267\ \ \ \ \ \mbox{\hyperlink{command__language__utils__unit_8cpp_ac9999b1938b6048a1222396d6821eab6}{EXPECT\_EQ}}(\mbox{\hyperlink{tesseract__task__composer__core__unit_8cpp_a611b7f61e296851efcc231c0bc62ebaf}{task1}}-\/>getInboundEdges().size(),\ 0);}
+\DoxyCodeLine{00268\ \ \ \ \ \mbox{\hyperlink{command__language__utils__unit_8cpp_ac9999b1938b6048a1222396d6821eab6}{EXPECT\_EQ}}(\mbox{\hyperlink{tesseract__task__composer__core__unit_8cpp_a611b7f61e296851efcc231c0bc62ebaf}{task1}}-\/>getOutboundEdges().size(),\ 1);}
+\DoxyCodeLine{00269\ \ \ \ \ \mbox{\hyperlink{command__language__utils__unit_8cpp_ac9999b1938b6048a1222396d6821eab6}{EXPECT\_EQ}}(\mbox{\hyperlink{tesseract__task__composer__core__unit_8cpp_a611b7f61e296851efcc231c0bc62ebaf}{task1}}-\/>getOutboundEdges().front(),\ \mbox{\hyperlink{tesseract__task__composer__core__unit_8cpp_a7fdb3c783a88ac8e0987ff1f6ca8cadd}{task2}}-\/>getUUID());}
+\DoxyCodeLine{00270\ \ \ \ \ \mbox{\hyperlink{command__language__utils__unit_8cpp_ac9999b1938b6048a1222396d6821eab6}{EXPECT\_EQ}}(\mbox{\hyperlink{tesseract__task__composer__core__unit_8cpp_a7fdb3c783a88ac8e0987ff1f6ca8cadd}{task2}}-\/>getInboundEdges().size(),\ 1);}
+\DoxyCodeLine{00271\ \ \ \ \ \mbox{\hyperlink{command__language__utils__unit_8cpp_ac9999b1938b6048a1222396d6821eab6}{EXPECT\_EQ}}(\mbox{\hyperlink{tesseract__task__composer__core__unit_8cpp_a7fdb3c783a88ac8e0987ff1f6ca8cadd}{task2}}-\/>getInboundEdges().front(),\ \mbox{\hyperlink{tesseract__task__composer__core__unit_8cpp_a611b7f61e296851efcc231c0bc62ebaf}{task1}}-\/>getUUID());}
+\DoxyCodeLine{00272\ \ \ \ \ \mbox{\hyperlink{command__language__utils__unit_8cpp_ac9999b1938b6048a1222396d6821eab6}{EXPECT\_EQ}}(\mbox{\hyperlink{tesseract__task__composer__core__unit_8cpp_a7fdb3c783a88ac8e0987ff1f6ca8cadd}{task2}}-\/>getOutboundEdges().size(),\ 0);}
+\DoxyCodeLine{00273\ \ \ \ \ \mbox{\hyperlink{command__language__utils__unit_8cpp_ac9999b1938b6048a1222396d6821eab6}{EXPECT\_EQ}}(future-\/>context-\/>isAborted(),\ \textcolor{keyword}{false});}
+\DoxyCodeLine{00274\ \ \ \ \ \mbox{\hyperlink{command__language__utils__unit_8cpp_ac9999b1938b6048a1222396d6821eab6}{EXPECT\_EQ}}(future-\/>context-\/>isSuccessful(),\ \textcolor{keyword}{true});}
+\DoxyCodeLine{00275\ \ \ \ \ \mbox{\hyperlink{command__language__utils__unit_8cpp_ac9999b1938b6048a1222396d6821eab6}{EXPECT\_EQ}}(future-\/>context-\/>task\_infos.getInfoMap().size(),\ 6);}
+\DoxyCodeLine{00276\ \ \ \ \ \mbox{\hyperlink{command__language__utils__unit_8cpp_a32b7bf22a514cfcff5d4e14d57ab1a8b}{EXPECT\_TRUE}}(future-\/>context-\/>task\_infos.getAbortingNode().is\_nil());}
+\DoxyCodeLine{00277\ }
+\DoxyCodeLine{00278\ \ \ \ \ future-\/>clear();}
+\DoxyCodeLine{00279\ \ \ \ \ \mbox{\hyperlink{command__language__utils__unit_8cpp_a87b7f2690021fd8f1f348928f30fb2f9}{EXPECT\_FALSE}}(future-\/>valid());}
+\DoxyCodeLine{00280\ }
+\DoxyCodeLine{00281\ \ \ \ \ \textcolor{comment}{//\ Serialization}}
+\DoxyCodeLine{00282\ \ \ \ \ \mbox{\hyperlink{namespacetesseract__planning_1_1test__suite_a3fbdef14cb25929313c8c35236cb7491}{test\_suite::runSerializationPointerTest}}(\mbox{\hyperlink{tesseract__task__composer__taskflow__unit_8cpp_ab85065e5a325fc5bf8675e6c55a3e72f}{executor}},\ \textcolor{stringliteral}{"{}TaskComposerExecutorTests"{}});}
+\DoxyCodeLine{00283\ \ \ \}}
+\DoxyCodeLine{00284\ }
+\DoxyCodeLine{00285\ \ \ \{\ \ \textcolor{comment}{//\ Graph\ with\ child\ pipeline\ task\ conditional}}
+\DoxyCodeLine{00286\ \ \ \ \ std::string\ \mbox{\hyperlink{tesseract__task__composer__core__unit_8cpp_a2454f40de1c3aa0f178336f0b1aeb497}{str2}}\ =\ R\textcolor{stringliteral}{"{}(config:}}
+\DoxyCodeLine{00287\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ conditional:\ false}}
+\DoxyCodeLine{00288\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ nodes:}}
+\DoxyCodeLine{00289\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ StartTask:}}
+\DoxyCodeLine{00290\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ task:\ TestPipeline}}
+\DoxyCodeLine{00291\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ config:}}
+\DoxyCodeLine{00292\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ conditional:\ true}}
+\DoxyCodeLine{00293\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ remapping:}}
+\DoxyCodeLine{00294\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ input\_data:\ output\_data}}
+\DoxyCodeLine{00295\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ DoneTask:}}
+\DoxyCodeLine{00296\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ class:\ DoneTaskFactory}}
+\DoxyCodeLine{00297\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ config:}}
+\DoxyCodeLine{00298\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ conditional:\ false}}
+\DoxyCodeLine{00299\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ AbortTask:}}
+\DoxyCodeLine{00300\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ class:\ DoneTaskFactory}}
+\DoxyCodeLine{00301\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ config:}}
+\DoxyCodeLine{00302\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ conditional:\ false}}
+\DoxyCodeLine{00303\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ edges:}}
+\DoxyCodeLine{00304\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ -\/\ source:\ StartTask}}
+\DoxyCodeLine{00305\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ destinations:\ [AbortTask,\ DoneTask]}}
+\DoxyCodeLine{00306\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ terminals:\ [AbortTask,\ DoneTask])"{};}}
+\DoxyCodeLine{00307\ \textcolor{stringliteral}{\ \ \ \ YAML::Node\ \mbox{\hyperlink{tesseract__task__composer__core__unit_8cpp_a01d92a800904faa16b8c1c1372c40fb3}{config}}\ =\ YAML::Load(\mbox{\hyperlink{tesseract__task__composer__core__unit_8cpp_a2454f40de1c3aa0f178336f0b1aeb497}{str2}});}}
+\DoxyCodeLine{00308\ \textcolor{stringliteral}{\ \ \ \ }\textcolor{keyword}{auto}\ \mbox{\hyperlink{tesseract__task__composer__core__unit_8cpp_ae79c812e6854fd940ccc3959c8c10578}{graph}}\ =\ std::make\_unique<TaskComposerGraph>(\textcolor{stringliteral}{"{}Graph"{}},\ \mbox{\hyperlink{tesseract__task__composer__core__unit_8cpp_a01d92a800904faa16b8c1c1372c40fb3}{config}}[\textcolor{stringliteral}{"{}config"{}}],\ \mbox{\hyperlink{tesseract__task__composer__core__unit_8cpp_a8bba62c91929856da978fec24b8c410c}{factory}});}
+\DoxyCodeLine{00309\ \ \ \ \ \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerExecutor_abd1fc7052da011b01d53c63c43a771c4}{tesseract\_planning::TaskComposerExecutor::UPtr}}\ \mbox{\hyperlink{tesseract__task__composer__taskflow__unit_8cpp_ab85065e5a325fc5bf8675e6c55a3e72f}{executor}}\ =\ std::make\_unique<T>(3);}
+\DoxyCodeLine{00310\ \ \ \ \ \mbox{\hyperlink{command__language__utils__unit_8cpp_a87b7f2690021fd8f1f348928f30fb2f9}{EXPECT\_FALSE}}(\mbox{\hyperlink{tesseract__task__composer__taskflow__unit_8cpp_ab85065e5a325fc5bf8675e6c55a3e72f}{executor}}-\/>getName().empty());}
+\DoxyCodeLine{00311\ \ \ \ \ \mbox{\hyperlink{command__language__utils__unit_8cpp_ac9999b1938b6048a1222396d6821eab6}{EXPECT\_EQ}}(\mbox{\hyperlink{tesseract__task__composer__taskflow__unit_8cpp_ab85065e5a325fc5bf8675e6c55a3e72f}{executor}}-\/>getWorkerCount(),\ 3);}
+\DoxyCodeLine{00312\ \ \ \ \ \mbox{\hyperlink{command__language__utils__unit_8cpp_ac9999b1938b6048a1222396d6821eab6}{EXPECT\_EQ}}(\mbox{\hyperlink{tesseract__task__composer__taskflow__unit_8cpp_ab85065e5a325fc5bf8675e6c55a3e72f}{executor}}-\/>getTaskCount(),\ 0);}
+\DoxyCodeLine{00313\ }
+\DoxyCodeLine{00314\ \ \ \ \ \textcolor{keyword}{auto}\ data\_storage\ =\ std::make\_unique<TaskComposerDataStorage>();}
+\DoxyCodeLine{00315\ \ \ \ \ \textcolor{keyword}{auto}\ future\ =\ \mbox{\hyperlink{tesseract__task__composer__taskflow__unit_8cpp_ab85065e5a325fc5bf8675e6c55a3e72f}{executor}}-\/>run(*\mbox{\hyperlink{tesseract__task__composer__core__unit_8cpp_ae79c812e6854fd940ccc3959c8c10578}{graph}},\ std::move(data\_storage));}
+\DoxyCodeLine{00316\ \ \ \ \ future-\/>wait();}
+\DoxyCodeLine{00317\ \ \ \ \ \mbox{\hyperlink{command__language__utils__unit_8cpp_a32b7bf22a514cfcff5d4e14d57ab1a8b}{EXPECT\_TRUE}}(future-\/>valid());}
+\DoxyCodeLine{00318\ \ \ \ \ \mbox{\hyperlink{command__language__utils__unit_8cpp_a32b7bf22a514cfcff5d4e14d57ab1a8b}{EXPECT\_TRUE}}(future-\/>ready());}
+\DoxyCodeLine{00319\ \ \ \ \ std::future\_status\ sd\ =\ future-\/>waitFor(std::chrono::duration<double>(1));}
+\DoxyCodeLine{00320\ \ \ \ \ \mbox{\hyperlink{command__language__utils__unit_8cpp_ac9999b1938b6048a1222396d6821eab6}{EXPECT\_EQ}}(sd,\ std::future\_status::ready);}
+\DoxyCodeLine{00321\ \ \ \ \ std::future\_status\ sc\ =\ future-\/>waitUntil(std::chrono::high\_resolution\_clock::now());}
+\DoxyCodeLine{00322\ \ \ \ \ \mbox{\hyperlink{command__language__utils__unit_8cpp_ac9999b1938b6048a1222396d6821eab6}{EXPECT\_EQ}}(sc,\ std::future\_status::ready);}
+\DoxyCodeLine{00323\ \ \ \ \ \textcolor{keyword}{auto}\ copy\_future\ =\ future-\/>copy();}
+\DoxyCodeLine{00324\ \ \ \ \ \mbox{\hyperlink{command__language__utils__unit_8cpp_a32b7bf22a514cfcff5d4e14d57ab1a8b}{EXPECT\_TRUE}}(copy\_future-\/>valid());}
+\DoxyCodeLine{00325\ \ \ \ \ \mbox{\hyperlink{command__language__utils__unit_8cpp_a32b7bf22a514cfcff5d4e14d57ab1a8b}{EXPECT\_TRUE}}(copy\_future-\/>ready());}
+\DoxyCodeLine{00326\ }
+\DoxyCodeLine{00327\ \ \ \ \ \mbox{\hyperlink{command__language__utils__unit_8cpp_a87b7f2690021fd8f1f348928f30fb2f9}{EXPECT\_FALSE}}(\mbox{\hyperlink{tesseract__task__composer__core__unit_8cpp_ae79c812e6854fd940ccc3959c8c10578}{graph}}-\/>isConditional());}
+\DoxyCodeLine{00328\ \ \ \ \ \mbox{\hyperlink{command__language__utils__unit_8cpp_ac9999b1938b6048a1222396d6821eab6}{EXPECT\_EQ}}(\mbox{\hyperlink{tesseract__task__composer__core__unit_8cpp_ae79c812e6854fd940ccc3959c8c10578}{graph}}-\/>getTerminals().size(),\ 2);}
+\DoxyCodeLine{00329\ \ \ \ \ \textcolor{keyword}{auto}\ \mbox{\hyperlink{tesseract__task__composer__core__unit_8cpp_a611b7f61e296851efcc231c0bc62ebaf}{task1}}\ =\ \mbox{\hyperlink{tesseract__task__composer__core__unit_8cpp_ae79c812e6854fd940ccc3959c8c10578}{graph}}-\/>getNodeByName(\textcolor{stringliteral}{"{}StartTask"{}});}
+\DoxyCodeLine{00330\ \ \ \ \ \textcolor{keyword}{auto}\ \mbox{\hyperlink{tesseract__task__composer__core__unit_8cpp_a7fdb3c783a88ac8e0987ff1f6ca8cadd}{task2}}\ =\ \mbox{\hyperlink{tesseract__task__composer__core__unit_8cpp_ae79c812e6854fd940ccc3959c8c10578}{graph}}-\/>getNodeByName(\textcolor{stringliteral}{"{}DoneTask"{}});}
+\DoxyCodeLine{00331\ \ \ \ \ \textcolor{keyword}{auto}\ \mbox{\hyperlink{tesseract__task__composer__core__unit_8cpp_ac27815c58aa5f61701dab22841e27952}{task3}}\ =\ \mbox{\hyperlink{tesseract__task__composer__core__unit_8cpp_ae79c812e6854fd940ccc3959c8c10578}{graph}}-\/>getNodeByName(\textcolor{stringliteral}{"{}AbortTask"{}});}
+\DoxyCodeLine{00332\ \ \ \ \ \mbox{\hyperlink{command__language__utils__unit_8cpp_ac9999b1938b6048a1222396d6821eab6}{EXPECT\_EQ}}(\mbox{\hyperlink{tesseract__task__composer__core__unit_8cpp_ae79c812e6854fd940ccc3959c8c10578}{graph}}-\/>getTerminals(),\ std::vector<boost::uuids::uuid>(\{\ task3-\/>getUUID(),\ task2-\/>getUUID()\ \}));}
+\DoxyCodeLine{00333\ \ \ \ \ \mbox{\hyperlink{command__language__utils__unit_8cpp_ac9999b1938b6048a1222396d6821eab6}{EXPECT\_EQ}}(\mbox{\hyperlink{tesseract__task__composer__core__unit_8cpp_a611b7f61e296851efcc231c0bc62ebaf}{task1}}-\/>getInboundEdges().size(),\ 0);}
+\DoxyCodeLine{00334\ \ \ \ \ \mbox{\hyperlink{command__language__utils__unit_8cpp_ac9999b1938b6048a1222396d6821eab6}{EXPECT\_EQ}}(\mbox{\hyperlink{tesseract__task__composer__core__unit_8cpp_a611b7f61e296851efcc231c0bc62ebaf}{task1}}-\/>getOutboundEdges().size(),\ 2);}
+\DoxyCodeLine{00335\ \ \ \ \ \mbox{\hyperlink{command__language__utils__unit_8cpp_ac9999b1938b6048a1222396d6821eab6}{EXPECT\_EQ}}(\mbox{\hyperlink{tesseract__task__composer__core__unit_8cpp_a611b7f61e296851efcc231c0bc62ebaf}{task1}}-\/>getOutboundEdges().front(),\ \mbox{\hyperlink{tesseract__task__composer__core__unit_8cpp_ac27815c58aa5f61701dab22841e27952}{task3}}-\/>getUUID());}
+\DoxyCodeLine{00336\ \ \ \ \ \mbox{\hyperlink{command__language__utils__unit_8cpp_ac9999b1938b6048a1222396d6821eab6}{EXPECT\_EQ}}(\mbox{\hyperlink{tesseract__task__composer__core__unit_8cpp_a611b7f61e296851efcc231c0bc62ebaf}{task1}}-\/>getOutboundEdges().back(),\ \mbox{\hyperlink{tesseract__task__composer__core__unit_8cpp_a7fdb3c783a88ac8e0987ff1f6ca8cadd}{task2}}-\/>getUUID());}
+\DoxyCodeLine{00337\ \ \ \ \ \mbox{\hyperlink{command__language__utils__unit_8cpp_ac9999b1938b6048a1222396d6821eab6}{EXPECT\_EQ}}(\mbox{\hyperlink{tesseract__task__composer__core__unit_8cpp_a7fdb3c783a88ac8e0987ff1f6ca8cadd}{task2}}-\/>getInboundEdges().size(),\ 1);}
+\DoxyCodeLine{00338\ \ \ \ \ \mbox{\hyperlink{command__language__utils__unit_8cpp_ac9999b1938b6048a1222396d6821eab6}{EXPECT\_EQ}}(\mbox{\hyperlink{tesseract__task__composer__core__unit_8cpp_a7fdb3c783a88ac8e0987ff1f6ca8cadd}{task2}}-\/>getInboundEdges().front(),\ \mbox{\hyperlink{tesseract__task__composer__core__unit_8cpp_a611b7f61e296851efcc231c0bc62ebaf}{task1}}-\/>getUUID());}
+\DoxyCodeLine{00339\ \ \ \ \ \mbox{\hyperlink{command__language__utils__unit_8cpp_ac9999b1938b6048a1222396d6821eab6}{EXPECT\_EQ}}(\mbox{\hyperlink{tesseract__task__composer__core__unit_8cpp_a7fdb3c783a88ac8e0987ff1f6ca8cadd}{task2}}-\/>getOutboundEdges().size(),\ 0);}
+\DoxyCodeLine{00340\ \ \ \ \ \mbox{\hyperlink{command__language__utils__unit_8cpp_ac9999b1938b6048a1222396d6821eab6}{EXPECT\_EQ}}(\mbox{\hyperlink{tesseract__task__composer__core__unit_8cpp_ac27815c58aa5f61701dab22841e27952}{task3}}-\/>getInboundEdges().size(),\ 1);}
+\DoxyCodeLine{00341\ \ \ \ \ \mbox{\hyperlink{command__language__utils__unit_8cpp_ac9999b1938b6048a1222396d6821eab6}{EXPECT\_EQ}}(\mbox{\hyperlink{tesseract__task__composer__core__unit_8cpp_ac27815c58aa5f61701dab22841e27952}{task3}}-\/>getInboundEdges().front(),\ \mbox{\hyperlink{tesseract__task__composer__core__unit_8cpp_a611b7f61e296851efcc231c0bc62ebaf}{task1}}-\/>getUUID());}
+\DoxyCodeLine{00342\ \ \ \ \ \mbox{\hyperlink{command__language__utils__unit_8cpp_ac9999b1938b6048a1222396d6821eab6}{EXPECT\_EQ}}(\mbox{\hyperlink{tesseract__task__composer__core__unit_8cpp_ac27815c58aa5f61701dab22841e27952}{task3}}-\/>getOutboundEdges().size(),\ 0);}
+\DoxyCodeLine{00343\ \ \ \ \ \mbox{\hyperlink{command__language__utils__unit_8cpp_ac9999b1938b6048a1222396d6821eab6}{EXPECT\_EQ}}(future-\/>context-\/>isAborted(),\ \textcolor{keyword}{false});}
+\DoxyCodeLine{00344\ \ \ \ \ \mbox{\hyperlink{command__language__utils__unit_8cpp_ac9999b1938b6048a1222396d6821eab6}{EXPECT\_EQ}}(future-\/>context-\/>isSuccessful(),\ \textcolor{keyword}{true});}
+\DoxyCodeLine{00345\ \ \ \ \ \mbox{\hyperlink{command__language__utils__unit_8cpp_ac9999b1938b6048a1222396d6821eab6}{EXPECT\_EQ}}(future-\/>context-\/>task\_infos.getInfoMap().size(),\ 6);}
+\DoxyCodeLine{00346\ \ \ \ \ \mbox{\hyperlink{command__language__utils__unit_8cpp_a32b7bf22a514cfcff5d4e14d57ab1a8b}{EXPECT\_TRUE}}(future-\/>context-\/>task\_infos.getAbortingNode().is\_nil());}
+\DoxyCodeLine{00347\ }
+\DoxyCodeLine{00348\ \ \ \ \ future-\/>clear();}
+\DoxyCodeLine{00349\ \ \ \ \ \mbox{\hyperlink{command__language__utils__unit_8cpp_a87b7f2690021fd8f1f348928f30fb2f9}{EXPECT\_FALSE}}(future-\/>valid());}
+\DoxyCodeLine{00350\ }
+\DoxyCodeLine{00351\ \ \ \ \ \textcolor{comment}{//\ Serialization}}
+\DoxyCodeLine{00352\ \ \ \ \ \mbox{\hyperlink{namespacetesseract__planning_1_1test__suite_a3fbdef14cb25929313c8c35236cb7491}{test\_suite::runSerializationPointerTest}}(\mbox{\hyperlink{tesseract__task__composer__taskflow__unit_8cpp_ab85065e5a325fc5bf8675e6c55a3e72f}{executor}},\ \textcolor{stringliteral}{"{}TaskComposerExecutorTests"{}});}
+\DoxyCodeLine{00353\ \ \ \}}
+\DoxyCodeLine{00354\ }
+\DoxyCodeLine{00355\ \ \ \{\ \ \textcolor{comment}{//\ Graph\ with\ child\ graph\ task}}
+\DoxyCodeLine{00356\ \ \ \ \ std::string\ \mbox{\hyperlink{tesseract__task__composer__core__unit_8cpp_a2454f40de1c3aa0f178336f0b1aeb497}{str2}}\ =\ R\textcolor{stringliteral}{"{}(config:}}
+\DoxyCodeLine{00357\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ conditional:\ false}}
+\DoxyCodeLine{00358\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ nodes:}}
+\DoxyCodeLine{00359\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ StartTask:}}
+\DoxyCodeLine{00360\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ task:\ TestGraph}}
+\DoxyCodeLine{00361\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ config:}}
+\DoxyCodeLine{00362\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ conditional:\ false}}
+\DoxyCodeLine{00363\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ remapping:}}
+\DoxyCodeLine{00364\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ input\_data:\ output\_data}}
+\DoxyCodeLine{00365\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ DoneTask:}}
+\DoxyCodeLine{00366\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ class:\ DoneTaskFactory}}
+\DoxyCodeLine{00367\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ config:}}
+\DoxyCodeLine{00368\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ conditional:\ false}}
+\DoxyCodeLine{00369\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ edges:}}
+\DoxyCodeLine{00370\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ -\/\ source:\ StartTask}}
+\DoxyCodeLine{00371\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ destinations:\ [DoneTask]}}
+\DoxyCodeLine{00372\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ terminals:\ [DoneTask])"{};}}
+\DoxyCodeLine{00373\ \textcolor{stringliteral}{\ \ \ \ YAML::Node\ \mbox{\hyperlink{tesseract__task__composer__core__unit_8cpp_a01d92a800904faa16b8c1c1372c40fb3}{config}}\ =\ YAML::Load(\mbox{\hyperlink{tesseract__task__composer__core__unit_8cpp_a2454f40de1c3aa0f178336f0b1aeb497}{str2}});}}
+\DoxyCodeLine{00374\ \textcolor{stringliteral}{\ \ \ \ }\textcolor{keyword}{auto}\ \mbox{\hyperlink{tesseract__task__composer__core__unit_8cpp_ae79c812e6854fd940ccc3959c8c10578}{graph}}\ =\ std::make\_unique<TaskComposerGraph>(\textcolor{stringliteral}{"{}Graph"{}},\ \mbox{\hyperlink{tesseract__task__composer__core__unit_8cpp_a01d92a800904faa16b8c1c1372c40fb3}{config}}[\textcolor{stringliteral}{"{}config"{}}],\ \mbox{\hyperlink{tesseract__task__composer__core__unit_8cpp_a8bba62c91929856da978fec24b8c410c}{factory}});}
+\DoxyCodeLine{00375\ \ \ \ \ \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerExecutor_abd1fc7052da011b01d53c63c43a771c4}{tesseract\_planning::TaskComposerExecutor::UPtr}}\ \mbox{\hyperlink{tesseract__task__composer__taskflow__unit_8cpp_ab85065e5a325fc5bf8675e6c55a3e72f}{executor}}\ =\ std::make\_unique<T>(\textcolor{stringliteral}{"{}TaskComposerExecutorTests"{}},\ 3);}
+\DoxyCodeLine{00376\ \ \ \ \ \mbox{\hyperlink{command__language__utils__unit_8cpp_ac9999b1938b6048a1222396d6821eab6}{EXPECT\_EQ}}(\mbox{\hyperlink{tesseract__task__composer__taskflow__unit_8cpp_ab85065e5a325fc5bf8675e6c55a3e72f}{executor}}-\/>getName(),\ \textcolor{stringliteral}{"{}TaskComposerExecutorTests"{}});}
+\DoxyCodeLine{00377\ \ \ \ \ \mbox{\hyperlink{command__language__utils__unit_8cpp_ac9999b1938b6048a1222396d6821eab6}{EXPECT\_EQ}}(\mbox{\hyperlink{tesseract__task__composer__taskflow__unit_8cpp_ab85065e5a325fc5bf8675e6c55a3e72f}{executor}}-\/>getWorkerCount(),\ 3);}
+\DoxyCodeLine{00378\ \ \ \ \ \mbox{\hyperlink{command__language__utils__unit_8cpp_ac9999b1938b6048a1222396d6821eab6}{EXPECT\_EQ}}(\mbox{\hyperlink{tesseract__task__composer__taskflow__unit_8cpp_ab85065e5a325fc5bf8675e6c55a3e72f}{executor}}-\/>getTaskCount(),\ 0);}
+\DoxyCodeLine{00379\ }
+\DoxyCodeLine{00380\ \ \ \ \ \textcolor{keyword}{auto}\ data\_storage\ =\ std::make\_unique<TaskComposerDataStorage>();}
+\DoxyCodeLine{00381\ \ \ \ \ \textcolor{keyword}{auto}\ future\ =\ \mbox{\hyperlink{tesseract__task__composer__taskflow__unit_8cpp_ab85065e5a325fc5bf8675e6c55a3e72f}{executor}}-\/>run(*\mbox{\hyperlink{tesseract__task__composer__core__unit_8cpp_ae79c812e6854fd940ccc3959c8c10578}{graph}},\ std::move(data\_storage));}
+\DoxyCodeLine{00382\ \ \ \ \ future-\/>wait();}
+\DoxyCodeLine{00383\ \ \ \ \ \mbox{\hyperlink{command__language__utils__unit_8cpp_a32b7bf22a514cfcff5d4e14d57ab1a8b}{EXPECT\_TRUE}}(future-\/>valid());}
+\DoxyCodeLine{00384\ \ \ \ \ \mbox{\hyperlink{command__language__utils__unit_8cpp_a32b7bf22a514cfcff5d4e14d57ab1a8b}{EXPECT\_TRUE}}(future-\/>ready());}
+\DoxyCodeLine{00385\ \ \ \ \ std::future\_status\ sd\ =\ future-\/>waitFor(std::chrono::duration<double>(1));}
+\DoxyCodeLine{00386\ \ \ \ \ \mbox{\hyperlink{command__language__utils__unit_8cpp_ac9999b1938b6048a1222396d6821eab6}{EXPECT\_EQ}}(sd,\ std::future\_status::ready);}
+\DoxyCodeLine{00387\ \ \ \ \ std::future\_status\ sc\ =\ future-\/>waitUntil(std::chrono::high\_resolution\_clock::now());}
+\DoxyCodeLine{00388\ \ \ \ \ \mbox{\hyperlink{command__language__utils__unit_8cpp_ac9999b1938b6048a1222396d6821eab6}{EXPECT\_EQ}}(sc,\ std::future\_status::ready);}
+\DoxyCodeLine{00389\ \ \ \ \ \textcolor{keyword}{auto}\ copy\_future\ =\ future-\/>copy();}
+\DoxyCodeLine{00390\ \ \ \ \ \mbox{\hyperlink{command__language__utils__unit_8cpp_a32b7bf22a514cfcff5d4e14d57ab1a8b}{EXPECT\_TRUE}}(copy\_future-\/>valid());}
+\DoxyCodeLine{00391\ \ \ \ \ \mbox{\hyperlink{command__language__utils__unit_8cpp_a32b7bf22a514cfcff5d4e14d57ab1a8b}{EXPECT\_TRUE}}(copy\_future-\/>ready());}
+\DoxyCodeLine{00392\ }
+\DoxyCodeLine{00393\ \ \ \ \ \mbox{\hyperlink{command__language__utils__unit_8cpp_a87b7f2690021fd8f1f348928f30fb2f9}{EXPECT\_FALSE}}(\mbox{\hyperlink{tesseract__task__composer__core__unit_8cpp_ae79c812e6854fd940ccc3959c8c10578}{graph}}-\/>isConditional());}
+\DoxyCodeLine{00394\ \ \ \ \ \mbox{\hyperlink{command__language__utils__unit_8cpp_ac9999b1938b6048a1222396d6821eab6}{EXPECT\_EQ}}(\mbox{\hyperlink{tesseract__task__composer__core__unit_8cpp_ae79c812e6854fd940ccc3959c8c10578}{graph}}-\/>getTerminals().size(),\ 1);}
+\DoxyCodeLine{00395\ \ \ \ \ \textcolor{keyword}{auto}\ \mbox{\hyperlink{tesseract__task__composer__core__unit_8cpp_a611b7f61e296851efcc231c0bc62ebaf}{task1}}\ =\ \mbox{\hyperlink{tesseract__task__composer__core__unit_8cpp_ae79c812e6854fd940ccc3959c8c10578}{graph}}-\/>getNodeByName(\textcolor{stringliteral}{"{}StartTask"{}});}
+\DoxyCodeLine{00396\ \ \ \ \ \textcolor{keyword}{auto}\ \mbox{\hyperlink{tesseract__task__composer__core__unit_8cpp_a7fdb3c783a88ac8e0987ff1f6ca8cadd}{task2}}\ =\ \mbox{\hyperlink{tesseract__task__composer__core__unit_8cpp_ae79c812e6854fd940ccc3959c8c10578}{graph}}-\/>getNodeByName(\textcolor{stringliteral}{"{}DoneTask"{}});}
+\DoxyCodeLine{00397\ \ \ \ \ \mbox{\hyperlink{command__language__utils__unit_8cpp_ac9999b1938b6048a1222396d6821eab6}{EXPECT\_EQ}}(\mbox{\hyperlink{tesseract__task__composer__core__unit_8cpp_ae79c812e6854fd940ccc3959c8c10578}{graph}}-\/>getTerminals(),\ std::vector<boost::uuids::uuid>(\{\ task2-\/>getUUID()\ \}));}
+\DoxyCodeLine{00398\ \ \ \ \ \mbox{\hyperlink{command__language__utils__unit_8cpp_ac9999b1938b6048a1222396d6821eab6}{EXPECT\_EQ}}(\mbox{\hyperlink{tesseract__task__composer__core__unit_8cpp_a611b7f61e296851efcc231c0bc62ebaf}{task1}}-\/>getInboundEdges().size(),\ 0);}
+\DoxyCodeLine{00399\ \ \ \ \ \mbox{\hyperlink{command__language__utils__unit_8cpp_ac9999b1938b6048a1222396d6821eab6}{EXPECT\_EQ}}(\mbox{\hyperlink{tesseract__task__composer__core__unit_8cpp_a611b7f61e296851efcc231c0bc62ebaf}{task1}}-\/>getOutboundEdges().size(),\ 1);}
+\DoxyCodeLine{00400\ \ \ \ \ \mbox{\hyperlink{command__language__utils__unit_8cpp_ac9999b1938b6048a1222396d6821eab6}{EXPECT\_EQ}}(\mbox{\hyperlink{tesseract__task__composer__core__unit_8cpp_a611b7f61e296851efcc231c0bc62ebaf}{task1}}-\/>getOutboundEdges().front(),\ \mbox{\hyperlink{tesseract__task__composer__core__unit_8cpp_a7fdb3c783a88ac8e0987ff1f6ca8cadd}{task2}}-\/>getUUID());}
+\DoxyCodeLine{00401\ \ \ \ \ \mbox{\hyperlink{command__language__utils__unit_8cpp_ac9999b1938b6048a1222396d6821eab6}{EXPECT\_EQ}}(\mbox{\hyperlink{tesseract__task__composer__core__unit_8cpp_a7fdb3c783a88ac8e0987ff1f6ca8cadd}{task2}}-\/>getInboundEdges().size(),\ 1);}
+\DoxyCodeLine{00402\ \ \ \ \ \mbox{\hyperlink{command__language__utils__unit_8cpp_ac9999b1938b6048a1222396d6821eab6}{EXPECT\_EQ}}(\mbox{\hyperlink{tesseract__task__composer__core__unit_8cpp_a7fdb3c783a88ac8e0987ff1f6ca8cadd}{task2}}-\/>getInboundEdges().front(),\ \mbox{\hyperlink{tesseract__task__composer__core__unit_8cpp_a611b7f61e296851efcc231c0bc62ebaf}{task1}}-\/>getUUID());}
+\DoxyCodeLine{00403\ \ \ \ \ \mbox{\hyperlink{command__language__utils__unit_8cpp_ac9999b1938b6048a1222396d6821eab6}{EXPECT\_EQ}}(\mbox{\hyperlink{tesseract__task__composer__core__unit_8cpp_a7fdb3c783a88ac8e0987ff1f6ca8cadd}{task2}}-\/>getOutboundEdges().size(),\ 0);}
+\DoxyCodeLine{00404\ \ \ \ \ \mbox{\hyperlink{command__language__utils__unit_8cpp_ac9999b1938b6048a1222396d6821eab6}{EXPECT\_EQ}}(future-\/>context-\/>isAborted(),\ \textcolor{keyword}{false});}
+\DoxyCodeLine{00405\ \ \ \ \ \mbox{\hyperlink{command__language__utils__unit_8cpp_ac9999b1938b6048a1222396d6821eab6}{EXPECT\_EQ}}(future-\/>context-\/>isSuccessful(),\ \textcolor{keyword}{true});}
+\DoxyCodeLine{00406\ \ \ \ \ \mbox{\hyperlink{command__language__utils__unit_8cpp_ac9999b1938b6048a1222396d6821eab6}{EXPECT\_EQ}}(future-\/>context-\/>task\_infos.getInfoMap().size(),\ 6);}
+\DoxyCodeLine{00407\ \ \ \ \ \mbox{\hyperlink{command__language__utils__unit_8cpp_a32b7bf22a514cfcff5d4e14d57ab1a8b}{EXPECT\_TRUE}}(future-\/>context-\/>task\_infos.getAbortingNode().is\_nil());}
+\DoxyCodeLine{00408\ }
+\DoxyCodeLine{00409\ \ \ \ \ future-\/>clear();}
+\DoxyCodeLine{00410\ \ \ \ \ \mbox{\hyperlink{command__language__utils__unit_8cpp_a87b7f2690021fd8f1f348928f30fb2f9}{EXPECT\_FALSE}}(future-\/>valid());}
+\DoxyCodeLine{00411\ }
+\DoxyCodeLine{00412\ \ \ \ \ \textcolor{comment}{//\ Serialization}}
+\DoxyCodeLine{00413\ \ \ \ \ \mbox{\hyperlink{namespacetesseract__planning_1_1test__suite_a3fbdef14cb25929313c8c35236cb7491}{test\_suite::runSerializationPointerTest}}(\mbox{\hyperlink{tesseract__task__composer__taskflow__unit_8cpp_ab85065e5a325fc5bf8675e6c55a3e72f}{executor}},\ \textcolor{stringliteral}{"{}TaskComposerExecutorTests"{}});}
+\DoxyCodeLine{00414\ \ \ \}}
+\DoxyCodeLine{00415\ \}}
+\DoxyCodeLine{00416\ \}\ \ \textcolor{comment}{//\ namespace\ tesseract\_planning::test\_suite}}
+\DoxyCodeLine{00417\ }
+\DoxyCodeLine{00418\ \textcolor{preprocessor}{\#endif\ \ }\textcolor{comment}{//\ TESSERACT\_TASK\_COMPOSER\_TASK\_COMPOSER\_EXECUTOR\_UNIT\_HPP}}
+
+\end{DoxyCode}

@@ -1,0 +1,127 @@
+\doxysection{trajopt\+\_\+utils.\+h}
+\hypertarget{trajopt__utils_8h_source}{}\label{trajopt__utils_8h_source}\index{tesseract\_motion\_planners/trajopt/include/tesseract\_motion\_planners/trajopt/trajopt\_utils.h@{tesseract\_motion\_planners/trajopt/include/tesseract\_motion\_planners/trajopt/trajopt\_utils.h}}
+\mbox{\hyperlink{trajopt__utils_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00026\ \textcolor{preprocessor}{\#ifndef\ TESSERACT\_MOTION\_PLANNERS\_TRAJOPT\_UTILS\_H}}
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#define\ TESSERACT\_MOTION\_PLANNERS\_TRAJOPT\_UTILS\_H}}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#include\ <tesseract\_common/macros.h>}}
+\DoxyCodeLine{00030\ TESSERACT\_COMMON\_IGNORE\_WARNINGS\_PUSH}
+\DoxyCodeLine{00031\ \textcolor{preprocessor}{\#include\ <trajopt/problem\_description.hpp>}}
+\DoxyCodeLine{00032\ \textcolor{preprocessor}{\#include\ <Eigen/Geometry>}}
+\DoxyCodeLine{00033\ \textcolor{preprocessor}{\#include\ <memory>}}
+\DoxyCodeLine{00034\ \mbox{\hyperlink{namespaceTESSERACT__COMMON__IGNORE__WARNINGS__POP}{TESSERACT\_COMMON\_IGNORE\_WARNINGS\_POP}}}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{tesseract__command__language_2include_2tesseract__command__language_2fwd_8h}{tesseract\_command\_language/fwd.h}}>}}
+\DoxyCodeLine{00037\ \textcolor{preprocessor}{\#include\ <tesseract\_collision/core/types.h>}}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacetesseract__planning}{tesseract\_planning}}}
+\DoxyCodeLine{00040\ \{}
+\DoxyCodeLine{00041\ std::shared\_ptr<const\ tesseract\_kinematics::JointGroup>}
+\DoxyCodeLine{00042\ \mbox{\hyperlink{namespacetesseract__planning_afcd40b56c0de25e4bd5d13c9e36bea5c}{createKinematicGroup}}(\textcolor{keyword}{const}\ tesseract\_common::ManipulatorInfo\&\ \mbox{\hyperlink{command__language__utils__unit_8cpp_af21d30c87e87931298afb1eb6f703551}{manip\_info}},}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ tesseract\_environment::Environment\&\ \mbox{\hyperlink{basic__cartesian__example__unit_8cpp_a96ce750ee22ecbf4d17cc6cf146d9514}{env}});}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00045\ std::shared\_ptr<trajopt::TermInfo>}
+\DoxyCodeLine{00046\ \mbox{\hyperlink{namespacetesseract__planning_a167bca3dfd87b2a1e4d1a01185bbf704}{createCartesianWaypointTermInfo}}(\textcolor{keywordtype}{int}\ index,}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::string\&\ \mbox{\hyperlink{ompl__planner__tests_8cpp_ad73045f52bfea3af6967e2fc8a7c17bd}{working\_frame}},}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ Eigen::Isometry3d\&\ c\_wp,}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::string\&\ \mbox{\hyperlink{ompl__planner__tests_8cpp_a5f746d461721e8676a6f317d3884e327}{tcp\_frame}},}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ Eigen::Isometry3d\&\ tcp\_offset,}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ Eigen::VectorXd\&\ coeffs,}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ trajopt::TermType\ \mbox{\hyperlink{ompl__planner__tests_8cpp_a03004818513b2a0604415827c17b9595}{type}},}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ Eigen::VectorXd\&\ lower\_tolerance\ =\ Eigen::VectorXd(),}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ Eigen::VectorXd\&\ upper\_tolerance\ =\ Eigen::VectorXd());}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00056\ std::shared\_ptr<trajopt::TermInfo>}
+\DoxyCodeLine{00057\ \mbox{\hyperlink{namespacetesseract__planning_aa067310c5313bb1f151d04aff7395bec}{createDynamicCartesianWaypointTermInfo}}(\textcolor{keywordtype}{int}\ index,}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::string\&\ \mbox{\hyperlink{ompl__planner__tests_8cpp_ad73045f52bfea3af6967e2fc8a7c17bd}{working\_frame}},}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ Eigen::Isometry3d\&\ c\_wp,}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::string\&\ \mbox{\hyperlink{ompl__planner__tests_8cpp_a5f746d461721e8676a6f317d3884e327}{tcp\_frame}},}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ Eigen::Isometry3d\&\ tcp\_offset,}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ Eigen::VectorXd\&\ coeffs,}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ trajopt::TermType\ \mbox{\hyperlink{ompl__planner__tests_8cpp_a03004818513b2a0604415827c17b9595}{type}},}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ Eigen::VectorXd\&\ lower\_tolerance\ =\ Eigen::VectorXd(),}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ Eigen::VectorXd\&\ upper\_tolerance\ =\ Eigen::VectorXd());}
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00067\ std::shared\_ptr<trajopt::TermInfo>\ \mbox{\hyperlink{namespacetesseract__planning_ac2ca9fc03c63782a36637f03c36500a5}{createNearJointStateTermInfo}}(\textcolor{keyword}{const}\ Eigen::VectorXd\&\ target,}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::vector<std::string>\&\ \mbox{\hyperlink{command__language__utils__unit_8cpp_a5f85173ecc1ddcb342ebc27f28437f5c}{joint\_names}},}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ index,}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ Eigen::VectorXd\&\ coeffs,}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ trajopt::TermType\ \mbox{\hyperlink{ompl__planner__tests_8cpp_a03004818513b2a0604415827c17b9595}{type}});}
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00073\ std::shared\_ptr<trajopt::TermInfo>\ \mbox{\hyperlink{namespacetesseract__planning_afe9b6d06378207a0b221dbea0bf0dbd2}{createJointWaypointTermInfo}}(\textcolor{keyword}{const}\ Eigen::VectorXd\&\ j\_wp,}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ index,}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ Eigen::VectorXd\&\ coeffs,}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ trajopt::TermType\ \mbox{\hyperlink{ompl__planner__tests_8cpp_a03004818513b2a0604415827c17b9595}{type}});}
+\DoxyCodeLine{00077\ }
+\DoxyCodeLine{00078\ std::shared\_ptr<trajopt::TermInfo>\ \mbox{\hyperlink{namespacetesseract__planning_a3b679aec8b2cdb18865c02e838ff930d}{createTolerancedJointWaypointTermInfo}}(\textcolor{keyword}{const}\ Eigen::VectorXd\&\ j\_wp,}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ Eigen::VectorXd\&\ lower\_tol,}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ Eigen::VectorXd\&\ upper\_tol,}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ index,}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ Eigen::VectorXd\&\ coeffs,}
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ trajopt::TermType\ \mbox{\hyperlink{ompl__planner__tests_8cpp_a03004818513b2a0604415827c17b9595}{type}});}
+\DoxyCodeLine{00084\ }
+\DoxyCodeLine{00085\ std::shared\_ptr<trajopt::TermInfo>\ \mbox{\hyperlink{namespacetesseract__planning_a8d77200b2a43fdff81c766dcd9c9293b}{createCollisionTermInfo}}(}
+\DoxyCodeLine{00086\ \ \ \ \ \textcolor{keywordtype}{int}\ start\_index,}
+\DoxyCodeLine{00087\ \ \ \ \ \textcolor{keywordtype}{int}\ end\_index,}
+\DoxyCodeLine{00088\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{ompl__constrained__planner__tests_8cpp_aa892c49bec2ab8d5203f25e594218372}{collision\_safety\_margin}},}
+\DoxyCodeLine{00089\ \ \ \ \ \textcolor{keywordtype}{double}\ collision\_safety\_margin\_buffer,}
+\DoxyCodeLine{00090\ \ \ \ \ trajopt::CollisionEvaluatorType\ evaluator\_type,}
+\DoxyCodeLine{00091\ \ \ \ \ \textcolor{keywordtype}{bool}\ use\_weighted\_sum\ =\ \textcolor{keyword}{false},}
+\DoxyCodeLine{00092\ \ \ \ \ \textcolor{keywordtype}{double}\ coeff\ =\ 20.0,}
+\DoxyCodeLine{00093\ \ \ \ \ tesseract\_collision::ContactTestType\ contact\_test\_type\ =\ tesseract\_collision::ContactTestType::ALL,}
+\DoxyCodeLine{00094\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{ompl__planner__tests_8cpp_ad4614839bb63e579d5ebd9c2324dca9f}{longest\_valid\_segment\_length}}\ =\ 0.5,}
+\DoxyCodeLine{00095\ \ \ \ \ trajopt::TermType\ \mbox{\hyperlink{ompl__planner__tests_8cpp_a03004818513b2a0604415827c17b9595}{type}}\ =\ trajopt::TermType::TT\_COST);}
+\DoxyCodeLine{00096\ }
+\DoxyCodeLine{00097\ std::shared\_ptr<trajopt::TermInfo>\ \mbox{\hyperlink{namespacetesseract__planning_a614bf00b4932ef1fab843327d6eb0395}{createSmoothVelocityTermInfo}}(\textcolor{keywordtype}{int}\ start\_index,}
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ end\_index,}
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ n\_joints,}
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ coeff\ =\ 5.0,}
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ trajopt::TermType\ \mbox{\hyperlink{ompl__planner__tests_8cpp_a03004818513b2a0604415827c17b9595}{type}}\ =\ trajopt::TermType::TT\_COST);}
+\DoxyCodeLine{00102\ }
+\DoxyCodeLine{00103\ std::shared\_ptr<trajopt::TermInfo>\ \mbox{\hyperlink{namespacetesseract__planning_a614bf00b4932ef1fab843327d6eb0395}{createSmoothVelocityTermInfo}}(\textcolor{keywordtype}{int}\ start\_index,}
+\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ end\_index,}
+\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ Eigen::Ref<const\ Eigen::VectorXd>\&\ coeff,}
+\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ trajopt::TermType\ \mbox{\hyperlink{ompl__planner__tests_8cpp_a03004818513b2a0604415827c17b9595}{type}}\ =\ trajopt::TermType::TT\_COST);}
+\DoxyCodeLine{00107\ }
+\DoxyCodeLine{00108\ std::shared\_ptr<trajopt::TermInfo>}
+\DoxyCodeLine{00109\ \mbox{\hyperlink{namespacetesseract__planning_a8abbb9ca5312743bb2c740fe560903e0}{createSmoothAccelerationTermInfo}}(\textcolor{keywordtype}{int}\ start\_index,}
+\DoxyCodeLine{00110\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ end\_index,}
+\DoxyCodeLine{00111\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ n\_joints,}
+\DoxyCodeLine{00112\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ coeff\ =\ 1.0,}
+\DoxyCodeLine{00113\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ trajopt::TermType\ \mbox{\hyperlink{ompl__planner__tests_8cpp_a03004818513b2a0604415827c17b9595}{type}}\ =\ trajopt::TermType::TT\_COST);}
+\DoxyCodeLine{00114\ }
+\DoxyCodeLine{00115\ std::shared\_ptr<trajopt::TermInfo>}
+\DoxyCodeLine{00116\ \mbox{\hyperlink{namespacetesseract__planning_a8abbb9ca5312743bb2c740fe560903e0}{createSmoothAccelerationTermInfo}}(\textcolor{keywordtype}{int}\ start\_index,}
+\DoxyCodeLine{00117\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ end\_index,}
+\DoxyCodeLine{00118\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ Eigen::Ref<const\ Eigen::VectorXd>\&\ coeff,}
+\DoxyCodeLine{00119\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ trajopt::TermType\ \mbox{\hyperlink{ompl__planner__tests_8cpp_a03004818513b2a0604415827c17b9595}{type}}\ =\ trajopt::TermType::TT\_COST);}
+\DoxyCodeLine{00120\ }
+\DoxyCodeLine{00121\ std::shared\_ptr<trajopt::TermInfo>\ \mbox{\hyperlink{namespacetesseract__planning_a929f2c1e8023c0e4ae76e741b7909068}{createSmoothJerkTermInfo}}(\textcolor{keywordtype}{int}\ start\_index,}
+\DoxyCodeLine{00122\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ end\_index,}
+\DoxyCodeLine{00123\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ n\_joints,}
+\DoxyCodeLine{00124\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ coeff\ =\ 1.0,}
+\DoxyCodeLine{00125\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ trajopt::TermType\ \mbox{\hyperlink{ompl__planner__tests_8cpp_a03004818513b2a0604415827c17b9595}{type}}\ =\ trajopt::TermType::TT\_COST);}
+\DoxyCodeLine{00126\ }
+\DoxyCodeLine{00127\ std::shared\_ptr<trajopt::TermInfo>\ \mbox{\hyperlink{namespacetesseract__planning_a929f2c1e8023c0e4ae76e741b7909068}{createSmoothJerkTermInfo}}(\textcolor{keywordtype}{int}\ start\_index,}
+\DoxyCodeLine{00128\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ end\_index,}
+\DoxyCodeLine{00129\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ Eigen::Ref<const\ Eigen::VectorXd>\&\ coeff,}
+\DoxyCodeLine{00130\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ trajopt::TermType\ \mbox{\hyperlink{ompl__planner__tests_8cpp_a03004818513b2a0604415827c17b9595}{type}}\ =\ trajopt::TermType::TT\_COST);}
+\DoxyCodeLine{00131\ }
+\DoxyCodeLine{00132\ std::shared\_ptr<trajopt::TermInfo>\ \mbox{\hyperlink{namespacetesseract__planning_aa49042c210ccc4b1e0a0ecb4cbd4c464}{createUserDefinedTermInfo}}(\textcolor{keywordtype}{int}\ start\_index,}
+\DoxyCodeLine{00133\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ end\_index,}
+\DoxyCodeLine{00134\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ sco::VectorOfVector::func\ error\_function,}
+\DoxyCodeLine{00135\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ sco::MatrixOfVector::func\ jacobian\_function,}
+\DoxyCodeLine{00136\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ trajopt::TermType\ \mbox{\hyperlink{ompl__planner__tests_8cpp_a03004818513b2a0604415827c17b9595}{type}});}
+\DoxyCodeLine{00137\ }
+\DoxyCodeLine{00138\ std::shared\_ptr<trajopt::TermInfo>\ \mbox{\hyperlink{namespacetesseract__planning_afa19bab08ddcf74382f9d3c07b32f345}{createAvoidSingularityTermInfo}}(\textcolor{keywordtype}{int}\ start\_index,}
+\DoxyCodeLine{00139\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ end\_index,}
+\DoxyCodeLine{00140\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::string\&\ link,}
+\DoxyCodeLine{00141\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ coeff\ =\ 5.0,}
+\DoxyCodeLine{00142\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ trajopt::TermType\ \mbox{\hyperlink{ompl__planner__tests_8cpp_a03004818513b2a0604415827c17b9595}{type}}\ =\ trajopt::TermType::TT\_COST);}
+\DoxyCodeLine{00143\ \}\ \ \textcolor{comment}{//\ namespace\ tesseract\_planning}}
+\DoxyCodeLine{00144\ }
+\DoxyCodeLine{00145\ \textcolor{preprocessor}{\#endif\ \ }\textcolor{comment}{//\ TESSERACT\_MOTION\_PLANNERS\_TRAJOPT\_UTILS\_H}}
+
+\end{DoxyCode}

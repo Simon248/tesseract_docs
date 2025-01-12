@@ -1,0 +1,14 @@
+<map id="tesseract_task_composer/planning/include/tesseract_task_composer/planning/profiles/profile_switch_profile.h" name="tesseract_task_composer/planning/include/tesseract_task_composer/planning/profiles/profile_switch_profile.h">
+<area shape="rect" id="Node000001" title="Profile for task that returns a value based on the profile." alt="" coords="125,5,339,76"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,132,195,157"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="189,79,129,124,126,120,185,74"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="202,220,270,246"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="235,76,238,204,233,204,230,76"/>
+<area shape="rect" id="Node000004" href="$de/d45/profile_8h.html" title="This is a profile base class." alt="" coords="269,124,467,165"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="280,74,331,112,328,117,277,79"/>
+<area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="340,167,268,214,265,209,337,163"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="301,213,427,253"/>
+<area shape="poly" id="edge5_Node000004_Node000005" title=" " alt="" coords="370,165,368,197,363,197,364,165"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="451,213,576,253"/>
+<area shape="poly" id="edge6_Node000004_Node000006" title=" " alt="" coords="402,163,469,202,466,207,400,167"/>
+</map>

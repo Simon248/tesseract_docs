@@ -1,0 +1,37 @@
+\doxysection{descartes\+\_\+profile.\+hpp}
+\hypertarget{descartes__profile_8hpp_source}{}\label{descartes__profile_8hpp_source}\index{tesseract\_motion\_planners/descartes/include/tesseract\_motion\_planners/descartes/impl/profile/descartes\_profile.hpp@{tesseract\_motion\_planners/descartes/include/tesseract\_motion\_planners/descartes/impl/profile/descartes\_profile.hpp}}
+\mbox{\hyperlink{descartes__profile_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00026\ \textcolor{preprocessor}{\#ifndef\ TESSERACT\_MOTION\_PLANNERS\_DESCARTES\_IMPL\_DESCARTES\_PROFILE\_HPP}}
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#define\ TESSERACT\_MOTION\_PLANNERS\_DESCARTES\_IMPL\_DESCARTES\_PROFILE\_HPP}}
+\DoxyCodeLine{00028\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{descartes__profile_8h}{tesseract\_motion\_planners/descartes/profile/descartes\_profile.h}}>}}
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#include\ <tesseract\_common/manipulator\_info.h>}}
+\DoxyCodeLine{00030\ \textcolor{preprocessor}{\#include\ <tesseract\_environment/environment.h>}}
+\DoxyCodeLine{00031\ \textcolor{preprocessor}{\#include\ <tesseract\_kinematics/core/kinematic\_group.h>}}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacetesseract__planning}{tesseract\_planning}}}
+\DoxyCodeLine{00034\ \{}
+\DoxyCodeLine{00035\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ FloatType>}
+\DoxyCodeLine{00036\ std::shared\_ptr<const\ tesseract\_kinematics::KinematicGroup>}
+\DoxyCodeLine{00037\ \mbox{\hyperlink{classtesseract__planning_1_1DescartesPlanProfile_a2429467fba3f4fbde2ccaab4f8dfd072}{DescartesPlanProfile<FloatType>::createKinematicGroup}}(\textcolor{keyword}{const}\ tesseract\_common::ManipulatorInfo\&\ \mbox{\hyperlink{command__language__utils__unit_8cpp_af21d30c87e87931298afb1eb6f703551}{manip\_info}},}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ tesseract\_environment::Environment\&\ \mbox{\hyperlink{basic__cartesian__example__unit_8cpp_a96ce750ee22ecbf4d17cc6cf146d9514}{env}})\textcolor{keyword}{\ const}}
+\DoxyCodeLine{00039\ \textcolor{keyword}{}\{}
+\DoxyCodeLine{00040\ \ \ \textcolor{comment}{//\ Get\ Manipulator\ Information}}
+\DoxyCodeLine{00041\ \ \ \textcolor{keywordflow}{try}}
+\DoxyCodeLine{00042\ \ \ \{}
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{command__language__utils__unit_8cpp_af21d30c87e87931298afb1eb6f703551}{manip\_info}}.manipulator\_ik\_solver.empty())}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{basic__cartesian__example__unit_8cpp_a96ce750ee22ecbf4d17cc6cf146d9514}{env}}.getKinematicGroup(\mbox{\hyperlink{command__language__utils__unit_8cpp_af21d30c87e87931298afb1eb6f703551}{manip\_info}}.manipulator);}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{basic__cartesian__example__unit_8cpp_a96ce750ee22ecbf4d17cc6cf146d9514}{env}}.getKinematicGroup(\mbox{\hyperlink{command__language__utils__unit_8cpp_af21d30c87e87931298afb1eb6f703551}{manip\_info}}.manipulator,\ \mbox{\hyperlink{command__language__utils__unit_8cpp_af21d30c87e87931298afb1eb6f703551}{manip\_info}}.manipulator\_ik\_solver);}
+\DoxyCodeLine{00047\ \ \ \}}
+\DoxyCodeLine{00048\ \ \ \textcolor{keywordflow}{catch}\ (...)}
+\DoxyCodeLine{00049\ \ \ \{}
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keywordflow}{throw}\ std::runtime\_error(\textcolor{stringliteral}{"{}Descartes\ problem\ generator\ failed\ to\ create\ kinematic\ group!"{}});}
+\DoxyCodeLine{00051\ \ \ \}}
+\DoxyCodeLine{00052\ \}}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00054\ \}\ \ \textcolor{comment}{//\ namespace\ tesseract\_planning}}
+\DoxyCodeLine{00055\ \textcolor{preprocessor}{\#endif\ \ }\textcolor{comment}{//\ TESSERACT\_MOTION\_PLANNERS\_DESCARTES\_IMPL\_DESCARTES\_PROFILE\_HPP}}
+
+\end{DoxyCode}

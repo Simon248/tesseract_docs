@@ -1,0 +1,11 @@
+<map id="TrajOptIfoptWaypointInfo" name="TrajOptIfoptWaypointInfo">
+<area shape="rect" id="Node000001" title="Structure to store TrajOpt waypoint cost and constrant term infos." alt="" coords="104,361,269,387"/>
+<area shape="rect" id="Node000002" href="$de/d0b/structTrajOptIfoptTermInfos.html" title="Structure to store TrajOpt IFOPT constrant and cost term infos." alt="" coords="24,265,173,291"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="122,300,177,359,173,363,118,304"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="5,109,192,150"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="101,165,101,265,96,265,96,165"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="27,5,170,46"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="101,62,101,109,96,109,96,62"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="198,258,351,298"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="249,312,224,339,201,363,197,359,221,335,245,309"/>
+</map>

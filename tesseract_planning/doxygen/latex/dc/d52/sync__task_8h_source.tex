@@ -1,0 +1,52 @@
+\doxysection{sync\+\_\+task.\+h}
+\hypertarget{sync__task_8h_source}{}\label{sync__task_8h_source}\index{tesseract\_task\_composer/core/include/tesseract\_task\_composer/core/nodes/sync\_task.h@{tesseract\_task\_composer/core/include/tesseract\_task\_composer/core/nodes/sync\_task.h}}
+\mbox{\hyperlink{sync__task_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00025\ \textcolor{preprocessor}{\#ifndef\ TESSERACT\_TASK\_COMPOSER\_SYNC\_TASK\_H}}
+\DoxyCodeLine{00026\ \textcolor{preprocessor}{\#define\ TESSERACT\_TASK\_COMPOSER\_SYNC\_TASK\_H}}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \textcolor{preprocessor}{\#include\ <tesseract\_common/macros.h>}}
+\DoxyCodeLine{00029\ TESSERACT\_COMMON\_IGNORE\_WARNINGS\_PUSH}
+\DoxyCodeLine{00030\ \textcolor{preprocessor}{\#include\ <boost/serialization/access.hpp>}}
+\DoxyCodeLine{00031\ \textcolor{preprocessor}{\#include\ <boost/serialization/export.hpp>}}
+\DoxyCodeLine{00032\ \mbox{\hyperlink{namespaceTESSERACT__COMMON__IGNORE__WARNINGS__POP}{TESSERACT\_COMMON\_IGNORE\_WARNINGS\_POP}}}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{task__composer__task_8h}{tesseract\_task\_composer/core/task\_composer\_task.h}}>}}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacetesseract__planning}{tesseract\_planning}}}
+\DoxyCodeLine{00037\ \{}
+\DoxyCodeLine{00038\ \textcolor{keyword}{class\ }TaskComposerPluginFactory;}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00049\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classtesseract__planning_1_1SyncTask}{SyncTask}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerTask}{TaskComposerTask}}}
+\DoxyCodeLine{00050\ \{}
+\DoxyCodeLine{00051\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00052\ \ \ \textcolor{keyword}{using\ }\mbox{\hyperlink{classtesseract__planning_1_1SyncTask_ae6d3ba8072bcda8b250a962fe919516f}{Ptr}}\ =\ std::shared\_ptr<SyncTask>;}
+\DoxyCodeLine{00053\ \ \ \textcolor{keyword}{using\ }\mbox{\hyperlink{classtesseract__planning_1_1SyncTask_a0442cb6b8f09de6f2318335d10f13a90}{ConstPtr}}\ =\ std::shared\_ptr<const\ SyncTask>;}
+\DoxyCodeLine{00054\ \ \ \textcolor{keyword}{using\ }\mbox{\hyperlink{classtesseract__planning_1_1SyncTask_a29767309d00a950e9d76968234943cc0}{UPtr}}\ =\ std::unique\_ptr<SyncTask>;}
+\DoxyCodeLine{00055\ \ \ \textcolor{keyword}{using\ }\mbox{\hyperlink{classtesseract__planning_1_1SyncTask_a7683b228bc199285c327319fd7642315}{ConstUPtr}}\ =\ std::unique\_ptr<const\ SyncTask>;}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00057\ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{classtesseract__planning_1_1SyncTask}{SyncTask}}(std::string\ \mbox{\hyperlink{tesseract__task__composer__core__unit_8cpp_a9b45b3e13bd9167aab02e17e08916231}{name}}\ =\ \textcolor{stringliteral}{"{}SyncTask"{}});}
+\DoxyCodeLine{00058\ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{classtesseract__planning_1_1SyncTask}{SyncTask}}(std::string\ \mbox{\hyperlink{tesseract__task__composer__core__unit_8cpp_a9b45b3e13bd9167aab02e17e08916231}{name}},\ \textcolor{keyword}{const}\ YAML::Node\&\ \mbox{\hyperlink{tesseract__task__composer__core__unit_8cpp_a01d92a800904faa16b8c1c1372c40fb3}{config}},\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerPluginFactory}{TaskComposerPluginFactory}}\&\ plugin\_factory);}
+\DoxyCodeLine{00059\ \ \ \mbox{\hyperlink{classtesseract__planning_1_1SyncTask_ae2317348fba43b5a3abb51ce6009d46d}{\string~SyncTask}}()\ \textcolor{keyword}{override}\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00061\ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classtesseract__planning_1_1SyncTask_a65e8b7c559c79730748f16d0c2b78ad3}{operator==}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classtesseract__planning_1_1SyncTask}{SyncTask}}\&\ rhs)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00062\ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classtesseract__planning_1_1SyncTask_ac458870713f97acff167ed8acf94104e}{operator!=}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classtesseract__planning_1_1SyncTask}{SyncTask}}\&\ rhs)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00064\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00065\ \ \ \textcolor{keyword}{friend}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{classtesseract__planning_1_1SyncTask_a9d42ad7bb40288a7ac1aad8d76809fe7}{tesseract\_common::Serialization}};}
+\DoxyCodeLine{00066\ \ \ \textcolor{keyword}{friend}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classtesseract__planning_1_1SyncTask_ac98d07dd8f7b70e16ccb9a01abf56b9c}{boost::serialization::access}};}
+\DoxyCodeLine{00067\ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{class}\ Archive>}
+\DoxyCodeLine{00068\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classtesseract__planning_1_1SyncTask_a999a86680549fc804318a371269824b9}{serialize}}(Archive\&\ ar,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ version);\ \ \textcolor{comment}{//\ NOLINT}}
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00070\ \ \ std::unique\_ptr<TaskComposerNodeInfo>}
+\DoxyCodeLine{00071\ \ \ \mbox{\hyperlink{classtesseract__planning_1_1SyncTask_a8e08f714a3ea4365ae8a5a4851dd89a6}{runImpl}}(\mbox{\hyperlink{classtesseract__planning_1_1TaskComposerContext}{TaskComposerContext}}\&\ \mbox{\hyperlink{tesseract__task__composer__core__unit_8cpp_adf0dd2db07cdbb966d6e385d3cd2605c}{context}},\ \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerNode_a51670db70ccba1ce21a77a5448e474d7}{OptionalTaskComposerExecutor}}\ \mbox{\hyperlink{tesseract__task__composer__taskflow__unit_8cpp_ab85065e5a325fc5bf8675e6c55a3e72f}{executor}}\ =\ std::nullopt)\ \textcolor{keyword}{const}\ \textcolor{keyword}{override}\ \textcolor{keyword}{final};}
+\DoxyCodeLine{00072\ \};}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00074\ \}\ \ \textcolor{comment}{//\ namespace\ tesseract\_planning}}
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00076\ BOOST\_CLASS\_EXPORT\_KEY(\mbox{\hyperlink{classtesseract__planning_1_1SyncTask}{tesseract\_planning::SyncTask}})}
+\DoxyCodeLine{00077\ }
+\DoxyCodeLine{00078\ \textcolor{preprocessor}{\#endif\ \ }\textcolor{comment}{//\ TESSERACT\_TASK\_COMPOSER\_SYNC\_TASK\_H}}
+
+\end{DoxyCode}

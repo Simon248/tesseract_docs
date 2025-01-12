@@ -1,0 +1,13 @@
+<map id="tesseract_planning::DescartesCollision" name="tesseract_planning::DescartesCollision">
+<area shape="rect" id="Node000001" title=" " alt="" coords="761,78,896,119"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="402,5,552,61"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="568,45,737,76,761,81,760,86,736,81,567,50"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="397,86,557,111"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="572,96,760,96,760,101,572,101"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="178,86,255,111"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="271,96,397,96,397,101,271,101"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="5,78,129,119"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="144,96,178,96,178,101,144,101"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="359,136,595,176"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="609,136,736,116,760,112,761,117,737,121,610,142"/>
+</map>

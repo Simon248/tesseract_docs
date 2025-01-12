@@ -1,0 +1,164 @@
+\doxysection{tesseract\+\_\+planning\+::Traj\+Opt\+Ifopt\+Plan\+Profile Class Reference}
+\hypertarget{classtesseract__planning_1_1TrajOptIfoptPlanProfile}{}\label{classtesseract__planning_1_1TrajOptIfoptPlanProfile}\index{tesseract\_planning::TrajOptIfoptPlanProfile@{tesseract\_planning::TrajOptIfoptPlanProfile}}
+
+
+{\ttfamily \#include $<$trajopt\+\_\+ifopt\+\_\+profile.\+h$>$}
+
+
+
+Inheritance diagram for tesseract\+\_\+planning\+::Traj\+Opt\+Ifopt\+Plan\+Profile\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=230pt]{d3/d13/classtesseract__planning_1_1TrajOptIfoptPlanProfile__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for tesseract\+\_\+planning\+::Traj\+Opt\+Ifopt\+Plan\+Profile\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=199pt]{d2/d8e/classtesseract__planning_1_1TrajOptIfoptPlanProfile__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{classtesseract__planning_1_1TrajOptIfoptPlanProfile_a7de8ed1ac176b97d0f18a171880d8c3b}{Ptr}} = std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classtesseract__planning_1_1TrajOptIfoptPlanProfile}{Traj\+Opt\+Ifopt\+Plan\+Profile}} $>$
+\item 
+using \mbox{\hyperlink{classtesseract__planning_1_1TrajOptIfoptPlanProfile_a8883e97af7cd4253a9a99bc34e54a152}{Const\+Ptr}} = std\+::shared\+\_\+ptr$<$ const \mbox{\hyperlink{classtesseract__planning_1_1TrajOptIfoptPlanProfile}{Traj\+Opt\+Ifopt\+Plan\+Profile}} $>$
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Types inherited from \mbox{\hyperlink{classtesseract__planning_1_1Profile}{tesseract\+\_\+planning\+::\+Profile}}}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{classtesseract__planning_1_1Profile_a97eccfaeed5efa7bc023b252058fc011}{Ptr}} = std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classtesseract__planning_1_1Profile}{Profile}} $>$
+\item 
+using \mbox{\hyperlink{classtesseract__planning_1_1Profile_a8331936b7fcc7edcd7f2e9dca19aa8ec}{Const\+Ptr}} = std\+::shared\+\_\+ptr$<$ const \mbox{\hyperlink{classtesseract__planning_1_1Profile}{Profile}} $>$
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classtesseract__planning_1_1TrajOptIfoptPlanProfile_a0c0df124358c4509b70e3ddb4fd81acd}{Traj\+Opt\+Ifopt\+Plan\+Profile}} ()
+\item 
+virtual \mbox{\hyperlink{structTrajOptIfoptWaypointInfo}{Traj\+Opt\+Ifopt\+Waypoint\+Info}} \mbox{\hyperlink{classtesseract__planning_1_1TrajOptIfoptPlanProfile_a186bfdf691be3b28723c7fcbfecfa671}{create}} (const \mbox{\hyperlink{structtesseract__planning_1_1MoveInstructionPoly}{Move\+Instruction\+Poly}} \&move\+\_\+instruction, const tesseract\+\_\+common\+::\+Manipulator\+Info \&composite\+\_\+manip\+\_\+info, const std\+::shared\+\_\+ptr$<$ const tesseract\+\_\+environment\+::\+Environment $>$ \&\mbox{\hyperlink{basic__cartesian__example__unit_8cpp_a96ce750ee22ecbf4d17cc6cf146d9514}{env}}, int index) const =0
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classtesseract__planning_1_1Profile}{tesseract\+\_\+planning\+::\+Profile}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classtesseract__planning_1_1Profile_ad25e3cd86696d894bbd251aec86b67df}{Profile}} ()=default
+\item 
+\mbox{\hyperlink{classtesseract__planning_1_1Profile_ae0d400ff6d72eb724e11679cf00bde26}{Profile}} (std\+::size\+\_\+t key)
+\item 
+virtual \mbox{\hyperlink{classtesseract__planning_1_1Profile_ab1f8b9ae3844d23ebca972187b7f64c5}{\texorpdfstring{$\sim$}{\string~}\+Profile}} ()=default
+\item 
+std\+::size\+\_\+t \mbox{\hyperlink{classtesseract__planning_1_1Profile_ae2abbb72b85a3086467a8fdf436f0d53}{get\+Key}} () const
+\begin{DoxyCompactList}\small\item\em Get the hash code associated with the profile. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::size\+\_\+t \mbox{\hyperlink{classtesseract__planning_1_1TrajOptIfoptPlanProfile_ad405f7f63ce3442eb0960e9543e3f68d}{get\+Static\+Key}} ()
+\begin{DoxyCompactList}\small\item\em A utility function for getting profile ID. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$class Archive $>$ }\\void \mbox{\hyperlink{classtesseract__planning_1_1TrajOptIfoptPlanProfile_a1688df35df35e8ac10a421ac116c7633}{serialize}} (Archive \&, const unsigned int)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{classtesseract__planning_1_1Profile}{tesseract\+\_\+planning\+::\+Profile}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classtesseract__planning_1_1Profile_ac6073a166cf5c61aa9c1e04310df2120}{Profile}} (const \mbox{\hyperlink{classtesseract__planning_1_1Profile}{Profile}} \&)=default
+\item 
+\mbox{\hyperlink{classtesseract__planning_1_1Profile}{Profile}} \& \mbox{\hyperlink{classtesseract__planning_1_1Profile_a0e230bd826d4ee0536abeaade88fba2c}{operator=}} (const \mbox{\hyperlink{classtesseract__planning_1_1Profile}{Profile}} \&)=default
+\item 
+\mbox{\hyperlink{classtesseract__planning_1_1Profile_a2fc58bcb3c96b280df807bd2edd08523}{Profile}} (\mbox{\hyperlink{classtesseract__planning_1_1Profile}{Profile}} \&\&)=default
+\item 
+\mbox{\hyperlink{classtesseract__planning_1_1Profile}{Profile}} \& \mbox{\hyperlink{classtesseract__planning_1_1Profile_a4fee076d70a119b76550d176d085dc33}{operator=}} (\mbox{\hyperlink{classtesseract__planning_1_1Profile}{Profile}} \&\&)=default
+\item 
+{\footnotesize template$<$class Archive $>$ }\\void \mbox{\hyperlink{classtesseract__planning_1_1Profile_aa284fcaab6e1d36cfb3a7ce8ab947eb2}{serialize}} (Archive \&, const unsigned int)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classtesseract__planning_1_1TrajOptIfoptPlanProfile_ac98d07dd8f7b70e16ccb9a01abf56b9c}{boost\+::serialization\+::access}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{classtesseract__planning_1_1Profile}{tesseract\+\_\+planning\+::\+Profile}}}
+\begin{DoxyCompactItemize}
+\item 
+std\+::size\+\_\+t \mbox{\hyperlink{classtesseract__planning_1_1Profile_acafd9e0f65e1a54ca3803dd66bf22f4b}{key\+\_\+}} \{ 0 \}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Typedef Documentation}
+\Hypertarget{classtesseract__planning_1_1TrajOptIfoptPlanProfile_a8883e97af7cd4253a9a99bc34e54a152}\label{classtesseract__planning_1_1TrajOptIfoptPlanProfile_a8883e97af7cd4253a9a99bc34e54a152} 
+\index{tesseract\_planning::TrajOptIfoptPlanProfile@{tesseract\_planning::TrajOptIfoptPlanProfile}!ConstPtr@{ConstPtr}}
+\index{ConstPtr@{ConstPtr}!tesseract\_planning::TrajOptIfoptPlanProfile@{tesseract\_planning::TrajOptIfoptPlanProfile}}
+\doxysubsubsection{\texorpdfstring{ConstPtr}{ConstPtr}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classtesseract__planning_1_1TrajOptIfoptPlanProfile_a8883e97af7cd4253a9a99bc34e54a152}{tesseract\+\_\+planning\+::\+Traj\+Opt\+Ifopt\+Plan\+Profile\+::\+Const\+Ptr}} =  std\+::shared\+\_\+ptr$<$const \mbox{\hyperlink{classtesseract__planning_1_1TrajOptIfoptPlanProfile}{Traj\+Opt\+Ifopt\+Plan\+Profile}}$>$}
+
+\Hypertarget{classtesseract__planning_1_1TrajOptIfoptPlanProfile_a7de8ed1ac176b97d0f18a171880d8c3b}\label{classtesseract__planning_1_1TrajOptIfoptPlanProfile_a7de8ed1ac176b97d0f18a171880d8c3b} 
+\index{tesseract\_planning::TrajOptIfoptPlanProfile@{tesseract\_planning::TrajOptIfoptPlanProfile}!Ptr@{Ptr}}
+\index{Ptr@{Ptr}!tesseract\_planning::TrajOptIfoptPlanProfile@{tesseract\_planning::TrajOptIfoptPlanProfile}}
+\doxysubsubsection{\texorpdfstring{Ptr}{Ptr}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classtesseract__planning_1_1TrajOptIfoptPlanProfile_a7de8ed1ac176b97d0f18a171880d8c3b}{tesseract\+\_\+planning\+::\+Traj\+Opt\+Ifopt\+Plan\+Profile\+::\+Ptr}} =  std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classtesseract__planning_1_1TrajOptIfoptPlanProfile}{Traj\+Opt\+Ifopt\+Plan\+Profile}}$>$}
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classtesseract__planning_1_1TrajOptIfoptPlanProfile_a0c0df124358c4509b70e3ddb4fd81acd}\label{classtesseract__planning_1_1TrajOptIfoptPlanProfile_a0c0df124358c4509b70e3ddb4fd81acd} 
+\index{tesseract\_planning::TrajOptIfoptPlanProfile@{tesseract\_planning::TrajOptIfoptPlanProfile}!TrajOptIfoptPlanProfile@{TrajOptIfoptPlanProfile}}
+\index{TrajOptIfoptPlanProfile@{TrajOptIfoptPlanProfile}!tesseract\_planning::TrajOptIfoptPlanProfile@{tesseract\_planning::TrajOptIfoptPlanProfile}}
+\doxysubsubsection{\texorpdfstring{TrajOptIfoptPlanProfile()}{TrajOptIfoptPlanProfile()}}
+{\footnotesize\ttfamily tesseract\+\_\+planning\+::\+Traj\+Opt\+Ifopt\+Plan\+Profile\+::\+Traj\+Opt\+Ifopt\+Plan\+Profile (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classtesseract__planning_1_1TrajOptIfoptPlanProfile_a186bfdf691be3b28723c7fcbfecfa671}\label{classtesseract__planning_1_1TrajOptIfoptPlanProfile_a186bfdf691be3b28723c7fcbfecfa671} 
+\index{tesseract\_planning::TrajOptIfoptPlanProfile@{tesseract\_planning::TrajOptIfoptPlanProfile}!create@{create}}
+\index{create@{create}!tesseract\_planning::TrajOptIfoptPlanProfile@{tesseract\_planning::TrajOptIfoptPlanProfile}}
+\doxysubsubsection{\texorpdfstring{create()}{create()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{structTrajOptIfoptWaypointInfo}{Traj\+Opt\+Ifopt\+Waypoint\+Info}} tesseract\+\_\+planning\+::\+Traj\+Opt\+Ifopt\+Plan\+Profile\+::create (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structtesseract__planning_1_1MoveInstructionPoly}{Move\+Instruction\+Poly}} \&}]{move\+\_\+instruction,  }\item[{const tesseract\+\_\+common\+::\+Manipulator\+Info \&}]{composite\+\_\+manip\+\_\+info,  }\item[{const std\+::shared\+\_\+ptr$<$ const tesseract\+\_\+environment\+::\+Environment $>$ \&}]{env,  }\item[{int}]{index }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classtesseract__planning_1_1TrajOptIfoptDefaultPlanProfile_abee03a8da85a74066657c750f68766b6}{tesseract\+\_\+planning\+::\+Traj\+Opt\+Ifopt\+Default\+Plan\+Profile}}.
+
+\Hypertarget{classtesseract__planning_1_1TrajOptIfoptPlanProfile_ad405f7f63ce3442eb0960e9543e3f68d}\label{classtesseract__planning_1_1TrajOptIfoptPlanProfile_ad405f7f63ce3442eb0960e9543e3f68d} 
+\index{tesseract\_planning::TrajOptIfoptPlanProfile@{tesseract\_planning::TrajOptIfoptPlanProfile}!getStaticKey@{getStaticKey}}
+\index{getStaticKey@{getStaticKey}!tesseract\_planning::TrajOptIfoptPlanProfile@{tesseract\_planning::TrajOptIfoptPlanProfile}}
+\doxysubsubsection{\texorpdfstring{getStaticKey()}{getStaticKey()}}
+{\footnotesize\ttfamily std\+::size\+\_\+t tesseract\+\_\+planning\+::\+Traj\+Opt\+Ifopt\+Plan\+Profile\+::get\+Static\+Key (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+A utility function for getting profile ID. 
+
+\begin{DoxyReturn}{Returns}
+The profile ID used when storing in profile dictionary 
+\end{DoxyReturn}
+\Hypertarget{classtesseract__planning_1_1TrajOptIfoptPlanProfile_a1688df35df35e8ac10a421ac116c7633}\label{classtesseract__planning_1_1TrajOptIfoptPlanProfile_a1688df35df35e8ac10a421ac116c7633} 
+\index{tesseract\_planning::TrajOptIfoptPlanProfile@{tesseract\_planning::TrajOptIfoptPlanProfile}!serialize@{serialize}}
+\index{serialize@{serialize}!tesseract\_planning::TrajOptIfoptPlanProfile@{tesseract\_planning::TrajOptIfoptPlanProfile}}
+\doxysubsubsection{\texorpdfstring{serialize()}{serialize()}}
+{\footnotesize\ttfamily template$<$class Archive $>$ \\
+void tesseract\+\_\+planning\+::\+Traj\+Opt\+Ifopt\+Plan\+Profile\+::serialize (\begin{DoxyParamCaption}\item[{Archive \&}]{ar,  }\item[{const unsigned int}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+\doxysubsection{Friends And Related Symbol Documentation}
+\Hypertarget{classtesseract__planning_1_1TrajOptIfoptPlanProfile_ac98d07dd8f7b70e16ccb9a01abf56b9c}\label{classtesseract__planning_1_1TrajOptIfoptPlanProfile_ac98d07dd8f7b70e16ccb9a01abf56b9c} 
+\index{tesseract\_planning::TrajOptIfoptPlanProfile@{tesseract\_planning::TrajOptIfoptPlanProfile}!boost::serialization::access@{boost::serialization::access}}
+\index{boost::serialization::access@{boost::serialization::access}!tesseract\_planning::TrajOptIfoptPlanProfile@{tesseract\_planning::TrajOptIfoptPlanProfile}}
+\doxysubsubsection{\texorpdfstring{boost::serialization::access}{boost::serialization::access}}
+{\footnotesize\ttfamily friend class boost\+::serialization\+::access\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+tesseract\+\_\+motion\+\_\+planners/trajopt\+\_\+ifopt/include/tesseract\+\_\+motion\+\_\+planners/trajopt\+\_\+ifopt/profile/\mbox{\hyperlink{trajopt__ifopt__profile_8h}{trajopt\+\_\+ifopt\+\_\+profile.\+h}}\item 
+tesseract\+\_\+motion\+\_\+planners/trajopt\+\_\+ifopt/src/profile/\mbox{\hyperlink{trajopt__ifopt__profile_8cpp}{trajopt\+\_\+ifopt\+\_\+profile.\+cpp}}\end{DoxyCompactItemize}

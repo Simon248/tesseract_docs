@@ -1,0 +1,190 @@
+\doxysection{tesseract\+\_\+planning\+::Iterative\+Spline\+Parameterization\+Profile Struct Reference}
+\hypertarget{structtesseract__planning_1_1IterativeSplineParameterizationProfile}{}\label{structtesseract__planning_1_1IterativeSplineParameterizationProfile}\index{tesseract\_planning::IterativeSplineParameterizationProfile@{tesseract\_planning::IterativeSplineParameterizationProfile}}
+
+
+{\ttfamily \#include $<$iterative\+\_\+spline\+\_\+parameterization\+\_\+profile.\+h$>$}
+
+
+
+Inheritance diagram for tesseract\+\_\+planning\+::Iterative\+Spline\+Parameterization\+Profile\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=236pt]{dd/d74/structtesseract__planning_1_1IterativeSplineParameterizationProfile__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for tesseract\+\_\+planning\+::Iterative\+Spline\+Parameterization\+Profile\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=236pt]{d9/d65/structtesseract__planning_1_1IterativeSplineParameterizationProfile__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{structtesseract__planning_1_1IterativeSplineParameterizationProfile_a52fea0b0e87283a083b8a3b12170a576}{Ptr}} = std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structtesseract__planning_1_1IterativeSplineParameterizationProfile}{Iterative\+Spline\+Parameterization\+Profile}} $>$
+\item 
+using \mbox{\hyperlink{structtesseract__planning_1_1IterativeSplineParameterizationProfile_ad8b06635b63e3acfad61bed7b9730f94}{Const\+Ptr}} = std\+::shared\+\_\+ptr$<$ const \mbox{\hyperlink{structtesseract__planning_1_1IterativeSplineParameterizationProfile}{Iterative\+Spline\+Parameterization\+Profile}} $>$
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Types inherited from \mbox{\hyperlink{classtesseract__planning_1_1Profile}{tesseract\+\_\+planning\+::\+Profile}}}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{classtesseract__planning_1_1Profile_a97eccfaeed5efa7bc023b252058fc011}{Ptr}} = std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classtesseract__planning_1_1Profile}{Profile}} $>$
+\item 
+using \mbox{\hyperlink{classtesseract__planning_1_1Profile_a8331936b7fcc7edcd7f2e9dca19aa8ec}{Const\+Ptr}} = std\+::shared\+\_\+ptr$<$ const \mbox{\hyperlink{classtesseract__planning_1_1Profile}{Profile}} $>$
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structtesseract__planning_1_1IterativeSplineParameterizationProfile_a97d4cba8a23526e4bab6c83d943db37f}{Iterative\+Spline\+Parameterization\+Profile}} ()
+\item 
+\mbox{\hyperlink{structtesseract__planning_1_1IterativeSplineParameterizationProfile_aeea7dc8ec53803e26e4356603550bb49}{Iterative\+Spline\+Parameterization\+Profile}} (double \mbox{\hyperlink{structtesseract__planning_1_1IterativeSplineParameterizationProfile_a308d7c08bb7c3b024103571c3cd42241}{max\+\_\+velocity\+\_\+scaling\+\_\+factor}}, double \mbox{\hyperlink{structtesseract__planning_1_1IterativeSplineParameterizationProfile_a2a2895299b9d49820d70515a2e040214}{max\+\_\+acceleration\+\_\+scaling\+\_\+factor}})
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classtesseract__planning_1_1Profile}{tesseract\+\_\+planning\+::\+Profile}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classtesseract__planning_1_1Profile_ad25e3cd86696d894bbd251aec86b67df}{Profile}} ()=default
+\item 
+\mbox{\hyperlink{classtesseract__planning_1_1Profile_ae0d400ff6d72eb724e11679cf00bde26}{Profile}} (std\+::size\+\_\+t key)
+\item 
+virtual \mbox{\hyperlink{classtesseract__planning_1_1Profile_ab1f8b9ae3844d23ebca972187b7f64c5}{\texorpdfstring{$\sim$}{\string~}\+Profile}} ()=default
+\item 
+std\+::size\+\_\+t \mbox{\hyperlink{classtesseract__planning_1_1Profile_ae2abbb72b85a3086467a8fdf436f0d53}{get\+Key}} () const
+\begin{DoxyCompactList}\small\item\em Get the hash code associated with the profile. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::size\+\_\+t \mbox{\hyperlink{structtesseract__planning_1_1IterativeSplineParameterizationProfile_a329ad6de77bb2fb7d99a14b2607d3999}{get\+Static\+Key}} ()
+\begin{DoxyCompactList}\small\item\em A utility function for getting profile ID. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+double \mbox{\hyperlink{structtesseract__planning_1_1IterativeSplineParameterizationProfile_a308d7c08bb7c3b024103571c3cd42241}{max\+\_\+velocity\+\_\+scaling\+\_\+factor}} \{ 1.\+0 \}
+\begin{DoxyCompactList}\small\item\em max\+\_\+velocity\+\_\+scaling\+\_\+factor The max velocity scaling factor passed to the solver \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{structtesseract__planning_1_1IterativeSplineParameterizationProfile_a2a2895299b9d49820d70515a2e040214}{max\+\_\+acceleration\+\_\+scaling\+\_\+factor}} \{ 1.\+0 \}
+\begin{DoxyCompactList}\small\item\em max\+\_\+velocity\+\_\+scaling\+\_\+factor The max acceleration scaling factor passed to the solver \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$class Archive $>$ }\\void \mbox{\hyperlink{structtesseract__planning_1_1IterativeSplineParameterizationProfile_a2b0fe9d69de40dc3d21646094b9bb368}{serialize}} (Archive \&, const unsigned int)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{classtesseract__planning_1_1Profile}{tesseract\+\_\+planning\+::\+Profile}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classtesseract__planning_1_1Profile_ac6073a166cf5c61aa9c1e04310df2120}{Profile}} (const \mbox{\hyperlink{classtesseract__planning_1_1Profile}{Profile}} \&)=default
+\item 
+\mbox{\hyperlink{classtesseract__planning_1_1Profile}{Profile}} \& \mbox{\hyperlink{classtesseract__planning_1_1Profile_a0e230bd826d4ee0536abeaade88fba2c}{operator=}} (const \mbox{\hyperlink{classtesseract__planning_1_1Profile}{Profile}} \&)=default
+\item 
+\mbox{\hyperlink{classtesseract__planning_1_1Profile_a2fc58bcb3c96b280df807bd2edd08523}{Profile}} (\mbox{\hyperlink{classtesseract__planning_1_1Profile}{Profile}} \&\&)=default
+\item 
+\mbox{\hyperlink{classtesseract__planning_1_1Profile}{Profile}} \& \mbox{\hyperlink{classtesseract__planning_1_1Profile_a4fee076d70a119b76550d176d085dc33}{operator=}} (\mbox{\hyperlink{classtesseract__planning_1_1Profile}{Profile}} \&\&)=default
+\item 
+{\footnotesize template$<$class Archive $>$ }\\void \mbox{\hyperlink{classtesseract__planning_1_1Profile_aa284fcaab6e1d36cfb3a7ce8ab947eb2}{serialize}} (Archive \&, const unsigned int)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{structtesseract__planning_1_1IterativeSplineParameterizationProfile_ac98d07dd8f7b70e16ccb9a01abf56b9c}{boost\+::serialization\+::access}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{classtesseract__planning_1_1Profile}{tesseract\+\_\+planning\+::\+Profile}}}
+\begin{DoxyCompactItemize}
+\item 
+std\+::size\+\_\+t \mbox{\hyperlink{classtesseract__planning_1_1Profile_acafd9e0f65e1a54ca3803dd66bf22f4b}{key\+\_\+}} \{ 0 \}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Typedef Documentation}
+\Hypertarget{structtesseract__planning_1_1IterativeSplineParameterizationProfile_ad8b06635b63e3acfad61bed7b9730f94}\label{structtesseract__planning_1_1IterativeSplineParameterizationProfile_ad8b06635b63e3acfad61bed7b9730f94} 
+\index{tesseract\_planning::IterativeSplineParameterizationProfile@{tesseract\_planning::IterativeSplineParameterizationProfile}!ConstPtr@{ConstPtr}}
+\index{ConstPtr@{ConstPtr}!tesseract\_planning::IterativeSplineParameterizationProfile@{tesseract\_planning::IterativeSplineParameterizationProfile}}
+\doxysubsubsection{\texorpdfstring{ConstPtr}{ConstPtr}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{structtesseract__planning_1_1IterativeSplineParameterizationProfile_ad8b06635b63e3acfad61bed7b9730f94}{tesseract\+\_\+planning\+::\+Iterative\+Spline\+Parameterization\+Profile\+::\+Const\+Ptr}} =  std\+::shared\+\_\+ptr$<$const \mbox{\hyperlink{structtesseract__planning_1_1IterativeSplineParameterizationProfile}{Iterative\+Spline\+Parameterization\+Profile}}$>$}
+
+\Hypertarget{structtesseract__planning_1_1IterativeSplineParameterizationProfile_a52fea0b0e87283a083b8a3b12170a576}\label{structtesseract__planning_1_1IterativeSplineParameterizationProfile_a52fea0b0e87283a083b8a3b12170a576} 
+\index{tesseract\_planning::IterativeSplineParameterizationProfile@{tesseract\_planning::IterativeSplineParameterizationProfile}!Ptr@{Ptr}}
+\index{Ptr@{Ptr}!tesseract\_planning::IterativeSplineParameterizationProfile@{tesseract\_planning::IterativeSplineParameterizationProfile}}
+\doxysubsubsection{\texorpdfstring{Ptr}{Ptr}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{structtesseract__planning_1_1IterativeSplineParameterizationProfile_a52fea0b0e87283a083b8a3b12170a576}{tesseract\+\_\+planning\+::\+Iterative\+Spline\+Parameterization\+Profile\+::\+Ptr}} =  std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{structtesseract__planning_1_1IterativeSplineParameterizationProfile}{Iterative\+Spline\+Parameterization\+Profile}}$>$}
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{structtesseract__planning_1_1IterativeSplineParameterizationProfile_a97d4cba8a23526e4bab6c83d943db37f}\label{structtesseract__planning_1_1IterativeSplineParameterizationProfile_a97d4cba8a23526e4bab6c83d943db37f} 
+\index{tesseract\_planning::IterativeSplineParameterizationProfile@{tesseract\_planning::IterativeSplineParameterizationProfile}!IterativeSplineParameterizationProfile@{IterativeSplineParameterizationProfile}}
+\index{IterativeSplineParameterizationProfile@{IterativeSplineParameterizationProfile}!tesseract\_planning::IterativeSplineParameterizationProfile@{tesseract\_planning::IterativeSplineParameterizationProfile}}
+\doxysubsubsection{\texorpdfstring{IterativeSplineParameterizationProfile()}{IterativeSplineParameterizationProfile()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily tesseract\+\_\+planning\+::\+Iterative\+Spline\+Parameterization\+Profile\+::\+Iterative\+Spline\+Parameterization\+Profile (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{structtesseract__planning_1_1IterativeSplineParameterizationProfile_aeea7dc8ec53803e26e4356603550bb49}\label{structtesseract__planning_1_1IterativeSplineParameterizationProfile_aeea7dc8ec53803e26e4356603550bb49} 
+\index{tesseract\_planning::IterativeSplineParameterizationProfile@{tesseract\_planning::IterativeSplineParameterizationProfile}!IterativeSplineParameterizationProfile@{IterativeSplineParameterizationProfile}}
+\index{IterativeSplineParameterizationProfile@{IterativeSplineParameterizationProfile}!tesseract\_planning::IterativeSplineParameterizationProfile@{tesseract\_planning::IterativeSplineParameterizationProfile}}
+\doxysubsubsection{\texorpdfstring{IterativeSplineParameterizationProfile()}{IterativeSplineParameterizationProfile()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily tesseract\+\_\+planning\+::\+Iterative\+Spline\+Parameterization\+Profile\+::\+Iterative\+Spline\+Parameterization\+Profile (\begin{DoxyParamCaption}\item[{double}]{max\+\_\+velocity\+\_\+scaling\+\_\+factor,  }\item[{double}]{max\+\_\+acceleration\+\_\+scaling\+\_\+factor }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{structtesseract__planning_1_1IterativeSplineParameterizationProfile_a329ad6de77bb2fb7d99a14b2607d3999}\label{structtesseract__planning_1_1IterativeSplineParameterizationProfile_a329ad6de77bb2fb7d99a14b2607d3999} 
+\index{tesseract\_planning::IterativeSplineParameterizationProfile@{tesseract\_planning::IterativeSplineParameterizationProfile}!getStaticKey@{getStaticKey}}
+\index{getStaticKey@{getStaticKey}!tesseract\_planning::IterativeSplineParameterizationProfile@{tesseract\_planning::IterativeSplineParameterizationProfile}}
+\doxysubsubsection{\texorpdfstring{getStaticKey()}{getStaticKey()}}
+{\footnotesize\ttfamily std\+::size\+\_\+t tesseract\+\_\+planning\+::\+Iterative\+Spline\+Parameterization\+Profile\+::get\+Static\+Key (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+A utility function for getting profile ID. 
+
+\begin{DoxyReturn}{Returns}
+The profile ID used when storing in profile dictionary 
+\end{DoxyReturn}
+\Hypertarget{structtesseract__planning_1_1IterativeSplineParameterizationProfile_a2b0fe9d69de40dc3d21646094b9bb368}\label{structtesseract__planning_1_1IterativeSplineParameterizationProfile_a2b0fe9d69de40dc3d21646094b9bb368} 
+\index{tesseract\_planning::IterativeSplineParameterizationProfile@{tesseract\_planning::IterativeSplineParameterizationProfile}!serialize@{serialize}}
+\index{serialize@{serialize}!tesseract\_planning::IterativeSplineParameterizationProfile@{tesseract\_planning::IterativeSplineParameterizationProfile}}
+\doxysubsubsection{\texorpdfstring{serialize()}{serialize()}}
+{\footnotesize\ttfamily template$<$class Archive $>$ \\
+void tesseract\+\_\+planning\+::\+Iterative\+Spline\+Parameterization\+Profile\+::serialize (\begin{DoxyParamCaption}\item[{Archive \&}]{ar,  }\item[{const unsigned int}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+\doxysubsection{Friends And Related Symbol Documentation}
+\Hypertarget{structtesseract__planning_1_1IterativeSplineParameterizationProfile_ac98d07dd8f7b70e16ccb9a01abf56b9c}\label{structtesseract__planning_1_1IterativeSplineParameterizationProfile_ac98d07dd8f7b70e16ccb9a01abf56b9c} 
+\index{tesseract\_planning::IterativeSplineParameterizationProfile@{tesseract\_planning::IterativeSplineParameterizationProfile}!boost::serialization::access@{boost::serialization::access}}
+\index{boost::serialization::access@{boost::serialization::access}!tesseract\_planning::IterativeSplineParameterizationProfile@{tesseract\_planning::IterativeSplineParameterizationProfile}}
+\doxysubsubsection{\texorpdfstring{boost::serialization::access}{boost::serialization::access}}
+{\footnotesize\ttfamily friend class boost\+::serialization\+::access\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{structtesseract__planning_1_1IterativeSplineParameterizationProfile_a2a2895299b9d49820d70515a2e040214}\label{structtesseract__planning_1_1IterativeSplineParameterizationProfile_a2a2895299b9d49820d70515a2e040214} 
+\index{tesseract\_planning::IterativeSplineParameterizationProfile@{tesseract\_planning::IterativeSplineParameterizationProfile}!max\_acceleration\_scaling\_factor@{max\_acceleration\_scaling\_factor}}
+\index{max\_acceleration\_scaling\_factor@{max\_acceleration\_scaling\_factor}!tesseract\_planning::IterativeSplineParameterizationProfile@{tesseract\_planning::IterativeSplineParameterizationProfile}}
+\doxysubsubsection{\texorpdfstring{max\_acceleration\_scaling\_factor}{max\_acceleration\_scaling\_factor}}
+{\footnotesize\ttfamily double tesseract\+\_\+planning\+::\+Iterative\+Spline\+Parameterization\+Profile\+::max\+\_\+acceleration\+\_\+scaling\+\_\+factor \{ 1.\+0 \}}
+
+
+
+max\+\_\+velocity\+\_\+scaling\+\_\+factor The max acceleration scaling factor passed to the solver 
+
+\Hypertarget{structtesseract__planning_1_1IterativeSplineParameterizationProfile_a308d7c08bb7c3b024103571c3cd42241}\label{structtesseract__planning_1_1IterativeSplineParameterizationProfile_a308d7c08bb7c3b024103571c3cd42241} 
+\index{tesseract\_planning::IterativeSplineParameterizationProfile@{tesseract\_planning::IterativeSplineParameterizationProfile}!max\_velocity\_scaling\_factor@{max\_velocity\_scaling\_factor}}
+\index{max\_velocity\_scaling\_factor@{max\_velocity\_scaling\_factor}!tesseract\_planning::IterativeSplineParameterizationProfile@{tesseract\_planning::IterativeSplineParameterizationProfile}}
+\doxysubsubsection{\texorpdfstring{max\_velocity\_scaling\_factor}{max\_velocity\_scaling\_factor}}
+{\footnotesize\ttfamily double tesseract\+\_\+planning\+::\+Iterative\+Spline\+Parameterization\+Profile\+::max\+\_\+velocity\+\_\+scaling\+\_\+factor \{ 1.\+0 \}}
+
+
+
+max\+\_\+velocity\+\_\+scaling\+\_\+factor The max velocity scaling factor passed to the solver 
+
+
+
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+tesseract\+\_\+task\+\_\+composer/planning/include/tesseract\+\_\+task\+\_\+composer/planning/profiles/\mbox{\hyperlink{iterative__spline__parameterization__profile_8h}{iterative\+\_\+spline\+\_\+parameterization\+\_\+profile.\+h}}\item 
+tesseract\+\_\+task\+\_\+composer/planning/src/profiles/\mbox{\hyperlink{iterative__spline__parameterization__profile_8cpp}{iterative\+\_\+spline\+\_\+parameterization\+\_\+profile.\+cpp}}\end{DoxyCompactItemize}

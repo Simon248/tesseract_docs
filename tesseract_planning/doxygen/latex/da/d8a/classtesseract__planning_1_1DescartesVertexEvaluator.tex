@@ -1,0 +1,116 @@
+\doxysection{tesseract\+\_\+planning\+::Descartes\+Vertex\+Evaluator Class Reference}
+\hypertarget{classtesseract__planning_1_1DescartesVertexEvaluator}{}\label{classtesseract__planning_1_1DescartesVertexEvaluator}\index{tesseract\_planning::DescartesVertexEvaluator@{tesseract\_planning::DescartesVertexEvaluator}}
+
+
+{\ttfamily \#include $<$descartes\+\_\+vertex\+\_\+evaluator.\+h$>$}
+
+
+
+Inheritance diagram for tesseract\+\_\+planning\+::Descartes\+Vertex\+Evaluator\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=221pt]{d3/d59/classtesseract__planning_1_1DescartesVertexEvaluator__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{classtesseract__planning_1_1DescartesVertexEvaluator_af9323f7e0912986b89ba5a57ee6e3262}{Ptr}} = std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classtesseract__planning_1_1DescartesVertexEvaluator}{Descartes\+Vertex\+Evaluator}} $>$
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classtesseract__planning_1_1DescartesVertexEvaluator_a761d7fe995f1d777f458a5bbc5edad16}{Descartes\+Vertex\+Evaluator}} ()=default
+\item 
+virtual \mbox{\hyperlink{classtesseract__planning_1_1DescartesVertexEvaluator_af2de728dc3734ac840a3b9c9a3bac27a}{\texorpdfstring{$\sim$}{\string~}\+Descartes\+Vertex\+Evaluator}} ()=default
+\item 
+\mbox{\hyperlink{classtesseract__planning_1_1DescartesVertexEvaluator_a49f955a4c2f3b1855f792672ab5476bf}{Descartes\+Vertex\+Evaluator}} (const \mbox{\hyperlink{classtesseract__planning_1_1DescartesVertexEvaluator}{Descartes\+Vertex\+Evaluator}} \&)=delete
+\item 
+\mbox{\hyperlink{classtesseract__planning_1_1DescartesVertexEvaluator}{Descartes\+Vertex\+Evaluator}} \& \mbox{\hyperlink{classtesseract__planning_1_1DescartesVertexEvaluator_a512fb00fb451ceaaed793ce56a15b04f}{operator=}} (const \mbox{\hyperlink{classtesseract__planning_1_1DescartesVertexEvaluator}{Descartes\+Vertex\+Evaluator}} \&)=delete
+\item 
+\mbox{\hyperlink{classtesseract__planning_1_1DescartesVertexEvaluator_a28ea5aa91ab3e3e0b7e253437aad8f5c}{Descartes\+Vertex\+Evaluator}} (\mbox{\hyperlink{classtesseract__planning_1_1DescartesVertexEvaluator}{Descartes\+Vertex\+Evaluator}} \&\&)=delete
+\item 
+\mbox{\hyperlink{classtesseract__planning_1_1DescartesVertexEvaluator}{Descartes\+Vertex\+Evaluator}} \& \mbox{\hyperlink{classtesseract__planning_1_1DescartesVertexEvaluator_adcc4c2eab3fd7d529ae8b1a7e9f9f13d}{operator=}} (\mbox{\hyperlink{classtesseract__planning_1_1DescartesVertexEvaluator}{Descartes\+Vertex\+Evaluator}} \&\&)=delete
+\item 
+virtual bool \mbox{\hyperlink{classtesseract__planning_1_1DescartesVertexEvaluator_aabf4cbd61c7b253edbf9a95f4a6f1bed}{operator()}} (const Eigen\+::\+Ref$<$ const Eigen\+::\+Vector\+Xd $>$ \&vertex) const =0
+\begin{DoxyCompactList}\small\item\em Determines whether the vertex is valid and, if so, its cost. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Typedef Documentation}
+\Hypertarget{classtesseract__planning_1_1DescartesVertexEvaluator_af9323f7e0912986b89ba5a57ee6e3262}\label{classtesseract__planning_1_1DescartesVertexEvaluator_af9323f7e0912986b89ba5a57ee6e3262} 
+\index{tesseract\_planning::DescartesVertexEvaluator@{tesseract\_planning::DescartesVertexEvaluator}!Ptr@{Ptr}}
+\index{Ptr@{Ptr}!tesseract\_planning::DescartesVertexEvaluator@{tesseract\_planning::DescartesVertexEvaluator}}
+\doxysubsubsection{\texorpdfstring{Ptr}{Ptr}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classtesseract__planning_1_1DescartesVertexEvaluator_af9323f7e0912986b89ba5a57ee6e3262}{tesseract\+\_\+planning\+::\+Descartes\+Vertex\+Evaluator\+::\+Ptr}} =  std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classtesseract__planning_1_1DescartesVertexEvaluator}{Descartes\+Vertex\+Evaluator}}$>$}
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classtesseract__planning_1_1DescartesVertexEvaluator_a761d7fe995f1d777f458a5bbc5edad16}\label{classtesseract__planning_1_1DescartesVertexEvaluator_a761d7fe995f1d777f458a5bbc5edad16} 
+\index{tesseract\_planning::DescartesVertexEvaluator@{tesseract\_planning::DescartesVertexEvaluator}!DescartesVertexEvaluator@{DescartesVertexEvaluator}}
+\index{DescartesVertexEvaluator@{DescartesVertexEvaluator}!tesseract\_planning::DescartesVertexEvaluator@{tesseract\_planning::DescartesVertexEvaluator}}
+\doxysubsubsection{\texorpdfstring{DescartesVertexEvaluator()}{DescartesVertexEvaluator()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily tesseract\+\_\+planning\+::\+Descartes\+Vertex\+Evaluator\+::\+Descartes\+Vertex\+Evaluator (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\Hypertarget{classtesseract__planning_1_1DescartesVertexEvaluator_af2de728dc3734ac840a3b9c9a3bac27a}\label{classtesseract__planning_1_1DescartesVertexEvaluator_af2de728dc3734ac840a3b9c9a3bac27a} 
+\index{tesseract\_planning::DescartesVertexEvaluator@{tesseract\_planning::DescartesVertexEvaluator}!````~DescartesVertexEvaluator@{\texorpdfstring{$\sim$}{\string~}DescartesVertexEvaluator}}
+\index{````~DescartesVertexEvaluator@{\texorpdfstring{$\sim$}{\string~}DescartesVertexEvaluator}!tesseract\_planning::DescartesVertexEvaluator@{tesseract\_planning::DescartesVertexEvaluator}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}DescartesVertexEvaluator()}{\string~DescartesVertexEvaluator()}}
+{\footnotesize\ttfamily virtual tesseract\+\_\+planning\+::\+Descartes\+Vertex\+Evaluator\+::\texorpdfstring{$\sim$}{\string~}\+Descartes\+Vertex\+Evaluator (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+\Hypertarget{classtesseract__planning_1_1DescartesVertexEvaluator_a49f955a4c2f3b1855f792672ab5476bf}\label{classtesseract__planning_1_1DescartesVertexEvaluator_a49f955a4c2f3b1855f792672ab5476bf} 
+\index{tesseract\_planning::DescartesVertexEvaluator@{tesseract\_planning::DescartesVertexEvaluator}!DescartesVertexEvaluator@{DescartesVertexEvaluator}}
+\index{DescartesVertexEvaluator@{DescartesVertexEvaluator}!tesseract\_planning::DescartesVertexEvaluator@{tesseract\_planning::DescartesVertexEvaluator}}
+\doxysubsubsection{\texorpdfstring{DescartesVertexEvaluator()}{DescartesVertexEvaluator()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily tesseract\+\_\+planning\+::\+Descartes\+Vertex\+Evaluator\+::\+Descartes\+Vertex\+Evaluator (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classtesseract__planning_1_1DescartesVertexEvaluator}{Descartes\+Vertex\+Evaluator}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+\Hypertarget{classtesseract__planning_1_1DescartesVertexEvaluator_a28ea5aa91ab3e3e0b7e253437aad8f5c}\label{classtesseract__planning_1_1DescartesVertexEvaluator_a28ea5aa91ab3e3e0b7e253437aad8f5c} 
+\index{tesseract\_planning::DescartesVertexEvaluator@{tesseract\_planning::DescartesVertexEvaluator}!DescartesVertexEvaluator@{DescartesVertexEvaluator}}
+\index{DescartesVertexEvaluator@{DescartesVertexEvaluator}!tesseract\_planning::DescartesVertexEvaluator@{tesseract\_planning::DescartesVertexEvaluator}}
+\doxysubsubsection{\texorpdfstring{DescartesVertexEvaluator()}{DescartesVertexEvaluator()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily tesseract\+\_\+planning\+::\+Descartes\+Vertex\+Evaluator\+::\+Descartes\+Vertex\+Evaluator (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classtesseract__planning_1_1DescartesVertexEvaluator}{Descartes\+Vertex\+Evaluator}} \&\&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classtesseract__planning_1_1DescartesVertexEvaluator_aabf4cbd61c7b253edbf9a95f4a6f1bed}\label{classtesseract__planning_1_1DescartesVertexEvaluator_aabf4cbd61c7b253edbf9a95f4a6f1bed} 
+\index{tesseract\_planning::DescartesVertexEvaluator@{tesseract\_planning::DescartesVertexEvaluator}!operator()@{operator()}}
+\index{operator()@{operator()}!tesseract\_planning::DescartesVertexEvaluator@{tesseract\_planning::DescartesVertexEvaluator}}
+\doxysubsubsection{\texorpdfstring{operator()()}{operator()()}}
+{\footnotesize\ttfamily virtual bool tesseract\+\_\+planning\+::\+Descartes\+Vertex\+Evaluator\+::operator() (\begin{DoxyParamCaption}\item[{const Eigen\+::\+Ref$<$ const Eigen\+::\+Vector\+Xd $>$ \&}]{vertex }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Determines whether the vertex is valid and, if so, its cost. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em vertex} & The vertex to consider \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if vertex is valid, false otherwise. The relative cost associated with the vertex 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classtesseract__planning_1_1DescartesJointLimitsVertexEvaluator_a3a66004283ebac1345e279900e79a225}{tesseract\+\_\+planning\+::\+Descartes\+Joint\+Limits\+Vertex\+Evaluator}}.
+
+\Hypertarget{classtesseract__planning_1_1DescartesVertexEvaluator_a512fb00fb451ceaaed793ce56a15b04f}\label{classtesseract__planning_1_1DescartesVertexEvaluator_a512fb00fb451ceaaed793ce56a15b04f} 
+\index{tesseract\_planning::DescartesVertexEvaluator@{tesseract\_planning::DescartesVertexEvaluator}!operator=@{operator=}}
+\index{operator=@{operator=}!tesseract\_planning::DescartesVertexEvaluator@{tesseract\_planning::DescartesVertexEvaluator}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classtesseract__planning_1_1DescartesVertexEvaluator}{Descartes\+Vertex\+Evaluator}} \& tesseract\+\_\+planning\+::\+Descartes\+Vertex\+Evaluator\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classtesseract__planning_1_1DescartesVertexEvaluator}{Descartes\+Vertex\+Evaluator}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+\Hypertarget{classtesseract__planning_1_1DescartesVertexEvaluator_adcc4c2eab3fd7d529ae8b1a7e9f9f13d}\label{classtesseract__planning_1_1DescartesVertexEvaluator_adcc4c2eab3fd7d529ae8b1a7e9f9f13d} 
+\index{tesseract\_planning::DescartesVertexEvaluator@{tesseract\_planning::DescartesVertexEvaluator}!operator=@{operator=}}
+\index{operator=@{operator=}!tesseract\_planning::DescartesVertexEvaluator@{tesseract\_planning::DescartesVertexEvaluator}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classtesseract__planning_1_1DescartesVertexEvaluator}{Descartes\+Vertex\+Evaluator}} \& tesseract\+\_\+planning\+::\+Descartes\+Vertex\+Evaluator\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classtesseract__planning_1_1DescartesVertexEvaluator}{Descartes\+Vertex\+Evaluator}} \&\&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+tesseract\+\_\+motion\+\_\+planners/descartes/include/tesseract\+\_\+motion\+\_\+planners/descartes/\mbox{\hyperlink{descartes__vertex__evaluator_8h}{descartes\+\_\+vertex\+\_\+evaluator.\+h}}\end{DoxyCompactItemize}

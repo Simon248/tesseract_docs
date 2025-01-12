@@ -1,0 +1,41 @@
+\doxysection{min\+\_\+length\+\_\+profile.\+h}
+\hypertarget{min__length__profile_8h_source}{}\label{min__length__profile_8h_source}\index{tesseract\_task\_composer/planning/include/tesseract\_task\_composer/planning/profiles/min\_length\_profile.h@{tesseract\_task\_composer/planning/include/tesseract\_task\_composer/planning/profiles/min\_length\_profile.h}}
+\mbox{\hyperlink{min__length__profile_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00028\ \textcolor{preprocessor}{\#ifndef\ TESSERACT\_TASK\_COMPOSER\_MIN\_LENGTH\_PROFILE\_H}}
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#define\ TESSERACT\_TASK\_COMPOSER\_MIN\_LENGTH\_PROFILE\_H}}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \textcolor{preprocessor}{\#include\ <tesseract\_common/macros.h>}}
+\DoxyCodeLine{00032\ TESSERACT\_COMMON\_IGNORE\_WARNINGS\_PUSH}
+\DoxyCodeLine{00033\ \textcolor{preprocessor}{\#include\ <memory>}}
+\DoxyCodeLine{00034\ \mbox{\hyperlink{namespaceTESSERACT__COMMON__IGNORE__WARNINGS__POP}{TESSERACT\_COMMON\_IGNORE\_WARNINGS\_POP}}}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{profile_8h}{tesseract\_command\_language/profile.h}}>}}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacetesseract__planning}{tesseract\_planning}}}
+\DoxyCodeLine{00039\ \{}
+\DoxyCodeLine{00040\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structtesseract__planning_1_1MinLengthProfile}{MinLengthProfile}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classtesseract__planning_1_1Profile}{Profile}}}
+\DoxyCodeLine{00041\ \{}
+\DoxyCodeLine{00042\ \ \ \textcolor{keyword}{using\ }\mbox{\hyperlink{structtesseract__planning_1_1MinLengthProfile_a28e3259d5e0c145585a1bbad25dfe14e}{Ptr}}\ =\ std::shared\_ptr<MinLengthProfile>;}
+\DoxyCodeLine{00043\ \ \ \textcolor{keyword}{using\ }\mbox{\hyperlink{structtesseract__planning_1_1MinLengthProfile_ab5f666ecc1b57f494b67c0041a2a5b3f}{ConstPtr}}\ =\ std::shared\_ptr<const\ MinLengthProfile>;}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00045\ \ \ \mbox{\hyperlink{structtesseract__planning_1_1MinLengthProfile_a8993a52486ff7bd754ca20a9ef9ee4e0}{MinLengthProfile}}();}
+\DoxyCodeLine{00046\ \ \ \mbox{\hyperlink{structtesseract__planning_1_1MinLengthProfile_a8993a52486ff7bd754ca20a9ef9ee4e0}{MinLengthProfile}}(\textcolor{keywordtype}{long}\ \mbox{\hyperlink{structtesseract__planning_1_1MinLengthProfile_a9b3e03844b42e131db3219b6815e30b2}{min\_length}});}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00052\ \ \ \textcolor{keyword}{static}\ std::size\_t\ \mbox{\hyperlink{structtesseract__planning_1_1MinLengthProfile_aaf71c18303d863d68fd7fc57e3c12fe4}{getStaticKey}}();}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00054\ \ \ \textcolor{keywordtype}{long}\ \mbox{\hyperlink{structtesseract__planning_1_1MinLengthProfile_a9b3e03844b42e131db3219b6815e30b2}{min\_length}}\{\ 10\ \};}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00056\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00057\ \ \ \textcolor{keyword}{friend}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{structtesseract__planning_1_1MinLengthProfile_ac98d07dd8f7b70e16ccb9a01abf56b9c}{boost::serialization::access}};}
+\DoxyCodeLine{00058\ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{class}\ Archive>}
+\DoxyCodeLine{00059\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structtesseract__planning_1_1MinLengthProfile_aa384fab61c80658611b0a2bff5c34456}{serialize}}(Archive\&,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int});\ \ \textcolor{comment}{//\ NOLINT}}
+\DoxyCodeLine{00060\ \};}
+\DoxyCodeLine{00061\ \}\ \ \textcolor{comment}{//\ namespace\ tesseract\_planning}}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00063\ BOOST\_CLASS\_EXPORT\_KEY(\mbox{\hyperlink{structtesseract__planning_1_1MinLengthProfile}{tesseract\_planning::MinLengthProfile}})}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00065\ \textcolor{preprocessor}{\#endif\ \ }\textcolor{comment}{//\ TESSERACT\_TASK\_COMPOSER\_MIN\_LENGTH\_PROFILE\_H}}
+
+\end{DoxyCode}

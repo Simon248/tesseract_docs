@@ -1,0 +1,40 @@
+\doxysection{descartes\+\_\+utils.\+h}
+\hypertarget{descartes__utils_8h_source}{}\label{descartes__utils_8h_source}\index{tesseract\_motion\_planners/descartes/include/tesseract\_motion\_planners/descartes/descartes\_utils.h@{tesseract\_motion\_planners/descartes/include/tesseract\_motion\_planners/descartes/descartes\_utils.h}}
+\mbox{\hyperlink{descartes__utils_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00026\ \textcolor{preprocessor}{\#ifndef\ TESSERACT\_PLANNING\_DESCARTES\_UTILS\_H}}
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#define\ TESSERACT\_PLANNING\_DESCARTES\_UTILS\_H}}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#include\ <tesseract\_common/macros.h>}}
+\DoxyCodeLine{00030\ TESSERACT\_COMMON\_IGNORE\_WARNINGS\_PUSH}
+\DoxyCodeLine{00031\ \textcolor{preprocessor}{\#include\ <functional>}}
+\DoxyCodeLine{00032\ \mbox{\hyperlink{namespaceTESSERACT__COMMON__IGNORE__WARNINGS__POP}{TESSERACT\_COMMON\_IGNORE\_WARNINGS\_POP}}}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \textcolor{preprocessor}{\#include\ <tesseract\_common/eigen\_types.h>}}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacetesseract__planning}{tesseract\_planning}}}
+\DoxyCodeLine{00037\ \{}
+\DoxyCodeLine{00038\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespacetesseract__planning_ae98ce6e841caa404388d1689b4ffe1db}{PoseSamplerFn}}\ =\ std::function<tesseract\_common::VectorIsometry3d(\textcolor{keyword}{const}\ Eigen::Isometry3d\&\ tool\_pose)>;}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00049\ tesseract\_common::VectorIsometry3d\ \mbox{\hyperlink{namespacetesseract__planning_a0d40b8cf26a5d895afc2b8c7a3e805c5}{sampleToolAxis}}(\textcolor{keyword}{const}\ Eigen::Isometry3d\&\ tool\_pose,}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ Eigen::Vector3d\&\ axis,}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ resolution,}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ minimum,}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ maximum);}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00063\ tesseract\_common::VectorIsometry3d}
+\DoxyCodeLine{00064\ \mbox{\hyperlink{namespacetesseract__planning_a0b8eb0a8bb6639fb27000d485f88a86d}{sampleToolXAxis}}(\textcolor{keyword}{const}\ Eigen::Isometry3d\&\ tool\_pose,\ \textcolor{keywordtype}{double}\ resolution,\ \textcolor{keywordtype}{double}\ minimum,\ \textcolor{keywordtype}{double}\ maximum);}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00074\ tesseract\_common::VectorIsometry3d}
+\DoxyCodeLine{00075\ \mbox{\hyperlink{namespacetesseract__planning_a148396fc424f2276ac2a537917d83335}{sampleToolYAxis}}(\textcolor{keyword}{const}\ Eigen::Isometry3d\&\ tool\_pose,\ \textcolor{keywordtype}{double}\ resolution,\ \textcolor{keywordtype}{double}\ minimum,\ \textcolor{keywordtype}{double}\ maximum);}
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00085\ tesseract\_common::VectorIsometry3d}
+\DoxyCodeLine{00086\ \mbox{\hyperlink{namespacetesseract__planning_a866bee2ba8ab03dde3b808b8aebe9156}{sampleToolZAxis}}(\textcolor{keyword}{const}\ Eigen::Isometry3d\&\ tool\_pose,\ \textcolor{keywordtype}{double}\ resolution,\ \textcolor{keywordtype}{double}\ minimum,\ \textcolor{keywordtype}{double}\ maximum);}
+\DoxyCodeLine{00087\ }
+\DoxyCodeLine{00093\ tesseract\_common::VectorIsometry3d\ \mbox{\hyperlink{namespacetesseract__planning_a7783726ef3508bc3baf1bd8b96829e07}{sampleFixed}}(\textcolor{keyword}{const}\ Eigen::Isometry3d\&\ tool\_pose);}
+\DoxyCodeLine{00094\ }
+\DoxyCodeLine{00095\ \}\ \ \textcolor{comment}{//\ namespace\ tesseract\_planning}}
+\DoxyCodeLine{00096\ \textcolor{preprocessor}{\#endif\ \ }\textcolor{comment}{//\ TESSERACT\_PLANNING\_DESCARTES\_UTILS\_H}}
+
+\end{DoxyCode}

@@ -1,0 +1,67 @@
+\doxysection{trajopt\+\_\+ifopt\+\_\+osqp\+\_\+solver\+\_\+profile.\+h}
+\hypertarget{trajopt__ifopt__osqp__solver__profile_8h_source}{}\label{trajopt__ifopt__osqp__solver__profile_8h_source}\index{tesseract\_motion\_planners/trajopt\_ifopt/include/tesseract\_motion\_planners/trajopt\_ifopt/profile/trajopt\_ifopt\_osqp\_solver\_profile.h@{tesseract\_motion\_planners/trajopt\_ifopt/include/tesseract\_motion\_planners/trajopt\_ifopt/profile/trajopt\_ifopt\_osqp\_solver\_profile.h}}
+\mbox{\hyperlink{trajopt__ifopt__osqp__solver__profile_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00026\ \textcolor{preprocessor}{\#ifndef\ TESSERACT\_MOTION\_PLANNERS\_TRAJOPT\_IFOPT\_OSQP\_SOLVER\_PROFILE\_H}}
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#define\ TESSERACT\_MOTION\_PLANNERS\_TRAJOPT\_IFOPT\_OSQP\_SOLVER\_PROFILE\_H}}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#include\ <tesseract\_common/macros.h>}}
+\DoxyCodeLine{00030\ TESSERACT\_COMMON\_IGNORE\_WARNINGS\_PUSH}
+\DoxyCodeLine{00031\ \textcolor{preprocessor}{\#include\ <memory>}}
+\DoxyCodeLine{00032\ \textcolor{preprocessor}{\#include\ <trajopt\_sqp/fwd.h>}}
+\DoxyCodeLine{00033\ \textcolor{preprocessor}{\#include\ <trajopt\_sqp/types.h>}}
+\DoxyCodeLine{00034\ \mbox{\hyperlink{namespaceTESSERACT__COMMON__IGNORE__WARNINGS__POP}{TESSERACT\_COMMON\_IGNORE\_WARNINGS\_POP}}}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{trajopt__ifopt__profile_8h}{tesseract\_motion\_planners/trajopt\_ifopt/profile/trajopt\_ifopt\_profile.h}}>}}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceOsqpEigen}{OsqpEigen}}}
+\DoxyCodeLine{00039\ \{}
+\DoxyCodeLine{00040\ \textcolor{keyword}{class\ }Settings;}
+\DoxyCodeLine{00041\ \}}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceboost_1_1serialization}{boost::serialization}}}
+\DoxyCodeLine{00044\ \{}
+\DoxyCodeLine{00045\ \textcolor{keyword}{template}\ <\textcolor{keyword}{class}\ Archive>}
+\DoxyCodeLine{00046\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{namespaceboost_1_1serialization_a9ff04ecd728c3b6e506cf71d50d20c68}{serialize}}(Archive\&\ ar,\ OsqpEigen::Settings\&\ osqp\_eigen\_settings,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ version);\ \ \textcolor{comment}{//\ NOLINT}}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00048\ \textcolor{keyword}{template}\ <\textcolor{keyword}{class}\ Archive>}
+\DoxyCodeLine{00049\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{namespaceboost_1_1serialization_a9ff04ecd728c3b6e506cf71d50d20c68}{serialize}}(Archive\&\ ar,\ trajopt\_sqp::SQPParameters\&\ params,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ version);\ \ \textcolor{comment}{//\ NOLINT}}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00051\ \}\ \ \textcolor{comment}{//\ namespace\ boost::serialization}}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00053\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacetesseract__planning}{tesseract\_planning}}}
+\DoxyCodeLine{00054\ \{}
+\DoxyCodeLine{00056\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classtesseract__planning_1_1TrajOptIfoptOSQPSolverProfile}{TrajOptIfoptOSQPSolverProfile}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classtesseract__planning_1_1TrajOptIfoptSolverProfile}{TrajOptIfoptSolverProfile}}}
+\DoxyCodeLine{00057\ \{}
+\DoxyCodeLine{00058\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00059\ \ \ \textcolor{keyword}{using\ }\mbox{\hyperlink{classtesseract__planning_1_1TrajOptIfoptOSQPSolverProfile_aea9087cfd92f88b9f3b0e389717a4167}{Ptr}}\ =\ std::shared\_ptr<TrajOptIfoptOSQPSolverProfile>;}
+\DoxyCodeLine{00060\ \ \ \textcolor{keyword}{using\ }\mbox{\hyperlink{classtesseract__planning_1_1TrajOptIfoptOSQPSolverProfile_aa19fe1f57b04a364b956292eeba37904}{ConstPtr}}\ =\ std::shared\_ptr<const\ TrajOptIfoptOSQPSolverProfile>;}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00062\ \ \ \mbox{\hyperlink{classtesseract__planning_1_1TrajOptIfoptOSQPSolverProfile_acf974883b94616d19f1d185f6f0a6607}{TrajOptIfoptOSQPSolverProfile}}();}
+\DoxyCodeLine{00063\ \ \ \mbox{\hyperlink{classtesseract__planning_1_1TrajOptIfoptOSQPSolverProfile_a0346543d41795b1b3cf21c69b1cb5eb3}{\string~TrajOptIfoptOSQPSolverProfile}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00064\ \ \ \mbox{\hyperlink{classtesseract__planning_1_1TrajOptIfoptOSQPSolverProfile_aae98687e0dc45cc76f82a79d663bcbcf}{TrajOptIfoptOSQPSolverProfile}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classtesseract__planning_1_1TrajOptIfoptOSQPSolverProfile}{TrajOptIfoptOSQPSolverProfile}}\&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00065\ \ \ \mbox{\hyperlink{classtesseract__planning_1_1TrajOptIfoptOSQPSolverProfile}{TrajOptIfoptOSQPSolverProfile}}\&\ \mbox{\hyperlink{classtesseract__planning_1_1TrajOptIfoptOSQPSolverProfile_a340b910e9409da1dd7fc729e4ffb4145}{operator=}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classtesseract__planning_1_1TrajOptIfoptOSQPSolverProfile}{TrajOptIfoptOSQPSolverProfile}}\&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00066\ \ \ \mbox{\hyperlink{classtesseract__planning_1_1TrajOptIfoptOSQPSolverProfile_a5cb6b642bb7b9b98ee454fff2369e1fa}{TrajOptIfoptOSQPSolverProfile}}(\mbox{\hyperlink{classtesseract__planning_1_1TrajOptIfoptOSQPSolverProfile}{TrajOptIfoptOSQPSolverProfile}}\&\&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00067\ \ \ \mbox{\hyperlink{classtesseract__planning_1_1TrajOptIfoptOSQPSolverProfile}{TrajOptIfoptOSQPSolverProfile}}\&\&\ \mbox{\hyperlink{classtesseract__planning_1_1TrajOptIfoptOSQPSolverProfile_afc74bf1f4d1531d20fa9a1056001213f}{operator=}}(\mbox{\hyperlink{classtesseract__planning_1_1TrajOptIfoptOSQPSolverProfile}{TrajOptIfoptOSQPSolverProfile}}\&\&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00070\ \ \ std::unique\_ptr<OsqpEigen::Settings>\ \mbox{\hyperlink{classtesseract__planning_1_1TrajOptIfoptOSQPSolverProfile_a2522dbc4d0a825aff0a4fcdc13153783}{qp\_settings}}\{\ \textcolor{keyword}{nullptr}\ \};}
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00073\ \ \ trajopt\_sqp::SQPParameters\ \mbox{\hyperlink{classtesseract__planning_1_1TrajOptIfoptOSQPSolverProfile_a3e299a93baf316b4cb650adec411ce88}{opt\_params}}\{\};}
+\DoxyCodeLine{00074\ }
+\DoxyCodeLine{00075\ \ \ std::unique\_ptr<trajopt\_sqp::TrustRegionSQPSolver>\ \mbox{\hyperlink{classtesseract__planning_1_1TrajOptIfoptOSQPSolverProfile_a2fa368610c263b8a5e5411cf4a19cef6}{create}}(\textcolor{keywordtype}{bool}\ verbose\ =\ \textcolor{keyword}{false})\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00077\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00078\ \ \ \textcolor{keyword}{friend}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classtesseract__planning_1_1TrajOptIfoptOSQPSolverProfile_ac98d07dd8f7b70e16ccb9a01abf56b9c}{boost::serialization::access}};}
+\DoxyCodeLine{00079\ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{class}\ Archive>}
+\DoxyCodeLine{00080\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classtesseract__planning_1_1TrajOptIfoptOSQPSolverProfile_a25c338f8ad76ecdc92d4b0eae05787cd}{serialize}}(Archive\&,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int});\ \ \textcolor{comment}{//\ NOLINT}}
+\DoxyCodeLine{00081\ }
+\DoxyCodeLine{00083\ \ \ \textcolor{keyword}{virtual}\ std::vector<std::shared\_ptr<trajopt\_sqp::SQPCallback>>\ \mbox{\hyperlink{classtesseract__planning_1_1TrajOptIfoptOSQPSolverProfile_a2b85a8a18ce9ce90fa0ac746800f6201}{createOptimizationCallbacks}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00084\ \};}
+\DoxyCodeLine{00085\ \}\ \ \textcolor{comment}{//\ namespace\ tesseract\_planning}}
+\DoxyCodeLine{00086\ }
+\DoxyCodeLine{00087\ BOOST\_CLASS\_EXPORT\_KEY(\mbox{\hyperlink{classtesseract__planning_1_1TrajOptIfoptOSQPSolverProfile}{tesseract\_planning::TrajOptIfoptOSQPSolverProfile}})}
+\DoxyCodeLine{00088\ }
+\DoxyCodeLine{00089\ \textcolor{preprocessor}{\#endif\ \ }\textcolor{comment}{//\ TESSERACT\_MOTION\_PLANNERS\_TRAJOPT\_IFOPT\_OSQP\_SOLVER\_PROFILE\_H}}
+
+\end{DoxyCode}

@@ -1,0 +1,7 @@
+<map id="tesseract_planning::SetAnalogInstruction" name="tesseract_planning::SetAnalogInstruction">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,199,154,240"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="41,95,118,121"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="82,137,82,199,77,199,77,137"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="18,5,141,46"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="82,61,82,95,77,95,77,61"/>
+</map>

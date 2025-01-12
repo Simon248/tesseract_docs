@@ -1,0 +1,9 @@
+<map id="tesseract_examples/include/tesseract_examples/scene_graph_example.h" name="tesseract_examples/include/tesseract_examples/scene_graph_example.h">
+<area shape="rect" id="Node000001" title="This example initializes 2 robots from a URDF. It then reattaches one of the robots to the end effect..." alt="" coords="224,5,411,61"/>
+<area shape="rect" id="Node000002" href="$d1/db2/scene__graph__example_8cpp.html" title="scene_graph_example implementation" alt="" coords="5,117,206,157"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="248,70,147,118,145,114,246,66"/>
+<area shape="rect" id="Node000003" href="$d2/dbd/scene__graph__example__node_8cpp.html" title="Demonstrates manipulating the scene graph with a robot picking up another robot." alt="" coords="229,109,406,165"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="320,77,320,108,315,108,315,77"/>
+<area shape="rect" id="Node000004" href="$db/d44/scene__graph__example__unit_8cpp.html" title="Runs the scene_graph_example." alt="" coords="430,109,610,165"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="387,66,467,106,465,111,384,71"/>
+</map>

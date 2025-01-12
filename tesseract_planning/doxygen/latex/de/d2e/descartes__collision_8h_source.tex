@@ -1,0 +1,61 @@
+\doxysection{descartes\+\_\+collision.\+h}
+\hypertarget{descartes__collision_8h_source}{}\label{descartes__collision_8h_source}\index{tesseract\_motion\_planners/descartes/include/tesseract\_motion\_planners/descartes/descartes\_collision.h@{tesseract\_motion\_planners/descartes/include/tesseract\_motion\_planners/descartes/descartes\_collision.h}}
+\mbox{\hyperlink{descartes__collision_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00026\ \textcolor{preprocessor}{\#ifndef\ TESSERACT\_MOTION\_PLANNERS\_DESCARTES\_COLLISION\_H}}
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#define\ TESSERACT\_MOTION\_PLANNERS\_DESCARTES\_COLLISION\_H}}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#include\ <tesseract\_common/macros.h>}}
+\DoxyCodeLine{00030\ TESSERACT\_COMMON\_IGNORE\_WARNINGS\_PUSH}
+\DoxyCodeLine{00031\ \textcolor{preprocessor}{\#include\ <memory>}}
+\DoxyCodeLine{00032\ \textcolor{preprocessor}{\#include\ <Eigen/Core>}}
+\DoxyCodeLine{00033\ \mbox{\hyperlink{namespaceTESSERACT__COMMON__IGNORE__WARNINGS__POP}{TESSERACT\_COMMON\_IGNORE\_WARNINGS\_POP}}}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ \textcolor{preprocessor}{\#include\ <tesseract\_collision/core/fwd.h>}}
+\DoxyCodeLine{00036\ \textcolor{preprocessor}{\#include\ <tesseract\_kinematics/core/fwd.h>}}
+\DoxyCodeLine{00037\ \textcolor{preprocessor}{\#include\ <tesseract\_environment/fwd.h>}}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ \textcolor{preprocessor}{\#include\ <tesseract\_collision/core/types.h>}}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacetesseract__planning}{tesseract\_planning}}}
+\DoxyCodeLine{00042\ \{}
+\DoxyCodeLine{00043\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classtesseract__planning_1_1DescartesCollision}{DescartesCollision}}}
+\DoxyCodeLine{00044\ \{}
+\DoxyCodeLine{00045\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00046\ \ \ \textcolor{keyword}{using\ }\mbox{\hyperlink{classtesseract__planning_1_1DescartesCollision_aaeaeca3bdae2070fe34bdbd64fa19eb9}{Ptr}}\ =\ std::shared\_ptr<DescartesCollision>;}
+\DoxyCodeLine{00047\ \ \ \textcolor{keyword}{using\ }\mbox{\hyperlink{classtesseract__planning_1_1DescartesCollision_a21e8f93b6f9c6ae07f18b20f65b5bf1f}{ConstPtr}}\ =\ std::shared\_ptr<const\ DescartesCollision>;}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00058\ \ \ \mbox{\hyperlink{classtesseract__planning_1_1DescartesCollision}{DescartesCollision}}(\textcolor{keyword}{const}\ tesseract\_environment::Environment\&\ collision\_env,}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::shared\_ptr<const\ tesseract\_kinematics::JointGroup>\ \mbox{\hyperlink{ompl__planner__tests_8cpp_aa0c9c5fd2281440db1e2dd97fc3358f7}{manip}},}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ tesseract\_collision::CollisionCheckConfig\ collision\_check\_config\ =}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ tesseract\_collision::CollisionCheckConfig\{\ 0.025\ \},}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ debug\ =\ \textcolor{keyword}{false});}
+\DoxyCodeLine{00063\ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{classtesseract__planning_1_1DescartesCollision_a5281b454f7fb9d3da0636c17e77475f9}{\string~DescartesCollision}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00069\ \ \ \mbox{\hyperlink{classtesseract__planning_1_1DescartesCollision}{DescartesCollision}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classtesseract__planning_1_1DescartesCollision}{DescartesCollision}}\&\ collision\_interface);}
+\DoxyCodeLine{00070\ \ \ \mbox{\hyperlink{classtesseract__planning_1_1DescartesCollision}{DescartesCollision}}\&\ \mbox{\hyperlink{classtesseract__planning_1_1DescartesCollision_a199e9937ce61bf550a9533f53c1f6721}{operator=}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classtesseract__planning_1_1DescartesCollision}{DescartesCollision}}\&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00071\ \ \ \mbox{\hyperlink{classtesseract__planning_1_1DescartesCollision_adc0e054739901d653903a1364df59848}{DescartesCollision}}(\mbox{\hyperlink{classtesseract__planning_1_1DescartesCollision}{DescartesCollision}}\&\&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00072\ \ \ \mbox{\hyperlink{classtesseract__planning_1_1DescartesCollision}{DescartesCollision}}\&\ \mbox{\hyperlink{classtesseract__planning_1_1DescartesCollision_a052ca7fb09341a19ec94a1847de1f027}{operator=}}(\mbox{\hyperlink{classtesseract__planning_1_1DescartesCollision}{DescartesCollision}}\&\&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00079\ \ \ tesseract\_collision::ContactResultMap\ \mbox{\hyperlink{classtesseract__planning_1_1DescartesCollision_af48949cceb67f20f65664fc47e91af1f}{validate}}(\textcolor{keyword}{const}\ Eigen::Ref<const\ Eigen::VectorXd>\&\ pos);}
+\DoxyCodeLine{00080\ }
+\DoxyCodeLine{00086\ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classtesseract__planning_1_1DescartesCollision_add4a72d56abafe384bb3272c59fc677e}{distance}}(\textcolor{keyword}{const}\ Eigen::Ref<const\ Eigen::VectorXd>\&\ pos);}
+\DoxyCodeLine{00087\ }
+\DoxyCodeLine{00092\ \ \ \mbox{\hyperlink{classtesseract__planning_1_1DescartesCollision_aaeaeca3bdae2070fe34bdbd64fa19eb9}{DescartesCollision::Ptr}}\ \mbox{\hyperlink{classtesseract__planning_1_1DescartesCollision_a545c75a02f7e2b3d2cae88a8ad6a9bbe}{clone}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00093\ }
+\DoxyCodeLine{00094\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00101\ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classtesseract__planning_1_1DescartesCollision_a94ee683e23290624e1a8437eb98421b8}{isContactAllowed}}(\textcolor{keyword}{const}\ std::string\&\ a,\ \textcolor{keyword}{const}\ std::string\&\ b)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00102\ }
+\DoxyCodeLine{00103\ \ \ std::shared\_ptr<const\ tesseract\_kinematics::JointGroup>\ \mbox{\hyperlink{classtesseract__planning_1_1DescartesCollision_a39f1ede579f881de2170d4e0b0966e8a}{manip\_}};\ }
+\DoxyCodeLine{00104\ \ \ std::vector<std::string>\ \mbox{\hyperlink{classtesseract__planning_1_1DescartesCollision_a45e296a1ff9389fee602f327f3b280a2}{active\_link\_names\_}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00105\ \ \ std::shared\_ptr<tesseract\_collision::DiscreteContactManager>\ \mbox{\hyperlink{classtesseract__planning_1_1DescartesCollision_a2ea319779122d02573dd0403bcf1e9ed}{contact\_manager\_}};\ }
+\DoxyCodeLine{00107\ \ \ tesseract\_collision::CollisionCheckConfig\ \mbox{\hyperlink{classtesseract__planning_1_1DescartesCollision_a2f6483ce03ea9d7f4d8c84792b0decab}{collision\_check\_config\_}};}
+\DoxyCodeLine{00108\ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classtesseract__planning_1_1DescartesCollision_a8e06271e277942dc15a77bfe8c9fc2c1}{debug\_}};\ }
+\DoxyCodeLine{00109\ \};}
+\DoxyCodeLine{00110\ }
+\DoxyCodeLine{00111\ \}\ \ \textcolor{comment}{//\ namespace\ tesseract\_planning}}
+\DoxyCodeLine{00112\ }
+\DoxyCodeLine{00113\ \textcolor{preprocessor}{\#endif\ \ }\textcolor{comment}{//\ TESSERACT\_MOTION\_PLANNERS\_DESCARTES\_COLLISION\_H}}
+
+\end{DoxyCode}

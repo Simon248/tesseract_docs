@@ -1,0 +1,60 @@
+\doxysection{task\+\_\+composer\+\_\+node\+\_\+info\+\_\+unit.\+hpp}
+\hypertarget{task__composer__node__info__unit_8hpp_source}{}\label{task__composer__node__info__unit_8hpp_source}\index{tesseract\_task\_composer/core/include/tesseract\_task\_composer/core/test\_suite/task\_composer\_node\_info\_unit.hpp@{tesseract\_task\_composer/core/include/tesseract\_task\_composer/core/test\_suite/task\_composer\_node\_info\_unit.hpp}}
+\mbox{\hyperlink{task__composer__node__info__unit_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00026\ \textcolor{preprocessor}{\#ifndef\ TESSERACT\_TASK\_COMPOSER\_TASK\_COMPOSER\_NODE\_INFO\_UNIT\_HPP}}
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#define\ TESSERACT\_TASK\_COMPOSER\_TASK\_COMPOSER\_NODE\_INFO\_UNIT\_HPP}}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#include\ <tesseract\_common/macros.h>}}
+\DoxyCodeLine{00030\ TESSERACT\_COMMON\_IGNORE\_WARNINGS\_PUSH}
+\DoxyCodeLine{00031\ \textcolor{preprocessor}{\#include\ <gtest/gtest.h>}}
+\DoxyCodeLine{00032\ \mbox{\hyperlink{namespaceTESSERACT__COMMON__IGNORE__WARNINGS__POP}{TESSERACT\_COMMON\_IGNORE\_WARNINGS\_POP}}}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{task__composer__node_8h}{tesseract\_task\_composer/core/task\_composer\_node.h}}>}}
+\DoxyCodeLine{00035\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{task__composer__node__info_8h}{tesseract\_task\_composer/core/task\_composer\_node\_info.h}}>}}
+\DoxyCodeLine{00036\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{task__composer__context_8h}{tesseract\_task\_composer/core/task\_composer\_context.h}}>}}
+\DoxyCodeLine{00037\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{test__task_8h}{tesseract\_task\_composer/core/test\_suite/test\_task.h}}>}}
+\DoxyCodeLine{00038\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{task__composer__serialization__utils_8hpp}{tesseract\_task\_composer/core/test\_suite/task\_composer\_serialization\_utils.hpp}}>}}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacetesseract__planning_1_1test__suite}{tesseract\_planning::test\_suite}}}
+\DoxyCodeLine{00041\ \{}
+\DoxyCodeLine{00042\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00043\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{namespacetesseract__planning_1_1test__suite_aaf80842d34df8b0ddedd52a4d5a83dbb}{runTaskComposerNodeInfoTest}}()}
+\DoxyCodeLine{00044\ \{}
+\DoxyCodeLine{00045\ \ \ \{\ \ \textcolor{comment}{//\ Default}}
+\DoxyCodeLine{00046\ \ \ \ \ T\ \mbox{\hyperlink{tesseract__task__composer__core__unit_8cpp_ad7b26899c6a82b642066de444a711ed9}{node\_info}};}
+\DoxyCodeLine{00047\ \ \ \ \ \mbox{\hyperlink{command__language__utils__unit_8cpp_ac9999b1938b6048a1222396d6821eab6}{EXPECT\_EQ}}(\mbox{\hyperlink{tesseract__task__composer__core__unit_8cpp_ad7b26899c6a82b642066de444a711ed9}{node\_info}}.return\_value,\ -\/1);}
+\DoxyCodeLine{00048\ \ \ \ \ \mbox{\hyperlink{command__language__utils__unit_8cpp_ac9999b1938b6048a1222396d6821eab6}{EXPECT\_EQ}}(\mbox{\hyperlink{tesseract__task__composer__core__unit_8cpp_ad7b26899c6a82b642066de444a711ed9}{node\_info}}.status\_code,\ 0);}
+\DoxyCodeLine{00049\ \ \ \ \ \mbox{\hyperlink{command__language__utils__unit_8cpp_a32b7bf22a514cfcff5d4e14d57ab1a8b}{EXPECT\_TRUE}}(tesseract\_common::almostEqualRelativeAndAbs(\mbox{\hyperlink{tesseract__task__composer__core__unit_8cpp_ad7b26899c6a82b642066de444a711ed9}{node\_info}}.elapsed\_time,\ 0));}
+\DoxyCodeLine{00050\ \ \ \ \ \mbox{\hyperlink{command__language__utils__unit_8cpp_a32b7bf22a514cfcff5d4e14d57ab1a8b}{EXPECT\_TRUE}}(\mbox{\hyperlink{tesseract__task__composer__core__unit_8cpp_ad7b26899c6a82b642066de444a711ed9}{node\_info}}.uuid.is\_nil());}
+\DoxyCodeLine{00051\ \ \ \ \ \mbox{\hyperlink{command__language__utils__unit_8cpp_a32b7bf22a514cfcff5d4e14d57ab1a8b}{EXPECT\_TRUE}}(\mbox{\hyperlink{tesseract__task__composer__core__unit_8cpp_ad7b26899c6a82b642066de444a711ed9}{node\_info}}.parent\_uuid.is\_nil());}
+\DoxyCodeLine{00052\ \ \ \ \ \mbox{\hyperlink{command__language__utils__unit_8cpp_ac9999b1938b6048a1222396d6821eab6}{EXPECT\_EQ}}(\mbox{\hyperlink{tesseract__task__composer__core__unit_8cpp_ad7b26899c6a82b642066de444a711ed9}{node\_info}}.color,\ \textcolor{stringliteral}{"{}red"{}});}
+\DoxyCodeLine{00053\ \ \ \ \ \mbox{\hyperlink{command__language__utils__unit_8cpp_a87b7f2690021fd8f1f348928f30fb2f9}{EXPECT\_FALSE}}(\mbox{\hyperlink{tesseract__task__composer__core__unit_8cpp_ad7b26899c6a82b642066de444a711ed9}{node\_info}}.isAborted());}
+\DoxyCodeLine{00054\ \ \ \ \ \mbox{\hyperlink{command__language__utils__unit_8cpp_ac9999b1938b6048a1222396d6821eab6}{EXPECT\_EQ}}(\mbox{\hyperlink{tesseract__task__composer__core__unit_8cpp_ad7b26899c6a82b642066de444a711ed9}{node\_info}},\ \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerNodeInfo}{TaskComposerNodeInfo}}(\mbox{\hyperlink{tesseract__task__composer__core__unit_8cpp_ad7b26899c6a82b642066de444a711ed9}{node\_info}}));}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{comment}{//\ Serialization}}
+\DoxyCodeLine{00057\ \ \ \ \ test\_suite::runSerializationTest<T>(\mbox{\hyperlink{tesseract__task__composer__core__unit_8cpp_ad7b26899c6a82b642066de444a711ed9}{node\_info}},\ \textcolor{stringliteral}{"{}TaskComposerNodeInfoTests"{}});}
+\DoxyCodeLine{00058\ \ \ \}}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00060\ \ \ \{\ \ \textcolor{comment}{//\ Constructor}}
+\DoxyCodeLine{00061\ \ \ \ \ \mbox{\hyperlink{classtesseract__planning_1_1test__suite_1_1DummyTaskComposerNode}{test\_suite::DummyTaskComposerNode}}\ \mbox{\hyperlink{tesseract__task__composer__core__unit_8cpp_add125cc6aa882efdc9627c1bb886aebb}{node}};}
+\DoxyCodeLine{00062\ \ \ \ \ T\ \mbox{\hyperlink{tesseract__task__composer__core__unit_8cpp_ad7b26899c6a82b642066de444a711ed9}{node\_info}}(\mbox{\hyperlink{tesseract__task__composer__core__unit_8cpp_add125cc6aa882efdc9627c1bb886aebb}{node}});}
+\DoxyCodeLine{00063\ \ \ \ \ \mbox{\hyperlink{command__language__utils__unit_8cpp_ac9999b1938b6048a1222396d6821eab6}{EXPECT\_EQ}}(\mbox{\hyperlink{tesseract__task__composer__core__unit_8cpp_ad7b26899c6a82b642066de444a711ed9}{node\_info}}.return\_value,\ -\/1);}
+\DoxyCodeLine{00064\ \ \ \ \ \mbox{\hyperlink{command__language__utils__unit_8cpp_ac9999b1938b6048a1222396d6821eab6}{EXPECT\_EQ}}(\mbox{\hyperlink{tesseract__task__composer__core__unit_8cpp_ad7b26899c6a82b642066de444a711ed9}{node\_info}}.status\_code,\ 0);}
+\DoxyCodeLine{00065\ \ \ \ \ \mbox{\hyperlink{command__language__utils__unit_8cpp_a32b7bf22a514cfcff5d4e14d57ab1a8b}{EXPECT\_TRUE}}(tesseract\_common::almostEqualRelativeAndAbs(\mbox{\hyperlink{tesseract__task__composer__core__unit_8cpp_ad7b26899c6a82b642066de444a711ed9}{node\_info}}.elapsed\_time,\ 0));}
+\DoxyCodeLine{00066\ \ \ \ \ \mbox{\hyperlink{command__language__utils__unit_8cpp_a87b7f2690021fd8f1f348928f30fb2f9}{EXPECT\_FALSE}}(\mbox{\hyperlink{tesseract__task__composer__core__unit_8cpp_ad7b26899c6a82b642066de444a711ed9}{node\_info}}.uuid.is\_nil());}
+\DoxyCodeLine{00067\ \ \ \ \ \mbox{\hyperlink{command__language__utils__unit_8cpp_ac9999b1938b6048a1222396d6821eab6}{EXPECT\_EQ}}(\mbox{\hyperlink{tesseract__task__composer__core__unit_8cpp_ad7b26899c6a82b642066de444a711ed9}{node\_info}}.uuid,\ \mbox{\hyperlink{tesseract__task__composer__core__unit_8cpp_add125cc6aa882efdc9627c1bb886aebb}{node}}.getUUID());}
+\DoxyCodeLine{00068\ \ \ \ \ \mbox{\hyperlink{command__language__utils__unit_8cpp_ac9999b1938b6048a1222396d6821eab6}{EXPECT\_EQ}}(\mbox{\hyperlink{tesseract__task__composer__core__unit_8cpp_ad7b26899c6a82b642066de444a711ed9}{node\_info}}.parent\_uuid,\ \mbox{\hyperlink{tesseract__task__composer__core__unit_8cpp_add125cc6aa882efdc9627c1bb886aebb}{node}}.getParentUUID());}
+\DoxyCodeLine{00069\ \ \ \ \ \mbox{\hyperlink{command__language__utils__unit_8cpp_ac9999b1938b6048a1222396d6821eab6}{EXPECT\_EQ}}(\mbox{\hyperlink{tesseract__task__composer__core__unit_8cpp_ad7b26899c6a82b642066de444a711ed9}{node\_info}}.color,\ \textcolor{stringliteral}{"{}red"{}});}
+\DoxyCodeLine{00070\ \ \ \ \ \mbox{\hyperlink{command__language__utils__unit_8cpp_a87b7f2690021fd8f1f348928f30fb2f9}{EXPECT\_FALSE}}(\mbox{\hyperlink{tesseract__task__composer__core__unit_8cpp_ad7b26899c6a82b642066de444a711ed9}{node\_info}}.isAborted());}
+\DoxyCodeLine{00071\ \ \ \ \ \mbox{\hyperlink{command__language__utils__unit_8cpp_ac9999b1938b6048a1222396d6821eab6}{EXPECT\_EQ}}(\mbox{\hyperlink{tesseract__task__composer__core__unit_8cpp_ad7b26899c6a82b642066de444a711ed9}{node\_info}},\ \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerNodeInfo}{TaskComposerNodeInfo}}(\mbox{\hyperlink{tesseract__task__composer__core__unit_8cpp_ad7b26899c6a82b642066de444a711ed9}{node\_info}}));}
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00073\ \ \ \ \ \textcolor{comment}{//\ Serialization}}
+\DoxyCodeLine{00074\ \ \ \ \ test\_suite::runSerializationTest<T>(\mbox{\hyperlink{tesseract__task__composer__core__unit_8cpp_ad7b26899c6a82b642066de444a711ed9}{node\_info}},\ \textcolor{stringliteral}{"{}TaskComposerNodeInfoTests"{}});}
+\DoxyCodeLine{00075\ \ \ \}}
+\DoxyCodeLine{00076\ \}}
+\DoxyCodeLine{00077\ \}\ \ \textcolor{comment}{//\ namespace\ tesseract\_planning::test\_suite}}
+\DoxyCodeLine{00078\ \textcolor{preprocessor}{\#endif\ \ }\textcolor{comment}{//\ TESSERACT\_TASK\_COMPOSER\_TASK\_COMPOSER\_NODE\_INFO\_UNIT\_HPP}}
+
+\end{DoxyCode}

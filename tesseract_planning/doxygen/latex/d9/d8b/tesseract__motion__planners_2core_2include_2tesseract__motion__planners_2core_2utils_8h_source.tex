@@ -1,0 +1,51 @@
+\doxysection{utils.\+h}
+\hypertarget{tesseract__motion__planners_2core_2include_2tesseract__motion__planners_2core_2utils_8h_source}{}\label{tesseract__motion__planners_2core_2include_2tesseract__motion__planners_2core_2utils_8h_source}\index{tesseract\_motion\_planners/core/include/tesseract\_motion\_planners/core/utils.h@{tesseract\_motion\_planners/core/include/tesseract\_motion\_planners/core/utils.h}}
+\mbox{\hyperlink{tesseract__motion__planners_2core_2include_2tesseract__motion__planners_2core_2utils_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00026\ \textcolor{preprocessor}{\#ifndef\ TESSERACT\_MOTION\_PLANNERS\_UTILS\_H}}
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#define\ TESSERACT\_MOTION\_PLANNERS\_UTILS\_H}}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#include\ <tesseract\_common/macros.h>}}
+\DoxyCodeLine{00030\ TESSERACT\_COMMON\_IGNORE\_WARNINGS\_PUSH}
+\DoxyCodeLine{00031\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00032\ \mbox{\hyperlink{namespaceTESSERACT__COMMON__IGNORE__WARNINGS__POP}{TESSERACT\_COMMON\_IGNORE\_WARNINGS\_POP}}}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \textcolor{preprocessor}{\#include\ <tesseract\_common/eigen\_types.h>}}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \textcolor{preprocessor}{\#include\ <tesseract\_collision/core/fwd.h>}}
+\DoxyCodeLine{00037\ \textcolor{preprocessor}{\#include\ <tesseract\_state\_solver/fwd.h>}}
+\DoxyCodeLine{00038\ \textcolor{preprocessor}{\#include\ <tesseract\_environment/fwd.h>}}
+\DoxyCodeLine{00039\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{tesseract__command__language_2include_2tesseract__command__language_2fwd_8h}{tesseract\_command\_language/fwd.h}}>}}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacetesseract__planning}{tesseract\_planning}}}
+\DoxyCodeLine{00042\ \{}
+\DoxyCodeLine{00049\ tesseract\_common::Toolpath\ \mbox{\hyperlink{namespacetesseract__planning_a69d6940279a5076103de7a3e6a400c2e}{toToolpath}}(\textcolor{keyword}{const}\ InstructionPoly\&\ instruction,}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ tesseract\_environment::Environment\&\ \mbox{\hyperlink{basic__cartesian__example__unit_8cpp_a96ce750ee22ecbf4d17cc6cf146d9514}{env}});}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00058\ tesseract\_common::Toolpath\ \mbox{\hyperlink{namespacetesseract__planning_a69d6940279a5076103de7a3e6a400c2e}{toToolpath}}(\textcolor{keyword}{const}\ CompositeInstruction\&\ ci,\ \textcolor{keyword}{const}\ tesseract\_environment::Environment\&\ \mbox{\hyperlink{basic__cartesian__example__unit_8cpp_a96ce750ee22ecbf4d17cc6cf146d9514}{env}});}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00066\ tesseract\_common::Toolpath\ \mbox{\hyperlink{namespacetesseract__planning_a69d6940279a5076103de7a3e6a400c2e}{toToolpath}}(\textcolor{keyword}{const}\ MoveInstructionPoly\&\ \mbox{\hyperlink{simple__planner__fixed__size__assign__position_8cpp_aacf8f831786eae51fba4caaedbde9cf0}{mi}},\ \textcolor{keyword}{const}\ tesseract\_environment::Environment\&\ \mbox{\hyperlink{basic__cartesian__example__unit_8cpp_a96ce750ee22ecbf4d17cc6cf146d9514}{env}});}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00073\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{namespacetesseract__planning_a331a798804f11eb3ca112818639075a8}{assignCurrentStateAsSeed}}(CompositeInstruction\&\ composite\_instructions,}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ tesseract\_environment::Environment\&\ \mbox{\hyperlink{basic__cartesian__example__unit_8cpp_a96ce750ee22ecbf4d17cc6cf146d9514}{env}});}
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00082\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{namespacetesseract__planning_ac25e52a76d6ada60b39ff9bb422dcb91}{formatProgram}}(CompositeInstruction\&\ composite\_instructions,\ \textcolor{keyword}{const}\ tesseract\_environment::Environment\&\ \mbox{\hyperlink{basic__cartesian__example__unit_8cpp_a96ce750ee22ecbf4d17cc6cf146d9514}{env}});}
+\DoxyCodeLine{00083\ }
+\DoxyCodeLine{00093\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{namespacetesseract__planning_a82d7bc798089ef84c8c11d2806bbc9e7}{contactCheckProgram}}(std::vector<tesseract\_collision::ContactResultMap>\&\ \mbox{\hyperlink{fix__state__collision__task__unit_8cpp_a4837fa9fc092f6e07b46656b7d366e2f}{contacts}},}
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ tesseract\_collision::ContinuousContactManager\&\ manager,}
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ tesseract\_scene\_graph::StateSolver\&\ state\_solver,}
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ CompositeInstruction\&\ \mbox{\hyperlink{command__language__utils__unit_8cpp_ab5a75a7fd217179774b21aaa94fccc66}{program}},}
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ tesseract\_collision::CollisionCheckConfig\&\ \mbox{\hyperlink{tesseract__task__composer__core__unit_8cpp_a01d92a800904faa16b8c1c1372c40fb3}{config}});}
+\DoxyCodeLine{00098\ }
+\DoxyCodeLine{00108\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{namespacetesseract__planning_a82d7bc798089ef84c8c11d2806bbc9e7}{contactCheckProgram}}(std::vector<tesseract\_collision::ContactResultMap>\&\ \mbox{\hyperlink{fix__state__collision__task__unit_8cpp_a4837fa9fc092f6e07b46656b7d366e2f}{contacts}},}
+\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ tesseract\_collision::DiscreteContactManager\&\ manager,}
+\DoxyCodeLine{00110\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ tesseract\_scene\_graph::StateSolver\&\ state\_solver,}
+\DoxyCodeLine{00111\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ CompositeInstruction\&\ \mbox{\hyperlink{command__language__utils__unit_8cpp_ab5a75a7fd217179774b21aaa94fccc66}{program}},}
+\DoxyCodeLine{00112\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ tesseract\_collision::CollisionCheckConfig\&\ \mbox{\hyperlink{tesseract__task__composer__core__unit_8cpp_a01d92a800904faa16b8c1c1372c40fb3}{config}});}
+\DoxyCodeLine{00113\ }
+\DoxyCodeLine{00114\ \}\ \ \textcolor{comment}{//\ namespace\ tesseract\_planning}}
+\DoxyCodeLine{00115\ }
+\DoxyCodeLine{00116\ \textcolor{preprocessor}{\#endif\ \ }\textcolor{comment}{//\ TESSERACT\_PLANNING\_UTILS\_H}}
+
+\end{DoxyCode}

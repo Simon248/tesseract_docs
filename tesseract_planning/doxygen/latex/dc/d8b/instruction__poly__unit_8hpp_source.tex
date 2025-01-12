@@ -1,0 +1,76 @@
+\doxysection{instruction\+\_\+poly\+\_\+unit.\+hpp}
+\hypertarget{instruction__poly__unit_8hpp_source}{}\label{instruction__poly__unit_8hpp_source}\index{tesseract\_command\_language/include/tesseract\_command\_language/test\_suite/instruction\_poly\_unit.hpp@{tesseract\_command\_language/include/tesseract\_command\_language/test\_suite/instruction\_poly\_unit.hpp}}
+\mbox{\hyperlink{instruction__poly__unit_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00026\ \textcolor{preprocessor}{\#ifndef\ TESSERACT\_COMMAND\_LANGUAGE\_INSTRUCTION\_POLY\_UNIT\_HPP}}
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#define\ TESSERACT\_COMMAND\_LANGUAGE\_INSTRUCTION\_POLY\_UNIT\_HPP}}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#include\ <tesseract\_common/macros.h>}}
+\DoxyCodeLine{00030\ TESSERACT\_COMMON\_IGNORE\_WARNINGS\_PUSH}
+\DoxyCodeLine{00031\ \textcolor{preprocessor}{\#include\ <gtest/gtest.h>}}
+\DoxyCodeLine{00032\ \textcolor{preprocessor}{\#include\ <boost/archive/xml\_oarchive.hpp>}}
+\DoxyCodeLine{00033\ \textcolor{preprocessor}{\#include\ <boost/archive/xml\_iarchive.hpp>}}
+\DoxyCodeLine{00034\ \textcolor{preprocessor}{\#include\ <boost/uuid/random\_generator.hpp>}}
+\DoxyCodeLine{00035\ \mbox{\hyperlink{namespaceTESSERACT__COMMON__IGNORE__WARNINGS__POP}{TESSERACT\_COMMON\_IGNORE\_WARNINGS\_POP}}}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{instruction__poly_8h}{tesseract\_command\_language/poly/instruction\_poly.h}}>}}
+\DoxyCodeLine{00038\ \textcolor{preprocessor}{\#include\ <tesseract\_common/serialization.h>}}
+\DoxyCodeLine{00039\ \textcolor{preprocessor}{\#include\ <tesseract\_common/utils.h>}}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacetesseract__planning_1_1test__suite}{tesseract\_planning::test\_suite}}}
+\DoxyCodeLine{00042\ \{}
+\DoxyCodeLine{00043\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00044\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{namespacetesseract__planning_1_1test__suite_a93e28c470035b0a500a7891b696a9735}{runInstructionInterfaceTest}}(\textcolor{keywordtype}{bool}\ expect\_uuid\_null\ =\ \textcolor{keyword}{true})}
+\DoxyCodeLine{00045\ \{}
+\DoxyCodeLine{00046\ \ \ \mbox{\hyperlink{structtesseract__planning_1_1InstructionPoly}{InstructionPoly}}\ inst\{\ T()\ \};}
+\DoxyCodeLine{00047\ \ \ \textcolor{keyword}{auto}\ uuid\ =\ inst.\mbox{\hyperlink{structtesseract__planning_1_1InstructionPoly_a08e980237242622ae16b3629a2197561}{getUUID}}();}
+\DoxyCodeLine{00048\ \ \ \mbox{\hyperlink{command__language__utils__unit_8cpp_ac9999b1938b6048a1222396d6821eab6}{EXPECT\_EQ}}(uuid.is\_nil(),\ expect\_uuid\_null);}
+\DoxyCodeLine{00049\ \ \ \mbox{\hyperlink{command__language__utils__unit_8cpp_a32b7bf22a514cfcff5d4e14d57ab1a8b}{EXPECT\_TRUE}}(inst.getParentUUID().is\_nil());}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00051\ \ \ \textcolor{keyword}{auto}\ set\_uuid\ =\ boost::uuids::random\_generator()();}
+\DoxyCodeLine{00052\ \ \ inst.setUUID(set\_uuid);}
+\DoxyCodeLine{00053\ \ \ \mbox{\hyperlink{command__language__utils__unit_8cpp_a87b7f2690021fd8f1f348928f30fb2f9}{EXPECT\_FALSE}}(inst.getUUID().is\_nil());}
+\DoxyCodeLine{00054\ \ \ \mbox{\hyperlink{command__language__utils__unit_8cpp_ac9999b1938b6048a1222396d6821eab6}{EXPECT\_EQ}}(inst.getUUID(),\ set\_uuid);}
+\DoxyCodeLine{00055\ \ \ \mbox{\hyperlink{command__language__utils__unit_8cpp_a0ec0f5fb498af7e810a320d8c93d5908}{EXPECT\_ANY\_THROW}}(inst.setUUID(boost::uuids::uuid\{\}));\ \ \textcolor{comment}{//\ NOLINT}}
+\DoxyCodeLine{00056\ \ \ \mbox{\hyperlink{command__language__utils__unit_8cpp_a87b7f2690021fd8f1f348928f30fb2f9}{EXPECT\_FALSE}}(inst.getUUID().is\_nil());}
+\DoxyCodeLine{00057\ \ \ \mbox{\hyperlink{command__language__utils__unit_8cpp_ac9999b1938b6048a1222396d6821eab6}{EXPECT\_EQ}}(inst.getUUID(),\ set\_uuid);}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00059\ \ \ inst.regenerateUUID();}
+\DoxyCodeLine{00060\ \ \ \textcolor{keyword}{auto}\ reg\_uuid\ =\ inst.getUUID();}
+\DoxyCodeLine{00061\ \ \ \mbox{\hyperlink{command__language__utils__unit_8cpp_a87b7f2690021fd8f1f348928f30fb2f9}{EXPECT\_FALSE}}(reg\_uuid.is\_nil());}
+\DoxyCodeLine{00062\ \ \ \mbox{\hyperlink{tesseract__task__composer__core__unit_8cpp_a640fac771b9d780d96b6a697903f0db2}{EXPECT\_NE}}(inst.getUUID(),\ uuid);}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00064\ \ \ inst.setParentUUID(reg\_uuid);}
+\DoxyCodeLine{00065\ \ \ \mbox{\hyperlink{command__language__utils__unit_8cpp_a87b7f2690021fd8f1f348928f30fb2f9}{EXPECT\_FALSE}}(inst.getParentUUID().is\_nil());}
+\DoxyCodeLine{00066\ \ \ \mbox{\hyperlink{command__language__utils__unit_8cpp_ac9999b1938b6048a1222396d6821eab6}{EXPECT\_EQ}}(inst.getParentUUID(),\ reg\_uuid);}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00068\ \ \ \textcolor{keyword}{const}\ std::string\ desc\{\ \textcolor{stringliteral}{"{}tesseract\_planning::test\_suite::Instruction::Description"{}}\ \};}
+\DoxyCodeLine{00069\ \ \ \mbox{\hyperlink{tesseract__task__composer__core__unit_8cpp_a640fac771b9d780d96b6a697903f0db2}{EXPECT\_NE}}(inst.getDescription(),\ desc);}
+\DoxyCodeLine{00070\ \ \ inst.setDescription(desc);}
+\DoxyCodeLine{00071\ \ \ \mbox{\hyperlink{command__language__utils__unit_8cpp_ac9999b1938b6048a1222396d6821eab6}{EXPECT\_EQ}}(inst.getDescription(),\ desc);}
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00073\ \ \ \mbox{\hyperlink{tesseract__task__composer__core__unit_8cpp_aa1e35645c5fc259a1e3e5d0ee6c99a39}{EXPECT\_NO\_THROW}}(inst.print());\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ NOLINT}}
+\DoxyCodeLine{00074\ \ \ \mbox{\hyperlink{tesseract__task__composer__core__unit_8cpp_aa1e35645c5fc259a1e3e5d0ee6c99a39}{EXPECT\_NO\_THROW}}(inst.print(\textcolor{stringliteral}{"{}test\_"{}}));\ \ \textcolor{comment}{//\ NOLINT}}
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00076\ \ \ \mbox{\hyperlink{structtesseract__planning_1_1InstructionPoly}{InstructionPoly}}\ \mbox{\hyperlink{tesseract__task__composer__core__unit_8cpp_a195ed8c017ea4d4ed72c982e0f7badc2}{assign}}\ =\ inst;}
+\DoxyCodeLine{00077\ \ \ \mbox{\hyperlink{command__language__utils__unit_8cpp_a32b7bf22a514cfcff5d4e14d57ab1a8b}{EXPECT\_TRUE}}(\mbox{\hyperlink{tesseract__task__composer__core__unit_8cpp_a195ed8c017ea4d4ed72c982e0f7badc2}{assign}}\ ==\ inst);}
+\DoxyCodeLine{00078\ \ \ \mbox{\hyperlink{command__language__utils__unit_8cpp_a32b7bf22a514cfcff5d4e14d57ab1a8b}{EXPECT\_TRUE}}(\mbox{\hyperlink{tesseract__task__composer__core__unit_8cpp_a195ed8c017ea4d4ed72c982e0f7badc2}{assign}}.getUUID()\ ==\ inst.getUUID());}
+\DoxyCodeLine{00079\ }
+\DoxyCodeLine{00080\ \ \ \mbox{\hyperlink{structtesseract__planning_1_1InstructionPoly}{InstructionPoly}}\ \mbox{\hyperlink{tesseract__task__composer__core__unit_8cpp_a9915162f44fff72a512d62f289af4755}{copy}}(inst);}
+\DoxyCodeLine{00081\ \ \ \mbox{\hyperlink{command__language__utils__unit_8cpp_a32b7bf22a514cfcff5d4e14d57ab1a8b}{EXPECT\_TRUE}}(\mbox{\hyperlink{tesseract__task__composer__core__unit_8cpp_a9915162f44fff72a512d62f289af4755}{copy}}\ ==\ inst);}
+\DoxyCodeLine{00082\ \ \ \mbox{\hyperlink{command__language__utils__unit_8cpp_a32b7bf22a514cfcff5d4e14d57ab1a8b}{EXPECT\_TRUE}}(\mbox{\hyperlink{tesseract__task__composer__core__unit_8cpp_a195ed8c017ea4d4ed72c982e0f7badc2}{assign}}.getUUID()\ ==\ inst.getUUID());}
+\DoxyCodeLine{00083\ \}}
+\DoxyCodeLine{00084\ }
+\DoxyCodeLine{00089\ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{namespacetesseract__planning_1_1test__suite_a7e1e35a1ee51d166c8f4a1b12dcbb3dc}{runInstructionSerializationTest}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{structtesseract__planning_1_1InstructionPoly}{InstructionPoly}}\&\ inst)}
+\DoxyCodeLine{00090\ \{}
+\DoxyCodeLine{00091\ \ \ \textcolor{keyword}{const}\ std::string\ filepath\ =\ tesseract\_common::getTempPath()\ +\ \textcolor{stringliteral}{"{}instruction\_poly\_boost.xml"{}};}
+\DoxyCodeLine{00092\ \ \ tesseract\_common::Serialization::toArchiveFileXML<InstructionPoly>(inst,\ filepath);}
+\DoxyCodeLine{00093\ \ \ \textcolor{keyword}{auto}\ ninst\ =\ tesseract\_common::Serialization::fromArchiveFileXML<InstructionPoly>(filepath);}
+\DoxyCodeLine{00094\ \ \ \mbox{\hyperlink{command__language__utils__unit_8cpp_a32b7bf22a514cfcff5d4e14d57ab1a8b}{EXPECT\_TRUE}}(inst\ ==\ ninst);}
+\DoxyCodeLine{00095\ \}}
+\DoxyCodeLine{00096\ \}\ \ \textcolor{comment}{//\ namespace\ tesseract\_planning::test\_suite}}
+\DoxyCodeLine{00097\ }
+\DoxyCodeLine{00098\ \textcolor{preprocessor}{\#endif\ \ }\textcolor{comment}{//\ TESSERACT\_COMMAND\_LANGUAGE\_INSTRUCTION\_POLY\_UNIT\_HPP}}
+
+\end{DoxyCode}

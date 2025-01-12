@@ -1,0 +1,32 @@
+<map id="tesseract_time_parameterization/isp/src/iterative_spline_parameterization.cpp" name="tesseract_time_parameterization/isp/src/iterative_spline_parameterization.cpp">
+<area shape="rect" id="Node000001" title=" " alt="" coords="418,5,628,61"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="83,286,272,312"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="418,43,350,51,275,64,198,84,124,111,87,128,58,144,35,165,15,199,8,219,15,237,41,262,74,279,71,283,37,266,10,240,3,219,10,197,31,162,55,140,84,124,122,107,196,79,274,59,350,45,418,37"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="456,117,513,142"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="514,63,498,103,493,101,510,61"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="537,117,589,142"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="537,60,555,101,550,103,532,63"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="613,117,670,142"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="559,59,617,105,613,109,556,64"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="694,117,861,142"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="598,59,732,108,730,113,596,64"/>
+<area shape="rect" id="Node000007" href="$d3/d2c/iterative__spline__parameterization_8h.html" title=" " alt="" coords="135,109,380,150"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="447,64,328,106,327,101,446,59"/>
+<area shape="rect" id="Node000011" href="$d5/de8/trajectory__container_8h.html" title="Creates an interface for contaning different trajectory data structures." alt="" coords="556,198,765,238"/>
+<area shape="poly" id="edge13_Node000001_Node000011" title=" " alt="" coords="486,63,464,83,447,105,440,127,441,138,447,148,461,160,483,171,544,191,543,196,481,176,458,165,442,151,436,139,435,126,443,102,460,79,482,59"/>
+<area shape="rect" id="Node000013" title=" " alt="" coords="886,117,1056,142"/>
+<area shape="poly" id="edge17_Node000001_Node000013" title=" " alt="" coords="629,54,899,110,898,115,628,59"/>
+<area shape="poly" id="edge7_Node000007_Node000002" title=" " alt="" coords="144,153,71,173,44,186,27,199,19,218,27,237,52,262,84,278,82,283,49,266,22,240,14,218,22,196,41,181,69,168,142,148"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="476,286,560,312"/>
+<area shape="poly" id="edge8_Node000007_Node000008" title=" " alt="" coords="382,139,442,159,470,175,494,196,507,213,514,233,521,271,515,272,509,234,502,215,491,199,467,180,440,164,380,144"/>
+<area shape="rect" id="Node000009" href="$d0/d07/tesseract__time__parameterization_2core_2include_2tesseract__time__parameterization_2core_2fwd_8h.html" title=" " alt="" coords="37,198,246,238"/>
+<area shape="poly" id="edge9_Node000007_Node000009" title=" " alt="" coords="233,152,182,190,179,186,230,148"/>
+<area shape="rect" id="Node000010" href="$da/dc3/time__parameterization_8h.html" title=" " alt="" coords="270,198,480,238"/>
+<area shape="poly" id="edge10_Node000007_Node000010" title=" " alt="" coords="286,148,338,186,335,191,283,152"/>
+<area shape="poly" id="edge11_Node000010_Node000002" title=" " alt="" coords="327,241,223,283,221,278,325,236"/>
+<area shape="poly" id="edge12_Node000010_Node000008" title=" " alt="" coords="412,237,484,276,481,281,409,241"/>
+<area shape="poly" id="edge14_Node000011_Node000002" title=" " alt="" coords="556,239,267,286,267,281,555,234"/>
+<area shape="poly" id="edge15_Node000011_Node000008" title=" " alt="" coords="626,241,554,281,552,276,624,237"/>
+<area shape="rect" id="Node000012" title=" " alt="" coords="627,286,694,312"/>
+<area shape="poly" id="edge16_Node000011_Node000012" title=" " alt="" coords="663,239,663,271,658,271,658,239"/>
+</map>

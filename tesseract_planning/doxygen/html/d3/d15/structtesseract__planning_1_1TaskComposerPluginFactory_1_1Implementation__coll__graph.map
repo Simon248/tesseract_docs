@@ -1,0 +1,17 @@
+<map id="tesseract_planning::TaskComposerPluginFactory::Implementation" name="tesseract_planning::TaskComposerPluginFactory::Implementation">
+<area shape="rect" id="Node000001" title=" " alt="" coords="797,45,992,101"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="435,5,640,61"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="656,44,797,60,796,65,656,49"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="224,15,302,41"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="317,26,434,29,434,34,317,32"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="445,85,631,141"/>
+<area shape="poly" id="edge7_Node000007_Node000003" title=" " alt="" coords="317,42,446,82,445,87,315,47"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="5,8,129,48"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="144,25,224,25,224,31,144,31"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="195,112,331,138"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="345,111,378,102,410,90,422,81,434,71,457,59,459,64,436,75,425,85,412,94,380,107,347,116"/>
+<area shape="poly" id="edge8_Node000007_Node000005" title=" " alt="" coords="347,137,355,138,411,138,444,133,444,138,411,143,355,143,346,142"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="48,112,86,138"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="102,123,194,123,194,128,102,128"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="645,98,797,81,797,87,646,104"/>
+</map>

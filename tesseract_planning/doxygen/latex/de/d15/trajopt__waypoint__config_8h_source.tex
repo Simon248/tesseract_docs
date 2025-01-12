@@ -1,0 +1,70 @@
+\doxysection{trajopt\+\_\+waypoint\+\_\+config.\+h}
+\hypertarget{trajopt__waypoint__config_8h_source}{}\label{trajopt__waypoint__config_8h_source}\index{tesseract\_motion\_planners/trajopt/include/tesseract\_motion\_planners/trajopt/trajopt\_waypoint\_config.h@{tesseract\_motion\_planners/trajopt/include/tesseract\_motion\_planners/trajopt/trajopt\_waypoint\_config.h}}
+\mbox{\hyperlink{trajopt__waypoint__config_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00026\ \textcolor{preprocessor}{\#ifndef\ TESSERACT\_MOTION\_PLANNERS\_TRAJOPT\_CONFIG\_TRAJOPT\_WAYPOINT\_CONFIG\_H}}
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#define\ TESSERACT\_MOTION\_PLANNERS\_TRAJOPT\_CONFIG\_TRAJOPT\_WAYPOINT\_CONFIG\_H}}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#include\ <tesseract\_common/macros.h>}}
+\DoxyCodeLine{00030\ TESSERACT\_COMMON\_IGNORE\_WARNINGS\_PUSH}
+\DoxyCodeLine{00031\ \textcolor{preprocessor}{\#include\ <Eigen/Core>}}
+\DoxyCodeLine{00032\ \textcolor{preprocessor}{\#include\ <boost/serialization/access.hpp>}}
+\DoxyCodeLine{00033\ \textcolor{preprocessor}{\#include\ <boost/serialization/export.hpp>}}
+\DoxyCodeLine{00034\ \mbox{\hyperlink{namespaceTESSERACT__COMMON__IGNORE__WARNINGS__POP}{TESSERACT\_COMMON\_IGNORE\_WARNINGS\_POP}}}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacetesseract__planning}{tesseract\_planning}}}
+\DoxyCodeLine{00037\ \{}
+\DoxyCodeLine{00041\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structtesseract__planning_1_1TrajOptCartesianWaypointConfig}{TrajOptCartesianWaypointConfig}}}
+\DoxyCodeLine{00042\ \{}
+\DoxyCodeLine{00043\ \ \ \textcolor{comment}{//\ LCOV\_EXCL\_START}}
+\DoxyCodeLine{00044\ \ \ EIGEN\_MAKE\_ALIGNED\_OPERATOR\_NEW}
+\DoxyCodeLine{00045\ \ \ \textcolor{comment}{//\ LCOV\_EXCL\_STOP}}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00047\ \ \ \mbox{\hyperlink{structtesseract__planning_1_1TrajOptCartesianWaypointConfig_abcb623b425e73520f47ea0aafeab0907}{TrajOptCartesianWaypointConfig}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00050\ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{structtesseract__planning_1_1TrajOptCartesianWaypointConfig_ae80e1a41e7396ca327fe606416b03140}{enabled}}\{\ \textcolor{keyword}{true}\ \};}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00054\ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{structtesseract__planning_1_1TrajOptCartesianWaypointConfig_acacaa890c3d22714e8ed92d721354b5b}{use\_tolerance\_override}}\{\ \textcolor{keyword}{false}\ \};}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00058\ \ \ Eigen::Matrix<double,\ 6,\ 1>\ \mbox{\hyperlink{structtesseract__planning_1_1TrajOptCartesianWaypointConfig_ab2fbcc6d980ad5eed0c00d4e6425723b}{lower\_tolerance}}\{\ Eigen::VectorXd::Zero(6)\ \};}
+\DoxyCodeLine{00061\ \ \ Eigen::Matrix<double,\ 6,\ 1>\ \mbox{\hyperlink{structtesseract__planning_1_1TrajOptCartesianWaypointConfig_a1c660aca0e2b8050e4e1de83118a8ef9}{upper\_tolerance}}\{\ Eigen::VectorXd::Zero(6)\ \};}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00064\ \ \ Eigen::Matrix<double,\ 6,\ 1>\ \mbox{\hyperlink{structtesseract__planning_1_1TrajOptCartesianWaypointConfig_a4390d5b9c917b4ed158cce16935ec2b9}{coeff}}\{\ Eigen::VectorXd::Constant(6,\ 5)\ \};}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00066\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00067\ \ \ \textcolor{keyword}{friend}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{structtesseract__planning_1_1TrajOptCartesianWaypointConfig_ac98d07dd8f7b70e16ccb9a01abf56b9c}{boost::serialization::access}};}
+\DoxyCodeLine{00068\ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{class}\ Archive>}
+\DoxyCodeLine{00069\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structtesseract__planning_1_1TrajOptCartesianWaypointConfig_ad2b026c0d266af74113ce0376143fcf3}{serialize}}(Archive\&,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int});\ \ \textcolor{comment}{//\ NOLINT}}
+\DoxyCodeLine{00070\ \};}
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00075\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structtesseract__planning_1_1TrajOptJointWaypointConfig}{TrajOptJointWaypointConfig}}}
+\DoxyCodeLine{00076\ \{}
+\DoxyCodeLine{00077\ \ \ \textcolor{comment}{//\ LCOV\_EXCL\_START}}
+\DoxyCodeLine{00078\ \ \ EIGEN\_MAKE\_ALIGNED\_OPERATOR\_NEW}
+\DoxyCodeLine{00079\ \ \ \textcolor{comment}{//\ LCOV\_EXCL\_STOP}}
+\DoxyCodeLine{00080\ }
+\DoxyCodeLine{00081\ \ \ \mbox{\hyperlink{structtesseract__planning_1_1TrajOptJointWaypointConfig_a5858d984e45ef6f68de92d7e5217df88}{TrajOptJointWaypointConfig}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00082\ }
+\DoxyCodeLine{00084\ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{structtesseract__planning_1_1TrajOptJointWaypointConfig_a6f003e7a7bbef321185ac058014ed4c0}{enabled}}\{\ \textcolor{keyword}{true}\ \};}
+\DoxyCodeLine{00085\ }
+\DoxyCodeLine{00088\ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{structtesseract__planning_1_1TrajOptJointWaypointConfig_a3c9d7fd8cbef2259c07029ae30a17075}{use\_tolerance\_override}}\{\ \textcolor{keyword}{false}\ \};}
+\DoxyCodeLine{00089\ }
+\DoxyCodeLine{00091\ \ \ Eigen::VectorXd\ \mbox{\hyperlink{structtesseract__planning_1_1TrajOptJointWaypointConfig_a35d1eb138811f3c36c17a9ddcbdb707d}{lower\_tolerance}};}
+\DoxyCodeLine{00093\ \ \ Eigen::VectorXd\ \mbox{\hyperlink{structtesseract__planning_1_1TrajOptJointWaypointConfig_acad9b67f64e08f98cf394f9780307899}{upper\_tolerance}};}
+\DoxyCodeLine{00094\ }
+\DoxyCodeLine{00096\ \ \ Eigen::VectorXd\ \mbox{\hyperlink{structtesseract__planning_1_1TrajOptJointWaypointConfig_a68a3c37277bd576ed66546659895c95a}{coeff}}\{\ Eigen::VectorXd::Constant(1,\ 1,\ 5)\ \};}
+\DoxyCodeLine{00097\ }
+\DoxyCodeLine{00098\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00099\ \ \ \textcolor{keyword}{friend}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{structtesseract__planning_1_1TrajOptJointWaypointConfig_ac98d07dd8f7b70e16ccb9a01abf56b9c}{boost::serialization::access}};}
+\DoxyCodeLine{00100\ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{class}\ Archive>}
+\DoxyCodeLine{00101\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structtesseract__planning_1_1TrajOptJointWaypointConfig_ade8145a5c74568b8f7cdeafe42c462ce}{serialize}}(Archive\&,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int});\ \ \textcolor{comment}{//\ NOLINT}}
+\DoxyCodeLine{00102\ \};}
+\DoxyCodeLine{00103\ \}\ \ \textcolor{comment}{//\ namespace\ tesseract\_planning}}
+\DoxyCodeLine{00104\ }
+\DoxyCodeLine{00105\ BOOST\_CLASS\_EXPORT\_KEY(\mbox{\hyperlink{structtesseract__planning_1_1TrajOptCartesianWaypointConfig}{tesseract\_planning::TrajOptCartesianWaypointConfig}})}
+\DoxyCodeLine{00106\ BOOST\_CLASS\_EXPORT\_KEY(\mbox{\hyperlink{structtesseract__planning_1_1TrajOptJointWaypointConfig}{tesseract\_planning::TrajOptJointWaypointConfig}})}
+\DoxyCodeLine{00107\ }
+\DoxyCodeLine{00108\ \textcolor{preprocessor}{\#endif\ \ }\textcolor{comment}{//\ TESSERACT\_MOTION\_PLANNERS\_TRAJOPT\_CONFIG\_TRAJOPT\_WAYPOINT\_CONFIG\_H}}
+
+\end{DoxyCode}

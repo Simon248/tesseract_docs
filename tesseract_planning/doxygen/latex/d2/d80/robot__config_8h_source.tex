@@ -1,0 +1,114 @@
+\doxysection{robot\+\_\+config.\+h}
+\hypertarget{robot__config_8h_source}{}\label{robot__config_8h_source}\index{tesseract\_motion\_planners/core/include/tesseract\_motion\_planners/robot\_config.h@{tesseract\_motion\_planners/core/include/tesseract\_motion\_planners/robot\_config.h}}
+\mbox{\hyperlink{robot__config_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00026\ \textcolor{preprocessor}{\#ifndef\ TESSERACT\_MOTION\_PLANNERS\_ROBOT\_CONFIG\_H}}
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#define\ TESSERACT\_MOTION\_PLANNERS\_ROBOT\_CONFIG\_H}}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#include\ <tesseract\_common/macros.h>}}
+\DoxyCodeLine{00030\ TESSERACT\_COMMON\_IGNORE\_WARNINGS\_PUSH}
+\DoxyCodeLine{00031\ \textcolor{preprocessor}{\#include\ <Eigen/Geometry>}}
+\DoxyCodeLine{00032\ \mbox{\hyperlink{namespaceTESSERACT__COMMON__IGNORE__WARNINGS__POP}{TESSERACT\_COMMON\_IGNORE\_WARNINGS\_POP}}}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \textcolor{preprocessor}{\#include\ <tesseract\_kinematics/core/joint\_group.h>}}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacetesseract__planning}{tesseract\_planning}}}
+\DoxyCodeLine{00037\ \{}
+\DoxyCodeLine{00050\ \textcolor{keyword}{enum\ class}\ \mbox{\hyperlink{namespacetesseract__planning_adc15a5456ea446dfa3dc95852bc9d579}{RobotConfig}}}
+\DoxyCodeLine{00051\ \{}
+\DoxyCodeLine{00052\ \ \ \mbox{\hyperlink{namespacetesseract__planning_adc15a5456ea446dfa3dc95852bc9d579aa57b0a6baa71b2c846c70646369e11a0}{NUT}}\ =\ 0,}
+\DoxyCodeLine{00053\ \ \ \mbox{\hyperlink{namespacetesseract__planning_adc15a5456ea446dfa3dc95852bc9d579a77600c70a81708b4f616283cf3231ddf}{FUT}}\ =\ 1,}
+\DoxyCodeLine{00054\ \ \ \mbox{\hyperlink{namespacetesseract__planning_adc15a5456ea446dfa3dc95852bc9d579aed4c02276b8f3078120ac166c16cec42}{NDT}}\ =\ 2,}
+\DoxyCodeLine{00055\ \ \ \mbox{\hyperlink{namespacetesseract__planning_adc15a5456ea446dfa3dc95852bc9d579a97d38c259b5e41097c285878bdc750ba}{FDT}}\ =\ 3,}
+\DoxyCodeLine{00056\ \ \ \mbox{\hyperlink{namespacetesseract__planning_adc15a5456ea446dfa3dc95852bc9d579a57eaecb0d3cb5d6855b841b911f6778c}{NDB}}\ =\ 4,}
+\DoxyCodeLine{00057\ \ \ \mbox{\hyperlink{namespacetesseract__planning_adc15a5456ea446dfa3dc95852bc9d579aa26eb45c36831fefc4e66aabddd7b450}{FDB}}\ =\ 5,}
+\DoxyCodeLine{00058\ \ \ \mbox{\hyperlink{namespacetesseract__planning_adc15a5456ea446dfa3dc95852bc9d579ab88543707db70c2c6ea5b19ac7301020}{NUB}}\ =\ 6,}
+\DoxyCodeLine{00059\ \ \ \mbox{\hyperlink{namespacetesseract__planning_adc15a5456ea446dfa3dc95852bc9d579a5def066398a04b9d615c6a9d4cf63d3b}{FUB}}\ =\ 7}
+\DoxyCodeLine{00060\ \};}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00062\ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ std::vector<std::string>\ \mbox{\hyperlink{namespacetesseract__planning_ad2c39c4d68bea0d0071b0ab44b6a0fad}{RobotConfigString}}\ =\ \{\ \textcolor{stringliteral}{"{}NUT"{}},\ \textcolor{stringliteral}{"{}FUT"{}},\ \textcolor{stringliteral}{"{}NDT"{}},\ \textcolor{stringliteral}{"{}FDT"{}},\ \textcolor{stringliteral}{"{}NDB"{}},\ \textcolor{stringliteral}{"{}FDB"{}},\ \textcolor{stringliteral}{"{}NUB"{}},\ \textcolor{stringliteral}{"{}FUB"{}}\ \};}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00073\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ FloatType>}
+\DoxyCodeLine{00074\ \textcolor{keyword}{inline}\ \mbox{\hyperlink{namespacetesseract__planning_adc15a5456ea446dfa3dc95852bc9d579}{RobotConfig}}\ \mbox{\hyperlink{namespacetesseract__planning_afb2005ce4bffdfb711e9db3cd91768e9}{getRobotConfig}}(\textcolor{keyword}{const}\ tesseract\_kinematics::JointGroup\&\ \mbox{\hyperlink{ompl__planner__tests_8cpp_a553a400a0c81f57e4dd2d27aefef9b9c}{joint\_group}},}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::string\&\ base\_link,}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::string\&\ \mbox{\hyperlink{ompl__planner__tests_8cpp_a5f746d461721e8676a6f317d3884e327}{tcp\_frame}},}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ Eigen::Ref<\textcolor{keyword}{const}\ Eigen::Matrix<FloatType,\ Eigen::Dynamic,\ 1>>\&\ \mbox{\hyperlink{tesseract__task__composer__core__unit_8cpp_a38b581d82a66e19aa9d807496d4400cb}{joint\_values}},}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ Eigen::Ref<const\ Eigen::Vector2i>\&\ sign\_correction\ =\ Eigen::Vector2i::Ones())}
+\DoxyCodeLine{00079\ \{}
+\DoxyCodeLine{00080\ \ \ \textcolor{comment}{//\ Get\ state}}
+\DoxyCodeLine{00081\ \ \ tesseract\_common::TransformMap\ \mbox{\hyperlink{fix__state__collision__task__unit_8cpp_afeafa25c1ddf0622559ed3eaa523e063}{state}}\ =\ \mbox{\hyperlink{ompl__planner__tests_8cpp_a553a400a0c81f57e4dd2d27aefef9b9c}{joint\_group}}.calcFwdKin(\mbox{\hyperlink{tesseract__task__composer__core__unit_8cpp_a38b581d82a66e19aa9d807496d4400cb}{joint\_values}}.template\ cast<double>());}
+\DoxyCodeLine{00082\ }
+\DoxyCodeLine{00083\ \ \ \textcolor{comment}{//\ Get\ the\ pose\ at\ tool0}}
+\DoxyCodeLine{00084\ \ \ Eigen::Isometry3d\ pose\ =\ \mbox{\hyperlink{fix__state__collision__task__unit_8cpp_afeafa25c1ddf0622559ed3eaa523e063}{state}}.at(base\_link).inverse()\ *\ \mbox{\hyperlink{fix__state__collision__task__unit_8cpp_afeafa25c1ddf0622559ed3eaa523e063}{state}}.at(\mbox{\hyperlink{ompl__planner__tests_8cpp_a5f746d461721e8676a6f317d3884e327}{tcp\_frame}});}
+\DoxyCodeLine{00085\ }
+\DoxyCodeLine{00086\ \ \ \textcolor{comment}{//\ Get\ the\ base\ rotated\ by\ joint\ 1}}
+\DoxyCodeLine{00087\ \ \ Eigen::Isometry3d\ prime\_pose(}
+\DoxyCodeLine{00088\ \ \ \ \ \ \ Eigen::AngleAxisd(\textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{double}\textcolor{keyword}{>}(\mbox{\hyperlink{tesseract__task__composer__core__unit_8cpp_a38b581d82a66e19aa9d807496d4400cb}{joint\_values}}.tail(6)(0)),\ Eigen::Vector3d::UnitZ()));}
+\DoxyCodeLine{00089\ }
+\DoxyCodeLine{00090\ \ \ \textcolor{comment}{//\ Transform\ tool0\ pose\ into\ new\ frame}}
+\DoxyCodeLine{00091\ \ \ Eigen::Isometry3d\ pose\_prime\ =\ prime\_pose.inverse()\ *\ pose;}
+\DoxyCodeLine{00092\ }
+\DoxyCodeLine{00093\ \ \ \textcolor{comment}{//\ If\ pose\_prime.x\ is\ greater\ than\ and\ equal\ to\ zero\ then\ it\ is\ in\ the\ forward\ configuration,\ otherwise}}
+\DoxyCodeLine{00094\ \ \ \textcolor{comment}{//\ in\ the\ backward\ configuration.}}
+\DoxyCodeLine{00095\ }
+\DoxyCodeLine{00096\ \ \ std::array<std::string,\ 3>\ \mbox{\hyperlink{tesseract__task__composer__core__unit_8cpp_a01d92a800904faa16b8c1c1372c40fb3}{config}};}
+\DoxyCodeLine{00097\ }
+\DoxyCodeLine{00098\ \ \ \textcolor{comment}{//\ Wrist\ Flip\ or\ Not\ Flip}}
+\DoxyCodeLine{00099\ \ \ \textcolor{keywordflow}{if}\ ((sign\_correction[1]\ *\ \mbox{\hyperlink{tesseract__task__composer__core__unit_8cpp_a38b581d82a66e19aa9d807496d4400cb}{joint\_values}}(4))\ >=\ 0)}
+\DoxyCodeLine{00100\ \ \ \ \ \mbox{\hyperlink{tesseract__task__composer__core__unit_8cpp_a01d92a800904faa16b8c1c1372c40fb3}{config}}[0]\ =\ \textcolor{stringliteral}{"{}F"{}};}
+\DoxyCodeLine{00101\ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00102\ \ \ \ \ \mbox{\hyperlink{tesseract__task__composer__core__unit_8cpp_a01d92a800904faa16b8c1c1372c40fb3}{config}}[0]\ =\ \textcolor{stringliteral}{"{}N"{}};}
+\DoxyCodeLine{00103\ }
+\DoxyCodeLine{00104\ \ \ \textcolor{comment}{//\ Elbow\ Up\ or\ Down}}
+\DoxyCodeLine{00105\ \ \ \textcolor{keywordflow}{if}\ ((sign\_correction[0]\ *\ \mbox{\hyperlink{tesseract__task__composer__core__unit_8cpp_a38b581d82a66e19aa9d807496d4400cb}{joint\_values}}(2))\ <\ M\_PI\ /\ 2)}
+\DoxyCodeLine{00106\ \ \ \ \ \mbox{\hyperlink{tesseract__task__composer__core__unit_8cpp_a01d92a800904faa16b8c1c1372c40fb3}{config}}[1]\ =\ \textcolor{stringliteral}{"{}U"{}};}
+\DoxyCodeLine{00107\ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00108\ \ \ \ \ \mbox{\hyperlink{tesseract__task__composer__core__unit_8cpp_a01d92a800904faa16b8c1c1372c40fb3}{config}}[1]\ =\ \textcolor{stringliteral}{"{}D"{}};}
+\DoxyCodeLine{00109\ }
+\DoxyCodeLine{00110\ \ \ \textcolor{comment}{//\ Robot\ Front\ or\ Back}}
+\DoxyCodeLine{00111\ \ \ \textcolor{keywordflow}{if}\ (pose\_prime.translation().x()\ >=\ 0)}
+\DoxyCodeLine{00112\ \ \ \ \ \mbox{\hyperlink{tesseract__task__composer__core__unit_8cpp_a01d92a800904faa16b8c1c1372c40fb3}{config}}[2]\ =\ \textcolor{stringliteral}{"{}T"{}};}
+\DoxyCodeLine{00113\ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00114\ \ \ \ \ \mbox{\hyperlink{tesseract__task__composer__core__unit_8cpp_a01d92a800904faa16b8c1c1372c40fb3}{config}}[2]\ =\ \textcolor{stringliteral}{"{}B"{}};}
+\DoxyCodeLine{00115\ }
+\DoxyCodeLine{00116\ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{tesseract__task__composer__core__unit_8cpp_a01d92a800904faa16b8c1c1372c40fb3}{config}}\ ==\ std::array<std::string,\ 3>(\{\ \textcolor{stringliteral}{"{}F"{}},\ \textcolor{stringliteral}{"{}U"{}},\ \textcolor{stringliteral}{"{}T"{}}\ \}))}
+\DoxyCodeLine{00117\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{namespacetesseract__planning_adc15a5456ea446dfa3dc95852bc9d579a77600c70a81708b4f616283cf3231ddf}{RobotConfig::FUT}};}
+\DoxyCodeLine{00118\ }
+\DoxyCodeLine{00119\ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{tesseract__task__composer__core__unit_8cpp_a01d92a800904faa16b8c1c1372c40fb3}{config}}\ ==\ std::array<std::string,\ 3>(\{\ \textcolor{stringliteral}{"{}N"{}},\ \textcolor{stringliteral}{"{}U"{}},\ \textcolor{stringliteral}{"{}T"{}}\ \}))}
+\DoxyCodeLine{00120\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{namespacetesseract__planning_adc15a5456ea446dfa3dc95852bc9d579aa57b0a6baa71b2c846c70646369e11a0}{RobotConfig::NUT}};}
+\DoxyCodeLine{00121\ }
+\DoxyCodeLine{00122\ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{tesseract__task__composer__core__unit_8cpp_a01d92a800904faa16b8c1c1372c40fb3}{config}}\ ==\ std::array<std::string,\ 3>(\{\ \textcolor{stringliteral}{"{}F"{}},\ \textcolor{stringliteral}{"{}D"{}},\ \textcolor{stringliteral}{"{}T"{}}\ \}))}
+\DoxyCodeLine{00123\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{namespacetesseract__planning_adc15a5456ea446dfa3dc95852bc9d579a97d38c259b5e41097c285878bdc750ba}{RobotConfig::FDT}};}
+\DoxyCodeLine{00124\ }
+\DoxyCodeLine{00125\ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{tesseract__task__composer__core__unit_8cpp_a01d92a800904faa16b8c1c1372c40fb3}{config}}\ ==\ std::array<std::string,\ 3>(\{\ \textcolor{stringliteral}{"{}N"{}},\ \textcolor{stringliteral}{"{}D"{}},\ \textcolor{stringliteral}{"{}T"{}}\ \}))}
+\DoxyCodeLine{00126\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{namespacetesseract__planning_adc15a5456ea446dfa3dc95852bc9d579aed4c02276b8f3078120ac166c16cec42}{RobotConfig::NDT}};}
+\DoxyCodeLine{00127\ }
+\DoxyCodeLine{00128\ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{tesseract__task__composer__core__unit_8cpp_a01d92a800904faa16b8c1c1372c40fb3}{config}}\ ==\ std::array<std::string,\ 3>(\{\ \textcolor{stringliteral}{"{}F"{}},\ \textcolor{stringliteral}{"{}U"{}},\ \textcolor{stringliteral}{"{}B"{}}\ \}))}
+\DoxyCodeLine{00129\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{namespacetesseract__planning_adc15a5456ea446dfa3dc95852bc9d579a5def066398a04b9d615c6a9d4cf63d3b}{RobotConfig::FUB}};}
+\DoxyCodeLine{00130\ }
+\DoxyCodeLine{00131\ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{tesseract__task__composer__core__unit_8cpp_a01d92a800904faa16b8c1c1372c40fb3}{config}}\ ==\ std::array<std::string,\ 3>(\{\ \textcolor{stringliteral}{"{}N"{}},\ \textcolor{stringliteral}{"{}U"{}},\ \textcolor{stringliteral}{"{}B"{}}\ \}))}
+\DoxyCodeLine{00132\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{namespacetesseract__planning_adc15a5456ea446dfa3dc95852bc9d579ab88543707db70c2c6ea5b19ac7301020}{RobotConfig::NUB}};}
+\DoxyCodeLine{00133\ }
+\DoxyCodeLine{00134\ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{tesseract__task__composer__core__unit_8cpp_a01d92a800904faa16b8c1c1372c40fb3}{config}}\ ==\ std::array<std::string,\ 3>(\{\ \textcolor{stringliteral}{"{}F"{}},\ \textcolor{stringliteral}{"{}D"{}},\ \textcolor{stringliteral}{"{}B"{}}\ \}))}
+\DoxyCodeLine{00135\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{namespacetesseract__planning_adc15a5456ea446dfa3dc95852bc9d579aa26eb45c36831fefc4e66aabddd7b450}{RobotConfig::FDB}};}
+\DoxyCodeLine{00136\ }
+\DoxyCodeLine{00137\ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{namespacetesseract__planning_adc15a5456ea446dfa3dc95852bc9d579a57eaecb0d3cb5d6855b841b911f6778c}{RobotConfig::NDB}};}
+\DoxyCodeLine{00138\ \}}
+\DoxyCodeLine{00139\ }
+\DoxyCodeLine{00145\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ FloatType>}
+\DoxyCodeLine{00146\ \textcolor{keyword}{inline}\ Eigen::VectorXi\ \mbox{\hyperlink{namespacetesseract__planning_a8c543584d607b7345d6ad3e12178f48c}{getJointTurns}}(\textcolor{keyword}{const}\ Eigen::Ref<\textcolor{keyword}{const}\ Eigen::Matrix<FloatType,\ Eigen::Dynamic,\ 1>>\&\ \mbox{\hyperlink{tesseract__task__composer__core__unit_8cpp_a38b581d82a66e19aa9d807496d4400cb}{joint\_values}})}
+\DoxyCodeLine{00147\ \{}
+\DoxyCodeLine{00148\ \ \ Eigen::VectorXi\ joint\_turns;}
+\DoxyCodeLine{00149\ \ \ joint\_turns.resize(\mbox{\hyperlink{tesseract__task__composer__core__unit_8cpp_a38b581d82a66e19aa9d807496d4400cb}{joint\_values}}.rows());}
+\DoxyCodeLine{00150\ \ \ \textcolor{keywordflow}{for}\ (Eigen::Index\ i\ =\ 0;\ i\ <\ \mbox{\hyperlink{tesseract__task__composer__core__unit_8cpp_a38b581d82a66e19aa9d807496d4400cb}{joint\_values}}.rows();\ ++i)}
+\DoxyCodeLine{00151\ \ \ \ \ joint\_turns(i)\ =\ int(\mbox{\hyperlink{tesseract__task__composer__core__unit_8cpp_a38b581d82a66e19aa9d807496d4400cb}{joint\_values}}(i)\ /\ M\_PI);}
+\DoxyCodeLine{00152\ }
+\DoxyCodeLine{00153\ \ \ \textcolor{keywordflow}{return}\ joint\_turns;}
+\DoxyCodeLine{00154\ \}}
+\DoxyCodeLine{00155\ }
+\DoxyCodeLine{00156\ \}\ \ \textcolor{comment}{//\ namespace\ tesseract\_planning}}
+\DoxyCodeLine{00157\ }
+\DoxyCodeLine{00158\ \textcolor{preprocessor}{\#endif\ \ }\textcolor{comment}{//\ TESSERACT\_COMMAND\_LANGUAGE\_ROBOT\_CONFIG\_H}}
+
+\end{DoxyCode}

@@ -1,0 +1,76 @@
+\doxysection{online\+\_\+planning\+\_\+example.\+h}
+\hypertarget{online__planning__example_8h_source}{}\label{online__planning__example_8h_source}\index{tesseract\_examples/include/tesseract\_examples/online\_planning\_example.h@{tesseract\_examples/include/tesseract\_examples/online\_planning\_example.h}}
+\mbox{\hyperlink{online__planning__example_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00032\ \textcolor{preprocessor}{\#ifndef\ TTESSERACT\_EXAMPLES\_ONLINE\_PLANNING\_EXAMPLE\_H}}
+\DoxyCodeLine{00033\ \textcolor{preprocessor}{\#define\ TTESSERACT\_EXAMPLES\_ONLINE\_PLANNING\_EXAMPLE\_H}}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ \textcolor{preprocessor}{\#include\ <tesseract\_common/macros.h>}}
+\DoxyCodeLine{00036\ TESSERACT\_COMMON\_IGNORE\_WARNINGS\_PUSH}
+\DoxyCodeLine{00037\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00038\ \textcolor{preprocessor}{\#include\ <Eigen/Geometry>}}
+\DoxyCodeLine{00039\ \textcolor{preprocessor}{\#include\ <boost/uuid/uuid.hpp>}}
+\DoxyCodeLine{00040\ \textcolor{preprocessor}{\#include\ <trajopt\_sqp/fwd.h>}}
+\DoxyCodeLine{00041\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{tesseract__motion__planners_2trajopt__ifopt_2include_2tesseract__motion__planners_2trajopt__ifopt_2fwd_8h}{trajopt\_ifopt/fwd.h}}>}}
+\DoxyCodeLine{00042\ \textcolor{preprocessor}{\#include\ <tesseract\_common/eigen\_types.h>}}
+\DoxyCodeLine{00043\ \textcolor{preprocessor}{\#include\ <tesseract\_kinematics/core/fwd.h>}}
+\DoxyCodeLine{00044\ \mbox{\hyperlink{namespaceTESSERACT__COMMON__IGNORE__WARNINGS__POP}{TESSERACT\_COMMON\_IGNORE\_WARNINGS\_POP}}}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{example_8h}{tesseract\_examples/example.h}}>}}
+\DoxyCodeLine{00047\ \textcolor{preprocessor}{\#include\ <tesseract\_visualization/trajectory\_player.h>}}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00049\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacetesseract__examples}{tesseract\_examples}}}
+\DoxyCodeLine{00050\ \{}
+\DoxyCodeLine{00055\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classtesseract__examples_1_1OnlinePlanningExample}{OnlinePlanningExample}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classtesseract__examples_1_1Example}{Example}}}
+\DoxyCodeLine{00056\ \{}
+\DoxyCodeLine{00057\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00058\ \ \ \mbox{\hyperlink{classtesseract__examples_1_1OnlinePlanningExample}{OnlinePlanningExample}}(std::shared\_ptr<tesseract\_environment::Environment>\ \mbox{\hyperlink{basic__cartesian__example__unit_8cpp_a96ce750ee22ecbf4d17cc6cf146d9514}{env}},}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::shared\_ptr<tesseract\_visualization::Visualization>\ plotter\ =\ \textcolor{keyword}{nullptr},}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{simple__planner__lvs__interpolation_8cpp_ab4ae7205573977222eadd0795db193e2}{steps}}\ =\ 12,}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ box\_size\ =\ 0.01,}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ update\_start\_state\ =\ \textcolor{keyword}{false},}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ use\_continuous\ =\ \textcolor{keyword}{false});}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00065\ \ \ \mbox{\hyperlink{classtesseract__examples_1_1OnlinePlanningExample_ac9fc0bbc779f4f4c212dbb6e4af8700e}{\string~OnlinePlanningExample}}()\ \textcolor{keyword}{override}\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00066\ \ \ \mbox{\hyperlink{classtesseract__examples_1_1OnlinePlanningExample_a0ee83739fbecbd480e55324f4c5dab4c}{OnlinePlanningExample}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classtesseract__examples_1_1OnlinePlanningExample}{OnlinePlanningExample}}\&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00067\ \ \ \mbox{\hyperlink{classtesseract__examples_1_1OnlinePlanningExample}{OnlinePlanningExample}}\&\ \mbox{\hyperlink{classtesseract__examples_1_1OnlinePlanningExample_a0cf519c5cf210186fc91d05f24f2c131}{operator=}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classtesseract__examples_1_1OnlinePlanningExample}{OnlinePlanningExample}}\&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00068\ \ \ \mbox{\hyperlink{classtesseract__examples_1_1OnlinePlanningExample_a97793511e648cb87a1bddcdaaa5add2e}{OnlinePlanningExample}}(\mbox{\hyperlink{classtesseract__examples_1_1OnlinePlanningExample}{OnlinePlanningExample}}\&\&)\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00069\ \ \ \mbox{\hyperlink{classtesseract__examples_1_1OnlinePlanningExample}{OnlinePlanningExample}}\&\ \mbox{\hyperlink{classtesseract__examples_1_1OnlinePlanningExample_a48efed635a3a8c58731e0d4ddb386bcc}{operator=}}(\mbox{\hyperlink{classtesseract__examples_1_1OnlinePlanningExample}{OnlinePlanningExample}}\&\&)\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00070\ }
+\DoxyCodeLine{00075\ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classtesseract__examples_1_1OnlinePlanningExample_add98f9737f038fed650370120808574b}{run}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00082\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classtesseract__examples_1_1OnlinePlanningExample_a08fe19239ecd80ad0a22a8d052c93249}{updateState}}(\textcolor{keyword}{const}\ std::vector<std::string>\&\ \mbox{\hyperlink{command__language__utils__unit_8cpp_a5f85173ecc1ddcb342ebc27f28437f5c}{joint\_names}},\ \textcolor{keyword}{const}\ std::vector<double>\&\ \mbox{\hyperlink{tesseract__task__composer__core__unit_8cpp_a38b581d82a66e19aa9d807496d4400cb}{joint\_values}});}
+\DoxyCodeLine{00083\ }
+\DoxyCodeLine{00088\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classtesseract__examples_1_1OnlinePlanningExample_ad707dc38570e2aff16273184f23c4172}{toggleRealtime}}(\textcolor{keywordtype}{bool}\ enable);}
+\DoxyCodeLine{00089\ }
+\DoxyCodeLine{00094\ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classtesseract__examples_1_1OnlinePlanningExample_a00d5cc68407523acf0b7db16f8809f03}{setupProblem}}(\textcolor{keyword}{const}\ std::vector<Eigen::VectorXd>\&\ initial\_trajectory\ =\ std::vector<Eigen::VectorXd>());}
+\DoxyCodeLine{00095\ }
+\DoxyCodeLine{00100\ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classtesseract__examples_1_1OnlinePlanningExample_a354985cdbaa511e24b5c010271477fad}{onlinePlan}}();}
+\DoxyCodeLine{00101\ }
+\DoxyCodeLine{00102\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00103\ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classtesseract__examples_1_1OnlinePlanningExample_a5e9a1afd3f5667151cc6181cd8f7c830}{steps\_}};}
+\DoxyCodeLine{00104\ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classtesseract__examples_1_1OnlinePlanningExample_a4f21249555cbbe83fc31c845e4b6b2ff}{box\_size\_}};}
+\DoxyCodeLine{00105\ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classtesseract__examples_1_1OnlinePlanningExample_af8f6a2dd6ebf8b739b66aabf02cbf796}{update\_start\_state\_}}\{\ \textcolor{keyword}{false}\ \};}
+\DoxyCodeLine{00106\ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classtesseract__examples_1_1OnlinePlanningExample_a5e740142b5f8a90c9c903e94ea4c4c29}{use\_continuous\_}}\{\ \textcolor{keyword}{false}\ \};}
+\DoxyCodeLine{00107\ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classtesseract__examples_1_1OnlinePlanningExample_a197174a32cd4d3452a60511006f50710}{realtime\_running\_}}\{\ \textcolor{keyword}{false}\ \};}
+\DoxyCodeLine{00108\ }
+\DoxyCodeLine{00109\ \ \ std::shared\_ptr<const\ tesseract\_kinematics::KinematicGroup>\ \mbox{\hyperlink{classtesseract__examples_1_1OnlinePlanningExample_a42fe538f1fa0f16a8cf22e964c32f05c}{manip\_}};}
+\DoxyCodeLine{00110\ \ \ tesseract\_visualization::TrajectoryPlayer\ \mbox{\hyperlink{classtesseract__examples_1_1OnlinePlanningExample_a853e967e825bb21d800a67475764ed9d}{player\_}};}
+\DoxyCodeLine{00111\ \ \ boost::uuids::uuid\ \mbox{\hyperlink{classtesseract__examples_1_1OnlinePlanningExample_a00f5ce7a58c8d7fc465f7c9c619d9538}{current\_trajectory\_uuid\_}}\{\};}
+\DoxyCodeLine{00112\ \ \ tesseract\_common::TrajArray\ \mbox{\hyperlink{classtesseract__examples_1_1OnlinePlanningExample_a97f417e07f424bee384c16151fa7c761}{current\_trajectory\_}};}
+\DoxyCodeLine{00113\ \ \ Eigen::Isometry3d\ \mbox{\hyperlink{classtesseract__examples_1_1OnlinePlanningExample_a50c7d970b399a5f512411849a5e1a911}{target\_pose\_delta\_}};}
+\DoxyCodeLine{00114\ \ \ Eigen::Isometry3d\ \mbox{\hyperlink{classtesseract__examples_1_1OnlinePlanningExample_aeb978f8437a939fa245e5ffff3b965e5}{target\_pose\_base\_frame\_}};}
+\DoxyCodeLine{00115\ }
+\DoxyCodeLine{00116\ \ \ \textcolor{comment}{//\ We\ need\ to\ keep\ this\ around\ so\ we\ can\ update\ it}}
+\DoxyCodeLine{00117\ \ \ std::shared\_ptr<trajopt\_ifopt::CartPosConstraint>\ \mbox{\hyperlink{classtesseract__examples_1_1OnlinePlanningExample_ada2ed9b4b062ffe16a240e66a5b322a7}{target\_pose\_constraint\_}};}
+\DoxyCodeLine{00118\ \ \ std::vector<std::string>\ \mbox{\hyperlink{classtesseract__examples_1_1OnlinePlanningExample_af60b9796de0ff46482cb64778ba7becb}{joint\_names\_}};}
+\DoxyCodeLine{00119\ \ \ std::shared\_ptr<trajopt\_sqp::QPProblem>\ \mbox{\hyperlink{classtesseract__examples_1_1OnlinePlanningExample_a706cbddfa41593099ffe47b1cfe90d05}{nlp\_}};}
+\DoxyCodeLine{00120\ }
+\DoxyCodeLine{00121\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classtesseract__examples_1_1OnlinePlanningExample_ae078bfd75354b2ce7b6b2487250694fd}{updateAndPlotTrajectory}}(\textcolor{keyword}{const}\ Eigen::VectorXd\&\ osqp\_vals);}
+\DoxyCodeLine{00122\ \};}
+\DoxyCodeLine{00123\ \}\ \ \textcolor{comment}{//\ namespace\ tesseract\_examples}}
+\DoxyCodeLine{00124\ }
+\DoxyCodeLine{00125\ \textcolor{preprocessor}{\#endif\ \ }\textcolor{comment}{//\ TTESSERACT\_EXAMPLES\_ONLINE\_PLANNING\_EXAMPLE\_H}}
+
+\end{DoxyCode}

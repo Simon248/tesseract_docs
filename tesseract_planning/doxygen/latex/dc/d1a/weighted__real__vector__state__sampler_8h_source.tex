@@ -1,0 +1,38 @@
+\doxysection{weighted\+\_\+real\+\_\+vector\+\_\+state\+\_\+sampler.\+h}
+\hypertarget{weighted__real__vector__state__sampler_8h_source}{}\label{weighted__real__vector__state__sampler_8h_source}\index{tesseract\_motion\_planners/ompl/include/tesseract\_motion\_planners/ompl/weighted\_real\_vector\_state\_sampler.h@{tesseract\_motion\_planners/ompl/include/tesseract\_motion\_planners/ompl/weighted\_real\_vector\_state\_sampler.h}}
+\mbox{\hyperlink{weighted__real__vector__state__sampler_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#ifndef\ TESSERACT\_MOTION\_PLANNERS\_WEIGHTED\_REAL\_VECTOR\_STATE\_SAMPLER\_H}}
+\DoxyCodeLine{00030\ \textcolor{preprocessor}{\#define\ TESSERACT\_MOTION\_PLANNERS\_WEIGHTED\_REAL\_VECTOR\_STATE\_SAMPLER\_H}}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \textcolor{preprocessor}{\#include\ <tesseract\_common/macros.h>}}
+\DoxyCodeLine{00033\ TESSERACT\_COMMON\_IGNORE\_WARNINGS\_PUSH}
+\DoxyCodeLine{00034\ \textcolor{preprocessor}{\#include\ <ompl/base/StateSampler.h>}}
+\DoxyCodeLine{00035\ \textcolor{preprocessor}{\#include\ <Eigen/Core>}}
+\DoxyCodeLine{00036\ \mbox{\hyperlink{namespaceTESSERACT__COMMON__IGNORE__WARNINGS__POP}{TESSERACT\_COMMON\_IGNORE\_WARNINGS\_POP}}}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacetesseract__planning}{tesseract\_planning}}}
+\DoxyCodeLine{00039\ \{}
+\DoxyCodeLine{00048\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classtesseract__planning_1_1WeightedRealVectorStateSampler}{WeightedRealVectorStateSampler}}\ :\ \textcolor{keyword}{public}\ ompl::base::StateSampler}
+\DoxyCodeLine{00049\ \{}
+\DoxyCodeLine{00050\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00051\ \ \ \mbox{\hyperlink{classtesseract__planning_1_1WeightedRealVectorStateSampler}{WeightedRealVectorStateSampler}}(\textcolor{keyword}{const}\ ompl::base::StateSpace*\ space,}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ Eigen::Ref<const\ Eigen::VectorXd>\&\ weights,}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ Eigen::Ref<const\ Eigen::MatrixX2d>\&\ bounds);}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00055\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classtesseract__planning_1_1WeightedRealVectorStateSampler_ae684f3f4cd7f095d3785199e0cfdc581}{sampleUniform}}(ompl::base::State*\ \mbox{\hyperlink{fix__state__collision__task__unit_8cpp_afeafa25c1ddf0622559ed3eaa523e063}{state}})\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00061\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classtesseract__planning_1_1WeightedRealVectorStateSampler_a74178942b848c494c3b9c74ea3693caf}{sampleUniformNear}}(ompl::base::State*\ \mbox{\hyperlink{fix__state__collision__task__unit_8cpp_afeafa25c1ddf0622559ed3eaa523e063}{state}},\ \textcolor{keyword}{const}\ ompl::base::State*\ near,\ \textcolor{keywordtype}{double}\ distance)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00067\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classtesseract__planning_1_1WeightedRealVectorStateSampler_a3abf0597a4cdc80723b22d144ed76ca9}{sampleGaussian}}(ompl::base::State*\ \mbox{\hyperlink{fix__state__collision__task__unit_8cpp_afeafa25c1ddf0622559ed3eaa523e063}{state}},\ \textcolor{keyword}{const}\ ompl::base::State*\ mean,\ \textcolor{keywordtype}{double}\ stdDev)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00069\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00070\ \ \ Eigen::VectorXd\ \mbox{\hyperlink{classtesseract__planning_1_1WeightedRealVectorStateSampler_a0c7758c2d7de4154b4b02097856a7730}{weights\_}};}
+\DoxyCodeLine{00071\ \ \ Eigen::MatrixX2d\ \mbox{\hyperlink{classtesseract__planning_1_1WeightedRealVectorStateSampler_a4af14719e6d4c903323d2278971ffa60}{bounds\_}};}
+\DoxyCodeLine{00072\ \};}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00074\ \}\ \ \textcolor{comment}{//\ namespace\ tesseract\_planning}}
+\DoxyCodeLine{00075\ \textcolor{preprocessor}{\#endif\ \ }\textcolor{comment}{//\ TESSERACT\_MOTION\_PLANNERS\_WEIGHTED\_REAL\_VECTOR\_STATE\_SAMPLER\_H}}
+
+\end{DoxyCode}

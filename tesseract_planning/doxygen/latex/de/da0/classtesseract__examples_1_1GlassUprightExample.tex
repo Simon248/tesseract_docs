@@ -1,0 +1,154 @@
+\doxysection{tesseract\+\_\+examples\+::Glass\+Upright\+Example Class Reference}
+\hypertarget{classtesseract__examples_1_1GlassUprightExample}{}\label{classtesseract__examples_1_1GlassUprightExample}\index{tesseract\_examples::GlassUprightExample@{tesseract\_examples::GlassUprightExample}}
+
+
+An example of a robot with fixed orientation but free to move in cartesian space leveraging tesseract and trajopt to generate a motion trajectory.  
+
+
+
+
+{\ttfamily \#include $<$glass\+\_\+upright\+\_\+example.\+h$>$}
+
+
+
+Inheritance diagram for tesseract\+\_\+examples\+::Glass\+Upright\+Example\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=194pt]{d8/d61/classtesseract__examples_1_1GlassUprightExample__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for tesseract\+\_\+examples\+::Glass\+Upright\+Example\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d1/dc6/classtesseract__examples_1_1GlassUprightExample__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classtesseract__examples_1_1GlassUprightExample_a240d1ad6c5bf405b21a101ff8a818cd1}{Glass\+Upright\+Example}} (std\+::shared\+\_\+ptr$<$ tesseract\+\_\+environment\+::\+Environment $>$ \mbox{\hyperlink{basic__cartesian__example__unit_8cpp_a96ce750ee22ecbf4d17cc6cf146d9514}{env}}, std\+::shared\+\_\+ptr$<$ tesseract\+\_\+visualization\+::\+Visualization $>$ plotter=nullptr, bool ifopt=false, bool debug=false)
+\item 
+\mbox{\hyperlink{classtesseract__examples_1_1GlassUprightExample_a0ac465f68da5a20b7fc583739d45f6b7}{\texorpdfstring{$\sim$}{\string~}\+Glass\+Upright\+Example}} () override=default
+\item 
+\mbox{\hyperlink{classtesseract__examples_1_1GlassUprightExample_a2bbcb0e7d9b6559bd0da92ebc7d6f958}{Glass\+Upright\+Example}} (const \mbox{\hyperlink{classtesseract__examples_1_1GlassUprightExample}{Glass\+Upright\+Example}} \&)=default
+\item 
+\mbox{\hyperlink{classtesseract__examples_1_1GlassUprightExample}{Glass\+Upright\+Example}} \& \mbox{\hyperlink{classtesseract__examples_1_1GlassUprightExample_ae8e4091f61cec467ffe74392353e1dfa}{operator=}} (const \mbox{\hyperlink{classtesseract__examples_1_1GlassUprightExample}{Glass\+Upright\+Example}} \&)=default
+\item 
+\mbox{\hyperlink{classtesseract__examples_1_1GlassUprightExample_a7a27d89f7a2b5024848c7335b88d89c6}{Glass\+Upright\+Example}} (\mbox{\hyperlink{classtesseract__examples_1_1GlassUprightExample}{Glass\+Upright\+Example}} \&\&)=default
+\item 
+\mbox{\hyperlink{classtesseract__examples_1_1GlassUprightExample}{Glass\+Upright\+Example}} \& \mbox{\hyperlink{classtesseract__examples_1_1GlassUprightExample_a9f8aa4db67fd8301443b59d19a76d1b4}{operator=}} (\mbox{\hyperlink{classtesseract__examples_1_1GlassUprightExample}{Glass\+Upright\+Example}} \&\&)=default
+\item 
+bool \mbox{\hyperlink{classtesseract__examples_1_1GlassUprightExample_a830c0efed149dedd1d03cb4a47ce2f3f}{run}} () override final
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classtesseract__examples_1_1Example}{tesseract\+\_\+examples\+::\+Example}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classtesseract__examples_1_1Example_ac060c2c29b156e376fa3cdc721aa1a07}{Example}} (std\+::shared\+\_\+ptr$<$ tesseract\+\_\+environment\+::\+Environment $>$ \mbox{\hyperlink{basic__cartesian__example__unit_8cpp_a96ce750ee22ecbf4d17cc6cf146d9514}{env}}, std\+::shared\+\_\+ptr$<$ tesseract\+\_\+visualization\+::\+Visualization $>$ plotter=nullptr)
+\item 
+virtual \mbox{\hyperlink{classtesseract__examples_1_1Example_a049e7067d00b11ca53511d93a7d09011}{\texorpdfstring{$\sim$}{\string~}\+Example}} ()=default
+\item 
+\mbox{\hyperlink{classtesseract__examples_1_1Example_abe367e8320c34566fe87ddf0c9269885}{Example}} (const \mbox{\hyperlink{classtesseract__examples_1_1Example}{Example}} \&)=default
+\item 
+\mbox{\hyperlink{classtesseract__examples_1_1Example}{Example}} \& \mbox{\hyperlink{classtesseract__examples_1_1Example_a79513d11e83ca16e2cc5bfbd52046c62}{operator=}} (const \mbox{\hyperlink{classtesseract__examples_1_1Example}{Example}} \&)=default
+\item 
+\mbox{\hyperlink{classtesseract__examples_1_1Example_a0dd5d675b14c7647dc4eb97e39ec3c34}{Example}} (\mbox{\hyperlink{classtesseract__examples_1_1Example}{Example}} \&\&)=default
+\item 
+\mbox{\hyperlink{classtesseract__examples_1_1Example}{Example}} \& \mbox{\hyperlink{classtesseract__examples_1_1Example_a72f48bae74579c269393b59b786f3cac}{operator=}} (\mbox{\hyperlink{classtesseract__examples_1_1Example}{Example}} \&\&)=default
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{classtesseract__examples_1_1GlassUprightExample_a397d632adab45d5179a191568903f298}{ifopt\+\_\+}}
+\item 
+bool \mbox{\hyperlink{classtesseract__examples_1_1GlassUprightExample_aca959709be6cde87003598d6e6da53ec}{debug\+\_\+}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{classtesseract__examples_1_1Example}{tesseract\+\_\+examples\+::\+Example}}}
+\begin{DoxyCompactItemize}
+\item 
+std\+::shared\+\_\+ptr$<$ tesseract\+\_\+environment\+::\+Environment $>$ \mbox{\hyperlink{classtesseract__examples_1_1Example_a3adfc11c11516d57f44f226efd644301}{env\+\_\+}}
+\begin{DoxyCompactList}\small\item\em Tesseract Manager Class (Required) \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ tesseract\+\_\+visualization\+::\+Visualization $>$ \mbox{\hyperlink{classtesseract__examples_1_1Example_a082cb621c770c0b6687d9a76f6847f6a}{plotter\+\_\+}}
+\begin{DoxyCompactList}\small\item\em Tesseract Visualization Class (Optional) \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+An example of a robot with fixed orientation but free to move in cartesian space leveraging tesseract and trajopt to generate a motion trajectory. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classtesseract__examples_1_1GlassUprightExample_a240d1ad6c5bf405b21a101ff8a818cd1}\label{classtesseract__examples_1_1GlassUprightExample_a240d1ad6c5bf405b21a101ff8a818cd1} 
+\index{tesseract\_examples::GlassUprightExample@{tesseract\_examples::GlassUprightExample}!GlassUprightExample@{GlassUprightExample}}
+\index{GlassUprightExample@{GlassUprightExample}!tesseract\_examples::GlassUprightExample@{tesseract\_examples::GlassUprightExample}}
+\doxysubsubsection{\texorpdfstring{GlassUprightExample()}{GlassUprightExample()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily tesseract\+\_\+examples\+::\+Glass\+Upright\+Example\+::\+Glass\+Upright\+Example (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ tesseract\+\_\+environment\+::\+Environment $>$}]{env,  }\item[{std\+::shared\+\_\+ptr$<$ tesseract\+\_\+visualization\+::\+Visualization $>$}]{plotter = {\ttfamily nullptr},  }\item[{bool}]{ifopt = {\ttfamily false},  }\item[{bool}]{debug = {\ttfamily false} }\end{DoxyParamCaption})}
+
+\Hypertarget{classtesseract__examples_1_1GlassUprightExample_a0ac465f68da5a20b7fc583739d45f6b7}\label{classtesseract__examples_1_1GlassUprightExample_a0ac465f68da5a20b7fc583739d45f6b7} 
+\index{tesseract\_examples::GlassUprightExample@{tesseract\_examples::GlassUprightExample}!````~GlassUprightExample@{\texorpdfstring{$\sim$}{\string~}GlassUprightExample}}
+\index{````~GlassUprightExample@{\texorpdfstring{$\sim$}{\string~}GlassUprightExample}!tesseract\_examples::GlassUprightExample@{tesseract\_examples::GlassUprightExample}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}GlassUprightExample()}{\string~GlassUprightExample()}}
+{\footnotesize\ttfamily tesseract\+\_\+examples\+::\+Glass\+Upright\+Example\+::\texorpdfstring{$\sim$}{\string~}\+Glass\+Upright\+Example (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [default]}}
+
+\Hypertarget{classtesseract__examples_1_1GlassUprightExample_a2bbcb0e7d9b6559bd0da92ebc7d6f958}\label{classtesseract__examples_1_1GlassUprightExample_a2bbcb0e7d9b6559bd0da92ebc7d6f958} 
+\index{tesseract\_examples::GlassUprightExample@{tesseract\_examples::GlassUprightExample}!GlassUprightExample@{GlassUprightExample}}
+\index{GlassUprightExample@{GlassUprightExample}!tesseract\_examples::GlassUprightExample@{tesseract\_examples::GlassUprightExample}}
+\doxysubsubsection{\texorpdfstring{GlassUprightExample()}{GlassUprightExample()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily tesseract\+\_\+examples\+::\+Glass\+Upright\+Example\+::\+Glass\+Upright\+Example (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classtesseract__examples_1_1GlassUprightExample}{Glass\+Upright\+Example}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\Hypertarget{classtesseract__examples_1_1GlassUprightExample_a7a27d89f7a2b5024848c7335b88d89c6}\label{classtesseract__examples_1_1GlassUprightExample_a7a27d89f7a2b5024848c7335b88d89c6} 
+\index{tesseract\_examples::GlassUprightExample@{tesseract\_examples::GlassUprightExample}!GlassUprightExample@{GlassUprightExample}}
+\index{GlassUprightExample@{GlassUprightExample}!tesseract\_examples::GlassUprightExample@{tesseract\_examples::GlassUprightExample}}
+\doxysubsubsection{\texorpdfstring{GlassUprightExample()}{GlassUprightExample()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily tesseract\+\_\+examples\+::\+Glass\+Upright\+Example\+::\+Glass\+Upright\+Example (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classtesseract__examples_1_1GlassUprightExample}{Glass\+Upright\+Example}} \&\&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classtesseract__examples_1_1GlassUprightExample_ae8e4091f61cec467ffe74392353e1dfa}\label{classtesseract__examples_1_1GlassUprightExample_ae8e4091f61cec467ffe74392353e1dfa} 
+\index{tesseract\_examples::GlassUprightExample@{tesseract\_examples::GlassUprightExample}!operator=@{operator=}}
+\index{operator=@{operator=}!tesseract\_examples::GlassUprightExample@{tesseract\_examples::GlassUprightExample}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classtesseract__examples_1_1GlassUprightExample}{Glass\+Upright\+Example}} \& tesseract\+\_\+examples\+::\+Glass\+Upright\+Example\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classtesseract__examples_1_1GlassUprightExample}{Glass\+Upright\+Example}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\Hypertarget{classtesseract__examples_1_1GlassUprightExample_a9f8aa4db67fd8301443b59d19a76d1b4}\label{classtesseract__examples_1_1GlassUprightExample_a9f8aa4db67fd8301443b59d19a76d1b4} 
+\index{tesseract\_examples::GlassUprightExample@{tesseract\_examples::GlassUprightExample}!operator=@{operator=}}
+\index{operator=@{operator=}!tesseract\_examples::GlassUprightExample@{tesseract\_examples::GlassUprightExample}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classtesseract__examples_1_1GlassUprightExample}{Glass\+Upright\+Example}} \& tesseract\+\_\+examples\+::\+Glass\+Upright\+Example\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classtesseract__examples_1_1GlassUprightExample}{Glass\+Upright\+Example}} \&\&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\Hypertarget{classtesseract__examples_1_1GlassUprightExample_a830c0efed149dedd1d03cb4a47ce2f3f}\label{classtesseract__examples_1_1GlassUprightExample_a830c0efed149dedd1d03cb4a47ce2f3f} 
+\index{tesseract\_examples::GlassUprightExample@{tesseract\_examples::GlassUprightExample}!run@{run}}
+\index{run@{run}!tesseract\_examples::GlassUprightExample@{tesseract\_examples::GlassUprightExample}}
+\doxysubsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily bool tesseract\+\_\+examples\+::\+Glass\+Upright\+Example\+::run (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [final]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classtesseract__examples_1_1Example_a740e02a0b018f07266b9101715430b2f}{tesseract\+\_\+examples\+::\+Example}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classtesseract__examples_1_1GlassUprightExample_aca959709be6cde87003598d6e6da53ec}\label{classtesseract__examples_1_1GlassUprightExample_aca959709be6cde87003598d6e6da53ec} 
+\index{tesseract\_examples::GlassUprightExample@{tesseract\_examples::GlassUprightExample}!debug\_@{debug\_}}
+\index{debug\_@{debug\_}!tesseract\_examples::GlassUprightExample@{tesseract\_examples::GlassUprightExample}}
+\doxysubsubsection{\texorpdfstring{debug\_}{debug\_}}
+{\footnotesize\ttfamily bool tesseract\+\_\+examples\+::\+Glass\+Upright\+Example\+::debug\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classtesseract__examples_1_1GlassUprightExample_a397d632adab45d5179a191568903f298}\label{classtesseract__examples_1_1GlassUprightExample_a397d632adab45d5179a191568903f298} 
+\index{tesseract\_examples::GlassUprightExample@{tesseract\_examples::GlassUprightExample}!ifopt\_@{ifopt\_}}
+\index{ifopt\_@{ifopt\_}!tesseract\_examples::GlassUprightExample@{tesseract\_examples::GlassUprightExample}}
+\doxysubsubsection{\texorpdfstring{ifopt\_}{ifopt\_}}
+{\footnotesize\ttfamily bool tesseract\+\_\+examples\+::\+Glass\+Upright\+Example\+::ifopt\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+tesseract\+\_\+examples/include/tesseract\+\_\+examples/\mbox{\hyperlink{glass__upright__example_8h}{glass\+\_\+upright\+\_\+example.\+h}}\item 
+tesseract\+\_\+examples/src/\mbox{\hyperlink{glass__upright__example_8cpp}{glass\+\_\+upright\+\_\+example.\+cpp}}\end{DoxyCompactItemize}

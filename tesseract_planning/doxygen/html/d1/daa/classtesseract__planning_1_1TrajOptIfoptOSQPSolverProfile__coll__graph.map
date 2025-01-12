@@ -1,0 +1,9 @@
+<map id="tesseract_planning::TrajOptIfoptOSQPSolverProfile" name="tesseract_planning::TrajOptIfoptOSQPSolverProfile">
+<area shape="rect" id="Node000001" title="The contains the default solver parameters available for setting up TrajOpt." alt="" coords="482,53,690,94"/>
+<area shape="rect" id="Node000002" href="$d9/df4/classtesseract__planning_1_1TrajOptIfoptSolverProfile.html" title=" " alt="" coords="190,5,359,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="375,38,482,55,482,60,374,44"/>
+<area shape="rect" id="Node000003" href="$db/d41/classtesseract__planning_1_1Profile.html" title="The Profile class." alt="" coords="5,5,136,46"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="151,23,189,23,189,28,151,28"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="185,71,364,111"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="380,82,482,77,482,82,380,88"/>
+</map>

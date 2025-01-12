@@ -1,0 +1,5 @@
+<map id="tesseract_planning::SimplePlannerPlanProfile" name="tesseract_planning::SimplePlannerPlanProfile">
+<area shape="rect" id="Node000001" title="Plan Profile for the simple planner. It defines some functions that handle each of the waypoint cases..." alt="" coords="5,94,179,135"/>
+<area shape="rect" id="Node000002" href="$db/d41/classtesseract__planning_1_1Profile.html" title="The Profile class." alt="" coords="27,5,157,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="95,62,95,94,89,94,89,62"/>
+</map>

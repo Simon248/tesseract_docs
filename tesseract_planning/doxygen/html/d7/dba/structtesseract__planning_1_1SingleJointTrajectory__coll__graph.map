@@ -1,0 +1,5 @@
+<map id="tesseract_planning::SingleJointTrajectory" name="tesseract_planning::SingleJointTrajectory">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,229,154,270"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="9,5,150,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="82,46,82,228,77,228,77,46"/>
+</map>

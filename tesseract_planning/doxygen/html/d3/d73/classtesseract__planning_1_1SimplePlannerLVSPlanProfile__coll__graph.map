@@ -1,0 +1,7 @@
+<map id="tesseract_planning::SimplePlannerLVSPlanProfile" name="tesseract_planning::SimplePlannerLVSPlanProfile">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,183,205,223"/>
+<area shape="rect" id="Node000002" href="$d3/d4b/classtesseract__planning_1_1SimplePlannerPlanProfile.html" title="Plan Profile for the simple planner. It defines some functions that handle each of the waypoint cases..." alt="" coords="18,94,192,135"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="108,150,108,182,102,182,102,150"/>
+<area shape="rect" id="Node000003" href="$db/d41/classtesseract__planning_1_1Profile.html" title="The Profile class." alt="" coords="40,5,170,46"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="108,62,108,94,102,94,102,62"/>
+</map>

@@ -1,0 +1,63 @@
+<map id="tesseract_planning::TaskComposerTask" name="tesseract_planning::TaskComposerTask">
+<area shape="rect" id="Node000001" title=" " alt="" coords="200,895,344,936"/>
+<area shape="rect" id="Node000003" href="$d6/d85/classAddTaskComposerNode.html" title=" " alt="" coords="429,5,592,31"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="270,879,272,703,277,582,286,451,300,322,322,204,335,152,351,107,369,69,390,40,407,27,427,19,429,24,410,32,394,44,374,72,356,109,340,153,327,205,306,323,291,452,282,582,277,703,275,879"/>
+<area shape="rect" id="Node000004" href="$d1/de8/classMultiplyTaskComposerNode.html" title=" " alt="" coords="418,55,602,80"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="270,880,274,713,280,598,289,476,304,355,325,244,353,153,370,118,390,91,416,73,419,78,394,95,375,121,358,155,330,245,309,356,295,477,285,599,279,713,276,880"/>
+<area shape="rect" id="Node000005" href="$d0/dc5/classtesseract__planning_1_1ContinuousContactCheckTask.html" title=" " alt="" coords="409,105,612,145"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="271,880,277,725,295,509,310,398,331,297,357,214,372,181,390,156,407,142,410,146,394,160,377,184,362,216,336,299,316,399,301,509,283,725,277,880"/>
+<area shape="rect" id="Node000006" href="$d0/ddd/classtesseract__planning_1_1DiscreteContactCheckTask.html" title=" " alt="" coords="417,170,603,211"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="272,879,280,737,299,540,315,440,334,349,359,274,374,244,390,222,415,203,418,207,394,225,378,247,364,276,340,350,320,441,305,541,285,737,277,880"/>
+<area shape="rect" id="Node000007" href="$da/da8/classtesseract__planning_1_1DoneTask.html" title=" " alt="" coords="445,235,575,276"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="272,880,282,749,303,572,319,482,338,401,362,334,375,307,390,287,415,269,443,258,445,263,417,273,394,291,380,310,367,336,343,402,324,484,309,573,288,750,278,880"/>
+<area shape="rect" id="Node000008" href="$d6/d3d/classtesseract__planning_1_1ErrorTask.html" title=" " alt="" coords="445,301,575,341"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="273,879,285,761,308,604,323,525,342,452,364,393,390,352,415,334,444,324,445,329,417,339,394,356,369,396,347,454,329,526,313,605,291,762,279,880"/>
+<area shape="rect" id="Node000009" href="$de/ddd/classtesseract__planning_1_1FixStateBoundsTask.html" title="This task modifies the input instructions in order to push waypoints that are outside of their limits..." alt="" coords="436,366,584,407"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="274,880,288,774,312,636,328,567,346,505,367,453,390,418,411,402,435,392,437,397,413,407,394,421,371,456,351,506,333,569,317,637,294,775,280,880"/>
+<area shape="rect" id="Node000010" href="$d9/dd2/classtesseract__planning_1_1FixStateCollisionTask.html" title="This task modifies the input instructions in order to push waypoints that are in collision out of col..." alt="" coords="434,431,587,472"/>
+<area shape="poly" id="edge9_Node000001_Node000010" title=" " alt="" coords="269,879,273,798,288,692,303,636,325,580,353,529,390,483,410,468,432,459,434,464,412,473,394,487,358,532,329,583,308,637,293,693,278,799,275,879"/>
+<area shape="rect" id="Node000011" href="$d6/d36/classtesseract__planning_1_1FormatAsInputTask.html" title="This is used in the case where you run trajopt with collision as a cost and then you post check it fo..." alt="" coords="439,497,581,537"/>
+<area shape="poly" id="edge10_Node000001_Node000011" title=" " alt="" coords="272,879,278,810,297,721,312,674,332,628,358,586,390,548,413,533,438,523,440,528,415,537,394,552,362,589,337,631,317,676,302,722,284,810,277,880"/>
+<area shape="rect" id="Node000012" href="$d0/d15/classtesseract__planning_1_1FormatAsResultTask.html" title=" " alt="" coords="435,562,585,603"/>
+<area shape="poly" id="edge11_Node000001_Node000012" title=" " alt="" coords="275,879,285,821,306,750,321,712,340,676,363,643,390,613,411,599,433,590,435,595,413,604,394,618,367,646,344,679,326,715,311,751,290,822,280,880"/>
+<area shape="rect" id="Node000013" href="$dc/ddf/classtesseract__planning_1_1FormatPlanningInputTask.html" title=" " alt="" coords="422,627,598,668"/>
+<area shape="poly" id="edge12_Node000001_Node000013" title=" " alt="" coords="279,879,293,834,316,780,348,725,368,701,390,679,420,661,423,666,394,683,372,704,352,728,321,782,298,835,284,881"/>
+<area shape="rect" id="Node000014" href="$d7/d3e/classtesseract__planning_1_1HasDataStorageEntryTask.html" title=" " alt="" coords="420,693,601,733"/>
+<area shape="poly" id="edge13_Node000001_Node000014" title=" " alt="" coords="286,880,327,811,356,775,390,744,418,729,420,734,394,748,360,778,331,814,291,883"/>
+<area shape="rect" id="Node000015" href="$de/d1a/classtesseract__planning_1_1IterativeSplineParameterizationTask.html" title=" " alt="" coords="392,758,628,799"/>
+<area shape="poly" id="edge14_Node000001_Node000015" title=" " alt="" coords="300,882,340,844,391,809,419,797,421,801,393,814,344,848,303,886"/>
+<area shape="rect" id="Node000016" href="$d2/d89/classtesseract__planning_1_1MinLengthTask.html" title=" " alt="" coords="445,823,575,864"/>
+<area shape="poly" id="edge15_Node000001_Node000016" title=" " alt="" coords="346,887,391,873,444,858,445,863,393,878,348,892"/>
+<area shape="rect" id="Node000017" href="$d0/d05/classtesseract__planning_1_1MotionPlannerTask.html" title=" " alt="" coords="433,888,587,943"/>
+<area shape="poly" id="edge16_Node000001_Node000017" title=" " alt="" coords="360,913,432,913,432,918,360,918"/>
+<area shape="rect" id="Node000018" href="$d7/d8d/classtesseract__planning_1_1ProcessPlanningInputTask.html" title=" " alt="" coords="419,967,602,1008"/>
+<area shape="poly" id="edge17_Node000001_Node000018" title=" " alt="" coords="348,939,393,953,431,964,429,969,391,958,346,944"/>
+<area shape="rect" id="Node000019" href="$d7/d83/classtesseract__planning_1_1ProfileSwitchTask.html" title="This task simply returns a value specified in the composite profile. This can be used to switch execu..." alt="" coords="444,1033,576,1073"/>
+<area shape="poly" id="edge18_Node000001_Node000019" title=" " alt="" coords="303,945,344,983,393,1017,445,1037,443,1042,391,1022,340,987,300,949"/>
+<area shape="rect" id="Node000020" href="$d2/d21/classtesseract__planning_1_1RasterMotionTask.html" title="The RasterCtMotionTask class." alt="" coords="444,1098,577,1139"/>
+<area shape="poly" id="edge19_Node000001_Node000020" title=" " alt="" coords="291,948,331,1017,360,1053,394,1083,418,1096,444,1105,442,1110,415,1101,390,1087,356,1056,327,1020,286,951"/>
+<area shape="rect" id="Node000021" href="$d1/d2b/classtesseract__planning_1_1RasterOnlyMotionTask.html" title="The RasterCtOnlyMotionTask class." alt="" coords="431,1163,590,1204"/>
+<area shape="poly" id="edge20_Node000001_Node000021" title=" " alt="" coords="284,950,298,996,321,1049,352,1103,372,1127,394,1148,411,1160,431,1168,429,1173,409,1164,390,1152,368,1130,348,1106,316,1051,293,997,279,952"/>
+<area shape="rect" id="Node000022" href="$d5/d00/classtesseract__planning_1_1RemapTask.html" title=" " alt="" coords="445,1229,575,1269"/>
+<area shape="poly" id="edge21_Node000001_Node000022" title=" " alt="" coords="280,951,290,1009,311,1080,326,1116,344,1152,367,1185,394,1213,418,1229,446,1239,444,1244,416,1234,390,1218,363,1188,340,1155,321,1119,306,1081,285,1010,275,952"/>
+<area shape="rect" id="Node000023" href="$da/da7/classtesseract__planning_1_1RuckigTrajectorySmoothingTask.html" title=" " alt="" coords="403,1294,618,1335"/>
+<area shape="poly" id="edge22_Node000001_Node000023" title=" " alt="" coords="277,951,284,1021,302,1109,317,1155,337,1200,362,1242,394,1279,410,1291,407,1295,390,1283,358,1245,332,1203,312,1157,297,1110,278,1021,272,952"/>
+<area shape="rect" id="Node000024" href="$d5/d24/classtesseract__planning_1_1StartTask.html" title=" " alt="" coords="445,1359,575,1400"/>
+<area shape="poly" id="edge23_Node000001_Node000024" title=" " alt="" coords="275,952,278,1032,293,1138,308,1194,329,1248,358,1299,394,1344,418,1361,445,1371,444,1376,415,1366,390,1348,353,1302,325,1251,303,1195,288,1139,273,1033,269,952"/>
+<area shape="rect" id="Node000025" href="$d7/d5a/classtesseract__planning_1_1SyncTask.html" title="This is used as a synchronization point in your task graph." alt="" coords="445,1425,575,1465"/>
+<area shape="poly" id="edge24_Node000001_Node000025" title=" " alt="" coords="280,951,294,1056,317,1194,333,1262,351,1325,371,1375,394,1410,418,1427,446,1437,444,1442,415,1431,390,1413,367,1378,346,1326,328,1264,312,1195,288,1057,274,951"/>
+<area shape="rect" id="Node000026" href="$de/d3e/classtesseract__planning_1_1TimeOptimalParameterizationTask.html" title=" " alt="" coords="397,1490,624,1531"/>
+<area shape="poly" id="edge25_Node000001_Node000026" title=" " alt="" coords="279,951,291,1069,313,1226,329,1305,347,1377,369,1435,394,1475,409,1487,405,1491,390,1479,364,1438,342,1379,323,1306,308,1227,285,1070,273,952"/>
+<area shape="rect" id="Node000027" href="$d5/deb/classtesseract__planning_1_1UpdateEndStateTask.html" title=" " alt="" coords="435,1555,586,1596"/>
+<area shape="poly" id="edge26_Node000001_Node000027" title=" " alt="" coords="278,951,288,1081,309,1258,324,1347,343,1429,367,1495,380,1521,394,1540,413,1555,435,1565,433,1570,410,1560,390,1544,375,1524,362,1497,338,1430,319,1349,303,1259,282,1082,272,951"/>
+<area shape="rect" id="Node000028" href="$d2/d5e/classtesseract__planning_1_1UpdateStartAndEndStateTask.html" title=" " alt="" coords="409,1621,611,1661"/>
+<area shape="poly" id="edge27_Node000001_Node000028" title=" " alt="" coords="277,951,285,1094,305,1290,320,1390,340,1481,364,1555,378,1584,394,1606,410,1619,407,1623,390,1609,374,1587,359,1557,334,1482,315,1391,299,1291,280,1094,272,952"/>
+<area shape="rect" id="Node000029" href="$dd/d45/classtesseract__planning_1_1UpdateStartStateTask.html" title=" " alt="" coords="432,1686,589,1727"/>
+<area shape="poly" id="edge28_Node000001_Node000029" title=" " alt="" coords="277,951,283,1106,301,1322,316,1432,336,1532,362,1615,377,1647,394,1671,411,1685,432,1695,430,1700,409,1690,390,1675,372,1650,357,1617,331,1534,310,1433,295,1322,277,1106,271,951"/>
+<area shape="rect" id="Node000030" href="$de/d59/classtesseract__planning_1_1UpsampleTrajectoryTask.html" title="This is used to upsample the results trajectory based on the longest valid segment length." alt="" coords="424,1751,596,1792"/>
+<area shape="poly" id="edge29_Node000001_Node000030" title=" " alt="" coords="276,952,280,1118,297,1353,311,1474,332,1584,359,1675,376,1710,394,1736,408,1749,425,1757,422,1762,405,1753,390,1740,371,1712,354,1677,327,1585,306,1475,291,1354,275,1118,271,952"/>
+<area shape="rect" id="Node000031" href="$d2/d14/classtesseract__planning_1_1test__suite_1_1TestTask.html" title=" " alt="" coords="438,1817,583,1857"/>
+<area shape="poly" id="edge30_Node000001_Node000031" title=" " alt="" coords="276,951,278,1129,283,1252,293,1384,307,1515,328,1636,357,1735,374,1773,394,1802,414,1818,438,1828,436,1833,411,1822,390,1805,370,1775,352,1736,323,1637,302,1516,287,1384,278,1252,273,1129,270,951"/>
+<area shape="rect" id="Node000002" href="$de/d23/classtesseract__planning_1_1TaskComposerNode.html" title="Represents a node the pipeline to be executed." alt="" coords="5,895,152,936"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="167,913,200,913,200,918,167,918"/>
+</map>

@@ -1,0 +1,26 @@
+<map id="tesseract_motion_planners/trajopt_ifopt/src/trajopt_ifopt_waypoint_config.cpp" name="tesseract_motion_planners/trajopt_ifopt/src/trajopt_ifopt_waypoint_config.cpp">
+<area shape="rect" id="Node000001" title="TrajOpt Ifopt Waypoint configuration settings." alt="" coords="320,5,498,61"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="9,220,198,246"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="320,41,234,49,143,62,65,82,37,95,18,111,10,124,8,135,18,163,39,190,65,210,62,214,35,194,13,166,3,136,5,122,14,107,34,91,64,77,142,57,233,43,320,36"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="28,124,105,150"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="320,54,222,78,118,111,101,119,99,114,116,107,221,73,319,49"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="129,124,201,150"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="331,64,214,111,200,119,197,114,212,107,329,59"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="225,124,396,150"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="384,63,335,114,331,111,381,60"/>
+<area shape="rect" id="Node000006" href="$dd/d0b/trajopt__ifopt__waypoint__config_8h.html" title="TrajOpt IFOPT waypoint configuration settings." alt="" coords="419,109,596,165"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="437,60,473,96,469,100,434,63"/>
+<area shape="rect" id="Node000010" title=" " alt="" coords="620,124,790,150"/>
+<area shape="poly" id="edge10_Node000001_Node000010" title=" " alt="" coords="489,59,656,116,655,121,487,64"/>
+<area shape="rect" id="Node000011" title=" " alt="" coords="815,117,982,157"/>
+<area shape="poly" id="edge11_Node000001_Node000011" title=" " alt="" coords="499,47,642,73,803,106,816,109,814,115,802,112,641,78,498,52"/>
+<area shape="rect" id="Node000012" title=" " alt="" coords="1006,124,1220,150"/>
+<area shape="poly" id="edge12_Node000001_Node000012" title=" " alt="" coords="498,41,724,66,995,106,1049,117,1048,123,994,112,723,72,498,46"/>
+<area shape="poly" id="edge6_Node000006_Node000002" title=" " alt="" coords="419,165,408,167,177,219,176,214,407,162,418,159"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="336,220,421,246"/>
+<area shape="poly" id="edge7_Node000006_Node000007" title=" " alt="" coords="472,167,409,213,406,209,469,163"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="445,213,570,253"/>
+<area shape="poly" id="edge8_Node000006_Node000008" title=" " alt="" coords="510,165,510,197,505,197,505,165"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="594,213,720,253"/>
+<area shape="poly" id="edge9_Node000006_Node000009" title=" " alt="" coords="552,163,614,202,611,206,549,167"/>
+</map>

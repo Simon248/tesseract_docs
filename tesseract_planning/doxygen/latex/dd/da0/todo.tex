@@ -1,0 +1,61 @@
+\chapter{Todo List}
+\hypertarget{todo}{}\label{todo}\index{Todo List@{Todo List}}
+
+\begin{DoxyRefList}
+\item[Member \doxylink{task__composer__trajopt__example_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main} ()]\label{todo__todo000014}%
+\Hypertarget{todo__todo000014}%
+Add default profiles 
+
+\label{todo__todo000013}%
+\Hypertarget{todo__todo000013}%
+Add default profiles  
+\item[Member \doxylink{classtesseract__examples_1_1OnlinePlanningExample_a354985cdbaa511e24b5c010271477fad}{tesseract\+\_\+examples\+::Online\+Planning\+Example\+::online\+Plan} ()]\label{todo__todo000001}%
+\Hypertarget{todo__todo000001}%
+Should check status here and maybe solve global plan again  
+\item[Member \doxylink{namespacetesseract__planning_a2c73959c536f2f1f881910a889315465}{tesseract\+\_\+planning\+::get\+Closest\+Joint\+Solution} (const \doxylink{structtesseract__planning_1_1KinematicGroupInstructionInfo}{Kinematic\+Group\+Instruction\+Info} \&info, const Eigen\+::\+Vector\+Xd \&seed)]\label{todo__todo000005}%
+\Hypertarget{todo__todo000005}%
+\+: May be nice to add contact checking to find best solution, but may not be necessary because this is used to generate the seed  
+\item[Member \doxylink{namespacetesseract__planning_af6d0dfd4f3bf9af354959f93dc8dcaa4}{tesseract\+\_\+planning\+::get\+Closest\+Joint\+Solution} (const \doxylink{structtesseract__planning_1_1KinematicGroupInstructionInfo}{Kinematic\+Group\+Instruction\+Info} \&info1, const \doxylink{structtesseract__planning_1_1KinematicGroupInstructionInfo}{Kinematic\+Group\+Instruction\+Info} \&info2, const Eigen\+::\+Vector\+Xd \&seed)]\label{todo__todo000006}%
+\Hypertarget{todo__todo000006}%
+\+: May be nice to add contact checking to find best solution, but may not be necessary because this is used to generate the seed.  
+\item[Member \doxylink{classtesseract__planning_1_1OMPLRealVectorPlanProfile_adfef776947ccfda2fa4ed079b345f631}{tesseract\+\_\+planning\+::OMPLReal\+Vector\+Plan\+Profile\+::apply\+Goal\+States} (ompl\+::geometric\+::\+Simple\+Setup \&simple\+\_\+setup, const tesseract\+\_\+kinematics\+::\+Kin\+Group\+IKInput \&ik\+\_\+input, const tesseract\+\_\+kinematics\+::\+Kinematic\+Group \&manip, tesseract\+\_\+collision\+::\+Discrete\+Contact\+Manager \&contact\+\_\+checker)]\label{todo__todo000002}%
+\Hypertarget{todo__todo000002}%
+Need to add Descartes pose sample to ompl profile  
+\item[Member \doxylink{classtesseract__planning_1_1OMPLRealVectorPlanProfile_ae467f83418072634264026ed50f31b0c}{tesseract\+\_\+planning\+::OMPLReal\+Vector\+Plan\+Profile\+::apply\+Start\+States} (ompl\+::geometric\+::\+Simple\+Setup \&simple\+\_\+setup, const tesseract\+\_\+kinematics\+::\+Kin\+Group\+IKInput \&ik\+\_\+input, const tesseract\+\_\+kinematics\+::\+Kinematic\+Group \&manip, tesseract\+\_\+collision\+::\+Discrete\+Contact\+Manager \&contact\+\_\+checker)]\label{todo__todo000003}%
+\Hypertarget{todo__todo000003}%
+Need to add Descartes pose sampler to ompl profile 
+
+\label{todo__todo000004}%
+\Hypertarget{todo__todo000004}%
+Need to also provide the seed instruction to use here  
+\item[Member \doxylink{classtesseract__planning_1_1TaskComposerGraph_a0fd6f827698decc7caecc8ac8a51b341}{tesseract\+\_\+planning\+::Task\+Composer\+Graph\+::is\+Valid} () const]\label{todo__todo000012}%
+\Hypertarget{todo__todo000012}%
+Replace return type with std\+::expected when upgraded to use c++23  
+\item[Member \doxylink{classtesseract__planning_1_1TrajOptDefaultPlanProfile_af5d87ef371d15a960a6522186aab20f8}{tesseract\+\_\+planning\+::Traj\+Opt\+Default\+Plan\+Profile\+::create} (const \doxylink{structtesseract__planning_1_1MoveInstructionPoly}{Move\+Instruction\+Poly} \&move\+\_\+instruction, const tesseract\+\_\+common\+::\+Manipulator\+Info \&composite\+\_\+manip\+\_\+info, const std\+::shared\+\_\+ptr$<$ const tesseract\+\_\+environment\+::\+Environment $>$ \&env, const std\+::vector$<$ std\+::string $>$ \&active\+\_\+links, int index) const override]\label{todo__todo000007}%
+\Hypertarget{todo__todo000007}%
+If fixed cartesian and not term\+\_\+type cost add as fixed 
+
+\label{todo__todo000008}%
+\Hypertarget{todo__todo000008}%
+Should not make fixed if term\+\_\+type is cost  
+\item[Member \doxylink{classtesseract__planning_1_1TrajOptIfoptDefaultPlanProfile_abee03a8da85a74066657c750f68766b6}{tesseract\+\_\+planning\+::Traj\+Opt\+Ifopt\+Default\+Plan\+Profile\+::create} (const \doxylink{structtesseract__planning_1_1MoveInstructionPoly}{Move\+Instruction\+Poly} \&move\+\_\+instruction, const tesseract\+\_\+common\+::\+Manipulator\+Info \&composite\+\_\+manip\+\_\+info, const std\+::shared\+\_\+ptr$<$ const tesseract\+\_\+environment\+::\+Environment $>$ \&env, int index) const override]\label{todo__todo000009}%
+\Hypertarget{todo__todo000009}%
+Levi, update to support toleranced cartesian 
+
+\label{todo__todo000011}%
+\Hypertarget{todo__todo000011}%
+Should not make fixed if term\+\_\+type is cost 
+
+\label{todo__todo000010}%
+\Hypertarget{todo__todo000010}%
+If fixed cartesian and not term\+\_\+type cost add as fixed  
+\item[Member \doxylink{classtesseract__planning_1_1UpdateEndStateTask_ad9732934e0dcb0e4e48011515fcd2e8d}{tesseract\+\_\+planning\+::Update\+End\+State\+Task\+::run\+Impl} (\doxylink{classtesseract__planning_1_1TaskComposerContext}{Task\+Composer\+Context} \&context, Optional\+Task\+Composer\+Executor executor=std\+::nullopt) const override]\label{todo__todo000015}%
+\Hypertarget{todo__todo000015}%
+Should the waypoint profile be updated to the path profile if it exists?  
+\item[Member \doxylink{classtesseract__planning_1_1UpdateStartAndEndStateTask_a26bda515556d11be5919e11c5b87daac}{tesseract\+\_\+planning\+::Update\+Start\+And\+End\+State\+Task\+::run\+Impl} (\doxylink{classtesseract__planning_1_1TaskComposerContext}{Task\+Composer\+Context} \&context, Optional\+Task\+Composer\+Executor executor=std\+::nullopt) const override]\label{todo__todo000016}%
+\Hypertarget{todo__todo000016}%
+Should the waypoint profile be updated to the path profile if it exists?  
+\item[Member \doxylink{classtesseract__planning_1_1UpdateStartStateTask_a3504f2898006585a077edee5517aff44}{tesseract\+\_\+planning\+::Update\+Start\+State\+Task\+::run\+Impl} (\doxylink{classtesseract__planning_1_1TaskComposerContext}{Task\+Composer\+Context} \&context, Optional\+Task\+Composer\+Executor executor=std\+::nullopt) const override]\label{todo__todo000017}%
+\Hypertarget{todo__todo000017}%
+Should the waypoint profile be updated to the path profile if it exists? 
+\end{DoxyRefList}

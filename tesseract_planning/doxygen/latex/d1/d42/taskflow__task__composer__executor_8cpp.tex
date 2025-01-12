@@ -1,0 +1,40 @@
+\doxysection{tesseract\+\_\+task\+\_\+composer/taskflow/src/taskflow\+\_\+task\+\_\+composer\+\_\+executor.cpp File Reference}
+\hypertarget{taskflow__task__composer__executor_8cpp}{}\label{taskflow__task__composer__executor_8cpp}\index{tesseract\_task\_composer/taskflow/src/taskflow\_task\_composer\_executor.cpp@{tesseract\_task\_composer/taskflow/src/taskflow\_task\_composer\_executor.cpp}}
+{\ttfamily \#include $<$tesseract\+\_\+common/macros.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+common/serialization.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+common/utils.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+common/stopwatch.\+h$>$}\newline
+{\ttfamily \#include $<$taskflow/taskflow.\+hpp$>$}\newline
+{\ttfamily \#include $<$yaml-\/cpp/yaml.\+h$>$}\newline
+{\ttfamily \#include $<$boost/uuid/uuid.\+hpp$>$}\newline
+{\ttfamily \#include $<$boost/uuid/uuid\+\_\+generators.\+hpp$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+task\+\_\+composer/taskflow/taskflow\+\_\+task\+\_\+composer\+\_\+executor.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+task\+\_\+composer/taskflow/taskflow\+\_\+task\+\_\+composer\+\_\+future.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+task\+\_\+composer/core/task\+\_\+composer\+\_\+context.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+task\+\_\+composer/core/task\+\_\+composer\+\_\+node.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+task\+\_\+composer/core/task\+\_\+composer\+\_\+task.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+task\+\_\+composer/core/task\+\_\+composer\+\_\+pipeline.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+task\+\_\+composer/core/task\+\_\+composer\+\_\+graph.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+task\+\_\+composer/core/task\+\_\+composer\+\_\+node\+\_\+info.\+h$>$}\newline
+Include dependency graph for taskflow\+\_\+task\+\_\+composer\+\_\+executor.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d4/d2a/taskflow__task__composer__executor_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespacetesseract__planning}{tesseract\+\_\+planning}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+tf\+::\+Task \mbox{\hyperlink{namespacetesseract__planning_a20f6174f1e1c9371dcea59858e8808fa}{tesseract\+\_\+planning\+::convert\+To\+Taskflow}} (const \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerGraph}{Task\+Composer\+Graph}} \&task\+\_\+graph, \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerContext}{Task\+Composer\+Context}} \&task\+\_\+context, \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerExecutor}{Task\+Composer\+Executor}} \&task\+\_\+executor, tf\+::\+Taskflow \texorpdfstring{$\ast$}{*}taskflow, tf\+::\+Subflow \texorpdfstring{$\ast$}{*}parent\+\_\+sbf)
+\item 
+void \mbox{\hyperlink{namespacetesseract__planning_a6096f4811f43ba0534969b972136b2ac}{tesseract\+\_\+planning\+::convert\+To\+Taskflow}} (const \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerPipeline}{Task\+Composer\+Pipeline}} \&task\+\_\+pipeline, \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerContext}{Task\+Composer\+Context}} \&task\+\_\+context, \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerExecutor}{Task\+Composer\+Executor}} \&task\+\_\+executor, tf\+::\+Taskflow \texorpdfstring{$\ast$}{*}taskflow)
+\item 
+void \mbox{\hyperlink{namespacetesseract__planning_ab432ba336a41701e466d867fabb2713a}{tesseract\+\_\+planning\+::convert\+To\+Taskflow}} (const \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerTask}{Task\+Composer\+Task}} \&\mbox{\hyperlink{tesseract__task__composer__core__unit_8cpp_aff72eefedb05c0f13d6346b099a22a7f}{task}}, \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerContext}{Task\+Composer\+Context}} \&task\+\_\+context, \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerExecutor}{Task\+Composer\+Executor}} \&task\+\_\+executor, tf\+::\+Taskflow \texorpdfstring{$\ast$}{*}taskflow)
+\end{DoxyCompactItemize}

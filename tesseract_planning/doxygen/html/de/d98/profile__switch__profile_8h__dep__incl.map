@@ -1,0 +1,7 @@
+<map id="tesseract_task_composer/planning/include/tesseract_task_composer/planning/profiles/profile_switch_profile.h" name="tesseract_task_composer/planning/include/tesseract_task_composer/planning/profiles/profile_switch_profile.h">
+<area shape="rect" id="Node000001" title="Profile for task that returns a value based on the profile." alt="" coords="82,5,296,76"/>
+<area shape="rect" id="Node000002" href="$d2/d1f/profile__switch__task_8cpp.html" title=" " alt="" coords="5,124,178,180"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="150,89,118,125,114,122,146,86"/>
+<area shape="rect" id="Node000003" href="$dd/d66/profile__switch__profile_8cpp.html" title=" " alt="" coords="202,124,373,180"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="232,86,265,122,261,125,228,89"/>
+</map>

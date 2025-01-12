@@ -1,0 +1,29 @@
+\doxysection{tesseract\+\_\+motion\+\_\+planners/descartes/src/descartes\+\_\+utils.cpp File Reference}
+\hypertarget{descartes__utils_8cpp}{}\label{descartes__utils_8cpp}\index{tesseract\_motion\_planners/descartes/src/descartes\_utils.cpp@{tesseract\_motion\_planners/descartes/src/descartes\_utils.cpp}}
+{\ttfamily \#include $<$tesseract\+\_\+motion\+\_\+planners/descartes/descartes\+\_\+utils.\+h$>$}\newline
+Include dependency graph for descartes\+\_\+utils.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dc/d06/descartes__utils_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespacetesseract__planning}{tesseract\+\_\+planning}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+tesseract\+\_\+common\+::\+Vector\+Isometry3d \mbox{\hyperlink{namespacetesseract__planning_a0d40b8cf26a5d895afc2b8c7a3e805c5}{tesseract\+\_\+planning\+::sample\+Tool\+Axis}} (const Eigen\+::\+Isometry3d \&tool\+\_\+pose, const Eigen\+::\+Vector3d \&axis, double resolution, double minimum, double maximum)
+\begin{DoxyCompactList}\small\item\em Given a tool pose create samples from \mbox{[}minimum, maximum\mbox{]} around the provided axis. \end{DoxyCompactList}\item 
+tesseract\+\_\+common\+::\+Vector\+Isometry3d \mbox{\hyperlink{namespacetesseract__planning_a0b8eb0a8bb6639fb27000d485f88a86d}{tesseract\+\_\+planning\+::sample\+Tool\+XAxis}} (const Eigen\+::\+Isometry3d \&tool\+\_\+pose, double resolution, double minimum, double maximum)
+\begin{DoxyCompactList}\small\item\em Given a tool pose create samples from \mbox{[}minimum, maximum\mbox{]} around the x axis. \end{DoxyCompactList}\item 
+tesseract\+\_\+common\+::\+Vector\+Isometry3d \mbox{\hyperlink{namespacetesseract__planning_a148396fc424f2276ac2a537917d83335}{tesseract\+\_\+planning\+::sample\+Tool\+YAxis}} (const Eigen\+::\+Isometry3d \&tool\+\_\+pose, double resolution, double minimum, double maximum)
+\begin{DoxyCompactList}\small\item\em Given a tool pose create samples from \mbox{[}minimum, maximum\mbox{]} around the y axis. \end{DoxyCompactList}\item 
+tesseract\+\_\+common\+::\+Vector\+Isometry3d \mbox{\hyperlink{namespacetesseract__planning_a866bee2ba8ab03dde3b808b8aebe9156}{tesseract\+\_\+planning\+::sample\+Tool\+ZAxis}} (const Eigen\+::\+Isometry3d \&tool\+\_\+pose, double resolution, double minimum, double maximum)
+\begin{DoxyCompactList}\small\item\em Given a tool pose create samples from \mbox{[}minimum, maximum\mbox{]} around the z axis. \end{DoxyCompactList}\item 
+tesseract\+\_\+common\+::\+Vector\+Isometry3d \mbox{\hyperlink{namespacetesseract__planning_a7783726ef3508bc3baf1bd8b96829e07}{tesseract\+\_\+planning\+::sample\+Fixed}} (const Eigen\+::\+Isometry3d \&tool\+\_\+pose)
+\begin{DoxyCompactList}\small\item\em This is the default sample with if a fixed pose sampler. \end{DoxyCompactList}\end{DoxyCompactItemize}

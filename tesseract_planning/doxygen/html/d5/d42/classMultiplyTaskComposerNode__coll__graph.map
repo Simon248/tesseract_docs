@@ -1,0 +1,24 @@
+<map id="MultiplyTaskComposerNode" name="MultiplyTaskComposerNode">
+<area shape="rect" id="Node000001" title=" " alt="" coords="1405,67,1590,93"/>
+<area shape="rect" id="Node000002" href="$d8/def/classtesseract__planning_1_1TaskComposerTask.html" title=" " alt="" coords="1212,103,1356,144"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="1371,103,1431,91,1432,96,1372,108"/>
+<area shape="rect" id="Node000003" href="$de/d23/classtesseract__planning_1_1TaskComposerNode.html" title="Represents a node the pipeline to be executed." alt="" coords="1016,153,1162,193"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="1177,148,1211,139,1212,145,1178,153"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="178,122,255,147"/>
+<area shape="poly" id="edge12_Node000001_Node000004" title=" " alt="" coords="247,110,279,90,320,70,366,54,413,48,1285,48,1362,53,1433,64,1432,69,1362,58,1285,53,414,53,367,59,322,74,282,94,249,115"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="271,129,636,120,842,122,928,127,993,134,1043,149,1041,155,991,140,927,132,842,127,636,125,271,135"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="333,153,497,193"/>
+<area shape="poly" id="edge8_Node000008_Node000004" title=" " alt="" coords="271,145,280,147,333,157,332,162,279,152,270,150"/>
+<area shape="rect" id="Node000010" title=" " alt="" coords="348,230,482,271"/>
+<area shape="poly" id="edge11_Node000010_Node000004" title=" " alt="" coords="250,154,281,174,375,227,372,232,278,178,247,158"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="5,114,129,155"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="144,132,178,132,178,137,144,137"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="660,283,785,324"/>
+<area shape="poly" id="edge5_Node000003_Node000006" title=" " alt="" coords="800,298,894,285,944,272,991,254,1035,225,1068,192,1072,196,1038,229,993,259,945,277,895,290,801,304"/>
+<area shape="rect" id="Node000007" href="$d0/d88/classtesseract__planning_1_1TaskComposerKeys.html" title=" " alt="" coords="650,153,795,193"/>
+<area shape="poly" id="edge6_Node000003_Node000007" title=" " alt="" coords="810,170,1016,170,1016,176,810,176"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="512,170,650,170,650,176,512,176"/>
+<area shape="rect" id="Node000009" href="$dc/d39/structtesseract__planning_1_1TaskComposerNodePorts.html" title="A data structure for holding the nodes required and option input and output ports." alt="" coords="634,218,811,259"/>
+<area shape="poly" id="edge9_Node000003_Node000009" title=" " alt="" coords="826,220,992,191,1015,186,1016,191,992,196,827,225"/>
+<area shape="poly" id="edge10_Node000009_Node000010" title=" " alt="" coords="498,244,633,239,633,244,498,250"/>
+</map>

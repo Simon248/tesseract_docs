@@ -1,0 +1,44 @@
+\doxysection{car\+\_\+seat\+\_\+example.\+h}
+\hypertarget{car__seat__example_8h_source}{}\label{car__seat__example_8h_source}\index{tesseract\_examples/include/tesseract\_examples/car\_seat\_example.h@{tesseract\_examples/include/tesseract\_examples/car\_seat\_example.h}}
+\mbox{\hyperlink{car__seat__example_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00026\ \textcolor{preprocessor}{\#ifndef\ TESSERACT\_EXAMPLES\_CAR\_SEAT\_EXAMPLE\_H}}
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#define\ TESSERACT\_EXAMPLES\_CAR\_SEAT\_EXAMPLE\_H}}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#include\ <tesseract\_common/macros.h>}}
+\DoxyCodeLine{00030\ TESSERACT\_COMMON\_IGNORE\_WARNINGS\_PUSH}
+\DoxyCodeLine{00031\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00032\ \textcolor{preprocessor}{\#include\ <unordered\_map>}}
+\DoxyCodeLine{00033\ \mbox{\hyperlink{namespaceTESSERACT__COMMON__IGNORE__WARNINGS__POP}{TESSERACT\_COMMON\_IGNORE\_WARNINGS\_POP}}}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{example_8h}{tesseract\_examples/example.h}}>}}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacetesseract__examples}{tesseract\_examples}}}
+\DoxyCodeLine{00038\ \{}
+\DoxyCodeLine{00040\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classtesseract__examples_1_1CarSeatExample}{CarSeatExample}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classtesseract__examples_1_1Example}{Example}}}
+\DoxyCodeLine{00041\ \{}
+\DoxyCodeLine{00042\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00043\ \ \ \mbox{\hyperlink{classtesseract__examples_1_1CarSeatExample}{CarSeatExample}}(std::shared\_ptr<tesseract\_environment::Environment>\ \mbox{\hyperlink{basic__cartesian__example__unit_8cpp_a96ce750ee22ecbf4d17cc6cf146d9514}{env}},}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::shared\_ptr<tesseract\_visualization::Visualization>\ plotter\ =\ \textcolor{keyword}{nullptr},}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{namespaceifopt}{ifopt}}\ =\ \textcolor{keyword}{false},}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ debug\ =\ \textcolor{keyword}{false});}
+\DoxyCodeLine{00047\ \ \ \mbox{\hyperlink{classtesseract__examples_1_1CarSeatExample_a43fa8d033e7765db0da5a4bb56f50042}{\string~CarSeatExample}}()\ \textcolor{keyword}{override}\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00048\ \ \ \mbox{\hyperlink{classtesseract__examples_1_1CarSeatExample_a0ba6d12a8e99796c74c46329d446ae20}{CarSeatExample}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classtesseract__examples_1_1CarSeatExample}{CarSeatExample}}\&)\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00049\ \ \ \mbox{\hyperlink{classtesseract__examples_1_1CarSeatExample}{CarSeatExample}}\&\ \mbox{\hyperlink{classtesseract__examples_1_1CarSeatExample_ab2fc824394ba6562ae356c14709b9043}{operator=}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classtesseract__examples_1_1CarSeatExample}{CarSeatExample}}\&)\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00050\ \ \ \mbox{\hyperlink{classtesseract__examples_1_1CarSeatExample_aed34b0122c837570b4caea17480c94d1}{CarSeatExample}}(\mbox{\hyperlink{classtesseract__examples_1_1CarSeatExample}{CarSeatExample}}\&\&)\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00051\ \ \ \mbox{\hyperlink{classtesseract__examples_1_1CarSeatExample}{CarSeatExample}}\&\ \mbox{\hyperlink{classtesseract__examples_1_1CarSeatExample_a0475bf82409804870a96dd4239e05508}{operator=}}(\mbox{\hyperlink{classtesseract__examples_1_1CarSeatExample}{CarSeatExample}}\&\&)\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00053\ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classtesseract__examples_1_1CarSeatExample_ac184d33019a2209dceb8e1424cbdda2a}{run}}()\ override\ final;}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00055\ private:}
+\DoxyCodeLine{00056\ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classtesseract__examples_1_1CarSeatExample_ab64bf51ea7f4498fb9632296f4903243}{ifopt\_}};}
+\DoxyCodeLine{00057\ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classtesseract__examples_1_1CarSeatExample_a536e8612474b308e4f58f3fc7547828f}{debug\_}};}
+\DoxyCodeLine{00058\ \ \ std::unordered\_map<std::\textcolor{keywordtype}{string},\ std::unordered\_map<std::\textcolor{keywordtype}{string},\ \textcolor{keywordtype}{double}>>\ \mbox{\hyperlink{classtesseract__examples_1_1CarSeatExample_aeeac6bdb1e02898a9dc30e10ca80f734}{saved\_positions\_}};}
+\DoxyCodeLine{00059\ \};}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00061\ \}\ \ \textcolor{comment}{//\ namespace\ tesseract\_examples}}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00063\ \textcolor{preprocessor}{\#endif\ \ }\textcolor{comment}{//\ TESSERACT\_EXAMPLES\_CAR\_SEAT\_EXAMPLE\_H}}
+
+\end{DoxyCode}

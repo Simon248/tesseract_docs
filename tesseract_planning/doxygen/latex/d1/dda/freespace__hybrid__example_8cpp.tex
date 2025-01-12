@@ -1,0 +1,72 @@
+\doxysection{tesseract\+\_\+examples/src/freespace\+\_\+hybrid\+\_\+example.cpp File Reference}
+\hypertarget{freespace__hybrid__example_8cpp}{}\label{freespace__hybrid__example_8cpp}\index{tesseract\_examples/src/freespace\_hybrid\_example.cpp@{tesseract\_examples/src/freespace\_hybrid\_example.cpp}}
+{\ttfamily \#include $<$tesseract\+\_\+common/macros.\+h$>$}\newline
+{\ttfamily \#include $<$console\+\_\+bridge/console.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+examples/freespace\+\_\+hybrid\+\_\+example.\+h$>$}\newline
+{\ttfamily \#include $<$trajopt\+\_\+common/collision\+\_\+types.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+scene\+\_\+graph/link.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+scene\+\_\+graph/joint.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+state\+\_\+solver/state\+\_\+solver.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+environment/environment.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+environment/utils.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+environment/commands/add\+\_\+link\+\_\+command.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+command\+\_\+language/composite\+\_\+instruction.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+command\+\_\+language/state\+\_\+waypoint.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+command\+\_\+language/cartesian\+\_\+waypoint.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+command\+\_\+language/joint\+\_\+waypoint.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+command\+\_\+language/move\+\_\+instruction.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+command\+\_\+language/profile\+\_\+dictionary.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+command\+\_\+language/utils.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+motion\+\_\+planners/ompl/profile/ompl\+\_\+real\+\_\+vector\+\_\+plan\+\_\+profile.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+motion\+\_\+planners/ompl/ompl\+\_\+planner\+\_\+configurator.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+motion\+\_\+planners/trajopt\+\_\+ifopt/profile/trajopt\+\_\+ifopt\+\_\+default\+\_\+composite\+\_\+profile.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+motion\+\_\+planners/core/utils.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+task\+\_\+composer/core/task\+\_\+composer\+\_\+context.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+task\+\_\+composer/core/task\+\_\+composer\+\_\+data\+\_\+storage.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+task\+\_\+composer/core/task\+\_\+composer\+\_\+node.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+task\+\_\+composer/core/task\+\_\+composer\+\_\+executor.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+task\+\_\+composer/core/task\+\_\+composer\+\_\+future.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+task\+\_\+composer/core/task\+\_\+composer\+\_\+plugin\+\_\+factory.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+visualization/visualization.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+visualization/markers/toolpath\+\_\+marker.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+geometry/impl/sphere.\+h$>$}\newline
+Include dependency graph for freespace\+\_\+hybrid\+\_\+example.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d5/d9b/freespace__hybrid__example_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespacetesseract__examples}{tesseract\+\_\+examples}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+Command\+::\+Ptr \mbox{\hyperlink{namespacetesseract__examples_a66f8260053922ea9888284e3a176350b}{tesseract\+\_\+examples\+::add\+Sphere}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+static const std\+::string \mbox{\hyperlink{freespace__hybrid__example_8cpp_a8926f8facf8bb84b469412046babbead}{OMPL\+\_\+\+DEFAULT\+\_\+\+NAMESPACE}} = "{}OMPLMotion\+Planner\+Task"{}
+\item 
+static const std\+::string \mbox{\hyperlink{freespace__hybrid__example_8cpp_acebe899cb191df62bca811635ca01093}{TRAJOPT\+\_\+\+IFOPT\+\_\+\+DEFAULT\+\_\+\+NAMESPACE}} = "{}Traj\+Opt\+Ifopt\+Motion\+Planner\+Task"{}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{freespace__hybrid__example_8cpp_a8926f8facf8bb84b469412046babbead}\label{freespace__hybrid__example_8cpp_a8926f8facf8bb84b469412046babbead} 
+\index{freespace\_hybrid\_example.cpp@{freespace\_hybrid\_example.cpp}!OMPL\_DEFAULT\_NAMESPACE@{OMPL\_DEFAULT\_NAMESPACE}}
+\index{OMPL\_DEFAULT\_NAMESPACE@{OMPL\_DEFAULT\_NAMESPACE}!freespace\_hybrid\_example.cpp@{freespace\_hybrid\_example.cpp}}
+\doxysubsubsection{\texorpdfstring{OMPL\_DEFAULT\_NAMESPACE}{OMPL\_DEFAULT\_NAMESPACE}}
+{\footnotesize\ttfamily const std\+::string OMPL\+\_\+\+DEFAULT\+\_\+\+NAMESPACE = "{}OMPLMotion\+Planner\+Task"{}\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{freespace__hybrid__example_8cpp_acebe899cb191df62bca811635ca01093}\label{freespace__hybrid__example_8cpp_acebe899cb191df62bca811635ca01093} 
+\index{freespace\_hybrid\_example.cpp@{freespace\_hybrid\_example.cpp}!TRAJOPT\_IFOPT\_DEFAULT\_NAMESPACE@{TRAJOPT\_IFOPT\_DEFAULT\_NAMESPACE}}
+\index{TRAJOPT\_IFOPT\_DEFAULT\_NAMESPACE@{TRAJOPT\_IFOPT\_DEFAULT\_NAMESPACE}!freespace\_hybrid\_example.cpp@{freespace\_hybrid\_example.cpp}}
+\doxysubsubsection{\texorpdfstring{TRAJOPT\_IFOPT\_DEFAULT\_NAMESPACE}{TRAJOPT\_IFOPT\_DEFAULT\_NAMESPACE}}
+{\footnotesize\ttfamily const std\+::string TRAJOPT\+\_\+\+IFOPT\+\_\+\+DEFAULT\+\_\+\+NAMESPACE = "{}Traj\+Opt\+Ifopt\+Motion\+Planner\+Task"{}\hspace{0.3cm}{\ttfamily [static]}}
+

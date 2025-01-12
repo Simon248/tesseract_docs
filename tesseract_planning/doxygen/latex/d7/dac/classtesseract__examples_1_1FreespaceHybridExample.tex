@@ -1,0 +1,170 @@
+\doxysection{tesseract\+\_\+examples\+::Freespace\+Hybrid\+Example Class Reference}
+\hypertarget{classtesseract__examples_1_1FreespaceHybridExample}{}\label{classtesseract__examples_1_1FreespaceHybridExample}\index{tesseract\_examples::FreespaceHybridExample@{tesseract\_examples::FreespaceHybridExample}}
+
+
+An example of a robot leveraging OMPL RRTConnect to generate a freespace motion trajectory the Traj\+Opt to optimize.  
+
+
+
+
+{\ttfamily \#include $<$freespace\+\_\+hybrid\+\_\+example.\+h$>$}
+
+
+
+Inheritance diagram for tesseract\+\_\+examples\+::Freespace\+Hybrid\+Example\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=211pt]{db/d18/classtesseract__examples_1_1FreespaceHybridExample__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for tesseract\+\_\+examples\+::Freespace\+Hybrid\+Example\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d3/d49/classtesseract__examples_1_1FreespaceHybridExample__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classtesseract__examples_1_1FreespaceHybridExample_a66e7f98e52a3da016052c6bfb63d5a26}{Freespace\+Hybrid\+Example}} (std\+::shared\+\_\+ptr$<$ tesseract\+\_\+environment\+::\+Environment $>$ \mbox{\hyperlink{basic__cartesian__example__unit_8cpp_a96ce750ee22ecbf4d17cc6cf146d9514}{env}}, std\+::shared\+\_\+ptr$<$ tesseract\+\_\+visualization\+::\+Visualization $>$ plotter=nullptr, bool ifopt=false, bool debug=false, double range=0.\+01, double \mbox{\hyperlink{ompl__constrained__planner__tests_8cpp_a5993c7c53bcb46ce0e5f5748ffaa3dd0}{planning\+\_\+time}}=60.\+0)
+\item 
+\mbox{\hyperlink{classtesseract__examples_1_1FreespaceHybridExample_a6a2e6c309ce953b1c77d58984c4d545b}{\texorpdfstring{$\sim$}{\string~}\+Freespace\+Hybrid\+Example}} () override=default
+\item 
+\mbox{\hyperlink{classtesseract__examples_1_1FreespaceHybridExample_a40f16b301252a51293cafd903c7bd562}{Freespace\+Hybrid\+Example}} (const \mbox{\hyperlink{classtesseract__examples_1_1FreespaceHybridExample}{Freespace\+Hybrid\+Example}} \&)=default
+\item 
+\mbox{\hyperlink{classtesseract__examples_1_1FreespaceHybridExample}{Freespace\+Hybrid\+Example}} \& \mbox{\hyperlink{classtesseract__examples_1_1FreespaceHybridExample_a3a0fb1a7c2f95939b4d3c1f1a88ac6ca}{operator=}} (const \mbox{\hyperlink{classtesseract__examples_1_1FreespaceHybridExample}{Freespace\+Hybrid\+Example}} \&)=default
+\item 
+\mbox{\hyperlink{classtesseract__examples_1_1FreespaceHybridExample_aa8a6ca5674de4250fa3408064404a9a5}{Freespace\+Hybrid\+Example}} (\mbox{\hyperlink{classtesseract__examples_1_1FreespaceHybridExample}{Freespace\+Hybrid\+Example}} \&\&)=default
+\item 
+\mbox{\hyperlink{classtesseract__examples_1_1FreespaceHybridExample}{Freespace\+Hybrid\+Example}} \& \mbox{\hyperlink{classtesseract__examples_1_1FreespaceHybridExample_a0048fa5fe5e63943786e50b7a412904b}{operator=}} (\mbox{\hyperlink{classtesseract__examples_1_1FreespaceHybridExample}{Freespace\+Hybrid\+Example}} \&\&)=default
+\item 
+bool \mbox{\hyperlink{classtesseract__examples_1_1FreespaceHybridExample_a2af951ff9443ae6e3930c5c4219cf05a}{run}} () override final
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classtesseract__examples_1_1Example}{tesseract\+\_\+examples\+::\+Example}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classtesseract__examples_1_1Example_ac060c2c29b156e376fa3cdc721aa1a07}{Example}} (std\+::shared\+\_\+ptr$<$ tesseract\+\_\+environment\+::\+Environment $>$ \mbox{\hyperlink{basic__cartesian__example__unit_8cpp_a96ce750ee22ecbf4d17cc6cf146d9514}{env}}, std\+::shared\+\_\+ptr$<$ tesseract\+\_\+visualization\+::\+Visualization $>$ plotter=nullptr)
+\item 
+virtual \mbox{\hyperlink{classtesseract__examples_1_1Example_a049e7067d00b11ca53511d93a7d09011}{\texorpdfstring{$\sim$}{\string~}\+Example}} ()=default
+\item 
+\mbox{\hyperlink{classtesseract__examples_1_1Example_abe367e8320c34566fe87ddf0c9269885}{Example}} (const \mbox{\hyperlink{classtesseract__examples_1_1Example}{Example}} \&)=default
+\item 
+\mbox{\hyperlink{classtesseract__examples_1_1Example}{Example}} \& \mbox{\hyperlink{classtesseract__examples_1_1Example_a79513d11e83ca16e2cc5bfbd52046c62}{operator=}} (const \mbox{\hyperlink{classtesseract__examples_1_1Example}{Example}} \&)=default
+\item 
+\mbox{\hyperlink{classtesseract__examples_1_1Example_a0dd5d675b14c7647dc4eb97e39ec3c34}{Example}} (\mbox{\hyperlink{classtesseract__examples_1_1Example}{Example}} \&\&)=default
+\item 
+\mbox{\hyperlink{classtesseract__examples_1_1Example}{Example}} \& \mbox{\hyperlink{classtesseract__examples_1_1Example_a72f48bae74579c269393b59b786f3cac}{operator=}} (\mbox{\hyperlink{classtesseract__examples_1_1Example}{Example}} \&\&)=default
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{classtesseract__examples_1_1FreespaceHybridExample_afcf89e7ba0cb4eb39368493d194f9b60}{ifopt\+\_\+}}
+\item 
+bool \mbox{\hyperlink{classtesseract__examples_1_1FreespaceHybridExample_a43bf37d5bd581e581361dad7af655d50}{debug\+\_\+}}
+\item 
+double \mbox{\hyperlink{classtesseract__examples_1_1FreespaceHybridExample_ab1669e240cd7574adf5ebb59db9224ee}{range\+\_\+}}
+\item 
+double \mbox{\hyperlink{classtesseract__examples_1_1FreespaceHybridExample_a31c0a07b359cbbec684f961b362a00c6}{planning\+\_\+time\+\_\+}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{classtesseract__examples_1_1Example}{tesseract\+\_\+examples\+::\+Example}}}
+\begin{DoxyCompactItemize}
+\item 
+std\+::shared\+\_\+ptr$<$ tesseract\+\_\+environment\+::\+Environment $>$ \mbox{\hyperlink{classtesseract__examples_1_1Example_a3adfc11c11516d57f44f226efd644301}{env\+\_\+}}
+\begin{DoxyCompactList}\small\item\em Tesseract Manager Class (Required) \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ tesseract\+\_\+visualization\+::\+Visualization $>$ \mbox{\hyperlink{classtesseract__examples_1_1Example_a082cb621c770c0b6687d9a76f6847f6a}{plotter\+\_\+}}
+\begin{DoxyCompactList}\small\item\em Tesseract Visualization Class (Optional) \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+An example of a robot leveraging OMPL RRTConnect to generate a freespace motion trajectory the Traj\+Opt to optimize. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classtesseract__examples_1_1FreespaceHybridExample_a66e7f98e52a3da016052c6bfb63d5a26}\label{classtesseract__examples_1_1FreespaceHybridExample_a66e7f98e52a3da016052c6bfb63d5a26} 
+\index{tesseract\_examples::FreespaceHybridExample@{tesseract\_examples::FreespaceHybridExample}!FreespaceHybridExample@{FreespaceHybridExample}}
+\index{FreespaceHybridExample@{FreespaceHybridExample}!tesseract\_examples::FreespaceHybridExample@{tesseract\_examples::FreespaceHybridExample}}
+\doxysubsubsection{\texorpdfstring{FreespaceHybridExample()}{FreespaceHybridExample()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily tesseract\+\_\+examples\+::\+Freespace\+Hybrid\+Example\+::\+Freespace\+Hybrid\+Example (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ tesseract\+\_\+environment\+::\+Environment $>$}]{env,  }\item[{std\+::shared\+\_\+ptr$<$ tesseract\+\_\+visualization\+::\+Visualization $>$}]{plotter = {\ttfamily nullptr},  }\item[{bool}]{ifopt = {\ttfamily false},  }\item[{bool}]{debug = {\ttfamily false},  }\item[{double}]{range = {\ttfamily 0.01},  }\item[{double}]{planning\+\_\+time = {\ttfamily 60.0} }\end{DoxyParamCaption})}
+
+\Hypertarget{classtesseract__examples_1_1FreespaceHybridExample_a6a2e6c309ce953b1c77d58984c4d545b}\label{classtesseract__examples_1_1FreespaceHybridExample_a6a2e6c309ce953b1c77d58984c4d545b} 
+\index{tesseract\_examples::FreespaceHybridExample@{tesseract\_examples::FreespaceHybridExample}!````~FreespaceHybridExample@{\texorpdfstring{$\sim$}{\string~}FreespaceHybridExample}}
+\index{````~FreespaceHybridExample@{\texorpdfstring{$\sim$}{\string~}FreespaceHybridExample}!tesseract\_examples::FreespaceHybridExample@{tesseract\_examples::FreespaceHybridExample}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}FreespaceHybridExample()}{\string~FreespaceHybridExample()}}
+{\footnotesize\ttfamily tesseract\+\_\+examples\+::\+Freespace\+Hybrid\+Example\+::\texorpdfstring{$\sim$}{\string~}\+Freespace\+Hybrid\+Example (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [default]}}
+
+\Hypertarget{classtesseract__examples_1_1FreespaceHybridExample_a40f16b301252a51293cafd903c7bd562}\label{classtesseract__examples_1_1FreespaceHybridExample_a40f16b301252a51293cafd903c7bd562} 
+\index{tesseract\_examples::FreespaceHybridExample@{tesseract\_examples::FreespaceHybridExample}!FreespaceHybridExample@{FreespaceHybridExample}}
+\index{FreespaceHybridExample@{FreespaceHybridExample}!tesseract\_examples::FreespaceHybridExample@{tesseract\_examples::FreespaceHybridExample}}
+\doxysubsubsection{\texorpdfstring{FreespaceHybridExample()}{FreespaceHybridExample()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily tesseract\+\_\+examples\+::\+Freespace\+Hybrid\+Example\+::\+Freespace\+Hybrid\+Example (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classtesseract__examples_1_1FreespaceHybridExample}{Freespace\+Hybrid\+Example}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\Hypertarget{classtesseract__examples_1_1FreespaceHybridExample_aa8a6ca5674de4250fa3408064404a9a5}\label{classtesseract__examples_1_1FreespaceHybridExample_aa8a6ca5674de4250fa3408064404a9a5} 
+\index{tesseract\_examples::FreespaceHybridExample@{tesseract\_examples::FreespaceHybridExample}!FreespaceHybridExample@{FreespaceHybridExample}}
+\index{FreespaceHybridExample@{FreespaceHybridExample}!tesseract\_examples::FreespaceHybridExample@{tesseract\_examples::FreespaceHybridExample}}
+\doxysubsubsection{\texorpdfstring{FreespaceHybridExample()}{FreespaceHybridExample()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily tesseract\+\_\+examples\+::\+Freespace\+Hybrid\+Example\+::\+Freespace\+Hybrid\+Example (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classtesseract__examples_1_1FreespaceHybridExample}{Freespace\+Hybrid\+Example}} \&\&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classtesseract__examples_1_1FreespaceHybridExample_a3a0fb1a7c2f95939b4d3c1f1a88ac6ca}\label{classtesseract__examples_1_1FreespaceHybridExample_a3a0fb1a7c2f95939b4d3c1f1a88ac6ca} 
+\index{tesseract\_examples::FreespaceHybridExample@{tesseract\_examples::FreespaceHybridExample}!operator=@{operator=}}
+\index{operator=@{operator=}!tesseract\_examples::FreespaceHybridExample@{tesseract\_examples::FreespaceHybridExample}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classtesseract__examples_1_1FreespaceHybridExample}{Freespace\+Hybrid\+Example}} \& tesseract\+\_\+examples\+::\+Freespace\+Hybrid\+Example\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classtesseract__examples_1_1FreespaceHybridExample}{Freespace\+Hybrid\+Example}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\Hypertarget{classtesseract__examples_1_1FreespaceHybridExample_a0048fa5fe5e63943786e50b7a412904b}\label{classtesseract__examples_1_1FreespaceHybridExample_a0048fa5fe5e63943786e50b7a412904b} 
+\index{tesseract\_examples::FreespaceHybridExample@{tesseract\_examples::FreespaceHybridExample}!operator=@{operator=}}
+\index{operator=@{operator=}!tesseract\_examples::FreespaceHybridExample@{tesseract\_examples::FreespaceHybridExample}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classtesseract__examples_1_1FreespaceHybridExample}{Freespace\+Hybrid\+Example}} \& tesseract\+\_\+examples\+::\+Freespace\+Hybrid\+Example\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classtesseract__examples_1_1FreespaceHybridExample}{Freespace\+Hybrid\+Example}} \&\&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\Hypertarget{classtesseract__examples_1_1FreespaceHybridExample_a2af951ff9443ae6e3930c5c4219cf05a}\label{classtesseract__examples_1_1FreespaceHybridExample_a2af951ff9443ae6e3930c5c4219cf05a} 
+\index{tesseract\_examples::FreespaceHybridExample@{tesseract\_examples::FreespaceHybridExample}!run@{run}}
+\index{run@{run}!tesseract\_examples::FreespaceHybridExample@{tesseract\_examples::FreespaceHybridExample}}
+\doxysubsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily bool tesseract\+\_\+examples\+::\+Freespace\+Hybrid\+Example\+::run (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [final]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classtesseract__examples_1_1Example_a740e02a0b018f07266b9101715430b2f}{tesseract\+\_\+examples\+::\+Example}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classtesseract__examples_1_1FreespaceHybridExample_a43bf37d5bd581e581361dad7af655d50}\label{classtesseract__examples_1_1FreespaceHybridExample_a43bf37d5bd581e581361dad7af655d50} 
+\index{tesseract\_examples::FreespaceHybridExample@{tesseract\_examples::FreespaceHybridExample}!debug\_@{debug\_}}
+\index{debug\_@{debug\_}!tesseract\_examples::FreespaceHybridExample@{tesseract\_examples::FreespaceHybridExample}}
+\doxysubsubsection{\texorpdfstring{debug\_}{debug\_}}
+{\footnotesize\ttfamily bool tesseract\+\_\+examples\+::\+Freespace\+Hybrid\+Example\+::debug\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classtesseract__examples_1_1FreespaceHybridExample_afcf89e7ba0cb4eb39368493d194f9b60}\label{classtesseract__examples_1_1FreespaceHybridExample_afcf89e7ba0cb4eb39368493d194f9b60} 
+\index{tesseract\_examples::FreespaceHybridExample@{tesseract\_examples::FreespaceHybridExample}!ifopt\_@{ifopt\_}}
+\index{ifopt\_@{ifopt\_}!tesseract\_examples::FreespaceHybridExample@{tesseract\_examples::FreespaceHybridExample}}
+\doxysubsubsection{\texorpdfstring{ifopt\_}{ifopt\_}}
+{\footnotesize\ttfamily bool tesseract\+\_\+examples\+::\+Freespace\+Hybrid\+Example\+::ifopt\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classtesseract__examples_1_1FreespaceHybridExample_a31c0a07b359cbbec684f961b362a00c6}\label{classtesseract__examples_1_1FreespaceHybridExample_a31c0a07b359cbbec684f961b362a00c6} 
+\index{tesseract\_examples::FreespaceHybridExample@{tesseract\_examples::FreespaceHybridExample}!planning\_time\_@{planning\_time\_}}
+\index{planning\_time\_@{planning\_time\_}!tesseract\_examples::FreespaceHybridExample@{tesseract\_examples::FreespaceHybridExample}}
+\doxysubsubsection{\texorpdfstring{planning\_time\_}{planning\_time\_}}
+{\footnotesize\ttfamily double tesseract\+\_\+examples\+::\+Freespace\+Hybrid\+Example\+::planning\+\_\+time\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classtesseract__examples_1_1FreespaceHybridExample_ab1669e240cd7574adf5ebb59db9224ee}\label{classtesseract__examples_1_1FreespaceHybridExample_ab1669e240cd7574adf5ebb59db9224ee} 
+\index{tesseract\_examples::FreespaceHybridExample@{tesseract\_examples::FreespaceHybridExample}!range\_@{range\_}}
+\index{range\_@{range\_}!tesseract\_examples::FreespaceHybridExample@{tesseract\_examples::FreespaceHybridExample}}
+\doxysubsubsection{\texorpdfstring{range\_}{range\_}}
+{\footnotesize\ttfamily double tesseract\+\_\+examples\+::\+Freespace\+Hybrid\+Example\+::range\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+tesseract\+\_\+examples/include/tesseract\+\_\+examples/\mbox{\hyperlink{freespace__hybrid__example_8h}{freespace\+\_\+hybrid\+\_\+example.\+h}}\item 
+tesseract\+\_\+examples/src/\mbox{\hyperlink{freespace__hybrid__example_8cpp}{freespace\+\_\+hybrid\+\_\+example.\+cpp}}\end{DoxyCompactItemize}

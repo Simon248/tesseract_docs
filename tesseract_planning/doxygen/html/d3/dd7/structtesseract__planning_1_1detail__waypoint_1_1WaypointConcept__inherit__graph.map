@@ -1,0 +1,9 @@
+<map id="tesseract_planning::detail_waypoint::WaypointConcept&lt; T &gt;" name="tesseract_planning::detail_waypoint::WaypointConcept&lt; T &gt;">
+<area shape="rect" id="Node000001" title=" " alt="" coords="257,40,432,95"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="30,5,184,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="188,32,257,47,256,52,187,37"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="10,55,204,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="220,65,256,65,256,70,220,70"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="5,104,209,130"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="187,98,256,83,257,88,188,103"/>
+</map>

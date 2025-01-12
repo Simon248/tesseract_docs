@@ -1,0 +1,11 @@
+<map id="tesseract_planning::ProfileDictionary" name="tesseract_planning::ProfileDictionary">
+<area shape="rect" id="Node000001" title="This class is used to store profiles used by various tasks." alt="" coords="646,38,776,79"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="377,5,503,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="519,27,646,46,645,51,518,32"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="333,55,547,141"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="562,78,645,65,646,70,563,83"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="178,85,255,111"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="271,96,333,96,333,101,271,101"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="5,78,129,119"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="144,96,178,96,178,101,144,101"/>
+</map>

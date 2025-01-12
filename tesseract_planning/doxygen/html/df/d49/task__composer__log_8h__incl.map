@@ -1,0 +1,25 @@
+<map id="tesseract_task_composer/core/include/tesseract_task_composer/core/task_composer_log.h" name="tesseract_task_composer/core/include/tesseract_task_composer/core/task_composer_log.h">
+<area shape="rect" id="Node000001" title=" " alt="" coords="314,5,489,76"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,235,73,261"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="315,77,262,100,210,126,130,178,67,227,63,223,127,174,207,122,260,95,312,72"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="221,139,388,165"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="373,78,327,129,323,126,369,75"/>
+<area shape="rect" id="Node000004" href="$dc/dc5/task__composer__data__storage_8h.html" title="Data storage used when executing the pipeline." alt="" coords="413,124,588,180"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="435,75,468,111,464,114,431,78"/>
+<area shape="rect" id="Node000010" title=" " alt="" coords="971,228,1096,268"/>
+<area shape="poly" id="edge12_Node000001_Node000010" title=" " alt="" coords="491,68,960,220,958,225,489,73"/>
+<area shape="poly" id="edge6_Node000004_Node000002" title=" " alt="" coords="413,180,401,182,312,197,242,203,172,211,85,230,80,232,78,227,84,225,171,205,241,197,311,191,400,177,412,174"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="96,235,286,261"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="413,182,246,233,244,228,411,177"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="309,235,356,261"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="453,183,368,230,366,225,450,178"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="380,235,490,261"/>
+<area shape="poly" id="edge7_Node000004_Node000007" title=" " alt="" coords="484,182,454,224,450,221,479,179"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="515,235,617,261"/>
+<area shape="poly" id="edge8_Node000004_Node000008" title=" " alt="" coords="521,179,551,221,546,224,517,182"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="640,228,766,268"/>
+<area shape="poly" id="edge9_Node000004_Node000009" title=" " alt="" coords="560,178,648,218,646,223,558,183"/>
+<area shape="poly" id="edge10_Node000004_Node000010" title=" " alt="" coords="589,162,755,188,956,225,955,230,754,193,588,168"/>
+<area shape="rect" id="Node000011" title=" " alt="" coords="790,228,947,268"/>
+<area shape="poly" id="edge11_Node000004_Node000011" title=" " alt="" coords="589,173,778,221,776,226,588,178"/>
+</map>

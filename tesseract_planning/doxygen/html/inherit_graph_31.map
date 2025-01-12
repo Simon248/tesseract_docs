@@ -1,0 +1,79 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="Node000000" href="$db/d41/classtesseract__planning_1_1Profile.html" title="The Profile class." alt="" coords="5,741,136,781"/>
+<area shape="rect" id="Node000001" href="$de/dfb/structProfileBase.html" title=" " alt="" coords="245,5,332,31"/>
+<area shape="poly" id="edge78_Node000000_Node000001" title=" " alt="" coords="70,725,75,577,91,372,105,268,124,172,150,94,165,64,182,40,195,29,211,22,244,15,245,20,213,27,198,34,186,44,169,66,155,96,130,174,111,268,96,373,80,577,75,725"/>
+<area shape="rect" id="Node000003" href="$d9/d9b/structProfileBase2.html" title=" " alt="" coords="241,55,336,80"/>
+<area shape="poly" id="edge80_Node000000_Node000003" title=" " alt="" coords="70,725,77,587,95,397,109,301,128,213,152,141,166,113,182,91,209,73,240,65,241,71,211,78,186,95,170,115,157,143,133,214,114,302,100,398,82,587,75,725"/>
+<area shape="rect" id="Node000005" href="$df/d53/structtesseract__planning_1_1ContactCheckProfile.html" title=" " alt="" coords="216,105,361,145"/>
+<area shape="poly" id="edge82_Node000000_Node000005" title=" " alt="" coords="71,725,80,599,100,429,115,343,133,265,155,200,168,175,182,155,197,142,214,133,217,138,200,147,186,159,172,177,160,202,138,266,120,344,105,430,86,600,76,726"/>
+<area shape="rect" id="Node000006" href="$d5/dd7/classtesseract__planning_1_1DescartesPlanProfile.html" title=" " alt="" coords="214,169,363,225"/>
+<area shape="poly" id="edge83_Node000000_Node000006" title=" " alt="" coords="72,725,85,615,107,469,121,396,139,329,159,274,182,235,196,222,212,212,215,217,199,226,186,239,164,276,144,331,127,397,112,470,90,615,78,725"/>
+<area shape="rect" id="Node000008" href="$d7/d7a/classtesseract__planning_1_1DescartesSolverProfile.html" title=" " alt="" coords="209,249,368,305"/>
+<area shape="poly" id="edge85_Node000000_Node000008" title=" " alt="" coords="74,725,89,630,112,508,143,393,162,347,182,315,207,296,210,300,186,319,166,349,148,394,117,509,94,631,79,726"/>
+<area shape="rect" id="Node000010" href="$d3/df1/structtesseract__planning_1_1FixStateBoundsProfile.html" title=" " alt="" coords="211,329,366,369"/>
+<area shape="poly" id="edge87_Node000000_Node000010" title=" " alt="" coords="69,725,74,653,91,561,105,512,124,465,150,420,182,380,209,362,212,366,185,384,154,423,129,467,110,514,96,562,80,654,75,725"/>
+<area shape="rect" id="Node000011" href="$d3/db2/structtesseract__planning_1_1FixStateCollisionProfile.html" title=" " alt="" coords="208,394,369,435"/>
+<area shape="poly" id="edge88_Node000000_Node000011" title=" " alt="" coords="72,725,80,664,99,589,113,550,131,512,154,476,182,444,206,428,209,432,185,448,158,479,136,514,118,552,104,591,86,665,77,725"/>
+<area shape="rect" id="Node000012" href="$d1/d35/structtesseract__planning_1_1IterativeSplineParameterizationProfile.html" title=" " alt="" coords="185,458,392,514"/>
+<area shape="poly" id="edge89_Node000000_Node000012" title=" " alt="" coords="77,725,91,680,112,626,142,572,182,524,197,512,201,517,186,528,146,575,117,629,96,682,82,726"/>
+<area shape="rect" id="Node000013" href="$d1/dce/structtesseract__planning_1_1MinLengthProfile.html" title=" " alt="" coords="223,538,354,579"/>
+<area shape="poly" id="edge90_Node000000_Node000013" title=" " alt="" coords="84,725,122,657,149,620,182,589,221,569,224,574,185,594,153,624,126,659,88,728"/>
+<area shape="rect" id="Node000014" href="$dc/d55/classtesseract__planning_1_1OMPLPlanProfile.html" title=" " alt="" coords="223,603,354,644"/>
+<area shape="poly" id="edge91_Node000000_Node000014" title=" " alt="" coords="97,727,135,689,182,655,222,637,224,642,185,659,139,693,101,731"/>
+<area shape="rect" id="Node000016" href="$dd/da8/structtesseract__planning_1_1ProfileSwitchProfile.html" title=" " alt="" coords="219,669,358,709"/>
+<area shape="poly" id="edge93_Node000000_Node000016" title=" " alt="" coords="142,732,183,718,218,707,219,712,185,723,144,737"/>
+<area shape="rect" id="Node000017" href="$d1/d66/structtesseract__planning_1_1RuckigTrajectorySmoothingCompositeProfile.html" title=" " alt="" coords="195,733,382,789"/>
+<area shape="poly" id="edge94_Node000000_Node000017" title=" " alt="" coords="151,758,195,758,195,764,151,764"/>
+<area shape="rect" id="Node000018" href="$d7/d33/structtesseract__planning_1_1RuckigTrajectorySmoothingMoveProfile.html" title=" " alt="" coords="195,813,382,869"/>
+<area shape="poly" id="edge95_Node000000_Node000018" title=" " alt="" coords="143,784,212,810,210,815,141,789"/>
+<area shape="rect" id="Node000019" href="$d7/da7/classtesseract__planning_1_1SimplePlannerCompositeProfile.html" title=" " alt="" coords="184,893,393,933"/>
+<area shape="poly" id="edge96_Node000000_Node000019" title=" " alt="" coords="97,792,135,837,159,859,185,879,206,890,204,894,182,883,156,864,132,841,93,796"/>
+<area shape="rect" id="Node000020" href="$d3/d4b/classtesseract__planning_1_1SimplePlannerPlanProfile.html" title="Plan Profile for the simple planner. It defines some functions that handle each of the waypoint cases..." alt="" coords="202,958,375,999"/>
+<area shape="poly" id="edge97_Node000000_Node000020" title=" " alt="" coords="86,794,102,829,123,869,151,909,185,943,205,955,202,960,182,947,147,912,119,872,97,832,82,796"/>
+<area shape="rect" id="Node000025" href="$da/d07/structtesseract__planning_1_1TimeOptimalParameterizationProfile.html" title=" " alt="" coords="189,1022,388,1078"/>
+<area shape="poly" id="edge102_Node000000_Node000025" title=" " alt="" coords="81,796,94,843,115,900,145,958,164,984,185,1008,200,1020,197,1024,182,1012,160,988,140,961,110,902,89,845,76,797"/>
+<area shape="rect" id="Node000026" href="$da/df1/classtesseract__planning_1_1TrajOptCompositeProfile.html" title=" " alt="" coords="204,1102,373,1143"/>
+<area shape="poly" id="edge103_Node000000_Node000026" title=" " alt="" coords="76,796,84,859,102,937,116,978,134,1018,157,1055,185,1088,205,1102,202,1107,182,1092,153,1059,130,1021,111,980,97,939,79,860,71,797"/>
+<area shape="rect" id="Node000028" href="$da/d8c/classtesseract__planning_1_1TrajOptIfoptCompositeProfile.html" title=" " alt="" coords="191,1167,386,1208"/>
+<area shape="poly" id="edge105_Node000000_Node000028" title=" " alt="" coords="74,797,78,870,94,966,108,1016,128,1065,153,1111,186,1152,201,1165,198,1169,182,1156,149,1114,123,1068,103,1018,89,967,73,871,69,797"/>
+<area shape="rect" id="Node000030" href="$d2/d10/classtesseract__planning_1_1TrajOptIfoptPlanProfile.html" title=" " alt="" coords="209,1233,368,1273"/>
+<area shape="poly" id="edge107_Node000000_Node000030" title=" " alt="" coords="79,796,92,894,115,1020,147,1140,165,1186,186,1218,211,1235,207,1240,182,1221,161,1189,142,1142,110,1022,87,895,73,797"/>
+<area shape="rect" id="Node000032" href="$d9/df4/classtesseract__planning_1_1TrajOptIfoptSolverProfile.html" title=" " alt="" coords="204,1298,373,1339"/>
+<area shape="poly" id="edge109_Node000000_Node000032" title=" " alt="" coords="78,796,89,907,111,1053,125,1126,143,1192,163,1246,186,1283,205,1298,202,1302,182,1287,158,1248,138,1194,120,1127,106,1054,84,908,72,797"/>
+<area shape="rect" id="Node000034" href="$d2/dd4/classtesseract__planning_1_1TrajOptPlanProfile.html" title=" " alt="" coords="222,1363,355,1404"/>
+<area shape="poly" id="edge111_Node000000_Node000034" title=" " alt="" coords="77,796,86,919,107,1085,121,1168,139,1244,161,1306,186,1348,203,1362,223,1372,221,1376,200,1367,182,1352,156,1308,134,1245,116,1169,101,1085,81,920,71,797"/>
+<area shape="rect" id="Node000036" href="$d7/d0a/classtesseract__planning_1_1TrajOptSolverProfile.html" title=" " alt="" coords="217,1429,360,1469"/>
+<area shape="poly" id="edge113_Node000000_Node000036" title=" " alt="" coords="76,797,84,932,102,1117,117,1210,135,1296,158,1366,171,1393,186,1414,200,1426,218,1435,215,1440,197,1431,182,1417,167,1396,153,1368,130,1297,112,1211,97,1117,79,932,71,797"/>
+<area shape="rect" id="Node000038" href="$d9/dd4/structtesseract__planning_1_1UpsampleTrajectoryProfile.html" title=" " alt="" coords="199,1494,378,1535"/>
+<area shape="poly" id="edge115_Node000000_Node000038" title=" " alt="" coords="75,797,81,944,99,1148,113,1252,132,1347,156,1426,170,1456,186,1479,200,1491,196,1495,182,1483,165,1459,151,1428,126,1349,107,1253,93,1149,76,944,70,797"/>
+<area shape="rect" id="Node000002" href="$d2/da1/structProfileTest.html" title=" " alt="" coords="504,5,587,31"/>
+<area shape="poly" id="edge79_Node000001_Node000002" title=" " alt="" coords="347,16,504,16,504,21,347,21"/>
+<area shape="rect" id="Node000004" href="$d9/d97/structProfileTest2.html" title=" " alt="" coords="501,55,591,80"/>
+<area shape="poly" id="edge81_Node000003_Node000004" title=" " alt="" coords="351,65,500,65,500,70,351,70"/>
+<area shape="rect" id="Node000007" href="$d0/d5b/classtesseract__planning_1_1DescartesDefaultPlanProfile.html" title=" " alt="" coords="451,169,640,225"/>
+<area shape="poly" id="edge84_Node000006_Node000007" title=" " alt="" coords="378,194,451,194,451,200,378,200"/>
+<area shape="rect" id="Node000009" href="$d3/dfa/classtesseract__planning_1_1DescartesLadderGraphSolverProfile.html" title=" " alt="" coords="447,249,645,305"/>
+<area shape="poly" id="edge86_Node000008_Node000009" title=" " alt="" coords="384,274,446,274,446,280,384,280"/>
+<area shape="rect" id="Node000015" href="$db/d6e/classtesseract__planning_1_1OMPLRealVectorPlanProfile.html" title="OMPL does not support the concept of multi waypoint planning like descartes and trajopt...." alt="" coords="450,603,641,644"/>
+<area shape="poly" id="edge92_Node000014_Node000015" title=" " alt="" coords="369,621,450,621,450,626,369,626"/>
+<area shape="rect" id="Node000021" href="$d4/da8/classtesseract__planning_1_1SimplePlannerFixedSizeAssignPlanProfile.html" title=" " alt="" coords="442,786,649,842"/>
+<area shape="poly" id="edge98_Node000020_Node000021" title=" " alt="" coords="385,947,391,943,408,921,415,899,422,876,439,852,455,840,459,845,443,856,426,878,420,901,413,924,395,947,388,952"/>
+<area shape="rect" id="Node000022" href="$d6/dec/classtesseract__planning_1_1SimplePlannerFixedSizePlanProfile.html" title=" " alt="" coords="449,866,642,922"/>
+<area shape="poly" id="edge99_Node000020_Node000022" title=" " alt="" coords="368,950,392,942,459,920,461,925,394,947,370,955"/>
+<area shape="rect" id="Node000023" href="$d7/d22/classtesseract__planning_1_1SimplePlannerLVSNoIKPlanProfile.html" title=" " alt="" coords="449,946,642,1002"/>
+<area shape="poly" id="edge100_Node000020_Node000023" title=" " alt="" coords="391,974,449,973,449,978,391,979"/>
+<area shape="rect" id="Node000024" href="$d4/d21/classtesseract__planning_1_1SimplePlannerLVSPlanProfile.html" title=" " alt="" coords="446,1026,645,1067"/>
+<area shape="poly" id="edge101_Node000020_Node000024" title=" " alt="" coords="383,1000,467,1023,465,1028,382,1006"/>
+<area shape="rect" id="Node000027" href="$db/da2/classtesseract__planning_1_1TrajOptDefaultCompositeProfile.html" title=" " alt="" coords="441,1091,650,1132"/>
+<area shape="poly" id="edge104_Node000026_Node000027" title=" " alt="" coords="388,1115,441,1113,441,1119,388,1121"/>
+<area shape="rect" id="Node000029" href="$d9/dff/classtesseract__planning_1_1TrajOptIfoptDefaultCompositeProfile.html" title=" " alt="" coords="446,1156,645,1211"/>
+<area shape="poly" id="edge106_Node000028_Node000029" title=" " alt="" coords="401,1183,445,1182,445,1188,401,1188"/>
+<area shape="rect" id="Node000031" href="$d7/d10/classtesseract__planning_1_1TrajOptIfoptDefaultPlanProfile.html" title=" " alt="" coords="446,1235,645,1276"/>
+<area shape="poly" id="edge108_Node000030_Node000031" title=" " alt="" coords="383,1251,445,1252,445,1257,383,1256"/>
+<area shape="rect" id="Node000033" href="$dc/d1f/classtesseract__planning_1_1TrajOptIfoptOSQPSolverProfile.html" title="The contains the default solver parameters available for setting up TrajOpt." alt="" coords="442,1301,649,1341"/>
+<area shape="poly" id="edge110_Node000032_Node000033" title=" " alt="" coords="388,1317,441,1317,441,1322,388,1322"/>
+<area shape="rect" id="Node000035" href="$d1/d50/classtesseract__planning_1_1TrajOptDefaultPlanProfile.html" title=" " alt="" coords="459,1366,632,1407"/>
+<area shape="poly" id="edge112_Node000034_Node000035" title=" " alt="" coords="370,1382,458,1383,458,1388,370,1387"/>
+<area shape="rect" id="Node000037" href="$db/d52/classtesseract__planning_1_1TrajOptOSQPSolverProfile.html" title="The contains the OSQP Solver and Trust Region Parameters available for setting up TrajOpt." alt="" coords="455,1431,636,1472"/>
+<area shape="poly" id="edge114_Node000036_Node000037" title=" " alt="" coords="376,1447,455,1448,455,1453,376,1452"/>
+</map>

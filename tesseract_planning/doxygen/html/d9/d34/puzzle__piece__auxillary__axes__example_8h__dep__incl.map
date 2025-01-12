@@ -1,0 +1,9 @@
+<map id="tesseract_examples/include/tesseract_examples/puzzle_piece_auxillary_axes_example.h" name="tesseract_examples/include/tesseract_examples/puzzle_piece_auxillary_axes_example.h">
+<area shape="rect" id="Node000001" title="An example of a robot with a two axis position leveraging trajopt and tesseract to leverage all DOF t..." alt="" coords="198,5,384,76"/>
+<area shape="rect" id="Node000002" href="$d3/d7e/puzzle__piece__auxillary__axes__example_8cpp.html" title="Puzzle piece auxillary axes implementation." alt="" coords="5,124,180,180"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="216,86,143,126,141,121,213,82"/>
+<area shape="rect" id="Node000003" href="$d2/d44/puzzle__piece__auxillary__axes__example__node_8cpp.html" title="uzzle piece auxillary axes example node" alt="" coords="204,124,378,180"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="294,92,294,124,289,124,289,92"/>
+<area shape="rect" id="Node000004" href="$d4/d0b/puzzle__piece__auxillary__axes__example__unit_8cpp.html" title=" " alt="" coords="402,124,580,180"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="370,82,442,121,440,126,367,86"/>
+</map>

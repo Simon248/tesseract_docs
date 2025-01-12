@@ -1,0 +1,7 @@
+<map id="tesseract_planning::FixStateCollisionProfile" name="tesseract_planning::FixStateCollisionProfile">
+<area shape="rect" id="Node000001" title=" " alt="" coords="86,109,247,150"/>
+<area shape="rect" id="Node000002" href="$db/d41/classtesseract__planning_1_1Profile.html" title="The Profile class." alt="" coords="5,5,136,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="101,55,150,107,146,110,97,59"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="160,13,365,39"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="243,52,187,110,183,107,239,48"/>
+</map>

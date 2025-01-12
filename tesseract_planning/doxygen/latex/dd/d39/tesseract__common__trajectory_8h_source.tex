@@ -1,0 +1,44 @@
+\doxysection{tesseract\+\_\+common\+\_\+trajectory.\+h}
+\hypertarget{tesseract__common__trajectory_8h_source}{}\label{tesseract__common__trajectory_8h_source}\index{tesseract\_time\_parameterization/core/include/tesseract\_time\_parameterization/core/tesseract\_common\_trajectory.h@{tesseract\_time\_parameterization/core/include/tesseract\_time\_parameterization/core/tesseract\_common\_trajectory.h}}
+\mbox{\hyperlink{tesseract__common__trajectory_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00026\ \textcolor{preprocessor}{\#ifndef\ TESSERACT\_COMMON\_TRAJECTORY\_H}}
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#define\ TESSERACT\_COMMON\_TRAJECTORY\_H}}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{trajectory__container_8h}{tesseract\_time\_parameterization/core/trajectory\_container.h}}>}}
+\DoxyCodeLine{00030\ \textcolor{preprocessor}{\#include\ <tesseract\_common/fwd.h>}}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacetesseract__planning}{tesseract\_planning}}}
+\DoxyCodeLine{00033\ \{}
+\DoxyCodeLine{00034\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classtesseract__planning_1_1TesseractCommonTrajectory}{TesseractCommonTrajectory}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classtesseract__planning_1_1TrajectoryContainer}{TrajectoryContainer}}}
+\DoxyCodeLine{00035\ \{}
+\DoxyCodeLine{00036\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00037\ \ \ \mbox{\hyperlink{classtesseract__planning_1_1TesseractCommonTrajectory}{TesseractCommonTrajectory}}(tesseract\_common::JointTrajectory\&\ \mbox{\hyperlink{iterative__spline__tests_8cpp_a42770b019b3c810751d40ab5f2f25e20}{trajectory}});}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ \ \ \textcolor{keyword}{const}\ Eigen::VectorXd\&\ \mbox{\hyperlink{trajopt__planner__tests_8cpp_a5224d9f3f38aae0c4028178a2f3604f3}{getPosition}}(Eigen::Index\ i)\ \textcolor{keyword}{const}\ \textcolor{keyword}{override}\ \textcolor{keyword}{final};}
+\DoxyCodeLine{00040\ \ \ Eigen::VectorXd\&\ \mbox{\hyperlink{trajopt__planner__tests_8cpp_a5224d9f3f38aae0c4028178a2f3604f3}{getPosition}}(Eigen::Index\ i)\ \textcolor{keyword}{override}\ \textcolor{keyword}{final};}
+\DoxyCodeLine{00041\ \ \ \textcolor{keyword}{const}\ Eigen::VectorXd\&\ \mbox{\hyperlink{classtesseract__planning_1_1TesseractCommonTrajectory_a44b984ebb4c59cb910324c177315e0cc}{getVelocity}}(Eigen::Index\ i)\ \textcolor{keyword}{const}\ \textcolor{keyword}{override}\ \textcolor{keyword}{final};}
+\DoxyCodeLine{00042\ \ \ Eigen::VectorXd\&\ \mbox{\hyperlink{classtesseract__planning_1_1TesseractCommonTrajectory_a44b984ebb4c59cb910324c177315e0cc}{getVelocity}}(Eigen::Index\ i)\ \textcolor{keyword}{override}\ \textcolor{keyword}{final};}
+\DoxyCodeLine{00043\ \ \ \textcolor{keyword}{const}\ Eigen::VectorXd\&\ \mbox{\hyperlink{classtesseract__planning_1_1TesseractCommonTrajectory_aff8da43281a951b422fc93124c9632fe}{getAcceleration}}(Eigen::Index\ i)\ \textcolor{keyword}{const}\ \textcolor{keyword}{override}\ \textcolor{keyword}{final};}
+\DoxyCodeLine{00044\ \ \ Eigen::VectorXd\&\ \mbox{\hyperlink{classtesseract__planning_1_1TesseractCommonTrajectory_aff8da43281a951b422fc93124c9632fe}{getAcceleration}}(Eigen::Index\ i)\ \textcolor{keyword}{override}\ \textcolor{keyword}{final};}
+\DoxyCodeLine{00045\ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classtesseract__planning_1_1TesseractCommonTrajectory_a83fc09458a6729131da3fb34fff283fe}{getTimeFromStart}}(Eigen::Index\ i)\ \textcolor{keyword}{const}\ \textcolor{keyword}{final};}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00047\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classtesseract__planning_1_1TesseractCommonTrajectory_a616e2ff51fb510ca5f5c9bccb1ed40cb}{setData}}(Eigen::Index\ i,}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ Eigen::VectorXd\&\ velocity,}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ Eigen::VectorXd\&\ acceleration,}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ time)\ \textcolor{keyword}{override}\ \textcolor{keyword}{final};}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00052\ \ \ Eigen::Index\ \mbox{\hyperlink{classtesseract__planning_1_1TesseractCommonTrajectory_a1bd9caf9e73b95c09262ed8bf2a0e439}{size}}()\ \textcolor{keyword}{const}\ \textcolor{keyword}{override}\ \textcolor{keyword}{final};}
+\DoxyCodeLine{00053\ \ \ Eigen::Index\ \mbox{\hyperlink{classtesseract__planning_1_1TesseractCommonTrajectory_af6786ec396abf3620a1c3d7fd6982868}{dof}}()\ \textcolor{keyword}{const}\ \textcolor{keyword}{override}\ \textcolor{keyword}{final};}
+\DoxyCodeLine{00054\ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classtesseract__planning_1_1TesseractCommonTrajectory_aeab002984c6ec4a8bb2ce4e9431cf77b}{empty}}()\ \textcolor{keyword}{const}\ \textcolor{keyword}{override}\ \textcolor{keyword}{final};}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00056\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00057\ \ \ tesseract\_common::JointTrajectory\&\ \mbox{\hyperlink{classtesseract__planning_1_1TesseractCommonTrajectory_a086c7393639e3f48bc4e9499d1b1eb9f}{trajectory\_}};}
+\DoxyCodeLine{00058\ \ \ Eigen::Index\ \mbox{\hyperlink{classtesseract__planning_1_1TesseractCommonTrajectory_a2bace8ade7f046ca15fef485917cb11c}{dof\_}};}
+\DoxyCodeLine{00059\ \};}
+\DoxyCodeLine{00060\ \}\ \ \textcolor{comment}{//\ namespace\ tesseract\_planning}}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00062\ \textcolor{preprocessor}{\#endif\ \ }\textcolor{comment}{//\ TESSERACT\_COMMON\_TRAJECTORY\_H}}
+
+\end{DoxyCode}

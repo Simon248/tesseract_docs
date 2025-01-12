@@ -1,0 +1,9 @@
+<map id="tesseract_examples::FreespaceHybridExample" name="tesseract_examples::FreespaceHybridExample">
+<area shape="rect" id="Node000001" title="An example of a robot leveraging OMPL RRTConnect to generate a freespace motion trajectory the TrajOp..." alt="" coords="475,39,650,79"/>
+<area shape="rect" id="Node000002" href="$d3/d3b/classtesseract__examples_1_1Example.html" title="The Example base class." alt="" coords="289,39,426,79"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="442,56,475,56,475,62,442,62"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="6,5,194,46"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="210,37,288,47,288,53,209,43"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="5,71,195,111"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="210,75,288,65,289,70,210,80"/>
+</map>

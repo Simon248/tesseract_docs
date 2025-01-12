@@ -1,0 +1,11 @@
+<map id="tesseract_planning::DescartesDefaultPlanProfile&lt; FloatType &gt;" name="tesseract_planning::DescartesDefaultPlanProfile&lt; FloatType &gt;">
+<area shape="rect" id="Node000001" title=" " alt="" coords="53,214,242,270"/>
+<area shape="rect" id="Node000002" href="$d5/dd7/classtesseract__planning_1_1DescartesPlanProfile.html" title=" " alt="" coords="5,95,154,151"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="105,163,134,212,129,215,101,166"/>
+<area shape="rect" id="Node000003" href="$db/d41/classtesseract__planning_1_1Profile.html" title="The Profile class." alt="" coords="10,5,141,46"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="80,62,81,95,76,95,74,62"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="185,110,262,136"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="209,151,167,215,163,212,205,148"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="165,5,288,46"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="228,62,226,110,221,110,223,62"/>
+</map>

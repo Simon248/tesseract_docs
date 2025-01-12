@@ -1,0 +1,204 @@
+\doxysection{interpolation.\+h}
+\hypertarget{interpolation_8h_source}{}\label{interpolation_8h_source}\index{tesseract\_motion\_planners/simple/include/tesseract\_motion\_planners/simple/interpolation.h@{tesseract\_motion\_planners/simple/include/tesseract\_motion\_planners/simple/interpolation.h}}
+\mbox{\hyperlink{interpolation_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00026\ \textcolor{preprocessor}{\#ifndef\ TESSERACT\_MOTION\_PLANNERS\_INTERPOLATION\_H}}
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#define\ TESSERACT\_MOTION\_PLANNERS\_INTERPOLATION\_H}}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#include\ <tesseract\_common/macros.h>}}
+\DoxyCodeLine{00030\ TESSERACT\_COMMON\_IGNORE\_WARNINGS\_PUSH}
+\DoxyCodeLine{00031\ \textcolor{preprocessor}{\#include\ <Eigen/Geometry>}}
+\DoxyCodeLine{00032\ \textcolor{preprocessor}{\#include\ <memory>}}
+\DoxyCodeLine{00033\ \mbox{\hyperlink{namespaceTESSERACT__COMMON__IGNORE__WARNINGS__POP}{TESSERACT\_COMMON\_IGNORE\_WARNINGS\_POP}}}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ \textcolor{preprocessor}{\#include\ <tesseract\_common/fwd.h>}}
+\DoxyCodeLine{00036\ \textcolor{preprocessor}{\#include\ <tesseract\_scene\_graph/fwd.h>}}
+\DoxyCodeLine{00037\ \textcolor{preprocessor}{\#include\ <tesseract\_environment/fwd.h>}}
+\DoxyCodeLine{00038\ \textcolor{preprocessor}{\#include\ <tesseract\_kinematics/core/fwd.h>}}
+\DoxyCodeLine{00039\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{tesseract__command__language_2include_2tesseract__command__language_2fwd_8h}{tesseract\_command\_language/fwd.h}}>}}
+\DoxyCodeLine{00040\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{tesseract__motion__planners_2core_2include_2tesseract__motion__planners_2core_2fwd_8h}{tesseract\_motion\_planners/core/fwd.h}}>}}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00042\ \textcolor{preprocessor}{\#include\ <tesseract\_common/eigen\_types.h>}}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacetesseract__planning}{tesseract\_planning}}}
+\DoxyCodeLine{00045\ \{}
+\DoxyCodeLine{00047\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structtesseract__planning_1_1JointGroupInstructionInfo}{JointGroupInstructionInfo}}}
+\DoxyCodeLine{00048\ \{}
+\DoxyCodeLine{00049\ \ \ \mbox{\hyperlink{structtesseract__planning_1_1JointGroupInstructionInfo}{JointGroupInstructionInfo}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{structtesseract__planning_1_1MoveInstructionPoly}{MoveInstructionPoly}}\&\ plan\_instruction,}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ tesseract\_environment::Environment\&\ \mbox{\hyperlink{basic__cartesian__example__unit_8cpp_a96ce750ee22ecbf4d17cc6cf146d9514}{env}},}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ tesseract\_common::ManipulatorInfo\&\ \mbox{\hyperlink{command__language__utils__unit_8cpp_af21d30c87e87931298afb1eb6f703551}{manip\_info}});}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00053\ \ \ \mbox{\hyperlink{structtesseract__planning_1_1JointGroupInstructionInfo_a5a8ea4e4eb870ba71e4355abcbd2a4e2}{\string~JointGroupInstructionInfo}}();}
+\DoxyCodeLine{00054\ \ \ \mbox{\hyperlink{structtesseract__planning_1_1JointGroupInstructionInfo_ac6e306ee2b8f314c8bfc5e8e0d9edcdc}{JointGroupInstructionInfo}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{structtesseract__planning_1_1JointGroupInstructionInfo}{JointGroupInstructionInfo}}\&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00055\ \ \ \mbox{\hyperlink{structtesseract__planning_1_1JointGroupInstructionInfo}{JointGroupInstructionInfo}}\&\ \mbox{\hyperlink{structtesseract__planning_1_1JointGroupInstructionInfo_aeb8e1839ffef3270a897abc32c99dafc}{operator=}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{structtesseract__planning_1_1JointGroupInstructionInfo}{JointGroupInstructionInfo}}\&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00056\ \ \ \mbox{\hyperlink{structtesseract__planning_1_1JointGroupInstructionInfo_a3c47b95e9dd6d5132d262c7deb11c81b}{JointGroupInstructionInfo}}(\mbox{\hyperlink{structtesseract__planning_1_1JointGroupInstructionInfo}{JointGroupInstructionInfo}}\&\&)\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00057\ \ \ \mbox{\hyperlink{structtesseract__planning_1_1JointGroupInstructionInfo}{JointGroupInstructionInfo}}\&\ \mbox{\hyperlink{structtesseract__planning_1_1JointGroupInstructionInfo_a80bb2cae67a9b95f544b40578a807379}{operator=}}(\mbox{\hyperlink{structtesseract__planning_1_1JointGroupInstructionInfo}{JointGroupInstructionInfo}}\&\&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00059\ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{structtesseract__planning_1_1MoveInstructionPoly}{MoveInstructionPoly}}\&\ \mbox{\hyperlink{structtesseract__planning_1_1JointGroupInstructionInfo_ae63daf07346ec6b72ae961ee56fe2788}{instruction}};}
+\DoxyCodeLine{00060\ \ \ std::shared\_ptr<const\ tesseract\_kinematics::JointGroup>\ \mbox{\hyperlink{structtesseract__planning_1_1JointGroupInstructionInfo_aa93210f83e317abc44eeb2cd5b419e16}{manip}};}
+\DoxyCodeLine{00061\ \ \ std::string\ \mbox{\hyperlink{structtesseract__planning_1_1JointGroupInstructionInfo_a28b9536a0b150e7252039d7fc49189f3}{working\_frame}};}
+\DoxyCodeLine{00062\ \ \ Eigen::Isometry3d\ \mbox{\hyperlink{structtesseract__planning_1_1JointGroupInstructionInfo_afb7eab2f34a756855ff5027643e00a36}{working\_frame\_transform}}\{\ Eigen::Isometry3d::Identity()\ \};}
+\DoxyCodeLine{00063\ \ \ std::string\ \mbox{\hyperlink{structtesseract__planning_1_1JointGroupInstructionInfo_a9be5829f56e092d8f6e66fd6a1d34ff4}{tcp\_frame}};}
+\DoxyCodeLine{00064\ \ \ Eigen::Isometry3d\ \mbox{\hyperlink{structtesseract__planning_1_1JointGroupInstructionInfo_a03227d4a466c0a55da1baa88c8b7645a}{tcp\_offset}}\{\ Eigen::Isometry3d::Identity()\ \};}
+\DoxyCodeLine{00065\ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{structtesseract__planning_1_1JointGroupInstructionInfo_a39bc11f28bfbbf5fe8943bc7e5b1c112}{has\_cartesian\_waypoint}}\{\ \textcolor{keyword}{false}\ \};}
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00071\ \ \ Eigen::Isometry3d\ \mbox{\hyperlink{structtesseract__planning_1_1JointGroupInstructionInfo_a5033bc1163757be1b484d02bb68ddf87}{getWorkingFrame}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00079\ \ \ Eigen::Isometry3d\ \mbox{\hyperlink{structtesseract__planning_1_1JointGroupInstructionInfo_ac2321b08926c7f4a2ceafb1f095e0f51}{calcCartesianPose}}(\textcolor{keyword}{const}\ Eigen::VectorXd\&\ \mbox{\hyperlink{command__language__utils__unit_8cpp_a83ecd9e2360f26bfc3430d39a228afe6}{jp}},\ \textcolor{keywordtype}{bool}\ in\_world\ =\ \textcolor{keyword}{true})\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00080\ }
+\DoxyCodeLine{00087\ \ \ Eigen::Isometry3d\ \mbox{\hyperlink{structtesseract__planning_1_1JointGroupInstructionInfo_aa4bc29aa58b110da65cdbefe6f818fc6}{extractCartesianPose}}(\textcolor{keywordtype}{bool}\ in\_world\ =\ \textcolor{keyword}{true})\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00088\ }
+\DoxyCodeLine{00094\ \ \ \textcolor{keyword}{const}\ Eigen::VectorXd\&\ \mbox{\hyperlink{structtesseract__planning_1_1JointGroupInstructionInfo_a349a09bf21a6b8847f543dbb3d468b17}{extractJointPosition}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00095\ \};}
+\DoxyCodeLine{00096\ }
+\DoxyCodeLine{00098\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structtesseract__planning_1_1KinematicGroupInstructionInfo}{KinematicGroupInstructionInfo}}}
+\DoxyCodeLine{00099\ \{}
+\DoxyCodeLine{00100\ \ \ \mbox{\hyperlink{structtesseract__planning_1_1KinematicGroupInstructionInfo}{KinematicGroupInstructionInfo}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{structtesseract__planning_1_1MoveInstructionPoly}{MoveInstructionPoly}}\&\ plan\_instruction,}
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ tesseract\_environment::Environment\&\ \mbox{\hyperlink{basic__cartesian__example__unit_8cpp_a96ce750ee22ecbf4d17cc6cf146d9514}{env}},}
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ tesseract\_common::ManipulatorInfo\&\ \mbox{\hyperlink{command__language__utils__unit_8cpp_af21d30c87e87931298afb1eb6f703551}{manip\_info}});}
+\DoxyCodeLine{00103\ }
+\DoxyCodeLine{00104\ \ \ \mbox{\hyperlink{structtesseract__planning_1_1KinematicGroupInstructionInfo_a36cfcf6f2306d13815897494531899ab}{\string~KinematicGroupInstructionInfo}}();}
+\DoxyCodeLine{00105\ \ \ \mbox{\hyperlink{structtesseract__planning_1_1KinematicGroupInstructionInfo_adde99895d85978dffbccc0c5ad18513e}{KinematicGroupInstructionInfo}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{structtesseract__planning_1_1KinematicGroupInstructionInfo}{KinematicGroupInstructionInfo}}\&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00106\ \ \ \mbox{\hyperlink{structtesseract__planning_1_1KinematicGroupInstructionInfo}{KinematicGroupInstructionInfo}}\&\ \mbox{\hyperlink{structtesseract__planning_1_1KinematicGroupInstructionInfo_a07dcfea7c0b948dd72ec106912d6d7b0}{operator=}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{structtesseract__planning_1_1KinematicGroupInstructionInfo}{KinematicGroupInstructionInfo}}\&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00107\ \ \ \mbox{\hyperlink{structtesseract__planning_1_1KinematicGroupInstructionInfo_a03bda6f3b90547a4c48a83d42248780e}{KinematicGroupInstructionInfo}}(\mbox{\hyperlink{structtesseract__planning_1_1KinematicGroupInstructionInfo}{KinematicGroupInstructionInfo}}\&\&)\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00108\ \ \ \mbox{\hyperlink{structtesseract__planning_1_1KinematicGroupInstructionInfo}{KinematicGroupInstructionInfo}}\&\ \mbox{\hyperlink{structtesseract__planning_1_1KinematicGroupInstructionInfo_a71f82341fd12c7228ec555f7e97288cb}{operator=}}(\mbox{\hyperlink{structtesseract__planning_1_1KinematicGroupInstructionInfo}{KinematicGroupInstructionInfo}}\&\&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00109\ }
+\DoxyCodeLine{00110\ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{structtesseract__planning_1_1MoveInstructionPoly}{MoveInstructionPoly}}\&\ \mbox{\hyperlink{structtesseract__planning_1_1KinematicGroupInstructionInfo_ae48a8b5bfbfbace4d7367f28e4a7f1a9}{instruction}};}
+\DoxyCodeLine{00111\ \ \ std::shared\_ptr<const\ tesseract\_kinematics::KinematicGroup>\ \mbox{\hyperlink{structtesseract__planning_1_1KinematicGroupInstructionInfo_ad767e26af2c21cb19f4681d0876cc328}{manip}};}
+\DoxyCodeLine{00112\ \ \ std::string\ \mbox{\hyperlink{structtesseract__planning_1_1KinematicGroupInstructionInfo_a6d4e59f4dbad3edf61f24921f0bab51d}{working\_frame}};}
+\DoxyCodeLine{00113\ \ \ Eigen::Isometry3d\ \mbox{\hyperlink{structtesseract__planning_1_1KinematicGroupInstructionInfo_add17562db1c924927e11fc5bd5bd95ef}{working\_frame\_transform}}\{\ Eigen::Isometry3d::Identity()\ \};}
+\DoxyCodeLine{00114\ \ \ std::string\ \mbox{\hyperlink{structtesseract__planning_1_1KinematicGroupInstructionInfo_a8e019f911a0a76de8d56a6e8f17c7638}{tcp\_frame}};}
+\DoxyCodeLine{00115\ \ \ Eigen::Isometry3d\ \mbox{\hyperlink{structtesseract__planning_1_1KinematicGroupInstructionInfo_af9126c862eb98c69d6813c81a87b97df}{tcp\_offset}}\{\ Eigen::Isometry3d::Identity()\ \};}
+\DoxyCodeLine{00116\ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{structtesseract__planning_1_1KinematicGroupInstructionInfo_af3bf322bd93d2d0e95c216b997962efe}{has\_cartesian\_waypoint}}\{\ \textcolor{keyword}{false}\ \};}
+\DoxyCodeLine{00117\ }
+\DoxyCodeLine{00124\ \ \ Eigen::Isometry3d\ \mbox{\hyperlink{structtesseract__planning_1_1KinematicGroupInstructionInfo_afcb9e3d4e318c590ff2e5002e9217f56}{calcCartesianPose}}(\textcolor{keyword}{const}\ Eigen::VectorXd\&\ \mbox{\hyperlink{command__language__utils__unit_8cpp_a83ecd9e2360f26bfc3430d39a228afe6}{jp}},\ \textcolor{keywordtype}{bool}\ in\_world\ =\ \textcolor{keyword}{true})\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00125\ }
+\DoxyCodeLine{00132\ \ \ Eigen::Isometry3d\ \mbox{\hyperlink{structtesseract__planning_1_1KinematicGroupInstructionInfo_a744c1435763bcdb0239cc37992146fcd}{extractCartesianPose}}(\textcolor{keywordtype}{bool}\ in\_world\ =\ \textcolor{keyword}{true})\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00133\ }
+\DoxyCodeLine{00139\ \ \ \textcolor{keyword}{const}\ Eigen::VectorXd\&\ \mbox{\hyperlink{structtesseract__planning_1_1KinematicGroupInstructionInfo_a448fba85565b0588262fb146b9f1e581}{extractJointPosition}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00140\ \};}
+\DoxyCodeLine{00141\ }
+\DoxyCodeLine{00142\ std::vector<MoveInstructionPoly>\ \mbox{\hyperlink{namespacetesseract__planning_a2fcf77e5d442e63cf893108bfb586d0d}{interpolateJointJointWaypoint}}(\textcolor{keyword}{const}\ KinematicGroupInstructionInfo\&\ prev,}
+\DoxyCodeLine{00143\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ KinematicGroupInstructionInfo\&\ base,}
+\DoxyCodeLine{00144\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ linear\_steps,}
+\DoxyCodeLine{00145\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ freespace\_steps);}
+\DoxyCodeLine{00146\ }
+\DoxyCodeLine{00147\ std::vector<MoveInstructionPoly>\ \mbox{\hyperlink{namespacetesseract__planning_af23a0bfb1bc88714bbc3959ffdd6b80e}{interpolateJointCartWaypoint}}(\textcolor{keyword}{const}\ KinematicGroupInstructionInfo\&\ prev,}
+\DoxyCodeLine{00148\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ KinematicGroupInstructionInfo\&\ base,}
+\DoxyCodeLine{00149\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ linear\_steps,}
+\DoxyCodeLine{00150\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ freespace\_steps);}
+\DoxyCodeLine{00151\ }
+\DoxyCodeLine{00152\ std::vector<MoveInstructionPoly>\ \mbox{\hyperlink{namespacetesseract__planning_a55ebb8b8b51198baf3a700366af06450}{interpolateCartJointWaypoint}}(\textcolor{keyword}{const}\ KinematicGroupInstructionInfo\&\ prev,}
+\DoxyCodeLine{00153\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ KinematicGroupInstructionInfo\&\ base,}
+\DoxyCodeLine{00154\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ linear\_steps,}
+\DoxyCodeLine{00155\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ freespace\_steps);}
+\DoxyCodeLine{00156\ }
+\DoxyCodeLine{00157\ std::vector<MoveInstructionPoly>\ \mbox{\hyperlink{namespacetesseract__planning_afe82bde773fd418145db05673cf7e509}{interpolateCartCartWaypoint}}(\textcolor{keyword}{const}\ KinematicGroupInstructionInfo\&\ prev,}
+\DoxyCodeLine{00158\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ KinematicGroupInstructionInfo\&\ base,}
+\DoxyCodeLine{00159\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ linear\_steps,}
+\DoxyCodeLine{00160\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ freespace\_steps,}
+\DoxyCodeLine{00161\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ tesseract\_scene\_graph::SceneState\&\ scene\_state);}
+\DoxyCodeLine{00162\ }
+\DoxyCodeLine{00185\ std::vector<MoveInstructionPoly>\ \mbox{\hyperlink{namespacetesseract__planning_a2fcf77e5d442e63cf893108bfb586d0d}{interpolateJointJointWaypoint}}(\textcolor{keyword}{const}\ KinematicGroupInstructionInfo\&\ prev,}
+\DoxyCodeLine{00186\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ KinematicGroupInstructionInfo\&\ base,}
+\DoxyCodeLine{00187\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ state\_lvs\_length,}
+\DoxyCodeLine{00188\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ translation\_lvs\_length,}
+\DoxyCodeLine{00189\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ rotation\_lvs\_length,}
+\DoxyCodeLine{00190\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{simple__planner__lvs__interpolation_8cpp_a2eb7c7e24e6632f45847edf8a59bce5b}{min\_steps}},}
+\DoxyCodeLine{00191\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ max\_steps);}
+\DoxyCodeLine{00192\ }
+\DoxyCodeLine{00217\ std::vector<MoveInstructionPoly>\ \mbox{\hyperlink{namespacetesseract__planning_af23a0bfb1bc88714bbc3959ffdd6b80e}{interpolateJointCartWaypoint}}(\textcolor{keyword}{const}\ KinematicGroupInstructionInfo\&\ prev,}
+\DoxyCodeLine{00218\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ KinematicGroupInstructionInfo\&\ base,}
+\DoxyCodeLine{00219\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ state\_lvs\_length,}
+\DoxyCodeLine{00220\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ translation\_lvs\_length,}
+\DoxyCodeLine{00221\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ rotation\_lvs\_length,}
+\DoxyCodeLine{00222\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{simple__planner__lvs__interpolation_8cpp_a2eb7c7e24e6632f45847edf8a59bce5b}{min\_steps}},}
+\DoxyCodeLine{00223\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ max\_steps);}
+\DoxyCodeLine{00224\ }
+\DoxyCodeLine{00251\ std::vector<MoveInstructionPoly>\ \mbox{\hyperlink{namespacetesseract__planning_a55ebb8b8b51198baf3a700366af06450}{interpolateCartJointWaypoint}}(\textcolor{keyword}{const}\ KinematicGroupInstructionInfo\&\ prev,}
+\DoxyCodeLine{00252\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ KinematicGroupInstructionInfo\&\ base,}
+\DoxyCodeLine{00253\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ state\_lvs\_length,}
+\DoxyCodeLine{00254\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ translation\_lvs\_length,}
+\DoxyCodeLine{00255\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ rotation\_lvs\_length,}
+\DoxyCodeLine{00256\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{simple__planner__lvs__interpolation_8cpp_a2eb7c7e24e6632f45847edf8a59bce5b}{min\_steps}},}
+\DoxyCodeLine{00257\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ max\_steps);}
+\DoxyCodeLine{00258\ }
+\DoxyCodeLine{00289\ std::vector<MoveInstructionPoly>\ \mbox{\hyperlink{namespacetesseract__planning_afe82bde773fd418145db05673cf7e509}{interpolateCartCartWaypoint}}(\textcolor{keyword}{const}\ KinematicGroupInstructionInfo\&\ prev,}
+\DoxyCodeLine{00290\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ KinematicGroupInstructionInfo\&\ base,}
+\DoxyCodeLine{00291\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ state\_lvs\_length,}
+\DoxyCodeLine{00292\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ translation\_lvs\_length,}
+\DoxyCodeLine{00293\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ rotation\_lvs\_length,}
+\DoxyCodeLine{00294\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{simple__planner__lvs__interpolation_8cpp_a2eb7c7e24e6632f45847edf8a59bce5b}{min\_steps}},}
+\DoxyCodeLine{00295\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ max\_steps,}
+\DoxyCodeLine{00296\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ tesseract\_scene\_graph::SceneState\&\ scene\_state);}
+\DoxyCodeLine{00297\ }
+\DoxyCodeLine{00320\ std::vector<MoveInstructionPoly>\ \mbox{\hyperlink{namespacetesseract__planning_a2fcf77e5d442e63cf893108bfb586d0d}{interpolateJointJointWaypoint}}(\textcolor{keyword}{const}\ JointGroupInstructionInfo\&\ prev,}
+\DoxyCodeLine{00321\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ JointGroupInstructionInfo\&\ base,}
+\DoxyCodeLine{00322\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ state\_lvs\_length,}
+\DoxyCodeLine{00323\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ translation\_lvs\_length,}
+\DoxyCodeLine{00324\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ rotation\_lvs\_length,}
+\DoxyCodeLine{00325\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{simple__planner__lvs__interpolation_8cpp_a2eb7c7e24e6632f45847edf8a59bce5b}{min\_steps}},}
+\DoxyCodeLine{00326\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ max\_steps);}
+\DoxyCodeLine{00327\ }
+\DoxyCodeLine{00352\ std::vector<MoveInstructionPoly>\ \mbox{\hyperlink{namespacetesseract__planning_af23a0bfb1bc88714bbc3959ffdd6b80e}{interpolateJointCartWaypoint}}(\textcolor{keyword}{const}\ JointGroupInstructionInfo\&\ prev,}
+\DoxyCodeLine{00353\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ JointGroupInstructionInfo\&\ base,}
+\DoxyCodeLine{00354\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ state\_lvs\_length,}
+\DoxyCodeLine{00355\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ translation\_lvs\_length,}
+\DoxyCodeLine{00356\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ rotation\_lvs\_length,}
+\DoxyCodeLine{00357\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{simple__planner__lvs__interpolation_8cpp_a2eb7c7e24e6632f45847edf8a59bce5b}{min\_steps}},}
+\DoxyCodeLine{00358\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ max\_steps);}
+\DoxyCodeLine{00359\ }
+\DoxyCodeLine{00386\ std::vector<MoveInstructionPoly>\ \mbox{\hyperlink{namespacetesseract__planning_a55ebb8b8b51198baf3a700366af06450}{interpolateCartJointWaypoint}}(\textcolor{keyword}{const}\ JointGroupInstructionInfo\&\ prev,}
+\DoxyCodeLine{00387\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ JointGroupInstructionInfo\&\ base,}
+\DoxyCodeLine{00388\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ state\_lvs\_length,}
+\DoxyCodeLine{00389\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ translation\_lvs\_length,}
+\DoxyCodeLine{00390\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ rotation\_lvs\_length,}
+\DoxyCodeLine{00391\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{simple__planner__lvs__interpolation_8cpp_a2eb7c7e24e6632f45847edf8a59bce5b}{min\_steps}},}
+\DoxyCodeLine{00392\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ max\_steps);}
+\DoxyCodeLine{00393\ }
+\DoxyCodeLine{00424\ std::vector<MoveInstructionPoly>\ \mbox{\hyperlink{namespacetesseract__planning_afe82bde773fd418145db05673cf7e509}{interpolateCartCartWaypoint}}(\textcolor{keyword}{const}\ JointGroupInstructionInfo\&\ prev,}
+\DoxyCodeLine{00425\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ JointGroupInstructionInfo\&\ base,}
+\DoxyCodeLine{00426\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ state\_lvs\_length,}
+\DoxyCodeLine{00427\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ translation\_lvs\_length,}
+\DoxyCodeLine{00428\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ rotation\_lvs\_length,}
+\DoxyCodeLine{00429\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{simple__planner__lvs__interpolation_8cpp_a2eb7c7e24e6632f45847edf8a59bce5b}{min\_steps}},}
+\DoxyCodeLine{00430\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ max\_steps,}
+\DoxyCodeLine{00431\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ tesseract\_scene\_graph::SceneState\&\ scene\_state);}
+\DoxyCodeLine{00439\ tesseract\_common::VectorIsometry3d\ \mbox{\hyperlink{namespacetesseract__planning_a71ea10c42f51ae6e4d014ad054c900f6}{interpolate}}(\textcolor{keyword}{const}\ Eigen::Isometry3d\&\ \mbox{\hyperlink{ompl__planner__tests_8cpp_a62ebfcefbc3b45ade04ab058f594e835}{start}},}
+\DoxyCodeLine{00440\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ Eigen::Isometry3d\&\ stop,}
+\DoxyCodeLine{00441\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{long}\ \mbox{\hyperlink{simple__planner__lvs__interpolation_8cpp_ab4ae7205573977222eadd0795db193e2}{steps}});}
+\DoxyCodeLine{00442\ }
+\DoxyCodeLine{00450\ Eigen::MatrixXd\ \mbox{\hyperlink{namespacetesseract__planning_a71ea10c42f51ae6e4d014ad054c900f6}{interpolate}}(\textcolor{keyword}{const}\ Eigen::Ref<const\ Eigen::VectorXd>\&\ \mbox{\hyperlink{ompl__planner__tests_8cpp_a62ebfcefbc3b45ade04ab058f594e835}{start}},}
+\DoxyCodeLine{00451\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ Eigen::Ref<const\ Eigen::VectorXd>\&\ stop,}
+\DoxyCodeLine{00452\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{long}\ \mbox{\hyperlink{simple__planner__lvs__interpolation_8cpp_ab4ae7205573977222eadd0795db193e2}{steps}});}
+\DoxyCodeLine{00453\ }
+\DoxyCodeLine{00461\ std::vector<WaypointPoly>\ \mbox{\hyperlink{namespacetesseract__planning_ace3fb6e4566978aa9ae8c72ab20a939f}{interpolate\_waypoint}}(\textcolor{keyword}{const}\ WaypointPoly\&\ \mbox{\hyperlink{ompl__planner__tests_8cpp_a62ebfcefbc3b45ade04ab058f594e835}{start}},\ \textcolor{keyword}{const}\ WaypointPoly\&\ stop,\ \textcolor{keywordtype}{long}\ \mbox{\hyperlink{simple__planner__lvs__interpolation_8cpp_ab4ae7205573977222eadd0795db193e2}{steps}});}
+\DoxyCodeLine{00462\ }
+\DoxyCodeLine{00471\ std::vector<MoveInstructionPoly>\ \mbox{\hyperlink{namespacetesseract__planning_a3eb5693b1699344d8da461070c03da3a}{getInterpolatedInstructions}}(\textcolor{keyword}{const}\ std::vector<std::string>\&\ \mbox{\hyperlink{command__language__utils__unit_8cpp_a5f85173ecc1ddcb342ebc27f28437f5c}{joint\_names}},}
+\DoxyCodeLine{00472\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ Eigen::MatrixXd\&\ states,}
+\DoxyCodeLine{00473\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ MoveInstructionPoly\&\ base\_instruction);}
+\DoxyCodeLine{00474\ }
+\DoxyCodeLine{00483\ std::vector<MoveInstructionPoly>\ \mbox{\hyperlink{namespacetesseract__planning_a3eb5693b1699344d8da461070c03da3a}{getInterpolatedInstructions}}(\textcolor{keyword}{const}\ tesseract\_common::VectorIsometry3d\&\ poses,}
+\DoxyCodeLine{00484\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::vector<std::string>\&\ \mbox{\hyperlink{command__language__utils__unit_8cpp_a5f85173ecc1ddcb342ebc27f28437f5c}{joint\_names}},}
+\DoxyCodeLine{00485\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ Eigen::MatrixXd\&\ states,}
+\DoxyCodeLine{00486\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ MoveInstructionPoly\&\ base\_instruction);}
+\DoxyCodeLine{00487\ }
+\DoxyCodeLine{00494\ Eigen::VectorXd\ \mbox{\hyperlink{namespacetesseract__planning_a2c73959c536f2f1f881910a889315465}{getClosestJointSolution}}(\textcolor{keyword}{const}\ KinematicGroupInstructionInfo\&\ \mbox{\hyperlink{tesseract__task__composer__plugin__factories__unit_8cpp_aa6da7335b22cc3d25f52f4d282118c55}{info}},\ \textcolor{keyword}{const}\ Eigen::VectorXd\&\ seed);}
+\DoxyCodeLine{00495\ }
+\DoxyCodeLine{00504\ std::array<Eigen::VectorXd,\ 2>\ \mbox{\hyperlink{namespacetesseract__planning_a2c73959c536f2f1f881910a889315465}{getClosestJointSolution}}(\textcolor{keyword}{const}\ KinematicGroupInstructionInfo\&\ info1,}
+\DoxyCodeLine{00505\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ KinematicGroupInstructionInfo\&\ info2,}
+\DoxyCodeLine{00506\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ Eigen::VectorXd\&\ seed);}
+\DoxyCodeLine{00507\ }
+\DoxyCodeLine{00509\ CompositeInstruction\ \mbox{\hyperlink{namespacetesseract__planning_a7920578aac3025e147d6951c23d4056a}{generateInterpolatedProgram}}(\textcolor{keyword}{const}\ CompositeInstruction\&\ \mbox{\hyperlink{descartes__planner__tests_8cpp_a540933d401a016e1bb8a7a67aeba9e19}{instructions}},}
+\DoxyCodeLine{00510\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::shared\_ptr<const\ tesseract\_environment::Environment>\&\ \mbox{\hyperlink{basic__cartesian__example__unit_8cpp_a96ce750ee22ecbf4d17cc6cf146d9514}{env}},}
+\DoxyCodeLine{00511\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ state\_longest\_valid\_segment\_length\ =\ 5\ *\ M\_PI\ /\ 180,}
+\DoxyCodeLine{00512\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{simple__planner__lvs__interpolation_8cpp_aeb206e98287e12d469962ec670e227b2}{translation\_longest\_valid\_segment\_length}}\ =\ 0.15,}
+\DoxyCodeLine{00513\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{simple__planner__lvs__interpolation_8cpp_a78e060bb016be1e83ee53af92e390844}{rotation\_longest\_valid\_segment\_length}}\ =\ 5\ *\ M\_PI\ /\ 180,}
+\DoxyCodeLine{00514\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{simple__planner__lvs__interpolation_8cpp_a2eb7c7e24e6632f45847edf8a59bce5b}{min\_steps}}\ =\ 1);}
+\DoxyCodeLine{00515\ }
+\DoxyCodeLine{00516\ \}\ \ \textcolor{comment}{//\ namespace\ tesseract\_planning}}
+\DoxyCodeLine{00517\ }
+\DoxyCodeLine{00518\ \textcolor{preprocessor}{\#endif\ \ }\textcolor{comment}{//\ TESSERACT\_MOTION\_PLANNERS\_INTERPOLATION\_H}}
+
+\end{DoxyCode}

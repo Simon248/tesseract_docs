@@ -1,0 +1,42 @@
+\doxysection{task\+\_\+composer\+\_\+serialization\+\_\+utils.\+hpp}
+\hypertarget{task__composer__serialization__utils_8hpp_source}{}\label{task__composer__serialization__utils_8hpp_source}\index{tesseract\_task\_composer/core/include/tesseract\_task\_composer/core/test\_suite/task\_composer\_serialization\_utils.hpp@{tesseract\_task\_composer/core/include/tesseract\_task\_composer/core/test\_suite/task\_composer\_serialization\_utils.hpp}}
+\mbox{\hyperlink{task__composer__serialization__utils_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ TESSERACT\_TASK\_COMPOSER\_SERIALIZATION\_UTILS\_HPP}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ TESSERACT\_TASK\_COMPOSER\_SERIALIZATION\_UTILS\_HPP}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <tesseract\_common/macros.h>}}
+\DoxyCodeLine{00005\ TESSERACT\_COMMON\_IGNORE\_WARNINGS\_PUSH}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <gtest/gtest.h>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <boost/archive/xml\_oarchive.hpp>}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <boost/archive/xml\_iarchive.hpp>}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <boost/serialization/unique\_ptr.hpp>}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <boost/serialization/shared\_ptr.hpp>}}
+\DoxyCodeLine{00011\ \mbox{\hyperlink{namespaceTESSERACT__COMMON__IGNORE__WARNINGS__POP}{TESSERACT\_COMMON\_IGNORE\_WARNINGS\_POP}}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <tesseract\_common/serialization.h>}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ <tesseract\_common/utils.h>}}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacetesseract__planning_1_1test__suite}{tesseract\_planning::test\_suite}}}
+\DoxyCodeLine{00017\ \{}
+\DoxyCodeLine{00018\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00019\ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{namespacetesseract__planning_1_1test__suite_a6ef3a1020b198ea62a7363f826ad3d53}{runSerializationTest}}(\textcolor{keyword}{const}\ T\&\ input,\ \textcolor{keyword}{const}\ std::string\&\ file\_name)}
+\DoxyCodeLine{00020\ \{}
+\DoxyCodeLine{00021\ \ \ \textcolor{keyword}{const}\ std::string\ filepath\ =\ tesseract\_common::getTempPath()\ +\ file\_name\ +\ \textcolor{stringliteral}{"{}.xml"{}};}
+\DoxyCodeLine{00022\ \ \ tesseract\_common::Serialization::toArchiveFileXML<T>(input,\ filepath);}
+\DoxyCodeLine{00023\ \ \ \textcolor{keyword}{auto}\ ninput\ =\ tesseract\_common::Serialization::fromArchiveFileXML<T>(filepath);}
+\DoxyCodeLine{00024\ \ \ \mbox{\hyperlink{command__language__utils__unit_8cpp_a87b7f2690021fd8f1f348928f30fb2f9}{EXPECT\_FALSE}}(input\ !=\ ninput);}
+\DoxyCodeLine{00025\ \}}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00028\ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{namespacetesseract__planning_1_1test__suite_a3fbdef14cb25929313c8c35236cb7491}{runSerializationPointerTest}}(\textcolor{keyword}{const}\ T\&\ input,\ \textcolor{keyword}{const}\ std::string\&\ file\_name)}
+\DoxyCodeLine{00029\ \{}
+\DoxyCodeLine{00030\ \ \ \textcolor{keyword}{const}\ std::string\ filepath\ =\ tesseract\_common::getTempPath()\ +\ file\_name\ +\ \textcolor{stringliteral}{"{}.xml"{}};}
+\DoxyCodeLine{00031\ \ \ tesseract\_common::Serialization::toArchiveFileXML<T>(input,\ filepath);}
+\DoxyCodeLine{00032\ \ \ \textcolor{keyword}{auto}\ ninput\ =\ tesseract\_common::Serialization::fromArchiveFileXML<T>(filepath);}
+\DoxyCodeLine{00033\ \ \ \mbox{\hyperlink{command__language__utils__unit_8cpp_a87b7f2690021fd8f1f348928f30fb2f9}{EXPECT\_FALSE}}(*input\ !=\ *ninput);}
+\DoxyCodeLine{00034\ \}}
+\DoxyCodeLine{00035\ \}\ \ \textcolor{comment}{//\ namespace\ tesseract\_planning::test\_suite}}
+\DoxyCodeLine{00036\ \textcolor{preprocessor}{\#endif\ \ }\textcolor{comment}{//\ TESSERACT\_TASK\_COMPOSER\_SERIALIZATION\_UTILS\_HPP}}
+
+\end{DoxyCode}

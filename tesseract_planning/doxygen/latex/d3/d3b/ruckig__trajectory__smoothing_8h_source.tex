@@ -1,0 +1,49 @@
+\doxysection{ruckig\+\_\+trajectory\+\_\+smoothing.\+h}
+\hypertarget{ruckig__trajectory__smoothing_8h_source}{}\label{ruckig__trajectory__smoothing_8h_source}\index{tesseract\_time\_parameterization/ruckig/include/tesseract\_time\_parameterization/ruckig/ruckig\_trajectory\_smoothing.h@{tesseract\_time\_parameterization/ruckig/include/tesseract\_time\_parameterization/ruckig/ruckig\_trajectory\_smoothing.h}}
+\mbox{\hyperlink{ruckig__trajectory__smoothing_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00025\ \textcolor{preprocessor}{\#ifndef\ TESSERACT\_TIME\_PARAMETERIZATION\_RUCKIG\_TRAJECTORY\_SMOOTHING\_H}}
+\DoxyCodeLine{00026\ \textcolor{preprocessor}{\#define\ TESSERACT\_TIME\_PARAMETERIZATION\_RUCKIG\_TRAJECTORY\_SMOOTHING\_H}}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \textcolor{preprocessor}{\#include\ <tesseract\_common/macros.h>}}
+\DoxyCodeLine{00029\ TESSERACT\_COMMON\_IGNORE\_WARNINGS\_PUSH}
+\DoxyCodeLine{00030\ \textcolor{preprocessor}{\#include\ <Eigen/Core>}}
+\DoxyCodeLine{00031\ \mbox{\hyperlink{namespaceTESSERACT__COMMON__IGNORE__WARNINGS__POP}{TESSERACT\_COMMON\_IGNORE\_WARNINGS\_POP}}}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{tesseract__time__parameterization_2core_2include_2tesseract__time__parameterization_2core_2fwd_8h}{tesseract\_time\_parameterization/core/fwd.h}}>}}
+\DoxyCodeLine{00034\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{time__parameterization_8h}{tesseract\_time\_parameterization/core/time\_parameterization.h}}>}}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacetesseract__planning}{tesseract\_planning}}}
+\DoxyCodeLine{00037\ \{}
+\DoxyCodeLine{00038\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classtesseract__planning_1_1RuckigTrajectorySmoothing}{RuckigTrajectorySmoothing}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classtesseract__planning_1_1TimeParameterization}{TimeParameterization}}}
+\DoxyCodeLine{00039\ \{}
+\DoxyCodeLine{00040\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00041\ \ \ \mbox{\hyperlink{classtesseract__planning_1_1RuckigTrajectorySmoothing}{RuckigTrajectorySmoothing}}(\textcolor{keywordtype}{double}\ duration\_extension\_fraction\ =\ 1.1,\ \textcolor{keywordtype}{double}\ max\_duration\_extension\_factor\ =\ 10);}
+\DoxyCodeLine{00042\ \ \ \mbox{\hyperlink{classtesseract__planning_1_1RuckigTrajectorySmoothing_a070064f4724f7787cf6fdfcbc24e347c}{\string~RuckigTrajectorySmoothing}}()\ \textcolor{keyword}{override}\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00043\ \ \ \mbox{\hyperlink{classtesseract__planning_1_1RuckigTrajectorySmoothing_a8831ff146f2578b4ffce0b2e6d0eb5f8}{RuckigTrajectorySmoothing}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classtesseract__planning_1_1RuckigTrajectorySmoothing}{RuckigTrajectorySmoothing}}\&)\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00044\ \ \ \mbox{\hyperlink{classtesseract__planning_1_1RuckigTrajectorySmoothing}{RuckigTrajectorySmoothing}}\&\ \mbox{\hyperlink{classtesseract__planning_1_1RuckigTrajectorySmoothing_a9c89620c248349a6644959cbf389d89a}{operator=}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classtesseract__planning_1_1RuckigTrajectorySmoothing}{RuckigTrajectorySmoothing}}\&)\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00045\ \ \ \mbox{\hyperlink{classtesseract__planning_1_1RuckigTrajectorySmoothing_aac1d394cccebc5656febd5e3277d8b7a}{RuckigTrajectorySmoothing}}(\mbox{\hyperlink{classtesseract__planning_1_1RuckigTrajectorySmoothing}{RuckigTrajectorySmoothing}}\&\&)\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00046\ \ \ \mbox{\hyperlink{classtesseract__planning_1_1RuckigTrajectorySmoothing}{RuckigTrajectorySmoothing}}\&\ \mbox{\hyperlink{classtesseract__planning_1_1RuckigTrajectorySmoothing_a769f21b7122a715afd969e055e38cf21}{operator=}}(\mbox{\hyperlink{classtesseract__planning_1_1RuckigTrajectorySmoothing}{RuckigTrajectorySmoothing}}\&\&)\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00049\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classtesseract__planning_1_1RuckigTrajectorySmoothing_afa8ddd97abeaf47c5a506af29d9da848}{setDurationExtensionFraction}}(\textcolor{keywordtype}{double}\ duration\_extension\_fraction);}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00052\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classtesseract__planning_1_1RuckigTrajectorySmoothing_a506949bcf42dfb404406a4f51c255116}{setMaxDurationExtensionFactor}}(\textcolor{keywordtype}{double}\ max\_duration\_extension\_factor);}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00054\ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classtesseract__planning_1_1RuckigTrajectorySmoothing_a140370c2fb02a9d85e1db44efebd9d24}{compute}}(\mbox{\hyperlink{classtesseract__planning_1_1TrajectoryContainer}{TrajectoryContainer}}\&\ \mbox{\hyperlink{iterative__spline__tests_8cpp_a42770b019b3c810751d40ab5f2f25e20}{trajectory}},}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ Eigen::Ref<const\ Eigen::MatrixX2d>\&\ velocity\_limits,}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ Eigen::Ref<const\ Eigen::MatrixX2d>\&\ acceleration\_limits,}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ Eigen::Ref<const\ Eigen::MatrixX2d>\&\ jerk\_limits,}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ Eigen::Ref<const\ Eigen::VectorXd>\&\ velocity\_scaling\_factors\ =\ Eigen::VectorXd::Ones(1),}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ Eigen::Ref<const\ Eigen::VectorXd>\&\ acceleration\_scaling\_factors\ =\ Eigen::VectorXd::Ones(1),}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ Eigen::Ref<const\ Eigen::VectorXd>\&\ jerk\_scaling\_factors\ =\ Eigen::VectorXd::Ones(1))\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00062\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00063\ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classtesseract__planning_1_1RuckigTrajectorySmoothing_a4bbd41a28afbfc24d9294282d148c7cd}{duration\_extension\_fraction\_}};}
+\DoxyCodeLine{00064\ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classtesseract__planning_1_1RuckigTrajectorySmoothing_ab690a31ebcb3054780bc9b5e2a70b54b}{max\_duration\_extension\_factor\_}};}
+\DoxyCodeLine{00065\ \};}
+\DoxyCodeLine{00066\ \}\ \ \textcolor{comment}{//\ namespace\ tesseract\_planning}}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00068\ \textcolor{preprocessor}{\#endif\ \ }\textcolor{comment}{//\ TESSERACT\_TIME\_PARAMETERIZATION\_RUCKIG\_TRAJECTORY\_SMOOTHING\_H}}
+
+\end{DoxyCode}

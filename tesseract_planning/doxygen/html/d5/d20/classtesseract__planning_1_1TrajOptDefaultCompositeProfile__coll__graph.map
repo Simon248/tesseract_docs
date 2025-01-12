@@ -1,0 +1,13 @@
+<map id="tesseract_planning::TrajOptDefaultCompositeProfile" name="tesseract_planning::TrajOptDefaultCompositeProfile">
+<area shape="rect" id="Node000001" title=" " alt="" coords="593,104,803,145"/>
+<area shape="rect" id="Node000002" href="$da/df1/classtesseract__planning_1_1TrajOptCompositeProfile.html" title=" " alt="" coords="200,5,368,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="384,40,475,58,570,80,638,101,636,106,569,86,474,63,383,45"/>
+<area shape="rect" id="Node000003" href="$db/d41/classtesseract__planning_1_1Profile.html" title="The Profile class." alt="" coords="5,5,136,46"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="151,23,200,23,200,28,151,28"/>
+<area shape="rect" id="Node000004" href="$dc/de5/structtesseract__planning_1_1CollisionCostConfig.html" title="Config settings for collision cost terms." alt="" coords="215,71,354,111"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="370,95,593,113,593,119,369,100"/>
+<area shape="rect" id="Node000005" href="$dd/dc7/structtesseract__planning_1_1CollisionConstraintConfig.html" title="Config settings for collision constraint terms." alt="" coords="199,136,370,177"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="386,156,475,154,569,148,603,143,604,148,570,153,475,160,386,161"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="185,201,383,242"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="399,219,483,210,569,192,621,169,665,143,668,148,623,174,570,197,484,216,400,224"/>
+</map>

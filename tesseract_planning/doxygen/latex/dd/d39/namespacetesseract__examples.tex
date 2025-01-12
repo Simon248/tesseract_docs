@@ -1,0 +1,107 @@
+\doxysection{tesseract\+\_\+examples Namespace Reference}
+\hypertarget{namespacetesseract__examples}{}\label{namespacetesseract__examples}\index{tesseract\_examples@{tesseract\_examples}}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classtesseract__examples_1_1BasicCartesianExample}{Basic\+Cartesian\+Example}}
+\begin{DoxyCompactList}\small\item\em Basic example leveraging trajopt and tesseract for cartesian planning. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classtesseract__examples_1_1CarSeatExample}{Car\+Seat\+Example}}
+\begin{DoxyCompactList}\small\item\em An example of a robot on a rail installing a seat in a car. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classtesseract__examples_1_1Example}{Example}}
+\begin{DoxyCompactList}\small\item\em The \doxylink{classtesseract__examples_1_1Example}{Example} base class. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classtesseract__examples_1_1FreespaceHybridExample}{Freespace\+Hybrid\+Example}}
+\begin{DoxyCompactList}\small\item\em An example of a robot leveraging OMPL RRTConnect to generate a freespace motion trajectory the Traj\+Opt to optimize. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classtesseract__examples_1_1FreespaceOMPLExample}{Freespace\+OMPLExample}}
+\begin{DoxyCompactList}\small\item\em An example of a robot leveraging OMPL RRTConnect to generate a freespace motion trajectory. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classtesseract__examples_1_1GlassUprightExample}{Glass\+Upright\+Example}}
+\begin{DoxyCompactList}\small\item\em An example of a robot with fixed orientation but free to move in cartesian space leveraging tesseract and trajopt to generate a motion trajectory. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classtesseract__examples_1_1GlassUprightOMPLExample}{Glass\+Upright\+OMPLExample}}
+\begin{DoxyCompactList}\small\item\em An example of a robot with fixed orientation but free to move in cartesian space leveraging OMPL RRTConnect to generate a motion trajectory. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classtesseract__examples_1_1OnlinePlanningExample}{Online\+Planning\+Example}}
+\begin{DoxyCompactList}\small\item\em This example demonstrates running the inner loop of Traj\+Opt in an "{}online"{} manner. As the environment changes, Traj\+Opt dynamically adjusts to avoid collisions and follow the given toolpath. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classtesseract__examples_1_1PickAndPlaceExample}{Pick\+And\+Place\+Example}}
+\begin{DoxyCompactList}\small\item\em An example of a robot picking up a box and placing it on a shelf leveraging tesseract and trajopt to generate the motion trajectory. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classtesseract__examples_1_1PuzzlePieceAuxillaryAxesExample}{Puzzle\+Piece\+Auxillary\+Axes\+Example}}
+\begin{DoxyCompactList}\small\item\em An example of a robot with a two axis position leveraging trajopt and tesseract to leverage all DOF to create an optimal motion trajectory for a complex cartesian path. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classtesseract__examples_1_1PuzzlePieceExample}{Puzzle\+Piece\+Example}}
+\begin{DoxyCompactList}\small\item\em An example of a robot leveraging trajopt and tesseract to create an optimal motion trajectory for a complex cartesian path. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classtesseract__examples_1_1SceneGraphExample}{Scene\+Graph\+Example}}
+\begin{DoxyCompactList}\small\item\em Basic example leveraging trajopt and tesseract for cartesian planning. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+Command\+::\+Ptr \mbox{\hyperlink{namespacetesseract__examples_ad3b5984e32aac64631dd8fa2c32485de}{add\+Point\+Cloud}} ()
+\item 
+Commands \mbox{\hyperlink{namespacetesseract__examples_abb3c0cc2d1022ba74126d670f70cba13}{add\+Seats}} (const tesseract\+\_\+common\+::\+Resource\+Locator\+::\+Const\+Ptr \&\mbox{\hyperlink{ompl__constrained__planner__tests_8cpp_ac23cdf7d517ef4adf22863d54c6c9c65}{locator}})
+\item 
+std\+::unordered\+\_\+map$<$ std\+::string, std\+::unordered\+\_\+map$<$ std\+::string, double $>$ $>$ \mbox{\hyperlink{namespacetesseract__examples_a41a95bdc977f66f5ee618e1476050d45}{get\+Predefined\+Position}} ()
+\item 
+std\+::vector$<$ double $>$ \mbox{\hyperlink{namespacetesseract__examples_aca2ec848a35e94e7b051cafbee7157c6}{get\+Position\+Vector}} (const Joint\+Group \&\mbox{\hyperlink{ompl__planner__tests_8cpp_a553a400a0c81f57e4dd2d27aefef9b9c}{joint\+\_\+group}}, const std\+::unordered\+\_\+map$<$ std\+::string, double $>$ \&pos)
+\item 
+Eigen\+::\+Vector\+Xd \mbox{\hyperlink{namespacetesseract__examples_a535c9d25c8cd6feb7b05c111d5bbec5f}{get\+Position\+Vector\+Xd}} (const Joint\+Group \&\mbox{\hyperlink{ompl__planner__tests_8cpp_a553a400a0c81f57e4dd2d27aefef9b9c}{joint\+\_\+group}}, const std\+::unordered\+\_\+map$<$ std\+::string, double $>$ \&pos)
+\item 
+Command\+::\+Ptr \mbox{\hyperlink{namespacetesseract__examples_a66f8260053922ea9888284e3a176350b}{add\+Sphere}} ()
+\item 
+tesseract\+\_\+common\+::\+Joint\+Trajectory \mbox{\hyperlink{namespacetesseract__examples_a18ba11cb1cad9ace5b337e9252e757e6}{get\+Joint\+Trajectory}} (boost\+::uuids\+::uuid uuid, const std\+::vector$<$ std\+::string $>$ \&\mbox{\hyperlink{command__language__utils__unit_8cpp_a5f85173ecc1ddcb342ebc27f28437f5c}{joint\+\_\+names}}, const tesseract\+\_\+common\+::\+Traj\+Array \&current\+\_\+trajectory)
+\item 
+Command\+::\+Ptr \mbox{\hyperlink{namespacetesseract__examples_a136e088259c835202fd8da2784c729c7}{add\+Box}} (double box\+\_\+x, double box\+\_\+y, double box\+\_\+side)
+\item 
+tesseract\+\_\+common\+::\+Vector\+Isometry3d \mbox{\hyperlink{namespacetesseract__examples_af77cba07954f8e4eca7c29565808aca9}{make\+Puzzle\+Tool\+Poses}} (const tesseract\+\_\+common\+::\+Resource\+Locator\+::\+Const\+Ptr \&\mbox{\hyperlink{ompl__constrained__planner__tests_8cpp_ac23cdf7d517ef4adf22863d54c6c9c65}{locator}})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{namespacetesseract__examples_a136e088259c835202fd8da2784c729c7}\label{namespacetesseract__examples_a136e088259c835202fd8da2784c729c7} 
+\index{tesseract\_examples@{tesseract\_examples}!addBox@{addBox}}
+\index{addBox@{addBox}!tesseract\_examples@{tesseract\_examples}}
+\doxysubsubsection{\texorpdfstring{addBox()}{addBox()}}
+{\footnotesize\ttfamily Command\+::\+Ptr tesseract\+\_\+examples\+::add\+Box (\begin{DoxyParamCaption}\item[{double}]{box\+\_\+x,  }\item[{double}]{box\+\_\+y,  }\item[{double}]{box\+\_\+side }\end{DoxyParamCaption})}
+
+\Hypertarget{namespacetesseract__examples_ad3b5984e32aac64631dd8fa2c32485de}\label{namespacetesseract__examples_ad3b5984e32aac64631dd8fa2c32485de} 
+\index{tesseract\_examples@{tesseract\_examples}!addPointCloud@{addPointCloud}}
+\index{addPointCloud@{addPointCloud}!tesseract\_examples@{tesseract\_examples}}
+\doxysubsubsection{\texorpdfstring{addPointCloud()}{addPointCloud()}}
+{\footnotesize\ttfamily Command\+::\+Ptr tesseract\+\_\+examples\+::add\+Point\+Cloud (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{namespacetesseract__examples_abb3c0cc2d1022ba74126d670f70cba13}\label{namespacetesseract__examples_abb3c0cc2d1022ba74126d670f70cba13} 
+\index{tesseract\_examples@{tesseract\_examples}!addSeats@{addSeats}}
+\index{addSeats@{addSeats}!tesseract\_examples@{tesseract\_examples}}
+\doxysubsubsection{\texorpdfstring{addSeats()}{addSeats()}}
+{\footnotesize\ttfamily Commands tesseract\+\_\+examples\+::add\+Seats (\begin{DoxyParamCaption}\item[{const tesseract\+\_\+common\+::\+Resource\+Locator\+::\+Const\+Ptr \&}]{locator }\end{DoxyParamCaption})}
+
+\Hypertarget{namespacetesseract__examples_a66f8260053922ea9888284e3a176350b}\label{namespacetesseract__examples_a66f8260053922ea9888284e3a176350b} 
+\index{tesseract\_examples@{tesseract\_examples}!addSphere@{addSphere}}
+\index{addSphere@{addSphere}!tesseract\_examples@{tesseract\_examples}}
+\doxysubsubsection{\texorpdfstring{addSphere()}{addSphere()}}
+{\footnotesize\ttfamily tesseract\+\_\+environment\+::\+Command\+::\+Ptr tesseract\+\_\+examples\+::add\+Sphere (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{namespacetesseract__examples_a18ba11cb1cad9ace5b337e9252e757e6}\label{namespacetesseract__examples_a18ba11cb1cad9ace5b337e9252e757e6} 
+\index{tesseract\_examples@{tesseract\_examples}!getJointTrajectory@{getJointTrajectory}}
+\index{getJointTrajectory@{getJointTrajectory}!tesseract\_examples@{tesseract\_examples}}
+\doxysubsubsection{\texorpdfstring{getJointTrajectory()}{getJointTrajectory()}}
+{\footnotesize\ttfamily tesseract\+\_\+common\+::\+Joint\+Trajectory tesseract\+\_\+examples\+::get\+Joint\+Trajectory (\begin{DoxyParamCaption}\item[{boost\+::uuids\+::uuid}]{uuid,  }\item[{const std\+::vector$<$ std\+::string $>$ \&}]{joint\+\_\+names,  }\item[{const tesseract\+\_\+common\+::\+Traj\+Array \&}]{current\+\_\+trajectory }\end{DoxyParamCaption})}
+
+\Hypertarget{namespacetesseract__examples_aca2ec848a35e94e7b051cafbee7157c6}\label{namespacetesseract__examples_aca2ec848a35e94e7b051cafbee7157c6} 
+\index{tesseract\_examples@{tesseract\_examples}!getPositionVector@{getPositionVector}}
+\index{getPositionVector@{getPositionVector}!tesseract\_examples@{tesseract\_examples}}
+\doxysubsubsection{\texorpdfstring{getPositionVector()}{getPositionVector()}}
+{\footnotesize\ttfamily std\+::vector$<$ double $>$ tesseract\+\_\+examples\+::get\+Position\+Vector (\begin{DoxyParamCaption}\item[{const Joint\+Group \&}]{joint\+\_\+group,  }\item[{const std\+::unordered\+\_\+map$<$ std\+::string, double $>$ \&}]{pos }\end{DoxyParamCaption})}
+
+\Hypertarget{namespacetesseract__examples_a535c9d25c8cd6feb7b05c111d5bbec5f}\label{namespacetesseract__examples_a535c9d25c8cd6feb7b05c111d5bbec5f} 
+\index{tesseract\_examples@{tesseract\_examples}!getPositionVectorXd@{getPositionVectorXd}}
+\index{getPositionVectorXd@{getPositionVectorXd}!tesseract\_examples@{tesseract\_examples}}
+\doxysubsubsection{\texorpdfstring{getPositionVectorXd()}{getPositionVectorXd()}}
+{\footnotesize\ttfamily Eigen\+::\+Vector\+Xd tesseract\+\_\+examples\+::get\+Position\+Vector\+Xd (\begin{DoxyParamCaption}\item[{const Joint\+Group \&}]{joint\+\_\+group,  }\item[{const std\+::unordered\+\_\+map$<$ std\+::string, double $>$ \&}]{pos }\end{DoxyParamCaption})}
+
+\Hypertarget{namespacetesseract__examples_a41a95bdc977f66f5ee618e1476050d45}\label{namespacetesseract__examples_a41a95bdc977f66f5ee618e1476050d45} 
+\index{tesseract\_examples@{tesseract\_examples}!getPredefinedPosition@{getPredefinedPosition}}
+\index{getPredefinedPosition@{getPredefinedPosition}!tesseract\_examples@{tesseract\_examples}}
+\doxysubsubsection{\texorpdfstring{getPredefinedPosition()}{getPredefinedPosition()}}
+{\footnotesize\ttfamily std\+::unordered\+\_\+map$<$ std\+::string, std\+::unordered\+\_\+map$<$ std\+::string, double $>$ $>$ tesseract\+\_\+examples\+::get\+Predefined\+Position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{namespacetesseract__examples_af77cba07954f8e4eca7c29565808aca9}\label{namespacetesseract__examples_af77cba07954f8e4eca7c29565808aca9} 
+\index{tesseract\_examples@{tesseract\_examples}!makePuzzleToolPoses@{makePuzzleToolPoses}}
+\index{makePuzzleToolPoses@{makePuzzleToolPoses}!tesseract\_examples@{tesseract\_examples}}
+\doxysubsubsection{\texorpdfstring{makePuzzleToolPoses()}{makePuzzleToolPoses()}}
+{\footnotesize\ttfamily tesseract\+\_\+common\+::\+Vector\+Isometry3d tesseract\+\_\+examples\+::make\+Puzzle\+Tool\+Poses (\begin{DoxyParamCaption}\item[{const tesseract\+\_\+common\+::\+Resource\+Locator\+::\+Const\+Ptr \&}]{locator }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+

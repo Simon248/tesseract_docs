@@ -1,0 +1,24 @@
+<map id="tesseract_examples/test/puzzle_piece_auxillary_axes_example_unit.cpp" name="tesseract_examples/test/puzzle_piece_auxillary_axes_example_unit.cpp">
+<area shape="rect" id="Node000001" title=" " alt="" coords="343,5,521,61"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,309,195,335"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="343,48,279,58,215,72,161,89,141,100,127,111,113,131,103,154,93,205,92,253,97,294,92,294,87,254,87,204,98,153,108,129,123,107,138,95,159,85,214,67,278,53,342,42"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="137,124,231,150"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="362,64,244,111,225,120,223,115,242,107,360,59"/>
+<area shape="rect" id="Node000004" href="$d1/d6f/puzzle__piece__auxillary__axes__example_8h.html" title="An example of a robot with a two axis position leveraging trajopt and tesseract to leverage all DOF t..." alt="" coords="255,109,407,165"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="407,63,370,100,367,96,403,60"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="431,124,636,150"/>
+<area shape="poly" id="edge9_Node000001_Node000009" title=" " alt="" coords="461,60,512,111,509,115,457,63"/>
+<area shape="rect" id="Node000010" title=" " alt="" coords="659,117,813,157"/>
+<area shape="poly" id="edge10_Node000001_Node000010" title=" " alt="" coords="514,59,664,109,662,114,513,64"/>
+<area shape="rect" id="Node000011" title=" " alt="" coords="836,117,1023,157"/>
+<area shape="poly" id="edge11_Node000001_Node000011" title=" " alt="" coords="522,47,665,73,826,106,840,110,839,115,825,112,664,79,521,52"/>
+<area shape="rect" id="Node000005" href="$df/d24/example_8h.html" title=" " alt="" coords="262,213,399,253"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="333,165,333,197,328,197,328,165"/>
+<area shape="poly" id="edge5_Node000005_Node000002" title=" " alt="" coords="279,256,148,305,146,300,277,251"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="218,309,286,335"/>
+<area shape="poly" id="edge6_Node000005_Node000006" title=" " alt="" coords="315,256,275,299,271,295,311,252"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="310,301,463,342"/>
+<area shape="poly" id="edge7_Node000005_Node000007" title=" " alt="" coords="346,252,368,287,363,290,341,255"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="487,301,641,342"/>
+<area shape="poly" id="edge8_Node000005_Node000008" title=" " alt="" coords="385,251,497,293,496,298,383,256"/>
+</map>

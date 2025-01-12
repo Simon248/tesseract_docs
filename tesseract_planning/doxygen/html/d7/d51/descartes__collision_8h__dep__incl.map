@@ -1,0 +1,19 @@
+<map id="tesseract_motion_planners/descartes/include/tesseract_motion_planners/descartes/descartes_collision.h" name="tesseract_motion_planners/descartes/include/tesseract_motion_planners/descartes/descartes_collision.h">
+<area shape="rect" id="Node000001" title="Tesseract Descartes Collision Implementation." alt="" coords="567,5,752,76"/>
+<area shape="rect" id="Node000002" href="$d0/d0a/descartes__robot__sampler_8hpp.html" title="Tesseract Descartes Kinematics Sampler Implementation." alt="" coords="5,132,229,202"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="552,62,404,89,242,127,218,133,216,128,240,121,403,84,551,57"/>
+<area shape="rect" id="Node000004" href="$df/d3e/descartes__default__plan__profile_8hpp.html" title=" " alt="" coords="253,124,448,210"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="560,85,449,129,447,124,558,80"/>
+<area shape="rect" id="Node000006" href="$d6/de7/descartes__collision_8cpp.html" title="Tesseract Descartes Collision Implementation." alt="" coords="471,139,648,195"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="625,90,583,140,579,137,620,86"/>
+<area shape="rect" id="Node000007" href="$d6/dcb/descartes__planner__tests_8cpp.html" title="This contains unit test for the tesseract descartes planner." alt="" coords="672,139,850,195"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="699,86,741,137,737,140,695,90"/>
+<area shape="rect" id="Node000008" href="$d2/de8/chain__example_8cpp.html" title="Chained motion planning example." alt="" coords="873,147,1068,187"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="762,80,922,143,920,148,760,85"/>
+<area shape="rect" id="Node000009" href="$d4/dfe/raster__example_8cpp.html" title="Raster motion planning example." alt="" coords="1092,147,1289,187"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="768,55,917,83,1080,121,1144,143,1143,148,1079,127,916,88,767,61"/>
+<area shape="rect" id="Node000003" href="$db/d0f/descartes__robot__sampler_8cpp.html" title="Tesseract Descartes Robot Kinematics Sampler." alt="" coords="28,265,206,321"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="120,218,120,265,114,265,114,218"/>
+<area shape="rect" id="Node000005" href="$da/dcd/descartes__default__plan__profile_8cpp.html" title=" " alt="" coords="262,258,439,328"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="353,225,353,257,348,257,348,225"/>
+</map>

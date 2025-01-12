@@ -1,0 +1,92 @@
+\doxysection{tesseract\+\_\+planning\+::Time\+Optimal\+Trajectory\+Generation Class Reference}
+\hypertarget{classtesseract__planning_1_1TimeOptimalTrajectoryGeneration}{}\label{classtesseract__planning_1_1TimeOptimalTrajectoryGeneration}\index{tesseract\_planning::TimeOptimalTrajectoryGeneration@{tesseract\_planning::TimeOptimalTrajectoryGeneration}}
+
+
+{\ttfamily \#include $<$time\+\_\+optimal\+\_\+trajectory\+\_\+generation.\+h$>$}
+
+
+
+Inheritance diagram for tesseract\+\_\+planning\+::Time\+Optimal\+Trajectory\+Generation\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=246pt]{d7/dc5/classtesseract__planning_1_1TimeOptimalTrajectoryGeneration__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for tesseract\+\_\+planning\+::Time\+Optimal\+Trajectory\+Generation\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=246pt]{d7/d48/classtesseract__planning_1_1TimeOptimalTrajectoryGeneration__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classtesseract__planning_1_1TimeOptimalTrajectoryGeneration_ac39fb63fadace332b295d87263356c7b}{Time\+Optimal\+Trajectory\+Generation}} (double path\+\_\+tolerance=0.\+1, double min\+\_\+angle\+\_\+change=0.\+001)
+\item 
+bool \mbox{\hyperlink{classtesseract__planning_1_1TimeOptimalTrajectoryGeneration_a26547ed17ba184d8b73430ff8ec5ba82}{compute}} (\mbox{\hyperlink{classtesseract__planning_1_1TrajectoryContainer}{Trajectory\+Container}} \&\mbox{\hyperlink{iterative__spline__tests_8cpp_a42770b019b3c810751d40ab5f2f25e20}{trajectory}}, const Eigen\+::\+Ref$<$ const Eigen\+::\+Matrix\+X2d $>$ \&velocity\+\_\+limits, const Eigen\+::\+Ref$<$ const Eigen\+::\+Matrix\+X2d $>$ \&acceleration\+\_\+limits, const Eigen\+::\+Ref$<$ const Eigen\+::\+Matrix\+X2d $>$ \&jerk\+\_\+limits, const Eigen\+::\+Ref$<$ const Eigen\+::\+Vector\+Xd $>$ \&velocity\+\_\+scaling\+\_\+factors=Eigen\+::\+Vector\+Xd\+::\+Ones(1), const Eigen\+::\+Ref$<$ const Eigen\+::\+Vector\+Xd $>$ \&acceleration\+\_\+scaling\+\_\+factors=Eigen\+::\+Vector\+Xd\+::\+Ones(1), const Eigen\+::\+Ref$<$ const Eigen\+::\+Vector\+Xd $>$ \&jerk\+\_\+scaling\+\_\+factors=Eigen\+::\+Vector\+Xd\+::\+Ones(1)) const override
+\begin{DoxyCompactList}\small\item\em Compute timestampes Currently this only supports using max velocity and acceleration so min values are ignored Currently only supports a single scale factor so the input must be of length one. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classtesseract__planning_1_1TimeParameterization}{tesseract\+\_\+planning\+::\+Time\+Parameterization}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{classtesseract__planning_1_1TimeParameterization_ac9f26a0bfa3e088d43a596c09f62116e}{\texorpdfstring{$\sim$}{\string~}\+Time\+Parameterization}} ()=default
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+double \mbox{\hyperlink{classtesseract__planning_1_1TimeOptimalTrajectoryGeneration_a236b546fd371d494b7f2c2b24c2d0d10}{path\+\_\+tolerance\+\_\+}}
+\item 
+double \mbox{\hyperlink{classtesseract__planning_1_1TimeOptimalTrajectoryGeneration_ae03e2d5be37b8e2026375aaaf3e20a58}{min\+\_\+angle\+\_\+change\+\_\+}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classtesseract__planning_1_1TimeOptimalTrajectoryGeneration_ac39fb63fadace332b295d87263356c7b}\label{classtesseract__planning_1_1TimeOptimalTrajectoryGeneration_ac39fb63fadace332b295d87263356c7b} 
+\index{tesseract\_planning::TimeOptimalTrajectoryGeneration@{tesseract\_planning::TimeOptimalTrajectoryGeneration}!TimeOptimalTrajectoryGeneration@{TimeOptimalTrajectoryGeneration}}
+\index{TimeOptimalTrajectoryGeneration@{TimeOptimalTrajectoryGeneration}!tesseract\_planning::TimeOptimalTrajectoryGeneration@{tesseract\_planning::TimeOptimalTrajectoryGeneration}}
+\doxysubsubsection{\texorpdfstring{TimeOptimalTrajectoryGeneration()}{TimeOptimalTrajectoryGeneration()}}
+{\footnotesize\ttfamily tesseract\+\_\+planning\+::\+Time\+Optimal\+Trajectory\+Generation\+::\+Time\+Optimal\+Trajectory\+Generation (\begin{DoxyParamCaption}\item[{double}]{path\+\_\+tolerance = {\ttfamily 0.1},  }\item[{double}]{min\+\_\+angle\+\_\+change = {\ttfamily 0.001} }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classtesseract__planning_1_1TimeOptimalTrajectoryGeneration_a26547ed17ba184d8b73430ff8ec5ba82}\label{classtesseract__planning_1_1TimeOptimalTrajectoryGeneration_a26547ed17ba184d8b73430ff8ec5ba82} 
+\index{tesseract\_planning::TimeOptimalTrajectoryGeneration@{tesseract\_planning::TimeOptimalTrajectoryGeneration}!compute@{compute}}
+\index{compute@{compute}!tesseract\_planning::TimeOptimalTrajectoryGeneration@{tesseract\_planning::TimeOptimalTrajectoryGeneration}}
+\doxysubsubsection{\texorpdfstring{compute()}{compute()}}
+{\footnotesize\ttfamily bool tesseract\+\_\+planning\+::\+Time\+Optimal\+Trajectory\+Generation\+::compute (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classtesseract__planning_1_1TrajectoryContainer}{Trajectory\+Container}} \&}]{trajectory,  }\item[{const Eigen\+::\+Ref$<$ const Eigen\+::\+Matrix\+X2d $>$ \&}]{velocity\+\_\+limits,  }\item[{const Eigen\+::\+Ref$<$ const Eigen\+::\+Matrix\+X2d $>$ \&}]{acceleration\+\_\+limits,  }\item[{const Eigen\+::\+Ref$<$ const Eigen\+::\+Matrix\+X2d $>$ \&}]{jerk\+\_\+limits,  }\item[{const Eigen\+::\+Ref$<$ const Eigen\+::\+Vector\+Xd $>$ \&}]{velocity\+\_\+scaling\+\_\+factors = {\ttfamily Eigen\+:\+:VectorXd\+:\+:Ones(1)},  }\item[{const Eigen\+::\+Ref$<$ const Eigen\+::\+Vector\+Xd $>$ \&}]{acceleration\+\_\+scaling\+\_\+factors = {\ttfamily Eigen\+:\+:VectorXd\+:\+:Ones(1)},  }\item[{const Eigen\+::\+Ref$<$ const Eigen\+::\+Vector\+Xd $>$ \&}]{jerk\+\_\+scaling\+\_\+factors = {\ttfamily Eigen\+:\+:VectorXd\+:\+:Ones(1)} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Compute timestampes Currently this only supports using max velocity and acceleration so min values are ignored Currently only supports a single scale factor so the input must be of length one. 
+
+
+
+Implements \mbox{\hyperlink{classtesseract__planning_1_1TimeParameterization_a08c4e75278a13314e3a074f23c678544}{tesseract\+\_\+planning\+::\+Time\+Parameterization}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classtesseract__planning_1_1TimeOptimalTrajectoryGeneration_ae03e2d5be37b8e2026375aaaf3e20a58}\label{classtesseract__planning_1_1TimeOptimalTrajectoryGeneration_ae03e2d5be37b8e2026375aaaf3e20a58} 
+\index{tesseract\_planning::TimeOptimalTrajectoryGeneration@{tesseract\_planning::TimeOptimalTrajectoryGeneration}!min\_angle\_change\_@{min\_angle\_change\_}}
+\index{min\_angle\_change\_@{min\_angle\_change\_}!tesseract\_planning::TimeOptimalTrajectoryGeneration@{tesseract\_planning::TimeOptimalTrajectoryGeneration}}
+\doxysubsubsection{\texorpdfstring{min\_angle\_change\_}{min\_angle\_change\_}}
+{\footnotesize\ttfamily double tesseract\+\_\+planning\+::\+Time\+Optimal\+Trajectory\+Generation\+::min\+\_\+angle\+\_\+change\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classtesseract__planning_1_1TimeOptimalTrajectoryGeneration_a236b546fd371d494b7f2c2b24c2d0d10}\label{classtesseract__planning_1_1TimeOptimalTrajectoryGeneration_a236b546fd371d494b7f2c2b24c2d0d10} 
+\index{tesseract\_planning::TimeOptimalTrajectoryGeneration@{tesseract\_planning::TimeOptimalTrajectoryGeneration}!path\_tolerance\_@{path\_tolerance\_}}
+\index{path\_tolerance\_@{path\_tolerance\_}!tesseract\_planning::TimeOptimalTrajectoryGeneration@{tesseract\_planning::TimeOptimalTrajectoryGeneration}}
+\doxysubsubsection{\texorpdfstring{path\_tolerance\_}{path\_tolerance\_}}
+{\footnotesize\ttfamily double tesseract\+\_\+planning\+::\+Time\+Optimal\+Trajectory\+Generation\+::path\+\_\+tolerance\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+tesseract\+\_\+time\+\_\+parameterization/totg/include/tesseract\+\_\+time\+\_\+parameterization/totg/\mbox{\hyperlink{time__optimal__trajectory__generation_8h}{time\+\_\+optimal\+\_\+trajectory\+\_\+generation.\+h}}\item 
+tesseract\+\_\+time\+\_\+parameterization/totg/src/\mbox{\hyperlink{time__optimal__trajectory__generation_8cpp}{time\+\_\+optimal\+\_\+trajectory\+\_\+generation.\+cpp}}\end{DoxyCompactItemize}

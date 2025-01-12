@@ -1,0 +1,49 @@
+\doxysection{trajopt\+\_\+osqp\+\_\+solver\+\_\+profile.\+h}
+\hypertarget{trajopt__osqp__solver__profile_8h_source}{}\label{trajopt__osqp__solver__profile_8h_source}\index{tesseract\_motion\_planners/trajopt/include/tesseract\_motion\_planners/trajopt/profile/trajopt\_osqp\_solver\_profile.h@{tesseract\_motion\_planners/trajopt/include/tesseract\_motion\_planners/trajopt/profile/trajopt\_osqp\_solver\_profile.h}}
+\mbox{\hyperlink{trajopt__osqp__solver__profile_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00026\ \textcolor{preprocessor}{\#ifndef\ TESSERACT\_MOTION\_PLANNERS\_TRAJOPT\_OSQP\_SOLVER\_PROFILE\_H}}
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#define\ TESSERACT\_MOTION\_PLANNERS\_TRAJOPT\_OSQP\_SOLVER\_PROFILE\_H}}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{trajopt__profile_8h}{tesseract\_motion\_planners/trajopt/profile/trajopt\_profile.h}}>}}
+\DoxyCodeLine{00030\ \textcolor{preprocessor}{\#include\ <trajopt\_sco/osqp\_interface.hpp>}}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceboost_1_1serialization}{boost::serialization}}}
+\DoxyCodeLine{00033\ \{}
+\DoxyCodeLine{00034\ \textcolor{keyword}{template}\ <\textcolor{keyword}{class}\ Archive>}
+\DoxyCodeLine{00035\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{namespaceboost_1_1serialization_a9ff04ecd728c3b6e506cf71d50d20c68}{serialize}}(Archive\&\ ar,\ OSQPSettings\&\ settings,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ version);\ \ \textcolor{comment}{//\ NOLINT}}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ \textcolor{keyword}{template}\ <\textcolor{keyword}{class}\ Archive>}
+\DoxyCodeLine{00038\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{namespaceboost_1_1serialization_a9ff04ecd728c3b6e506cf71d50d20c68}{serialize}}(Archive\&\ ar,\ sco::BasicTrustRegionSQPParameters\&\ params,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ version);\ \ \textcolor{comment}{//\ NOLINT}}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \}\ \ \textcolor{comment}{//\ namespace\ boost::serialization}}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00042\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacetesseract__planning}{tesseract\_planning}}}
+\DoxyCodeLine{00043\ \{}
+\DoxyCodeLine{00045\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classtesseract__planning_1_1TrajOptOSQPSolverProfile}{TrajOptOSQPSolverProfile}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classtesseract__planning_1_1TrajOptSolverProfile}{TrajOptSolverProfile}}}
+\DoxyCodeLine{00046\ \{}
+\DoxyCodeLine{00047\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00048\ \ \ \textcolor{keyword}{using\ }\mbox{\hyperlink{classtesseract__planning_1_1TrajOptOSQPSolverProfile_a721e316af3b29204c8a256ab8145ee6a}{Ptr}}\ =\ std::shared\_ptr<TrajOptOSQPSolverProfile>;}
+\DoxyCodeLine{00049\ \ \ \textcolor{keyword}{using\ }\mbox{\hyperlink{classtesseract__planning_1_1TrajOptOSQPSolverProfile_a2367bcb86986100b75523858dead43a6}{ConstPtr}}\ =\ std::shared\_ptr<const\ TrajOptOSQPSolverProfile>;}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00051\ \ \ \mbox{\hyperlink{classtesseract__planning_1_1TrajOptOSQPSolverProfile_a3bc3bd8cf7efa122a331bff51465aa45}{TrajOptOSQPSolverProfile}}();}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00053\ \ \ OSQPSettings\ \mbox{\hyperlink{classtesseract__planning_1_1TrajOptOSQPSolverProfile_a1c65ebdaea1377d9a3aa05b5c5ea6ce3}{settings}}\{\};}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00055\ \ \ sco::ModelType\ \mbox{\hyperlink{classtesseract__planning_1_1TrajOptOSQPSolverProfile_adde551357bdc8b2c2caf00c9366f8ce8}{getSolverType}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00057\ \ \ std::unique\_ptr<sco::ModelConfig>\ \mbox{\hyperlink{classtesseract__planning_1_1TrajOptOSQPSolverProfile_ae6c15f361f6ae690ced67fed92696796}{createSolverConfig}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00059\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00060\ \ \ \textcolor{keyword}{friend}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classtesseract__planning_1_1TrajOptOSQPSolverProfile_ac98d07dd8f7b70e16ccb9a01abf56b9c}{boost::serialization::access}};}
+\DoxyCodeLine{00061\ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{class}\ Archive>}
+\DoxyCodeLine{00062\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classtesseract__planning_1_1TrajOptOSQPSolverProfile_ad008db44c52aac7773dce5675956593f}{serialize}}(Archive\&,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int});\ \ \textcolor{comment}{//\ NOLINT}}
+\DoxyCodeLine{00063\ \};}
+\DoxyCodeLine{00064\ \}\ \ \textcolor{comment}{//\ namespace\ tesseract\_planning}}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00066\ BOOST\_CLASS\_EXPORT\_KEY(\mbox{\hyperlink{classtesseract__planning_1_1TrajOptOSQPSolverProfile}{tesseract\_planning::TrajOptOSQPSolverProfile}})}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00068\ \textcolor{preprocessor}{\#endif\ \ }\textcolor{comment}{//\ TESSERACT\_MOTION\_PLANNERS\_TRAJOPT\_OSQP\_SOLVER\_PROFILE\_H}}
+
+\end{DoxyCode}

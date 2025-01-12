@@ -1,0 +1,21 @@
+<map id="tesseract_examples/src/freespace_hybrid_example_node.cpp" name="tesseract_examples/src/freespace_hybrid_example_node.cpp">
+<area shape="rect" id="Node000001" title="An example of a feespace motion planning with OMPL then TrajOpt." alt="" coords="567,5,713,61"/>
+<area shape="rect" id="Node000002" href="$d7/d12/freespace__hybrid__example_8h.html" title="An example of a feespace motion planning with OMPL then TrajOpt." alt="" coords="225,109,413,150"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="567,58,402,107,400,102,566,53"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="437,117,641,142"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="612,64,564,108,561,104,609,60"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="665,109,818,150"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="671,60,711,97,708,100,668,64"/>
+<area shape="rect" id="Node000010" title=" " alt="" coords="842,109,1028,150"/>
+<area shape="poly" id="edge9_Node000001_Node000010" title=" " alt="" coords="714,55,859,101,858,106,712,60"/>
+<area shape="rect" id="Node000003" href="$df/d24/example_8h.html" title=" " alt="" coords="250,198,387,238"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="321,150,321,182,316,182,316,150"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="5,294,195,320"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="270,241,146,290,144,285,268,236"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="218,294,286,320"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="306,240,273,283,268,280,301,237"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="310,286,463,327"/>
+<area shape="poly" id="edge5_Node000003_Node000006" title=" " alt="" coords="336,237,364,273,360,276,332,241"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="487,286,641,327"/>
+<area shape="poly" id="edge6_Node000003_Node000007" title=" " alt="" coords="375,236,495,278,493,283,373,241"/>
+</map>

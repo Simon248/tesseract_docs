@@ -1,0 +1,267 @@
+\doxysection{tesseract\+\_\+planning\+::Task\+Composer\+Keys Class Reference}
+\hypertarget{classtesseract__planning_1_1TaskComposerKeys}{}\label{classtesseract__planning_1_1TaskComposerKeys}\index{tesseract\_planning::TaskComposerKeys@{tesseract\_planning::TaskComposerKeys}}
+
+
+{\ttfamily \#include $<$task\+\_\+composer\+\_\+keys.\+h$>$}
+
+
+
+Collaboration diagram for tesseract\+\_\+planning\+::Task\+Composer\+Keys\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=203pt]{d6/daa/classtesseract__planning_1_1TaskComposerKeys__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerKeys_add49e6c4ec38cc0ae3cbfa9d5364e7ad}{Entry\+Type}} = std\+::variant$<$ std\+::string, std\+::vector$<$ std\+::string $>$ $>$
+\item 
+using \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerKeys_a2afd3cd05cab5f43ad360210382a904c}{Container\+Type}} = std\+::unordered\+\_\+map$<$ std\+::string, \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerKeys_add49e6c4ec38cc0ae3cbfa9d5364e7ad}{Entry\+Type}} $>$
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerKeys_abfcd91f92e25fd7c4ee82196b474de19}{add}} (const std\+::string \&port, std\+::string key)
+\begin{DoxyCompactList}\small\item\em Add key. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerKeys_aa55f1c043bba85839c9df0579166b47a}{add}} (const std\+::string \&port, std\+::vector$<$ std\+::string $>$ keys)
+\begin{DoxyCompactList}\small\item\em Add keys. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerKeys_acbc074047736a21d2a0de536a14b3b9d}{rename}} (const std\+::map$<$ std\+::string, std\+::string $>$ \&keys)
+\begin{DoxyCompactList}\small\item\em Rename keys. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerKeys_aaf0724e1dd9f5f2db4eba8b8cdadff8b}{has}} (const std\+::string \&port) const
+\begin{DoxyCompactList}\small\item\em Check if port exist. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T  = std\+::string$>$ }\\const T \& \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerKeys_a6e57584bbcd199025ef3cc9951e95619}{get}} (const std\+::string \&port) const
+\begin{DoxyCompactList}\small\item\em Get key/keys assigned to port. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerKeys_a2afd3cd05cab5f43ad360210382a904c}{Container\+Type}} \& \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerKeys_a4fb863f6f37166d801bbbbe79bdd1f48}{data}} () const
+\begin{DoxyCompactList}\small\item\em Get the data container object. \end{DoxyCompactList}\item 
+std\+::size\+\_\+t \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerKeys_a1611eb0b1e5e5a930aa3c5b013efb122}{size}} () const
+\begin{DoxyCompactList}\small\item\em The size. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerKeys_a6aa13439f8295fca152670ffc2715ad2}{empty}} () const
+\begin{DoxyCompactList}\small\item\em Check if empty. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerKeys_a33df519fb6a01f2150d6016e43867f96}{operator==}} (const \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerKeys}{Task\+Composer\+Keys}} \&rhs) const
+\item 
+bool \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerKeys_a5e0acdba6a1b04953ce8932f59e50d21}{operator!=}} (const \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerKeys}{Task\+Composer\+Keys}} \&rhs) const
+\item 
+template$<$$>$ const std\+::string \& \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerKeys_a592b72069629a55162774f710939c9d6}{get}} (const std\+::string \&port) const
+\item 
+template$<$$>$ const std\+::vector$<$ std\+::string $>$ \& \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerKeys_ac5188672d60286533e8b1c6aac7623f1}{get}} (const std\+::string \&port) const
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$class Archive $>$ }\\void \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerKeys_a9e7ab50b3d6dd6844448bddd94dbe7cc}{serialize}} (Archive \&ar, const unsigned int version)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classtesseract__planning_1_1TaskComposerKeys_a2afd3cd05cab5f43ad360210382a904c}{Container\+Type}} \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerKeys_ab2d8a6a92e3239363414280ea8b2798a}{keys\+\_\+}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerKeys_a9d42ad7bb40288a7ac1aad8d76809fe7}{tesseract\+\_\+common\+::\+Serialization}}
+\item 
+class \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerKeys_ac98d07dd8f7b70e16ccb9a01abf56b9c}{boost\+::serialization\+::access}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Typedef Documentation}
+\Hypertarget{classtesseract__planning_1_1TaskComposerKeys_a2afd3cd05cab5f43ad360210382a904c}\label{classtesseract__planning_1_1TaskComposerKeys_a2afd3cd05cab5f43ad360210382a904c} 
+\index{tesseract\_planning::TaskComposerKeys@{tesseract\_planning::TaskComposerKeys}!ContainerType@{ContainerType}}
+\index{ContainerType@{ContainerType}!tesseract\_planning::TaskComposerKeys@{tesseract\_planning::TaskComposerKeys}}
+\doxysubsubsection{\texorpdfstring{ContainerType}{ContainerType}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerKeys_a2afd3cd05cab5f43ad360210382a904c}{tesseract\+\_\+planning\+::\+Task\+Composer\+Keys\+::\+Container\+Type}} =  std\+::unordered\+\_\+map$<$std\+::string, \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerKeys_add49e6c4ec38cc0ae3cbfa9d5364e7ad}{Entry\+Type}}$>$}
+
+\Hypertarget{classtesseract__planning_1_1TaskComposerKeys_add49e6c4ec38cc0ae3cbfa9d5364e7ad}\label{classtesseract__planning_1_1TaskComposerKeys_add49e6c4ec38cc0ae3cbfa9d5364e7ad} 
+\index{tesseract\_planning::TaskComposerKeys@{tesseract\_planning::TaskComposerKeys}!EntryType@{EntryType}}
+\index{EntryType@{EntryType}!tesseract\_planning::TaskComposerKeys@{tesseract\_planning::TaskComposerKeys}}
+\doxysubsubsection{\texorpdfstring{EntryType}{EntryType}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerKeys_add49e6c4ec38cc0ae3cbfa9d5364e7ad}{tesseract\+\_\+planning\+::\+Task\+Composer\+Keys\+::\+Entry\+Type}} =  std\+::variant$<$std\+::string, std\+::vector$<$std\+::string$>$ $>$}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classtesseract__planning_1_1TaskComposerKeys_abfcd91f92e25fd7c4ee82196b474de19}\label{classtesseract__planning_1_1TaskComposerKeys_abfcd91f92e25fd7c4ee82196b474de19} 
+\index{tesseract\_planning::TaskComposerKeys@{tesseract\_planning::TaskComposerKeys}!add@{add}}
+\index{add@{add}!tesseract\_planning::TaskComposerKeys@{tesseract\_planning::TaskComposerKeys}}
+\doxysubsubsection{\texorpdfstring{add()}{add()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void tesseract\+\_\+planning\+::\+Task\+Composer\+Keys\+::add (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{port,  }\item[{std\+::string}]{key }\end{DoxyParamCaption})}
+
+
+
+Add key. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em port} & The port name associated with the key \\
+\hline
+{\em key} & The key assigned to the port \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classtesseract__planning_1_1TaskComposerKeys_aa55f1c043bba85839c9df0579166b47a}\label{classtesseract__planning_1_1TaskComposerKeys_aa55f1c043bba85839c9df0579166b47a} 
+\index{tesseract\_planning::TaskComposerKeys@{tesseract\_planning::TaskComposerKeys}!add@{add}}
+\index{add@{add}!tesseract\_planning::TaskComposerKeys@{tesseract\_planning::TaskComposerKeys}}
+\doxysubsubsection{\texorpdfstring{add()}{add()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void tesseract\+\_\+planning\+::\+Task\+Composer\+Keys\+::add (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{port,  }\item[{std\+::vector$<$ std\+::string $>$}]{keys }\end{DoxyParamCaption})}
+
+
+
+Add keys. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em port} & The port name associated with the keys \\
+\hline
+{\em key} & The keys assigned to the port \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classtesseract__planning_1_1TaskComposerKeys_a4fb863f6f37166d801bbbbe79bdd1f48}\label{classtesseract__planning_1_1TaskComposerKeys_a4fb863f6f37166d801bbbbe79bdd1f48} 
+\index{tesseract\_planning::TaskComposerKeys@{tesseract\_planning::TaskComposerKeys}!data@{data}}
+\index{data@{data}!tesseract\_planning::TaskComposerKeys@{tesseract\_planning::TaskComposerKeys}}
+\doxysubsubsection{\texorpdfstring{data()}{data()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerKeys_a2afd3cd05cab5f43ad360210382a904c}{Task\+Composer\+Keys\+::\+Container\+Type}} \& tesseract\+\_\+planning\+::\+Task\+Composer\+Keys\+::data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the data container object. 
+
+\begin{DoxyReturn}{Returns}
+The data container object 
+\end{DoxyReturn}
+\Hypertarget{classtesseract__planning_1_1TaskComposerKeys_a6aa13439f8295fca152670ffc2715ad2}\label{classtesseract__planning_1_1TaskComposerKeys_a6aa13439f8295fca152670ffc2715ad2} 
+\index{tesseract\_planning::TaskComposerKeys@{tesseract\_planning::TaskComposerKeys}!empty@{empty}}
+\index{empty@{empty}!tesseract\_planning::TaskComposerKeys@{tesseract\_planning::TaskComposerKeys}}
+\doxysubsubsection{\texorpdfstring{empty()}{empty()}}
+{\footnotesize\ttfamily bool tesseract\+\_\+planning\+::\+Task\+Composer\+Keys\+::empty (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Check if empty. 
+
+\Hypertarget{classtesseract__planning_1_1TaskComposerKeys_a6e57584bbcd199025ef3cc9951e95619}\label{classtesseract__planning_1_1TaskComposerKeys_a6e57584bbcd199025ef3cc9951e95619} 
+\index{tesseract\_planning::TaskComposerKeys@{tesseract\_planning::TaskComposerKeys}!get@{get}}
+\index{get@{get}!tesseract\_planning::TaskComposerKeys@{tesseract\_planning::TaskComposerKeys}}
+\doxysubsubsection{\texorpdfstring{get()}{get()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily template$<$typename T  = std\+::string$>$ \\
+const T \& tesseract\+\_\+planning\+::\+Task\+Composer\+Keys\+::get (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{port }\end{DoxyParamCaption}) const}
+
+
+
+Get key/keys assigned to port. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em port} & The port to retrieve key/keys \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The key/keys assigned to port 
+\end{DoxyReturn}
+\Hypertarget{classtesseract__planning_1_1TaskComposerKeys_a592b72069629a55162774f710939c9d6}\label{classtesseract__planning_1_1TaskComposerKeys_a592b72069629a55162774f710939c9d6} 
+\index{tesseract\_planning::TaskComposerKeys@{tesseract\_planning::TaskComposerKeys}!get@{get}}
+\index{get@{get}!tesseract\_planning::TaskComposerKeys@{tesseract\_planning::TaskComposerKeys}}
+\doxysubsubsection{\texorpdfstring{get()}{get()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily template$<$$>$ \\
+const std\+::string \& tesseract\+\_\+planning\+::\+Task\+Composer\+Keys\+::get (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{port }\end{DoxyParamCaption}) const}
+
+\Hypertarget{classtesseract__planning_1_1TaskComposerKeys_ac5188672d60286533e8b1c6aac7623f1}\label{classtesseract__planning_1_1TaskComposerKeys_ac5188672d60286533e8b1c6aac7623f1} 
+\index{tesseract\_planning::TaskComposerKeys@{tesseract\_planning::TaskComposerKeys}!get@{get}}
+\index{get@{get}!tesseract\_planning::TaskComposerKeys@{tesseract\_planning::TaskComposerKeys}}
+\doxysubsubsection{\texorpdfstring{get()}{get()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily template$<$$>$ \\
+const std\+::vector$<$ std\+::string $>$ \& tesseract\+\_\+planning\+::\+Task\+Composer\+Keys\+::get (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{port }\end{DoxyParamCaption}) const}
+
+\Hypertarget{classtesseract__planning_1_1TaskComposerKeys_aaf0724e1dd9f5f2db4eba8b8cdadff8b}\label{classtesseract__planning_1_1TaskComposerKeys_aaf0724e1dd9f5f2db4eba8b8cdadff8b} 
+\index{tesseract\_planning::TaskComposerKeys@{tesseract\_planning::TaskComposerKeys}!has@{has}}
+\index{has@{has}!tesseract\_planning::TaskComposerKeys@{tesseract\_planning::TaskComposerKeys}}
+\doxysubsubsection{\texorpdfstring{has()}{has()}}
+{\footnotesize\ttfamily bool tesseract\+\_\+planning\+::\+Task\+Composer\+Keys\+::has (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{port }\end{DoxyParamCaption}) const}
+
+
+
+Check if port exist. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em port} & The port name \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if entry exist, otherwise false 
+\end{DoxyReturn}
+\Hypertarget{classtesseract__planning_1_1TaskComposerKeys_a5e0acdba6a1b04953ce8932f59e50d21}\label{classtesseract__planning_1_1TaskComposerKeys_a5e0acdba6a1b04953ce8932f59e50d21} 
+\index{tesseract\_planning::TaskComposerKeys@{tesseract\_planning::TaskComposerKeys}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!tesseract\_planning::TaskComposerKeys@{tesseract\_planning::TaskComposerKeys}}
+\doxysubsubsection{\texorpdfstring{operator"!=()}{operator!=()}}
+{\footnotesize\ttfamily bool tesseract\+\_\+planning\+::\+Task\+Composer\+Keys\+::operator!= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerKeys}{Task\+Composer\+Keys}} \&}]{rhs }\end{DoxyParamCaption}) const}
+
+\Hypertarget{classtesseract__planning_1_1TaskComposerKeys_a33df519fb6a01f2150d6016e43867f96}\label{classtesseract__planning_1_1TaskComposerKeys_a33df519fb6a01f2150d6016e43867f96} 
+\index{tesseract\_planning::TaskComposerKeys@{tesseract\_planning::TaskComposerKeys}!operator==@{operator==}}
+\index{operator==@{operator==}!tesseract\_planning::TaskComposerKeys@{tesseract\_planning::TaskComposerKeys}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily bool tesseract\+\_\+planning\+::\+Task\+Composer\+Keys\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerKeys}{Task\+Composer\+Keys}} \&}]{rhs }\end{DoxyParamCaption}) const}
+
+\Hypertarget{classtesseract__planning_1_1TaskComposerKeys_acbc074047736a21d2a0de536a14b3b9d}\label{classtesseract__planning_1_1TaskComposerKeys_acbc074047736a21d2a0de536a14b3b9d} 
+\index{tesseract\_planning::TaskComposerKeys@{tesseract\_planning::TaskComposerKeys}!rename@{rename}}
+\index{rename@{rename}!tesseract\_planning::TaskComposerKeys@{tesseract\_planning::TaskComposerKeys}}
+\doxysubsubsection{\texorpdfstring{rename()}{rename()}}
+{\footnotesize\ttfamily void tesseract\+\_\+planning\+::\+Task\+Composer\+Keys\+::rename (\begin{DoxyParamCaption}\item[{const std\+::map$<$ std\+::string, std\+::string $>$ \&}]{keys }\end{DoxyParamCaption})}
+
+
+
+Rename keys. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em keys} & The key renamming map \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classtesseract__planning_1_1TaskComposerKeys_a9e7ab50b3d6dd6844448bddd94dbe7cc}\label{classtesseract__planning_1_1TaskComposerKeys_a9e7ab50b3d6dd6844448bddd94dbe7cc} 
+\index{tesseract\_planning::TaskComposerKeys@{tesseract\_planning::TaskComposerKeys}!serialize@{serialize}}
+\index{serialize@{serialize}!tesseract\_planning::TaskComposerKeys@{tesseract\_planning::TaskComposerKeys}}
+\doxysubsubsection{\texorpdfstring{serialize()}{serialize()}}
+{\footnotesize\ttfamily template$<$class Archive $>$ \\
+void tesseract\+\_\+planning\+::\+Task\+Composer\+Keys\+::serialize (\begin{DoxyParamCaption}\item[{Archive \&}]{ar,  }\item[{const unsigned int}]{version }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classtesseract__planning_1_1TaskComposerKeys_a1611eb0b1e5e5a930aa3c5b013efb122}\label{classtesseract__planning_1_1TaskComposerKeys_a1611eb0b1e5e5a930aa3c5b013efb122} 
+\index{tesseract\_planning::TaskComposerKeys@{tesseract\_planning::TaskComposerKeys}!size@{size}}
+\index{size@{size}!tesseract\_planning::TaskComposerKeys@{tesseract\_planning::TaskComposerKeys}}
+\doxysubsubsection{\texorpdfstring{size()}{size()}}
+{\footnotesize\ttfamily std\+::size\+\_\+t tesseract\+\_\+planning\+::\+Task\+Composer\+Keys\+::size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+The size. 
+
+
+
+\doxysubsection{Friends And Related Symbol Documentation}
+\Hypertarget{classtesseract__planning_1_1TaskComposerKeys_ac98d07dd8f7b70e16ccb9a01abf56b9c}\label{classtesseract__planning_1_1TaskComposerKeys_ac98d07dd8f7b70e16ccb9a01abf56b9c} 
+\index{tesseract\_planning::TaskComposerKeys@{tesseract\_planning::TaskComposerKeys}!boost::serialization::access@{boost::serialization::access}}
+\index{boost::serialization::access@{boost::serialization::access}!tesseract\_planning::TaskComposerKeys@{tesseract\_planning::TaskComposerKeys}}
+\doxysubsubsection{\texorpdfstring{boost::serialization::access}{boost::serialization::access}}
+{\footnotesize\ttfamily friend class boost\+::serialization\+::access\hspace{0.3cm}{\ttfamily [friend]}}
+
+\Hypertarget{classtesseract__planning_1_1TaskComposerKeys_a9d42ad7bb40288a7ac1aad8d76809fe7}\label{classtesseract__planning_1_1TaskComposerKeys_a9d42ad7bb40288a7ac1aad8d76809fe7} 
+\index{tesseract\_planning::TaskComposerKeys@{tesseract\_planning::TaskComposerKeys}!tesseract\_common::Serialization@{tesseract\_common::Serialization}}
+\index{tesseract\_common::Serialization@{tesseract\_common::Serialization}!tesseract\_planning::TaskComposerKeys@{tesseract\_planning::TaskComposerKeys}}
+\doxysubsubsection{\texorpdfstring{tesseract\_common::Serialization}{tesseract\_common::Serialization}}
+{\footnotesize\ttfamily friend struct tesseract\+\_\+common\+::\+Serialization\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classtesseract__planning_1_1TaskComposerKeys_ab2d8a6a92e3239363414280ea8b2798a}\label{classtesseract__planning_1_1TaskComposerKeys_ab2d8a6a92e3239363414280ea8b2798a} 
+\index{tesseract\_planning::TaskComposerKeys@{tesseract\_planning::TaskComposerKeys}!keys\_@{keys\_}}
+\index{keys\_@{keys\_}!tesseract\_planning::TaskComposerKeys@{tesseract\_planning::TaskComposerKeys}}
+\doxysubsubsection{\texorpdfstring{keys\_}{keys\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerKeys_a2afd3cd05cab5f43ad360210382a904c}{Container\+Type}} tesseract\+\_\+planning\+::\+Task\+Composer\+Keys\+::keys\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+tesseract\+\_\+task\+\_\+composer/core/include/tesseract\+\_\+task\+\_\+composer/core/\mbox{\hyperlink{task__composer__keys_8h}{task\+\_\+composer\+\_\+keys.\+h}}\item 
+tesseract\+\_\+task\+\_\+composer/core/src/\mbox{\hyperlink{task__composer__keys_8cpp}{task\+\_\+composer\+\_\+keys.\+cpp}}\end{DoxyCompactItemize}

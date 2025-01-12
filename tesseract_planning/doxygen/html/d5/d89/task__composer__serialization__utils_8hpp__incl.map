@@ -1,0 +1,19 @@
+<map id="tesseract_task_composer/core/include/tesseract_task_composer/core/test_suite/task_composer_serialization_utils.hpp" name="tesseract_task_composer/core/include/tesseract_task_composer/core/test_suite/task_composer_serialization_utils.hpp">
+<area shape="rect" id="Node000001" title=" " alt="" coords="644,5,868,91"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,147,195,172"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="644,70,207,142,182,146,182,141,206,136,643,65"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="219,147,312,172"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="644,72,492,102,325,142,316,144,314,139,323,136,490,97,643,67"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="336,147,539,172"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="644,90,488,143,487,138,642,85"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="563,147,762,172"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="722,93,685,136,681,133,718,89"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="787,139,912,180"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="794,89,825,125,821,129,790,93"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="936,139,1061,180"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="851,89,943,130,941,135,849,94"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="1085,147,1299,172"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="869,75,1129,140,1128,145,868,80"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="1323,147,1493,172"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="869,64,1311,136,1333,140,1332,146,1310,142,868,69"/>
+</map>

@@ -1,0 +1,7 @@
+<map id="tesseract_planning::OMPLRealVectorPlanProfile" name="tesseract_planning::OMPLRealVectorPlanProfile">
+<area shape="rect" id="Node000001" title="OMPL does not support the concept of multi waypoint planning like descartes and trajopt...." alt="" coords="5,183,197,223"/>
+<area shape="rect" id="Node000002" href="$dc/d55/classtesseract__planning_1_1OMPLPlanProfile.html" title=" " alt="" coords="36,94,166,135"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="104,150,104,182,98,182,98,150"/>
+<area shape="rect" id="Node000003" href="$db/d41/classtesseract__planning_1_1Profile.html" title="The Profile class." alt="" coords="36,5,166,46"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="104,62,104,94,98,94,98,62"/>
+</map>

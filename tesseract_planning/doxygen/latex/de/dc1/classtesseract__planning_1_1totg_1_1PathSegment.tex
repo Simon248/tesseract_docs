@@ -1,0 +1,175 @@
+\doxysection{tesseract\+\_\+planning\+::totg\+::Path\+Segment Class Reference}
+\hypertarget{classtesseract__planning_1_1totg_1_1PathSegment}{}\label{classtesseract__planning_1_1totg_1_1PathSegment}\index{tesseract\_planning::totg::PathSegment@{tesseract\_planning::totg::PathSegment}}
+
+
+Inheritance diagram for tesseract\+\_\+planning\+::totg\+::Path\+Segment\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d8/d95/classtesseract__planning_1_1totg_1_1PathSegment__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classtesseract__planning_1_1totg_1_1PathSegment_a45cd0e79bdaae8ca9304c89af41c9754}{Path\+Segment}} ()=default
+\item 
+\mbox{\hyperlink{classtesseract__planning_1_1totg_1_1PathSegment_ac5f12c85461d466a7fdb1ba0930879e4}{Path\+Segment}} (double length)
+\item 
+virtual \mbox{\hyperlink{classtesseract__planning_1_1totg_1_1PathSegment_ad236fa1fd151f54728a88abb389a58d5}{\texorpdfstring{$\sim$}{\string~}\+Path\+Segment}} ()=default
+\item 
+\mbox{\hyperlink{classtesseract__planning_1_1totg_1_1PathSegment_adda86ab70870dc352cbbf8dcc513d99e}{Path\+Segment}} (const \mbox{\hyperlink{classtesseract__planning_1_1totg_1_1PathSegment}{Path\+Segment}} \&)=default
+\item 
+\mbox{\hyperlink{classtesseract__planning_1_1totg_1_1PathSegment}{Path\+Segment}} \& \mbox{\hyperlink{classtesseract__planning_1_1totg_1_1PathSegment_ad356a4bd5b975a9cec817c13c79a3040}{operator=}} (const \mbox{\hyperlink{classtesseract__planning_1_1totg_1_1PathSegment}{Path\+Segment}} \&)=default
+\item 
+\mbox{\hyperlink{classtesseract__planning_1_1totg_1_1PathSegment_a44ef399c2653b333a8423e8741dd2105}{Path\+Segment}} (\mbox{\hyperlink{classtesseract__planning_1_1totg_1_1PathSegment}{Path\+Segment}} \&\&)=default
+\item 
+\mbox{\hyperlink{classtesseract__planning_1_1totg_1_1PathSegment}{Path\+Segment}} \& \mbox{\hyperlink{classtesseract__planning_1_1totg_1_1PathSegment_a30163219c51078eed9cf03db6fe5c8c8}{operator=}} (\mbox{\hyperlink{classtesseract__planning_1_1totg_1_1PathSegment}{Path\+Segment}} \&\&)=default
+\item 
+double \mbox{\hyperlink{classtesseract__planning_1_1totg_1_1PathSegment_a82c9637678eabd49845f5375986a90f2}{get\+Length}} () const
+\item 
+virtual Eigen\+::\+Vector\+Xd \mbox{\hyperlink{classtesseract__planning_1_1totg_1_1PathSegment_ae74e9ed2da4856b2d3a7a2e7fd7f44bf}{get\+Config}} (double s) const =0
+\item 
+virtual Eigen\+::\+Vector\+Xd \mbox{\hyperlink{classtesseract__planning_1_1totg_1_1PathSegment_a761d9992074e8330da30be8de36c6419}{get\+Tangent}} (double s) const =0
+\item 
+virtual Eigen\+::\+Vector\+Xd \mbox{\hyperlink{classtesseract__planning_1_1totg_1_1PathSegment_ad60ae94c06d867ce85b6eee1ea8ce599}{get\+Curvature}} (double s) const =0
+\item 
+virtual std\+::list$<$ double $>$ \mbox{\hyperlink{classtesseract__planning_1_1totg_1_1PathSegment_a733705e290cd708238dd2f30625dea48}{get\+Switching\+Points}} () const =0
+\item 
+virtual std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classtesseract__planning_1_1totg_1_1PathSegment}{Path\+Segment}} $>$ \mbox{\hyperlink{classtesseract__planning_1_1totg_1_1PathSegment_a85a60dcd5b7bd2728dd6927ec5252dae}{clone}} () const =0
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+double \mbox{\hyperlink{classtesseract__planning_1_1totg_1_1PathSegment_a43263660f8c474d70399b88092585e55}{position\+\_\+}} \{ 0 \}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+double \mbox{\hyperlink{classtesseract__planning_1_1totg_1_1PathSegment_a0cbe6c329d81179a6c3904bba17ce229}{length\+\_\+}} \{ 0 \}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classtesseract__planning_1_1totg_1_1PathSegment_a45cd0e79bdaae8ca9304c89af41c9754}\label{classtesseract__planning_1_1totg_1_1PathSegment_a45cd0e79bdaae8ca9304c89af41c9754} 
+\index{tesseract\_planning::totg::PathSegment@{tesseract\_planning::totg::PathSegment}!PathSegment@{PathSegment}}
+\index{PathSegment@{PathSegment}!tesseract\_planning::totg::PathSegment@{tesseract\_planning::totg::PathSegment}}
+\doxysubsubsection{\texorpdfstring{PathSegment()}{PathSegment()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily tesseract\+\_\+planning\+::totg\+::\+Path\+Segment\+::\+Path\+Segment (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\Hypertarget{classtesseract__planning_1_1totg_1_1PathSegment_ac5f12c85461d466a7fdb1ba0930879e4}\label{classtesseract__planning_1_1totg_1_1PathSegment_ac5f12c85461d466a7fdb1ba0930879e4} 
+\index{tesseract\_planning::totg::PathSegment@{tesseract\_planning::totg::PathSegment}!PathSegment@{PathSegment}}
+\index{PathSegment@{PathSegment}!tesseract\_planning::totg::PathSegment@{tesseract\_planning::totg::PathSegment}}
+\doxysubsubsection{\texorpdfstring{PathSegment()}{PathSegment()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily tesseract\+\_\+planning\+::totg\+::\+Path\+Segment\+::\+Path\+Segment (\begin{DoxyParamCaption}\item[{double}]{length }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classtesseract__planning_1_1totg_1_1PathSegment_ad236fa1fd151f54728a88abb389a58d5}\label{classtesseract__planning_1_1totg_1_1PathSegment_ad236fa1fd151f54728a88abb389a58d5} 
+\index{tesseract\_planning::totg::PathSegment@{tesseract\_planning::totg::PathSegment}!````~PathSegment@{\texorpdfstring{$\sim$}{\string~}PathSegment}}
+\index{````~PathSegment@{\texorpdfstring{$\sim$}{\string~}PathSegment}!tesseract\_planning::totg::PathSegment@{tesseract\_planning::totg::PathSegment}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}PathSegment()}{\string~PathSegment()}}
+{\footnotesize\ttfamily virtual tesseract\+\_\+planning\+::totg\+::\+Path\+Segment\+::\texorpdfstring{$\sim$}{\string~}\+Path\+Segment (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+\Hypertarget{classtesseract__planning_1_1totg_1_1PathSegment_adda86ab70870dc352cbbf8dcc513d99e}\label{classtesseract__planning_1_1totg_1_1PathSegment_adda86ab70870dc352cbbf8dcc513d99e} 
+\index{tesseract\_planning::totg::PathSegment@{tesseract\_planning::totg::PathSegment}!PathSegment@{PathSegment}}
+\index{PathSegment@{PathSegment}!tesseract\_planning::totg::PathSegment@{tesseract\_planning::totg::PathSegment}}
+\doxysubsubsection{\texorpdfstring{PathSegment()}{PathSegment()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily tesseract\+\_\+planning\+::totg\+::\+Path\+Segment\+::\+Path\+Segment (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classtesseract__planning_1_1totg_1_1PathSegment}{Path\+Segment}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\Hypertarget{classtesseract__planning_1_1totg_1_1PathSegment_a44ef399c2653b333a8423e8741dd2105}\label{classtesseract__planning_1_1totg_1_1PathSegment_a44ef399c2653b333a8423e8741dd2105} 
+\index{tesseract\_planning::totg::PathSegment@{tesseract\_planning::totg::PathSegment}!PathSegment@{PathSegment}}
+\index{PathSegment@{PathSegment}!tesseract\_planning::totg::PathSegment@{tesseract\_planning::totg::PathSegment}}
+\doxysubsubsection{\texorpdfstring{PathSegment()}{PathSegment()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily tesseract\+\_\+planning\+::totg\+::\+Path\+Segment\+::\+Path\+Segment (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classtesseract__planning_1_1totg_1_1PathSegment}{Path\+Segment}} \&\&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classtesseract__planning_1_1totg_1_1PathSegment_a85a60dcd5b7bd2728dd6927ec5252dae}\label{classtesseract__planning_1_1totg_1_1PathSegment_a85a60dcd5b7bd2728dd6927ec5252dae} 
+\index{tesseract\_planning::totg::PathSegment@{tesseract\_planning::totg::PathSegment}!clone@{clone}}
+\index{clone@{clone}!tesseract\_planning::totg::PathSegment@{tesseract\_planning::totg::PathSegment}}
+\doxysubsubsection{\texorpdfstring{clone()}{clone()}}
+{\footnotesize\ttfamily virtual std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classtesseract__planning_1_1totg_1_1PathSegment}{Path\+Segment}} $>$ tesseract\+\_\+planning\+::totg\+::\+Path\+Segment\+::clone (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classtesseract__planning_1_1totg_1_1LinearPathSegment_a4186f7cd4329bd8597ec177d95a07065}{tesseract\+\_\+planning\+::totg\+::\+Linear\+Path\+Segment}}, and \mbox{\hyperlink{classtesseract__planning_1_1totg_1_1CircularPathSegment_a6c74e67ea5b0cc34ef00f11abb0961ce}{tesseract\+\_\+planning\+::totg\+::\+Circular\+Path\+Segment}}.
+
+\Hypertarget{classtesseract__planning_1_1totg_1_1PathSegment_ae74e9ed2da4856b2d3a7a2e7fd7f44bf}\label{classtesseract__planning_1_1totg_1_1PathSegment_ae74e9ed2da4856b2d3a7a2e7fd7f44bf} 
+\index{tesseract\_planning::totg::PathSegment@{tesseract\_planning::totg::PathSegment}!getConfig@{getConfig}}
+\index{getConfig@{getConfig}!tesseract\_planning::totg::PathSegment@{tesseract\_planning::totg::PathSegment}}
+\doxysubsubsection{\texorpdfstring{getConfig()}{getConfig()}}
+{\footnotesize\ttfamily virtual Eigen\+::\+Vector\+Xd tesseract\+\_\+planning\+::totg\+::\+Path\+Segment\+::get\+Config (\begin{DoxyParamCaption}\item[{double}]{s }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classtesseract__planning_1_1totg_1_1LinearPathSegment_ace49a32e29e6ecd4bca378db257445c7}{tesseract\+\_\+planning\+::totg\+::\+Linear\+Path\+Segment}}, and \mbox{\hyperlink{classtesseract__planning_1_1totg_1_1CircularPathSegment_a7e1c85a9680d7e50843c866efc0c829d}{tesseract\+\_\+planning\+::totg\+::\+Circular\+Path\+Segment}}.
+
+\Hypertarget{classtesseract__planning_1_1totg_1_1PathSegment_ad60ae94c06d867ce85b6eee1ea8ce599}\label{classtesseract__planning_1_1totg_1_1PathSegment_ad60ae94c06d867ce85b6eee1ea8ce599} 
+\index{tesseract\_planning::totg::PathSegment@{tesseract\_planning::totg::PathSegment}!getCurvature@{getCurvature}}
+\index{getCurvature@{getCurvature}!tesseract\_planning::totg::PathSegment@{tesseract\_planning::totg::PathSegment}}
+\doxysubsubsection{\texorpdfstring{getCurvature()}{getCurvature()}}
+{\footnotesize\ttfamily virtual Eigen\+::\+Vector\+Xd tesseract\+\_\+planning\+::totg\+::\+Path\+Segment\+::get\+Curvature (\begin{DoxyParamCaption}\item[{double}]{s }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classtesseract__planning_1_1totg_1_1CircularPathSegment_a4f290f08e060a1e0142b8f2aafe41d92}{tesseract\+\_\+planning\+::totg\+::\+Circular\+Path\+Segment}}, and \mbox{\hyperlink{classtesseract__planning_1_1totg_1_1LinearPathSegment_a38c128250cb8b19eee26f467185eb62a}{tesseract\+\_\+planning\+::totg\+::\+Linear\+Path\+Segment}}.
+
+\Hypertarget{classtesseract__planning_1_1totg_1_1PathSegment_a82c9637678eabd49845f5375986a90f2}\label{classtesseract__planning_1_1totg_1_1PathSegment_a82c9637678eabd49845f5375986a90f2} 
+\index{tesseract\_planning::totg::PathSegment@{tesseract\_planning::totg::PathSegment}!getLength@{getLength}}
+\index{getLength@{getLength}!tesseract\_planning::totg::PathSegment@{tesseract\_planning::totg::PathSegment}}
+\doxysubsubsection{\texorpdfstring{getLength()}{getLength()}}
+{\footnotesize\ttfamily double tesseract\+\_\+planning\+::totg\+::\+Path\+Segment\+::get\+Length (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classtesseract__planning_1_1totg_1_1PathSegment_a733705e290cd708238dd2f30625dea48}\label{classtesseract__planning_1_1totg_1_1PathSegment_a733705e290cd708238dd2f30625dea48} 
+\index{tesseract\_planning::totg::PathSegment@{tesseract\_planning::totg::PathSegment}!getSwitchingPoints@{getSwitchingPoints}}
+\index{getSwitchingPoints@{getSwitchingPoints}!tesseract\_planning::totg::PathSegment@{tesseract\_planning::totg::PathSegment}}
+\doxysubsubsection{\texorpdfstring{getSwitchingPoints()}{getSwitchingPoints()}}
+{\footnotesize\ttfamily virtual std\+::list$<$ double $>$ tesseract\+\_\+planning\+::totg\+::\+Path\+Segment\+::get\+Switching\+Points (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classtesseract__planning_1_1totg_1_1LinearPathSegment_ac8a5c2e74a940453f15acb3bfa6980e0}{tesseract\+\_\+planning\+::totg\+::\+Linear\+Path\+Segment}}, and \mbox{\hyperlink{classtesseract__planning_1_1totg_1_1CircularPathSegment_a6580280ac5e025b000af1d942a477b52}{tesseract\+\_\+planning\+::totg\+::\+Circular\+Path\+Segment}}.
+
+\Hypertarget{classtesseract__planning_1_1totg_1_1PathSegment_a761d9992074e8330da30be8de36c6419}\label{classtesseract__planning_1_1totg_1_1PathSegment_a761d9992074e8330da30be8de36c6419} 
+\index{tesseract\_planning::totg::PathSegment@{tesseract\_planning::totg::PathSegment}!getTangent@{getTangent}}
+\index{getTangent@{getTangent}!tesseract\_planning::totg::PathSegment@{tesseract\_planning::totg::PathSegment}}
+\doxysubsubsection{\texorpdfstring{getTangent()}{getTangent()}}
+{\footnotesize\ttfamily virtual Eigen\+::\+Vector\+Xd tesseract\+\_\+planning\+::totg\+::\+Path\+Segment\+::get\+Tangent (\begin{DoxyParamCaption}\item[{double}]{s }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classtesseract__planning_1_1totg_1_1CircularPathSegment_a16525fd0cbcce3da9bb7a8860f2051ed}{tesseract\+\_\+planning\+::totg\+::\+Circular\+Path\+Segment}}, and \mbox{\hyperlink{classtesseract__planning_1_1totg_1_1LinearPathSegment_a427be2b6f42d470014d67a37b17cb15d}{tesseract\+\_\+planning\+::totg\+::\+Linear\+Path\+Segment}}.
+
+\Hypertarget{classtesseract__planning_1_1totg_1_1PathSegment_ad356a4bd5b975a9cec817c13c79a3040}\label{classtesseract__planning_1_1totg_1_1PathSegment_ad356a4bd5b975a9cec817c13c79a3040} 
+\index{tesseract\_planning::totg::PathSegment@{tesseract\_planning::totg::PathSegment}!operator=@{operator=}}
+\index{operator=@{operator=}!tesseract\_planning::totg::PathSegment@{tesseract\_planning::totg::PathSegment}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classtesseract__planning_1_1totg_1_1PathSegment}{Path\+Segment}} \& tesseract\+\_\+planning\+::totg\+::\+Path\+Segment\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classtesseract__planning_1_1totg_1_1PathSegment}{Path\+Segment}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\Hypertarget{classtesseract__planning_1_1totg_1_1PathSegment_a30163219c51078eed9cf03db6fe5c8c8}\label{classtesseract__planning_1_1totg_1_1PathSegment_a30163219c51078eed9cf03db6fe5c8c8} 
+\index{tesseract\_planning::totg::PathSegment@{tesseract\_planning::totg::PathSegment}!operator=@{operator=}}
+\index{operator=@{operator=}!tesseract\_planning::totg::PathSegment@{tesseract\_planning::totg::PathSegment}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classtesseract__planning_1_1totg_1_1PathSegment}{Path\+Segment}} \& tesseract\+\_\+planning\+::totg\+::\+Path\+Segment\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classtesseract__planning_1_1totg_1_1PathSegment}{Path\+Segment}} \&\&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classtesseract__planning_1_1totg_1_1PathSegment_a0cbe6c329d81179a6c3904bba17ce229}\label{classtesseract__planning_1_1totg_1_1PathSegment_a0cbe6c329d81179a6c3904bba17ce229} 
+\index{tesseract\_planning::totg::PathSegment@{tesseract\_planning::totg::PathSegment}!length\_@{length\_}}
+\index{length\_@{length\_}!tesseract\_planning::totg::PathSegment@{tesseract\_planning::totg::PathSegment}}
+\doxysubsubsection{\texorpdfstring{length\_}{length\_}}
+{\footnotesize\ttfamily double tesseract\+\_\+planning\+::totg\+::\+Path\+Segment\+::length\+\_\+ \{ 0 \}\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{classtesseract__planning_1_1totg_1_1PathSegment_a43263660f8c474d70399b88092585e55}\label{classtesseract__planning_1_1totg_1_1PathSegment_a43263660f8c474d70399b88092585e55} 
+\index{tesseract\_planning::totg::PathSegment@{tesseract\_planning::totg::PathSegment}!position\_@{position\_}}
+\index{position\_@{position\_}!tesseract\_planning::totg::PathSegment@{tesseract\_planning::totg::PathSegment}}
+\doxysubsubsection{\texorpdfstring{position\_}{position\_}}
+{\footnotesize\ttfamily double tesseract\+\_\+planning\+::totg\+::\+Path\+Segment\+::position\+\_\+ \{ 0 \}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+tesseract\+\_\+time\+\_\+parameterization/totg/include/tesseract\+\_\+time\+\_\+parameterization/totg/\mbox{\hyperlink{time__optimal__trajectory__generation_8h}{time\+\_\+optimal\+\_\+trajectory\+\_\+generation.\+h}}\end{DoxyCompactItemize}

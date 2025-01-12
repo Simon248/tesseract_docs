@@ -1,0 +1,75 @@
+\doxysection{cartesian\+\_\+waypoint.\+h}
+\hypertarget{cartesian__waypoint_8h_source}{}\label{cartesian__waypoint_8h_source}\index{tesseract\_command\_language/include/tesseract\_command\_language/cartesian\_waypoint.h@{tesseract\_command\_language/include/tesseract\_command\_language/cartesian\_waypoint.h}}
+\mbox{\hyperlink{cartesian__waypoint_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00026\ \textcolor{preprocessor}{\#ifndef\ TESSERACT\_COMMAND\_LANGUAGE\_CARTESIAN\_WAYPOINT\_H}}
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#define\ TESSERACT\_COMMAND\_LANGUAGE\_CARTESIAN\_WAYPOINT\_H}}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#include\ <tesseract\_common/macros.h>}}
+\DoxyCodeLine{00030\ TESSERACT\_COMMON\_IGNORE\_WARNINGS\_PUSH}
+\DoxyCodeLine{00031\ \textcolor{preprocessor}{\#include\ <Eigen/Geometry>}}
+\DoxyCodeLine{00032\ \mbox{\hyperlink{namespaceTESSERACT__COMMON__IGNORE__WARNINGS__POP}{TESSERACT\_COMMON\_IGNORE\_WARNINGS\_POP}}}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{cartesian__waypoint__poly_8h}{tesseract\_command\_language/poly/cartesian\_waypoint\_poly.h}}>}}
+\DoxyCodeLine{00035\ \textcolor{preprocessor}{\#include\ <tesseract\_common/joint\_state.h>}}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacetesseract__planning}{tesseract\_planning}}}
+\DoxyCodeLine{00038\ \{}
+\DoxyCodeLine{00039\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classtesseract__planning_1_1CartesianWaypoint}{CartesianWaypoint}}}
+\DoxyCodeLine{00040\ \{}
+\DoxyCodeLine{00041\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00042\ \ \ \textcolor{comment}{//\ LCOV\_EXCL\_START}}
+\DoxyCodeLine{00043\ \ \ EIGEN\_MAKE\_ALIGNED\_OPERATOR\_NEW}
+\DoxyCodeLine{00044\ \ \ \textcolor{comment}{//\ LCOV\_EXCL\_STOP}}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ \ \ \mbox{\hyperlink{classtesseract__planning_1_1CartesianWaypoint_a3f80f2efcea6d4500f79aadf3726324f}{CartesianWaypoint}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00047\ \ \ \mbox{\hyperlink{classtesseract__planning_1_1CartesianWaypoint_a3f80f2efcea6d4500f79aadf3726324f}{CartesianWaypoint}}(\textcolor{keyword}{const}\ Eigen::Isometry3d\&\ transform);}
+\DoxyCodeLine{00048\ \ \ \mbox{\hyperlink{classtesseract__planning_1_1CartesianWaypoint_a3f80f2efcea6d4500f79aadf3726324f}{CartesianWaypoint}}(\textcolor{keyword}{const}\ Eigen::Isometry3d\&\ transform,}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ Eigen::VectorXd\&\ lower\_tol,}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ Eigen::VectorXd\&\ upper\_tol);}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00052\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classtesseract__planning_1_1CartesianWaypoint_ae114252f07c1e075b5f99e2915f893ca}{setTransform}}(\textcolor{keyword}{const}\ Eigen::Isometry3d\&\ transform);}
+\DoxyCodeLine{00053\ \ \ Eigen::Isometry3d\&\ \mbox{\hyperlink{classtesseract__planning_1_1CartesianWaypoint_a00f06608267713d0d4d5aed2165f1913}{getTransform}}();}
+\DoxyCodeLine{00054\ \ \ \textcolor{keyword}{const}\ Eigen::Isometry3d\&\ \mbox{\hyperlink{classtesseract__planning_1_1CartesianWaypoint_a00f06608267713d0d4d5aed2165f1913}{getTransform}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00056\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classtesseract__planning_1_1CartesianWaypoint_a2a5c535c67ca1e9f309aabe317f97082}{setUpperTolerance}}(\textcolor{keyword}{const}\ Eigen::VectorXd\&\ upper\_tol);}
+\DoxyCodeLine{00057\ \ \ Eigen::VectorXd\&\ \mbox{\hyperlink{classtesseract__planning_1_1CartesianWaypoint_aeea0f17c24146b1aada6054e19e4c10a}{getUpperTolerance}}();}
+\DoxyCodeLine{00058\ \ \ \textcolor{keyword}{const}\ Eigen::VectorXd\&\ \mbox{\hyperlink{classtesseract__planning_1_1CartesianWaypoint_aeea0f17c24146b1aada6054e19e4c10a}{getUpperTolerance}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00060\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classtesseract__planning_1_1CartesianWaypoint_a490d466c931b960713b21fa085bfdd60}{setLowerTolerance}}(\textcolor{keyword}{const}\ Eigen::VectorXd\&\ lower\_tol);}
+\DoxyCodeLine{00061\ \ \ Eigen::VectorXd\&\ \mbox{\hyperlink{classtesseract__planning_1_1CartesianWaypoint_acd0babac7d4e57df83fa86505b47293d}{getLowerTolerance}}();}
+\DoxyCodeLine{00062\ \ \ \textcolor{keyword}{const}\ Eigen::VectorXd\&\ \mbox{\hyperlink{classtesseract__planning_1_1CartesianWaypoint_acd0babac7d4e57df83fa86505b47293d}{getLowerTolerance}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00064\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classtesseract__planning_1_1CartesianWaypoint_ad73aa207ee212b813738e1915baafa93}{setSeed}}(\textcolor{keyword}{const}\ tesseract\_common::JointState\&\ seed);}
+\DoxyCodeLine{00065\ \ \ tesseract\_common::JointState\&\ \mbox{\hyperlink{classtesseract__planning_1_1CartesianWaypoint_a5f28088bae5e3ba5fe6b2d78e45dc3c1}{getSeed}}();}
+\DoxyCodeLine{00066\ \ \ \textcolor{keyword}{const}\ tesseract\_common::JointState\&\ \mbox{\hyperlink{classtesseract__planning_1_1CartesianWaypoint_a5f28088bae5e3ba5fe6b2d78e45dc3c1}{getSeed}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00068\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classtesseract__planning_1_1CartesianWaypoint_ac16560e9b67d0abad73bdc2075793cd2}{setName}}(\textcolor{keyword}{const}\ std::string\&\ \mbox{\hyperlink{tesseract__task__composer__core__unit_8cpp_a9b45b3e13bd9167aab02e17e08916231}{name}});}
+\DoxyCodeLine{00069\ \ \ \textcolor{keyword}{const}\ std::string\&\ \mbox{\hyperlink{classtesseract__planning_1_1CartesianWaypoint_a6af12a2dc4b8a2f2eee5cae0e61ca659}{getName}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00070\ }
+\DoxyCodeLine{00071\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classtesseract__planning_1_1CartesianWaypoint_afa44b78ad6498907631a0d10f304155a}{print}}(\textcolor{keyword}{const}\ std::string\&\ prefix\ =\ \textcolor{stringliteral}{"{}"{}})\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00073\ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classtesseract__planning_1_1CartesianWaypoint_af97621c785fd0f45905a407b06ba5d6b}{operator==}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classtesseract__planning_1_1CartesianWaypoint}{CartesianWaypoint}}\&\ rhs)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00074\ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classtesseract__planning_1_1CartesianWaypoint_acec128e53f208e555f9a88763821adfc}{operator!=}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classtesseract__planning_1_1CartesianWaypoint}{CartesianWaypoint}}\&\ rhs)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00076\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00078\ \ \ std::string\ \mbox{\hyperlink{classtesseract__planning_1_1CartesianWaypoint_a4d5c5edc42734bf797afc7399f1bc98e}{name\_}};}
+\DoxyCodeLine{00080\ \ \ Eigen::Isometry3d\ \mbox{\hyperlink{classtesseract__planning_1_1CartesianWaypoint_a86fe073b3685861b3569d945a838f7cd}{transform\_}}\{\ Eigen::Isometry3d::Identity()\ \};}
+\DoxyCodeLine{00083\ \ \ Eigen::VectorXd\ \mbox{\hyperlink{classtesseract__planning_1_1CartesianWaypoint_a2a1b2c1d33e046d21609e876a5613d64}{lower\_tolerance\_}};}
+\DoxyCodeLine{00086\ \ \ Eigen::VectorXd\ \mbox{\hyperlink{classtesseract__planning_1_1CartesianWaypoint_af66418f2d2226932bbf261acbbac23ef}{upper\_tolerance\_}};}
+\DoxyCodeLine{00087\ }
+\DoxyCodeLine{00095\ \ \ tesseract\_common::JointState\ \mbox{\hyperlink{classtesseract__planning_1_1CartesianWaypoint_a648136a781dbe30fcb2440a536894356}{seed\_}};}
+\DoxyCodeLine{00096\ }
+\DoxyCodeLine{00097\ \ \ \textcolor{keyword}{friend}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classtesseract__planning_1_1CartesianWaypoint_ac98d07dd8f7b70e16ccb9a01abf56b9c}{boost::serialization::access}};}
+\DoxyCodeLine{00098\ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{class}\ Archive>}
+\DoxyCodeLine{00099\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classtesseract__planning_1_1CartesianWaypoint_a0bcd2c23e6510a221792559284bd7212}{serialize}}(Archive\&\ ar,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ version);\ \ \textcolor{comment}{//\ NOLINT}}
+\DoxyCodeLine{00100\ \};}
+\DoxyCodeLine{00101\ }
+\DoxyCodeLine{00102\ \}\ \ \textcolor{comment}{//\ namespace\ tesseract\_planning}}
+\DoxyCodeLine{00103\ }
+\DoxyCodeLine{00104\ \mbox{\hyperlink{cartesian__waypoint__poly_8h_ae0e81fdd2d7e5d98729fd0eb3c1a3dbf}{TESSERACT\_CARTESIAN\_WAYPOINT\_EXPORT\_KEY}}(\mbox{\hyperlink{namespacetesseract__planning}{tesseract\_planning}},\ CartesianWaypoint)}
+\DoxyCodeLine{00105\ }
+\DoxyCodeLine{00106\ \textcolor{preprocessor}{\#endif\ \ }\textcolor{comment}{//\ TESSERACT\_COMMAND\_LANGUAGE\_CARTESIAN\_WAYPOINT\_H}}
+
+\end{DoxyCode}

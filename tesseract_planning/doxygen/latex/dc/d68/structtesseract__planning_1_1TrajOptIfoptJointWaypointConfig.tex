@@ -1,0 +1,129 @@
+\doxysection{tesseract\+\_\+planning\+::Traj\+Opt\+Ifopt\+Joint\+Waypoint\+Config Struct Reference}
+\hypertarget{structtesseract__planning_1_1TrajOptIfoptJointWaypointConfig}{}\label{structtesseract__planning_1_1TrajOptIfoptJointWaypointConfig}\index{tesseract\_planning::TrajOptIfoptJointWaypointConfig@{tesseract\_planning::TrajOptIfoptJointWaypointConfig}}
+
+
+Config settings for joint waypoints.  
+
+
+
+
+{\ttfamily \#include $<$trajopt\+\_\+ifopt\+\_\+waypoint\+\_\+config.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+EIGEN\+\_\+\+MAKE\+\_\+\+ALIGNED\+\_\+\+OPERATOR\+\_\+\+NEW \mbox{\hyperlink{structtesseract__planning_1_1TrajOptIfoptJointWaypointConfig_a3f814614217b751744c7784111695bbd}{Traj\+Opt\+Ifopt\+Joint\+Waypoint\+Config}} ()=default
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{structtesseract__planning_1_1TrajOptIfoptJointWaypointConfig_a49ee318fef46328ed07525628e95ca3f}{enabled}} \{ true \}
+\begin{DoxyCompactList}\small\item\em If true, a cost/constraint term will be added to the problem. Default\+: true. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{structtesseract__planning_1_1TrajOptIfoptJointWaypointConfig_a53ee47d798af96760dbb44c428ddd219}{use\+\_\+tolerance\+\_\+override}} \{ false \}
+\begin{DoxyCompactList}\small\item\em If true, will override existing waypoint tolerance with described tolerance here. Default\+: false This is useful if you want to have a smaller tolerance for the cost than the constraint. \end{DoxyCompactList}\item 
+Eigen\+::\+Vector\+Xd \mbox{\hyperlink{structtesseract__planning_1_1TrajOptIfoptJointWaypointConfig_a3d15c2c23f283fe30565925aa8fa21ef}{lower\+\_\+tolerance}}
+\begin{DoxyCompactList}\small\item\em Distance below waypoint that is allowed. Should be size of joints in a joint state. \end{DoxyCompactList}\item 
+Eigen\+::\+Vector\+Xd \mbox{\hyperlink{structtesseract__planning_1_1TrajOptIfoptJointWaypointConfig_adf85879e54cd958ad36121b921d226e1}{upper\+\_\+tolerance}}
+\begin{DoxyCompactList}\small\item\em Distance above waypoint that is allowed. Should be size of joints in a joint state. \end{DoxyCompactList}\item 
+Eigen\+::\+Vector\+Xd \mbox{\hyperlink{structtesseract__planning_1_1TrajOptIfoptJointWaypointConfig_a2371d85a25e205c3881f3ece1e97bd06}{coeff}} \{ Eigen\+::\+Vector\+Xd\+::\+Constant(1, 1, 5) \}
+\begin{DoxyCompactList}\small\item\em coefficients corresponsing to joint values \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$class Archive $>$ }\\void \mbox{\hyperlink{structtesseract__planning_1_1TrajOptIfoptJointWaypointConfig_a74c204715606c46a192b3e59355e3f09}{serialize}} (Archive \&, const unsigned int)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{structtesseract__planning_1_1TrajOptIfoptJointWaypointConfig_ac98d07dd8f7b70e16ccb9a01abf56b9c}{boost\+::serialization\+::access}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Config settings for joint waypoints. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{structtesseract__planning_1_1TrajOptIfoptJointWaypointConfig_a3f814614217b751744c7784111695bbd}\label{structtesseract__planning_1_1TrajOptIfoptJointWaypointConfig_a3f814614217b751744c7784111695bbd} 
+\index{tesseract\_planning::TrajOptIfoptJointWaypointConfig@{tesseract\_planning::TrajOptIfoptJointWaypointConfig}!TrajOptIfoptJointWaypointConfig@{TrajOptIfoptJointWaypointConfig}}
+\index{TrajOptIfoptJointWaypointConfig@{TrajOptIfoptJointWaypointConfig}!tesseract\_planning::TrajOptIfoptJointWaypointConfig@{tesseract\_planning::TrajOptIfoptJointWaypointConfig}}
+\doxysubsubsection{\texorpdfstring{TrajOptIfoptJointWaypointConfig()}{TrajOptIfoptJointWaypointConfig()}}
+{\footnotesize\ttfamily EIGEN\+\_\+\+MAKE\+\_\+\+ALIGNED\+\_\+\+OPERATOR\+\_\+\+NEW tesseract\+\_\+planning\+::\+Traj\+Opt\+Ifopt\+Joint\+Waypoint\+Config\+::\+Traj\+Opt\+Ifopt\+Joint\+Waypoint\+Config (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{structtesseract__planning_1_1TrajOptIfoptJointWaypointConfig_a74c204715606c46a192b3e59355e3f09}\label{structtesseract__planning_1_1TrajOptIfoptJointWaypointConfig_a74c204715606c46a192b3e59355e3f09} 
+\index{tesseract\_planning::TrajOptIfoptJointWaypointConfig@{tesseract\_planning::TrajOptIfoptJointWaypointConfig}!serialize@{serialize}}
+\index{serialize@{serialize}!tesseract\_planning::TrajOptIfoptJointWaypointConfig@{tesseract\_planning::TrajOptIfoptJointWaypointConfig}}
+\doxysubsubsection{\texorpdfstring{serialize()}{serialize()}}
+{\footnotesize\ttfamily template$<$class Archive $>$ \\
+void tesseract\+\_\+planning\+::\+Traj\+Opt\+Ifopt\+Joint\+Waypoint\+Config\+::serialize (\begin{DoxyParamCaption}\item[{Archive \&}]{ar,  }\item[{const unsigned int}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+\doxysubsection{Friends And Related Symbol Documentation}
+\Hypertarget{structtesseract__planning_1_1TrajOptIfoptJointWaypointConfig_ac98d07dd8f7b70e16ccb9a01abf56b9c}\label{structtesseract__planning_1_1TrajOptIfoptJointWaypointConfig_ac98d07dd8f7b70e16ccb9a01abf56b9c} 
+\index{tesseract\_planning::TrajOptIfoptJointWaypointConfig@{tesseract\_planning::TrajOptIfoptJointWaypointConfig}!boost::serialization::access@{boost::serialization::access}}
+\index{boost::serialization::access@{boost::serialization::access}!tesseract\_planning::TrajOptIfoptJointWaypointConfig@{tesseract\_planning::TrajOptIfoptJointWaypointConfig}}
+\doxysubsubsection{\texorpdfstring{boost::serialization::access}{boost::serialization::access}}
+{\footnotesize\ttfamily friend class boost\+::serialization\+::access\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{structtesseract__planning_1_1TrajOptIfoptJointWaypointConfig_a2371d85a25e205c3881f3ece1e97bd06}\label{structtesseract__planning_1_1TrajOptIfoptJointWaypointConfig_a2371d85a25e205c3881f3ece1e97bd06} 
+\index{tesseract\_planning::TrajOptIfoptJointWaypointConfig@{tesseract\_planning::TrajOptIfoptJointWaypointConfig}!coeff@{coeff}}
+\index{coeff@{coeff}!tesseract\_planning::TrajOptIfoptJointWaypointConfig@{tesseract\_planning::TrajOptIfoptJointWaypointConfig}}
+\doxysubsubsection{\texorpdfstring{coeff}{coeff}}
+{\footnotesize\ttfamily Eigen\+::\+Vector\+Xd tesseract\+\_\+planning\+::\+Traj\+Opt\+Ifopt\+Joint\+Waypoint\+Config\+::coeff \{ Eigen\+::\+Vector\+Xd\+::\+Constant(1, 1, 5) \}}
+
+
+
+coefficients corresponsing to joint values 
+
+\Hypertarget{structtesseract__planning_1_1TrajOptIfoptJointWaypointConfig_a49ee318fef46328ed07525628e95ca3f}\label{structtesseract__planning_1_1TrajOptIfoptJointWaypointConfig_a49ee318fef46328ed07525628e95ca3f} 
+\index{tesseract\_planning::TrajOptIfoptJointWaypointConfig@{tesseract\_planning::TrajOptIfoptJointWaypointConfig}!enabled@{enabled}}
+\index{enabled@{enabled}!tesseract\_planning::TrajOptIfoptJointWaypointConfig@{tesseract\_planning::TrajOptIfoptJointWaypointConfig}}
+\doxysubsubsection{\texorpdfstring{enabled}{enabled}}
+{\footnotesize\ttfamily bool tesseract\+\_\+planning\+::\+Traj\+Opt\+Ifopt\+Joint\+Waypoint\+Config\+::enabled \{ true \}}
+
+
+
+If true, a cost/constraint term will be added to the problem. Default\+: true. 
+
+\Hypertarget{structtesseract__planning_1_1TrajOptIfoptJointWaypointConfig_a3d15c2c23f283fe30565925aa8fa21ef}\label{structtesseract__planning_1_1TrajOptIfoptJointWaypointConfig_a3d15c2c23f283fe30565925aa8fa21ef} 
+\index{tesseract\_planning::TrajOptIfoptJointWaypointConfig@{tesseract\_planning::TrajOptIfoptJointWaypointConfig}!lower\_tolerance@{lower\_tolerance}}
+\index{lower\_tolerance@{lower\_tolerance}!tesseract\_planning::TrajOptIfoptJointWaypointConfig@{tesseract\_planning::TrajOptIfoptJointWaypointConfig}}
+\doxysubsubsection{\texorpdfstring{lower\_tolerance}{lower\_tolerance}}
+{\footnotesize\ttfamily Eigen\+::\+Vector\+Xd tesseract\+\_\+planning\+::\+Traj\+Opt\+Ifopt\+Joint\+Waypoint\+Config\+::lower\+\_\+tolerance}
+
+
+
+Distance below waypoint that is allowed. Should be size of joints in a joint state. 
+
+\Hypertarget{structtesseract__planning_1_1TrajOptIfoptJointWaypointConfig_adf85879e54cd958ad36121b921d226e1}\label{structtesseract__planning_1_1TrajOptIfoptJointWaypointConfig_adf85879e54cd958ad36121b921d226e1} 
+\index{tesseract\_planning::TrajOptIfoptJointWaypointConfig@{tesseract\_planning::TrajOptIfoptJointWaypointConfig}!upper\_tolerance@{upper\_tolerance}}
+\index{upper\_tolerance@{upper\_tolerance}!tesseract\_planning::TrajOptIfoptJointWaypointConfig@{tesseract\_planning::TrajOptIfoptJointWaypointConfig}}
+\doxysubsubsection{\texorpdfstring{upper\_tolerance}{upper\_tolerance}}
+{\footnotesize\ttfamily Eigen\+::\+Vector\+Xd tesseract\+\_\+planning\+::\+Traj\+Opt\+Ifopt\+Joint\+Waypoint\+Config\+::upper\+\_\+tolerance}
+
+
+
+Distance above waypoint that is allowed. Should be size of joints in a joint state. 
+
+\Hypertarget{structtesseract__planning_1_1TrajOptIfoptJointWaypointConfig_a53ee47d798af96760dbb44c428ddd219}\label{structtesseract__planning_1_1TrajOptIfoptJointWaypointConfig_a53ee47d798af96760dbb44c428ddd219} 
+\index{tesseract\_planning::TrajOptIfoptJointWaypointConfig@{tesseract\_planning::TrajOptIfoptJointWaypointConfig}!use\_tolerance\_override@{use\_tolerance\_override}}
+\index{use\_tolerance\_override@{use\_tolerance\_override}!tesseract\_planning::TrajOptIfoptJointWaypointConfig@{tesseract\_planning::TrajOptIfoptJointWaypointConfig}}
+\doxysubsubsection{\texorpdfstring{use\_tolerance\_override}{use\_tolerance\_override}}
+{\footnotesize\ttfamily bool tesseract\+\_\+planning\+::\+Traj\+Opt\+Ifopt\+Joint\+Waypoint\+Config\+::use\+\_\+tolerance\+\_\+override \{ false \}}
+
+
+
+If true, will override existing waypoint tolerance with described tolerance here. Default\+: false This is useful if you want to have a smaller tolerance for the cost than the constraint. 
+
+
+
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+tesseract\+\_\+motion\+\_\+planners/trajopt\+\_\+ifopt/include/tesseract\+\_\+motion\+\_\+planners/trajopt\+\_\+ifopt/\mbox{\hyperlink{trajopt__ifopt__waypoint__config_8h}{trajopt\+\_\+ifopt\+\_\+waypoint\+\_\+config.\+h}}\item 
+tesseract\+\_\+motion\+\_\+planners/trajopt\+\_\+ifopt/src/\mbox{\hyperlink{trajopt__ifopt__waypoint__config_8cpp}{trajopt\+\_\+ifopt\+\_\+waypoint\+\_\+config.\+cpp}}\end{DoxyCompactItemize}

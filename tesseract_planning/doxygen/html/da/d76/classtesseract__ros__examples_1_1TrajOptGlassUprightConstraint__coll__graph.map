@@ -1,0 +1,9 @@
+<map id="tesseract_ros_examples::TrajOptGlassUprightConstraint" name="tesseract_ros_examples::TrajOptGlassUprightConstraint">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,199,211,240"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="13,95,161,121"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="95,136,107,198,102,199,89,137"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="185,95,263,121"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="202,134,131,201,127,197,198,130"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="162,5,286,46"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="227,61,227,95,221,95,221,61"/>
+</map>

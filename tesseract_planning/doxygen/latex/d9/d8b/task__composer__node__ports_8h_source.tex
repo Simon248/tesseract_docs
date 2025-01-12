@@ -1,0 +1,53 @@
+\doxysection{task\+\_\+composer\+\_\+node\+\_\+ports.\+h}
+\hypertarget{task__composer__node__ports_8h_source}{}\label{task__composer__node__ports_8h_source}\index{tesseract\_task\_composer/core/include/tesseract\_task\_composer/core/task\_composer\_node\_ports.h@{tesseract\_task\_composer/core/include/tesseract\_task\_composer/core/task\_composer\_node\_ports.h}}
+\mbox{\hyperlink{task__composer__node__ports_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\#ifndef\ TESSERACT\_TASK\_COMPOSER\_TASK\_COMPOSER\_NODE\_PORTS\_H}}
+\DoxyCodeLine{00021\ \textcolor{preprocessor}{\#define\ TESSERACT\_TASK\_COMPOSER\_TASK\_COMPOSER\_NODE\_PORTS\_H}}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \textcolor{preprocessor}{\#include\ <tesseract\_common/macros.h>}}
+\DoxyCodeLine{00024\ TESSERACT\_COMMON\_IGNORE\_WARNINGS\_PUSH}
+\DoxyCodeLine{00025\ \textcolor{preprocessor}{\#include\ <unordered\_map>}}
+\DoxyCodeLine{00026\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \textcolor{preprocessor}{\#include\ <boost/serialization/access.hpp>}}
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#include\ <boost/serialization/export.hpp>}}
+\DoxyCodeLine{00030\ \mbox{\hyperlink{namespaceTESSERACT__COMMON__IGNORE__WARNINGS__POP}{TESSERACT\_COMMON\_IGNORE\_WARNINGS\_POP}}}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \textcolor{preprocessor}{\#include\ <tesseract\_common/fwd.h>}}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacetesseract__planning}{tesseract\_planning}}}
+\DoxyCodeLine{00035\ \{}
+\DoxyCodeLine{00041\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structtesseract__planning_1_1TaskComposerNodePorts}{TaskComposerNodePorts}}}
+\DoxyCodeLine{00042\ \{}
+\DoxyCodeLine{00043\ \ \ \textcolor{keyword}{enum}\ \mbox{\hyperlink{structtesseract__planning_1_1TaskComposerNodePorts_aa8c4034e43ea89e6bae500ebc5b01527}{Type}}}
+\DoxyCodeLine{00044\ \ \ \{}
+\DoxyCodeLine{00045\ \ \ \ \ \mbox{\hyperlink{structtesseract__planning_1_1TaskComposerNodePorts_aa8c4034e43ea89e6bae500ebc5b01527a40a289e2db47650eaf692665a03e666b}{SINGLE}}\ =\ 0,}
+\DoxyCodeLine{00046\ \ \ \ \ \mbox{\hyperlink{structtesseract__planning_1_1TaskComposerNodePorts_aa8c4034e43ea89e6bae500ebc5b01527a10eb95c0e6bd4ac50fd13aaa1d8de82d}{MULTIPLE}}\ =\ 1}
+\DoxyCodeLine{00047\ \ \ \};}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00049\ \ \ std::unordered\_map<std::string,\ Type>\ \mbox{\hyperlink{structtesseract__planning_1_1TaskComposerNodePorts_a9a80bd43ccccda75ec2198f85240ba0a}{input\_required}};}
+\DoxyCodeLine{00050\ \ \ std::unordered\_map<std::string,\ Type>\ \mbox{\hyperlink{structtesseract__planning_1_1TaskComposerNodePorts_a0787ae27c492aa9605d13719caa9fe56}{input\_optional}};}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00052\ \ \ std::unordered\_map<std::string,\ Type>\ \mbox{\hyperlink{structtesseract__planning_1_1TaskComposerNodePorts_ae578f244ab7886e31398b5e1a4f2e00f}{output\_required}};}
+\DoxyCodeLine{00053\ \ \ std::unordered\_map<std::string,\ Type>\ \mbox{\hyperlink{structtesseract__planning_1_1TaskComposerNodePorts_abf2aea80c2c74e15a305cd560bb0e7c5}{output\_optional}};}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00055\ \ \ std::string\ \mbox{\hyperlink{structtesseract__planning_1_1TaskComposerNodePorts_a58ba27759a3245c1bdd81dcfe00f0db0}{toString}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00057\ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{structtesseract__planning_1_1TaskComposerNodePorts_a2b4eebc6a181066e55989d9559c0fbb3}{operator==}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{structtesseract__planning_1_1TaskComposerNodePorts}{TaskComposerNodePorts}}\&\ rhs)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00058\ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{structtesseract__planning_1_1TaskComposerNodePorts_aa2afbb2c2b96fb91a0c909ce0a4d85bb}{operator!=}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{structtesseract__planning_1_1TaskComposerNodePorts}{TaskComposerNodePorts}}\&\ rhs)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00060\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00061\ \ \ \textcolor{keyword}{friend}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structtesseract__planning_1_1TaskComposerNodePorts_a9d42ad7bb40288a7ac1aad8d76809fe7}{tesseract\_common::Serialization}};}
+\DoxyCodeLine{00062\ \ \ \textcolor{keyword}{friend}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{structtesseract__planning_1_1TaskComposerNodePorts_ac98d07dd8f7b70e16ccb9a01abf56b9c}{boost::serialization::access}};}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00064\ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{class}\ Archive>}
+\DoxyCodeLine{00065\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structtesseract__planning_1_1TaskComposerNodePorts_ad6f3aae4522d4853f02c93ea1c602d0f}{serialize}}(Archive\&\ ar,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ version);\ \ \textcolor{comment}{//\ NOLINT}}
+\DoxyCodeLine{00066\ \};}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00068\ \}\ \ \textcolor{comment}{//\ namespace\ tesseract\_planning}}
+\DoxyCodeLine{00069\ BOOST\_CLASS\_EXPORT\_KEY(\mbox{\hyperlink{structtesseract__planning_1_1TaskComposerNodePorts}{tesseract\_planning::TaskComposerNodePorts}})}
+\DoxyCodeLine{00070\ \textcolor{preprocessor}{\#endif\ \ }\textcolor{comment}{//\ TESSERACT\_TASK\_COMPOSER\_TASK\_COMPOSER\_NODE\_PORTS\_H}}
+
+\end{DoxyCode}

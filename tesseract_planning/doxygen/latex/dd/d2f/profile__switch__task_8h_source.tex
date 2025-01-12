@@ -1,0 +1,67 @@
+\doxysection{profile\+\_\+switch\+\_\+task.\+h}
+\hypertarget{profile__switch__task_8h_source}{}\label{profile__switch__task_8h_source}\index{tesseract\_task\_composer/planning/include/tesseract\_task\_composer/planning/nodes/profile\_switch\_task.h@{tesseract\_task\_composer/planning/include/tesseract\_task\_composer/planning/nodes/profile\_switch\_task.h}}
+\mbox{\hyperlink{profile__switch__task_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00024\ \textcolor{preprocessor}{\#ifndef\ TESSERACT\_TASK\_COMPOSER\_PROFILE\_SWITCH\_TASK\_H}}
+\DoxyCodeLine{00025\ \textcolor{preprocessor}{\#define\ TESSERACT\_TASK\_COMPOSER\_PROFILE\_SWITCH\_TASK\_H}}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#include\ <tesseract\_common/macros.h>}}
+\DoxyCodeLine{00028\ TESSERACT\_COMMON\_IGNORE\_WARNINGS\_PUSH}
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#include\ <boost/serialization/access.hpp>}}
+\DoxyCodeLine{00030\ \textcolor{preprocessor}{\#include\ <boost/serialization/export.hpp>}}
+\DoxyCodeLine{00031\ \textcolor{preprocessor}{\#include\ <tesseract\_task\_composer/planning/tesseract\_task\_composer\_planning\_nodes\_export.h>}}
+\DoxyCodeLine{00032\ \mbox{\hyperlink{namespaceTESSERACT__COMMON__IGNORE__WARNINGS__POP}{TESSERACT\_COMMON\_IGNORE\_WARNINGS\_POP}}}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{task__composer__task_8h}{tesseract\_task\_composer/core/task\_composer\_task.h}}>}}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacetesseract__planning}{tesseract\_planning}}}
+\DoxyCodeLine{00037\ \{}
+\DoxyCodeLine{00038\ \textcolor{keyword}{class\ }TaskComposerPluginFactory;}
+\DoxyCodeLine{00043\ \textcolor{keyword}{class\ }TESSERACT\_TASK\_COMPOSER\_PLANNING\_NODES\_EXPORT\ \mbox{\hyperlink{classtesseract__planning_1_1ProfileSwitchTask}{ProfileSwitchTask}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerTask}{TaskComposerTask}}}
+\DoxyCodeLine{00044\ \{}
+\DoxyCodeLine{00045\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00046\ \ \ \textcolor{comment}{//\ Requried}}
+\DoxyCodeLine{00047\ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ std::string\ \mbox{\hyperlink{classtesseract__planning_1_1ProfileSwitchTask_aa4d7d9a4adbaaaa4e6635f0dfdf0e2eb}{INPUT\_PROGRAM\_PORT}};}
+\DoxyCodeLine{00048\ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ std::string\ \mbox{\hyperlink{classtesseract__planning_1_1ProfileSwitchTask_a61e1dcf83302def9b6069cc9747df621}{INPUT\_PROFILES\_PORT}};}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00050\ \ \ \textcolor{keyword}{using\ }\mbox{\hyperlink{classtesseract__planning_1_1ProfileSwitchTask_a7532a8792489374abf0b6e1571667e9b}{Ptr}}\ =\ std::shared\_ptr<ProfileSwitchTask>;}
+\DoxyCodeLine{00051\ \ \ \textcolor{keyword}{using\ }\mbox{\hyperlink{classtesseract__planning_1_1ProfileSwitchTask_ad90db0ae40335d57f5720887b701d009}{ConstPtr}}\ =\ std::shared\_ptr<const\ ProfileSwitchTask>;}
+\DoxyCodeLine{00052\ \ \ \textcolor{keyword}{using\ }\mbox{\hyperlink{classtesseract__planning_1_1ProfileSwitchTask_a5d03aa0a4907cd0900f539f43e83cbdc}{UPtr}}\ =\ std::unique\_ptr<ProfileSwitchTask>;}
+\DoxyCodeLine{00053\ \ \ \textcolor{keyword}{using\ }\mbox{\hyperlink{classtesseract__planning_1_1ProfileSwitchTask_a3dd82b8fce195a6f14d6866f117092b7}{ConstUPtr}}\ =\ std::unique\_ptr<const\ ProfileSwitchTask>;}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00055\ \ \ \mbox{\hyperlink{classtesseract__planning_1_1ProfileSwitchTask}{ProfileSwitchTask}}();}
+\DoxyCodeLine{00056\ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{classtesseract__planning_1_1ProfileSwitchTask}{ProfileSwitchTask}}(std::string\ \mbox{\hyperlink{tesseract__task__composer__core__unit_8cpp_a9b45b3e13bd9167aab02e17e08916231}{name}},}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::string\ input\_program\_key,}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::string\ input\_profiles\_key,}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ conditional\ =\ \textcolor{keyword}{true});}
+\DoxyCodeLine{00060\ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{classtesseract__planning_1_1ProfileSwitchTask}{ProfileSwitchTask}}(std::string\ \mbox{\hyperlink{tesseract__task__composer__core__unit_8cpp_a9b45b3e13bd9167aab02e17e08916231}{name}},}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ YAML::Node\&\ \mbox{\hyperlink{tesseract__task__composer__core__unit_8cpp_a01d92a800904faa16b8c1c1372c40fb3}{config}},}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerPluginFactory}{TaskComposerPluginFactory}}\&\ plugin\_factory);}
+\DoxyCodeLine{00063\ \ \ \mbox{\hyperlink{classtesseract__planning_1_1ProfileSwitchTask_a6919f47bffa8bd6d75f2a21c30270173}{\string~ProfileSwitchTask}}()\ \textcolor{keyword}{override}\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00064\ \ \ \mbox{\hyperlink{classtesseract__planning_1_1ProfileSwitchTask_a645149d256ce145d21381f3a270e7b1b}{ProfileSwitchTask}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classtesseract__planning_1_1ProfileSwitchTask}{ProfileSwitchTask}}\&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00065\ \ \ \mbox{\hyperlink{classtesseract__planning_1_1ProfileSwitchTask}{ProfileSwitchTask}}\&\ \mbox{\hyperlink{classtesseract__planning_1_1ProfileSwitchTask_ab31ba85471db1e7157ead827580a7cd5}{operator=}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classtesseract__planning_1_1ProfileSwitchTask}{ProfileSwitchTask}}\&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00066\ \ \ \mbox{\hyperlink{classtesseract__planning_1_1ProfileSwitchTask_a59f57a77c413fc2bb5130db13801d103}{ProfileSwitchTask}}(\mbox{\hyperlink{classtesseract__planning_1_1ProfileSwitchTask}{ProfileSwitchTask}}\&\&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00067\ \ \ \mbox{\hyperlink{classtesseract__planning_1_1ProfileSwitchTask}{ProfileSwitchTask}}\&\ \mbox{\hyperlink{classtesseract__planning_1_1ProfileSwitchTask_a51c9adfa1f3da3a16d4a77c202e438ed}{operator=}}(\mbox{\hyperlink{classtesseract__planning_1_1ProfileSwitchTask}{ProfileSwitchTask}}\&\&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00069\ \ \ \textcolor{keywordtype}{bool}\ operator==(\textcolor{keyword}{const}\ \mbox{\hyperlink{classtesseract__planning_1_1ProfileSwitchTask}{ProfileSwitchTask}}\&\ rhs)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00070\ \ \ \textcolor{keywordtype}{bool}\ operator!=(\textcolor{keyword}{const}\ \mbox{\hyperlink{classtesseract__planning_1_1ProfileSwitchTask}{ProfileSwitchTask}}\&\ rhs)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00072\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00073\ \ \ \textcolor{keyword}{friend}\ \textcolor{keyword}{struct\ }tesseract\_common::Serialization;}
+\DoxyCodeLine{00074\ \ \ \textcolor{keyword}{friend}\ \textcolor{keyword}{class\ }boost::serialization::access;}
+\DoxyCodeLine{00075\ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{class}\ Archive>}
+\DoxyCodeLine{00076\ \ \ \textcolor{keywordtype}{void}\ serialize(Archive\&\ ar,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ version);\ \ \textcolor{comment}{//\ NOLINT}}
+\DoxyCodeLine{00077\ }
+\DoxyCodeLine{00078\ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{structtesseract__planning_1_1TaskComposerNodePorts}{TaskComposerNodePorts}}\ ports();}
+\DoxyCodeLine{00079\ }
+\DoxyCodeLine{00080\ \ \ std::unique\_ptr<TaskComposerNodeInfo>}
+\DoxyCodeLine{00081\ \ \ runImpl(\mbox{\hyperlink{classtesseract__planning_1_1TaskComposerContext}{TaskComposerContext}}\&\ \mbox{\hyperlink{tesseract__task__composer__core__unit_8cpp_adf0dd2db07cdbb966d6e385d3cd2605c}{context}},\ \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerNode_a51670db70ccba1ce21a77a5448e474d7}{OptionalTaskComposerExecutor}}\ \mbox{\hyperlink{tesseract__task__composer__taskflow__unit_8cpp_ab85065e5a325fc5bf8675e6c55a3e72f}{executor}}\ =\ std::nullopt)\ \textcolor{keyword}{const}\ \textcolor{keyword}{override}\ \textcolor{keyword}{final};}
+\DoxyCodeLine{00082\ \};}
+\DoxyCodeLine{00083\ }
+\DoxyCodeLine{00084\ \}\ \ \textcolor{comment}{//\ namespace\ tesseract\_planning}}
+\DoxyCodeLine{00085\ }
+\DoxyCodeLine{00086\ BOOST\_CLASS\_EXPORT\_KEY(\mbox{\hyperlink{classtesseract__planning_1_1ProfileSwitchTask}{tesseract\_planning::ProfileSwitchTask}})}
+\DoxyCodeLine{00087\ \textcolor{preprocessor}{\#endif\ \ }\textcolor{comment}{//\ TESSERACT\_TASK\_COMPOSER\_PROFILE\_SWITCH\_TASK\_H}}
+
+\end{DoxyCode}

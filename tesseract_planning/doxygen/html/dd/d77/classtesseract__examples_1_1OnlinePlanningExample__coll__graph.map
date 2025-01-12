@@ -1,0 +1,21 @@
+<map id="tesseract_examples::OnlinePlanningExample" name="tesseract_examples::OnlinePlanningExample">
+<area shape="rect" id="Node000001" title="This example demonstrates running the inner loop of TrajOpt in an &quot;online&quot; manner...." alt="" coords="838,181,1001,222"/>
+<area shape="rect" id="Node000002" href="$d3/d3b/classtesseract__examples_1_1Example.html" title="The Example base class." alt="" coords="491,37,628,78"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="644,74,728,98,815,131,856,154,892,179,889,183,854,159,813,136,726,103,643,79"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="179,5,367,46"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="383,35,491,47,490,53,382,41"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="178,71,367,111"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="382,76,490,63,491,68,383,81"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="485,102,634,158"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="650,145,838,183,837,188,649,150"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="471,181,648,222"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="663,199,837,199,837,204,663,204"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="480,246,639,272"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="654,244,813,219,837,215,838,220,814,225,655,249"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="234,246,311,272"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="327,256,479,256,479,262,327,262"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="5,239,129,279"/>
+<area shape="poly" id="edge8_Node000008_Node000009" title=" " alt="" coords="144,256,233,256,233,262,144,262"/>
+<area shape="rect" id="Node000010" title=" " alt="" coords="483,296,636,337"/>
+<area shape="poly" id="edge9_Node000001_Node000010" title=" " alt="" coords="651,303,731,287,813,262,853,242,888,220,891,225,856,247,815,267,732,292,652,308"/>
+</map>

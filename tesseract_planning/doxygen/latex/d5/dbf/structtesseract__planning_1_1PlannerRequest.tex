@@ -1,0 +1,130 @@
+\doxysection{tesseract\+\_\+planning\+::Planner\+Request Struct Reference}
+\hypertarget{structtesseract__planning_1_1PlannerRequest}{}\label{structtesseract__planning_1_1PlannerRequest}\index{tesseract\_planning::PlannerRequest@{tesseract\_planning::PlannerRequest}}
+
+
+{\ttfamily \#include $<$types.\+h$>$}
+
+
+
+Collaboration diagram for tesseract\+\_\+planning\+::Planner\+Request\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d6/dbe/structtesseract__planning_1_1PlannerRequest__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+EIGEN\+\_\+\+MAKE\+\_\+\+ALIGNED\+\_\+\+OPERATOR\+\_\+\+NEW \mbox{\hyperlink{structtesseract__planning_1_1PlannerRequest_a9fd21df8f0726bc2e59e356dca055d75}{Planner\+Request}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{structtesseract__planning_1_1PlannerRequest_afa12fe79c6dae69afc0e13d1cfd3c37d}{name}}
+\begin{DoxyCompactList}\small\item\em The name of the process manager to use. \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ const tesseract\+\_\+environment\+::\+Environment $>$ \mbox{\hyperlink{structtesseract__planning_1_1PlannerRequest_a86a559380e4fdc6160765f4544372b1a}{env}}
+\begin{DoxyCompactList}\small\item\em The environment. \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ const \mbox{\hyperlink{classtesseract__planning_1_1ProfileDictionary}{Profile\+Dictionary}} $>$ \mbox{\hyperlink{structtesseract__planning_1_1PlannerRequest_a78c9b6cd4963f046639cecede8ed2176}{profiles}}
+\begin{DoxyCompactList}\small\item\em The profile dictionary. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classtesseract__planning_1_1CompositeInstruction}{Composite\+Instruction}} \mbox{\hyperlink{structtesseract__planning_1_1PlannerRequest_a8c6a68b833fbe425b10ff295be07cff7}{instructions}}
+\begin{DoxyCompactList}\small\item\em The program instruction This must contain a minimum of two move instruction the first move instruction is the start state. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{structtesseract__planning_1_1PlannerRequest_acd0d5992c966354b676ee0041f6455f7}{verbose}} \{ false \}
+\begin{DoxyCompactList}\small\item\em Indicate if output should be verbose. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{structtesseract__planning_1_1PlannerRequest_a3cc92780142fff3e396c45bfce51e92b}{format\+\_\+result\+\_\+as\+\_\+input}} \{ false \}
+\begin{DoxyCompactList}\small\item\em Format the result as input for motion planning. \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ void $>$ \mbox{\hyperlink{structtesseract__planning_1_1PlannerRequest_a74225e42fe18279b21af4a922fa80995}{data}}
+\begin{DoxyCompactList}\small\item\em data Planner specific data. For planners included in Tesseract\+\_\+planning this is the planner problem that will be used if it is not null \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{structtesseract__planning_1_1PlannerRequest_a9fd21df8f0726bc2e59e356dca055d75}\label{structtesseract__planning_1_1PlannerRequest_a9fd21df8f0726bc2e59e356dca055d75} 
+\index{tesseract\_planning::PlannerRequest@{tesseract\_planning::PlannerRequest}!PlannerRequest@{PlannerRequest}}
+\index{PlannerRequest@{PlannerRequest}!tesseract\_planning::PlannerRequest@{tesseract\_planning::PlannerRequest}}
+\doxysubsubsection{\texorpdfstring{PlannerRequest()}{PlannerRequest()}}
+{\footnotesize\ttfamily tesseract\+\_\+planning\+::\+Planner\+Request\+::\+Planner\+Request (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{structtesseract__planning_1_1PlannerRequest_a74225e42fe18279b21af4a922fa80995}\label{structtesseract__planning_1_1PlannerRequest_a74225e42fe18279b21af4a922fa80995} 
+\index{tesseract\_planning::PlannerRequest@{tesseract\_planning::PlannerRequest}!data@{data}}
+\index{data@{data}!tesseract\_planning::PlannerRequest@{tesseract\_planning::PlannerRequest}}
+\doxysubsubsection{\texorpdfstring{data}{data}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$void$>$ tesseract\+\_\+planning\+::\+Planner\+Request\+::data}
+
+
+
+data Planner specific data. For planners included in Tesseract\+\_\+planning this is the planner problem that will be used if it is not null 
+
+\Hypertarget{structtesseract__planning_1_1PlannerRequest_a86a559380e4fdc6160765f4544372b1a}\label{structtesseract__planning_1_1PlannerRequest_a86a559380e4fdc6160765f4544372b1a} 
+\index{tesseract\_planning::PlannerRequest@{tesseract\_planning::PlannerRequest}!env@{env}}
+\index{env@{env}!tesseract\_planning::PlannerRequest@{tesseract\_planning::PlannerRequest}}
+\doxysubsubsection{\texorpdfstring{env}{env}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$const tesseract\+\_\+environment\+::\+Environment$>$ tesseract\+\_\+planning\+::\+Planner\+Request\+::env}
+
+
+
+The environment. 
+
+\Hypertarget{structtesseract__planning_1_1PlannerRequest_a3cc92780142fff3e396c45bfce51e92b}\label{structtesseract__planning_1_1PlannerRequest_a3cc92780142fff3e396c45bfce51e92b} 
+\index{tesseract\_planning::PlannerRequest@{tesseract\_planning::PlannerRequest}!format\_result\_as\_input@{format\_result\_as\_input}}
+\index{format\_result\_as\_input@{format\_result\_as\_input}!tesseract\_planning::PlannerRequest@{tesseract\_planning::PlannerRequest}}
+\doxysubsubsection{\texorpdfstring{format\_result\_as\_input}{format\_result\_as\_input}}
+{\footnotesize\ttfamily bool tesseract\+\_\+planning\+::\+Planner\+Request\+::format\+\_\+result\+\_\+as\+\_\+input \{ false \}}
+
+
+
+Format the result as input for motion planning. 
+
+
+\begin{DoxyItemize}
+\item If true it uses the input waypoint but updates the seed component
+\item If false, it replace the input waypoint with a state waypoint 
+\end{DoxyItemize}\Hypertarget{structtesseract__planning_1_1PlannerRequest_a8c6a68b833fbe425b10ff295be07cff7}\label{structtesseract__planning_1_1PlannerRequest_a8c6a68b833fbe425b10ff295be07cff7} 
+\index{tesseract\_planning::PlannerRequest@{tesseract\_planning::PlannerRequest}!instructions@{instructions}}
+\index{instructions@{instructions}!tesseract\_planning::PlannerRequest@{tesseract\_planning::PlannerRequest}}
+\doxysubsubsection{\texorpdfstring{instructions}{instructions}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classtesseract__planning_1_1CompositeInstruction}{Composite\+Instruction}} tesseract\+\_\+planning\+::\+Planner\+Request\+::instructions}
+
+
+
+The program instruction This must contain a minimum of two move instruction the first move instruction is the start state. 
+
+\Hypertarget{structtesseract__planning_1_1PlannerRequest_afa12fe79c6dae69afc0e13d1cfd3c37d}\label{structtesseract__planning_1_1PlannerRequest_afa12fe79c6dae69afc0e13d1cfd3c37d} 
+\index{tesseract\_planning::PlannerRequest@{tesseract\_planning::PlannerRequest}!name@{name}}
+\index{name@{name}!tesseract\_planning::PlannerRequest@{tesseract\_planning::PlannerRequest}}
+\doxysubsubsection{\texorpdfstring{name}{name}}
+{\footnotesize\ttfamily std\+::string tesseract\+\_\+planning\+::\+Planner\+Request\+::name}
+
+
+
+The name of the process manager to use. 
+
+\Hypertarget{structtesseract__planning_1_1PlannerRequest_a78c9b6cd4963f046639cecede8ed2176}\label{structtesseract__planning_1_1PlannerRequest_a78c9b6cd4963f046639cecede8ed2176} 
+\index{tesseract\_planning::PlannerRequest@{tesseract\_planning::PlannerRequest}!profiles@{profiles}}
+\index{profiles@{profiles}!tesseract\_planning::PlannerRequest@{tesseract\_planning::PlannerRequest}}
+\doxysubsubsection{\texorpdfstring{profiles}{profiles}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$const \mbox{\hyperlink{classtesseract__planning_1_1ProfileDictionary}{Profile\+Dictionary}}$>$ tesseract\+\_\+planning\+::\+Planner\+Request\+::profiles}
+
+
+
+The profile dictionary. 
+
+\Hypertarget{structtesseract__planning_1_1PlannerRequest_acd0d5992c966354b676ee0041f6455f7}\label{structtesseract__planning_1_1PlannerRequest_acd0d5992c966354b676ee0041f6455f7} 
+\index{tesseract\_planning::PlannerRequest@{tesseract\_planning::PlannerRequest}!verbose@{verbose}}
+\index{verbose@{verbose}!tesseract\_planning::PlannerRequest@{tesseract\_planning::PlannerRequest}}
+\doxysubsubsection{\texorpdfstring{verbose}{verbose}}
+{\footnotesize\ttfamily bool tesseract\+\_\+planning\+::\+Planner\+Request\+::verbose \{ false \}}
+
+
+
+Indicate if output should be verbose. 
+
+
+
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+tesseract\+\_\+motion\+\_\+planners/core/include/tesseract\+\_\+motion\+\_\+planners/core/\mbox{\hyperlink{tesseract__motion__planners_2core_2include_2tesseract__motion__planners_2core_2types_8h}{types.\+h}}\item 
+tesseract\+\_\+motion\+\_\+planners/core/src/\mbox{\hyperlink{types_8cpp}{types.\+cpp}}\end{DoxyCompactItemize}

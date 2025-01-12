@@ -1,0 +1,440 @@
+\doxysection{tesseract\+\_\+planning\+::Raster\+Only\+Motion\+Task Class Reference}
+\hypertarget{classtesseract__planning_1_1RasterOnlyMotionTask}{}\label{classtesseract__planning_1_1RasterOnlyMotionTask}\index{tesseract\_planning::RasterOnlyMotionTask@{tesseract\_planning::RasterOnlyMotionTask}}
+
+
+The Raster\+Ct\+Only\+Motion\+Task class.  
+
+
+
+
+{\ttfamily \#include $<$raster\+\_\+only\+\_\+motion\+\_\+task.\+h$>$}
+
+
+
+Inheritance diagram for tesseract\+\_\+planning\+::Raster\+Only\+Motion\+Task\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=200pt]{de/d03/classtesseract__planning_1_1RasterOnlyMotionTask__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for tesseract\+\_\+planning\+::Raster\+Only\+Motion\+Task\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{df/dfe/classtesseract__planning_1_1RasterOnlyMotionTask__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structtesseract__planning_1_1RasterOnlyMotionTask_1_1TaskFactoryResults}{Task\+Factory\+Results}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{classtesseract__planning_1_1RasterOnlyMotionTask_ad3f5d991aad62d081f45f5073cc37ad7}{Task\+Factory}} = std\+::function$<$ \mbox{\hyperlink{structtesseract__planning_1_1RasterOnlyMotionTask_1_1TaskFactoryResults}{Task\+Factory\+Results}}(const std\+::string \&\mbox{\hyperlink{tesseract__task__composer__core__unit_8cpp_a9b45b3e13bd9167aab02e17e08916231}{name}}, std\+::size\+\_\+t index)$>$
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Types inherited from \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerTask}{tesseract\+\_\+planning\+::\+Task\+Composer\+Task}}}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerTask_a457770945135b6b160510fda1afbf2db}{Ptr}} = std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerTask}{Task\+Composer\+Task}} $>$
+\item 
+using \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerTask_ae5505d9be93d0120c7fee0f3b1f06d10}{Const\+Ptr}} = std\+::shared\+\_\+ptr$<$ const \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerTask}{Task\+Composer\+Task}} $>$
+\item 
+using \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerTask_a817c8cf9178237066196ae1b070cd44e}{UPtr}} = std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerTask}{Task\+Composer\+Task}} $>$
+\item 
+using \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerTask_afb2128fb562b61c94c849f8181c8bb52}{Const\+UPtr}} = std\+::unique\+\_\+ptr$<$ const \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerTask}{Task\+Composer\+Task}} $>$
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Types inherited from \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerNode}{tesseract\+\_\+planning\+::\+Task\+Composer\+Node}}}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerNode_afa21bcbdb14758703e68761c425b2df6}{Ptr}} = std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerNode}{Task\+Composer\+Node}} $>$
+\item 
+using \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerNode_addafbf5ce4de929f61528800dfe03129}{Const\+Ptr}} = std\+::shared\+\_\+ptr$<$ const \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerNode}{Task\+Composer\+Node}} $>$
+\item 
+using \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerNode_aeee363b2e1325a896f640091c2673dff}{UPtr}} = std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerNode}{Task\+Composer\+Node}} $>$
+\item 
+using \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerNode_a6cca773a6bd1be40ce8c67426240a061}{Const\+UPtr}} = std\+::unique\+\_\+ptr$<$ const \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerNode}{Task\+Composer\+Node}} $>$
+\item 
+using \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerNode_aac34d6ff1b885f412807949ba71d9518}{Results\+Map}} = std\+::map$<$ boost\+::uuids\+::uuid, std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerNodeInfo}{Task\+Composer\+Node\+Info}} $>$ $>$
+\item 
+using \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerNode_a51670db70ccba1ce21a77a5448e474d7}{Optional\+Task\+Composer\+Executor}} = std\+::optional$<$ std\+::reference\+\_\+wrapper$<$ \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerExecutor}{Task\+Composer\+Executor}} $>$ $>$
+\begin{DoxyCompactList}\small\item\em Most task will not require a executor so making it optional. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classtesseract__planning_1_1RasterOnlyMotionTask_a71427f04ed18614a7e11b401054971f1}{Raster\+Only\+Motion\+Task}} ()
+\item 
+\mbox{\hyperlink{classtesseract__planning_1_1RasterOnlyMotionTask_a8e7616ad1b99ac386d1919794c390f87}{Raster\+Only\+Motion\+Task}} (std\+::string \mbox{\hyperlink{tesseract__task__composer__core__unit_8cpp_a9b45b3e13bd9167aab02e17e08916231}{name}}, std\+::string input\+\_\+program\+\_\+key, std\+::string input\+\_\+environment\+\_\+key, std\+::string output\+\_\+program\+\_\+key, bool conditional, \mbox{\hyperlink{classtesseract__planning_1_1RasterOnlyMotionTask_ad3f5d991aad62d081f45f5073cc37ad7}{Task\+Factory}} raster\+\_\+task\+\_\+factory, \mbox{\hyperlink{classtesseract__planning_1_1RasterOnlyMotionTask_ad3f5d991aad62d081f45f5073cc37ad7}{Task\+Factory}} transition\+\_\+task\+\_\+factory)
+\item 
+\mbox{\hyperlink{classtesseract__planning_1_1RasterOnlyMotionTask_abf5e31c98b907fe6f08c7985c08701c2}{Raster\+Only\+Motion\+Task}} (std\+::string \mbox{\hyperlink{tesseract__task__composer__core__unit_8cpp_a9b45b3e13bd9167aab02e17e08916231}{name}}, const YAML\+::\+Node \&\mbox{\hyperlink{tesseract__task__composer__core__unit_8cpp_a01d92a800904faa16b8c1c1372c40fb3}{config}}, const \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerPluginFactory}{Task\+Composer\+Plugin\+Factory}} \&plugin\+\_\+factory)
+\item 
+\mbox{\hyperlink{classtesseract__planning_1_1RasterOnlyMotionTask_a3e9900d6a7289cc11c244bc6415269b7}{\texorpdfstring{$\sim$}{\string~}\+Raster\+Only\+Motion\+Task}} () override=default
+\item 
+\mbox{\hyperlink{classtesseract__planning_1_1RasterOnlyMotionTask_aed8cf7e193f9ee731b028a4c6061c489}{Raster\+Only\+Motion\+Task}} (const \mbox{\hyperlink{classtesseract__planning_1_1RasterOnlyMotionTask}{Raster\+Only\+Motion\+Task}} \&)=delete
+\item 
+\mbox{\hyperlink{classtesseract__planning_1_1RasterOnlyMotionTask}{Raster\+Only\+Motion\+Task}} \& \mbox{\hyperlink{classtesseract__planning_1_1RasterOnlyMotionTask_a99623c95db8a991f739deae63c0ce0da}{operator=}} (const \mbox{\hyperlink{classtesseract__planning_1_1RasterOnlyMotionTask}{Raster\+Only\+Motion\+Task}} \&)=delete
+\item 
+\mbox{\hyperlink{classtesseract__planning_1_1RasterOnlyMotionTask_ada884ddaee05cfce3e18d8ab11c1a45b}{Raster\+Only\+Motion\+Task}} (\mbox{\hyperlink{classtesseract__planning_1_1RasterOnlyMotionTask}{Raster\+Only\+Motion\+Task}} \&\&)=delete
+\item 
+\mbox{\hyperlink{classtesseract__planning_1_1RasterOnlyMotionTask}{Raster\+Only\+Motion\+Task}} \& \mbox{\hyperlink{classtesseract__planning_1_1RasterOnlyMotionTask_a52b63621e1adda879a1675996d5ff872}{operator=}} (\mbox{\hyperlink{classtesseract__planning_1_1RasterOnlyMotionTask}{Raster\+Only\+Motion\+Task}} \&\&)=delete
+\item 
+bool \mbox{\hyperlink{classtesseract__planning_1_1RasterOnlyMotionTask_adfe27180b585f60a1f9f6a42a7f51bcf}{operator==}} (const \mbox{\hyperlink{classtesseract__planning_1_1RasterOnlyMotionTask}{Raster\+Only\+Motion\+Task}} \&rhs) const
+\item 
+bool \mbox{\hyperlink{classtesseract__planning_1_1RasterOnlyMotionTask_ab7def84746ece99242d99e8da64c13c3}{operator!=}} (const \mbox{\hyperlink{classtesseract__planning_1_1RasterOnlyMotionTask}{Raster\+Only\+Motion\+Task}} \&rhs) const
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerTask}{tesseract\+\_\+planning\+::\+Task\+Composer\+Task}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classtesseract__planning_1_1TaskComposerTask_a665aa6a8aacecea893e32c03c4da8670}{Task\+Composer\+Task}} ()
+\item 
+\mbox{\hyperlink{classtesseract__planning_1_1TaskComposerTask_a74eabcff24cc7437bc3cac899ed551f0}{Task\+Composer\+Task}} (std\+::string \mbox{\hyperlink{tesseract__task__composer__core__unit_8cpp_a9b45b3e13bd9167aab02e17e08916231}{name}}, \mbox{\hyperlink{structtesseract__planning_1_1TaskComposerNodePorts}{Task\+Composer\+Node\+Ports}} ports, bool conditional)
+\item 
+\mbox{\hyperlink{classtesseract__planning_1_1TaskComposerTask_ae5b9cf8272ca8407e2c5940f8bed5e2d}{Task\+Composer\+Task}} (std\+::string \mbox{\hyperlink{tesseract__task__composer__core__unit_8cpp_a9b45b3e13bd9167aab02e17e08916231}{name}}, \mbox{\hyperlink{structtesseract__planning_1_1TaskComposerNodePorts}{Task\+Composer\+Node\+Ports}} ports, const YAML\+::\+Node \&\mbox{\hyperlink{tesseract__task__composer__core__unit_8cpp_a01d92a800904faa16b8c1c1372c40fb3}{config}})
+\item 
+\mbox{\hyperlink{classtesseract__planning_1_1TaskComposerTask_a2de9911c30a7d92dc54e5a82c2415708}{\texorpdfstring{$\sim$}{\string~}\+Task\+Composer\+Task}} () override=default
+\item 
+\mbox{\hyperlink{classtesseract__planning_1_1TaskComposerTask_a3c48cfd3bbffdbda2e353c6ee5fb5e16}{Task\+Composer\+Task}} (const \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerTask}{Task\+Composer\+Task}} \&)=delete
+\item 
+\mbox{\hyperlink{classtesseract__planning_1_1TaskComposerTask}{Task\+Composer\+Task}} \& \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerTask_a655adfc3c87df780b3a04e35284a1c69}{operator=}} (const \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerTask}{Task\+Composer\+Task}} \&)=delete
+\item 
+\mbox{\hyperlink{classtesseract__planning_1_1TaskComposerTask_a26fef8142d293b106e1c5e1a82789486}{Task\+Composer\+Task}} (\mbox{\hyperlink{classtesseract__planning_1_1TaskComposerTask}{Task\+Composer\+Task}} \&\&)=delete
+\item 
+\mbox{\hyperlink{classtesseract__planning_1_1TaskComposerTask}{Task\+Composer\+Task}} \& \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerTask_ada6720e72a221d80d9e070d03b5fb61e}{operator=}} (\mbox{\hyperlink{classtesseract__planning_1_1TaskComposerTask}{Task\+Composer\+Task}} \&\&)=delete
+\item 
+bool \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerTask_a608b27c5ec6763f8b884d4fbb15f40be}{operator==}} (const \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerTask}{Task\+Composer\+Task}} \&rhs) const
+\item 
+bool \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerTask_aa8171223b820f00b5b5dc6a934ab9d88}{operator!=}} (const \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerTask}{Task\+Composer\+Task}} \&rhs) const
+\item 
+void \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerTask_ae358ba9f834e7483b3b567ddd39f0ce1}{set\+Trigger\+Abort}} (bool enable)
+\begin{DoxyCompactList}\small\item\em If true this node should call context.\+abort(uuid\+\_\+) after run method returns. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerNode}{tesseract\+\_\+planning\+::\+Task\+Composer\+Node}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classtesseract__planning_1_1TaskComposerNode_a8c9fa7be0e18e622e77ef7e12574b122}{Task\+Composer\+Node}} (std\+::string \mbox{\hyperlink{tesseract__task__composer__core__unit_8cpp_a9b45b3e13bd9167aab02e17e08916231}{name}}="{}Task\+Composer\+Node"{}, \mbox{\hyperlink{namespacetesseract__planning_a8809a0aba7c84528f1fa9a5f2b4f927f}{Task\+Composer\+Node\+Type}} \mbox{\hyperlink{ompl__planner__tests_8cpp_a03004818513b2a0604415827c17b9595}{type}}=\mbox{\hyperlink{namespacetesseract__planning_a8809a0aba7c84528f1fa9a5f2b4f927fa0cc25b606fe928a0c9a58f7f209c4495}{Task\+Composer\+Node\+Type\+::\+NODE}}, \mbox{\hyperlink{structtesseract__planning_1_1TaskComposerNodePorts}{Task\+Composer\+Node\+Ports}} ports=\mbox{\hyperlink{structtesseract__planning_1_1TaskComposerNodePorts}{Task\+Composer\+Node\+Ports}}(), bool conditional=false)
+\item 
+\mbox{\hyperlink{classtesseract__planning_1_1TaskComposerNode_a1ee11a1952ca85d59f59470f670bd21c}{Task\+Composer\+Node}} (std\+::string \mbox{\hyperlink{tesseract__task__composer__core__unit_8cpp_a9b45b3e13bd9167aab02e17e08916231}{name}}, \mbox{\hyperlink{namespacetesseract__planning_a8809a0aba7c84528f1fa9a5f2b4f927f}{Task\+Composer\+Node\+Type}} \mbox{\hyperlink{ompl__planner__tests_8cpp_a03004818513b2a0604415827c17b9595}{type}}, \mbox{\hyperlink{structtesseract__planning_1_1TaskComposerNodePorts}{Task\+Composer\+Node\+Ports}} ports, const YAML\+::\+Node \&\mbox{\hyperlink{tesseract__task__composer__core__unit_8cpp_a01d92a800904faa16b8c1c1372c40fb3}{config}})
+\item 
+virtual \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerNode_a266040121766019b01e8a7b0526a7ff9}{\texorpdfstring{$\sim$}{\string~}\+Task\+Composer\+Node}} ()=default
+\item 
+\mbox{\hyperlink{classtesseract__planning_1_1TaskComposerNode_ac76c4ec62af416b18d8dff3f477d1fba}{Task\+Composer\+Node}} (const \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerNode}{Task\+Composer\+Node}} \&)=delete
+\item 
+\mbox{\hyperlink{classtesseract__planning_1_1TaskComposerNode}{Task\+Composer\+Node}} \& \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerNode_a03ed2746069a47f19eff3281d1d490b5}{operator=}} (const \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerNode}{Task\+Composer\+Node}} \&)=delete
+\item 
+\mbox{\hyperlink{classtesseract__planning_1_1TaskComposerNode_a993b1e4bbf90cfadfc8d60c65f372f4a}{Task\+Composer\+Node}} (\mbox{\hyperlink{classtesseract__planning_1_1TaskComposerNode}{Task\+Composer\+Node}} \&\&)=delete
+\item 
+\mbox{\hyperlink{classtesseract__planning_1_1TaskComposerNode}{Task\+Composer\+Node}} \& \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerNode_a19b9b58eb63b9d1c867cf8b8d06e8167}{operator=}} (\mbox{\hyperlink{classtesseract__planning_1_1TaskComposerNode}{Task\+Composer\+Node}} \&\&)=delete
+\item 
+int \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerNode_af565c9e7fda1fb2a7fba62c2fcb9fc2d}{run}} (\mbox{\hyperlink{classtesseract__planning_1_1TaskComposerContext}{Task\+Composer\+Context}} \&\mbox{\hyperlink{tesseract__task__composer__core__unit_8cpp_adf0dd2db07cdbb966d6e385d3cd2605c}{context}}, \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerNode_a51670db70ccba1ce21a77a5448e474d7}{Optional\+Task\+Composer\+Executor}} \mbox{\hyperlink{tesseract__task__composer__taskflow__unit_8cpp_ab85065e5a325fc5bf8675e6c55a3e72f}{executor}}=std\+::nullopt) const
+\item 
+void \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerNode_ae4398c5869335c76c57b1dcacef69d44}{set\+Name}} (const std\+::string \&\mbox{\hyperlink{tesseract__task__composer__core__unit_8cpp_a9b45b3e13bd9167aab02e17e08916231}{name}})
+\begin{DoxyCompactList}\small\item\em Set the name of the node. \end{DoxyCompactList}\item 
+const std\+::string \& \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerNode_a2539b62ed74a2e27c3df81c8ee1b95b6}{get\+Name}} () const
+\begin{DoxyCompactList}\small\item\em The name of the node. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerNode_a967894d7d862834c59f24e03fb85632e}{set\+Namespace}} (const std\+::string \&ns)
+\begin{DoxyCompactList}\small\item\em Set the namespace of the node. \end{DoxyCompactList}\item 
+const std\+::string \& \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerNode_afb271e66e0159f9c1c4c23ce010c7d6b}{get\+Namespace}} () const
+\begin{DoxyCompactList}\small\item\em The namespace of the node. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespacetesseract__planning_a8809a0aba7c84528f1fa9a5f2b4f927f}{Task\+Composer\+Node\+Type}} \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerNode_a97aec2092edb93499f3f03dcb57a540b}{get\+Type}} () const
+\begin{DoxyCompactList}\small\item\em The node type TASK, GRAPH, etc. \end{DoxyCompactList}\item 
+const boost\+::uuids\+::uuid \& \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerNode_ac7807315a1ef52e7fe4da2b536b0da3e}{get\+UUID}} () const
+\begin{DoxyCompactList}\small\item\em The node uuid. \end{DoxyCompactList}\item 
+const std\+::string \& \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerNode_aac69b64d290cb6e267e6d999e1539e8a}{get\+UUIDString}} () const
+\begin{DoxyCompactList}\small\item\em The node uuid. \end{DoxyCompactList}\item 
+const boost\+::uuids\+::uuid \& \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerNode_ae8a9eeb6501e41c1697436752326846e}{get\+Parent\+UUID}} () const
+\begin{DoxyCompactList}\small\item\em The parent uuid which can be null. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerNode_a626d3189ba151feb66e36a9e455f73b1}{is\+Conditional}} () const
+\begin{DoxyCompactList}\small\item\em Check if node is conditional. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerNode_ab786cbf83828d86916583d26df844d82}{validate\+Ports}} () const
+\begin{DoxyCompactList}\small\item\em This will validate that all required ports exist and that no extra ports exist. \end{DoxyCompactList}\item 
+const std\+::vector$<$ boost\+::uuids\+::uuid $>$ \& \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerNode_a8830c2869d0f0e816d49e65099cb602b}{get\+Outbound\+Edges}} () const
+\begin{DoxyCompactList}\small\item\em IDs of nodes (i.\+e. node) that should run after this node. \end{DoxyCompactList}\item 
+const std\+::vector$<$ boost\+::uuids\+::uuid $>$ \& \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerNode_a2ed520fe2e44d685cab3bfdc3e391f2a}{get\+Inbound\+Edges}} () const
+\begin{DoxyCompactList}\small\item\em IDs of nodes (i.\+e. node) that should run before this node. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerNode_a09b5b0b559287010a04e096fa8a595dd}{set\+Input\+Keys}} (const \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerKeys}{Task\+Composer\+Keys}} \&\mbox{\hyperlink{tesseract__task__composer__core__unit_8cpp_a5c3e0c1fc330b71dd5413937f321de55}{input\+\_\+keys}})
+\begin{DoxyCompactList}\small\item\em Set the nodes input keys. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerKeys}{Task\+Composer\+Keys}} \& \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerNode_af89226eb6f988239ee0d53c75fda0ab8}{get\+Input\+Keys}} () const
+\begin{DoxyCompactList}\small\item\em The nodes input keys. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerNode_aa8737666b7706f78def6df97273997a5}{set\+Output\+Keys}} (const \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerKeys}{Task\+Composer\+Keys}} \&\mbox{\hyperlink{tesseract__task__composer__core__unit_8cpp_a3f6724a50182c83957504a72de4c55d7}{output\+\_\+keys}})
+\begin{DoxyCompactList}\small\item\em Set the nodes input keys. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerKeys}{Task\+Composer\+Keys}} \& \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerNode_acdeab79dec1510f51edb79b9f9a6a456}{get\+Output\+Keys}} () const
+\begin{DoxyCompactList}\small\item\em The nodes output keys. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structtesseract__planning_1_1TaskComposerNodePorts}{Task\+Composer\+Node\+Ports}} \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerNode_a66831ea1faf0bd41082bda7a9a82fba5}{get\+Ports}} () const
+\begin{DoxyCompactList}\small\item\em Get the ports associated with the node. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerNode_a785e19be7c4051fccdd72776b29d1d56}{get\+Dotgraph}} (const \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerNode_aac34d6ff1b885f412807949ba71d9518}{Results\+Map}} \&results\+\_\+map=\mbox{\hyperlink{classtesseract__planning_1_1TaskComposerNode_aac34d6ff1b885f412807949ba71d9518}{Results\+Map}}()) const
+\begin{DoxyCompactList}\small\item\em Generate the Dotgraph as a string. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerNode_aca2eecd07f71274cff27c0b5dfddea32}{save\+Dotgraph}} (const std\+::string \&filepath, const \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerNode_aac34d6ff1b885f412807949ba71d9518}{Results\+Map}} \&results\+\_\+map=\mbox{\hyperlink{classtesseract__planning_1_1TaskComposerNode_aac34d6ff1b885f412807949ba71d9518}{Results\+Map}}()) const
+\begin{DoxyCompactList}\small\item\em Generate the Dotgraph and save to file. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerNode_a031aeadd78557ad8aff226f1d2be07e4}{rename\+Input\+Keys}} (const std\+::map$<$ std\+::string, std\+::string $>$ \&\mbox{\hyperlink{tesseract__task__composer__core__unit_8cpp_a5c3e0c1fc330b71dd5413937f321de55}{input\+\_\+keys}})
+\begin{DoxyCompactList}\small\item\em Rename input keys. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerNode_a5f9a59f87a51f6a315e970d3efc45043}{rename\+Output\+Keys}} (const std\+::map$<$ std\+::string, std\+::string $>$ \&\mbox{\hyperlink{tesseract__task__composer__core__unit_8cpp_a3f6724a50182c83957504a72de4c55d7}{output\+\_\+keys}})
+\begin{DoxyCompactList}\small\item\em Rename output keys. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerNode_aa2ef5277614fe3fdadded22721f754f6}{set\+Conditional}} (bool enable)
+\begin{DoxyCompactList}\small\item\em Set if conditional. \end{DoxyCompactList}\item 
+virtual std\+::string \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerNode_a7546418ec8f29187e15e93df73305995}{dump}} (std\+::ostream \&\mbox{\hyperlink{tesseract__task__composer__core__unit_8cpp_a7df50db74401cf06af9a0a50d734e447}{os}}, const \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerNode}{Task\+Composer\+Node}} \texorpdfstring{$\ast$}{*}parent=nullptr, const \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerNode_aac34d6ff1b885f412807949ba71d9518}{Results\+Map}} \&results\+\_\+map=\mbox{\hyperlink{classtesseract__planning_1_1TaskComposerNode_aac34d6ff1b885f412807949ba71d9518}{Results\+Map}}()) const
+\begin{DoxyCompactList}\small\item\em dump the task to dot \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerNode_acc6360c78b97ab4624d9e3549297790a}{operator==}} (const \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerNode}{Task\+Composer\+Node}} \&rhs) const
+\item 
+bool \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerNode_a039aa3c411b6419df34319b2c87ea9cd}{operator!=}} (const \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerNode}{Task\+Composer\+Node}} \&rhs) const
+\item 
+template$<$$>$ tesseract\+\_\+common\+::\+Any\+Poly \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerNode_a589bfc7ec49a34274dc7b222fa156435}{get\+Data}} (const \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerDataStorage}{Task\+Composer\+Data\+Storage}} \&data\+\_\+storage, const std\+::string \&port, bool required) const
+\item 
+template$<$$>$ std\+::vector$<$ tesseract\+\_\+common\+::\+Any\+Poly $>$ \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerNode_a99b94231c016c36fc52062bf53a6c994}{get\+Data}} (const \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerDataStorage}{Task\+Composer\+Data\+Storage}} \&data\+\_\+storage, const std\+::string \&port, bool required) const
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const std\+::string \mbox{\hyperlink{classtesseract__planning_1_1RasterOnlyMotionTask_a4cf49e63828e45c92d2d72ed4549d798}{INOUT\+\_\+\+PROGRAM\+\_\+\+PORT}} = "{}program"{}
+\item 
+static const std\+::string \mbox{\hyperlink{classtesseract__planning_1_1RasterOnlyMotionTask_a48133190921d2aa395cd2d21588c7576}{INPUT\+\_\+\+ENVIRONMENT\+\_\+\+PORT}} = "{}environment"{}
+\item 
+static const std\+::string \mbox{\hyperlink{classtesseract__planning_1_1RasterOnlyMotionTask_a7a4ab0d43872e5f110f47e734b753d7f}{INPUT\+\_\+\+MANIP\+\_\+\+INFO\+\_\+\+PORT}} = "{}manip\+\_\+info"{}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$class Archive $>$ }\\void \mbox{\hyperlink{classtesseract__planning_1_1RasterOnlyMotionTask_a4086de17ff81f40dc41fb84ad64200f3}{serialize}} (Archive \&ar, const unsigned int)
+\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerNodeInfo}{Task\+Composer\+Node\+Info}} $>$ \mbox{\hyperlink{classtesseract__planning_1_1RasterOnlyMotionTask_a2068f09350cc9c684f96d66aab1a7bcb}{run\+Impl}} (\mbox{\hyperlink{classtesseract__planning_1_1TaskComposerContext}{Task\+Composer\+Context}} \&\mbox{\hyperlink{tesseract__task__composer__core__unit_8cpp_adf0dd2db07cdbb966d6e385d3cd2605c}{context}}, \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerNode_a51670db70ccba1ce21a77a5448e474d7}{Optional\+Task\+Composer\+Executor}} \mbox{\hyperlink{tesseract__task__composer__taskflow__unit_8cpp_ab85065e5a325fc5bf8675e6c55a3e72f}{executor}}) const override final
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerTask}{tesseract\+\_\+planning\+::\+Task\+Composer\+Task}}}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$class Archive $>$ }\\void \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerTask_a25c46c1f1728789da93564ca6be71ee7}{serialize}} (Archive \&ar, const unsigned int version)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerNode}{tesseract\+\_\+planning\+::\+Task\+Composer\+Node}}}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$class Archive $>$ }\\void \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerNode_acd4dc9827b57145712de462cc5fd9c90}{serialize}} (Archive \&ar, const unsigned int version)
+\item 
+{\footnotesize template$<$typename T  = tesseract\+\_\+common\+::\+Any\+Poly$>$ }\\T \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerNode_a466285056f51976400c6b0791e69729b}{get\+Data}} (const \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerDataStorage}{Task\+Composer\+Data\+Storage}} \&data\+\_\+storage, const std\+::string \&port, bool required=true) const
+\begin{DoxyCompactList}\small\item\em A utility function for extracting data from data storage. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerNode_aff6e768a9d64f117bca72d01a6ffc185}{set\+Data}} (\mbox{\hyperlink{classtesseract__planning_1_1TaskComposerDataStorage}{Task\+Composer\+Data\+Storage}} \&data\+\_\+storage, const std\+::string \&port, tesseract\+\_\+common\+::\+Any\+Poly \mbox{\hyperlink{ompl__planner__tests_8cpp_a1ac79e92f7645f205bdbfb90f97d6af6}{data}}, bool required=true) const
+\begin{DoxyCompactList}\small\item\em A utility function for setting data in data storage. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerNode_af57d14b972495287b5ca1dba2b8cd951}{set\+Data}} (\mbox{\hyperlink{classtesseract__planning_1_1TaskComposerDataStorage}{Task\+Composer\+Data\+Storage}} \&data\+\_\+storage, const std\+::string \&port, const std\+::vector$<$ tesseract\+\_\+common\+::\+Any\+Poly $>$ \&\mbox{\hyperlink{ompl__planner__tests_8cpp_a1ac79e92f7645f205bdbfb90f97d6af6}{data}}, bool required=true) const
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{structtesseract__planning_1_1TaskComposerNodePorts}{Task\+Composer\+Node\+Ports}} \mbox{\hyperlink{classtesseract__planning_1_1RasterOnlyMotionTask_af1aa26b51bb08cbd1d8d97a74a713222}{ports}} ()
+\item 
+static void \mbox{\hyperlink{classtesseract__planning_1_1RasterOnlyMotionTask_adbaae040e764d573e672a9da454e2703}{check\+Task\+Input}} (const tesseract\+\_\+common\+::\+Any\+Poly \&input)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Protected Member Functions inherited from \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerNode}{tesseract\+\_\+planning\+::\+Task\+Composer\+Node}}}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::string \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerNode_abf736b9f7575070e42779ec252850d48}{to\+String}} (const boost\+::uuids\+::uuid \&u, const std\+::string \&prefix="{}"{})
+\begin{DoxyCompactList}\small\item\em This will create a UUID string with no hyphens used when creating dot graph. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classtesseract__planning_1_1RasterOnlyMotionTask_ad3f5d991aad62d081f45f5073cc37ad7}{Task\+Factory}} \mbox{\hyperlink{classtesseract__planning_1_1RasterOnlyMotionTask_a19e8beed9b9d306a08158b417439c40d}{raster\+\_\+task\+\_\+factory\+\_\+}}
+\item 
+\mbox{\hyperlink{classtesseract__planning_1_1RasterOnlyMotionTask_ad3f5d991aad62d081f45f5073cc37ad7}{Task\+Factory}} \mbox{\hyperlink{classtesseract__planning_1_1RasterOnlyMotionTask_ad37d8dcbffaf38ac565762abb678bfd4}{transition\+\_\+task\+\_\+factory\+\_\+}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerNode}{tesseract\+\_\+planning\+::\+Task\+Composer\+Node}}}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerNode_a4262ec220082fadf23a4dc9b9cbc5af6}{name\+\_\+}}
+\begin{DoxyCompactList}\small\item\em The name of the task. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerNode_af40b5fb5ba6074f4616625fdb77f2803}{ns\+\_\+}}
+\begin{DoxyCompactList}\small\item\em The namespace of the task. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespacetesseract__planning_a8809a0aba7c84528f1fa9a5f2b4f927f}{Task\+Composer\+Node\+Type}} \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerNode_a58d7ea4998cf77dcbba99573cc52d9dd}{type\+\_\+}}
+\begin{DoxyCompactList}\small\item\em The node type. \end{DoxyCompactList}\item 
+boost\+::uuids\+::uuid \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerNode_abbc56d952b1ee5a834ce800e9d38e61e}{uuid\+\_\+}}
+\begin{DoxyCompactList}\small\item\em The task uuid. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerNode_a6bf2a612d10c7cb7023803ea73cdc1af}{uuid\+\_\+str\+\_\+}}
+\begin{DoxyCompactList}\small\item\em The uuid as string. \end{DoxyCompactList}\item 
+boost\+::uuids\+::uuid \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerNode_a422c39569e96cf7e80aa51a7f54a76f5}{parent\+\_\+uuid\+\_\+}} \{\}
+\begin{DoxyCompactList}\small\item\em The parent uuid. \end{DoxyCompactList}\item 
+std\+::vector$<$ boost\+::uuids\+::uuid $>$ \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerNode_afbcc0dd1b554c8802060ee59978b625b}{outbound\+\_\+edges\+\_\+}}
+\begin{DoxyCompactList}\small\item\em IDs of nodes (i.\+e. tasks) that should run after this node. \end{DoxyCompactList}\item 
+std\+::vector$<$ boost\+::uuids\+::uuid $>$ \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerNode_a1981daea2baa07d7cab77450d0c824a7}{inbound\+\_\+edges\+\_\+}}
+\begin{DoxyCompactList}\small\item\em IDs of nodes (i.\+e. tasks) that should run before this node. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classtesseract__planning_1_1TaskComposerKeys}{Task\+Composer\+Keys}} \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerNode_aa31fa858fa4462f5b4e06caaede8612b}{input\+\_\+keys\+\_\+}}
+\begin{DoxyCompactList}\small\item\em The nodes input keys. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classtesseract__planning_1_1TaskComposerKeys}{Task\+Composer\+Keys}} \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerNode_ad6d0e037c705e0e4baf8362d95e1b369}{output\+\_\+keys\+\_\+}}
+\begin{DoxyCompactList}\small\item\em The nodes output keys. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerNode_ab792410813fa68376c1384e9b9a22b4a}{conditional\+\_\+}} \{ false \}
+\begin{DoxyCompactList}\small\item\em Indicate if node is conditional. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structtesseract__planning_1_1TaskComposerNodePorts}{Task\+Composer\+Node\+Ports}} \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerNode_a7f7d2161e886cd77b0e4ca146a84549e}{ports\+\_\+}}
+\begin{DoxyCompactList}\small\item\em The nodes ports definition. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerNode_aa0f47c94b1bfb53dbfd21f9a9edb6dc5}{trigger\+\_\+abort\+\_\+}} \{ false \}
+\begin{DoxyCompactList}\small\item\em Indicate if task triggers abort. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{classtesseract__planning_1_1RasterOnlyMotionTask_a9d42ad7bb40288a7ac1aad8d76809fe7}{tesseract\+\_\+common\+::\+Serialization}}
+\item 
+class \mbox{\hyperlink{classtesseract__planning_1_1RasterOnlyMotionTask_ac98d07dd8f7b70e16ccb9a01abf56b9c}{boost\+::serialization\+::access}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The Raster\+Ct\+Only\+Motion\+Task class. 
+
+The required format is below.
+
+Composite \{ Composite -\/ Raster segment Composite -\/ Transitions Composite -\/ Raster segment Composite -\/ Transitions Composite -\/ Raster segment \} 
+
+\doxysubsection{Member Typedef Documentation}
+\Hypertarget{classtesseract__planning_1_1RasterOnlyMotionTask_ad3f5d991aad62d081f45f5073cc37ad7}\label{classtesseract__planning_1_1RasterOnlyMotionTask_ad3f5d991aad62d081f45f5073cc37ad7} 
+\index{tesseract\_planning::RasterOnlyMotionTask@{tesseract\_planning::RasterOnlyMotionTask}!TaskFactory@{TaskFactory}}
+\index{TaskFactory@{TaskFactory}!tesseract\_planning::RasterOnlyMotionTask@{tesseract\_planning::RasterOnlyMotionTask}}
+\doxysubsubsection{\texorpdfstring{TaskFactory}{TaskFactory}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classtesseract__planning_1_1RasterOnlyMotionTask_ad3f5d991aad62d081f45f5073cc37ad7}{tesseract\+\_\+planning\+::\+Raster\+Only\+Motion\+Task\+::\+Task\+Factory}} =  std\+::function$<$\mbox{\hyperlink{structtesseract__planning_1_1RasterOnlyMotionTask_1_1TaskFactoryResults}{Task\+Factory\+Results}}(const std\+::string\& \mbox{\hyperlink{tesseract__task__composer__core__unit_8cpp_a9b45b3e13bd9167aab02e17e08916231}{name}}, std\+::size\+\_\+t index)$>$}
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classtesseract__planning_1_1RasterOnlyMotionTask_a71427f04ed18614a7e11b401054971f1}\label{classtesseract__planning_1_1RasterOnlyMotionTask_a71427f04ed18614a7e11b401054971f1} 
+\index{tesseract\_planning::RasterOnlyMotionTask@{tesseract\_planning::RasterOnlyMotionTask}!RasterOnlyMotionTask@{RasterOnlyMotionTask}}
+\index{RasterOnlyMotionTask@{RasterOnlyMotionTask}!tesseract\_planning::RasterOnlyMotionTask@{tesseract\_planning::RasterOnlyMotionTask}}
+\doxysubsubsection{\texorpdfstring{RasterOnlyMotionTask()}{RasterOnlyMotionTask()}\hspace{0.1cm}{\footnotesize\ttfamily [1/5]}}
+{\footnotesize\ttfamily tesseract\+\_\+planning\+::\+Raster\+Only\+Motion\+Task\+::\+Raster\+Only\+Motion\+Task (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{classtesseract__planning_1_1RasterOnlyMotionTask_a8e7616ad1b99ac386d1919794c390f87}\label{classtesseract__planning_1_1RasterOnlyMotionTask_a8e7616ad1b99ac386d1919794c390f87} 
+\index{tesseract\_planning::RasterOnlyMotionTask@{tesseract\_planning::RasterOnlyMotionTask}!RasterOnlyMotionTask@{RasterOnlyMotionTask}}
+\index{RasterOnlyMotionTask@{RasterOnlyMotionTask}!tesseract\_planning::RasterOnlyMotionTask@{tesseract\_planning::RasterOnlyMotionTask}}
+\doxysubsubsection{\texorpdfstring{RasterOnlyMotionTask()}{RasterOnlyMotionTask()}\hspace{0.1cm}{\footnotesize\ttfamily [2/5]}}
+{\footnotesize\ttfamily tesseract\+\_\+planning\+::\+Raster\+Only\+Motion\+Task\+::\+Raster\+Only\+Motion\+Task (\begin{DoxyParamCaption}\item[{std\+::string}]{name,  }\item[{std\+::string}]{input\+\_\+program\+\_\+key,  }\item[{std\+::string}]{input\+\_\+environment\+\_\+key,  }\item[{std\+::string}]{output\+\_\+program\+\_\+key,  }\item[{bool}]{conditional,  }\item[{\mbox{\hyperlink{classtesseract__planning_1_1RasterOnlyMotionTask_ad3f5d991aad62d081f45f5073cc37ad7}{Task\+Factory}}}]{raster\+\_\+task\+\_\+factory,  }\item[{\mbox{\hyperlink{classtesseract__planning_1_1RasterOnlyMotionTask_ad3f5d991aad62d081f45f5073cc37ad7}{Task\+Factory}}}]{transition\+\_\+task\+\_\+factory }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+\Hypertarget{classtesseract__planning_1_1RasterOnlyMotionTask_abf5e31c98b907fe6f08c7985c08701c2}\label{classtesseract__planning_1_1RasterOnlyMotionTask_abf5e31c98b907fe6f08c7985c08701c2} 
+\index{tesseract\_planning::RasterOnlyMotionTask@{tesseract\_planning::RasterOnlyMotionTask}!RasterOnlyMotionTask@{RasterOnlyMotionTask}}
+\index{RasterOnlyMotionTask@{RasterOnlyMotionTask}!tesseract\_planning::RasterOnlyMotionTask@{tesseract\_planning::RasterOnlyMotionTask}}
+\doxysubsubsection{\texorpdfstring{RasterOnlyMotionTask()}{RasterOnlyMotionTask()}\hspace{0.1cm}{\footnotesize\ttfamily [3/5]}}
+{\footnotesize\ttfamily tesseract\+\_\+planning\+::\+Raster\+Only\+Motion\+Task\+::\+Raster\+Only\+Motion\+Task (\begin{DoxyParamCaption}\item[{std\+::string}]{name,  }\item[{const YAML\+::\+Node \&}]{config,  }\item[{const \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerPluginFactory}{Task\+Composer\+Plugin\+Factory}} \&}]{plugin\+\_\+factory }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+\Hypertarget{classtesseract__planning_1_1RasterOnlyMotionTask_a3e9900d6a7289cc11c244bc6415269b7}\label{classtesseract__planning_1_1RasterOnlyMotionTask_a3e9900d6a7289cc11c244bc6415269b7} 
+\index{tesseract\_planning::RasterOnlyMotionTask@{tesseract\_planning::RasterOnlyMotionTask}!````~RasterOnlyMotionTask@{\texorpdfstring{$\sim$}{\string~}RasterOnlyMotionTask}}
+\index{````~RasterOnlyMotionTask@{\texorpdfstring{$\sim$}{\string~}RasterOnlyMotionTask}!tesseract\_planning::RasterOnlyMotionTask@{tesseract\_planning::RasterOnlyMotionTask}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}RasterOnlyMotionTask()}{\string~RasterOnlyMotionTask()}}
+{\footnotesize\ttfamily tesseract\+\_\+planning\+::\+Raster\+Only\+Motion\+Task\+::\texorpdfstring{$\sim$}{\string~}\+Raster\+Only\+Motion\+Task (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [default]}}
+
+\Hypertarget{classtesseract__planning_1_1RasterOnlyMotionTask_aed8cf7e193f9ee731b028a4c6061c489}\label{classtesseract__planning_1_1RasterOnlyMotionTask_aed8cf7e193f9ee731b028a4c6061c489} 
+\index{tesseract\_planning::RasterOnlyMotionTask@{tesseract\_planning::RasterOnlyMotionTask}!RasterOnlyMotionTask@{RasterOnlyMotionTask}}
+\index{RasterOnlyMotionTask@{RasterOnlyMotionTask}!tesseract\_planning::RasterOnlyMotionTask@{tesseract\_planning::RasterOnlyMotionTask}}
+\doxysubsubsection{\texorpdfstring{RasterOnlyMotionTask()}{RasterOnlyMotionTask()}\hspace{0.1cm}{\footnotesize\ttfamily [4/5]}}
+{\footnotesize\ttfamily tesseract\+\_\+planning\+::\+Raster\+Only\+Motion\+Task\+::\+Raster\+Only\+Motion\+Task (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classtesseract__planning_1_1RasterOnlyMotionTask}{Raster\+Only\+Motion\+Task}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+\Hypertarget{classtesseract__planning_1_1RasterOnlyMotionTask_ada884ddaee05cfce3e18d8ab11c1a45b}\label{classtesseract__planning_1_1RasterOnlyMotionTask_ada884ddaee05cfce3e18d8ab11c1a45b} 
+\index{tesseract\_planning::RasterOnlyMotionTask@{tesseract\_planning::RasterOnlyMotionTask}!RasterOnlyMotionTask@{RasterOnlyMotionTask}}
+\index{RasterOnlyMotionTask@{RasterOnlyMotionTask}!tesseract\_planning::RasterOnlyMotionTask@{tesseract\_planning::RasterOnlyMotionTask}}
+\doxysubsubsection{\texorpdfstring{RasterOnlyMotionTask()}{RasterOnlyMotionTask()}\hspace{0.1cm}{\footnotesize\ttfamily [5/5]}}
+{\footnotesize\ttfamily tesseract\+\_\+planning\+::\+Raster\+Only\+Motion\+Task\+::\+Raster\+Only\+Motion\+Task (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classtesseract__planning_1_1RasterOnlyMotionTask}{Raster\+Only\+Motion\+Task}} \&\&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classtesseract__planning_1_1RasterOnlyMotionTask_adbaae040e764d573e672a9da454e2703}\label{classtesseract__planning_1_1RasterOnlyMotionTask_adbaae040e764d573e672a9da454e2703} 
+\index{tesseract\_planning::RasterOnlyMotionTask@{tesseract\_planning::RasterOnlyMotionTask}!checkTaskInput@{checkTaskInput}}
+\index{checkTaskInput@{checkTaskInput}!tesseract\_planning::RasterOnlyMotionTask@{tesseract\_planning::RasterOnlyMotionTask}}
+\doxysubsubsection{\texorpdfstring{checkTaskInput()}{checkTaskInput()}}
+{\footnotesize\ttfamily void tesseract\+\_\+planning\+::\+Raster\+Only\+Motion\+Task\+::check\+Task\+Input (\begin{DoxyParamCaption}\item[{const tesseract\+\_\+common\+::\+Any\+Poly \&}]{input }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+\Hypertarget{classtesseract__planning_1_1RasterOnlyMotionTask_ab7def84746ece99242d99e8da64c13c3}\label{classtesseract__planning_1_1RasterOnlyMotionTask_ab7def84746ece99242d99e8da64c13c3} 
+\index{tesseract\_planning::RasterOnlyMotionTask@{tesseract\_planning::RasterOnlyMotionTask}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!tesseract\_planning::RasterOnlyMotionTask@{tesseract\_planning::RasterOnlyMotionTask}}
+\doxysubsubsection{\texorpdfstring{operator"!=()}{operator!=()}}
+{\footnotesize\ttfamily bool tesseract\+\_\+planning\+::\+Raster\+Only\+Motion\+Task\+::operator!= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classtesseract__planning_1_1RasterOnlyMotionTask}{Raster\+Only\+Motion\+Task}} \&}]{rhs }\end{DoxyParamCaption}) const}
+
+\Hypertarget{classtesseract__planning_1_1RasterOnlyMotionTask_a99623c95db8a991f739deae63c0ce0da}\label{classtesseract__planning_1_1RasterOnlyMotionTask_a99623c95db8a991f739deae63c0ce0da} 
+\index{tesseract\_planning::RasterOnlyMotionTask@{tesseract\_planning::RasterOnlyMotionTask}!operator=@{operator=}}
+\index{operator=@{operator=}!tesseract\_planning::RasterOnlyMotionTask@{tesseract\_planning::RasterOnlyMotionTask}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classtesseract__planning_1_1RasterOnlyMotionTask}{Raster\+Only\+Motion\+Task}} \& tesseract\+\_\+planning\+::\+Raster\+Only\+Motion\+Task\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classtesseract__planning_1_1RasterOnlyMotionTask}{Raster\+Only\+Motion\+Task}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+\Hypertarget{classtesseract__planning_1_1RasterOnlyMotionTask_a52b63621e1adda879a1675996d5ff872}\label{classtesseract__planning_1_1RasterOnlyMotionTask_a52b63621e1adda879a1675996d5ff872} 
+\index{tesseract\_planning::RasterOnlyMotionTask@{tesseract\_planning::RasterOnlyMotionTask}!operator=@{operator=}}
+\index{operator=@{operator=}!tesseract\_planning::RasterOnlyMotionTask@{tesseract\_planning::RasterOnlyMotionTask}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classtesseract__planning_1_1RasterOnlyMotionTask}{Raster\+Only\+Motion\+Task}} \& tesseract\+\_\+planning\+::\+Raster\+Only\+Motion\+Task\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classtesseract__planning_1_1RasterOnlyMotionTask}{Raster\+Only\+Motion\+Task}} \&\&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+\Hypertarget{classtesseract__planning_1_1RasterOnlyMotionTask_adfe27180b585f60a1f9f6a42a7f51bcf}\label{classtesseract__planning_1_1RasterOnlyMotionTask_adfe27180b585f60a1f9f6a42a7f51bcf} 
+\index{tesseract\_planning::RasterOnlyMotionTask@{tesseract\_planning::RasterOnlyMotionTask}!operator==@{operator==}}
+\index{operator==@{operator==}!tesseract\_planning::RasterOnlyMotionTask@{tesseract\_planning::RasterOnlyMotionTask}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily bool tesseract\+\_\+planning\+::\+Raster\+Only\+Motion\+Task\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classtesseract__planning_1_1RasterOnlyMotionTask}{Raster\+Only\+Motion\+Task}} \&}]{rhs }\end{DoxyParamCaption}) const}
+
+\Hypertarget{classtesseract__planning_1_1RasterOnlyMotionTask_af1aa26b51bb08cbd1d8d97a74a713222}\label{classtesseract__planning_1_1RasterOnlyMotionTask_af1aa26b51bb08cbd1d8d97a74a713222} 
+\index{tesseract\_planning::RasterOnlyMotionTask@{tesseract\_planning::RasterOnlyMotionTask}!ports@{ports}}
+\index{ports@{ports}!tesseract\_planning::RasterOnlyMotionTask@{tesseract\_planning::RasterOnlyMotionTask}}
+\doxysubsubsection{\texorpdfstring{ports()}{ports()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structtesseract__planning_1_1TaskComposerNodePorts}{Task\+Composer\+Node\+Ports}} tesseract\+\_\+planning\+::\+Raster\+Only\+Motion\+Task\+::ports (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+\Hypertarget{classtesseract__planning_1_1RasterOnlyMotionTask_a2068f09350cc9c684f96d66aab1a7bcb}\label{classtesseract__planning_1_1RasterOnlyMotionTask_a2068f09350cc9c684f96d66aab1a7bcb} 
+\index{tesseract\_planning::RasterOnlyMotionTask@{tesseract\_planning::RasterOnlyMotionTask}!runImpl@{runImpl}}
+\index{runImpl@{runImpl}!tesseract\_planning::RasterOnlyMotionTask@{tesseract\_planning::RasterOnlyMotionTask}}
+\doxysubsubsection{\texorpdfstring{runImpl()}{runImpl()}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerNodeInfo}{Task\+Composer\+Node\+Info}} $>$ tesseract\+\_\+planning\+::\+Raster\+Only\+Motion\+Task\+::run\+Impl (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classtesseract__planning_1_1TaskComposerContext}{Task\+Composer\+Context}} \&}]{context,  }\item[{\mbox{\hyperlink{classtesseract__planning_1_1TaskComposerNode_a51670db70ccba1ce21a77a5448e474d7}{Optional\+Task\+Composer\+Executor}}}]{executor }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [final]}, {\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerNode_ad79f32852cbf9b55cee117b668c104ad}{tesseract\+\_\+planning\+::\+Task\+Composer\+Node}}.
+
+\Hypertarget{classtesseract__planning_1_1RasterOnlyMotionTask_a4086de17ff81f40dc41fb84ad64200f3}\label{classtesseract__planning_1_1RasterOnlyMotionTask_a4086de17ff81f40dc41fb84ad64200f3} 
+\index{tesseract\_planning::RasterOnlyMotionTask@{tesseract\_planning::RasterOnlyMotionTask}!serialize@{serialize}}
+\index{serialize@{serialize}!tesseract\_planning::RasterOnlyMotionTask@{tesseract\_planning::RasterOnlyMotionTask}}
+\doxysubsubsection{\texorpdfstring{serialize()}{serialize()}}
+{\footnotesize\ttfamily template$<$class Archive $>$ \\
+void tesseract\+\_\+planning\+::\+Raster\+Only\+Motion\+Task\+::serialize (\begin{DoxyParamCaption}\item[{Archive \&}]{ar,  }\item[{const unsigned int}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+\doxysubsection{Friends And Related Symbol Documentation}
+\Hypertarget{classtesseract__planning_1_1RasterOnlyMotionTask_ac98d07dd8f7b70e16ccb9a01abf56b9c}\label{classtesseract__planning_1_1RasterOnlyMotionTask_ac98d07dd8f7b70e16ccb9a01abf56b9c} 
+\index{tesseract\_planning::RasterOnlyMotionTask@{tesseract\_planning::RasterOnlyMotionTask}!boost::serialization::access@{boost::serialization::access}}
+\index{boost::serialization::access@{boost::serialization::access}!tesseract\_planning::RasterOnlyMotionTask@{tesseract\_planning::RasterOnlyMotionTask}}
+\doxysubsubsection{\texorpdfstring{boost::serialization::access}{boost::serialization::access}}
+{\footnotesize\ttfamily friend class boost\+::serialization\+::access\hspace{0.3cm}{\ttfamily [friend]}}
+
+\Hypertarget{classtesseract__planning_1_1RasterOnlyMotionTask_a9d42ad7bb40288a7ac1aad8d76809fe7}\label{classtesseract__planning_1_1RasterOnlyMotionTask_a9d42ad7bb40288a7ac1aad8d76809fe7} 
+\index{tesseract\_planning::RasterOnlyMotionTask@{tesseract\_planning::RasterOnlyMotionTask}!tesseract\_common::Serialization@{tesseract\_common::Serialization}}
+\index{tesseract\_common::Serialization@{tesseract\_common::Serialization}!tesseract\_planning::RasterOnlyMotionTask@{tesseract\_planning::RasterOnlyMotionTask}}
+\doxysubsubsection{\texorpdfstring{tesseract\_common::Serialization}{tesseract\_common::Serialization}}
+{\footnotesize\ttfamily friend struct tesseract\+\_\+common\+::\+Serialization\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classtesseract__planning_1_1RasterOnlyMotionTask_a4cf49e63828e45c92d2d72ed4549d798}\label{classtesseract__planning_1_1RasterOnlyMotionTask_a4cf49e63828e45c92d2d72ed4549d798} 
+\index{tesseract\_planning::RasterOnlyMotionTask@{tesseract\_planning::RasterOnlyMotionTask}!INOUT\_PROGRAM\_PORT@{INOUT\_PROGRAM\_PORT}}
+\index{INOUT\_PROGRAM\_PORT@{INOUT\_PROGRAM\_PORT}!tesseract\_planning::RasterOnlyMotionTask@{tesseract\_planning::RasterOnlyMotionTask}}
+\doxysubsubsection{\texorpdfstring{INOUT\_PROGRAM\_PORT}{INOUT\_PROGRAM\_PORT}}
+{\footnotesize\ttfamily const std\+::string tesseract\+\_\+planning\+::\+Raster\+Only\+Motion\+Task\+::\+INOUT\+\_\+\+PROGRAM\+\_\+\+PORT = "{}program"{}\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{classtesseract__planning_1_1RasterOnlyMotionTask_a48133190921d2aa395cd2d21588c7576}\label{classtesseract__planning_1_1RasterOnlyMotionTask_a48133190921d2aa395cd2d21588c7576} 
+\index{tesseract\_planning::RasterOnlyMotionTask@{tesseract\_planning::RasterOnlyMotionTask}!INPUT\_ENVIRONMENT\_PORT@{INPUT\_ENVIRONMENT\_PORT}}
+\index{INPUT\_ENVIRONMENT\_PORT@{INPUT\_ENVIRONMENT\_PORT}!tesseract\_planning::RasterOnlyMotionTask@{tesseract\_planning::RasterOnlyMotionTask}}
+\doxysubsubsection{\texorpdfstring{INPUT\_ENVIRONMENT\_PORT}{INPUT\_ENVIRONMENT\_PORT}}
+{\footnotesize\ttfamily const std\+::string tesseract\+\_\+planning\+::\+Raster\+Only\+Motion\+Task\+::\+INPUT\+\_\+\+ENVIRONMENT\+\_\+\+PORT = "{}environment"{}\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{classtesseract__planning_1_1RasterOnlyMotionTask_a7a4ab0d43872e5f110f47e734b753d7f}\label{classtesseract__planning_1_1RasterOnlyMotionTask_a7a4ab0d43872e5f110f47e734b753d7f} 
+\index{tesseract\_planning::RasterOnlyMotionTask@{tesseract\_planning::RasterOnlyMotionTask}!INPUT\_MANIP\_INFO\_PORT@{INPUT\_MANIP\_INFO\_PORT}}
+\index{INPUT\_MANIP\_INFO\_PORT@{INPUT\_MANIP\_INFO\_PORT}!tesseract\_planning::RasterOnlyMotionTask@{tesseract\_planning::RasterOnlyMotionTask}}
+\doxysubsubsection{\texorpdfstring{INPUT\_MANIP\_INFO\_PORT}{INPUT\_MANIP\_INFO\_PORT}}
+{\footnotesize\ttfamily const std\+::string tesseract\+\_\+planning\+::\+Raster\+Only\+Motion\+Task\+::\+INPUT\+\_\+\+MANIP\+\_\+\+INFO\+\_\+\+PORT = "{}manip\+\_\+info"{}\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{classtesseract__planning_1_1RasterOnlyMotionTask_a19e8beed9b9d306a08158b417439c40d}\label{classtesseract__planning_1_1RasterOnlyMotionTask_a19e8beed9b9d306a08158b417439c40d} 
+\index{tesseract\_planning::RasterOnlyMotionTask@{tesseract\_planning::RasterOnlyMotionTask}!raster\_task\_factory\_@{raster\_task\_factory\_}}
+\index{raster\_task\_factory\_@{raster\_task\_factory\_}!tesseract\_planning::RasterOnlyMotionTask@{tesseract\_planning::RasterOnlyMotionTask}}
+\doxysubsubsection{\texorpdfstring{raster\_task\_factory\_}{raster\_task\_factory\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classtesseract__planning_1_1RasterOnlyMotionTask_ad3f5d991aad62d081f45f5073cc37ad7}{Task\+Factory}} tesseract\+\_\+planning\+::\+Raster\+Only\+Motion\+Task\+::raster\+\_\+task\+\_\+factory\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{classtesseract__planning_1_1RasterOnlyMotionTask_ad37d8dcbffaf38ac565762abb678bfd4}\label{classtesseract__planning_1_1RasterOnlyMotionTask_ad37d8dcbffaf38ac565762abb678bfd4} 
+\index{tesseract\_planning::RasterOnlyMotionTask@{tesseract\_planning::RasterOnlyMotionTask}!transition\_task\_factory\_@{transition\_task\_factory\_}}
+\index{transition\_task\_factory\_@{transition\_task\_factory\_}!tesseract\_planning::RasterOnlyMotionTask@{tesseract\_planning::RasterOnlyMotionTask}}
+\doxysubsubsection{\texorpdfstring{transition\_task\_factory\_}{transition\_task\_factory\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classtesseract__planning_1_1RasterOnlyMotionTask_ad3f5d991aad62d081f45f5073cc37ad7}{Task\+Factory}} tesseract\+\_\+planning\+::\+Raster\+Only\+Motion\+Task\+::transition\+\_\+task\+\_\+factory\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+tesseract\+\_\+task\+\_\+composer/planning/include/tesseract\+\_\+task\+\_\+composer/planning/nodes/\mbox{\hyperlink{raster__only__motion__task_8h}{raster\+\_\+only\+\_\+motion\+\_\+task.\+h}}\item 
+tesseract\+\_\+task\+\_\+composer/planning/src/nodes/\mbox{\hyperlink{raster__only__motion__task_8cpp}{raster\+\_\+only\+\_\+motion\+\_\+task.\+cpp}}\end{DoxyCompactItemize}

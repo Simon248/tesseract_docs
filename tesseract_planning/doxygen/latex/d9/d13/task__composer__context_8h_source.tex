@@ -1,0 +1,77 @@
+\doxysection{task\+\_\+composer\+\_\+context.\+h}
+\hypertarget{task__composer__context_8h_source}{}\label{task__composer__context_8h_source}\index{tesseract\_task\_composer/core/include/tesseract\_task\_composer/core/task\_composer\_context.h@{tesseract\_task\_composer/core/include/tesseract\_task\_composer/core/task\_composer\_context.h}}
+\mbox{\hyperlink{task__composer__context_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00026\ \textcolor{preprocessor}{\#ifndef\ TESSERACT\_TASK\_COMPOSER\_TASK\_COMPOSER\_CONTEXT\_H}}
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#define\ TESSERACT\_TASK\_COMPOSER\_TASK\_COMPOSER\_CONTEXT\_H}}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#include\ <tesseract\_common/macros.h>}}
+\DoxyCodeLine{00030\ TESSERACT\_COMMON\_IGNORE\_WARNINGS\_PUSH}
+\DoxyCodeLine{00031\ \textcolor{preprocessor}{\#include\ <memory>}}
+\DoxyCodeLine{00032\ \textcolor{preprocessor}{\#include\ <atomic>}}
+\DoxyCodeLine{00033\ \textcolor{preprocessor}{\#include\ <boost/serialization/export.hpp>}}
+\DoxyCodeLine{00034\ \textcolor{preprocessor}{\#include\ <tesseract\_common/fwd.h>}}
+\DoxyCodeLine{00035\ \mbox{\hyperlink{namespaceTESSERACT__COMMON__IGNORE__WARNINGS__POP}{TESSERACT\_COMMON\_IGNORE\_WARNINGS\_POP}}}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{task__composer__node__info_8h}{tesseract\_task\_composer/core/task\_composer\_node\_info.h}}>}}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceboost_1_1uuids}{boost::uuids}}}
+\DoxyCodeLine{00040\ \{}
+\DoxyCodeLine{00041\ \textcolor{keyword}{struct\ }uuid;}
+\DoxyCodeLine{00042\ \}}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacetesseract__planning}{tesseract\_planning}}}
+\DoxyCodeLine{00045\ \{}
+\DoxyCodeLine{00046\ \textcolor{keyword}{class\ }TaskComposerDataStorage;}
+\DoxyCodeLine{00047\ \textcolor{keyword}{class\ }TaskComposerNode;}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00061\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classtesseract__planning_1_1TaskComposerContext}{TaskComposerContext}}}
+\DoxyCodeLine{00062\ \{}
+\DoxyCodeLine{00063\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00064\ \ \ \textcolor{keyword}{using\ }\mbox{\hyperlink{classtesseract__planning_1_1TaskComposerContext_a8716a852f7b9e9d93c929e0296ce2c5b}{Ptr}}\ =\ std::shared\_ptr<TaskComposerContext>;}
+\DoxyCodeLine{00065\ \ \ \textcolor{keyword}{using\ }\mbox{\hyperlink{classtesseract__planning_1_1TaskComposerContext_ab50e0c5e2c262f5141b83b89208d034d}{ConstPtr}}\ =\ std::shared\_ptr<const\ TaskComposerContext>;}
+\DoxyCodeLine{00066\ \ \ \textcolor{keyword}{using\ }\mbox{\hyperlink{classtesseract__planning_1_1TaskComposerContext_a6826cb800af1337939a28046b4151b94}{UPtr}}\ =\ std::unique\_ptr<TaskComposerContext>;}
+\DoxyCodeLine{00067\ \ \ \textcolor{keyword}{using\ }\mbox{\hyperlink{classtesseract__planning_1_1TaskComposerContext_ac83458972e2b622fa2d78aa67cd957b5}{ConstUPtr}}\ =\ std::unique\_ptr<const\ TaskComposerContext>;}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00069\ \ \ \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerContext_a120096f80cf419746448fa5a6d1a9df0}{TaskComposerContext}}()\ =\ \textcolor{keywordflow}{default};\ \ \textcolor{comment}{//\ Required\ for\ serialization}}
+\DoxyCodeLine{00070\ \ \ \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerContext_a120096f80cf419746448fa5a6d1a9df0}{TaskComposerContext}}(std::string\ \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerContext_a4c1d232317309cf36437bf319db4c40b}{name}},\ std::shared\_ptr<TaskComposerDataStorage>\ \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerContext_a627d14178c75af39126a7fc2d0e76637}{data\_storage}},\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerContext_a4c1af9e5304a3be9ca9a834250452e60}{dotgraph}}\ =\ \textcolor{keyword}{false});}
+\DoxyCodeLine{00071\ \ \ \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerContext_adb632336752ab0b0925665fed419f73d}{TaskComposerContext}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerContext}{TaskComposerContext}}\&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00072\ \ \ \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerContext_aed1849d556b99eee0e9223b62f404824}{TaskComposerContext}}(\mbox{\hyperlink{classtesseract__planning_1_1TaskComposerContext}{TaskComposerContext}}\&\&)\ noexcept\ =\ delete;}
+\DoxyCodeLine{00073\ \ \ \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerContext}{TaskComposerContext}}\&\ operator=(const\ \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerContext}{TaskComposerContext}}\&)\ =\ delete;}
+\DoxyCodeLine{00074\ \ \ \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerContext}{TaskComposerContext}}\&\ operator=(\mbox{\hyperlink{classtesseract__planning_1_1TaskComposerContext}{TaskComposerContext}}\&\&)\ =\ delete;}
+\DoxyCodeLine{00075\ \ \ virtual\ \string~\mbox{\hyperlink{classtesseract__planning_1_1TaskComposerContext}{TaskComposerContext}}()\ =\ default;}
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00078\ \ \ std::\textcolor{keywordtype}{string}\ \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerContext_a4c1d232317309cf36437bf319db4c40b}{name}};}
+\DoxyCodeLine{00079\ }
+\DoxyCodeLine{00081\ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerContext_a4c1af9e5304a3be9ca9a834250452e60}{dotgraph}}\{\ \textcolor{keyword}{false}\ \};}
+\DoxyCodeLine{00082\ }
+\DoxyCodeLine{00087\ \ \ std::shared\_ptr<TaskComposerDataStorage>\ \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerContext_a627d14178c75af39126a7fc2d0e76637}{data\_storage}};}
+\DoxyCodeLine{00088\ }
+\DoxyCodeLine{00090\ \ \ \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerNodeInfoContainer}{TaskComposerNodeInfoContainer}}\ \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerContext_a7193310099c86efb88781cd5c384e1cd}{task\_infos}};}
+\DoxyCodeLine{00091\ }
+\DoxyCodeLine{00097\ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerContext_a0bf9c45e6d0c396a29da3306d2edc275}{isAborted}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00098\ }
+\DoxyCodeLine{00103\ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerContext_aa16e5a195b744ee02fa484bbfeb418c0}{isSuccessful}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00104\ }
+\DoxyCodeLine{00110\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerContext_a96920ca75c2b27b390ce1653cbb48cc1}{abort}}(\textcolor{keyword}{const}\ boost::uuids::uuid\&\ calling\_node\ =\ boost::uuids::uuid());}
+\DoxyCodeLine{00111\ }
+\DoxyCodeLine{00117\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerContext_aab71b14d6d4ced4370228234a5570f66}{abort}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerNode}{TaskComposerNode}}\&\ caller);}
+\DoxyCodeLine{00118\ }
+\DoxyCodeLine{00119\ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerContext_ac5b6794c251f10385bf9a7ed0d34d6cf}{operator==}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerContext}{TaskComposerContext}}\&\ rhs)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00120\ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerContext_ad31b01cc89054405ea27c9309c149576}{operator!=}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerContext}{TaskComposerContext}}\&\ rhs)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00121\ }
+\DoxyCodeLine{00122\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00123\ \ \ \textcolor{keyword}{friend}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{classtesseract__planning_1_1TaskComposerContext_a9d42ad7bb40288a7ac1aad8d76809fe7}{tesseract\_common::Serialization}};}
+\DoxyCodeLine{00124\ \ \ \textcolor{keyword}{friend}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classtesseract__planning_1_1TaskComposerContext_ac98d07dd8f7b70e16ccb9a01abf56b9c}{boost::serialization::access}};}
+\DoxyCodeLine{00125\ }
+\DoxyCodeLine{00126\ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{class}\ Archive>}
+\DoxyCodeLine{00127\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerContext_a429d0689f7154d98db0a662a9712e7b8}{serialize}}(Archive\&\ ar,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ version);\ \ \textcolor{comment}{//\ NOLINT}}
+\DoxyCodeLine{00128\ }
+\DoxyCodeLine{00129\ \ \ \textcolor{keyword}{mutable}\ std::atomic<bool>\ \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerContext_a05af96bb728b58d0e78679da0c2291d2}{aborted\_}}\{\ \textcolor{keyword}{false}\ \};}
+\DoxyCodeLine{00130\ \};}
+\DoxyCodeLine{00131\ \}\ \ \textcolor{comment}{//\ namespace\ tesseract\_planning}}
+\DoxyCodeLine{00132\ BOOST\_CLASS\_EXPORT\_KEY(\mbox{\hyperlink{classtesseract__planning_1_1TaskComposerContext}{tesseract\_planning::TaskComposerContext}})}
+\DoxyCodeLine{00133\ \textcolor{preprocessor}{\#endif\ \ }\textcolor{comment}{//\ TESSERACT\_TASK\_COMPOSER\_TASK\_COMPOSER\_CONTEXT\_H}}
+
+\end{DoxyCode}

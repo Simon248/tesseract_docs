@@ -1,0 +1,9 @@
+<map id="tesseract_task_composer/core/include/tesseract_task_composer/core/nodes/has_data_storage_entry_task.h" name="tesseract_task_composer/core/include/tesseract_task_composer/core/nodes/has_data_storage_entry_task.h">
+<area shape="rect" id="Node000001" title=" " alt="" coords="184,5,390,76"/>
+<area shape="rect" id="Node000002" href="$d4/df9/has__data__storage__entry__task_8cpp.html" title=" " alt="" coords="5,124,177,180"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="212,86,141,126,139,121,210,82"/>
+<area shape="rect" id="Node000003" href="$dc/de0/task__composer__task__plugin__factory_8cpp.html" title="A task in the pipeline." alt="" coords="201,124,373,180"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="290,92,290,124,284,124,284,92"/>
+<area shape="rect" id="Node000004" href="$d7/d92/tesseract__task__composer__core__unit_8cpp.html" title=" " alt="" coords="397,124,598,180"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="369,81,446,121,444,126,366,86"/>
+</map>

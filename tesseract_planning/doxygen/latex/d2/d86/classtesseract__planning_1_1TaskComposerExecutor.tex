@@ -1,0 +1,253 @@
+\doxysection{tesseract\+\_\+planning\+::Task\+Composer\+Executor Class Reference}
+\hypertarget{classtesseract__planning_1_1TaskComposerExecutor}{}\label{classtesseract__planning_1_1TaskComposerExecutor}\index{tesseract\_planning::TaskComposerExecutor@{tesseract\_planning::TaskComposerExecutor}}
+
+
+{\ttfamily \#include $<$task\+\_\+composer\+\_\+executor.\+h$>$}
+
+
+
+Inheritance diagram for tesseract\+\_\+planning\+::Task\+Composer\+Executor\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=243pt]{de/d51/classtesseract__planning_1_1TaskComposerExecutor__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for tesseract\+\_\+planning\+::Task\+Composer\+Executor\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=204pt]{d0/dcc/classtesseract__planning_1_1TaskComposerExecutor__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerExecutor_ad3896b61b4d90cdf8aa528b92bbc8b9b}{Ptr}} = std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerExecutor}{Task\+Composer\+Executor}} $>$
+\item 
+using \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerExecutor_a062495acc438a7f40742c03622ddd73d}{Const\+Ptr}} = std\+::shared\+\_\+ptr$<$ const \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerExecutor}{Task\+Composer\+Executor}} $>$
+\item 
+using \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerExecutor_abd1fc7052da011b01d53c63c43a771c4}{UPtr}} = std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerExecutor}{Task\+Composer\+Executor}} $>$
+\item 
+using \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerExecutor_a160ac638ff372c90cb4548307d986365}{Const\+UPtr}} = std\+::unique\+\_\+ptr$<$ const \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerExecutor}{Task\+Composer\+Executor}} $>$
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classtesseract__planning_1_1TaskComposerExecutor_a04a394f24b69e108194b9db229d87029}{Task\+Composer\+Executor}} (std\+::string \mbox{\hyperlink{tesseract__task__composer__core__unit_8cpp_a9b45b3e13bd9167aab02e17e08916231}{name}}="{}Task\+Composer\+Executor"{})
+\item 
+virtual \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerExecutor_a37b5f522f87c71c81aba0b8dcae90a53}{\texorpdfstring{$\sim$}{\string~}\+Task\+Composer\+Executor}} ()=default
+\item 
+const std\+::string \& \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerExecutor_a0010a2c8b66c0559d0a2e733a4361d72}{get\+Name}} () const
+\begin{DoxyCompactList}\small\item\em Get the name of the executor. \end{DoxyCompactList}\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerFuture}{Task\+Composer\+Future}} $>$ \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerExecutor_ae5103ff54b8d00b18527b11c7b82f541}{run}} (const \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerNode}{Task\+Composer\+Node}} \&\mbox{\hyperlink{tesseract__task__composer__core__unit_8cpp_add125cc6aa882efdc9627c1bb886aebb}{node}}, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerDataStorage}{Task\+Composer\+Data\+Storage}} $>$ data\+\_\+storage, bool dotgraph=false)
+\begin{DoxyCompactList}\small\item\em Execute the provided node. \end{DoxyCompactList}\item 
+virtual long \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerExecutor_a810ae8c5e1f78b4975c97f967fd0d34b}{get\+Worker\+Count}} () const =0
+\begin{DoxyCompactList}\small\item\em Queries the number of workers (example\+: number of threads) \end{DoxyCompactList}\item 
+virtual long \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerExecutor_a5f86812a602232ee985f5fc01446ef08}{get\+Task\+Count}} () const =0
+\begin{DoxyCompactList}\small\item\em Queries the number of running tasks at the time of this call. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerExecutor_adfb7517ed91ddddad6072d2efab89e7f}{operator==}} (const \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerExecutor}{Task\+Composer\+Executor}} \&rhs) const
+\item 
+bool \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerExecutor_a2a663dc62fe8e113b7dfb52b392c9475}{operator!=}} (const \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerExecutor}{Task\+Composer\+Executor}} \&rhs) const
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$class Archive $>$ }\\void \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerExecutor_a919ffb9a2d1afeb1c1ed371a28a3c99c}{serialize}} (Archive \&ar, const unsigned int version)
+\item 
+virtual std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerFuture}{Task\+Composer\+Future}} $>$ \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerExecutor_a9d784a3006967ca62817b0d67f226287}{run}} (const \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerNode}{Task\+Composer\+Node}} \&\mbox{\hyperlink{tesseract__task__composer__core__unit_8cpp_add125cc6aa882efdc9627c1bb886aebb}{node}}, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerContext}{Task\+Composer\+Context}} $>$ \mbox{\hyperlink{tesseract__task__composer__core__unit_8cpp_adf0dd2db07cdbb966d6e385d3cd2605c}{context}})=0
+\begin{DoxyCompactList}\small\item\em Execute provided node provide the cotext. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerExecutor_a0dcb9b40baf2cd15dc7054108e5dd9c7}{name\+\_\+}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerExecutor_a9d42ad7bb40288a7ac1aad8d76809fe7}{tesseract\+\_\+common\+::\+Serialization}}
+\item 
+class \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerExecutor_ac98d07dd8f7b70e16ccb9a01abf56b9c}{boost\+::serialization\+::access}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Typedef Documentation}
+\Hypertarget{classtesseract__planning_1_1TaskComposerExecutor_a062495acc438a7f40742c03622ddd73d}\label{classtesseract__planning_1_1TaskComposerExecutor_a062495acc438a7f40742c03622ddd73d} 
+\index{tesseract\_planning::TaskComposerExecutor@{tesseract\_planning::TaskComposerExecutor}!ConstPtr@{ConstPtr}}
+\index{ConstPtr@{ConstPtr}!tesseract\_planning::TaskComposerExecutor@{tesseract\_planning::TaskComposerExecutor}}
+\doxysubsubsection{\texorpdfstring{ConstPtr}{ConstPtr}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerExecutor_a062495acc438a7f40742c03622ddd73d}{tesseract\+\_\+planning\+::\+Task\+Composer\+Executor\+::\+Const\+Ptr}} =  std\+::shared\+\_\+ptr$<$const \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerExecutor}{Task\+Composer\+Executor}}$>$}
+
+\Hypertarget{classtesseract__planning_1_1TaskComposerExecutor_a160ac638ff372c90cb4548307d986365}\label{classtesseract__planning_1_1TaskComposerExecutor_a160ac638ff372c90cb4548307d986365} 
+\index{tesseract\_planning::TaskComposerExecutor@{tesseract\_planning::TaskComposerExecutor}!ConstUPtr@{ConstUPtr}}
+\index{ConstUPtr@{ConstUPtr}!tesseract\_planning::TaskComposerExecutor@{tesseract\_planning::TaskComposerExecutor}}
+\doxysubsubsection{\texorpdfstring{ConstUPtr}{ConstUPtr}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerExecutor_a160ac638ff372c90cb4548307d986365}{tesseract\+\_\+planning\+::\+Task\+Composer\+Executor\+::\+Const\+UPtr}} =  std\+::unique\+\_\+ptr$<$const \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerExecutor}{Task\+Composer\+Executor}}$>$}
+
+\Hypertarget{classtesseract__planning_1_1TaskComposerExecutor_ad3896b61b4d90cdf8aa528b92bbc8b9b}\label{classtesseract__planning_1_1TaskComposerExecutor_ad3896b61b4d90cdf8aa528b92bbc8b9b} 
+\index{tesseract\_planning::TaskComposerExecutor@{tesseract\_planning::TaskComposerExecutor}!Ptr@{Ptr}}
+\index{Ptr@{Ptr}!tesseract\_planning::TaskComposerExecutor@{tesseract\_planning::TaskComposerExecutor}}
+\doxysubsubsection{\texorpdfstring{Ptr}{Ptr}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerExecutor_ad3896b61b4d90cdf8aa528b92bbc8b9b}{tesseract\+\_\+planning\+::\+Task\+Composer\+Executor\+::\+Ptr}} =  std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classtesseract__planning_1_1TaskComposerExecutor}{Task\+Composer\+Executor}}$>$}
+
+\Hypertarget{classtesseract__planning_1_1TaskComposerExecutor_abd1fc7052da011b01d53c63c43a771c4}\label{classtesseract__planning_1_1TaskComposerExecutor_abd1fc7052da011b01d53c63c43a771c4} 
+\index{tesseract\_planning::TaskComposerExecutor@{tesseract\_planning::TaskComposerExecutor}!UPtr@{UPtr}}
+\index{UPtr@{UPtr}!tesseract\_planning::TaskComposerExecutor@{tesseract\_planning::TaskComposerExecutor}}
+\doxysubsubsection{\texorpdfstring{UPtr}{UPtr}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerExecutor_abd1fc7052da011b01d53c63c43a771c4}{tesseract\+\_\+planning\+::\+Task\+Composer\+Executor\+::\+UPtr}} =  std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{classtesseract__planning_1_1TaskComposerExecutor}{Task\+Composer\+Executor}}$>$}
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classtesseract__planning_1_1TaskComposerExecutor_a04a394f24b69e108194b9db229d87029}\label{classtesseract__planning_1_1TaskComposerExecutor_a04a394f24b69e108194b9db229d87029} 
+\index{tesseract\_planning::TaskComposerExecutor@{tesseract\_planning::TaskComposerExecutor}!TaskComposerExecutor@{TaskComposerExecutor}}
+\index{TaskComposerExecutor@{TaskComposerExecutor}!tesseract\_planning::TaskComposerExecutor@{tesseract\_planning::TaskComposerExecutor}}
+\doxysubsubsection{\texorpdfstring{TaskComposerExecutor()}{TaskComposerExecutor()}}
+{\footnotesize\ttfamily tesseract\+\_\+planning\+::\+Task\+Composer\+Executor\+::\+Task\+Composer\+Executor (\begin{DoxyParamCaption}\item[{std\+::string}]{name = {\ttfamily "{}TaskComposerExecutor"{}} }\end{DoxyParamCaption})}
+
+\Hypertarget{classtesseract__planning_1_1TaskComposerExecutor_a37b5f522f87c71c81aba0b8dcae90a53}\label{classtesseract__planning_1_1TaskComposerExecutor_a37b5f522f87c71c81aba0b8dcae90a53} 
+\index{tesseract\_planning::TaskComposerExecutor@{tesseract\_planning::TaskComposerExecutor}!````~TaskComposerExecutor@{\texorpdfstring{$\sim$}{\string~}TaskComposerExecutor}}
+\index{````~TaskComposerExecutor@{\texorpdfstring{$\sim$}{\string~}TaskComposerExecutor}!tesseract\_planning::TaskComposerExecutor@{tesseract\_planning::TaskComposerExecutor}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}TaskComposerExecutor()}{\string~TaskComposerExecutor()}}
+{\footnotesize\ttfamily virtual tesseract\+\_\+planning\+::\+Task\+Composer\+Executor\+::\texorpdfstring{$\sim$}{\string~}\+Task\+Composer\+Executor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classtesseract__planning_1_1TaskComposerExecutor_a0010a2c8b66c0559d0a2e733a4361d72}\label{classtesseract__planning_1_1TaskComposerExecutor_a0010a2c8b66c0559d0a2e733a4361d72} 
+\index{tesseract\_planning::TaskComposerExecutor@{tesseract\_planning::TaskComposerExecutor}!getName@{getName}}
+\index{getName@{getName}!tesseract\_planning::TaskComposerExecutor@{tesseract\_planning::TaskComposerExecutor}}
+\doxysubsubsection{\texorpdfstring{getName()}{getName()}}
+{\footnotesize\ttfamily const std\+::string \& tesseract\+\_\+planning\+::\+Task\+Composer\+Executor\+::get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the name of the executor. 
+
+\Hypertarget{classtesseract__planning_1_1TaskComposerExecutor_a5f86812a602232ee985f5fc01446ef08}\label{classtesseract__planning_1_1TaskComposerExecutor_a5f86812a602232ee985f5fc01446ef08} 
+\index{tesseract\_planning::TaskComposerExecutor@{tesseract\_planning::TaskComposerExecutor}!getTaskCount@{getTaskCount}}
+\index{getTaskCount@{getTaskCount}!tesseract\_planning::TaskComposerExecutor@{tesseract\_planning::TaskComposerExecutor}}
+\doxysubsubsection{\texorpdfstring{getTaskCount()}{getTaskCount()}}
+{\footnotesize\ttfamily virtual long tesseract\+\_\+planning\+::\+Task\+Composer\+Executor\+::get\+Task\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Queries the number of running tasks at the time of this call. 
+
+
+
+Implemented in \mbox{\hyperlink{classtesseract__planning_1_1TaskflowTaskComposerExecutor_ab97508747f1cbe45cab214eed660fe6a}{tesseract\+\_\+planning\+::\+Taskflow\+Task\+Composer\+Executor}}.
+
+\Hypertarget{classtesseract__planning_1_1TaskComposerExecutor_a810ae8c5e1f78b4975c97f967fd0d34b}\label{classtesseract__planning_1_1TaskComposerExecutor_a810ae8c5e1f78b4975c97f967fd0d34b} 
+\index{tesseract\_planning::TaskComposerExecutor@{tesseract\_planning::TaskComposerExecutor}!getWorkerCount@{getWorkerCount}}
+\index{getWorkerCount@{getWorkerCount}!tesseract\_planning::TaskComposerExecutor@{tesseract\_planning::TaskComposerExecutor}}
+\doxysubsubsection{\texorpdfstring{getWorkerCount()}{getWorkerCount()}}
+{\footnotesize\ttfamily virtual long tesseract\+\_\+planning\+::\+Task\+Composer\+Executor\+::get\+Worker\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Queries the number of workers (example\+: number of threads) 
+
+
+
+Implemented in \mbox{\hyperlink{classtesseract__planning_1_1TaskflowTaskComposerExecutor_abbad29549822dc24ca36177a1acf0cc5}{tesseract\+\_\+planning\+::\+Taskflow\+Task\+Composer\+Executor}}.
+
+\Hypertarget{classtesseract__planning_1_1TaskComposerExecutor_a2a663dc62fe8e113b7dfb52b392c9475}\label{classtesseract__planning_1_1TaskComposerExecutor_a2a663dc62fe8e113b7dfb52b392c9475} 
+\index{tesseract\_planning::TaskComposerExecutor@{tesseract\_planning::TaskComposerExecutor}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!tesseract\_planning::TaskComposerExecutor@{tesseract\_planning::TaskComposerExecutor}}
+\doxysubsubsection{\texorpdfstring{operator"!=()}{operator!=()}}
+{\footnotesize\ttfamily bool tesseract\+\_\+planning\+::\+Task\+Composer\+Executor\+::operator!= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerExecutor}{Task\+Composer\+Executor}} \&}]{rhs }\end{DoxyParamCaption}) const}
+
+\Hypertarget{classtesseract__planning_1_1TaskComposerExecutor_adfb7517ed91ddddad6072d2efab89e7f}\label{classtesseract__planning_1_1TaskComposerExecutor_adfb7517ed91ddddad6072d2efab89e7f} 
+\index{tesseract\_planning::TaskComposerExecutor@{tesseract\_planning::TaskComposerExecutor}!operator==@{operator==}}
+\index{operator==@{operator==}!tesseract\_planning::TaskComposerExecutor@{tesseract\_planning::TaskComposerExecutor}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily bool tesseract\+\_\+planning\+::\+Task\+Composer\+Executor\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerExecutor}{Task\+Composer\+Executor}} \&}]{rhs }\end{DoxyParamCaption}) const}
+
+\Hypertarget{classtesseract__planning_1_1TaskComposerExecutor_a9d784a3006967ca62817b0d67f226287}\label{classtesseract__planning_1_1TaskComposerExecutor_a9d784a3006967ca62817b0d67f226287} 
+\index{tesseract\_planning::TaskComposerExecutor@{tesseract\_planning::TaskComposerExecutor}!run@{run}}
+\index{run@{run}!tesseract\_planning::TaskComposerExecutor@{tesseract\_planning::TaskComposerExecutor}}
+\doxysubsubsection{\texorpdfstring{run()}{run()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily virtual std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerFuture}{Task\+Composer\+Future}} $>$ tesseract\+\_\+planning\+::\+Task\+Composer\+Executor\+::run (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerNode}{Task\+Composer\+Node}} \&}]{node,  }\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerContext}{Task\+Composer\+Context}} $>$}]{context }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+
+
+Execute provided node provide the cotext. 
+
+This should only be used for dynamic tasking 
+\begin{DoxyParams}{Parameters}
+{\em node} & The node to execute \\
+\hline
+{\em context} & The context \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The future associated with execution 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classtesseract__planning_1_1TaskflowTaskComposerExecutor_a8df339781591cb4a01c562d678dcc821}{tesseract\+\_\+planning\+::\+Taskflow\+Task\+Composer\+Executor}}.
+
+\Hypertarget{classtesseract__planning_1_1TaskComposerExecutor_ae5103ff54b8d00b18527b11c7b82f541}\label{classtesseract__planning_1_1TaskComposerExecutor_ae5103ff54b8d00b18527b11c7b82f541} 
+\index{tesseract\_planning::TaskComposerExecutor@{tesseract\_planning::TaskComposerExecutor}!run@{run}}
+\index{run@{run}!tesseract\_planning::TaskComposerExecutor@{tesseract\_planning::TaskComposerExecutor}}
+\doxysubsubsection{\texorpdfstring{run()}{run()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerFuture}{Task\+Composer\+Future}} $>$ tesseract\+\_\+planning\+::\+Task\+Composer\+Executor\+::run (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerNode}{Task\+Composer\+Node}} \&}]{node,  }\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerDataStorage}{Task\+Composer\+Data\+Storage}} $>$}]{data\+\_\+storage,  }\item[{bool}]{dotgraph = {\ttfamily false} }\end{DoxyParamCaption})}
+
+
+
+Execute the provided node. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em node} & The node to execute \\
+\hline
+{\em data\+\_\+storage} & The data storage object to leverage \\
+\hline
+{\em dotgraph} & Indicate if dotgraph should be generated \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The future associated with execution 
+\end{DoxyReturn}
+\Hypertarget{classtesseract__planning_1_1TaskComposerExecutor_a919ffb9a2d1afeb1c1ed371a28a3c99c}\label{classtesseract__planning_1_1TaskComposerExecutor_a919ffb9a2d1afeb1c1ed371a28a3c99c} 
+\index{tesseract\_planning::TaskComposerExecutor@{tesseract\_planning::TaskComposerExecutor}!serialize@{serialize}}
+\index{serialize@{serialize}!tesseract\_planning::TaskComposerExecutor@{tesseract\_planning::TaskComposerExecutor}}
+\doxysubsubsection{\texorpdfstring{serialize()}{serialize()}}
+{\footnotesize\ttfamily template$<$class Archive $>$ \\
+void tesseract\+\_\+planning\+::\+Task\+Composer\+Executor\+::serialize (\begin{DoxyParamCaption}\item[{Archive \&}]{ar,  }\item[{const unsigned int}]{version }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+\doxysubsection{Friends And Related Symbol Documentation}
+\Hypertarget{classtesseract__planning_1_1TaskComposerExecutor_ac98d07dd8f7b70e16ccb9a01abf56b9c}\label{classtesseract__planning_1_1TaskComposerExecutor_ac98d07dd8f7b70e16ccb9a01abf56b9c} 
+\index{tesseract\_planning::TaskComposerExecutor@{tesseract\_planning::TaskComposerExecutor}!boost::serialization::access@{boost::serialization::access}}
+\index{boost::serialization::access@{boost::serialization::access}!tesseract\_planning::TaskComposerExecutor@{tesseract\_planning::TaskComposerExecutor}}
+\doxysubsubsection{\texorpdfstring{boost::serialization::access}{boost::serialization::access}}
+{\footnotesize\ttfamily friend class boost\+::serialization\+::access\hspace{0.3cm}{\ttfamily [friend]}}
+
+\Hypertarget{classtesseract__planning_1_1TaskComposerExecutor_a9d42ad7bb40288a7ac1aad8d76809fe7}\label{classtesseract__planning_1_1TaskComposerExecutor_a9d42ad7bb40288a7ac1aad8d76809fe7} 
+\index{tesseract\_planning::TaskComposerExecutor@{tesseract\_planning::TaskComposerExecutor}!tesseract\_common::Serialization@{tesseract\_common::Serialization}}
+\index{tesseract\_common::Serialization@{tesseract\_common::Serialization}!tesseract\_planning::TaskComposerExecutor@{tesseract\_planning::TaskComposerExecutor}}
+\doxysubsubsection{\texorpdfstring{tesseract\_common::Serialization}{tesseract\_common::Serialization}}
+{\footnotesize\ttfamily friend struct tesseract\+\_\+common\+::\+Serialization\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classtesseract__planning_1_1TaskComposerExecutor_a0dcb9b40baf2cd15dc7054108e5dd9c7}\label{classtesseract__planning_1_1TaskComposerExecutor_a0dcb9b40baf2cd15dc7054108e5dd9c7} 
+\index{tesseract\_planning::TaskComposerExecutor@{tesseract\_planning::TaskComposerExecutor}!name\_@{name\_}}
+\index{name\_@{name\_}!tesseract\_planning::TaskComposerExecutor@{tesseract\_planning::TaskComposerExecutor}}
+\doxysubsubsection{\texorpdfstring{name\_}{name\_}}
+{\footnotesize\ttfamily std\+::string tesseract\+\_\+planning\+::\+Task\+Composer\+Executor\+::name\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+tesseract\+\_\+task\+\_\+composer/core/include/tesseract\+\_\+task\+\_\+composer/core/\mbox{\hyperlink{task__composer__executor_8h}{task\+\_\+composer\+\_\+executor.\+h}}\item 
+tesseract\+\_\+task\+\_\+composer/core/src/\mbox{\hyperlink{task__composer__executor_8cpp}{task\+\_\+composer\+\_\+executor.\+cpp}}\end{DoxyCompactItemize}

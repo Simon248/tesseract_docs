@@ -1,0 +1,68 @@
+\doxysection{min\+\_\+length\+\_\+task.\+h}
+\hypertarget{min__length__task_8h_source}{}\label{min__length__task_8h_source}\index{tesseract\_task\_composer/planning/include/tesseract\_task\_composer/planning/nodes/min\_length\_task.h@{tesseract\_task\_composer/planning/include/tesseract\_task\_composer/planning/nodes/min\_length\_task.h}}
+\mbox{\hyperlink{min__length__task_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#ifndef\ TESSERACT\_TASK\_COMPOSER\_MIN\_LENGTH\_TASK\_H}}
+\DoxyCodeLine{00028\ \textcolor{preprocessor}{\#define\ TESSERACT\_TASK\_COMPOSER\_MIN\_LENGTH\_TASK\_H}}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \textcolor{preprocessor}{\#include\ <tesseract\_common/macros.h>}}
+\DoxyCodeLine{00031\ TESSERACT\_COMMON\_IGNORE\_WARNINGS\_PUSH}
+\DoxyCodeLine{00032\ \textcolor{preprocessor}{\#include\ <boost/serialization/access.hpp>}}
+\DoxyCodeLine{00033\ \textcolor{preprocessor}{\#include\ <boost/serialization/export.hpp>}}
+\DoxyCodeLine{00034\ \textcolor{preprocessor}{\#include\ <tesseract\_task\_composer/planning/tesseract\_task\_composer\_planning\_nodes\_export.h>}}
+\DoxyCodeLine{00035\ \mbox{\hyperlink{namespaceTESSERACT__COMMON__IGNORE__WARNINGS__POP}{TESSERACT\_COMMON\_IGNORE\_WARNINGS\_POP}}}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{task__composer__task_8h}{tesseract\_task\_composer/core/task\_composer\_task.h}}>}}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacetesseract__planning}{tesseract\_planning}}}
+\DoxyCodeLine{00040\ \{}
+\DoxyCodeLine{00041\ \textcolor{keyword}{class\ }TaskComposerPluginFactory;}
+\DoxyCodeLine{00042\ \textcolor{keyword}{class\ }TESSERACT\_TASK\_COMPOSER\_PLANNING\_NODES\_EXPORT\ \mbox{\hyperlink{classtesseract__planning_1_1MinLengthTask}{MinLengthTask}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerTask}{TaskComposerTask}}}
+\DoxyCodeLine{00043\ \{}
+\DoxyCodeLine{00044\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00045\ \ \ \textcolor{comment}{//\ Requried}}
+\DoxyCodeLine{00046\ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ std::string\ \mbox{\hyperlink{classtesseract__planning_1_1MinLengthTask_a058fe3744e66a92b8e94033be880ef79}{INOUT\_PROGRAM\_PORT}};}
+\DoxyCodeLine{00047\ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ std::string\ \mbox{\hyperlink{classtesseract__planning_1_1MinLengthTask_ab8a5cd5c0b4811b1cdf66a6d0574ef31}{INPUT\_ENVIRONMENT\_PORT}};}
+\DoxyCodeLine{00048\ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ std::string\ \mbox{\hyperlink{classtesseract__planning_1_1MinLengthTask_a0be8901b28e427f2f321317911a045ee}{INPUT\_PROFILES\_PORT}};}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00050\ \ \ \textcolor{keyword}{using\ }\mbox{\hyperlink{classtesseract__planning_1_1MinLengthTask_a0e86c3b5f1dc86ebb0b87d6c89b80405}{Ptr}}\ =\ std::shared\_ptr<MinLengthTask>;}
+\DoxyCodeLine{00051\ \ \ \textcolor{keyword}{using\ }\mbox{\hyperlink{classtesseract__planning_1_1MinLengthTask_aff7d6c18fcbe9939be5f032e5dc95a58}{ConstPtr}}\ =\ std::shared\_ptr<const\ MinLengthTask>;}
+\DoxyCodeLine{00052\ \ \ \textcolor{keyword}{using\ }\mbox{\hyperlink{classtesseract__planning_1_1MinLengthTask_a6a768c23b1a0a53ed3f8c3f7404c526d}{UPtr}}\ =\ std::unique\_ptr<MinLengthTask>;}
+\DoxyCodeLine{00053\ \ \ \textcolor{keyword}{using\ }\mbox{\hyperlink{classtesseract__planning_1_1MinLengthTask_abfb516bae8c7a8f26f65570b8429b816}{ConstUPtr}}\ =\ std::unique\_ptr<const\ MinLengthTask>;}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00055\ \ \ \mbox{\hyperlink{classtesseract__planning_1_1MinLengthTask}{MinLengthTask}}();}
+\DoxyCodeLine{00056\ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{classtesseract__planning_1_1MinLengthTask}{MinLengthTask}}(std::string\ \mbox{\hyperlink{tesseract__task__composer__core__unit_8cpp_a9b45b3e13bd9167aab02e17e08916231}{name}},}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::string\ input\_program\_key,}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::string\ input\_environment\_key,}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::string\ input\_profiles\_key,}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::string\ output\_program\_key,}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ conditional\ =\ \textcolor{keyword}{false});}
+\DoxyCodeLine{00062\ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{classtesseract__planning_1_1MinLengthTask}{MinLengthTask}}(std::string\ \mbox{\hyperlink{tesseract__task__composer__core__unit_8cpp_a9b45b3e13bd9167aab02e17e08916231}{name}},\ \textcolor{keyword}{const}\ YAML::Node\&\ \mbox{\hyperlink{tesseract__task__composer__core__unit_8cpp_a01d92a800904faa16b8c1c1372c40fb3}{config}},\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerPluginFactory}{TaskComposerPluginFactory}}\&\ plugin\_factory);}
+\DoxyCodeLine{00063\ \ \ \mbox{\hyperlink{classtesseract__planning_1_1MinLengthTask_aa71790aca354091409a21ced9bec0d52}{\string~MinLengthTask}}()\ \textcolor{keyword}{override}\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00064\ \ \ \mbox{\hyperlink{classtesseract__planning_1_1MinLengthTask_a1910cce337675cf8bf90f9886683a3b1}{MinLengthTask}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classtesseract__planning_1_1MinLengthTask}{MinLengthTask}}\&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00065\ \ \ \mbox{\hyperlink{classtesseract__planning_1_1MinLengthTask}{MinLengthTask}}\&\ \mbox{\hyperlink{classtesseract__planning_1_1MinLengthTask_a468b5443af3bbe5a933930bab88163c5}{operator=}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classtesseract__planning_1_1MinLengthTask}{MinLengthTask}}\&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00066\ \ \ \mbox{\hyperlink{classtesseract__planning_1_1MinLengthTask_a2edd68fdd15255641ccf49e6ac7450e1}{MinLengthTask}}(\mbox{\hyperlink{classtesseract__planning_1_1MinLengthTask}{MinLengthTask}}\&\&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00067\ \ \ \mbox{\hyperlink{classtesseract__planning_1_1MinLengthTask}{MinLengthTask}}\&\ \mbox{\hyperlink{classtesseract__planning_1_1MinLengthTask_af1c9c8a23f200b2393701e840e26c3ab}{operator=}}(\mbox{\hyperlink{classtesseract__planning_1_1MinLengthTask}{MinLengthTask}}\&\&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00069\ \ \ \textcolor{keywordtype}{bool}\ operator==(\textcolor{keyword}{const}\ \mbox{\hyperlink{classtesseract__planning_1_1MinLengthTask}{MinLengthTask}}\&\ rhs)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00070\ \ \ \textcolor{keywordtype}{bool}\ operator!=(\textcolor{keyword}{const}\ \mbox{\hyperlink{classtesseract__planning_1_1MinLengthTask}{MinLengthTask}}\&\ rhs)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00072\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00073\ \ \ \textcolor{keyword}{friend}\ \textcolor{keyword}{struct\ }tesseract\_common::Serialization;}
+\DoxyCodeLine{00074\ \ \ \textcolor{keyword}{friend}\ \textcolor{keyword}{class\ }boost::serialization::access;}
+\DoxyCodeLine{00075\ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{class}\ Archive>}
+\DoxyCodeLine{00076\ \ \ \textcolor{keywordtype}{void}\ serialize(Archive\&\ ar,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ version);\ \ \textcolor{comment}{//\ NOLINT}}
+\DoxyCodeLine{00077\ }
+\DoxyCodeLine{00078\ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{structtesseract__planning_1_1TaskComposerNodePorts}{TaskComposerNodePorts}}\ ports();}
+\DoxyCodeLine{00079\ }
+\DoxyCodeLine{00080\ \ \ std::unique\_ptr<TaskComposerNodeInfo>}
+\DoxyCodeLine{00081\ \ \ runImpl(\mbox{\hyperlink{classtesseract__planning_1_1TaskComposerContext}{TaskComposerContext}}\&\ \mbox{\hyperlink{tesseract__task__composer__core__unit_8cpp_adf0dd2db07cdbb966d6e385d3cd2605c}{context}},\ \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerNode_a51670db70ccba1ce21a77a5448e474d7}{OptionalTaskComposerExecutor}}\ \mbox{\hyperlink{tesseract__task__composer__taskflow__unit_8cpp_ab85065e5a325fc5bf8675e6c55a3e72f}{executor}}\ =\ std::nullopt)\ \textcolor{keyword}{const}\ \textcolor{keyword}{override}\ \textcolor{keyword}{final};}
+\DoxyCodeLine{00082\ \};}
+\DoxyCodeLine{00083\ }
+\DoxyCodeLine{00084\ \}\ \ \textcolor{comment}{//\ namespace\ tesseract\_planning}}
+\DoxyCodeLine{00085\ }
+\DoxyCodeLine{00086\ BOOST\_CLASS\_EXPORT\_KEY(\mbox{\hyperlink{classtesseract__planning_1_1MinLengthTask}{tesseract\_planning::MinLengthTask}})}
+\DoxyCodeLine{00087\ \textcolor{preprocessor}{\#endif\ \ }\textcolor{comment}{//\ TESSERACT\_TASK\_COMPOSER\_MIN\_LENGTH\_TASK\_H}}
+
+\end{DoxyCode}

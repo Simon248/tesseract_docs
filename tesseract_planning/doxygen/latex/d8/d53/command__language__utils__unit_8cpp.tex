@@ -1,0 +1,1062 @@
+\doxysection{tesseract\+\_\+command\+\_\+language/test/command\+\_\+language\+\_\+utils\+\_\+unit.cpp File Reference}
+\hypertarget{command__language__utils__unit_8cpp}{}\label{command__language__utils__unit_8cpp}\index{tesseract\_command\_language/test/command\_language\_utils\_unit.cpp@{tesseract\_command\_language/test/command\_language\_utils\_unit.cpp}}
+{\ttfamily \#include $<$tesseract\+\_\+common/macros.\+h$>$}\newline
+{\ttfamily \#include $<$gtest/gtest.\+h$>$}\newline
+{\ttfamily \#include $<$fstream$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+command\+\_\+language/utils.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+common/utils.\+h$>$}\newline
+{\ttfamily \#include "{}command\+\_\+language\+\_\+test\+\_\+program.\+hpp"{}}\newline
+Include dependency graph for command\+\_\+language\+\_\+utils\+\_\+unit.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dd/d04/command__language__utils__unit_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+composite \mbox{\hyperlink{command__language__utils__unit_8cpp_aa71964f574e8660240a6d7d1e97cc0b0}{set\+Description}} ("{}flatten Unit\+: Composite"{})
+\item 
+\mbox{\hyperlink{command__language__utils__unit_8cpp_a18ab5c6011f695de7d3f24fee63334ac}{for}} (std\+::size\+\_\+t i=0;i$<$ \mbox{\hyperlink{command__language__utils__unit_8cpp_a092ed8c4b45835b56ca48a84c445aa9c}{i\+\_\+max}};i++)
+\item 
+\mbox{\hyperlink{command__language__utils__unit_8cpp_ac9999b1938b6048a1222396d6821eab6}{EXPECT\+\_\+\+EQ}} (flattened.\+size(), \mbox{\hyperlink{command__language__utils__unit_8cpp_a092ed8c4b45835b56ca48a84c445aa9c}{i\+\_\+max}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{command__language__utils__unit_8cpp_afd03fc533586a7deb4136aa586ffd151}{j\+\_\+max}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{command__language__utils__unit_8cpp_a759b771da76b4ea2832dff959538f503}{k\+\_\+max}})
+\item 
+\mbox{\hyperlink{command__language__utils__unit_8cpp_ac003041b1ee656fe7540069f9b97bc47}{EXPECT\+\_\+\+EQ}} (\mbox{\hyperlink{command__language__utils__unit_8cpp_a2f1479cf121b88589846776c8612607a}{num\+\_\+composites}}, 0)
+\item 
+\mbox{\hyperlink{command__language__utils__unit_8cpp_a12e146f85f6b5ae7eeed3ed2b7379e2e}{if}} (\mbox{\hyperlink{command__language__utils__unit_8cpp_a9c4ab189c2f018bc7ccc8ba4f6e04b9d}{DEBUG}}) composite.\+print()
+\item 
+\mbox{\hyperlink{command__language__utils__unit_8cpp_a5dd137abd4ee323361b9dbba44cef496}{EXPECT\+\_\+\+EQ}} (flattened.\+size(), \mbox{\hyperlink{command__language__utils__unit_8cpp_a092ed8c4b45835b56ca48a84c445aa9c}{i\+\_\+max}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{command__language__utils__unit_8cpp_afd03fc533586a7deb4136aa586ffd151}{j\+\_\+max}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{command__language__utils__unit_8cpp_a759b771da76b4ea2832dff959538f503}{k\+\_\+max}}+16)
+\item 
+\mbox{\hyperlink{command__language__utils__unit_8cpp_af90be4d502feba043d28e6236e5ba94e}{EXPECT\+\_\+\+EQ}} (\mbox{\hyperlink{command__language__utils__unit_8cpp_a2f1479cf121b88589846776c8612607a}{num\+\_\+composites}}, 16)
+\item 
+Manipulator\+Info \mbox{\hyperlink{command__language__utils__unit_8cpp_af21d30c87e87931298afb1eb6f703551}{manip\+\_\+info}} ("{}manipulator"{}, "{}world"{}, "{}tool0"{})
+\item 
+\mbox{\hyperlink{command__language__utils__unit_8cpp_ad4080c90d6291409599c66b945fb08f8}{EXPECT\+\_\+\+EQ}} (jt.\+size(), 16)
+\item 
+\mbox{\hyperlink{command__language__utils__unit_8cpp_a0ec0f5fb498af7e810a320d8c93d5908}{EXPECT\+\_\+\+ANY\+\_\+\+THROW}} (to\+Joint\+Trajectory(\mbox{\hyperlink{command__language__utils__unit_8cpp_a9b11aaf39e77d0732c3a81ab867be07f}{error\+\_\+poly}}))
+\item 
+\mbox{\hyperlink{command__language__utils__unit_8cpp_ad78d1b93cb9ff6bade47c3e447fda78a}{start\+\_\+instruction}} \mbox{\hyperlink{command__language__utils__unit_8cpp_aa46743ed4ca397440d52e649d9df3584}{set\+Description}} ("{}Start Instruction"{})
+\item 
+\mbox{\hyperlink{command__language__utils__unit_8cpp_aee4421fb9a77d998ac23b1e88505a75a}{end\+\_\+instruction}} \mbox{\hyperlink{command__language__utils__unit_8cpp_a2206483e0ff841c49931a218a7e6dd75}{set\+Description}} ("{}End Instruction"{})
+\item 
+\mbox{\hyperlink{command__language__utils__unit_8cpp_ae64db9b4e6bc99309ba972a308668172}{wp1}} \mbox{\hyperlink{command__language__utils__unit_8cpp_abe7dc4dcaff92aed46a5d6b5ba2fa408}{set\+Seed}} (\mbox{\hyperlink{command__language__utils__unit_8cpp_aa733b1ad6e96e1ddefc4dd0e2b8e9d34}{seed\+\_\+state}})
+\item 
+\mbox{\hyperlink{command__language__utils__unit_8cpp_a32b7bf22a514cfcff5d4e14d57ab1a8b}{EXPECT\+\_\+\+TRUE}} (p0.\+is\+Approx(\mbox{\hyperlink{trajopt__planner__tests_8cpp_a5224d9f3f38aae0c4028178a2f3604f3}{wp0.\+get\+Position}}()))
+\item 
+\mbox{\hyperlink{command__language__utils__unit_8cpp_aa8188727acf8b18ae8cfd3e0617241bf}{EXPECT\+\_\+\+TRUE}} (p00.\+is\+Approx(\mbox{\hyperlink{trajopt__planner__tests_8cpp_a5224d9f3f38aae0c4028178a2f3604f3}{wp00.\+get\+Position}}()))
+\item 
+\mbox{\hyperlink{command__language__utils__unit_8cpp_ace3922aca6fb5c2378ab1e100e895992}{EXPECT\+\_\+\+TRUE}} (p1.\+is\+Approx(wp1.\+get\+Seed().\mbox{\hyperlink{command__language__utils__unit_8cpp_a609dcef1ce3198d50c2c9b9ff8207552}{position}}))
+\item 
+\mbox{\hyperlink{command__language__utils__unit_8cpp_ac62ee708f3cee3e090f30f02c7674c62}{EXPECT\+\_\+\+ANY\+\_\+\+THROW}} (get\+Joint\+Position(\mbox{\hyperlink{command__language__utils__unit_8cpp_ae1f8a8fc8391c292b501a077eee0b491}{wp2\+\_\+poly}}))
+\item 
+\mbox{\hyperlink{command__language__utils__unit_8cpp_af2180321bd5b09dd9f0b1182c6f1c0da}{EXPECT\+\_\+\+ANY\+\_\+\+THROW}} (get\+Joint\+Position(\mbox{\hyperlink{command__language__utils__unit_8cpp_a9b11aaf39e77d0732c3a81ab867be07f}{error\+\_\+poly}}))
+\item 
+\mbox{\hyperlink{command__language__utils__unit_8cpp_a64204306b59133271578467e55038f20}{EXPECT\+\_\+\+TRUE}} (p0.\+is\+Approx(\mbox{\hyperlink{command__language__utils__unit_8cpp_a4ebba736f1922d4994ec0beaa08dfe66}{format\+\_\+position0}}))
+\item 
+\mbox{\hyperlink{command__language__utils__unit_8cpp_ae1c0cedd2810cc527454d1163e9d41d2}{EXPECT\+\_\+\+TRUE}} (p00.\+is\+Approx(\mbox{\hyperlink{command__language__utils__unit_8cpp_a3e404388c49a80af590adf321790328a}{format\+\_\+position00}}))
+\item 
+\mbox{\hyperlink{command__language__utils__unit_8cpp_ab62fe18e5763b4a85426d071c8790eb1}{EXPECT\+\_\+\+TRUE}} (p1.\+is\+Approx(\mbox{\hyperlink{command__language__utils__unit_8cpp_a6e42575c029c19ae7b34f84af58c0767}{format\+\_\+seed\+\_\+position}}))
+\item 
+\mbox{\hyperlink{command__language__utils__unit_8cpp_a6f2b31aff031710405bedf6dfa107602}{EXPECT\+\_\+\+TRUE}} (p1u.\+is\+Approx(\mbox{\hyperlink{command__language__utils__unit_8cpp_abbf0c558dc4d400db3a0f7a31bab70f8}{seed\+\_\+position}}))
+\item 
+\mbox{\hyperlink{command__language__utils__unit_8cpp_a0307ad417c1827853e928661719d2e19}{EXPECT\+\_\+\+ANY\+\_\+\+THROW}} (get\+Joint\+Position(\{ "{}joint\+\_\+1"{} \}, \mbox{\hyperlink{command__language__utils__unit_8cpp_a3847bcd930c69e55d3abac2b0d604428}{wp0\+\_\+poly}}))
+\item 
+\mbox{\hyperlink{command__language__utils__unit_8cpp_a3d584d875ff45e8e66b63d9803fcaeba}{EXPECT\+\_\+\+ANY\+\_\+\+THROW}} (get\+Joint\+Position(\{ "{}joint\+\_\+3"{}, "{}joint\+\_\+1"{} \}, \mbox{\hyperlink{command__language__utils__unit_8cpp_a3847bcd930c69e55d3abac2b0d604428}{wp0\+\_\+poly}}))
+\item 
+\mbox{\hyperlink{command__language__utils__unit_8cpp_a6260aeae5df151c1a361c97d60ea1d27}{EXPECT\+\_\+\+ANY\+\_\+\+THROW}} (get\+Joint\+Position(\mbox{\hyperlink{command__language__utils__unit_8cpp_abe4496951a5423ffe6b08f927da7bb6e}{format\+\_\+joint\+\_\+names}}, \mbox{\hyperlink{command__language__utils__unit_8cpp_ae1f8a8fc8391c292b501a077eee0b491}{wp2\+\_\+poly}}))
+\item 
+\mbox{\hyperlink{command__language__utils__unit_8cpp_a726843e054380f0c98edc3f0e5effb1f}{EXPECT\+\_\+\+ANY\+\_\+\+THROW}} (get\+Joint\+Position(\mbox{\hyperlink{command__language__utils__unit_8cpp_abe4496951a5423ffe6b08f927da7bb6e}{format\+\_\+joint\+\_\+names}}, \mbox{\hyperlink{command__language__utils__unit_8cpp_a9b11aaf39e77d0732c3a81ab867be07f}{error\+\_\+poly}}))
+\item 
+\mbox{\hyperlink{command__language__utils__unit_8cpp_a598702230cb0b49699f9f65727e2eed3}{EXPECT\+\_\+\+TRUE}} (format\+Joint\+Position(\mbox{\hyperlink{command__language__utils__unit_8cpp_abe4496951a5423ffe6b08f927da7bb6e}{format\+\_\+joint\+\_\+names}}, \mbox{\hyperlink{command__language__utils__unit_8cpp_a3847bcd930c69e55d3abac2b0d604428}{wp0\+\_\+poly}}))
+\item 
+\mbox{\hyperlink{command__language__utils__unit_8cpp_a379901952ec6994d466cc9fa9e7f88fc}{EXPECT\+\_\+\+TRUE}} (wp0\+\_\+poly.\+as$<$ \mbox{\hyperlink{structtesseract__planning_1_1StateWaypointPoly}{State\+Waypoint\+Poly}} $>$().\mbox{\hyperlink{trajopt__planner__tests_8cpp_a5224d9f3f38aae0c4028178a2f3604f3}{get\+Position}}().is\+Approx(\mbox{\hyperlink{command__language__utils__unit_8cpp_a4ebba736f1922d4994ec0beaa08dfe66}{format\+\_\+position0}}))
+\item 
+\mbox{\hyperlink{command__language__utils__unit_8cpp_a9dfd1dcd4c2fb9d31a1baca2183b7b23}{EXPECT\+\_\+\+TRUE}} (format\+Joint\+Position(\mbox{\hyperlink{command__language__utils__unit_8cpp_abe4496951a5423ffe6b08f927da7bb6e}{format\+\_\+joint\+\_\+names}}, \mbox{\hyperlink{command__language__utils__unit_8cpp_a32b869771792a9cd78494fbedc84d83d}{wp00\+\_\+poly}}))
+\item 
+\mbox{\hyperlink{command__language__utils__unit_8cpp_a7848b74a00a561930360fc02f85b9e76}{EXPECT\+\_\+\+TRUE}} (wp00\+\_\+poly.\+as$<$ \mbox{\hyperlink{structtesseract__planning_1_1JointWaypointPoly}{Joint\+Waypoint\+Poly}} $>$().\mbox{\hyperlink{trajopt__planner__tests_8cpp_a5224d9f3f38aae0c4028178a2f3604f3}{get\+Position}}().is\+Approx(\mbox{\hyperlink{command__language__utils__unit_8cpp_a3e404388c49a80af590adf321790328a}{format\+\_\+position00}}))
+\item 
+\mbox{\hyperlink{command__language__utils__unit_8cpp_a5170c98fc2c3c6e9058fc20bce854b3b}{EXPECT\+\_\+\+TRUE}} (format\+Joint\+Position(\mbox{\hyperlink{command__language__utils__unit_8cpp_abe4496951a5423ffe6b08f927da7bb6e}{format\+\_\+joint\+\_\+names}}, \mbox{\hyperlink{command__language__utils__unit_8cpp_adabd2b748029644c7b6cfc76d2304946}{wp1\+\_\+poly}}))
+\item 
+\mbox{\hyperlink{command__language__utils__unit_8cpp_ac9ac24755f7ce6782e33a5285a442b2d}{EXPECT\+\_\+\+TRUE}} (wp1\+\_\+poly.\+as$<$ \mbox{\hyperlink{structtesseract__planning_1_1CartesianWaypointPoly}{Cartesian\+Waypoint\+Poly}} $>$().get\+Seed().position.\+is\+Approx(\mbox{\hyperlink{command__language__utils__unit_8cpp_a6e42575c029c19ae7b34f84af58c0767}{format\+\_\+seed\+\_\+position}}))
+\item 
+\mbox{\hyperlink{command__language__utils__unit_8cpp_a87b7f2690021fd8f1f348928f30fb2f9}{EXPECT\+\_\+\+FALSE}} (format\+Joint\+Position(\mbox{\hyperlink{command__language__utils__unit_8cpp_a5f85173ecc1ddcb342ebc27f28437f5c}{joint\+\_\+names}}, \mbox{\hyperlink{command__language__utils__unit_8cpp_a4297e499990076f853e06fb3e0a92947}{wp1u\+\_\+poly}}))
+\item 
+\mbox{\hyperlink{command__language__utils__unit_8cpp_af458c467f6dc454c9b7fdf94cf9df409}{EXPECT\+\_\+\+TRUE}} (wp1u\+\_\+poly.\+as$<$ \mbox{\hyperlink{structtesseract__planning_1_1CartesianWaypointPoly}{Cartesian\+Waypoint\+Poly}} $>$().get\+Seed().position.\+is\+Approx(\mbox{\hyperlink{command__language__utils__unit_8cpp_abbf0c558dc4d400db3a0f7a31bab70f8}{seed\+\_\+position}}))
+\item 
+\mbox{\hyperlink{command__language__utils__unit_8cpp_ab170bb4b8a4018f1522692f09d2657d9}{EXPECT\+\_\+\+FALSE}} (format\+Joint\+Position(\mbox{\hyperlink{command__language__utils__unit_8cpp_abe4496951a5423ffe6b08f927da7bb6e}{format\+\_\+joint\+\_\+names}}, \mbox{\hyperlink{command__language__utils__unit_8cpp_ae1f8a8fc8391c292b501a077eee0b491}{wp2\+\_\+poly}}))
+\item 
+\mbox{\hyperlink{command__language__utils__unit_8cpp_ae8b17cdfabd063b167433ef0f2fba331}{EXPECT\+\_\+\+ANY\+\_\+\+THROW}} (format\+Joint\+Position(\{ "{}joint\+\_\+1"{} \}, \mbox{\hyperlink{command__language__utils__unit_8cpp_a3847bcd930c69e55d3abac2b0d604428}{wp0\+\_\+poly}}))
+\item 
+\mbox{\hyperlink{command__language__utils__unit_8cpp_a096fb4b4b61880da18518e9235c7a063}{EXPECT\+\_\+\+ANY\+\_\+\+THROW}} (format\+Joint\+Position(\{ "{}joint\+\_\+3"{}, "{}joint\+\_\+1"{} \}, \mbox{\hyperlink{command__language__utils__unit_8cpp_a3847bcd930c69e55d3abac2b0d604428}{wp0\+\_\+poly}}))
+\item 
+\mbox{\hyperlink{command__language__utils__unit_8cpp_ad392f46a0d4287f686c84f6a7118ccde}{EXPECT\+\_\+\+ANY\+\_\+\+THROW}} (format\+Joint\+Position(\mbox{\hyperlink{command__language__utils__unit_8cpp_abe4496951a5423ffe6b08f927da7bb6e}{format\+\_\+joint\+\_\+names}}, \mbox{\hyperlink{command__language__utils__unit_8cpp_a9b11aaf39e77d0732c3a81ab867be07f}{error\+\_\+poly}}))
+\item 
+\mbox{\hyperlink{command__language__utils__unit_8cpp_a021b7eecb9375088d4447b0bdb827149}{EXPECT\+\_\+\+TRUE}} (check\+Joint\+Position\+Format(\mbox{\hyperlink{command__language__utils__unit_8cpp_a5f85173ecc1ddcb342ebc27f28437f5c}{joint\+\_\+names}}, \mbox{\hyperlink{command__language__utils__unit_8cpp_a3847bcd930c69e55d3abac2b0d604428}{wp0\+\_\+poly}}))
+\item 
+\mbox{\hyperlink{command__language__utils__unit_8cpp_a7b949bbef56d5d7cc56851e415b9458b}{EXPECT\+\_\+\+FALSE}} (check\+Joint\+Position\+Format(\mbox{\hyperlink{command__language__utils__unit_8cpp_abe4496951a5423ffe6b08f927da7bb6e}{format\+\_\+joint\+\_\+names}}, \mbox{\hyperlink{command__language__utils__unit_8cpp_a3847bcd930c69e55d3abac2b0d604428}{wp0\+\_\+poly}}))
+\item 
+\mbox{\hyperlink{command__language__utils__unit_8cpp_a52825153a7704ba491e93c2fe42ba1e5}{EXPECT\+\_\+\+TRUE}} (check\+Joint\+Position\+Format(\mbox{\hyperlink{command__language__utils__unit_8cpp_a5f85173ecc1ddcb342ebc27f28437f5c}{joint\+\_\+names}}, \mbox{\hyperlink{command__language__utils__unit_8cpp_a32b869771792a9cd78494fbedc84d83d}{wp00\+\_\+poly}}))
+\item 
+\mbox{\hyperlink{command__language__utils__unit_8cpp_a6341306fe804316a8e00963fb4b6e3f9}{EXPECT\+\_\+\+FALSE}} (check\+Joint\+Position\+Format(\mbox{\hyperlink{command__language__utils__unit_8cpp_abe4496951a5423ffe6b08f927da7bb6e}{format\+\_\+joint\+\_\+names}}, \mbox{\hyperlink{command__language__utils__unit_8cpp_a32b869771792a9cd78494fbedc84d83d}{wp00\+\_\+poly}}))
+\item 
+\mbox{\hyperlink{command__language__utils__unit_8cpp_a2353adb9d5a1645b2412ca3bd792b2e3}{EXPECT\+\_\+\+TRUE}} (check\+Joint\+Position\+Format(\mbox{\hyperlink{command__language__utils__unit_8cpp_a5f85173ecc1ddcb342ebc27f28437f5c}{joint\+\_\+names}}, \mbox{\hyperlink{command__language__utils__unit_8cpp_adabd2b748029644c7b6cfc76d2304946}{wp1\+\_\+poly}}))
+\item 
+\mbox{\hyperlink{command__language__utils__unit_8cpp_a3c68e361600e6b0e6a90479e4aabd7ba}{EXPECT\+\_\+\+FALSE}} (check\+Joint\+Position\+Format(\mbox{\hyperlink{command__language__utils__unit_8cpp_abe4496951a5423ffe6b08f927da7bb6e}{format\+\_\+joint\+\_\+names}}, \mbox{\hyperlink{command__language__utils__unit_8cpp_adabd2b748029644c7b6cfc76d2304946}{wp1\+\_\+poly}}))
+\item 
+\mbox{\hyperlink{command__language__utils__unit_8cpp_af06521b83b462ae0e28944975246524b}{EXPECT\+\_\+\+FALSE}} (check\+Joint\+Position\+Format(\{ "{}joint\+\_\+1"{} \}, \mbox{\hyperlink{command__language__utils__unit_8cpp_a3847bcd930c69e55d3abac2b0d604428}{wp0\+\_\+poly}}))
+\item 
+\mbox{\hyperlink{command__language__utils__unit_8cpp_abb46f72177b1c50a52c9224ce1277fcb}{EXPECT\+\_\+\+FALSE}} (check\+Joint\+Position\+Format(\{ "{}joint\+\_\+3"{}, "{}joint\+\_\+1"{} \}, \mbox{\hyperlink{command__language__utils__unit_8cpp_a3847bcd930c69e55d3abac2b0d604428}{wp0\+\_\+poly}}))
+\item 
+\mbox{\hyperlink{command__language__utils__unit_8cpp_aa81b87ae1bccbc0e8b47d643c468bb5c}{EXPECT\+\_\+\+ANY\+\_\+\+THROW}} (check\+Joint\+Position\+Format(\mbox{\hyperlink{command__language__utils__unit_8cpp_a5f85173ecc1ddcb342ebc27f28437f5c}{joint\+\_\+names}}, \mbox{\hyperlink{command__language__utils__unit_8cpp_ae1f8a8fc8391c292b501a077eee0b491}{wp2\+\_\+poly}}))
+\item 
+\mbox{\hyperlink{command__language__utils__unit_8cpp_aafa69f281b95e3b9af92286864d18b17}{EXPECT\+\_\+\+ANY\+\_\+\+THROW}} (check\+Joint\+Position\+Format(\mbox{\hyperlink{command__language__utils__unit_8cpp_abe4496951a5423ffe6b08f927da7bb6e}{format\+\_\+joint\+\_\+names}}, \mbox{\hyperlink{command__language__utils__unit_8cpp_ae1f8a8fc8391c292b501a077eee0b491}{wp2\+\_\+poly}}))
+\item 
+\mbox{\hyperlink{command__language__utils__unit_8cpp_a5bd7bfb1fef160c478d7d7147771c239}{EXPECT\+\_\+\+ANY\+\_\+\+THROW}} (check\+Joint\+Position\+Format(\mbox{\hyperlink{command__language__utils__unit_8cpp_a5f85173ecc1ddcb342ebc27f28437f5c}{joint\+\_\+names}}, \mbox{\hyperlink{command__language__utils__unit_8cpp_a9b11aaf39e77d0732c3a81ab867be07f}{error\+\_\+poly}}))
+\item 
+\mbox{\hyperlink{command__language__utils__unit_8cpp_a4972130106965ca6b7a1c7863c25e89d}{EXPECT\+\_\+\+ANY\+\_\+\+THROW}} (check\+Joint\+Position\+Format(\mbox{\hyperlink{command__language__utils__unit_8cpp_abe4496951a5423ffe6b08f927da7bb6e}{format\+\_\+joint\+\_\+names}}, \mbox{\hyperlink{command__language__utils__unit_8cpp_a9b11aaf39e77d0732c3a81ab867be07f}{error\+\_\+poly}}))
+\item 
+\mbox{\hyperlink{command__language__utils__unit_8cpp_afc63ea0aff29ffc7c1d026e423c40c88}{EXPECT\+\_\+\+EQ}} (\mbox{\hyperlink{command__language__utils__unit_8cpp_a7c5db26aa9e3accfdc451ee4c4362355}{n0}}, wp0.\+get\+Names())
+\item 
+\mbox{\hyperlink{command__language__utils__unit_8cpp_a923aa7973bb4f8f37a7dbed2ff8baca0}{EXPECT\+\_\+\+EQ}} (\mbox{\hyperlink{command__language__utils__unit_8cpp_ad0f657f05fc87164531a7708c51b90f3}{n00}}, wp00.\+get\+Names())
+\item 
+\mbox{\hyperlink{command__language__utils__unit_8cpp_a75e9f873a36e45f8b31c835192131249}{EXPECT\+\_\+\+EQ}} (\mbox{\hyperlink{command__language__utils__unit_8cpp_a9b46236d2514eb436292f09e4aaf9500}{n1}}, wp1.\+get\+Seed().\mbox{\hyperlink{command__language__utils__unit_8cpp_a5f85173ecc1ddcb342ebc27f28437f5c}{joint\+\_\+names}})
+\item 
+\mbox{\hyperlink{command__language__utils__unit_8cpp_af5fdc6cc7ecaae3aa82b5bd0e037314f}{EXPECT\+\_\+\+ANY\+\_\+\+THROW}} (get\+Joint\+Names(\mbox{\hyperlink{command__language__utils__unit_8cpp_ae1f8a8fc8391c292b501a077eee0b491}{wp2\+\_\+poly}}))
+\item 
+\mbox{\hyperlink{command__language__utils__unit_8cpp_aa1dbc7210e0948649c21eb977deb0a52}{EXPECT\+\_\+\+ANY\+\_\+\+THROW}} (get\+Joint\+Names(\mbox{\hyperlink{command__language__utils__unit_8cpp_a9b11aaf39e77d0732c3a81ab867be07f}{error\+\_\+poly}}))
+\item 
+\mbox{\hyperlink{command__language__utils__unit_8cpp_a0fab71af327f20791cb1b46ff2da9e16}{EXPECT\+\_\+\+TRUE}} (set\+Joint\+Position(\mbox{\hyperlink{command__language__utils__unit_8cpp_a3847bcd930c69e55d3abac2b0d604428}{wp0\+\_\+poly}}, \mbox{\hyperlink{command__language__utils__unit_8cpp_ac4ac75aacb87e6368380fb02ade8ca60}{set\+\_\+position}}))
+\item 
+\mbox{\hyperlink{command__language__utils__unit_8cpp_ab1b6474ec7575d5694cd82a50d538e13}{EXPECT\+\_\+\+TRUE}} (set\+\_\+position.\+is\+Approx(wp0\+\_\+poly.\+as$<$ \mbox{\hyperlink{structtesseract__planning_1_1StateWaypointPoly}{State\+Waypoint\+Poly}} $>$().\mbox{\hyperlink{trajopt__planner__tests_8cpp_a5224d9f3f38aae0c4028178a2f3604f3}{get\+Position}}()))
+\item 
+\mbox{\hyperlink{command__language__utils__unit_8cpp_ab1f447d63b7160dabb563012c6407b7d}{EXPECT\+\_\+\+TRUE}} (set\+Joint\+Position(\mbox{\hyperlink{command__language__utils__unit_8cpp_a32b869771792a9cd78494fbedc84d83d}{wp00\+\_\+poly}}, \mbox{\hyperlink{command__language__utils__unit_8cpp_ac4ac75aacb87e6368380fb02ade8ca60}{set\+\_\+position}}))
+\item 
+\mbox{\hyperlink{command__language__utils__unit_8cpp_a98dc2a40ad8d02346f229640cd83e73d}{EXPECT\+\_\+\+TRUE}} (set\+\_\+position.\+is\+Approx(wp00\+\_\+poly.\+as$<$ \mbox{\hyperlink{structtesseract__planning_1_1JointWaypointPoly}{Joint\+Waypoint\+Poly}} $>$().\mbox{\hyperlink{trajopt__planner__tests_8cpp_a5224d9f3f38aae0c4028178a2f3604f3}{get\+Position}}()))
+\item 
+\mbox{\hyperlink{command__language__utils__unit_8cpp_aa4198114f59ebd072a542d8d37e61774}{EXPECT\+\_\+\+TRUE}} (set\+Joint\+Position(\mbox{\hyperlink{command__language__utils__unit_8cpp_adabd2b748029644c7b6cfc76d2304946}{wp1\+\_\+poly}}, \mbox{\hyperlink{command__language__utils__unit_8cpp_ac4ac75aacb87e6368380fb02ade8ca60}{set\+\_\+position}}))
+\item 
+\mbox{\hyperlink{command__language__utils__unit_8cpp_ab945ce3a2ee93a8887fdb92e85d133e6}{EXPECT\+\_\+\+TRUE}} (set\+\_\+position.\+is\+Approx(wp1\+\_\+poly.\+as$<$ \mbox{\hyperlink{structtesseract__planning_1_1CartesianWaypointPoly}{Cartesian\+Waypoint\+Poly}} $>$().get\+Seed().\mbox{\hyperlink{command__language__utils__unit_8cpp_a609dcef1ce3198d50c2c9b9ff8207552}{position}}))
+\item 
+\mbox{\hyperlink{command__language__utils__unit_8cpp_a8a9514cac5515ec8a128d4a730372578}{EXPECT\+\_\+\+FALSE}} (set\+Joint\+Position(\mbox{\hyperlink{command__language__utils__unit_8cpp_ae1f8a8fc8391c292b501a077eee0b491}{wp2\+\_\+poly}}, \mbox{\hyperlink{command__language__utils__unit_8cpp_ac4ac75aacb87e6368380fb02ade8ca60}{set\+\_\+position}}))
+\item 
+\mbox{\hyperlink{command__language__utils__unit_8cpp_a64878a126ca76dd933b3a07c4443294f}{EXPECT\+\_\+\+FALSE}} (set\+Joint\+Position(\mbox{\hyperlink{command__language__utils__unit_8cpp_a9b11aaf39e77d0732c3a81ab867be07f}{error\+\_\+poly}}, \mbox{\hyperlink{command__language__utils__unit_8cpp_ac4ac75aacb87e6368380fb02ade8ca60}{set\+\_\+position}}))
+\item 
+Eigen\+::\+Vector\+Xd \mbox{\hyperlink{command__language__utils__unit_8cpp_a907c6225261f7f27ef5a201a7f0a54c9}{values}} (3)
+\item 
+\mbox{\hyperlink{command__language__utils__unit_8cpp_a5d289b45a1160720e7ae6fddd127208d}{EXPECT\+\_\+\+TRUE}} (is\+Within\+Joint\+Limits(\mbox{\hyperlink{command__language__utils__unit_8cpp_ab62cac7a32358688149f032fca746418}{tmp}}, limits))
+\item 
+\mbox{\hyperlink{command__language__utils__unit_8cpp_a7cffd30ea7c77b43f25403e131d98317}{EXPECT\+\_\+\+FALSE}} (is\+Within\+Joint\+Limits(\mbox{\hyperlink{command__language__utils__unit_8cpp_ab62cac7a32358688149f032fca746418}{tmp}}, limits))
+\item 
+\mbox{\hyperlink{command__language__utils__unit_8cpp_a997f458c9578bd4c1f3480891557fe00}{EXPECT\+\_\+\+ANY\+\_\+\+THROW}} (is\+Within\+Joint\+Limits(\mbox{\hyperlink{command__language__utils__unit_8cpp_ab62cac7a32358688149f032fca746418}{tmp}}, limits))
+\item 
+\mbox{\hyperlink{command__language__utils__unit_8cpp_affc83e8b34f779b4d7a4394ba77c921a}{EXPECT\+\_\+\+TRUE}} (clamp\+To\+Joint\+Limits(\mbox{\hyperlink{command__language__utils__unit_8cpp_ab62cac7a32358688149f032fca746418}{tmp}}, limits))
+\item 
+\mbox{\hyperlink{command__language__utils__unit_8cpp_ab670c11caf38d1eda627ed5dc8c2604d}{EXPECT\+\_\+\+TRUE}} (tmp.\+as$<$ \mbox{\hyperlink{structtesseract__planning_1_1JointWaypointPoly}{Joint\+Waypoint\+Poly}} $>$().\mbox{\hyperlink{trajopt__planner__tests_8cpp_a5224d9f3f38aae0c4028178a2f3604f3}{get\+Position}}().is\+Approx(\mbox{\hyperlink{command__language__utils__unit_8cpp_a81e8e5ac4055cfddba2949abfd5983af}{values}}, 1e-\/5))
+\item 
+\mbox{\hyperlink{command__language__utils__unit_8cpp_ac62141e2d9512e49964533f09e38d36a}{EXPECT\+\_\+\+FALSE}} (tmp.\+as$<$ \mbox{\hyperlink{structtesseract__planning_1_1JointWaypointPoly}{Joint\+Waypoint\+Poly}} $>$().\mbox{\hyperlink{trajopt__planner__tests_8cpp_a5224d9f3f38aae0c4028178a2f3604f3}{get\+Position}}().is\+Approx(\mbox{\hyperlink{command__language__utils__unit_8cpp_a81e8e5ac4055cfddba2949abfd5983af}{values}}, 1e-\/5))
+\item 
+\mbox{\hyperlink{command__language__utils__unit_8cpp_a7296fc73425f4e1bf5ae3ba6f1a5fccc}{EXPECT\+\_\+\+DOUBLE\+\_\+\+EQ}} (2, tmp.\+as$<$ \mbox{\hyperlink{structtesseract__planning_1_1JointWaypointPoly}{Joint\+Waypoint\+Poly}} $>$().\mbox{\hyperlink{trajopt__planner__tests_8cpp_a5224d9f3f38aae0c4028178a2f3604f3}{get\+Position}}()\mbox{[}2\mbox{]})
+\item 
+\mbox{\hyperlink{command__language__utils__unit_8cpp_a295d237ce9f8e2aa0be7058ced73cc65}{EXPECT\+\_\+\+DOUBLE\+\_\+\+EQ}} (0, tmp.\+as$<$ \mbox{\hyperlink{structtesseract__planning_1_1JointWaypointPoly}{Joint\+Waypoint\+Poly}} $>$().\mbox{\hyperlink{trajopt__planner__tests_8cpp_a5224d9f3f38aae0c4028178a2f3604f3}{get\+Position}}()\mbox{[}1\mbox{]})
+\item 
+\mbox{\hyperlink{command__language__utils__unit_8cpp_aee7604ee7ad5fb4fa08eee4bd14afd7f}{EXPECT\+\_\+\+FALSE}} (clamp\+To\+Joint\+Limits(\mbox{\hyperlink{command__language__utils__unit_8cpp_ab62cac7a32358688149f032fca746418}{tmp}}, limits, 0.\+01))
+\item 
+\mbox{\hyperlink{command__language__utils__unit_8cpp_a6d4e69abba0f0c250f9a23b994774da2}{EXPECT\+\_\+\+TRUE}} (clamp\+To\+Joint\+Limits(\mbox{\hyperlink{command__language__utils__unit_8cpp_ab62cac7a32358688149f032fca746418}{tmp}}, limits, 0.\+1))
+\item 
+\mbox{\hyperlink{command__language__utils__unit_8cpp_a52a92b1e0ae5fabde60c4a4eb3c15c43}{EXPECT\+\_\+\+ANY\+\_\+\+THROW}} (clamp\+To\+Joint\+Limits(\mbox{\hyperlink{command__language__utils__unit_8cpp_ab62cac7a32358688149f032fca746418}{tmp}}, limits))
+\item 
+composite \mbox{\hyperlink{command__language__utils__unit_8cpp_a3bc8a800ce29d06cb288f97109852eb0}{set\+Description}} ("{}To Delimited File\+: Composite"{})
+\item 
+composite \mbox{\hyperlink{command__language__utils__unit_8cpp_a709988555ad3822ca56e8e624e926a1d}{append\+Move\+Instruction}} (\mbox{\hyperlink{classtesseract__planning_1_1MoveInstruction}{Move\+Instruction}}(\mbox{\hyperlink{command__language__utils__unit_8cpp_ac638ee6649696e88931e4df867296eeb}{jwp}}, Move\+Instruction\+Type\+::\+FREESPACE))
+\item 
+\mbox{\hyperlink{command__language__utils__unit_8cpp_aba4907dbdb70256212032194fa14425a}{EXPECT\+\_\+\+TRUE}} (to\+Delimited\+File(composite, \mbox{\hyperlink{command__language__utils__unit_8cpp_a4d455efceee21e97d8e21ee40e9b4a20}{path}}))
+\item 
+std\+::ifstream \mbox{\hyperlink{command__language__utils__unit_8cpp_a87d5c7d2a3dea1dbabbc992403175426}{file}} (\mbox{\hyperlink{command__language__utils__unit_8cpp_a4d455efceee21e97d8e21ee40e9b4a20}{path}})
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+static const bool \mbox{\hyperlink{command__language__utils__unit_8cpp_a9c4ab189c2f018bc7ccc8ba4f6e04b9d}{DEBUG}} = false
+\item 
+std\+::size\+\_\+t \mbox{\hyperlink{command__language__utils__unit_8cpp_a092ed8c4b45835b56ca48a84c445aa9c}{i\+\_\+max}} = 4
+\item 
+std\+::size\+\_\+t \mbox{\hyperlink{command__language__utils__unit_8cpp_afd03fc533586a7deb4136aa586ffd151}{j\+\_\+max}} = 3
+\item 
+std\+::size\+\_\+t \mbox{\hyperlink{command__language__utils__unit_8cpp_a759b771da76b4ea2832dff959538f503}{k\+\_\+max}} = 2
+\item 
+std\+::vector$<$ std\+::reference\+\_\+wrapper$<$ \mbox{\hyperlink{structtesseract__planning_1_1InstructionPoly}{Instruction\+Poly}} $>$ $>$ \mbox{\hyperlink{command__language__utils__unit_8cpp_ae79c70402fb68bbb6a744c534a9d114a}{flattened}} = composite.\+flatten()
+\item 
+int \mbox{\hyperlink{command__language__utils__unit_8cpp_a2f1479cf121b88589846776c8612607a}{num\+\_\+composites}} = 0
+\item 
+std\+::size\+\_\+t \mbox{\hyperlink{command__language__utils__unit_8cpp_a8bc38344dce2ddc56cd7b41bd69727b2}{cumulative}} = 0
+\item 
+\mbox{\hyperlink{namespacetesseract__planning_a03ae53e9120c49cb221163e1551aecb0}{flatten\+Filter\+Fn}} \mbox{\hyperlink{command__language__utils__unit_8cpp_aa9783a979ff52e47b1bedab8ceeacb8a}{filter}} = \mbox{[}$\,$\mbox{]}(const \mbox{\hyperlink{structtesseract__planning_1_1InstructionPoly}{Instruction\+Poly}}\&, const \mbox{\hyperlink{classtesseract__planning_1_1CompositeInstruction}{Composite\+Instruction}}\&) \{ return true; \}
+\item 
+\mbox{\hyperlink{namespacetesseract__planning_a181d9233cb2a71d0ed0c23c55205f98d}{Composite\+Instruction\+Order}} \mbox{\hyperlink{command__language__utils__unit_8cpp_a6f8a71a55705d2d74e38530af1442abf}{order}} \{ Composite\+Instruction\+Order\+::\+ORDERED \}
+\item 
+\mbox{\hyperlink{classtesseract__planning_1_1CompositeInstruction}{Composite\+Instruction}} \mbox{\hyperlink{command__language__utils__unit_8cpp_ab5a75a7fd217179774b21aaa94fccc66}{program}} = get\+Test\+Program(\mbox{\hyperlink{profile__dictionary__tests_8cpp_abef2081b208ab62011ea9a1557a0be70}{profile}}, \mbox{\hyperlink{command__language__utils__unit_8cpp_a6f8a71a55705d2d74e38530af1442abf}{order}}, \mbox{\hyperlink{command__language__utils__unit_8cpp_af21d30c87e87931298afb1eb6f703551}{manip\+\_\+info}})
+\item 
+\mbox{\hyperlink{structtesseract__planning_1_1InstructionPoly}{Instruction\+Poly}} \mbox{\hyperlink{command__language__utils__unit_8cpp_a48ec302713a2e0c297adb979d364d504}{instr}} \{ \mbox{\hyperlink{command__language__utils__unit_8cpp_ab5a75a7fd217179774b21aaa94fccc66}{program}} \}
+\item 
+tesseract\+\_\+common\+::\+Joint\+Trajectory \mbox{\hyperlink{command__language__utils__unit_8cpp_a384ca350ecc0896693214febae055ac0}{jt}} = to\+Joint\+Trajectory(\mbox{\hyperlink{command__language__utils__unit_8cpp_a48ec302713a2e0c297adb979d364d504}{instr}})
+\item 
+\mbox{\hyperlink{structtesseract__planning_1_1InstructionPoly}{Instruction\+Poly}} \mbox{\hyperlink{command__language__utils__unit_8cpp_a9b11aaf39e77d0732c3a81ab867be07f}{error\+\_\+poly}} \{ \mbox{\hyperlink{classtesseract__planning_1_1MoveInstruction}{Move\+Instruction}}() \}
+\item 
+\mbox{\hyperlink{structtesseract__planning_1_1StateWaypointPoly}{State\+Waypoint\+Poly}} \mbox{\hyperlink{command__language__utils__unit_8cpp_af6a6ef8aeae99ee13e09fdebd8470fb3}{wp0}} \{ \mbox{\hyperlink{classtesseract__planning_1_1StateWaypoint}{State\+Waypoint}}(\mbox{\hyperlink{command__language__utils__unit_8cpp_a5f85173ecc1ddcb342ebc27f28437f5c}{joint\+\_\+names}}, Eigen\+::\+Vector\+Xd\+::\+Constant(6, 3)) \}
+\item 
+\mbox{\hyperlink{structtesseract__planning_1_1JointWaypointPoly}{Joint\+Waypoint\+Poly}} \mbox{\hyperlink{command__language__utils__unit_8cpp_af0e4d6aea5757290e98dda3add2f8737}{wp00}} \{ \mbox{\hyperlink{classtesseract__planning_1_1JointWaypoint}{Joint\+Waypoint}}(\mbox{\hyperlink{command__language__utils__unit_8cpp_a5f85173ecc1ddcb342ebc27f28437f5c}{joint\+\_\+names}}, Eigen\+::\+Vector\+Xd\+::\+Constant(6, 5)) \}
+\item 
+\mbox{\hyperlink{classtesseract__planning_1_1MoveInstruction}{Move\+Instruction}} \mbox{\hyperlink{command__language__utils__unit_8cpp_ad78d1b93cb9ff6bade47c3e447fda78a}{start\+\_\+instruction}} (\mbox{\hyperlink{command__language__utils__unit_8cpp_af6a6ef8aeae99ee13e09fdebd8470fb3}{wp0}}, Move\+Instruction\+Type\+::\+FREESPACE, "{}freespace\+\_\+profile"{})
+\item 
+\mbox{\hyperlink{classtesseract__planning_1_1MoveInstruction}{Move\+Instruction}} \mbox{\hyperlink{command__language__utils__unit_8cpp_aee4421fb9a77d998ac23b1e88505a75a}{end\+\_\+instruction}} (\mbox{\hyperlink{command__language__utils__unit_8cpp_af0e4d6aea5757290e98dda3add2f8737}{wp00}}, Move\+Instruction\+Type\+::\+FREESPACE, "{}freespace\+\_\+profile"{})
+\item 
+tesseract\+\_\+common\+::\+Joint\+State \mbox{\hyperlink{command__language__utils__unit_8cpp_aa733b1ad6e96e1ddefc4dd0e2b8e9d34}{seed\+\_\+state}}
+\item 
+\mbox{\hyperlink{command__language__utils__unit_8cpp_aa733b1ad6e96e1ddefc4dd0e2b8e9d34}{seed\+\_\+state}} \mbox{\hyperlink{command__language__utils__unit_8cpp_a5f85173ecc1ddcb342ebc27f28437f5c}{joint\+\_\+names}} = joint\+\_\+names
+\item 
+\mbox{\hyperlink{command__language__utils__unit_8cpp_aa733b1ad6e96e1ddefc4dd0e2b8e9d34}{seed\+\_\+state}} \mbox{\hyperlink{command__language__utils__unit_8cpp_a609dcef1ce3198d50c2c9b9ff8207552}{position}} = Eigen\+::\+Vector\+Xd\+::\+Constant(6, 10)
+\item 
+\mbox{\hyperlink{structtesseract__planning_1_1CartesianWaypointPoly}{Cartesian\+Waypoint\+Poly}} \mbox{\hyperlink{command__language__utils__unit_8cpp_ae64db9b4e6bc99309ba972a308668172}{wp1}}
+\item 
+\mbox{\hyperlink{structtesseract__planning_1_1CartesianWaypointPoly}{Cartesian\+Waypoint\+Poly}} \mbox{\hyperlink{command__language__utils__unit_8cpp_a6a7c0153c4436a5cb1d544fb68aa6847}{wp2}}
+\item 
+\mbox{\hyperlink{structtesseract__planning_1_1WaypointPoly}{Waypoint\+Poly}} \mbox{\hyperlink{command__language__utils__unit_8cpp_a3847bcd930c69e55d3abac2b0d604428}{wp0\+\_\+poly}} \{ \mbox{\hyperlink{command__language__utils__unit_8cpp_af6a6ef8aeae99ee13e09fdebd8470fb3}{wp0}} \}
+\item 
+const Eigen\+::\+Vector\+Xd \& \mbox{\hyperlink{command__language__utils__unit_8cpp_a8bf2b7c76f7ee07e394fc5dc9ba3c67f}{p0}} = get\+Joint\+Position(\mbox{\hyperlink{command__language__utils__unit_8cpp_a3847bcd930c69e55d3abac2b0d604428}{wp0\+\_\+poly}})
+\item 
+\mbox{\hyperlink{structtesseract__planning_1_1WaypointPoly}{Waypoint\+Poly}} \mbox{\hyperlink{command__language__utils__unit_8cpp_a32b869771792a9cd78494fbedc84d83d}{wp00\+\_\+poly}} \{ \mbox{\hyperlink{command__language__utils__unit_8cpp_af0e4d6aea5757290e98dda3add2f8737}{wp00}} \}
+\item 
+const Eigen\+::\+Vector\+Xd \& \mbox{\hyperlink{command__language__utils__unit_8cpp_ac45c36898e6e88924e037cc8959dbe83}{p00}} = get\+Joint\+Position(\mbox{\hyperlink{command__language__utils__unit_8cpp_a32b869771792a9cd78494fbedc84d83d}{wp00\+\_\+poly}})
+\item 
+\mbox{\hyperlink{structtesseract__planning_1_1WaypointPoly}{Waypoint\+Poly}} \mbox{\hyperlink{command__language__utils__unit_8cpp_adabd2b748029644c7b6cfc76d2304946}{wp1\+\_\+poly}} \{ \mbox{\hyperlink{command__language__utils__unit_8cpp_ae64db9b4e6bc99309ba972a308668172}{wp1}} \}
+\item 
+const Eigen\+::\+Vector\+Xd \& \mbox{\hyperlink{command__language__utils__unit_8cpp_aa3a23bc77c9d993af4e6bc28a696ac89}{p1}} = get\+Joint\+Position(\mbox{\hyperlink{command__language__utils__unit_8cpp_adabd2b748029644c7b6cfc76d2304946}{wp1\+\_\+poly}})
+\item 
+\mbox{\hyperlink{structtesseract__planning_1_1WaypointPoly}{Waypoint\+Poly}} \mbox{\hyperlink{command__language__utils__unit_8cpp_ae1f8a8fc8391c292b501a077eee0b491}{wp2\+\_\+poly}} \{ \mbox{\hyperlink{command__language__utils__unit_8cpp_a6a7c0153c4436a5cb1d544fb68aa6847}{wp2}} \}
+\item 
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{command__language__utils__unit_8cpp_abe4496951a5423ffe6b08f927da7bb6e}{format\+\_\+joint\+\_\+names}} = \{ "{}joint\+\_\+2"{}, "{}joint\+\_\+1"{} \}
+\item 
+Eigen\+::\+Vector\+Xd \mbox{\hyperlink{command__language__utils__unit_8cpp_a4587ae4a0eb0252f17ce0b572018cbdf}{position0}} = Eigen\+::\+Vector2d(1, 2)
+\item 
+Eigen\+::\+Vector\+Xd \mbox{\hyperlink{command__language__utils__unit_8cpp_a098dbc67abcea032e94c231b4af15c6b}{position00}} = Eigen\+::\+Vector2d(3, 4)
+\item 
+Eigen\+::\+Vector\+Xd \mbox{\hyperlink{command__language__utils__unit_8cpp_a4ebba736f1922d4994ec0beaa08dfe66}{format\+\_\+position0}} = Eigen\+::\+Vector2d(2, 1)
+\item 
+Eigen\+::\+Vector\+Xd \mbox{\hyperlink{command__language__utils__unit_8cpp_a3e404388c49a80af590adf321790328a}{format\+\_\+position00}} = Eigen\+::\+Vector2d(4, 3)
+\item 
+Eigen\+::\+Vector\+Xd \mbox{\hyperlink{command__language__utils__unit_8cpp_abbf0c558dc4d400db3a0f7a31bab70f8}{seed\+\_\+position}} = Eigen\+::\+Vector2d(5, 6)
+\item 
+Eigen\+::\+Vector\+Xd \mbox{\hyperlink{command__language__utils__unit_8cpp_a6e42575c029c19ae7b34f84af58c0767}{format\+\_\+seed\+\_\+position}} = Eigen\+::\+Vector2d(6, 5)
+\item 
+const Eigen\+::\+Vector\+Xd \& \mbox{\hyperlink{command__language__utils__unit_8cpp_a72d9ba2e7c51af5c4288f67793c15f4a}{p1u}} = get\+Joint\+Position(\mbox{\hyperlink{command__language__utils__unit_8cpp_a5f85173ecc1ddcb342ebc27f28437f5c}{joint\+\_\+names}}, \mbox{\hyperlink{command__language__utils__unit_8cpp_adabd2b748029644c7b6cfc76d2304946}{wp1\+\_\+poly}})
+\item 
+\mbox{\hyperlink{structtesseract__planning_1_1WaypointPoly}{Waypoint\+Poly}} \mbox{\hyperlink{command__language__utils__unit_8cpp_a4297e499990076f853e06fb3e0a92947}{wp1u\+\_\+poly}} \{ \mbox{\hyperlink{command__language__utils__unit_8cpp_ae64db9b4e6bc99309ba972a308668172}{wp1}} \}
+\item 
+const std\+::vector$<$ std\+::string $>$ \& \mbox{\hyperlink{command__language__utils__unit_8cpp_a7c5db26aa9e3accfdc451ee4c4362355}{n0}} = get\+Joint\+Names(\mbox{\hyperlink{command__language__utils__unit_8cpp_a3847bcd930c69e55d3abac2b0d604428}{wp0\+\_\+poly}})
+\item 
+const std\+::vector$<$ std\+::string $>$ \& \mbox{\hyperlink{command__language__utils__unit_8cpp_ad0f657f05fc87164531a7708c51b90f3}{n00}} = get\+Joint\+Names(\mbox{\hyperlink{command__language__utils__unit_8cpp_a32b869771792a9cd78494fbedc84d83d}{wp00\+\_\+poly}})
+\item 
+const std\+::vector$<$ std\+::string $>$ \& \mbox{\hyperlink{command__language__utils__unit_8cpp_a9b46236d2514eb436292f09e4aaf9500}{n1}} = get\+Joint\+Names(\mbox{\hyperlink{command__language__utils__unit_8cpp_adabd2b748029644c7b6cfc76d2304946}{wp1\+\_\+poly}})
+\item 
+Eigen\+::\+Vector\+Xd \mbox{\hyperlink{command__language__utils__unit_8cpp_ac4ac75aacb87e6368380fb02ade8ca60}{set\+\_\+position}} = Eigen\+::\+Vector\+Xd\+::\+Constant(6, 1)
+\item 
+\mbox{\hyperlink{structtesseract__planning_1_1JointWaypointPoly}{Joint\+Waypoint\+Poly}} \mbox{\hyperlink{command__language__utils__unit_8cpp_a83ecd9e2360f26bfc3430d39a228afe6}{jp}} \{ \mbox{\hyperlink{classtesseract__planning_1_1JointWaypoint}{Joint\+Waypoint}}(\mbox{\hyperlink{command__language__utils__unit_8cpp_a5f85173ecc1ddcb342ebc27f28437f5c}{joint\+\_\+names}}, \mbox{\hyperlink{command__language__utils__unit_8cpp_a81e8e5ac4055cfddba2949abfd5983af}{values}}) \}
+\item 
+\mbox{\hyperlink{structtesseract__planning_1_1WaypointPoly}{Waypoint\+Poly}} \mbox{\hyperlink{command__language__utils__unit_8cpp_ab62cac7a32358688149f032fca746418}{tmp}} (\mbox{\hyperlink{command__language__utils__unit_8cpp_a83ecd9e2360f26bfc3430d39a228afe6}{jp}})
+\item 
+Eigen\+::\+Vector\+Xd \mbox{\hyperlink{command__language__utils__unit_8cpp_a81e8e5ac4055cfddba2949abfd5983af}{values}} = Eigen\+::\+Vector\+Xd\+::\+Constant(3, 5)
+\item 
+\mbox{\hyperlink{structtesseract__planning_1_1JointWaypointPoly}{Joint\+Waypoint\+Poly}} \mbox{\hyperlink{command__language__utils__unit_8cpp_ac638ee6649696e88931e4df867296eeb}{jwp}} \{ \mbox{\hyperlink{classtesseract__planning_1_1JointWaypoint}{Joint\+Waypoint}}(\mbox{\hyperlink{command__language__utils__unit_8cpp_a5f85173ecc1ddcb342ebc27f28437f5c}{joint\+\_\+names}}, \mbox{\hyperlink{command__language__utils__unit_8cpp_a81e8e5ac4055cfddba2949abfd5983af}{values}}) \}
+\item 
+std\+::string \mbox{\hyperlink{command__language__utils__unit_8cpp_a4d455efceee21e97d8e21ee40e9b4a20}{path}} = tesseract\+\_\+common\+::get\+Temp\+Path() + "{}to\+\_\+delimited\+\_\+file.\+csv"{}
+\item 
+std\+::stringstream \mbox{\hyperlink{command__language__utils__unit_8cpp_adbf6a7492c6521b38c1510aebe307770}{buffer}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{command__language__utils__unit_8cpp_a709988555ad3822ca56e8e624e926a1d}\label{command__language__utils__unit_8cpp_a709988555ad3822ca56e8e624e926a1d} 
+\index{command\_language\_utils\_unit.cpp@{command\_language\_utils\_unit.cpp}!appendMoveInstruction@{appendMoveInstruction}}
+\index{appendMoveInstruction@{appendMoveInstruction}!command\_language\_utils\_unit.cpp@{command\_language\_utils\_unit.cpp}}
+\doxysubsubsection{\texorpdfstring{appendMoveInstruction()}{appendMoveInstruction()}}
+{\footnotesize\ttfamily composite append\+Move\+Instruction (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classtesseract__planning_1_1MoveInstruction}{Move\+Instruction}}(\mbox{\hyperlink{command__language__utils__unit_8cpp_ac638ee6649696e88931e4df867296eeb}{jwp}}, Move\+Instruction\+Type\+::\+FREESPACE)}]{ }\end{DoxyParamCaption})}
+
+\Hypertarget{command__language__utils__unit_8cpp_a4972130106965ca6b7a1c7863c25e89d}\label{command__language__utils__unit_8cpp_a4972130106965ca6b7a1c7863c25e89d} 
+\index{command\_language\_utils\_unit.cpp@{command\_language\_utils\_unit.cpp}!EXPECT\_ANY\_THROW@{EXPECT\_ANY\_THROW}}
+\index{EXPECT\_ANY\_THROW@{EXPECT\_ANY\_THROW}!command\_language\_utils\_unit.cpp@{command\_language\_utils\_unit.cpp}}
+\doxysubsubsection{\texorpdfstring{EXPECT\_ANY\_THROW()}{EXPECT\_ANY\_THROW()}\hspace{0.1cm}{\footnotesize\ttfamily [1/18]}}
+{\footnotesize\ttfamily EXPECT\+\_\+\+ANY\+\_\+\+THROW (\begin{DoxyParamCaption}\item[{check\+Joint\+Position\+Format(\mbox{\hyperlink{command__language__utils__unit_8cpp_abe4496951a5423ffe6b08f927da7bb6e}{format\+\_\+joint\+\_\+names}}, \mbox{\hyperlink{command__language__utils__unit_8cpp_a9b11aaf39e77d0732c3a81ab867be07f}{error\+\_\+poly}})}]{ }\end{DoxyParamCaption})}
+
+\Hypertarget{command__language__utils__unit_8cpp_aafa69f281b95e3b9af92286864d18b17}\label{command__language__utils__unit_8cpp_aafa69f281b95e3b9af92286864d18b17} 
+\index{command\_language\_utils\_unit.cpp@{command\_language\_utils\_unit.cpp}!EXPECT\_ANY\_THROW@{EXPECT\_ANY\_THROW}}
+\index{EXPECT\_ANY\_THROW@{EXPECT\_ANY\_THROW}!command\_language\_utils\_unit.cpp@{command\_language\_utils\_unit.cpp}}
+\doxysubsubsection{\texorpdfstring{EXPECT\_ANY\_THROW()}{EXPECT\_ANY\_THROW()}\hspace{0.1cm}{\footnotesize\ttfamily [2/18]}}
+{\footnotesize\ttfamily EXPECT\+\_\+\+ANY\+\_\+\+THROW (\begin{DoxyParamCaption}\item[{check\+Joint\+Position\+Format(\mbox{\hyperlink{command__language__utils__unit_8cpp_abe4496951a5423ffe6b08f927da7bb6e}{format\+\_\+joint\+\_\+names}}, \mbox{\hyperlink{command__language__utils__unit_8cpp_ae1f8a8fc8391c292b501a077eee0b491}{wp2\+\_\+poly}})}]{ }\end{DoxyParamCaption})}
+
+\Hypertarget{command__language__utils__unit_8cpp_a5bd7bfb1fef160c478d7d7147771c239}\label{command__language__utils__unit_8cpp_a5bd7bfb1fef160c478d7d7147771c239} 
+\index{command\_language\_utils\_unit.cpp@{command\_language\_utils\_unit.cpp}!EXPECT\_ANY\_THROW@{EXPECT\_ANY\_THROW}}
+\index{EXPECT\_ANY\_THROW@{EXPECT\_ANY\_THROW}!command\_language\_utils\_unit.cpp@{command\_language\_utils\_unit.cpp}}
+\doxysubsubsection{\texorpdfstring{EXPECT\_ANY\_THROW()}{EXPECT\_ANY\_THROW()}\hspace{0.1cm}{\footnotesize\ttfamily [3/18]}}
+{\footnotesize\ttfamily EXPECT\+\_\+\+ANY\+\_\+\+THROW (\begin{DoxyParamCaption}\item[{check\+Joint\+Position\+Format(\mbox{\hyperlink{command__language__utils__unit_8cpp_a5f85173ecc1ddcb342ebc27f28437f5c}{joint\+\_\+names}}, \mbox{\hyperlink{command__language__utils__unit_8cpp_a9b11aaf39e77d0732c3a81ab867be07f}{error\+\_\+poly}})}]{ }\end{DoxyParamCaption})}
+
+\Hypertarget{command__language__utils__unit_8cpp_aa81b87ae1bccbc0e8b47d643c468bb5c}\label{command__language__utils__unit_8cpp_aa81b87ae1bccbc0e8b47d643c468bb5c} 
+\index{command\_language\_utils\_unit.cpp@{command\_language\_utils\_unit.cpp}!EXPECT\_ANY\_THROW@{EXPECT\_ANY\_THROW}}
+\index{EXPECT\_ANY\_THROW@{EXPECT\_ANY\_THROW}!command\_language\_utils\_unit.cpp@{command\_language\_utils\_unit.cpp}}
+\doxysubsubsection{\texorpdfstring{EXPECT\_ANY\_THROW()}{EXPECT\_ANY\_THROW()}\hspace{0.1cm}{\footnotesize\ttfamily [4/18]}}
+{\footnotesize\ttfamily EXPECT\+\_\+\+ANY\+\_\+\+THROW (\begin{DoxyParamCaption}\item[{check\+Joint\+Position\+Format(\mbox{\hyperlink{command__language__utils__unit_8cpp_a5f85173ecc1ddcb342ebc27f28437f5c}{joint\+\_\+names}}, \mbox{\hyperlink{command__language__utils__unit_8cpp_ae1f8a8fc8391c292b501a077eee0b491}{wp2\+\_\+poly}})}]{ }\end{DoxyParamCaption})}
+
+\Hypertarget{command__language__utils__unit_8cpp_a52a92b1e0ae5fabde60c4a4eb3c15c43}\label{command__language__utils__unit_8cpp_a52a92b1e0ae5fabde60c4a4eb3c15c43} 
+\index{command\_language\_utils\_unit.cpp@{command\_language\_utils\_unit.cpp}!EXPECT\_ANY\_THROW@{EXPECT\_ANY\_THROW}}
+\index{EXPECT\_ANY\_THROW@{EXPECT\_ANY\_THROW}!command\_language\_utils\_unit.cpp@{command\_language\_utils\_unit.cpp}}
+\doxysubsubsection{\texorpdfstring{EXPECT\_ANY\_THROW()}{EXPECT\_ANY\_THROW()}\hspace{0.1cm}{\footnotesize\ttfamily [5/18]}}
+{\footnotesize\ttfamily EXPECT\+\_\+\+ANY\+\_\+\+THROW (\begin{DoxyParamCaption}\item[{clamp\+To\+Joint\+Limits(\mbox{\hyperlink{command__language__utils__unit_8cpp_ab62cac7a32358688149f032fca746418}{tmp}}, limits)}]{ }\end{DoxyParamCaption})}
+
+\Hypertarget{command__language__utils__unit_8cpp_ad392f46a0d4287f686c84f6a7118ccde}\label{command__language__utils__unit_8cpp_ad392f46a0d4287f686c84f6a7118ccde} 
+\index{command\_language\_utils\_unit.cpp@{command\_language\_utils\_unit.cpp}!EXPECT\_ANY\_THROW@{EXPECT\_ANY\_THROW}}
+\index{EXPECT\_ANY\_THROW@{EXPECT\_ANY\_THROW}!command\_language\_utils\_unit.cpp@{command\_language\_utils\_unit.cpp}}
+\doxysubsubsection{\texorpdfstring{EXPECT\_ANY\_THROW()}{EXPECT\_ANY\_THROW()}\hspace{0.1cm}{\footnotesize\ttfamily [6/18]}}
+{\footnotesize\ttfamily EXPECT\+\_\+\+ANY\+\_\+\+THROW (\begin{DoxyParamCaption}\item[{format\+Joint\+Position(\mbox{\hyperlink{command__language__utils__unit_8cpp_abe4496951a5423ffe6b08f927da7bb6e}{format\+\_\+joint\+\_\+names}}, \mbox{\hyperlink{command__language__utils__unit_8cpp_a9b11aaf39e77d0732c3a81ab867be07f}{error\+\_\+poly}})}]{ }\end{DoxyParamCaption})}
+
+\Hypertarget{command__language__utils__unit_8cpp_ae8b17cdfabd063b167433ef0f2fba331}\label{command__language__utils__unit_8cpp_ae8b17cdfabd063b167433ef0f2fba331} 
+\index{command\_language\_utils\_unit.cpp@{command\_language\_utils\_unit.cpp}!EXPECT\_ANY\_THROW@{EXPECT\_ANY\_THROW}}
+\index{EXPECT\_ANY\_THROW@{EXPECT\_ANY\_THROW}!command\_language\_utils\_unit.cpp@{command\_language\_utils\_unit.cpp}}
+\doxysubsubsection{\texorpdfstring{EXPECT\_ANY\_THROW()}{EXPECT\_ANY\_THROW()}\hspace{0.1cm}{\footnotesize\ttfamily [7/18]}}
+{\footnotesize\ttfamily EXPECT\+\_\+\+ANY\+\_\+\+THROW (\begin{DoxyParamCaption}\item[{format\+Joint\+Position(\{ "{}joint\+\_\+1"{} \}, \mbox{\hyperlink{command__language__utils__unit_8cpp_a3847bcd930c69e55d3abac2b0d604428}{wp0\+\_\+poly}})}]{ }\end{DoxyParamCaption})}
+
+\Hypertarget{command__language__utils__unit_8cpp_a096fb4b4b61880da18518e9235c7a063}\label{command__language__utils__unit_8cpp_a096fb4b4b61880da18518e9235c7a063} 
+\index{command\_language\_utils\_unit.cpp@{command\_language\_utils\_unit.cpp}!EXPECT\_ANY\_THROW@{EXPECT\_ANY\_THROW}}
+\index{EXPECT\_ANY\_THROW@{EXPECT\_ANY\_THROW}!command\_language\_utils\_unit.cpp@{command\_language\_utils\_unit.cpp}}
+\doxysubsubsection{\texorpdfstring{EXPECT\_ANY\_THROW()}{EXPECT\_ANY\_THROW()}\hspace{0.1cm}{\footnotesize\ttfamily [8/18]}}
+{\footnotesize\ttfamily EXPECT\+\_\+\+ANY\+\_\+\+THROW (\begin{DoxyParamCaption}\item[{format\+Joint\+Position(\{ "{}joint\+\_\+3"{}, "{}joint\+\_\+1"{} \}, \mbox{\hyperlink{command__language__utils__unit_8cpp_a3847bcd930c69e55d3abac2b0d604428}{wp0\+\_\+poly}})}]{ }\end{DoxyParamCaption})}
+
+\Hypertarget{command__language__utils__unit_8cpp_aa1dbc7210e0948649c21eb977deb0a52}\label{command__language__utils__unit_8cpp_aa1dbc7210e0948649c21eb977deb0a52} 
+\index{command\_language\_utils\_unit.cpp@{command\_language\_utils\_unit.cpp}!EXPECT\_ANY\_THROW@{EXPECT\_ANY\_THROW}}
+\index{EXPECT\_ANY\_THROW@{EXPECT\_ANY\_THROW}!command\_language\_utils\_unit.cpp@{command\_language\_utils\_unit.cpp}}
+\doxysubsubsection{\texorpdfstring{EXPECT\_ANY\_THROW()}{EXPECT\_ANY\_THROW()}\hspace{0.1cm}{\footnotesize\ttfamily [9/18]}}
+{\footnotesize\ttfamily EXPECT\+\_\+\+ANY\+\_\+\+THROW (\begin{DoxyParamCaption}\item[{get\+Joint\+Names(\mbox{\hyperlink{command__language__utils__unit_8cpp_a9b11aaf39e77d0732c3a81ab867be07f}{error\+\_\+poly}})}]{ }\end{DoxyParamCaption})}
+
+\Hypertarget{command__language__utils__unit_8cpp_af5fdc6cc7ecaae3aa82b5bd0e037314f}\label{command__language__utils__unit_8cpp_af5fdc6cc7ecaae3aa82b5bd0e037314f} 
+\index{command\_language\_utils\_unit.cpp@{command\_language\_utils\_unit.cpp}!EXPECT\_ANY\_THROW@{EXPECT\_ANY\_THROW}}
+\index{EXPECT\_ANY\_THROW@{EXPECT\_ANY\_THROW}!command\_language\_utils\_unit.cpp@{command\_language\_utils\_unit.cpp}}
+\doxysubsubsection{\texorpdfstring{EXPECT\_ANY\_THROW()}{EXPECT\_ANY\_THROW()}\hspace{0.1cm}{\footnotesize\ttfamily [10/18]}}
+{\footnotesize\ttfamily EXPECT\+\_\+\+ANY\+\_\+\+THROW (\begin{DoxyParamCaption}\item[{get\+Joint\+Names(\mbox{\hyperlink{command__language__utils__unit_8cpp_ae1f8a8fc8391c292b501a077eee0b491}{wp2\+\_\+poly}})}]{ }\end{DoxyParamCaption})}
+
+\Hypertarget{command__language__utils__unit_8cpp_af2180321bd5b09dd9f0b1182c6f1c0da}\label{command__language__utils__unit_8cpp_af2180321bd5b09dd9f0b1182c6f1c0da} 
+\index{command\_language\_utils\_unit.cpp@{command\_language\_utils\_unit.cpp}!EXPECT\_ANY\_THROW@{EXPECT\_ANY\_THROW}}
+\index{EXPECT\_ANY\_THROW@{EXPECT\_ANY\_THROW}!command\_language\_utils\_unit.cpp@{command\_language\_utils\_unit.cpp}}
+\doxysubsubsection{\texorpdfstring{EXPECT\_ANY\_THROW()}{EXPECT\_ANY\_THROW()}\hspace{0.1cm}{\footnotesize\ttfamily [11/18]}}
+{\footnotesize\ttfamily EXPECT\+\_\+\+ANY\+\_\+\+THROW (\begin{DoxyParamCaption}\item[{get\+Joint\+Position(\mbox{\hyperlink{command__language__utils__unit_8cpp_a9b11aaf39e77d0732c3a81ab867be07f}{error\+\_\+poly}})}]{ }\end{DoxyParamCaption})}
+
+\Hypertarget{command__language__utils__unit_8cpp_a726843e054380f0c98edc3f0e5effb1f}\label{command__language__utils__unit_8cpp_a726843e054380f0c98edc3f0e5effb1f} 
+\index{command\_language\_utils\_unit.cpp@{command\_language\_utils\_unit.cpp}!EXPECT\_ANY\_THROW@{EXPECT\_ANY\_THROW}}
+\index{EXPECT\_ANY\_THROW@{EXPECT\_ANY\_THROW}!command\_language\_utils\_unit.cpp@{command\_language\_utils\_unit.cpp}}
+\doxysubsubsection{\texorpdfstring{EXPECT\_ANY\_THROW()}{EXPECT\_ANY\_THROW()}\hspace{0.1cm}{\footnotesize\ttfamily [12/18]}}
+{\footnotesize\ttfamily EXPECT\+\_\+\+ANY\+\_\+\+THROW (\begin{DoxyParamCaption}\item[{get\+Joint\+Position(\mbox{\hyperlink{command__language__utils__unit_8cpp_abe4496951a5423ffe6b08f927da7bb6e}{format\+\_\+joint\+\_\+names}}, \mbox{\hyperlink{command__language__utils__unit_8cpp_a9b11aaf39e77d0732c3a81ab867be07f}{error\+\_\+poly}})}]{ }\end{DoxyParamCaption})}
+
+\Hypertarget{command__language__utils__unit_8cpp_a6260aeae5df151c1a361c97d60ea1d27}\label{command__language__utils__unit_8cpp_a6260aeae5df151c1a361c97d60ea1d27} 
+\index{command\_language\_utils\_unit.cpp@{command\_language\_utils\_unit.cpp}!EXPECT\_ANY\_THROW@{EXPECT\_ANY\_THROW}}
+\index{EXPECT\_ANY\_THROW@{EXPECT\_ANY\_THROW}!command\_language\_utils\_unit.cpp@{command\_language\_utils\_unit.cpp}}
+\doxysubsubsection{\texorpdfstring{EXPECT\_ANY\_THROW()}{EXPECT\_ANY\_THROW()}\hspace{0.1cm}{\footnotesize\ttfamily [13/18]}}
+{\footnotesize\ttfamily EXPECT\+\_\+\+ANY\+\_\+\+THROW (\begin{DoxyParamCaption}\item[{get\+Joint\+Position(\mbox{\hyperlink{command__language__utils__unit_8cpp_abe4496951a5423ffe6b08f927da7bb6e}{format\+\_\+joint\+\_\+names}}, \mbox{\hyperlink{command__language__utils__unit_8cpp_ae1f8a8fc8391c292b501a077eee0b491}{wp2\+\_\+poly}})}]{ }\end{DoxyParamCaption})}
+
+\Hypertarget{command__language__utils__unit_8cpp_ac62ee708f3cee3e090f30f02c7674c62}\label{command__language__utils__unit_8cpp_ac62ee708f3cee3e090f30f02c7674c62} 
+\index{command\_language\_utils\_unit.cpp@{command\_language\_utils\_unit.cpp}!EXPECT\_ANY\_THROW@{EXPECT\_ANY\_THROW}}
+\index{EXPECT\_ANY\_THROW@{EXPECT\_ANY\_THROW}!command\_language\_utils\_unit.cpp@{command\_language\_utils\_unit.cpp}}
+\doxysubsubsection{\texorpdfstring{EXPECT\_ANY\_THROW()}{EXPECT\_ANY\_THROW()}\hspace{0.1cm}{\footnotesize\ttfamily [14/18]}}
+{\footnotesize\ttfamily EXPECT\+\_\+\+ANY\+\_\+\+THROW (\begin{DoxyParamCaption}\item[{get\+Joint\+Position(\mbox{\hyperlink{command__language__utils__unit_8cpp_ae1f8a8fc8391c292b501a077eee0b491}{wp2\+\_\+poly}})}]{ }\end{DoxyParamCaption})}
+
+\Hypertarget{command__language__utils__unit_8cpp_a0307ad417c1827853e928661719d2e19}\label{command__language__utils__unit_8cpp_a0307ad417c1827853e928661719d2e19} 
+\index{command\_language\_utils\_unit.cpp@{command\_language\_utils\_unit.cpp}!EXPECT\_ANY\_THROW@{EXPECT\_ANY\_THROW}}
+\index{EXPECT\_ANY\_THROW@{EXPECT\_ANY\_THROW}!command\_language\_utils\_unit.cpp@{command\_language\_utils\_unit.cpp}}
+\doxysubsubsection{\texorpdfstring{EXPECT\_ANY\_THROW()}{EXPECT\_ANY\_THROW()}\hspace{0.1cm}{\footnotesize\ttfamily [15/18]}}
+{\footnotesize\ttfamily EXPECT\+\_\+\+ANY\+\_\+\+THROW (\begin{DoxyParamCaption}\item[{get\+Joint\+Position(\{ "{}joint\+\_\+1"{} \}, \mbox{\hyperlink{command__language__utils__unit_8cpp_a3847bcd930c69e55d3abac2b0d604428}{wp0\+\_\+poly}})}]{ }\end{DoxyParamCaption})}
+
+\Hypertarget{command__language__utils__unit_8cpp_a3d584d875ff45e8e66b63d9803fcaeba}\label{command__language__utils__unit_8cpp_a3d584d875ff45e8e66b63d9803fcaeba} 
+\index{command\_language\_utils\_unit.cpp@{command\_language\_utils\_unit.cpp}!EXPECT\_ANY\_THROW@{EXPECT\_ANY\_THROW}}
+\index{EXPECT\_ANY\_THROW@{EXPECT\_ANY\_THROW}!command\_language\_utils\_unit.cpp@{command\_language\_utils\_unit.cpp}}
+\doxysubsubsection{\texorpdfstring{EXPECT\_ANY\_THROW()}{EXPECT\_ANY\_THROW()}\hspace{0.1cm}{\footnotesize\ttfamily [16/18]}}
+{\footnotesize\ttfamily EXPECT\+\_\+\+ANY\+\_\+\+THROW (\begin{DoxyParamCaption}\item[{get\+Joint\+Position(\{ "{}joint\+\_\+3"{}, "{}joint\+\_\+1"{} \}, \mbox{\hyperlink{command__language__utils__unit_8cpp_a3847bcd930c69e55d3abac2b0d604428}{wp0\+\_\+poly}})}]{ }\end{DoxyParamCaption})}
+
+\Hypertarget{command__language__utils__unit_8cpp_a997f458c9578bd4c1f3480891557fe00}\label{command__language__utils__unit_8cpp_a997f458c9578bd4c1f3480891557fe00} 
+\index{command\_language\_utils\_unit.cpp@{command\_language\_utils\_unit.cpp}!EXPECT\_ANY\_THROW@{EXPECT\_ANY\_THROW}}
+\index{EXPECT\_ANY\_THROW@{EXPECT\_ANY\_THROW}!command\_language\_utils\_unit.cpp@{command\_language\_utils\_unit.cpp}}
+\doxysubsubsection{\texorpdfstring{EXPECT\_ANY\_THROW()}{EXPECT\_ANY\_THROW()}\hspace{0.1cm}{\footnotesize\ttfamily [17/18]}}
+{\footnotesize\ttfamily EXPECT\+\_\+\+ANY\+\_\+\+THROW (\begin{DoxyParamCaption}\item[{is\+Within\+Joint\+Limits(\mbox{\hyperlink{command__language__utils__unit_8cpp_ab62cac7a32358688149f032fca746418}{tmp}}, limits)}]{ }\end{DoxyParamCaption})}
+
+\Hypertarget{command__language__utils__unit_8cpp_a0ec0f5fb498af7e810a320d8c93d5908}\label{command__language__utils__unit_8cpp_a0ec0f5fb498af7e810a320d8c93d5908} 
+\index{command\_language\_utils\_unit.cpp@{command\_language\_utils\_unit.cpp}!EXPECT\_ANY\_THROW@{EXPECT\_ANY\_THROW}}
+\index{EXPECT\_ANY\_THROW@{EXPECT\_ANY\_THROW}!command\_language\_utils\_unit.cpp@{command\_language\_utils\_unit.cpp}}
+\doxysubsubsection{\texorpdfstring{EXPECT\_ANY\_THROW()}{EXPECT\_ANY\_THROW()}\hspace{0.1cm}{\footnotesize\ttfamily [18/18]}}
+{\footnotesize\ttfamily EXPECT\+\_\+\+ANY\+\_\+\+THROW (\begin{DoxyParamCaption}\item[{to\+Joint\+Trajectory(\mbox{\hyperlink{command__language__utils__unit_8cpp_a9b11aaf39e77d0732c3a81ab867be07f}{error\+\_\+poly}})}]{ }\end{DoxyParamCaption})}
+
+\Hypertarget{command__language__utils__unit_8cpp_a295d237ce9f8e2aa0be7058ced73cc65}\label{command__language__utils__unit_8cpp_a295d237ce9f8e2aa0be7058ced73cc65} 
+\index{command\_language\_utils\_unit.cpp@{command\_language\_utils\_unit.cpp}!EXPECT\_DOUBLE\_EQ@{EXPECT\_DOUBLE\_EQ}}
+\index{EXPECT\_DOUBLE\_EQ@{EXPECT\_DOUBLE\_EQ}!command\_language\_utils\_unit.cpp@{command\_language\_utils\_unit.cpp}}
+\doxysubsubsection{\texorpdfstring{EXPECT\_DOUBLE\_EQ()}{EXPECT\_DOUBLE\_EQ()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily EXPECT\+\_\+\+DOUBLE\+\_\+\+EQ (\begin{DoxyParamCaption}\item[{0}]{,  }\item[{tmp.\+as$<$ \mbox{\hyperlink{structtesseract__planning_1_1JointWaypointPoly}{Joint\+Waypoint\+Poly}} $>$}]{().\+get\+Position()\mbox{[}1\mbox{]} }\end{DoxyParamCaption})}
+
+\Hypertarget{command__language__utils__unit_8cpp_a7296fc73425f4e1bf5ae3ba6f1a5fccc}\label{command__language__utils__unit_8cpp_a7296fc73425f4e1bf5ae3ba6f1a5fccc} 
+\index{command\_language\_utils\_unit.cpp@{command\_language\_utils\_unit.cpp}!EXPECT\_DOUBLE\_EQ@{EXPECT\_DOUBLE\_EQ}}
+\index{EXPECT\_DOUBLE\_EQ@{EXPECT\_DOUBLE\_EQ}!command\_language\_utils\_unit.cpp@{command\_language\_utils\_unit.cpp}}
+\doxysubsubsection{\texorpdfstring{EXPECT\_DOUBLE\_EQ()}{EXPECT\_DOUBLE\_EQ()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily EXPECT\+\_\+\+DOUBLE\+\_\+\+EQ (\begin{DoxyParamCaption}\item[{2}]{,  }\item[{tmp.\+as$<$ \mbox{\hyperlink{structtesseract__planning_1_1JointWaypointPoly}{Joint\+Waypoint\+Poly}} $>$}]{().\+get\+Position()\mbox{[}2\mbox{]} }\end{DoxyParamCaption})}
+
+\Hypertarget{command__language__utils__unit_8cpp_ac9999b1938b6048a1222396d6821eab6}\label{command__language__utils__unit_8cpp_ac9999b1938b6048a1222396d6821eab6} 
+\index{command\_language\_utils\_unit.cpp@{command\_language\_utils\_unit.cpp}!EXPECT\_EQ@{EXPECT\_EQ}}
+\index{EXPECT\_EQ@{EXPECT\_EQ}!command\_language\_utils\_unit.cpp@{command\_language\_utils\_unit.cpp}}
+\doxysubsubsection{\texorpdfstring{EXPECT\_EQ()}{EXPECT\_EQ()}\hspace{0.1cm}{\footnotesize\ttfamily [1/8]}}
+{\footnotesize\ttfamily EXPECT\+\_\+\+EQ (\begin{DoxyParamCaption}\item[{flattened.}]{size(),  }\item[{\mbox{\hyperlink{command__language__utils__unit_8cpp_a092ed8c4b45835b56ca48a84c445aa9c}{i\+\_\+max}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{command__language__utils__unit_8cpp_afd03fc533586a7deb4136aa586ffd151}{j\+\_\+max}} \texorpdfstring{$\ast$}{*}}]{k\+\_\+max }\end{DoxyParamCaption})}
+
+\Hypertarget{command__language__utils__unit_8cpp_a5dd137abd4ee323361b9dbba44cef496}\label{command__language__utils__unit_8cpp_a5dd137abd4ee323361b9dbba44cef496} 
+\index{command\_language\_utils\_unit.cpp@{command\_language\_utils\_unit.cpp}!EXPECT\_EQ@{EXPECT\_EQ}}
+\index{EXPECT\_EQ@{EXPECT\_EQ}!command\_language\_utils\_unit.cpp@{command\_language\_utils\_unit.cpp}}
+\doxysubsubsection{\texorpdfstring{EXPECT\_EQ()}{EXPECT\_EQ()}\hspace{0.1cm}{\footnotesize\ttfamily [2/8]}}
+{\footnotesize\ttfamily EXPECT\+\_\+\+EQ (\begin{DoxyParamCaption}\item[{flattened.}]{size(),  }\item[{\mbox{\hyperlink{command__language__utils__unit_8cpp_a092ed8c4b45835b56ca48a84c445aa9c}{i\+\_\+max}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{command__language__utils__unit_8cpp_afd03fc533586a7deb4136aa586ffd151}{j\+\_\+max}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{command__language__utils__unit_8cpp_a759b771da76b4ea2832dff959538f503}{k\+\_\+max}}+}]{16 }\end{DoxyParamCaption})}
+
+\Hypertarget{command__language__utils__unit_8cpp_ad4080c90d6291409599c66b945fb08f8}\label{command__language__utils__unit_8cpp_ad4080c90d6291409599c66b945fb08f8} 
+\index{command\_language\_utils\_unit.cpp@{command\_language\_utils\_unit.cpp}!EXPECT\_EQ@{EXPECT\_EQ}}
+\index{EXPECT\_EQ@{EXPECT\_EQ}!command\_language\_utils\_unit.cpp@{command\_language\_utils\_unit.cpp}}
+\doxysubsubsection{\texorpdfstring{EXPECT\_EQ()}{EXPECT\_EQ()}\hspace{0.1cm}{\footnotesize\ttfamily [3/8]}}
+{\footnotesize\ttfamily EXPECT\+\_\+\+EQ (\begin{DoxyParamCaption}\item[{jt.}]{size(),  }\item[{16}]{ }\end{DoxyParamCaption})}
+
+\Hypertarget{command__language__utils__unit_8cpp_afc63ea0aff29ffc7c1d026e423c40c88}\label{command__language__utils__unit_8cpp_afc63ea0aff29ffc7c1d026e423c40c88} 
+\index{command\_language\_utils\_unit.cpp@{command\_language\_utils\_unit.cpp}!EXPECT\_EQ@{EXPECT\_EQ}}
+\index{EXPECT\_EQ@{EXPECT\_EQ}!command\_language\_utils\_unit.cpp@{command\_language\_utils\_unit.cpp}}
+\doxysubsubsection{\texorpdfstring{EXPECT\_EQ()}{EXPECT\_EQ()}\hspace{0.1cm}{\footnotesize\ttfamily [4/8]}}
+{\footnotesize\ttfamily EXPECT\+\_\+\+EQ (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{command__language__utils__unit_8cpp_a7c5db26aa9e3accfdc451ee4c4362355}{n0}}}]{,  }\item[{wp0.}]{get\+Names() }\end{DoxyParamCaption})}
+
+\Hypertarget{command__language__utils__unit_8cpp_a923aa7973bb4f8f37a7dbed2ff8baca0}\label{command__language__utils__unit_8cpp_a923aa7973bb4f8f37a7dbed2ff8baca0} 
+\index{command\_language\_utils\_unit.cpp@{command\_language\_utils\_unit.cpp}!EXPECT\_EQ@{EXPECT\_EQ}}
+\index{EXPECT\_EQ@{EXPECT\_EQ}!command\_language\_utils\_unit.cpp@{command\_language\_utils\_unit.cpp}}
+\doxysubsubsection{\texorpdfstring{EXPECT\_EQ()}{EXPECT\_EQ()}\hspace{0.1cm}{\footnotesize\ttfamily [5/8]}}
+{\footnotesize\ttfamily EXPECT\+\_\+\+EQ (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{command__language__utils__unit_8cpp_ad0f657f05fc87164531a7708c51b90f3}{n00}}}]{,  }\item[{wp00.}]{get\+Names() }\end{DoxyParamCaption})}
+
+\Hypertarget{command__language__utils__unit_8cpp_a75e9f873a36e45f8b31c835192131249}\label{command__language__utils__unit_8cpp_a75e9f873a36e45f8b31c835192131249} 
+\index{command\_language\_utils\_unit.cpp@{command\_language\_utils\_unit.cpp}!EXPECT\_EQ@{EXPECT\_EQ}}
+\index{EXPECT\_EQ@{EXPECT\_EQ}!command\_language\_utils\_unit.cpp@{command\_language\_utils\_unit.cpp}}
+\doxysubsubsection{\texorpdfstring{EXPECT\_EQ()}{EXPECT\_EQ()}\hspace{0.1cm}{\footnotesize\ttfamily [6/8]}}
+{\footnotesize\ttfamily EXPECT\+\_\+\+EQ (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{command__language__utils__unit_8cpp_a9b46236d2514eb436292f09e4aaf9500}{n1}}}]{,  }\item[{wp1.\+get\+Seed().}]{joint\+\_\+names }\end{DoxyParamCaption})}
+
+\Hypertarget{command__language__utils__unit_8cpp_ac003041b1ee656fe7540069f9b97bc47}\label{command__language__utils__unit_8cpp_ac003041b1ee656fe7540069f9b97bc47} 
+\index{command\_language\_utils\_unit.cpp@{command\_language\_utils\_unit.cpp}!EXPECT\_EQ@{EXPECT\_EQ}}
+\index{EXPECT\_EQ@{EXPECT\_EQ}!command\_language\_utils\_unit.cpp@{command\_language\_utils\_unit.cpp}}
+\doxysubsubsection{\texorpdfstring{EXPECT\_EQ()}{EXPECT\_EQ()}\hspace{0.1cm}{\footnotesize\ttfamily [7/8]}}
+{\footnotesize\ttfamily EXPECT\+\_\+\+EQ (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{command__language__utils__unit_8cpp_a2f1479cf121b88589846776c8612607a}{num\+\_\+composites}}}]{,  }\item[{0}]{ }\end{DoxyParamCaption})}
+
+\Hypertarget{command__language__utils__unit_8cpp_af90be4d502feba043d28e6236e5ba94e}\label{command__language__utils__unit_8cpp_af90be4d502feba043d28e6236e5ba94e} 
+\index{command\_language\_utils\_unit.cpp@{command\_language\_utils\_unit.cpp}!EXPECT\_EQ@{EXPECT\_EQ}}
+\index{EXPECT\_EQ@{EXPECT\_EQ}!command\_language\_utils\_unit.cpp@{command\_language\_utils\_unit.cpp}}
+\doxysubsubsection{\texorpdfstring{EXPECT\_EQ()}{EXPECT\_EQ()}\hspace{0.1cm}{\footnotesize\ttfamily [8/8]}}
+{\footnotesize\ttfamily EXPECT\+\_\+\+EQ (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{command__language__utils__unit_8cpp_a2f1479cf121b88589846776c8612607a}{num\+\_\+composites}}}]{,  }\item[{16}]{ }\end{DoxyParamCaption})}
+
+\Hypertarget{command__language__utils__unit_8cpp_a6341306fe804316a8e00963fb4b6e3f9}\label{command__language__utils__unit_8cpp_a6341306fe804316a8e00963fb4b6e3f9} 
+\index{command\_language\_utils\_unit.cpp@{command\_language\_utils\_unit.cpp}!EXPECT\_FALSE@{EXPECT\_FALSE}}
+\index{EXPECT\_FALSE@{EXPECT\_FALSE}!command\_language\_utils\_unit.cpp@{command\_language\_utils\_unit.cpp}}
+\doxysubsubsection{\texorpdfstring{EXPECT\_FALSE()}{EXPECT\_FALSE()}\hspace{0.1cm}{\footnotesize\ttfamily [1/12]}}
+{\footnotesize\ttfamily EXPECT\+\_\+\+FALSE (\begin{DoxyParamCaption}\item[{check\+Joint\+Position\+Format(\mbox{\hyperlink{command__language__utils__unit_8cpp_abe4496951a5423ffe6b08f927da7bb6e}{format\+\_\+joint\+\_\+names}}, \mbox{\hyperlink{command__language__utils__unit_8cpp_a32b869771792a9cd78494fbedc84d83d}{wp00\+\_\+poly}})}]{ }\end{DoxyParamCaption})}
+
+\Hypertarget{command__language__utils__unit_8cpp_a7b949bbef56d5d7cc56851e415b9458b}\label{command__language__utils__unit_8cpp_a7b949bbef56d5d7cc56851e415b9458b} 
+\index{command\_language\_utils\_unit.cpp@{command\_language\_utils\_unit.cpp}!EXPECT\_FALSE@{EXPECT\_FALSE}}
+\index{EXPECT\_FALSE@{EXPECT\_FALSE}!command\_language\_utils\_unit.cpp@{command\_language\_utils\_unit.cpp}}
+\doxysubsubsection{\texorpdfstring{EXPECT\_FALSE()}{EXPECT\_FALSE()}\hspace{0.1cm}{\footnotesize\ttfamily [2/12]}}
+{\footnotesize\ttfamily EXPECT\+\_\+\+FALSE (\begin{DoxyParamCaption}\item[{check\+Joint\+Position\+Format(\mbox{\hyperlink{command__language__utils__unit_8cpp_abe4496951a5423ffe6b08f927da7bb6e}{format\+\_\+joint\+\_\+names}}, \mbox{\hyperlink{command__language__utils__unit_8cpp_a3847bcd930c69e55d3abac2b0d604428}{wp0\+\_\+poly}})}]{ }\end{DoxyParamCaption})}
+
+\Hypertarget{command__language__utils__unit_8cpp_a3c68e361600e6b0e6a90479e4aabd7ba}\label{command__language__utils__unit_8cpp_a3c68e361600e6b0e6a90479e4aabd7ba} 
+\index{command\_language\_utils\_unit.cpp@{command\_language\_utils\_unit.cpp}!EXPECT\_FALSE@{EXPECT\_FALSE}}
+\index{EXPECT\_FALSE@{EXPECT\_FALSE}!command\_language\_utils\_unit.cpp@{command\_language\_utils\_unit.cpp}}
+\doxysubsubsection{\texorpdfstring{EXPECT\_FALSE()}{EXPECT\_FALSE()}\hspace{0.1cm}{\footnotesize\ttfamily [3/12]}}
+{\footnotesize\ttfamily EXPECT\+\_\+\+FALSE (\begin{DoxyParamCaption}\item[{check\+Joint\+Position\+Format(\mbox{\hyperlink{command__language__utils__unit_8cpp_abe4496951a5423ffe6b08f927da7bb6e}{format\+\_\+joint\+\_\+names}}, \mbox{\hyperlink{command__language__utils__unit_8cpp_adabd2b748029644c7b6cfc76d2304946}{wp1\+\_\+poly}})}]{ }\end{DoxyParamCaption})}
+
+\Hypertarget{command__language__utils__unit_8cpp_af06521b83b462ae0e28944975246524b}\label{command__language__utils__unit_8cpp_af06521b83b462ae0e28944975246524b} 
+\index{command\_language\_utils\_unit.cpp@{command\_language\_utils\_unit.cpp}!EXPECT\_FALSE@{EXPECT\_FALSE}}
+\index{EXPECT\_FALSE@{EXPECT\_FALSE}!command\_language\_utils\_unit.cpp@{command\_language\_utils\_unit.cpp}}
+\doxysubsubsection{\texorpdfstring{EXPECT\_FALSE()}{EXPECT\_FALSE()}\hspace{0.1cm}{\footnotesize\ttfamily [4/12]}}
+{\footnotesize\ttfamily EXPECT\+\_\+\+FALSE (\begin{DoxyParamCaption}\item[{check\+Joint\+Position\+Format(\{ "{}joint\+\_\+1"{} \}, \mbox{\hyperlink{command__language__utils__unit_8cpp_a3847bcd930c69e55d3abac2b0d604428}{wp0\+\_\+poly}})}]{ }\end{DoxyParamCaption})}
+
+\Hypertarget{command__language__utils__unit_8cpp_abb46f72177b1c50a52c9224ce1277fcb}\label{command__language__utils__unit_8cpp_abb46f72177b1c50a52c9224ce1277fcb} 
+\index{command\_language\_utils\_unit.cpp@{command\_language\_utils\_unit.cpp}!EXPECT\_FALSE@{EXPECT\_FALSE}}
+\index{EXPECT\_FALSE@{EXPECT\_FALSE}!command\_language\_utils\_unit.cpp@{command\_language\_utils\_unit.cpp}}
+\doxysubsubsection{\texorpdfstring{EXPECT\_FALSE()}{EXPECT\_FALSE()}\hspace{0.1cm}{\footnotesize\ttfamily [5/12]}}
+{\footnotesize\ttfamily EXPECT\+\_\+\+FALSE (\begin{DoxyParamCaption}\item[{check\+Joint\+Position\+Format(\{ "{}joint\+\_\+3"{}, "{}joint\+\_\+1"{} \}, \mbox{\hyperlink{command__language__utils__unit_8cpp_a3847bcd930c69e55d3abac2b0d604428}{wp0\+\_\+poly}})}]{ }\end{DoxyParamCaption})}
+
+\Hypertarget{command__language__utils__unit_8cpp_aee7604ee7ad5fb4fa08eee4bd14afd7f}\label{command__language__utils__unit_8cpp_aee7604ee7ad5fb4fa08eee4bd14afd7f} 
+\index{command\_language\_utils\_unit.cpp@{command\_language\_utils\_unit.cpp}!EXPECT\_FALSE@{EXPECT\_FALSE}}
+\index{EXPECT\_FALSE@{EXPECT\_FALSE}!command\_language\_utils\_unit.cpp@{command\_language\_utils\_unit.cpp}}
+\doxysubsubsection{\texorpdfstring{EXPECT\_FALSE()}{EXPECT\_FALSE()}\hspace{0.1cm}{\footnotesize\ttfamily [6/12]}}
+{\footnotesize\ttfamily EXPECT\+\_\+\+FALSE (\begin{DoxyParamCaption}\item[{clamp\+To\+Joint\+Limits(\mbox{\hyperlink{command__language__utils__unit_8cpp_ab62cac7a32358688149f032fca746418}{tmp}}, limits, 0.\+01)}]{ }\end{DoxyParamCaption})}
+
+\Hypertarget{command__language__utils__unit_8cpp_ab170bb4b8a4018f1522692f09d2657d9}\label{command__language__utils__unit_8cpp_ab170bb4b8a4018f1522692f09d2657d9} 
+\index{command\_language\_utils\_unit.cpp@{command\_language\_utils\_unit.cpp}!EXPECT\_FALSE@{EXPECT\_FALSE}}
+\index{EXPECT\_FALSE@{EXPECT\_FALSE}!command\_language\_utils\_unit.cpp@{command\_language\_utils\_unit.cpp}}
+\doxysubsubsection{\texorpdfstring{EXPECT\_FALSE()}{EXPECT\_FALSE()}\hspace{0.1cm}{\footnotesize\ttfamily [7/12]}}
+{\footnotesize\ttfamily EXPECT\+\_\+\+FALSE (\begin{DoxyParamCaption}\item[{format\+Joint\+Position(\mbox{\hyperlink{command__language__utils__unit_8cpp_abe4496951a5423ffe6b08f927da7bb6e}{format\+\_\+joint\+\_\+names}}, \mbox{\hyperlink{command__language__utils__unit_8cpp_ae1f8a8fc8391c292b501a077eee0b491}{wp2\+\_\+poly}})}]{ }\end{DoxyParamCaption})}
+
+\Hypertarget{command__language__utils__unit_8cpp_a87b7f2690021fd8f1f348928f30fb2f9}\label{command__language__utils__unit_8cpp_a87b7f2690021fd8f1f348928f30fb2f9} 
+\index{command\_language\_utils\_unit.cpp@{command\_language\_utils\_unit.cpp}!EXPECT\_FALSE@{EXPECT\_FALSE}}
+\index{EXPECT\_FALSE@{EXPECT\_FALSE}!command\_language\_utils\_unit.cpp@{command\_language\_utils\_unit.cpp}}
+\doxysubsubsection{\texorpdfstring{EXPECT\_FALSE()}{EXPECT\_FALSE()}\hspace{0.1cm}{\footnotesize\ttfamily [8/12]}}
+{\footnotesize\ttfamily EXPECT\+\_\+\+FALSE (\begin{DoxyParamCaption}\item[{format\+Joint\+Position(\mbox{\hyperlink{command__language__utils__unit_8cpp_a5f85173ecc1ddcb342ebc27f28437f5c}{joint\+\_\+names}}, \mbox{\hyperlink{command__language__utils__unit_8cpp_a4297e499990076f853e06fb3e0a92947}{wp1u\+\_\+poly}})}]{ }\end{DoxyParamCaption})}
+
+\Hypertarget{command__language__utils__unit_8cpp_a7cffd30ea7c77b43f25403e131d98317}\label{command__language__utils__unit_8cpp_a7cffd30ea7c77b43f25403e131d98317} 
+\index{command\_language\_utils\_unit.cpp@{command\_language\_utils\_unit.cpp}!EXPECT\_FALSE@{EXPECT\_FALSE}}
+\index{EXPECT\_FALSE@{EXPECT\_FALSE}!command\_language\_utils\_unit.cpp@{command\_language\_utils\_unit.cpp}}
+\doxysubsubsection{\texorpdfstring{EXPECT\_FALSE()}{EXPECT\_FALSE()}\hspace{0.1cm}{\footnotesize\ttfamily [9/12]}}
+{\footnotesize\ttfamily EXPECT\+\_\+\+FALSE (\begin{DoxyParamCaption}\item[{is\+Within\+Joint\+Limits(\mbox{\hyperlink{command__language__utils__unit_8cpp_ab62cac7a32358688149f032fca746418}{tmp}}, limits)}]{ }\end{DoxyParamCaption})}
+
+\Hypertarget{command__language__utils__unit_8cpp_a64878a126ca76dd933b3a07c4443294f}\label{command__language__utils__unit_8cpp_a64878a126ca76dd933b3a07c4443294f} 
+\index{command\_language\_utils\_unit.cpp@{command\_language\_utils\_unit.cpp}!EXPECT\_FALSE@{EXPECT\_FALSE}}
+\index{EXPECT\_FALSE@{EXPECT\_FALSE}!command\_language\_utils\_unit.cpp@{command\_language\_utils\_unit.cpp}}
+\doxysubsubsection{\texorpdfstring{EXPECT\_FALSE()}{EXPECT\_FALSE()}\hspace{0.1cm}{\footnotesize\ttfamily [10/12]}}
+{\footnotesize\ttfamily EXPECT\+\_\+\+FALSE (\begin{DoxyParamCaption}\item[{set\+Joint\+Position(\mbox{\hyperlink{command__language__utils__unit_8cpp_a9b11aaf39e77d0732c3a81ab867be07f}{error\+\_\+poly}}, \mbox{\hyperlink{command__language__utils__unit_8cpp_ac4ac75aacb87e6368380fb02ade8ca60}{set\+\_\+position}})}]{ }\end{DoxyParamCaption})}
+
+\Hypertarget{command__language__utils__unit_8cpp_a8a9514cac5515ec8a128d4a730372578}\label{command__language__utils__unit_8cpp_a8a9514cac5515ec8a128d4a730372578} 
+\index{command\_language\_utils\_unit.cpp@{command\_language\_utils\_unit.cpp}!EXPECT\_FALSE@{EXPECT\_FALSE}}
+\index{EXPECT\_FALSE@{EXPECT\_FALSE}!command\_language\_utils\_unit.cpp@{command\_language\_utils\_unit.cpp}}
+\doxysubsubsection{\texorpdfstring{EXPECT\_FALSE()}{EXPECT\_FALSE()}\hspace{0.1cm}{\footnotesize\ttfamily [11/12]}}
+{\footnotesize\ttfamily EXPECT\+\_\+\+FALSE (\begin{DoxyParamCaption}\item[{set\+Joint\+Position(\mbox{\hyperlink{command__language__utils__unit_8cpp_ae1f8a8fc8391c292b501a077eee0b491}{wp2\+\_\+poly}}, \mbox{\hyperlink{command__language__utils__unit_8cpp_ac4ac75aacb87e6368380fb02ade8ca60}{set\+\_\+position}})}]{ }\end{DoxyParamCaption})}
+
+\Hypertarget{command__language__utils__unit_8cpp_ac62141e2d9512e49964533f09e38d36a}\label{command__language__utils__unit_8cpp_ac62141e2d9512e49964533f09e38d36a} 
+\index{command\_language\_utils\_unit.cpp@{command\_language\_utils\_unit.cpp}!EXPECT\_FALSE@{EXPECT\_FALSE}}
+\index{EXPECT\_FALSE@{EXPECT\_FALSE}!command\_language\_utils\_unit.cpp@{command\_language\_utils\_unit.cpp}}
+\doxysubsubsection{\texorpdfstring{EXPECT\_FALSE()}{EXPECT\_FALSE()}\hspace{0.1cm}{\footnotesize\ttfamily [12/12]}}
+{\footnotesize\ttfamily EXPECT\+\_\+\+FALSE (\begin{DoxyParamCaption}\item[{tmp.\+as$<$ \mbox{\hyperlink{structtesseract__planning_1_1JointWaypointPoly}{Joint\+Waypoint\+Poly}} $>$}]{).\+get\+Position().\+is\+Approx(values, 1e-\/5 }\end{DoxyParamCaption})}
+
+\Hypertarget{command__language__utils__unit_8cpp_a52825153a7704ba491e93c2fe42ba1e5}\label{command__language__utils__unit_8cpp_a52825153a7704ba491e93c2fe42ba1e5} 
+\index{command\_language\_utils\_unit.cpp@{command\_language\_utils\_unit.cpp}!EXPECT\_TRUE@{EXPECT\_TRUE}}
+\index{EXPECT\_TRUE@{EXPECT\_TRUE}!command\_language\_utils\_unit.cpp@{command\_language\_utils\_unit.cpp}}
+\doxysubsubsection{\texorpdfstring{EXPECT\_TRUE()}{EXPECT\_TRUE()}\hspace{0.1cm}{\footnotesize\ttfamily [1/28]}}
+{\footnotesize\ttfamily EXPECT\+\_\+\+TRUE (\begin{DoxyParamCaption}\item[{check\+Joint\+Position\+Format(\mbox{\hyperlink{command__language__utils__unit_8cpp_a5f85173ecc1ddcb342ebc27f28437f5c}{joint\+\_\+names}}, \mbox{\hyperlink{command__language__utils__unit_8cpp_a32b869771792a9cd78494fbedc84d83d}{wp00\+\_\+poly}})}]{ }\end{DoxyParamCaption})}
+
+\Hypertarget{command__language__utils__unit_8cpp_a021b7eecb9375088d4447b0bdb827149}\label{command__language__utils__unit_8cpp_a021b7eecb9375088d4447b0bdb827149} 
+\index{command\_language\_utils\_unit.cpp@{command\_language\_utils\_unit.cpp}!EXPECT\_TRUE@{EXPECT\_TRUE}}
+\index{EXPECT\_TRUE@{EXPECT\_TRUE}!command\_language\_utils\_unit.cpp@{command\_language\_utils\_unit.cpp}}
+\doxysubsubsection{\texorpdfstring{EXPECT\_TRUE()}{EXPECT\_TRUE()}\hspace{0.1cm}{\footnotesize\ttfamily [2/28]}}
+{\footnotesize\ttfamily EXPECT\+\_\+\+TRUE (\begin{DoxyParamCaption}\item[{check\+Joint\+Position\+Format(\mbox{\hyperlink{command__language__utils__unit_8cpp_a5f85173ecc1ddcb342ebc27f28437f5c}{joint\+\_\+names}}, \mbox{\hyperlink{command__language__utils__unit_8cpp_a3847bcd930c69e55d3abac2b0d604428}{wp0\+\_\+poly}})}]{ }\end{DoxyParamCaption})}
+
+\Hypertarget{command__language__utils__unit_8cpp_a2353adb9d5a1645b2412ca3bd792b2e3}\label{command__language__utils__unit_8cpp_a2353adb9d5a1645b2412ca3bd792b2e3} 
+\index{command\_language\_utils\_unit.cpp@{command\_language\_utils\_unit.cpp}!EXPECT\_TRUE@{EXPECT\_TRUE}}
+\index{EXPECT\_TRUE@{EXPECT\_TRUE}!command\_language\_utils\_unit.cpp@{command\_language\_utils\_unit.cpp}}
+\doxysubsubsection{\texorpdfstring{EXPECT\_TRUE()}{EXPECT\_TRUE()}\hspace{0.1cm}{\footnotesize\ttfamily [3/28]}}
+{\footnotesize\ttfamily EXPECT\+\_\+\+TRUE (\begin{DoxyParamCaption}\item[{check\+Joint\+Position\+Format(\mbox{\hyperlink{command__language__utils__unit_8cpp_a5f85173ecc1ddcb342ebc27f28437f5c}{joint\+\_\+names}}, \mbox{\hyperlink{command__language__utils__unit_8cpp_adabd2b748029644c7b6cfc76d2304946}{wp1\+\_\+poly}})}]{ }\end{DoxyParamCaption})}
+
+\Hypertarget{command__language__utils__unit_8cpp_affc83e8b34f779b4d7a4394ba77c921a}\label{command__language__utils__unit_8cpp_affc83e8b34f779b4d7a4394ba77c921a} 
+\index{command\_language\_utils\_unit.cpp@{command\_language\_utils\_unit.cpp}!EXPECT\_TRUE@{EXPECT\_TRUE}}
+\index{EXPECT\_TRUE@{EXPECT\_TRUE}!command\_language\_utils\_unit.cpp@{command\_language\_utils\_unit.cpp}}
+\doxysubsubsection{\texorpdfstring{EXPECT\_TRUE()}{EXPECT\_TRUE()}\hspace{0.1cm}{\footnotesize\ttfamily [4/28]}}
+{\footnotesize\ttfamily EXPECT\+\_\+\+TRUE (\begin{DoxyParamCaption}\item[{clamp\+To\+Joint\+Limits(\mbox{\hyperlink{command__language__utils__unit_8cpp_ab62cac7a32358688149f032fca746418}{tmp}}, limits)}]{ }\end{DoxyParamCaption})}
+
+\Hypertarget{command__language__utils__unit_8cpp_a6d4e69abba0f0c250f9a23b994774da2}\label{command__language__utils__unit_8cpp_a6d4e69abba0f0c250f9a23b994774da2} 
+\index{command\_language\_utils\_unit.cpp@{command\_language\_utils\_unit.cpp}!EXPECT\_TRUE@{EXPECT\_TRUE}}
+\index{EXPECT\_TRUE@{EXPECT\_TRUE}!command\_language\_utils\_unit.cpp@{command\_language\_utils\_unit.cpp}}
+\doxysubsubsection{\texorpdfstring{EXPECT\_TRUE()}{EXPECT\_TRUE()}\hspace{0.1cm}{\footnotesize\ttfamily [5/28]}}
+{\footnotesize\ttfamily EXPECT\+\_\+\+TRUE (\begin{DoxyParamCaption}\item[{clamp\+To\+Joint\+Limits(\mbox{\hyperlink{command__language__utils__unit_8cpp_ab62cac7a32358688149f032fca746418}{tmp}}, limits, 0.\+1)}]{ }\end{DoxyParamCaption})}
+
+\Hypertarget{command__language__utils__unit_8cpp_a9dfd1dcd4c2fb9d31a1baca2183b7b23}\label{command__language__utils__unit_8cpp_a9dfd1dcd4c2fb9d31a1baca2183b7b23} 
+\index{command\_language\_utils\_unit.cpp@{command\_language\_utils\_unit.cpp}!EXPECT\_TRUE@{EXPECT\_TRUE}}
+\index{EXPECT\_TRUE@{EXPECT\_TRUE}!command\_language\_utils\_unit.cpp@{command\_language\_utils\_unit.cpp}}
+\doxysubsubsection{\texorpdfstring{EXPECT\_TRUE()}{EXPECT\_TRUE()}\hspace{0.1cm}{\footnotesize\ttfamily [6/28]}}
+{\footnotesize\ttfamily EXPECT\+\_\+\+TRUE (\begin{DoxyParamCaption}\item[{format\+Joint\+Position(\mbox{\hyperlink{command__language__utils__unit_8cpp_abe4496951a5423ffe6b08f927da7bb6e}{format\+\_\+joint\+\_\+names}}, \mbox{\hyperlink{command__language__utils__unit_8cpp_a32b869771792a9cd78494fbedc84d83d}{wp00\+\_\+poly}})}]{ }\end{DoxyParamCaption})}
+
+\Hypertarget{command__language__utils__unit_8cpp_a598702230cb0b49699f9f65727e2eed3}\label{command__language__utils__unit_8cpp_a598702230cb0b49699f9f65727e2eed3} 
+\index{command\_language\_utils\_unit.cpp@{command\_language\_utils\_unit.cpp}!EXPECT\_TRUE@{EXPECT\_TRUE}}
+\index{EXPECT\_TRUE@{EXPECT\_TRUE}!command\_language\_utils\_unit.cpp@{command\_language\_utils\_unit.cpp}}
+\doxysubsubsection{\texorpdfstring{EXPECT\_TRUE()}{EXPECT\_TRUE()}\hspace{0.1cm}{\footnotesize\ttfamily [7/28]}}
+{\footnotesize\ttfamily EXPECT\+\_\+\+TRUE (\begin{DoxyParamCaption}\item[{format\+Joint\+Position(\mbox{\hyperlink{command__language__utils__unit_8cpp_abe4496951a5423ffe6b08f927da7bb6e}{format\+\_\+joint\+\_\+names}}, \mbox{\hyperlink{command__language__utils__unit_8cpp_a3847bcd930c69e55d3abac2b0d604428}{wp0\+\_\+poly}})}]{ }\end{DoxyParamCaption})}
+
+\Hypertarget{command__language__utils__unit_8cpp_a5170c98fc2c3c6e9058fc20bce854b3b}\label{command__language__utils__unit_8cpp_a5170c98fc2c3c6e9058fc20bce854b3b} 
+\index{command\_language\_utils\_unit.cpp@{command\_language\_utils\_unit.cpp}!EXPECT\_TRUE@{EXPECT\_TRUE}}
+\index{EXPECT\_TRUE@{EXPECT\_TRUE}!command\_language\_utils\_unit.cpp@{command\_language\_utils\_unit.cpp}}
+\doxysubsubsection{\texorpdfstring{EXPECT\_TRUE()}{EXPECT\_TRUE()}\hspace{0.1cm}{\footnotesize\ttfamily [8/28]}}
+{\footnotesize\ttfamily EXPECT\+\_\+\+TRUE (\begin{DoxyParamCaption}\item[{format\+Joint\+Position(\mbox{\hyperlink{command__language__utils__unit_8cpp_abe4496951a5423ffe6b08f927da7bb6e}{format\+\_\+joint\+\_\+names}}, \mbox{\hyperlink{command__language__utils__unit_8cpp_adabd2b748029644c7b6cfc76d2304946}{wp1\+\_\+poly}})}]{ }\end{DoxyParamCaption})}
+
+\Hypertarget{command__language__utils__unit_8cpp_a5d289b45a1160720e7ae6fddd127208d}\label{command__language__utils__unit_8cpp_a5d289b45a1160720e7ae6fddd127208d} 
+\index{command\_language\_utils\_unit.cpp@{command\_language\_utils\_unit.cpp}!EXPECT\_TRUE@{EXPECT\_TRUE}}
+\index{EXPECT\_TRUE@{EXPECT\_TRUE}!command\_language\_utils\_unit.cpp@{command\_language\_utils\_unit.cpp}}
+\doxysubsubsection{\texorpdfstring{EXPECT\_TRUE()}{EXPECT\_TRUE()}\hspace{0.1cm}{\footnotesize\ttfamily [9/28]}}
+{\footnotesize\ttfamily EXPECT\+\_\+\+TRUE (\begin{DoxyParamCaption}\item[{is\+Within\+Joint\+Limits(\mbox{\hyperlink{command__language__utils__unit_8cpp_ab62cac7a32358688149f032fca746418}{tmp}}, limits)}]{ }\end{DoxyParamCaption})}
+
+\Hypertarget{command__language__utils__unit_8cpp_a64204306b59133271578467e55038f20}\label{command__language__utils__unit_8cpp_a64204306b59133271578467e55038f20} 
+\index{command\_language\_utils\_unit.cpp@{command\_language\_utils\_unit.cpp}!EXPECT\_TRUE@{EXPECT\_TRUE}}
+\index{EXPECT\_TRUE@{EXPECT\_TRUE}!command\_language\_utils\_unit.cpp@{command\_language\_utils\_unit.cpp}}
+\doxysubsubsection{\texorpdfstring{EXPECT\_TRUE()}{EXPECT\_TRUE()}\hspace{0.1cm}{\footnotesize\ttfamily [10/28]}}
+{\footnotesize\ttfamily EXPECT\+\_\+\+TRUE (\begin{DoxyParamCaption}\item[{p0.}]{is\+Approxformat\+\_\+position0 }\end{DoxyParamCaption})}
+
+\Hypertarget{command__language__utils__unit_8cpp_a32b7bf22a514cfcff5d4e14d57ab1a8b}\label{command__language__utils__unit_8cpp_a32b7bf22a514cfcff5d4e14d57ab1a8b} 
+\index{command\_language\_utils\_unit.cpp@{command\_language\_utils\_unit.cpp}!EXPECT\_TRUE@{EXPECT\_TRUE}}
+\index{EXPECT\_TRUE@{EXPECT\_TRUE}!command\_language\_utils\_unit.cpp@{command\_language\_utils\_unit.cpp}}
+\doxysubsubsection{\texorpdfstring{EXPECT\_TRUE()}{EXPECT\_TRUE()}\hspace{0.1cm}{\footnotesize\ttfamily [11/28]}}
+{\footnotesize\ttfamily EXPECT\+\_\+\+TRUE (\begin{DoxyParamCaption}\item[{p0.}]{is\+Approxwp0.\+get\+Position() }\end{DoxyParamCaption})}
+
+\Hypertarget{command__language__utils__unit_8cpp_ae1c0cedd2810cc527454d1163e9d41d2}\label{command__language__utils__unit_8cpp_ae1c0cedd2810cc527454d1163e9d41d2} 
+\index{command\_language\_utils\_unit.cpp@{command\_language\_utils\_unit.cpp}!EXPECT\_TRUE@{EXPECT\_TRUE}}
+\index{EXPECT\_TRUE@{EXPECT\_TRUE}!command\_language\_utils\_unit.cpp@{command\_language\_utils\_unit.cpp}}
+\doxysubsubsection{\texorpdfstring{EXPECT\_TRUE()}{EXPECT\_TRUE()}\hspace{0.1cm}{\footnotesize\ttfamily [12/28]}}
+{\footnotesize\ttfamily EXPECT\+\_\+\+TRUE (\begin{DoxyParamCaption}\item[{p00.}]{is\+Approxformat\+\_\+position00 }\end{DoxyParamCaption})}
+
+\Hypertarget{command__language__utils__unit_8cpp_aa8188727acf8b18ae8cfd3e0617241bf}\label{command__language__utils__unit_8cpp_aa8188727acf8b18ae8cfd3e0617241bf} 
+\index{command\_language\_utils\_unit.cpp@{command\_language\_utils\_unit.cpp}!EXPECT\_TRUE@{EXPECT\_TRUE}}
+\index{EXPECT\_TRUE@{EXPECT\_TRUE}!command\_language\_utils\_unit.cpp@{command\_language\_utils\_unit.cpp}}
+\doxysubsubsection{\texorpdfstring{EXPECT\_TRUE()}{EXPECT\_TRUE()}\hspace{0.1cm}{\footnotesize\ttfamily [13/28]}}
+{\footnotesize\ttfamily EXPECT\+\_\+\+TRUE (\begin{DoxyParamCaption}\item[{p00.}]{is\+Approxwp00.\+get\+Position() }\end{DoxyParamCaption})}
+
+\Hypertarget{command__language__utils__unit_8cpp_ab62fe18e5763b4a85426d071c8790eb1}\label{command__language__utils__unit_8cpp_ab62fe18e5763b4a85426d071c8790eb1} 
+\index{command\_language\_utils\_unit.cpp@{command\_language\_utils\_unit.cpp}!EXPECT\_TRUE@{EXPECT\_TRUE}}
+\index{EXPECT\_TRUE@{EXPECT\_TRUE}!command\_language\_utils\_unit.cpp@{command\_language\_utils\_unit.cpp}}
+\doxysubsubsection{\texorpdfstring{EXPECT\_TRUE()}{EXPECT\_TRUE()}\hspace{0.1cm}{\footnotesize\ttfamily [14/28]}}
+{\footnotesize\ttfamily EXPECT\+\_\+\+TRUE (\begin{DoxyParamCaption}\item[{p1.}]{is\+Approxformat\+\_\+seed\+\_\+position }\end{DoxyParamCaption})}
+
+\Hypertarget{command__language__utils__unit_8cpp_ace3922aca6fb5c2378ab1e100e895992}\label{command__language__utils__unit_8cpp_ace3922aca6fb5c2378ab1e100e895992} 
+\index{command\_language\_utils\_unit.cpp@{command\_language\_utils\_unit.cpp}!EXPECT\_TRUE@{EXPECT\_TRUE}}
+\index{EXPECT\_TRUE@{EXPECT\_TRUE}!command\_language\_utils\_unit.cpp@{command\_language\_utils\_unit.cpp}}
+\doxysubsubsection{\texorpdfstring{EXPECT\_TRUE()}{EXPECT\_TRUE()}\hspace{0.1cm}{\footnotesize\ttfamily [15/28]}}
+{\footnotesize\ttfamily EXPECT\+\_\+\+TRUE (\begin{DoxyParamCaption}\item[{p1.}]{is\+Approxwp1.\+get\+Seed().\+position }\end{DoxyParamCaption})}
+
+\Hypertarget{command__language__utils__unit_8cpp_a6f2b31aff031710405bedf6dfa107602}\label{command__language__utils__unit_8cpp_a6f2b31aff031710405bedf6dfa107602} 
+\index{command\_language\_utils\_unit.cpp@{command\_language\_utils\_unit.cpp}!EXPECT\_TRUE@{EXPECT\_TRUE}}
+\index{EXPECT\_TRUE@{EXPECT\_TRUE}!command\_language\_utils\_unit.cpp@{command\_language\_utils\_unit.cpp}}
+\doxysubsubsection{\texorpdfstring{EXPECT\_TRUE()}{EXPECT\_TRUE()}\hspace{0.1cm}{\footnotesize\ttfamily [16/28]}}
+{\footnotesize\ttfamily EXPECT\+\_\+\+TRUE (\begin{DoxyParamCaption}\item[{p1u.}]{is\+Approxseed\+\_\+position }\end{DoxyParamCaption})}
+
+\Hypertarget{command__language__utils__unit_8cpp_a98dc2a40ad8d02346f229640cd83e73d}\label{command__language__utils__unit_8cpp_a98dc2a40ad8d02346f229640cd83e73d} 
+\index{command\_language\_utils\_unit.cpp@{command\_language\_utils\_unit.cpp}!EXPECT\_TRUE@{EXPECT\_TRUE}}
+\index{EXPECT\_TRUE@{EXPECT\_TRUE}!command\_language\_utils\_unit.cpp@{command\_language\_utils\_unit.cpp}}
+\doxysubsubsection{\texorpdfstring{EXPECT\_TRUE()}{EXPECT\_TRUE()}\hspace{0.1cm}{\footnotesize\ttfamily [17/28]}}
+{\footnotesize\ttfamily EXPECT\+\_\+\+TRUE (\begin{DoxyParamCaption}\item[{set\+\_\+position.}]{is\+Approxwp00\+\_\+poly.\+as$<$ Joint\+Waypoint\+Poly $>$().\+get\+Position() }\end{DoxyParamCaption})}
+
+\Hypertarget{command__language__utils__unit_8cpp_ab1b6474ec7575d5694cd82a50d538e13}\label{command__language__utils__unit_8cpp_ab1b6474ec7575d5694cd82a50d538e13} 
+\index{command\_language\_utils\_unit.cpp@{command\_language\_utils\_unit.cpp}!EXPECT\_TRUE@{EXPECT\_TRUE}}
+\index{EXPECT\_TRUE@{EXPECT\_TRUE}!command\_language\_utils\_unit.cpp@{command\_language\_utils\_unit.cpp}}
+\doxysubsubsection{\texorpdfstring{EXPECT\_TRUE()}{EXPECT\_TRUE()}\hspace{0.1cm}{\footnotesize\ttfamily [18/28]}}
+{\footnotesize\ttfamily EXPECT\+\_\+\+TRUE (\begin{DoxyParamCaption}\item[{set\+\_\+position.}]{is\+Approxwp0\+\_\+poly.\+as$<$ State\+Waypoint\+Poly $>$().\+get\+Position() }\end{DoxyParamCaption})}
+
+\Hypertarget{command__language__utils__unit_8cpp_ab945ce3a2ee93a8887fdb92e85d133e6}\label{command__language__utils__unit_8cpp_ab945ce3a2ee93a8887fdb92e85d133e6} 
+\index{command\_language\_utils\_unit.cpp@{command\_language\_utils\_unit.cpp}!EXPECT\_TRUE@{EXPECT\_TRUE}}
+\index{EXPECT\_TRUE@{EXPECT\_TRUE}!command\_language\_utils\_unit.cpp@{command\_language\_utils\_unit.cpp}}
+\doxysubsubsection{\texorpdfstring{EXPECT\_TRUE()}{EXPECT\_TRUE()}\hspace{0.1cm}{\footnotesize\ttfamily [19/28]}}
+{\footnotesize\ttfamily EXPECT\+\_\+\+TRUE (\begin{DoxyParamCaption}\item[{set\+\_\+position.}]{is\+Approxwp1\+\_\+poly.\+as$<$ Cartesian\+Waypoint\+Poly $>$().\+get\+Seed().\+position }\end{DoxyParamCaption})}
+
+\Hypertarget{command__language__utils__unit_8cpp_ab1f447d63b7160dabb563012c6407b7d}\label{command__language__utils__unit_8cpp_ab1f447d63b7160dabb563012c6407b7d} 
+\index{command\_language\_utils\_unit.cpp@{command\_language\_utils\_unit.cpp}!EXPECT\_TRUE@{EXPECT\_TRUE}}
+\index{EXPECT\_TRUE@{EXPECT\_TRUE}!command\_language\_utils\_unit.cpp@{command\_language\_utils\_unit.cpp}}
+\doxysubsubsection{\texorpdfstring{EXPECT\_TRUE()}{EXPECT\_TRUE()}\hspace{0.1cm}{\footnotesize\ttfamily [20/28]}}
+{\footnotesize\ttfamily EXPECT\+\_\+\+TRUE (\begin{DoxyParamCaption}\item[{set\+Joint\+Position(\mbox{\hyperlink{command__language__utils__unit_8cpp_a32b869771792a9cd78494fbedc84d83d}{wp00\+\_\+poly}}, \mbox{\hyperlink{command__language__utils__unit_8cpp_ac4ac75aacb87e6368380fb02ade8ca60}{set\+\_\+position}})}]{ }\end{DoxyParamCaption})}
+
+\Hypertarget{command__language__utils__unit_8cpp_a0fab71af327f20791cb1b46ff2da9e16}\label{command__language__utils__unit_8cpp_a0fab71af327f20791cb1b46ff2da9e16} 
+\index{command\_language\_utils\_unit.cpp@{command\_language\_utils\_unit.cpp}!EXPECT\_TRUE@{EXPECT\_TRUE}}
+\index{EXPECT\_TRUE@{EXPECT\_TRUE}!command\_language\_utils\_unit.cpp@{command\_language\_utils\_unit.cpp}}
+\doxysubsubsection{\texorpdfstring{EXPECT\_TRUE()}{EXPECT\_TRUE()}\hspace{0.1cm}{\footnotesize\ttfamily [21/28]}}
+{\footnotesize\ttfamily EXPECT\+\_\+\+TRUE (\begin{DoxyParamCaption}\item[{set\+Joint\+Position(\mbox{\hyperlink{command__language__utils__unit_8cpp_a3847bcd930c69e55d3abac2b0d604428}{wp0\+\_\+poly}}, \mbox{\hyperlink{command__language__utils__unit_8cpp_ac4ac75aacb87e6368380fb02ade8ca60}{set\+\_\+position}})}]{ }\end{DoxyParamCaption})}
+
+\Hypertarget{command__language__utils__unit_8cpp_aa4198114f59ebd072a542d8d37e61774}\label{command__language__utils__unit_8cpp_aa4198114f59ebd072a542d8d37e61774} 
+\index{command\_language\_utils\_unit.cpp@{command\_language\_utils\_unit.cpp}!EXPECT\_TRUE@{EXPECT\_TRUE}}
+\index{EXPECT\_TRUE@{EXPECT\_TRUE}!command\_language\_utils\_unit.cpp@{command\_language\_utils\_unit.cpp}}
+\doxysubsubsection{\texorpdfstring{EXPECT\_TRUE()}{EXPECT\_TRUE()}\hspace{0.1cm}{\footnotesize\ttfamily [22/28]}}
+{\footnotesize\ttfamily EXPECT\+\_\+\+TRUE (\begin{DoxyParamCaption}\item[{set\+Joint\+Position(\mbox{\hyperlink{command__language__utils__unit_8cpp_adabd2b748029644c7b6cfc76d2304946}{wp1\+\_\+poly}}, \mbox{\hyperlink{command__language__utils__unit_8cpp_ac4ac75aacb87e6368380fb02ade8ca60}{set\+\_\+position}})}]{ }\end{DoxyParamCaption})}
+
+\Hypertarget{command__language__utils__unit_8cpp_ab670c11caf38d1eda627ed5dc8c2604d}\label{command__language__utils__unit_8cpp_ab670c11caf38d1eda627ed5dc8c2604d} 
+\index{command\_language\_utils\_unit.cpp@{command\_language\_utils\_unit.cpp}!EXPECT\_TRUE@{EXPECT\_TRUE}}
+\index{EXPECT\_TRUE@{EXPECT\_TRUE}!command\_language\_utils\_unit.cpp@{command\_language\_utils\_unit.cpp}}
+\doxysubsubsection{\texorpdfstring{EXPECT\_TRUE()}{EXPECT\_TRUE()}\hspace{0.1cm}{\footnotesize\ttfamily [23/28]}}
+{\footnotesize\ttfamily EXPECT\+\_\+\+TRUE (\begin{DoxyParamCaption}\item[{tmp.\+as$<$ \mbox{\hyperlink{structtesseract__planning_1_1JointWaypointPoly}{Joint\+Waypoint\+Poly}} $>$}]{).\+get\+Position().\+is\+Approx(values, 1e-\/5 }\end{DoxyParamCaption})}
+
+\Hypertarget{command__language__utils__unit_8cpp_aba4907dbdb70256212032194fa14425a}\label{command__language__utils__unit_8cpp_aba4907dbdb70256212032194fa14425a} 
+\index{command\_language\_utils\_unit.cpp@{command\_language\_utils\_unit.cpp}!EXPECT\_TRUE@{EXPECT\_TRUE}}
+\index{EXPECT\_TRUE@{EXPECT\_TRUE}!command\_language\_utils\_unit.cpp@{command\_language\_utils\_unit.cpp}}
+\doxysubsubsection{\texorpdfstring{EXPECT\_TRUE()}{EXPECT\_TRUE()}\hspace{0.1cm}{\footnotesize\ttfamily [24/28]}}
+{\footnotesize\ttfamily EXPECT\+\_\+\+TRUE (\begin{DoxyParamCaption}\item[{to\+Delimited\+File(composite, \mbox{\hyperlink{command__language__utils__unit_8cpp_a4d455efceee21e97d8e21ee40e9b4a20}{path}})}]{ }\end{DoxyParamCaption})}
+
+\Hypertarget{command__language__utils__unit_8cpp_a7848b74a00a561930360fc02f85b9e76}\label{command__language__utils__unit_8cpp_a7848b74a00a561930360fc02f85b9e76} 
+\index{command\_language\_utils\_unit.cpp@{command\_language\_utils\_unit.cpp}!EXPECT\_TRUE@{EXPECT\_TRUE}}
+\index{EXPECT\_TRUE@{EXPECT\_TRUE}!command\_language\_utils\_unit.cpp@{command\_language\_utils\_unit.cpp}}
+\doxysubsubsection{\texorpdfstring{EXPECT\_TRUE()}{EXPECT\_TRUE()}\hspace{0.1cm}{\footnotesize\ttfamily [25/28]}}
+{\footnotesize\ttfamily EXPECT\+\_\+\+TRUE (\begin{DoxyParamCaption}\item[{wp00\+\_\+poly.\+as$<$ \mbox{\hyperlink{structtesseract__planning_1_1JointWaypointPoly}{Joint\+Waypoint\+Poly}} $>$}]{).\+get\+Position().\+is\+Approx(format\+\_\+position00 }\end{DoxyParamCaption})}
+
+\Hypertarget{command__language__utils__unit_8cpp_a379901952ec6994d466cc9fa9e7f88fc}\label{command__language__utils__unit_8cpp_a379901952ec6994d466cc9fa9e7f88fc} 
+\index{command\_language\_utils\_unit.cpp@{command\_language\_utils\_unit.cpp}!EXPECT\_TRUE@{EXPECT\_TRUE}}
+\index{EXPECT\_TRUE@{EXPECT\_TRUE}!command\_language\_utils\_unit.cpp@{command\_language\_utils\_unit.cpp}}
+\doxysubsubsection{\texorpdfstring{EXPECT\_TRUE()}{EXPECT\_TRUE()}\hspace{0.1cm}{\footnotesize\ttfamily [26/28]}}
+{\footnotesize\ttfamily EXPECT\+\_\+\+TRUE (\begin{DoxyParamCaption}\item[{wp0\+\_\+poly.\+as$<$ \mbox{\hyperlink{structtesseract__planning_1_1StateWaypointPoly}{State\+Waypoint\+Poly}} $>$}]{).\+get\+Position().\+is\+Approx(format\+\_\+position0 }\end{DoxyParamCaption})}
+
+\Hypertarget{command__language__utils__unit_8cpp_ac9ac24755f7ce6782e33a5285a442b2d}\label{command__language__utils__unit_8cpp_ac9ac24755f7ce6782e33a5285a442b2d} 
+\index{command\_language\_utils\_unit.cpp@{command\_language\_utils\_unit.cpp}!EXPECT\_TRUE@{EXPECT\_TRUE}}
+\index{EXPECT\_TRUE@{EXPECT\_TRUE}!command\_language\_utils\_unit.cpp@{command\_language\_utils\_unit.cpp}}
+\doxysubsubsection{\texorpdfstring{EXPECT\_TRUE()}{EXPECT\_TRUE()}\hspace{0.1cm}{\footnotesize\ttfamily [27/28]}}
+{\footnotesize\ttfamily EXPECT\+\_\+\+TRUE (\begin{DoxyParamCaption}\item[{wp1\+\_\+poly.\+as$<$ \mbox{\hyperlink{structtesseract__planning_1_1CartesianWaypointPoly}{Cartesian\+Waypoint\+Poly}} $>$}]{).\+get\+Seed().\+position.\+is\+Approx(format\+\_\+seed\+\_\+position }\end{DoxyParamCaption})}
+
+\Hypertarget{command__language__utils__unit_8cpp_af458c467f6dc454c9b7fdf94cf9df409}\label{command__language__utils__unit_8cpp_af458c467f6dc454c9b7fdf94cf9df409} 
+\index{command\_language\_utils\_unit.cpp@{command\_language\_utils\_unit.cpp}!EXPECT\_TRUE@{EXPECT\_TRUE}}
+\index{EXPECT\_TRUE@{EXPECT\_TRUE}!command\_language\_utils\_unit.cpp@{command\_language\_utils\_unit.cpp}}
+\doxysubsubsection{\texorpdfstring{EXPECT\_TRUE()}{EXPECT\_TRUE()}\hspace{0.1cm}{\footnotesize\ttfamily [28/28]}}
+{\footnotesize\ttfamily EXPECT\+\_\+\+TRUE (\begin{DoxyParamCaption}\item[{wp1u\+\_\+poly.\+as$<$ \mbox{\hyperlink{structtesseract__planning_1_1CartesianWaypointPoly}{Cartesian\+Waypoint\+Poly}} $>$}]{).\+get\+Seed().\+position.\+is\+Approx(seed\+\_\+position }\end{DoxyParamCaption})}
+
+\Hypertarget{command__language__utils__unit_8cpp_a87d5c7d2a3dea1dbabbc992403175426}\label{command__language__utils__unit_8cpp_a87d5c7d2a3dea1dbabbc992403175426} 
+\index{command\_language\_utils\_unit.cpp@{command\_language\_utils\_unit.cpp}!file@{file}}
+\index{file@{file}!command\_language\_utils\_unit.cpp@{command\_language\_utils\_unit.cpp}}
+\doxysubsubsection{\texorpdfstring{file()}{file()}}
+{\footnotesize\ttfamily std\+::ifstream file (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{command__language__utils__unit_8cpp_a4d455efceee21e97d8e21ee40e9b4a20}{path}}}]{ }\end{DoxyParamCaption})}
+
+\Hypertarget{command__language__utils__unit_8cpp_a18ab5c6011f695de7d3f24fee63334ac}\label{command__language__utils__unit_8cpp_a18ab5c6011f695de7d3f24fee63334ac} 
+\index{command\_language\_utils\_unit.cpp@{command\_language\_utils\_unit.cpp}!for@{for}}
+\index{for@{for}!command\_language\_utils\_unit.cpp@{command\_language\_utils\_unit.cpp}}
+\doxysubsubsection{\texorpdfstring{for()}{for()}}
+{\footnotesize\ttfamily for (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{command__language__utils__unit_8cpp_a12e146f85f6b5ae7eeed3ed2b7379e2e}\label{command__language__utils__unit_8cpp_a12e146f85f6b5ae7eeed3ed2b7379e2e} 
+\index{command\_language\_utils\_unit.cpp@{command\_language\_utils\_unit.cpp}!if@{if}}
+\index{if@{if}!command\_language\_utils\_unit.cpp@{command\_language\_utils\_unit.cpp}}
+\doxysubsubsection{\texorpdfstring{if()}{if()}}
+{\footnotesize\ttfamily if (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{command__language__utils__unit_8cpp_a9c4ab189c2f018bc7ccc8ba4f6e04b9d}{DEBUG}}}]{ }\end{DoxyParamCaption})}
+
+\Hypertarget{command__language__utils__unit_8cpp_af21d30c87e87931298afb1eb6f703551}\label{command__language__utils__unit_8cpp_af21d30c87e87931298afb1eb6f703551} 
+\index{command\_language\_utils\_unit.cpp@{command\_language\_utils\_unit.cpp}!manip\_info@{manip\_info}}
+\index{manip\_info@{manip\_info}!command\_language\_utils\_unit.cpp@{command\_language\_utils\_unit.cpp}}
+\doxysubsubsection{\texorpdfstring{manip\_info()}{manip\_info()}}
+{\footnotesize\ttfamily Manipulator\+Info manip\+\_\+info (\begin{DoxyParamCaption}\item[{"{}manipulator"{}}]{,  }\item[{"{}world"{}}]{,  }\item[{"{}tool0"{}}]{ }\end{DoxyParamCaption})}
+
+\Hypertarget{command__language__utils__unit_8cpp_a2206483e0ff841c49931a218a7e6dd75}\label{command__language__utils__unit_8cpp_a2206483e0ff841c49931a218a7e6dd75} 
+\index{command\_language\_utils\_unit.cpp@{command\_language\_utils\_unit.cpp}!setDescription@{setDescription}}
+\index{setDescription@{setDescription}!command\_language\_utils\_unit.cpp@{command\_language\_utils\_unit.cpp}}
+\doxysubsubsection{\texorpdfstring{setDescription()}{setDescription()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{command__language__utils__unit_8cpp_aee4421fb9a77d998ac23b1e88505a75a}{end\+\_\+instruction}} set\+Description (\begin{DoxyParamCaption}\item[{"{}End Instruction"{}}]{ }\end{DoxyParamCaption})}
+
+\Hypertarget{command__language__utils__unit_8cpp_aa71964f574e8660240a6d7d1e97cc0b0}\label{command__language__utils__unit_8cpp_aa71964f574e8660240a6d7d1e97cc0b0} 
+\index{command\_language\_utils\_unit.cpp@{command\_language\_utils\_unit.cpp}!setDescription@{setDescription}}
+\index{setDescription@{setDescription}!command\_language\_utils\_unit.cpp@{command\_language\_utils\_unit.cpp}}
+\doxysubsubsection{\texorpdfstring{setDescription()}{setDescription()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily composite set\+Description (\begin{DoxyParamCaption}\item[{"{}flatten Unit\+: Composite"{}}]{ }\end{DoxyParamCaption})}
+
+\Hypertarget{command__language__utils__unit_8cpp_aa46743ed4ca397440d52e649d9df3584}\label{command__language__utils__unit_8cpp_aa46743ed4ca397440d52e649d9df3584} 
+\index{command\_language\_utils\_unit.cpp@{command\_language\_utils\_unit.cpp}!setDescription@{setDescription}}
+\index{setDescription@{setDescription}!command\_language\_utils\_unit.cpp@{command\_language\_utils\_unit.cpp}}
+\doxysubsubsection{\texorpdfstring{setDescription()}{setDescription()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{command__language__utils__unit_8cpp_ad78d1b93cb9ff6bade47c3e447fda78a}{start\+\_\+instruction}} set\+Description (\begin{DoxyParamCaption}\item[{"{}Start Instruction"{}}]{ }\end{DoxyParamCaption})}
+
+\Hypertarget{command__language__utils__unit_8cpp_a3bc8a800ce29d06cb288f97109852eb0}\label{command__language__utils__unit_8cpp_a3bc8a800ce29d06cb288f97109852eb0} 
+\index{command\_language\_utils\_unit.cpp@{command\_language\_utils\_unit.cpp}!setDescription@{setDescription}}
+\index{setDescription@{setDescription}!command\_language\_utils\_unit.cpp@{command\_language\_utils\_unit.cpp}}
+\doxysubsubsection{\texorpdfstring{setDescription()}{setDescription()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily composite set\+Description (\begin{DoxyParamCaption}\item[{"{}To Delimited File\+: Composite"{}}]{ }\end{DoxyParamCaption})}
+
+\Hypertarget{command__language__utils__unit_8cpp_abe7dc4dcaff92aed46a5d6b5ba2fa408}\label{command__language__utils__unit_8cpp_abe7dc4dcaff92aed46a5d6b5ba2fa408} 
+\index{command\_language\_utils\_unit.cpp@{command\_language\_utils\_unit.cpp}!setSeed@{setSeed}}
+\index{setSeed@{setSeed}!command\_language\_utils\_unit.cpp@{command\_language\_utils\_unit.cpp}}
+\doxysubsubsection{\texorpdfstring{setSeed()}{setSeed()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{command__language__utils__unit_8cpp_ae64db9b4e6bc99309ba972a308668172}{wp1}} set\+Seed (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{command__language__utils__unit_8cpp_aa733b1ad6e96e1ddefc4dd0e2b8e9d34}{seed\+\_\+state}}}]{ }\end{DoxyParamCaption})}
+
+\Hypertarget{command__language__utils__unit_8cpp_a907c6225261f7f27ef5a201a7f0a54c9}\label{command__language__utils__unit_8cpp_a907c6225261f7f27ef5a201a7f0a54c9} 
+\index{command\_language\_utils\_unit.cpp@{command\_language\_utils\_unit.cpp}!values@{values}}
+\index{values@{values}!command\_language\_utils\_unit.cpp@{command\_language\_utils\_unit.cpp}}
+\doxysubsubsection{\texorpdfstring{values()}{values()}}
+{\footnotesize\ttfamily Eigen\+::\+Vector\+Xd values (\begin{DoxyParamCaption}\item[{3}]{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{command__language__utils__unit_8cpp_adbf6a7492c6521b38c1510aebe307770}\label{command__language__utils__unit_8cpp_adbf6a7492c6521b38c1510aebe307770} 
+\index{command\_language\_utils\_unit.cpp@{command\_language\_utils\_unit.cpp}!buffer@{buffer}}
+\index{buffer@{buffer}!command\_language\_utils\_unit.cpp@{command\_language\_utils\_unit.cpp}}
+\doxysubsubsection{\texorpdfstring{buffer}{buffer}}
+{\footnotesize\ttfamily std\+::stringstream buffer}
+
+\Hypertarget{command__language__utils__unit_8cpp_a8bc38344dce2ddc56cd7b41bd69727b2}\label{command__language__utils__unit_8cpp_a8bc38344dce2ddc56cd7b41bd69727b2} 
+\index{command\_language\_utils\_unit.cpp@{command\_language\_utils\_unit.cpp}!cumulative@{cumulative}}
+\index{cumulative@{cumulative}!command\_language\_utils\_unit.cpp@{command\_language\_utils\_unit.cpp}}
+\doxysubsubsection{\texorpdfstring{cumulative}{cumulative}}
+{\footnotesize\ttfamily std\+::size\+\_\+t cumulative = 0}
+
+\Hypertarget{command__language__utils__unit_8cpp_a9c4ab189c2f018bc7ccc8ba4f6e04b9d}\label{command__language__utils__unit_8cpp_a9c4ab189c2f018bc7ccc8ba4f6e04b9d} 
+\index{command\_language\_utils\_unit.cpp@{command\_language\_utils\_unit.cpp}!DEBUG@{DEBUG}}
+\index{DEBUG@{DEBUG}!command\_language\_utils\_unit.cpp@{command\_language\_utils\_unit.cpp}}
+\doxysubsubsection{\texorpdfstring{DEBUG}{DEBUG}}
+{\footnotesize\ttfamily const bool DEBUG = false\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{command__language__utils__unit_8cpp_aee4421fb9a77d998ac23b1e88505a75a}\label{command__language__utils__unit_8cpp_aee4421fb9a77d998ac23b1e88505a75a} 
+\index{command\_language\_utils\_unit.cpp@{command\_language\_utils\_unit.cpp}!end\_instruction@{end\_instruction}}
+\index{end\_instruction@{end\_instruction}!command\_language\_utils\_unit.cpp@{command\_language\_utils\_unit.cpp}}
+\doxysubsubsection{\texorpdfstring{end\_instruction}{end\_instruction}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classtesseract__planning_1_1MoveInstruction}{Move\+Instruction}} end\+\_\+instruction (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{command__language__utils__unit_8cpp_af0e4d6aea5757290e98dda3add2f8737}{wp00}}}]{,  }\item[{Move\+Instruction\+Type\+::\+FREESPACE}]{,  }\item[{"{}freespace\+\_\+profile"{}}]{ }\end{DoxyParamCaption})}
+
+\Hypertarget{command__language__utils__unit_8cpp_a9b11aaf39e77d0732c3a81ab867be07f}\label{command__language__utils__unit_8cpp_a9b11aaf39e77d0732c3a81ab867be07f} 
+\index{command\_language\_utils\_unit.cpp@{command\_language\_utils\_unit.cpp}!error\_poly@{error\_poly}}
+\index{error\_poly@{error\_poly}!command\_language\_utils\_unit.cpp@{command\_language\_utils\_unit.cpp}}
+\doxysubsubsection{\texorpdfstring{error\_poly}{error\_poly}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structtesseract__planning_1_1WaypointPoly}{Waypoint\+Poly}} error\+\_\+poly \{ \mbox{\hyperlink{classtesseract__planning_1_1MoveInstruction}{Move\+Instruction}}() \}}
+
+\Hypertarget{command__language__utils__unit_8cpp_aa9783a979ff52e47b1bedab8ceeacb8a}\label{command__language__utils__unit_8cpp_aa9783a979ff52e47b1bedab8ceeacb8a} 
+\index{command\_language\_utils\_unit.cpp@{command\_language\_utils\_unit.cpp}!filter@{filter}}
+\index{filter@{filter}!command\_language\_utils\_unit.cpp@{command\_language\_utils\_unit.cpp}}
+\doxysubsubsection{\texorpdfstring{filter}{filter}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacetesseract__planning_a03ae53e9120c49cb221163e1551aecb0}{flatten\+Filter\+Fn}} filter = \mbox{[}$\,$\mbox{]}(const \mbox{\hyperlink{structtesseract__planning_1_1InstructionPoly}{Instruction\+Poly}}\&, const \mbox{\hyperlink{classtesseract__planning_1_1CompositeInstruction}{Composite\+Instruction}}\&) \{ return true; \}}
+
+\Hypertarget{command__language__utils__unit_8cpp_ae79c70402fb68bbb6a744c534a9d114a}\label{command__language__utils__unit_8cpp_ae79c70402fb68bbb6a744c534a9d114a} 
+\index{command\_language\_utils\_unit.cpp@{command\_language\_utils\_unit.cpp}!flattened@{flattened}}
+\index{flattened@{flattened}!command\_language\_utils\_unit.cpp@{command\_language\_utils\_unit.cpp}}
+\doxysubsubsection{\texorpdfstring{flattened}{flattened}}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::reference\+\_\+wrapper$<$ \mbox{\hyperlink{structtesseract__planning_1_1InstructionPoly}{Instruction\+Poly}} $>$ $>$ flattened = composite.\+flatten()}
+
+\Hypertarget{command__language__utils__unit_8cpp_abe4496951a5423ffe6b08f927da7bb6e}\label{command__language__utils__unit_8cpp_abe4496951a5423ffe6b08f927da7bb6e} 
+\index{command\_language\_utils\_unit.cpp@{command\_language\_utils\_unit.cpp}!format\_joint\_names@{format\_joint\_names}}
+\index{format\_joint\_names@{format\_joint\_names}!command\_language\_utils\_unit.cpp@{command\_language\_utils\_unit.cpp}}
+\doxysubsubsection{\texorpdfstring{format\_joint\_names}{format\_joint\_names}}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::string $>$ format\+\_\+joint\+\_\+names = \{ "{}joint\+\_\+2"{}, "{}joint\+\_\+1"{} \}}
+
+\Hypertarget{command__language__utils__unit_8cpp_a4ebba736f1922d4994ec0beaa08dfe66}\label{command__language__utils__unit_8cpp_a4ebba736f1922d4994ec0beaa08dfe66} 
+\index{command\_language\_utils\_unit.cpp@{command\_language\_utils\_unit.cpp}!format\_position0@{format\_position0}}
+\index{format\_position0@{format\_position0}!command\_language\_utils\_unit.cpp@{command\_language\_utils\_unit.cpp}}
+\doxysubsubsection{\texorpdfstring{format\_position0}{format\_position0}}
+{\footnotesize\ttfamily Eigen\+::\+Vector\+Xd format\+\_\+position0 = Eigen\+::\+Vector2d(2, 1)}
+
+\Hypertarget{command__language__utils__unit_8cpp_a3e404388c49a80af590adf321790328a}\label{command__language__utils__unit_8cpp_a3e404388c49a80af590adf321790328a} 
+\index{command\_language\_utils\_unit.cpp@{command\_language\_utils\_unit.cpp}!format\_position00@{format\_position00}}
+\index{format\_position00@{format\_position00}!command\_language\_utils\_unit.cpp@{command\_language\_utils\_unit.cpp}}
+\doxysubsubsection{\texorpdfstring{format\_position00}{format\_position00}}
+{\footnotesize\ttfamily Eigen\+::\+Vector\+Xd format\+\_\+position00 = Eigen\+::\+Vector2d(4, 3)}
+
+\Hypertarget{command__language__utils__unit_8cpp_a6e42575c029c19ae7b34f84af58c0767}\label{command__language__utils__unit_8cpp_a6e42575c029c19ae7b34f84af58c0767} 
+\index{command\_language\_utils\_unit.cpp@{command\_language\_utils\_unit.cpp}!format\_seed\_position@{format\_seed\_position}}
+\index{format\_seed\_position@{format\_seed\_position}!command\_language\_utils\_unit.cpp@{command\_language\_utils\_unit.cpp}}
+\doxysubsubsection{\texorpdfstring{format\_seed\_position}{format\_seed\_position}}
+{\footnotesize\ttfamily Eigen\+::\+Vector\+Xd format\+\_\+seed\+\_\+position = Eigen\+::\+Vector2d(6, 5)}
+
+\Hypertarget{command__language__utils__unit_8cpp_a092ed8c4b45835b56ca48a84c445aa9c}\label{command__language__utils__unit_8cpp_a092ed8c4b45835b56ca48a84c445aa9c} 
+\index{command\_language\_utils\_unit.cpp@{command\_language\_utils\_unit.cpp}!i\_max@{i\_max}}
+\index{i\_max@{i\_max}!command\_language\_utils\_unit.cpp@{command\_language\_utils\_unit.cpp}}
+\doxysubsubsection{\texorpdfstring{i\_max}{i\_max}}
+{\footnotesize\ttfamily std\+::size\+\_\+t i\+\_\+max = 4}
+
+\Hypertarget{command__language__utils__unit_8cpp_a48ec302713a2e0c297adb979d364d504}\label{command__language__utils__unit_8cpp_a48ec302713a2e0c297adb979d364d504} 
+\index{command\_language\_utils\_unit.cpp@{command\_language\_utils\_unit.cpp}!instr@{instr}}
+\index{instr@{instr}!command\_language\_utils\_unit.cpp@{command\_language\_utils\_unit.cpp}}
+\doxysubsubsection{\texorpdfstring{instr}{instr}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structtesseract__planning_1_1InstructionPoly}{Instruction\+Poly}} instr \{ \mbox{\hyperlink{command__language__utils__unit_8cpp_ab5a75a7fd217179774b21aaa94fccc66}{program}} \}}
+
+\Hypertarget{command__language__utils__unit_8cpp_afd03fc533586a7deb4136aa586ffd151}\label{command__language__utils__unit_8cpp_afd03fc533586a7deb4136aa586ffd151} 
+\index{command\_language\_utils\_unit.cpp@{command\_language\_utils\_unit.cpp}!j\_max@{j\_max}}
+\index{j\_max@{j\_max}!command\_language\_utils\_unit.cpp@{command\_language\_utils\_unit.cpp}}
+\doxysubsubsection{\texorpdfstring{j\_max}{j\_max}}
+{\footnotesize\ttfamily std\+::size\+\_\+t j\+\_\+max = 3}
+
+\Hypertarget{command__language__utils__unit_8cpp_a5f85173ecc1ddcb342ebc27f28437f5c}\label{command__language__utils__unit_8cpp_a5f85173ecc1ddcb342ebc27f28437f5c} 
+\index{command\_language\_utils\_unit.cpp@{command\_language\_utils\_unit.cpp}!joint\_names@{joint\_names}}
+\index{joint\_names@{joint\_names}!command\_language\_utils\_unit.cpp@{command\_language\_utils\_unit.cpp}}
+\doxysubsubsection{\texorpdfstring{joint\_names}{joint\_names}}
+{\footnotesize\ttfamily const std\+::vector$<$ std\+::string $>$ \& joint\+\_\+names = joint\+\_\+names}
+
+\Hypertarget{command__language__utils__unit_8cpp_a83ecd9e2360f26bfc3430d39a228afe6}\label{command__language__utils__unit_8cpp_a83ecd9e2360f26bfc3430d39a228afe6} 
+\index{command\_language\_utils\_unit.cpp@{command\_language\_utils\_unit.cpp}!jp@{jp}}
+\index{jp@{jp}!command\_language\_utils\_unit.cpp@{command\_language\_utils\_unit.cpp}}
+\doxysubsubsection{\texorpdfstring{jp}{jp}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structtesseract__planning_1_1JointWaypointPoly}{Joint\+Waypoint\+Poly}} jp \{ \mbox{\hyperlink{classtesseract__planning_1_1JointWaypoint}{Joint\+Waypoint}}(\mbox{\hyperlink{command__language__utils__unit_8cpp_a5f85173ecc1ddcb342ebc27f28437f5c}{joint\+\_\+names}}, \mbox{\hyperlink{command__language__utils__unit_8cpp_a81e8e5ac4055cfddba2949abfd5983af}{values}}) \}}
+
+\Hypertarget{command__language__utils__unit_8cpp_a384ca350ecc0896693214febae055ac0}\label{command__language__utils__unit_8cpp_a384ca350ecc0896693214febae055ac0} 
+\index{command\_language\_utils\_unit.cpp@{command\_language\_utils\_unit.cpp}!jt@{jt}}
+\index{jt@{jt}!command\_language\_utils\_unit.cpp@{command\_language\_utils\_unit.cpp}}
+\doxysubsubsection{\texorpdfstring{jt}{jt}}
+{\footnotesize\ttfamily tesseract\+\_\+common\+::\+Joint\+Trajectory jt = to\+Joint\+Trajectory(\mbox{\hyperlink{command__language__utils__unit_8cpp_a48ec302713a2e0c297adb979d364d504}{instr}})}
+
+\Hypertarget{command__language__utils__unit_8cpp_ac638ee6649696e88931e4df867296eeb}\label{command__language__utils__unit_8cpp_ac638ee6649696e88931e4df867296eeb} 
+\index{command\_language\_utils\_unit.cpp@{command\_language\_utils\_unit.cpp}!jwp@{jwp}}
+\index{jwp@{jwp}!command\_language\_utils\_unit.cpp@{command\_language\_utils\_unit.cpp}}
+\doxysubsubsection{\texorpdfstring{jwp}{jwp}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structtesseract__planning_1_1JointWaypointPoly}{Joint\+Waypoint\+Poly}} jwp \{ \mbox{\hyperlink{classtesseract__planning_1_1JointWaypoint}{Joint\+Waypoint}}(\mbox{\hyperlink{command__language__utils__unit_8cpp_a5f85173ecc1ddcb342ebc27f28437f5c}{joint\+\_\+names}}, \mbox{\hyperlink{command__language__utils__unit_8cpp_a81e8e5ac4055cfddba2949abfd5983af}{values}}) \}}
+
+\Hypertarget{command__language__utils__unit_8cpp_a759b771da76b4ea2832dff959538f503}\label{command__language__utils__unit_8cpp_a759b771da76b4ea2832dff959538f503} 
+\index{command\_language\_utils\_unit.cpp@{command\_language\_utils\_unit.cpp}!k\_max@{k\_max}}
+\index{k\_max@{k\_max}!command\_language\_utils\_unit.cpp@{command\_language\_utils\_unit.cpp}}
+\doxysubsubsection{\texorpdfstring{k\_max}{k\_max}}
+{\footnotesize\ttfamily std\+::size\+\_\+t k\+\_\+max = 2}
+
+\Hypertarget{command__language__utils__unit_8cpp_a7c5db26aa9e3accfdc451ee4c4362355}\label{command__language__utils__unit_8cpp_a7c5db26aa9e3accfdc451ee4c4362355} 
+\index{command\_language\_utils\_unit.cpp@{command\_language\_utils\_unit.cpp}!n0@{n0}}
+\index{n0@{n0}!command\_language\_utils\_unit.cpp@{command\_language\_utils\_unit.cpp}}
+\doxysubsubsection{\texorpdfstring{n0}{n0}}
+{\footnotesize\ttfamily const std\+::vector$<$std\+::string$>$\& n0 = get\+Joint\+Names(\mbox{\hyperlink{command__language__utils__unit_8cpp_a3847bcd930c69e55d3abac2b0d604428}{wp0\+\_\+poly}})}
+
+\Hypertarget{command__language__utils__unit_8cpp_ad0f657f05fc87164531a7708c51b90f3}\label{command__language__utils__unit_8cpp_ad0f657f05fc87164531a7708c51b90f3} 
+\index{command\_language\_utils\_unit.cpp@{command\_language\_utils\_unit.cpp}!n00@{n00}}
+\index{n00@{n00}!command\_language\_utils\_unit.cpp@{command\_language\_utils\_unit.cpp}}
+\doxysubsubsection{\texorpdfstring{n00}{n00}}
+{\footnotesize\ttfamily const std\+::vector$<$std\+::string$>$\& n00 = get\+Joint\+Names(\mbox{\hyperlink{command__language__utils__unit_8cpp_a32b869771792a9cd78494fbedc84d83d}{wp00\+\_\+poly}})}
+
+\Hypertarget{command__language__utils__unit_8cpp_a9b46236d2514eb436292f09e4aaf9500}\label{command__language__utils__unit_8cpp_a9b46236d2514eb436292f09e4aaf9500} 
+\index{command\_language\_utils\_unit.cpp@{command\_language\_utils\_unit.cpp}!n1@{n1}}
+\index{n1@{n1}!command\_language\_utils\_unit.cpp@{command\_language\_utils\_unit.cpp}}
+\doxysubsubsection{\texorpdfstring{n1}{n1}}
+{\footnotesize\ttfamily const std\+::vector$<$std\+::string$>$\& n1 = get\+Joint\+Names(\mbox{\hyperlink{command__language__utils__unit_8cpp_adabd2b748029644c7b6cfc76d2304946}{wp1\+\_\+poly}})}
+
+\Hypertarget{command__language__utils__unit_8cpp_a2f1479cf121b88589846776c8612607a}\label{command__language__utils__unit_8cpp_a2f1479cf121b88589846776c8612607a} 
+\index{command\_language\_utils\_unit.cpp@{command\_language\_utils\_unit.cpp}!num\_composites@{num\_composites}}
+\index{num\_composites@{num\_composites}!command\_language\_utils\_unit.cpp@{command\_language\_utils\_unit.cpp}}
+\doxysubsubsection{\texorpdfstring{num\_composites}{num\_composites}}
+{\footnotesize\ttfamily int num\+\_\+composites = 0}
+
+\Hypertarget{command__language__utils__unit_8cpp_a6f8a71a55705d2d74e38530af1442abf}\label{command__language__utils__unit_8cpp_a6f8a71a55705d2d74e38530af1442abf} 
+\index{command\_language\_utils\_unit.cpp@{command\_language\_utils\_unit.cpp}!order@{order}}
+\index{order@{order}!command\_language\_utils\_unit.cpp@{command\_language\_utils\_unit.cpp}}
+\doxysubsubsection{\texorpdfstring{order}{order}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacetesseract__planning_a181d9233cb2a71d0ed0c23c55205f98d}{Composite\+Instruction\+Order}} order \{ Composite\+Instruction\+Order\+::\+ORDERED \}}
+
+\Hypertarget{command__language__utils__unit_8cpp_a8bf2b7c76f7ee07e394fc5dc9ba3c67f}\label{command__language__utils__unit_8cpp_a8bf2b7c76f7ee07e394fc5dc9ba3c67f} 
+\index{command\_language\_utils\_unit.cpp@{command\_language\_utils\_unit.cpp}!p0@{p0}}
+\index{p0@{p0}!command\_language\_utils\_unit.cpp@{command\_language\_utils\_unit.cpp}}
+\doxysubsubsection{\texorpdfstring{p0}{p0}}
+{\footnotesize\ttfamily const Eigen\+::\+Vector\+Xd \& p0 = get\+Joint\+Position(\mbox{\hyperlink{command__language__utils__unit_8cpp_a3847bcd930c69e55d3abac2b0d604428}{wp0\+\_\+poly}})}
+
+\Hypertarget{command__language__utils__unit_8cpp_ac45c36898e6e88924e037cc8959dbe83}\label{command__language__utils__unit_8cpp_ac45c36898e6e88924e037cc8959dbe83} 
+\index{command\_language\_utils\_unit.cpp@{command\_language\_utils\_unit.cpp}!p00@{p00}}
+\index{p00@{p00}!command\_language\_utils\_unit.cpp@{command\_language\_utils\_unit.cpp}}
+\doxysubsubsection{\texorpdfstring{p00}{p00}}
+{\footnotesize\ttfamily const Eigen\+::\+Vector\+Xd \& p00 = get\+Joint\+Position(\mbox{\hyperlink{command__language__utils__unit_8cpp_a32b869771792a9cd78494fbedc84d83d}{wp00\+\_\+poly}})}
+
+\Hypertarget{command__language__utils__unit_8cpp_aa3a23bc77c9d993af4e6bc28a696ac89}\label{command__language__utils__unit_8cpp_aa3a23bc77c9d993af4e6bc28a696ac89} 
+\index{command\_language\_utils\_unit.cpp@{command\_language\_utils\_unit.cpp}!p1@{p1}}
+\index{p1@{p1}!command\_language\_utils\_unit.cpp@{command\_language\_utils\_unit.cpp}}
+\doxysubsubsection{\texorpdfstring{p1}{p1}}
+{\footnotesize\ttfamily Eigen\+::\+Isometry3d p1 = get\+Joint\+Position(\mbox{\hyperlink{command__language__utils__unit_8cpp_adabd2b748029644c7b6cfc76d2304946}{wp1\+\_\+poly}})}
+
+\Hypertarget{command__language__utils__unit_8cpp_a72d9ba2e7c51af5c4288f67793c15f4a}\label{command__language__utils__unit_8cpp_a72d9ba2e7c51af5c4288f67793c15f4a} 
+\index{command\_language\_utils\_unit.cpp@{command\_language\_utils\_unit.cpp}!p1u@{p1u}}
+\index{p1u@{p1u}!command\_language\_utils\_unit.cpp@{command\_language\_utils\_unit.cpp}}
+\doxysubsubsection{\texorpdfstring{p1u}{p1u}}
+{\footnotesize\ttfamily const Eigen\+::\+Vector\+Xd\& p1u = get\+Joint\+Position(\mbox{\hyperlink{command__language__utils__unit_8cpp_a5f85173ecc1ddcb342ebc27f28437f5c}{joint\+\_\+names}}, \mbox{\hyperlink{command__language__utils__unit_8cpp_adabd2b748029644c7b6cfc76d2304946}{wp1\+\_\+poly}})}
+
+\Hypertarget{command__language__utils__unit_8cpp_a4d455efceee21e97d8e21ee40e9b4a20}\label{command__language__utils__unit_8cpp_a4d455efceee21e97d8e21ee40e9b4a20} 
+\index{command\_language\_utils\_unit.cpp@{command\_language\_utils\_unit.cpp}!path@{path}}
+\index{path@{path}!command\_language\_utils\_unit.cpp@{command\_language\_utils\_unit.cpp}}
+\doxysubsubsection{\texorpdfstring{path}{path}}
+{\footnotesize\ttfamily std\+::string path = tesseract\+\_\+common\+::get\+Temp\+Path() + "{}to\+\_\+delimited\+\_\+file.\+csv"{}}
+
+\Hypertarget{command__language__utils__unit_8cpp_a609dcef1ce3198d50c2c9b9ff8207552}\label{command__language__utils__unit_8cpp_a609dcef1ce3198d50c2c9b9ff8207552} 
+\index{command\_language\_utils\_unit.cpp@{command\_language\_utils\_unit.cpp}!position@{position}}
+\index{position@{position}!command\_language\_utils\_unit.cpp@{command\_language\_utils\_unit.cpp}}
+\doxysubsubsection{\texorpdfstring{position}{position}}
+{\footnotesize\ttfamily \mbox{\hyperlink{command__language__utils__unit_8cpp_aa733b1ad6e96e1ddefc4dd0e2b8e9d34}{seed\+\_\+state}} position = Eigen\+::\+Vector\+Xd\+::\+Constant(6, 10)}
+
+\Hypertarget{command__language__utils__unit_8cpp_a4587ae4a0eb0252f17ce0b572018cbdf}\label{command__language__utils__unit_8cpp_a4587ae4a0eb0252f17ce0b572018cbdf} 
+\index{command\_language\_utils\_unit.cpp@{command\_language\_utils\_unit.cpp}!position0@{position0}}
+\index{position0@{position0}!command\_language\_utils\_unit.cpp@{command\_language\_utils\_unit.cpp}}
+\doxysubsubsection{\texorpdfstring{position0}{position0}}
+{\footnotesize\ttfamily Eigen\+::\+Vector\+Xd position0 = Eigen\+::\+Vector2d(1, 2)}
+
+\Hypertarget{command__language__utils__unit_8cpp_a098dbc67abcea032e94c231b4af15c6b}\label{command__language__utils__unit_8cpp_a098dbc67abcea032e94c231b4af15c6b} 
+\index{command\_language\_utils\_unit.cpp@{command\_language\_utils\_unit.cpp}!position00@{position00}}
+\index{position00@{position00}!command\_language\_utils\_unit.cpp@{command\_language\_utils\_unit.cpp}}
+\doxysubsubsection{\texorpdfstring{position00}{position00}}
+{\footnotesize\ttfamily Eigen\+::\+Vector\+Xd position00 = Eigen\+::\+Vector2d(3, 4)}
+
+\Hypertarget{command__language__utils__unit_8cpp_ab5a75a7fd217179774b21aaa94fccc66}\label{command__language__utils__unit_8cpp_ab5a75a7fd217179774b21aaa94fccc66} 
+\index{command\_language\_utils\_unit.cpp@{command\_language\_utils\_unit.cpp}!program@{program}}
+\index{program@{program}!command\_language\_utils\_unit.cpp@{command\_language\_utils\_unit.cpp}}
+\doxysubsubsection{\texorpdfstring{program}{program}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classtesseract__planning_1_1CompositeInstruction}{Composite\+Instruction}} program = get\+Test\+Program(\mbox{\hyperlink{profile__dictionary__tests_8cpp_abef2081b208ab62011ea9a1557a0be70}{profile}}, \mbox{\hyperlink{command__language__utils__unit_8cpp_a6f8a71a55705d2d74e38530af1442abf}{order}}, \mbox{\hyperlink{command__language__utils__unit_8cpp_af21d30c87e87931298afb1eb6f703551}{manip\+\_\+info}})}
+
+\Hypertarget{command__language__utils__unit_8cpp_abbf0c558dc4d400db3a0f7a31bab70f8}\label{command__language__utils__unit_8cpp_abbf0c558dc4d400db3a0f7a31bab70f8} 
+\index{command\_language\_utils\_unit.cpp@{command\_language\_utils\_unit.cpp}!seed\_position@{seed\_position}}
+\index{seed\_position@{seed\_position}!command\_language\_utils\_unit.cpp@{command\_language\_utils\_unit.cpp}}
+\doxysubsubsection{\texorpdfstring{seed\_position}{seed\_position}}
+{\footnotesize\ttfamily Eigen\+::\+Vector\+Xd seed\+\_\+position = Eigen\+::\+Vector2d(5, 6)}
+
+\Hypertarget{command__language__utils__unit_8cpp_aa733b1ad6e96e1ddefc4dd0e2b8e9d34}\label{command__language__utils__unit_8cpp_aa733b1ad6e96e1ddefc4dd0e2b8e9d34} 
+\index{command\_language\_utils\_unit.cpp@{command\_language\_utils\_unit.cpp}!seed\_state@{seed\_state}}
+\index{seed\_state@{seed\_state}!command\_language\_utils\_unit.cpp@{command\_language\_utils\_unit.cpp}}
+\doxysubsubsection{\texorpdfstring{seed\_state}{seed\_state}}
+{\footnotesize\ttfamily tesseract\+\_\+common\+::\+Joint\+State seed\+\_\+state}
+
+\Hypertarget{command__language__utils__unit_8cpp_ac4ac75aacb87e6368380fb02ade8ca60}\label{command__language__utils__unit_8cpp_ac4ac75aacb87e6368380fb02ade8ca60} 
+\index{command\_language\_utils\_unit.cpp@{command\_language\_utils\_unit.cpp}!set\_position@{set\_position}}
+\index{set\_position@{set\_position}!command\_language\_utils\_unit.cpp@{command\_language\_utils\_unit.cpp}}
+\doxysubsubsection{\texorpdfstring{set\_position}{set\_position}}
+{\footnotesize\ttfamily Eigen\+::\+Vector\+Xd set\+\_\+position = Eigen\+::\+Vector\+Xd\+::\+Constant(6, 1)}
+
+\Hypertarget{command__language__utils__unit_8cpp_ad78d1b93cb9ff6bade47c3e447fda78a}\label{command__language__utils__unit_8cpp_ad78d1b93cb9ff6bade47c3e447fda78a} 
+\index{command\_language\_utils\_unit.cpp@{command\_language\_utils\_unit.cpp}!start\_instruction@{start\_instruction}}
+\index{start\_instruction@{start\_instruction}!command\_language\_utils\_unit.cpp@{command\_language\_utils\_unit.cpp}}
+\doxysubsubsection{\texorpdfstring{start\_instruction}{start\_instruction}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classtesseract__planning_1_1MoveInstruction}{Move\+Instruction}} start\+\_\+instruction (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{command__language__utils__unit_8cpp_af6a6ef8aeae99ee13e09fdebd8470fb3}{wp0}}}]{,  }\item[{Move\+Instruction\+Type\+::\+FREESPACE}]{,  }\item[{"{}freespace\+\_\+profile"{}}]{ }\end{DoxyParamCaption})}
+
+\Hypertarget{command__language__utils__unit_8cpp_ab62cac7a32358688149f032fca746418}\label{command__language__utils__unit_8cpp_ab62cac7a32358688149f032fca746418} 
+\index{command\_language\_utils\_unit.cpp@{command\_language\_utils\_unit.cpp}!tmp@{tmp}}
+\index{tmp@{tmp}!command\_language\_utils\_unit.cpp@{command\_language\_utils\_unit.cpp}}
+\doxysubsubsection{\texorpdfstring{tmp}{tmp}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structtesseract__planning_1_1WaypointPoly}{Waypoint\+Poly}} tmp (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{command__language__utils__unit_8cpp_a83ecd9e2360f26bfc3430d39a228afe6}{jp}}}]{ }\end{DoxyParamCaption})}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{structtesseract__planning_1_1CartesianWaypointPoly}{CartesianWaypointPoly}}\ \mbox{\hyperlink{command__language__utils__unit_8cpp_a83ecd9e2360f26bfc3430d39a228afe6}{jp}}\{\ \mbox{\hyperlink{classtesseract__planning_1_1CartesianWaypoint}{CartesianWaypoint}}()\ \}}
+
+\end{DoxyCode}
+\Hypertarget{command__language__utils__unit_8cpp_a81e8e5ac4055cfddba2949abfd5983af}\label{command__language__utils__unit_8cpp_a81e8e5ac4055cfddba2949abfd5983af} 
+\index{command\_language\_utils\_unit.cpp@{command\_language\_utils\_unit.cpp}!values@{values}}
+\index{values@{values}!command\_language\_utils\_unit.cpp@{command\_language\_utils\_unit.cpp}}
+\doxysubsubsection{\texorpdfstring{values}{values}}
+{\footnotesize\ttfamily Eigen\+::\+Vector\+Xd values = Eigen\+::\+Vector\+Xd\+::\+Constant(3, 5)}
+
+\Hypertarget{command__language__utils__unit_8cpp_af6a6ef8aeae99ee13e09fdebd8470fb3}\label{command__language__utils__unit_8cpp_af6a6ef8aeae99ee13e09fdebd8470fb3} 
+\index{command\_language\_utils\_unit.cpp@{command\_language\_utils\_unit.cpp}!wp0@{wp0}}
+\index{wp0@{wp0}!command\_language\_utils\_unit.cpp@{command\_language\_utils\_unit.cpp}}
+\doxysubsubsection{\texorpdfstring{wp0}{wp0}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structtesseract__planning_1_1StateWaypointPoly}{State\+Waypoint\+Poly}} wp0 \{ \mbox{\hyperlink{classtesseract__planning_1_1StateWaypoint}{State\+Waypoint}}(\mbox{\hyperlink{command__language__utils__unit_8cpp_a5f85173ecc1ddcb342ebc27f28437f5c}{joint\+\_\+names}}, Eigen\+::\+Vector\+Xd\+::\+Constant(6, 3)) \}}
+
+\Hypertarget{command__language__utils__unit_8cpp_af0e4d6aea5757290e98dda3add2f8737}\label{command__language__utils__unit_8cpp_af0e4d6aea5757290e98dda3add2f8737} 
+\index{command\_language\_utils\_unit.cpp@{command\_language\_utils\_unit.cpp}!wp00@{wp00}}
+\index{wp00@{wp00}!command\_language\_utils\_unit.cpp@{command\_language\_utils\_unit.cpp}}
+\doxysubsubsection{\texorpdfstring{wp00}{wp00}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structtesseract__planning_1_1JointWaypointPoly}{Joint\+Waypoint\+Poly}} wp00 \{ \mbox{\hyperlink{classtesseract__planning_1_1JointWaypoint}{Joint\+Waypoint}}(\mbox{\hyperlink{command__language__utils__unit_8cpp_a5f85173ecc1ddcb342ebc27f28437f5c}{joint\+\_\+names}}, Eigen\+::\+Vector\+Xd\+::\+Constant(6, 5)) \}}
+
+\Hypertarget{command__language__utils__unit_8cpp_a32b869771792a9cd78494fbedc84d83d}\label{command__language__utils__unit_8cpp_a32b869771792a9cd78494fbedc84d83d} 
+\index{command\_language\_utils\_unit.cpp@{command\_language\_utils\_unit.cpp}!wp00\_poly@{wp00\_poly}}
+\index{wp00\_poly@{wp00\_poly}!command\_language\_utils\_unit.cpp@{command\_language\_utils\_unit.cpp}}
+\doxysubsubsection{\texorpdfstring{wp00\_poly}{wp00\_poly}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structtesseract__planning_1_1WaypointPoly}{Waypoint\+Poly}} wp00\+\_\+poly \{ \mbox{\hyperlink{command__language__utils__unit_8cpp_af0e4d6aea5757290e98dda3add2f8737}{wp00}} \}}
+
+\Hypertarget{command__language__utils__unit_8cpp_a3847bcd930c69e55d3abac2b0d604428}\label{command__language__utils__unit_8cpp_a3847bcd930c69e55d3abac2b0d604428} 
+\index{command\_language\_utils\_unit.cpp@{command\_language\_utils\_unit.cpp}!wp0\_poly@{wp0\_poly}}
+\index{wp0\_poly@{wp0\_poly}!command\_language\_utils\_unit.cpp@{command\_language\_utils\_unit.cpp}}
+\doxysubsubsection{\texorpdfstring{wp0\_poly}{wp0\_poly}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structtesseract__planning_1_1WaypointPoly}{Waypoint\+Poly}} wp0\+\_\+poly \{ \mbox{\hyperlink{command__language__utils__unit_8cpp_af6a6ef8aeae99ee13e09fdebd8470fb3}{wp0}} \}}
+
+\Hypertarget{command__language__utils__unit_8cpp_ae64db9b4e6bc99309ba972a308668172}\label{command__language__utils__unit_8cpp_ae64db9b4e6bc99309ba972a308668172} 
+\index{command\_language\_utils\_unit.cpp@{command\_language\_utils\_unit.cpp}!wp1@{wp1}}
+\index{wp1@{wp1}!command\_language\_utils\_unit.cpp@{command\_language\_utils\_unit.cpp}}
+\doxysubsubsection{\texorpdfstring{wp1}{wp1}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structtesseract__planning_1_1CartesianWaypointPoly}{Cartesian\+Waypoint\+Poly}} wp1}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ \mbox{\hyperlink{classtesseract__planning_1_1CartesianWaypoint}{CartesianWaypoint}}(Eigen::Isometry3d::Identity()\ *\ Eigen::Translation3d(0.8,\ -\/0.3,\ 0.8)\ *}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Eigen::Quaterniond(0,\ 0,\ -\/1.0,\ 0))}
+
+\end{DoxyCode}
+\Hypertarget{command__language__utils__unit_8cpp_adabd2b748029644c7b6cfc76d2304946}\label{command__language__utils__unit_8cpp_adabd2b748029644c7b6cfc76d2304946} 
+\index{command\_language\_utils\_unit.cpp@{command\_language\_utils\_unit.cpp}!wp1\_poly@{wp1\_poly}}
+\index{wp1\_poly@{wp1\_poly}!command\_language\_utils\_unit.cpp@{command\_language\_utils\_unit.cpp}}
+\doxysubsubsection{\texorpdfstring{wp1\_poly}{wp1\_poly}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structtesseract__planning_1_1WaypointPoly}{Waypoint\+Poly}} wp1\+\_\+poly \{ \mbox{\hyperlink{command__language__utils__unit_8cpp_ae64db9b4e6bc99309ba972a308668172}{wp1}} \}}
+
+\Hypertarget{command__language__utils__unit_8cpp_a4297e499990076f853e06fb3e0a92947}\label{command__language__utils__unit_8cpp_a4297e499990076f853e06fb3e0a92947} 
+\index{command\_language\_utils\_unit.cpp@{command\_language\_utils\_unit.cpp}!wp1u\_poly@{wp1u\_poly}}
+\index{wp1u\_poly@{wp1u\_poly}!command\_language\_utils\_unit.cpp@{command\_language\_utils\_unit.cpp}}
+\doxysubsubsection{\texorpdfstring{wp1u\_poly}{wp1u\_poly}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structtesseract__planning_1_1WaypointPoly}{Waypoint\+Poly}} wp1u\+\_\+poly \{ \mbox{\hyperlink{command__language__utils__unit_8cpp_ae64db9b4e6bc99309ba972a308668172}{wp1}} \}}
+
+\Hypertarget{command__language__utils__unit_8cpp_a6a7c0153c4436a5cb1d544fb68aa6847}\label{command__language__utils__unit_8cpp_a6a7c0153c4436a5cb1d544fb68aa6847} 
+\index{command\_language\_utils\_unit.cpp@{command\_language\_utils\_unit.cpp}!wp2@{wp2}}
+\index{wp2@{wp2}!command\_language\_utils\_unit.cpp@{command\_language\_utils\_unit.cpp}}
+\doxysubsubsection{\texorpdfstring{wp2}{wp2}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structtesseract__planning_1_1CartesianWaypointPoly}{Cartesian\+Waypoint\+Poly}} wp2}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ \mbox{\hyperlink{classtesseract__planning_1_1CartesianWaypoint}{CartesianWaypoint}}(Eigen::Isometry3d::Identity()\ *\ Eigen::Translation3d(0.8,\ -\/0.2,\ 0.8)\ *}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Eigen::Quaterniond(0,\ 0,\ -\/1.0,\ 0))}
+
+\end{DoxyCode}
+\Hypertarget{command__language__utils__unit_8cpp_ae1f8a8fc8391c292b501a077eee0b491}\label{command__language__utils__unit_8cpp_ae1f8a8fc8391c292b501a077eee0b491} 
+\index{command\_language\_utils\_unit.cpp@{command\_language\_utils\_unit.cpp}!wp2\_poly@{wp2\_poly}}
+\index{wp2\_poly@{wp2\_poly}!command\_language\_utils\_unit.cpp@{command\_language\_utils\_unit.cpp}}
+\doxysubsubsection{\texorpdfstring{wp2\_poly}{wp2\_poly}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structtesseract__planning_1_1WaypointPoly}{Waypoint\+Poly}} wp2\+\_\+poly \{ \mbox{\hyperlink{command__language__utils__unit_8cpp_a6a7c0153c4436a5cb1d544fb68aa6847}{wp2}} \}}
+

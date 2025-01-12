@@ -1,0 +1,171 @@
+\doxysection{tesseract\+\_\+planning\+::OMPLSolver\+Config Struct Reference}
+\hypertarget{structtesseract__planning_1_1OMPLSolverConfig}{}\label{structtesseract__planning_1_1OMPLSolverConfig}\index{tesseract\_planning::OMPLSolverConfig@{tesseract\_planning::OMPLSolverConfig}}
+
+
+{\ttfamily \#include $<$ompl\+\_\+solver\+\_\+config.\+h$>$}
+
+
+
+Collaboration diagram for tesseract\+\_\+planning\+::OMPLSolver\+Config\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d9/d8a/structtesseract__planning_1_1OMPLSolverConfig__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{structtesseract__planning_1_1OMPLSolverConfig_a9bbdd5aaf24e53b390091f6dd271e6ac}{Ptr}} = std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structtesseract__planning_1_1OMPLSolverConfig}{OMPLSolver\+Config}} $>$
+\item 
+using \mbox{\hyperlink{structtesseract__planning_1_1OMPLSolverConfig_a91bd6cd17efba5632f23094278b088f4}{Const\+Ptr}} = std\+::shared\+\_\+ptr$<$ const \mbox{\hyperlink{structtesseract__planning_1_1OMPLSolverConfig}{OMPLSolver\+Config}} $>$
+\item 
+using \mbox{\hyperlink{structtesseract__planning_1_1OMPLSolverConfig_a00258257a659ba4fb08d98299addf98d}{UPtr}} = std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{structtesseract__planning_1_1OMPLSolverConfig}{OMPLSolver\+Config}} $>$
+\item 
+using \mbox{\hyperlink{structtesseract__planning_1_1OMPLSolverConfig_aafa1dde203009e51d7349baa7fb8cee5}{Const\+UPtr}} = std\+::unique\+\_\+ptr$<$ const \mbox{\hyperlink{structtesseract__planning_1_1OMPLSolverConfig}{OMPLSolver\+Config}} $>$
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{structtesseract__planning_1_1OMPLSolverConfig_a541b483dde1f20c0cd2098d6013a7038}{\texorpdfstring{$\sim$}{\string~}\+OMPLSolver\+Config}} ()=default
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+double \mbox{\hyperlink{structtesseract__planning_1_1OMPLSolverConfig_a4bcfdde87f702f9930514fed5bbdacd0}{planning\+\_\+time}} = 5.\+0
+\begin{DoxyCompactList}\small\item\em Max planning time allowed in seconds. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{structtesseract__planning_1_1OMPLSolverConfig_a83d9b8e7d44a36d00072bc38f8f7c052}{max\+\_\+solutions}} = 10
+\begin{DoxyCompactList}\small\item\em The max number of solutions. If max solutions are hit it will exit even if other threads are running. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{structtesseract__planning_1_1OMPLSolverConfig_a31216fd8e33bbb8394422caf2e3b0635}{simplify}} = false
+\begin{DoxyCompactList}\small\item\em Simplify trajectory. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{structtesseract__planning_1_1OMPLSolverConfig_aa6323f9196325137f52f32c891d284ab}{optimize}} = true
+\begin{DoxyCompactList}\small\item\em This uses all available planning time to create the most optimized trajectory given the objective function. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::shared\+\_\+ptr$<$ const \mbox{\hyperlink{structtesseract__planning_1_1OMPLPlannerConfigurator}{OMPLPlanner\+Configurator}} $>$ $>$ \mbox{\hyperlink{structtesseract__planning_1_1OMPLSolverConfig_a89df900a55233f7d19e3dbb673e939e2}{planners}}
+\begin{DoxyCompactList}\small\item\em The planner configurators. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$class Archive $>$ }\\void \mbox{\hyperlink{structtesseract__planning_1_1OMPLSolverConfig_ae0886de6a4ce3ca088b9118bca6aa7d8}{serialize}} (Archive \&, const unsigned int)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{structtesseract__planning_1_1OMPLSolverConfig_ac98d07dd8f7b70e16ccb9a01abf56b9c}{boost\+::serialization\+::access}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Typedef Documentation}
+\Hypertarget{structtesseract__planning_1_1OMPLSolverConfig_a91bd6cd17efba5632f23094278b088f4}\label{structtesseract__planning_1_1OMPLSolverConfig_a91bd6cd17efba5632f23094278b088f4} 
+\index{tesseract\_planning::OMPLSolverConfig@{tesseract\_planning::OMPLSolverConfig}!ConstPtr@{ConstPtr}}
+\index{ConstPtr@{ConstPtr}!tesseract\_planning::OMPLSolverConfig@{tesseract\_planning::OMPLSolverConfig}}
+\doxysubsubsection{\texorpdfstring{ConstPtr}{ConstPtr}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{structtesseract__planning_1_1OMPLSolverConfig_a91bd6cd17efba5632f23094278b088f4}{tesseract\+\_\+planning\+::\+OMPLSolver\+Config\+::\+Const\+Ptr}} =  std\+::shared\+\_\+ptr$<$const \mbox{\hyperlink{structtesseract__planning_1_1OMPLSolverConfig}{OMPLSolver\+Config}}$>$}
+
+\Hypertarget{structtesseract__planning_1_1OMPLSolverConfig_aafa1dde203009e51d7349baa7fb8cee5}\label{structtesseract__planning_1_1OMPLSolverConfig_aafa1dde203009e51d7349baa7fb8cee5} 
+\index{tesseract\_planning::OMPLSolverConfig@{tesseract\_planning::OMPLSolverConfig}!ConstUPtr@{ConstUPtr}}
+\index{ConstUPtr@{ConstUPtr}!tesseract\_planning::OMPLSolverConfig@{tesseract\_planning::OMPLSolverConfig}}
+\doxysubsubsection{\texorpdfstring{ConstUPtr}{ConstUPtr}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{structtesseract__planning_1_1OMPLSolverConfig_aafa1dde203009e51d7349baa7fb8cee5}{tesseract\+\_\+planning\+::\+OMPLSolver\+Config\+::\+Const\+UPtr}} =  std\+::unique\+\_\+ptr$<$const \mbox{\hyperlink{structtesseract__planning_1_1OMPLSolverConfig}{OMPLSolver\+Config}}$>$}
+
+\Hypertarget{structtesseract__planning_1_1OMPLSolverConfig_a9bbdd5aaf24e53b390091f6dd271e6ac}\label{structtesseract__planning_1_1OMPLSolverConfig_a9bbdd5aaf24e53b390091f6dd271e6ac} 
+\index{tesseract\_planning::OMPLSolverConfig@{tesseract\_planning::OMPLSolverConfig}!Ptr@{Ptr}}
+\index{Ptr@{Ptr}!tesseract\_planning::OMPLSolverConfig@{tesseract\_planning::OMPLSolverConfig}}
+\doxysubsubsection{\texorpdfstring{Ptr}{Ptr}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{structtesseract__planning_1_1OMPLSolverConfig_a9bbdd5aaf24e53b390091f6dd271e6ac}{tesseract\+\_\+planning\+::\+OMPLSolver\+Config\+::\+Ptr}} =  std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{structtesseract__planning_1_1OMPLSolverConfig}{OMPLSolver\+Config}}$>$}
+
+\Hypertarget{structtesseract__planning_1_1OMPLSolverConfig_a00258257a659ba4fb08d98299addf98d}\label{structtesseract__planning_1_1OMPLSolverConfig_a00258257a659ba4fb08d98299addf98d} 
+\index{tesseract\_planning::OMPLSolverConfig@{tesseract\_planning::OMPLSolverConfig}!UPtr@{UPtr}}
+\index{UPtr@{UPtr}!tesseract\_planning::OMPLSolverConfig@{tesseract\_planning::OMPLSolverConfig}}
+\doxysubsubsection{\texorpdfstring{UPtr}{UPtr}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{structtesseract__planning_1_1OMPLSolverConfig_a00258257a659ba4fb08d98299addf98d}{tesseract\+\_\+planning\+::\+OMPLSolver\+Config\+::\+UPtr}} =  std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{structtesseract__planning_1_1OMPLSolverConfig}{OMPLSolver\+Config}}$>$}
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{structtesseract__planning_1_1OMPLSolverConfig_a541b483dde1f20c0cd2098d6013a7038}\label{structtesseract__planning_1_1OMPLSolverConfig_a541b483dde1f20c0cd2098d6013a7038} 
+\index{tesseract\_planning::OMPLSolverConfig@{tesseract\_planning::OMPLSolverConfig}!````~OMPLSolverConfig@{\texorpdfstring{$\sim$}{\string~}OMPLSolverConfig}}
+\index{````~OMPLSolverConfig@{\texorpdfstring{$\sim$}{\string~}OMPLSolverConfig}!tesseract\_planning::OMPLSolverConfig@{tesseract\_planning::OMPLSolverConfig}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}OMPLSolverConfig()}{\string~OMPLSolverConfig()}}
+{\footnotesize\ttfamily virtual tesseract\+\_\+planning\+::\+OMPLSolver\+Config\+::\texorpdfstring{$\sim$}{\string~}\+OMPLSolver\+Config (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{structtesseract__planning_1_1OMPLSolverConfig_ae0886de6a4ce3ca088b9118bca6aa7d8}\label{structtesseract__planning_1_1OMPLSolverConfig_ae0886de6a4ce3ca088b9118bca6aa7d8} 
+\index{tesseract\_planning::OMPLSolverConfig@{tesseract\_planning::OMPLSolverConfig}!serialize@{serialize}}
+\index{serialize@{serialize}!tesseract\_planning::OMPLSolverConfig@{tesseract\_planning::OMPLSolverConfig}}
+\doxysubsubsection{\texorpdfstring{serialize()}{serialize()}}
+{\footnotesize\ttfamily template$<$class Archive $>$ \\
+void tesseract\+\_\+planning\+::\+OMPLSolver\+Config\+::serialize (\begin{DoxyParamCaption}\item[{Archive \&}]{ar,  }\item[{const unsigned int}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+\doxysubsection{Friends And Related Symbol Documentation}
+\Hypertarget{structtesseract__planning_1_1OMPLSolverConfig_ac98d07dd8f7b70e16ccb9a01abf56b9c}\label{structtesseract__planning_1_1OMPLSolverConfig_ac98d07dd8f7b70e16ccb9a01abf56b9c} 
+\index{tesseract\_planning::OMPLSolverConfig@{tesseract\_planning::OMPLSolverConfig}!boost::serialization::access@{boost::serialization::access}}
+\index{boost::serialization::access@{boost::serialization::access}!tesseract\_planning::OMPLSolverConfig@{tesseract\_planning::OMPLSolverConfig}}
+\doxysubsubsection{\texorpdfstring{boost::serialization::access}{boost::serialization::access}}
+{\footnotesize\ttfamily friend class boost\+::serialization\+::access\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{structtesseract__planning_1_1OMPLSolverConfig_a83d9b8e7d44a36d00072bc38f8f7c052}\label{structtesseract__planning_1_1OMPLSolverConfig_a83d9b8e7d44a36d00072bc38f8f7c052} 
+\index{tesseract\_planning::OMPLSolverConfig@{tesseract\_planning::OMPLSolverConfig}!max\_solutions@{max\_solutions}}
+\index{max\_solutions@{max\_solutions}!tesseract\_planning::OMPLSolverConfig@{tesseract\_planning::OMPLSolverConfig}}
+\doxysubsubsection{\texorpdfstring{max\_solutions}{max\_solutions}}
+{\footnotesize\ttfamily int tesseract\+\_\+planning\+::\+OMPLSolver\+Config\+::max\+\_\+solutions = 10}
+
+
+
+The max number of solutions. If max solutions are hit it will exit even if other threads are running. 
+
+\Hypertarget{structtesseract__planning_1_1OMPLSolverConfig_aa6323f9196325137f52f32c891d284ab}\label{structtesseract__planning_1_1OMPLSolverConfig_aa6323f9196325137f52f32c891d284ab} 
+\index{tesseract\_planning::OMPLSolverConfig@{tesseract\_planning::OMPLSolverConfig}!optimize@{optimize}}
+\index{optimize@{optimize}!tesseract\_planning::OMPLSolverConfig@{tesseract\_planning::OMPLSolverConfig}}
+\doxysubsubsection{\texorpdfstring{optimize}{optimize}}
+{\footnotesize\ttfamily bool tesseract\+\_\+planning\+::\+OMPLSolver\+Config\+::optimize = true}
+
+
+
+This uses all available planning time to create the most optimized trajectory given the objective function. 
+
+This is required because not all OMPL planners are optimize graph planners. If the planner you choose is an optimize graph planner then setting this to true has no affect. In the case of non-\/optimize planners they still use the Optimize\+Objective function but only when searching the graph to find the most optimize solution based on the provided optimize objective function. In the case of these type of planners like RRT and RRTConnect if set to true it will leverage all planning time to keep finding solutions up to your max solutions count to find the most optimal solution. \Hypertarget{structtesseract__planning_1_1OMPLSolverConfig_a89df900a55233f7d19e3dbb673e939e2}\label{structtesseract__planning_1_1OMPLSolverConfig_a89df900a55233f7d19e3dbb673e939e2} 
+\index{tesseract\_planning::OMPLSolverConfig@{tesseract\_planning::OMPLSolverConfig}!planners@{planners}}
+\index{planners@{planners}!tesseract\_planning::OMPLSolverConfig@{tesseract\_planning::OMPLSolverConfig}}
+\doxysubsubsection{\texorpdfstring{planners}{planners}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::shared\+\_\+ptr$<$const \mbox{\hyperlink{structtesseract__planning_1_1OMPLPlannerConfigurator}{OMPLPlanner\+Configurator}}$>$ $>$ tesseract\+\_\+planning\+::\+OMPLSolver\+Config\+::planners}
+
+
+
+The planner configurators. 
+
+This defaults to two \doxylink{structtesseract__planning_1_1RRTConnectConfigurator}{RRTConnect\+Configurator}
+
+This will create a new thread for each planner configurator provided. \Hypertarget{structtesseract__planning_1_1OMPLSolverConfig_a4bcfdde87f702f9930514fed5bbdacd0}\label{structtesseract__planning_1_1OMPLSolverConfig_a4bcfdde87f702f9930514fed5bbdacd0} 
+\index{tesseract\_planning::OMPLSolverConfig@{tesseract\_planning::OMPLSolverConfig}!planning\_time@{planning\_time}}
+\index{planning\_time@{planning\_time}!tesseract\_planning::OMPLSolverConfig@{tesseract\_planning::OMPLSolverConfig}}
+\doxysubsubsection{\texorpdfstring{planning\_time}{planning\_time}}
+{\footnotesize\ttfamily double tesseract\+\_\+planning\+::\+OMPLSolver\+Config\+::planning\+\_\+time = 5.\+0}
+
+
+
+Max planning time allowed in seconds. 
+
+\Hypertarget{structtesseract__planning_1_1OMPLSolverConfig_a31216fd8e33bbb8394422caf2e3b0635}\label{structtesseract__planning_1_1OMPLSolverConfig_a31216fd8e33bbb8394422caf2e3b0635} 
+\index{tesseract\_planning::OMPLSolverConfig@{tesseract\_planning::OMPLSolverConfig}!simplify@{simplify}}
+\index{simplify@{simplify}!tesseract\_planning::OMPLSolverConfig@{tesseract\_planning::OMPLSolverConfig}}
+\doxysubsubsection{\texorpdfstring{simplify}{simplify}}
+{\footnotesize\ttfamily bool tesseract\+\_\+planning\+::\+OMPLSolver\+Config\+::simplify = false}
+
+
+
+Simplify trajectory. 
+
+Note\+: If set to true it ignores n\+\_\+output\+\_\+states and returns the simplest trajectory. 
+
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+tesseract\+\_\+motion\+\_\+planners/ompl/include/tesseract\+\_\+motion\+\_\+planners/ompl/\mbox{\hyperlink{ompl__solver__config_8h}{ompl\+\_\+solver\+\_\+config.\+h}}\item 
+tesseract\+\_\+motion\+\_\+planners/ompl/src/\mbox{\hyperlink{ompl__solver__config_8cpp}{ompl\+\_\+solver\+\_\+config.\+cpp}}\end{DoxyCompactItemize}

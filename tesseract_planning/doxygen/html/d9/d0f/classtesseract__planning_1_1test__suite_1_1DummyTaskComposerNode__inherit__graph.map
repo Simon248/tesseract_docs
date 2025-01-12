@@ -1,0 +1,5 @@
+<map id="tesseract_planning::test_suite::DummyTaskComposerNode" name="tesseract_planning::test_suite::DummyTaskComposerNode">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,94,259,135"/>
+<area shape="rect" id="Node000002" href="$de/d23/classtesseract__planning_1_1TaskComposerNode.html" title="Represents a node the pipeline to be executed." alt="" coords="59,5,205,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="135,62,135,94,129,94,129,62"/>
+</map>

@@ -1,0 +1,121 @@
+\doxysection{tesseract\+\_\+examples/src/car\+\_\+seat\+\_\+example.cpp File Reference}
+\hypertarget{car__seat__example_8cpp}{}\label{car__seat__example_8cpp}\index{tesseract\_examples/src/car\_seat\_example.cpp@{tesseract\_examples/src/car\_seat\_example.cpp}}
+
+
+Car seat example implementation.  
+
+
+{\ttfamily \#include $<$tesseract\+\_\+common/macros.\+h$>$}\newline
+{\ttfamily \#include $<$console\+\_\+bridge/console.\+h$>$}\newline
+{\ttfamily \#include $<$trajopt\+\_\+common/collision\+\_\+types.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+examples/car\+\_\+seat\+\_\+example.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+common/allowed\+\_\+collision\+\_\+matrix.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+collision/bullet/convex\+\_\+hull\+\_\+utils.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+kinematics/core/joint\+\_\+group.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+scene\+\_\+graph/link.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+scene\+\_\+graph/joint.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+state\+\_\+solver/state\+\_\+solver.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+environment/environment.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+environment/utils.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+environment/commands/add\+\_\+link\+\_\+command.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+environment/commands/move\+\_\+link\+\_\+command.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+environment/commands/modify\+\_\+allowed\+\_\+collisions\+\_\+command.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+geometry/mesh\+\_\+parser.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+command\+\_\+language/composite\+\_\+instruction.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+command\+\_\+language/state\+\_\+waypoint.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+command\+\_\+language/cartesian\+\_\+waypoint.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+command\+\_\+language/joint\+\_\+waypoint.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+command\+\_\+language/move\+\_\+instruction.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+command\+\_\+language/profile\+\_\+dictionary.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+command\+\_\+language/utils.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+task\+\_\+composer/core/task\+\_\+composer\+\_\+context.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+task\+\_\+composer/core/task\+\_\+composer\+\_\+data\+\_\+storage.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+task\+\_\+composer/core/task\+\_\+composer\+\_\+future.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+task\+\_\+composer/core/task\+\_\+composer\+\_\+executor.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+task\+\_\+composer/core/task\+\_\+composer\+\_\+node.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+task\+\_\+composer/core/task\+\_\+composer\+\_\+plugin\+\_\+factory.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+motion\+\_\+planners/trajopt/profile/trajopt\+\_\+default\+\_\+composite\+\_\+profile.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+motion\+\_\+planners/trajopt/profile/trajopt\+\_\+default\+\_\+plan\+\_\+profile.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+motion\+\_\+planners/trajopt/profile/trajopt\+\_\+osqp\+\_\+solver\+\_\+profile.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+motion\+\_\+planners/trajopt\+\_\+ifopt/profile/trajopt\+\_\+ifopt\+\_\+default\+\_\+composite\+\_\+profile.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+motion\+\_\+planners/trajopt\+\_\+ifopt/profile/trajopt\+\_\+ifopt\+\_\+default\+\_\+plan\+\_\+profile.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+motion\+\_\+planners/trajopt\+\_\+ifopt/profile/trajopt\+\_\+ifopt\+\_\+osqp\+\_\+solver\+\_\+profile.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+motion\+\_\+planners/core/utils.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+visualization/visualization.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+visualization/markers/toolpath\+\_\+marker.\+h$>$}\newline
+Include dependency graph for car\+\_\+seat\+\_\+example.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d4/d6e/car__seat__example_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespacetesseract__examples}{tesseract\+\_\+examples}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+Commands \mbox{\hyperlink{namespacetesseract__examples_abb3c0cc2d1022ba74126d670f70cba13}{tesseract\+\_\+examples\+::add\+Seats}} (const tesseract\+\_\+common\+::\+Resource\+Locator\+::\+Const\+Ptr \&\mbox{\hyperlink{ompl__constrained__planner__tests_8cpp_ac23cdf7d517ef4adf22863d54c6c9c65}{locator}})
+\item 
+std\+::unordered\+\_\+map$<$ std\+::string, std\+::unordered\+\_\+map$<$ std\+::string, double $>$ $>$ \mbox{\hyperlink{namespacetesseract__examples_a41a95bdc977f66f5ee618e1476050d45}{tesseract\+\_\+examples\+::get\+Predefined\+Position}} ()
+\item 
+std\+::vector$<$ double $>$ \mbox{\hyperlink{namespacetesseract__examples_aca2ec848a35e94e7b051cafbee7157c6}{tesseract\+\_\+examples\+::get\+Position\+Vector}} (const Joint\+Group \&\mbox{\hyperlink{ompl__planner__tests_8cpp_a553a400a0c81f57e4dd2d27aefef9b9c}{joint\+\_\+group}}, const std\+::unordered\+\_\+map$<$ std\+::string, double $>$ \&pos)
+\item 
+Eigen\+::\+Vector\+Xd \mbox{\hyperlink{namespacetesseract__examples_a535c9d25c8cd6feb7b05c111d5bbec5f}{tesseract\+\_\+examples\+::get\+Position\+Vector\+Xd}} (const Joint\+Group \&\mbox{\hyperlink{ompl__planner__tests_8cpp_a553a400a0c81f57e4dd2d27aefef9b9c}{joint\+\_\+group}}, const std\+::unordered\+\_\+map$<$ std\+::string, double $>$ \&pos)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+static const std\+::string \mbox{\hyperlink{car__seat__example_8cpp_acebe899cb191df62bca811635ca01093}{TRAJOPT\+\_\+\+IFOPT\+\_\+\+DEFAULT\+\_\+\+NAMESPACE}} = "{}Traj\+Opt\+Ifopt\+Motion\+Planner\+Task"{}
+\item 
+static const std\+::string \mbox{\hyperlink{car__seat__example_8cpp_aa787e5ed28bd385091840a6d523ddc33}{TRAJOPT\+\_\+\+DEFAULT\+\_\+\+NAMESPACE}} = "{}Traj\+Opt\+Motion\+Planner\+Task"{}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Car seat example implementation. 
+
+\begin{DoxyAuthor}{Author}
+Levi Armstrong 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+July 22, 2019 
+\end{DoxyDate}
+\begin{DoxyVersion}{Version}
+TODO 
+\end{DoxyVersion}
+\begin{DoxyRefDesc}{Bug}
+\item[\mbox{\hyperlink{bug__bug000059}{Bug}}]No known bugs\end{DoxyRefDesc}
+
+
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2017, Southwest Research Institute
+\end{DoxyCopyright}
+\begin{DoxyParagraph}{License}
+Software License Agreement (Apache License) 
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{}
+Licensed under the Apache License, Version 2.\+0 (the "{}\+License"{}); you may not use this file except in compliance with the License. You may obtain a copy of the License at \href{http://www.apache.org/licenses/LICENSE-2.0}{\texttt{ http\+://www.\+apache.\+org/licenses/\+LICENSE-\/2.\+0}} 
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{}
+Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "{}\+AS IS"{} BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License. 
+\end{DoxyParagraph}
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{car__seat__example_8cpp_aa787e5ed28bd385091840a6d523ddc33}\label{car__seat__example_8cpp_aa787e5ed28bd385091840a6d523ddc33} 
+\index{car\_seat\_example.cpp@{car\_seat\_example.cpp}!TRAJOPT\_DEFAULT\_NAMESPACE@{TRAJOPT\_DEFAULT\_NAMESPACE}}
+\index{TRAJOPT\_DEFAULT\_NAMESPACE@{TRAJOPT\_DEFAULT\_NAMESPACE}!car\_seat\_example.cpp@{car\_seat\_example.cpp}}
+\doxysubsubsection{\texorpdfstring{TRAJOPT\_DEFAULT\_NAMESPACE}{TRAJOPT\_DEFAULT\_NAMESPACE}}
+{\footnotesize\ttfamily const std\+::string TRAJOPT\+\_\+\+DEFAULT\+\_\+\+NAMESPACE = "{}Traj\+Opt\+Motion\+Planner\+Task"{}\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{car__seat__example_8cpp_acebe899cb191df62bca811635ca01093}\label{car__seat__example_8cpp_acebe899cb191df62bca811635ca01093} 
+\index{car\_seat\_example.cpp@{car\_seat\_example.cpp}!TRAJOPT\_IFOPT\_DEFAULT\_NAMESPACE@{TRAJOPT\_IFOPT\_DEFAULT\_NAMESPACE}}
+\index{TRAJOPT\_IFOPT\_DEFAULT\_NAMESPACE@{TRAJOPT\_IFOPT\_DEFAULT\_NAMESPACE}!car\_seat\_example.cpp@{car\_seat\_example.cpp}}
+\doxysubsubsection{\texorpdfstring{TRAJOPT\_IFOPT\_DEFAULT\_NAMESPACE}{TRAJOPT\_IFOPT\_DEFAULT\_NAMESPACE}}
+{\footnotesize\ttfamily const std\+::string TRAJOPT\+\_\+\+IFOPT\+\_\+\+DEFAULT\+\_\+\+NAMESPACE = "{}Traj\+Opt\+Ifopt\+Motion\+Planner\+Task"{}\hspace{0.3cm}{\ttfamily [static]}}
+

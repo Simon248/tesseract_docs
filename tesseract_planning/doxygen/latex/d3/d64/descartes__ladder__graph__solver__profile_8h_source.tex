@@ -1,0 +1,41 @@
+\doxysection{descartes\+\_\+ladder\+\_\+graph\+\_\+solver\+\_\+profile.\+h}
+\hypertarget{descartes__ladder__graph__solver__profile_8h_source}{}\label{descartes__ladder__graph__solver__profile_8h_source}\index{tesseract\_motion\_planners/descartes/include/tesseract\_motion\_planners/descartes/profile/descartes\_ladder\_graph\_solver\_profile.h@{tesseract\_motion\_planners/descartes/include/tesseract\_motion\_planners/descartes/profile/descartes\_ladder\_graph\_solver\_profile.h}}
+\mbox{\hyperlink{descartes__ladder__graph__solver__profile_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00026\ \textcolor{preprocessor}{\#ifndef\ TESSERACT\_MOTION\_PLANNERS\_DESCARTES\_DESCARTES\_LADDER\_GRAPH\_SOLVER\_PROFILE\_H}}
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#define\ TESSERACT\_MOTION\_PLANNERS\_DESCARTES\_DESCARTES\_LADDER\_GRAPH\_SOLVER\_PROFILE\_H}}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{descartes__profile_8h}{tesseract\_motion\_planners/descartes/profile/descartes\_profile.h}}>}}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacetesseract__planning}{tesseract\_planning}}}
+\DoxyCodeLine{00032\ \{}
+\DoxyCodeLine{00033\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ FloatType>}
+\DoxyCodeLine{00034\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classtesseract__planning_1_1DescartesLadderGraphSolverProfile}{DescartesLadderGraphSolverProfile}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classtesseract__planning_1_1DescartesSolverProfile}{DescartesSolverProfile}}<FloatType>}
+\DoxyCodeLine{00035\ \{}
+\DoxyCodeLine{00036\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00037\ \ \ \textcolor{keyword}{using\ }\mbox{\hyperlink{classtesseract__planning_1_1DescartesLadderGraphSolverProfile_ad7f326f8ae48b630ecb86f12d3b81efc}{Ptr}}\ =\ std::shared\_ptr<DescartesLadderGraphSolverProfile<FloatType>>;}
+\DoxyCodeLine{00038\ \ \ \textcolor{keyword}{using\ }\mbox{\hyperlink{classtesseract__planning_1_1DescartesLadderGraphSolverProfile_ae39a1bcf285386acb81bf26eae850153}{ConstPtr}}\ =\ std::shared\_ptr<const\ DescartesLadderGraphSolverProfile<FloatType>>;}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \ \ \mbox{\hyperlink{classtesseract__planning_1_1DescartesLadderGraphSolverProfile_ac4fb0b9a0f17dae75d9ea1dbf369df64}{DescartesLadderGraphSolverProfile}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00043\ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classtesseract__planning_1_1DescartesLadderGraphSolverProfile_acd152119041a3faef5c14bc75bdf8f15}{num\_threads}}\{\ 1\ \};}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00045\ \ \ std::unique\_ptr<descartes\_light::Solver<FloatType>>\ \mbox{\hyperlink{classtesseract__planning_1_1DescartesLadderGraphSolverProfile_ae6d525afd566f5c3742c789c67c6eb86}{create}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00047\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00048\ \ \ \textcolor{keyword}{friend}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classtesseract__planning_1_1DescartesLadderGraphSolverProfile_ac98d07dd8f7b70e16ccb9a01abf56b9c}{boost::serialization::access}};}
+\DoxyCodeLine{00049\ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{class}\ Archive>}
+\DoxyCodeLine{00050\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classtesseract__planning_1_1DescartesLadderGraphSolverProfile_aa9d3f17c1496c290dd9324da3ed712ec}{serialize}}(Archive\&,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int});\ \ \textcolor{comment}{//\ NOLINT}}
+\DoxyCodeLine{00051\ \};}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00053\ \textcolor{keyword}{using\ }\mbox{\hyperlink{classtesseract__planning_1_1DescartesLadderGraphSolverProfile}{DescartesLadderGraphSolverProfileF}}\ =\ \mbox{\hyperlink{classtesseract__planning_1_1DescartesLadderGraphSolverProfile}{DescartesLadderGraphSolverProfile<float>}};}
+\DoxyCodeLine{00054\ \textcolor{keyword}{using\ }\mbox{\hyperlink{classtesseract__planning_1_1DescartesLadderGraphSolverProfile}{DescartesLadderGraphSolverProfileD}}\ =\ \mbox{\hyperlink{classtesseract__planning_1_1DescartesLadderGraphSolverProfile}{DescartesLadderGraphSolverProfile<double>}};}
+\DoxyCodeLine{00055\ \}\ \ \textcolor{comment}{//\ namespace\ tesseract\_planning}}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00057\ BOOST\_CLASS\_EXPORT\_KEY(\mbox{\hyperlink{classtesseract__planning_1_1DescartesLadderGraphSolverProfile}{tesseract\_planning::DescartesLadderGraphSolverProfile<float>}})}
+\DoxyCodeLine{00058\ BOOST\_CLASS\_EXPORT\_KEY(\mbox{\hyperlink{classtesseract__planning_1_1DescartesLadderGraphSolverProfile}{tesseract\_planning::DescartesLadderGraphSolverProfile<double>}})}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00060\ \textcolor{preprocessor}{\#endif\ \ }\textcolor{comment}{//\ TESSERACT\_MOTION\_PLANNERS\_DESCARTES\_DESCARTES\_LADDER\_GRAPH\_SOLVER\_PROFILE\_H}}
+
+\end{DoxyCode}

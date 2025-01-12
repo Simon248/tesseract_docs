@@ -1,0 +1,41 @@
+\doxysection{example.\+h}
+\hypertarget{example_8h_source}{}\label{example_8h_source}\index{tesseract\_examples/include/tesseract\_examples/example.h@{tesseract\_examples/include/tesseract\_examples/example.h}}
+\mbox{\hyperlink{example_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00026\ \textcolor{preprocessor}{\#ifndef\ TESSERACT\_ROS\_EXAMPLES\_EXAMPLES\_H}}
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#define\ TESSERACT\_ROS\_EXAMPLES\_EXAMPLES\_H}}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#include\ <tesseract\_common/macros.h>}}
+\DoxyCodeLine{00030\ TESSERACT\_COMMON\_IGNORE\_WARNINGS\_PUSH}
+\DoxyCodeLine{00031\ \textcolor{preprocessor}{\#include\ <memory>}}
+\DoxyCodeLine{00032\ \mbox{\hyperlink{namespaceTESSERACT__COMMON__IGNORE__WARNINGS__POP}{TESSERACT\_COMMON\_IGNORE\_WARNINGS\_POP}}}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \textcolor{preprocessor}{\#include\ <tesseract\_environment/fwd.h>}}
+\DoxyCodeLine{00035\ \textcolor{preprocessor}{\#include\ <tesseract\_visualization/fwd.h>}}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacetesseract__examples}{tesseract\_examples}}}
+\DoxyCodeLine{00038\ \{}
+\DoxyCodeLine{00047\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classtesseract__examples_1_1Example}{Example}}}
+\DoxyCodeLine{00048\ \{}
+\DoxyCodeLine{00049\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00050\ \ \ \mbox{\hyperlink{classtesseract__examples_1_1Example}{Example}}(std::shared\_ptr<tesseract\_environment::Environment>\ \mbox{\hyperlink{basic__cartesian__example__unit_8cpp_a96ce750ee22ecbf4d17cc6cf146d9514}{env}},}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \ \ std::shared\_ptr<tesseract\_visualization::Visualization>\ plotter\ =\ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00053\ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{classtesseract__examples_1_1Example_a049e7067d00b11ca53511d93a7d09011}{\string~Example}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00054\ \ \ \mbox{\hyperlink{classtesseract__examples_1_1Example_abe367e8320c34566fe87ddf0c9269885}{Example}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classtesseract__examples_1_1Example}{Example}}\&)\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00055\ \ \ \mbox{\hyperlink{classtesseract__examples_1_1Example}{Example}}\&\ \mbox{\hyperlink{classtesseract__examples_1_1Example_a79513d11e83ca16e2cc5bfbd52046c62}{operator=}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classtesseract__examples_1_1Example}{Example}}\&)\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00056\ \ \ \mbox{\hyperlink{classtesseract__examples_1_1Example_a0dd5d675b14c7647dc4eb97e39ec3c34}{Example}}(\mbox{\hyperlink{classtesseract__examples_1_1Example}{Example}}\&\&)\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00057\ \ \ \mbox{\hyperlink{classtesseract__examples_1_1Example}{Example}}\&\ \mbox{\hyperlink{classtesseract__examples_1_1Example_a72f48bae74579c269393b59b786f3cac}{operator=}}(\mbox{\hyperlink{classtesseract__examples_1_1Example}{Example}}\&\&)\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00059\ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classtesseract__examples_1_1Example_a740e02a0b018f07266b9101715430b2f}{run}}()\ =\ 0;}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00061\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00063\ \ \ std::shared\_ptr<tesseract\_environment::Environment>\ \mbox{\hyperlink{classtesseract__examples_1_1Example_a3adfc11c11516d57f44f226efd644301}{env\_}};}
+\DoxyCodeLine{00065\ \ \ std::shared\_ptr<tesseract\_visualization::Visualization>\ \mbox{\hyperlink{classtesseract__examples_1_1Example_a082cb621c770c0b6687d9a76f6847f6a}{plotter\_}};}
+\DoxyCodeLine{00066\ \};}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00068\ \}\ \ \textcolor{comment}{//\ namespace\ tesseract\_examples}}
+\DoxyCodeLine{00069\ \textcolor{preprocessor}{\#endif\ \ }\textcolor{comment}{//\ TESSERACT\_ROS\_EXAMPLES\_EXAMPLES\_H}}
+
+\end{DoxyCode}

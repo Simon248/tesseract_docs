@@ -1,0 +1,40 @@
+\doxysection{profile\+\_\+switch\+\_\+profile.\+h}
+\hypertarget{profile__switch__profile_8h_source}{}\label{profile__switch__profile_8h_source}\index{tesseract\_task\_composer/planning/include/tesseract\_task\_composer/planning/profiles/profile\_switch\_profile.h@{tesseract\_task\_composer/planning/include/tesseract\_task\_composer/planning/profiles/profile\_switch\_profile.h}}
+\mbox{\hyperlink{profile__switch__profile_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00024\ \textcolor{preprocessor}{\#ifndef\ TESSERACT\_TASK\_COMPOSER\_PROFILE\_SWITCH\_PROFILE\_H}}
+\DoxyCodeLine{00025\ \textcolor{preprocessor}{\#define\ TESSERACT\_TASK\_COMPOSER\_PROFILE\_SWITCH\_PROFILE\_H}}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#include\ <tesseract\_common/macros.h>}}
+\DoxyCodeLine{00028\ TESSERACT\_COMMON\_IGNORE\_WARNINGS\_PUSH}
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#include\ <memory>}}
+\DoxyCodeLine{00030\ \mbox{\hyperlink{namespaceTESSERACT__COMMON__IGNORE__WARNINGS__POP}{TESSERACT\_COMMON\_IGNORE\_WARNINGS\_POP}}}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{profile_8h}{tesseract\_command\_language/profile.h}}>}}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacetesseract__planning}{tesseract\_planning}}}
+\DoxyCodeLine{00035\ \{}
+\DoxyCodeLine{00036\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structtesseract__planning_1_1ProfileSwitchProfile}{ProfileSwitchProfile}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classtesseract__planning_1_1Profile}{Profile}}}
+\DoxyCodeLine{00037\ \{}
+\DoxyCodeLine{00038\ \ \ \textcolor{keyword}{using\ }\mbox{\hyperlink{structtesseract__planning_1_1ProfileSwitchProfile_aed6d0cb8f29f65e8005f13717bf082c0}{Ptr}}\ =\ std::shared\_ptr<ProfileSwitchProfile>;}
+\DoxyCodeLine{00039\ \ \ \textcolor{keyword}{using\ }\mbox{\hyperlink{structtesseract__planning_1_1ProfileSwitchProfile_a815532d5f39b7a910f0e59f0175b545a}{ConstPtr}}\ =\ std::shared\_ptr<const\ ProfileSwitchProfile>;}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ \ \ \mbox{\hyperlink{structtesseract__planning_1_1ProfileSwitchProfile}{ProfileSwitchProfile}}(\textcolor{keywordtype}{int}\ \mbox{\hyperlink{structtesseract__planning_1_1ProfileSwitchProfile_aa9f378318805017c2a49b7a577f33f1b}{return\_value}}\ =\ 1);}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00047\ \ \ \textcolor{keyword}{static}\ std::size\_t\ \mbox{\hyperlink{structtesseract__planning_1_1ProfileSwitchProfile_a0d5defc3c40f3d5dc7527e01bec0ffbc}{getStaticKey}}();}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00049\ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{structtesseract__planning_1_1ProfileSwitchProfile_aa9f378318805017c2a49b7a577f33f1b}{return\_value}};}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00051\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00052\ \ \ \textcolor{keyword}{friend}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{structtesseract__planning_1_1ProfileSwitchProfile_ac98d07dd8f7b70e16ccb9a01abf56b9c}{boost::serialization::access}};}
+\DoxyCodeLine{00053\ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{class}\ Archive>}
+\DoxyCodeLine{00054\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structtesseract__planning_1_1ProfileSwitchProfile_a8941b816fe005f396c6d80886888edcd}{serialize}}(Archive\&,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int});\ \ \textcolor{comment}{//\ NOLINT}}
+\DoxyCodeLine{00055\ \};}
+\DoxyCodeLine{00056\ \}\ \ \textcolor{comment}{//\ namespace\ tesseract\_planning}}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00058\ BOOST\_CLASS\_EXPORT\_KEY(\mbox{\hyperlink{structtesseract__planning_1_1ProfileSwitchProfile}{tesseract\_planning::ProfileSwitchProfile}})}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00060\ \textcolor{preprocessor}{\#endif\ \ }\textcolor{comment}{//\ TESSERACT\_TASK\_COMPOSER\_PROFILE\_SWITCH\_PROFILE\_H}}
+
+\end{DoxyCode}

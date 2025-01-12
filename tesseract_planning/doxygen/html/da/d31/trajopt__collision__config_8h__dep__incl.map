@@ -1,0 +1,31 @@
+<map id="tesseract_motion_planners/trajopt/include/tesseract_motion_planners/trajopt/trajopt_collision_config.h" name="tesseract_motion_planners/trajopt/include/tesseract_motion_planners/trajopt/trajopt_collision_config.h">
+<area shape="rect" id="Node000001" title="TrajOpt collision configuration settings." alt="" coords="1177,5,1380,76"/>
+<area shape="rect" id="Node000002" href="$d8/d8f/trajopt__default__composite__profile_8h.html" title=" " alt="" coords="1054,124,1279,195"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="1237,89,1202,126,1198,122,1233,85"/>
+<area shape="rect" id="Node000015" href="$d2/d97/trajopt__collision__config_8cpp.html" title="TrajOpt collision configuration settings." alt="" coords="1303,132,1481,187"/>
+<area shape="poly" id="edge14_Node000001_Node000015" title=" " alt="" coords="1324,85,1367,129,1364,133,1320,89"/>
+<area shape="rect" id="Node000003" href="$da/d69/basic__cartesian__example_8cpp.html" title=" " alt="" coords="5,243,144,298"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="1038,164,863,169,642,182,399,207,276,224,156,245,145,248,144,243,155,240,275,219,398,201,642,177,863,164,1038,159"/>
+<area shape="rect" id="Node000004" href="$d0/d87/car__seat__example_8cpp.html" title="Car seat example implementation." alt="" coords="168,250,344,291"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="1039,170,727,195,541,217,356,245,324,252,323,247,355,240,540,211,726,190,1038,165"/>
+<area shape="rect" id="Node000005" href="$dc/da1/glass__upright__example_8cpp.html" title="Glass upright example implementation." alt="" coords="368,250,571,291"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="1039,178,825,206,583,245,549,252,548,247,582,240,824,201,1038,173"/>
+<area shape="rect" id="Node000006" href="$d9/d6a/pick__and__place__example_8cpp.html" title="Pick and place implementation." alt="" coords="595,243,733,298"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="1039,184,897,211,746,245,734,249,732,243,745,240,896,205,1038,179"/>
+<area shape="rect" id="Node000007" href="$d3/d7e/puzzle__piece__auxillary__axes__example_8cpp.html" title="Puzzle piece auxillary axes implementation." alt="" coords="757,243,931,298"/>
+<area shape="poly" id="edge6_Node000002_Node000007" title=" " alt="" coords="1050,203,925,245,924,240,1048,198"/>
+<area shape="rect" id="Node000008" href="$dd/d8f/puzzle__piece__example_8cpp.html" title="Puzzle piece example implementation." alt="" coords="956,250,1156,291"/>
+<area shape="poly" id="edge7_Node000002_Node000008" title=" " alt="" coords="1123,207,1077,252,1074,248,1119,204"/>
+<area shape="rect" id="Node000009" href="$d2/de8/chain__example_8cpp.html" title="Chained motion planning example." alt="" coords="1180,250,1374,291"/>
+<area shape="poly" id="edge8_Node000002_Node000009" title=" " alt="" coords="1214,204,1259,248,1256,252,1210,207"/>
+<area shape="rect" id="Node000010" href="$d4/d82/freespace__example_8cpp.html" title="Freespace motion planning example." alt="" coords="1399,250,1619,291"/>
+<area shape="poly" id="edge9_Node000002_Node000010" title=" " alt="" coords="1291,197,1448,247,1446,252,1290,202"/>
+<area shape="rect" id="Node000011" href="$d4/dfe/raster__example_8cpp.html" title="Raster motion planning example." alt="" coords="1643,250,1839,291"/>
+<area shape="poly" id="edge10_Node000002_Node000011" title=" " alt="" coords="1295,192,1390,208,1465,217,1539,225,1632,240,1665,247,1664,252,1631,245,1539,230,1464,222,1389,214,1294,198"/>
+<area shape="rect" id="Node000012" href="$d7/dc1/trajopt__default__composite__profile_8cpp.html" title=" " alt="" coords="1863,243,2062,298"/>
+<area shape="poly" id="edge11_Node000002_Node000012" title=" " alt="" coords="1295,192,1380,205,1452,212,1575,217,1698,222,1769,228,1852,240,1863,242,1862,247,1851,245,1768,234,1697,227,1575,223,1451,217,1379,210,1294,198"/>
+<area shape="rect" id="Node000013" href="$dc/df5/trajopt__motion__planner_8cpp.html" title=" " alt="" coords="2086,243,2263,298"/>
+<area shape="poly" id="edge12_Node000002_Node000013" title=" " alt="" coords="1295,192,1413,208,1514,215,1686,216,1858,217,1958,224,2075,240,2086,242,2085,247,2074,245,1957,230,1858,222,1686,221,1514,220,1413,213,1294,198"/>
+<area shape="rect" id="Node000014" href="$db/d0c/trajopt__planner__tests_8cpp.html" title=" " alt="" coords="2287,243,2465,298"/>
+<area shape="poly" id="edge13_Node000002_Node000014" title=" " alt="" coords="1295,192,1444,211,1570,218,1682,219,1787,216,1891,213,2003,214,2129,222,2276,240,2287,242,2286,247,2275,245,2128,227,2003,219,1891,219,1787,221,1682,224,1570,224,1443,216,1294,198"/>
+</map>

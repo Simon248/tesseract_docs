@@ -1,0 +1,36 @@
+\chapter{Tesseract Planning Docker}
+\hypertarget{index}{}\label{index}\index{Tesseract Planning Docker@{Tesseract Planning Docker}}
+\label{index_md_docker_2README}%
+\Hypertarget{index_md_docker_2README}%
+ \hypertarget{index_autotoc_md1}{}\doxysection{\texorpdfstring{Create the Docker image}{Create the Docker image}}\label{index_autotoc_md1}
+\hypertarget{index_autotoc_md2}{}\doxysubsection{\texorpdfstring{Download}{Download}}\label{index_autotoc_md2}
+Download a pre-\/built Docker image for this bridge from the container registry\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{docker\ login\ ghcr.io}
+\DoxyCodeLine{docker\ pull\ ghcr.io/tesseract-\/robotics/tesseract\_planning\_deploy:<tag>}
+
+\end{DoxyCode}
+\hypertarget{index_autotoc_md3}{}\doxysubsection{\texorpdfstring{Build}{Build}}\label{index_autotoc_md3}
+Build the Docker image using {\ttfamily docker-\/compose}\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{cd\ docker}
+\DoxyCodeLine{docker\ compose\ build}
+
+\end{DoxyCode}
+\hypertarget{index_autotoc_md4}{}\doxysection{\texorpdfstring{Run the docker image}{Run the docker image}}\label{index_autotoc_md4}
+Run the Docker image using {\ttfamily docker-\/compose}\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{cd\ docker}
+\DoxyCodeLine{CURRENT\_UID=\$(id\ -\/u):\$(id\ -\/g)\ docker\ compose\ up}
+
+\end{DoxyCode}
+
+
+\begin{quote}
+Note\+: by default the docker image runs as a non-\/root user, so the environment variable {\ttfamily CURRENT\+\_\+\+UID} must be supplied as shown above \end{quote}

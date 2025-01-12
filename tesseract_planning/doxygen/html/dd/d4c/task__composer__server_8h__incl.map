@@ -1,0 +1,13 @@
+<map id="tesseract_task_composer/core/include/tesseract_task_composer/core/task_composer_server.h" name="tesseract_task_composer/core/include/tesseract_task_composer/core/task_composer_server.h">
+<area shape="rect" id="Node000001" title="A task server." alt="" coords="246,5,421,76"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,124,195,150"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="248,79,145,120,143,115,246,74"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="218,124,286,150"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="306,78,275,114,271,110,301,75"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="310,124,357,150"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="336,76,336,108,331,108,331,76"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="380,124,548,150"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="383,74,437,113,433,117,380,79"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="571,124,776,150"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="422,64,615,117,614,122,421,69"/>
+</map>

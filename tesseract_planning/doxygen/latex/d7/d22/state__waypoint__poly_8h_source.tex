@@ -1,0 +1,270 @@
+\doxysection{state\+\_\+waypoint\+\_\+poly.\+h}
+\hypertarget{state__waypoint__poly_8h_source}{}\label{state__waypoint__poly_8h_source}\index{tesseract\_command\_language/include/tesseract\_command\_language/poly/state\_waypoint\_poly.h@{tesseract\_command\_language/include/tesseract\_command\_language/poly/state\_waypoint\_poly.h}}
+\mbox{\hyperlink{state__waypoint__poly_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00026\ \textcolor{preprocessor}{\#ifndef\ TESSERACT\_COMMAND\_LANGUAGE\_STATE\_WAYPOINT\_POLY\_H}}
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#define\ TESSERACT\_COMMAND\_LANGUAGE\_STATE\_WAYPOINT\_POLY\_H}}
+\DoxyCodeLine{00028\ \textcolor{preprocessor}{\#include\ <tesseract\_common/macros.h>}}
+\DoxyCodeLine{00029\ TESSERACT\_COMMON\_IGNORE\_WARNINGS\_PUSH}
+\DoxyCodeLine{00030\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00031\ \textcolor{preprocessor}{\#include\ <Eigen/Core>}}
+\DoxyCodeLine{00032\ \textcolor{preprocessor}{\#include\ <boost/serialization/access.hpp>}}
+\DoxyCodeLine{00033\ \textcolor{preprocessor}{\#include\ <boost/serialization/export.hpp>}}
+\DoxyCodeLine{00034\ \textcolor{preprocessor}{\#include\ <boost/serialization/base\_object.hpp>}}
+\DoxyCodeLine{00035\ \textcolor{preprocessor}{\#include\ <boost/concept\_check.hpp>}}
+\DoxyCodeLine{00036\ \mbox{\hyperlink{namespaceTESSERACT__COMMON__IGNORE__WARNINGS__POP}{TESSERACT\_COMMON\_IGNORE\_WARNINGS\_POP}}}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{waypoint__poly_8h}{tesseract\_command\_language/poly/waypoint\_poly.h}}>}}
+\DoxyCodeLine{00039\ \textcolor{preprocessor}{\#include\ <tesseract\_common/type\_erasure.h>}}
+\DoxyCodeLine{00040\ \textcolor{preprocessor}{\#include\ <tesseract\_common/fwd.h>}}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00043\ \textcolor{preprocessor}{\#define\ TESSERACT\_STATE\_WAYPOINT\_EXPORT\_KEY(N,\ C)\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00044\ \textcolor{preprocessor}{\ \ namespace\ N\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00045\ \textcolor{preprocessor}{\ \ \{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00046\ \textcolor{preprocessor}{\ \ using\ C\#\#InstanceBase\ =\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00047\ \textcolor{preprocessor}{\ \ \ \ \ \ tesseract\_common::TypeErasureInstance<C,\ tesseract\_planning::detail\_state\_waypoint::StateWaypointInterface>;\ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00048\ \textcolor{preprocessor}{\ \ using\ C\#\#Instance\ =\ tesseract\_planning::detail\_state\_waypoint::StateWaypointInstance<C>;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00049\ \textcolor{preprocessor}{\ \ \}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00050\ \textcolor{preprocessor}{\ \ BOOST\_CLASS\_EXPORT\_KEY(N::C\#\#InstanceBase)\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00051\ \textcolor{preprocessor}{\ \ BOOST\_CLASS\_EXPORT\_KEY(N::C\#\#Instance)\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00052\ \textcolor{preprocessor}{\ \ BOOST\_CLASS\_TRACKING(N::C\#\#InstanceBase,\ boost::serialization::track\_never)\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00053\ \textcolor{preprocessor}{\ \ BOOST\_CLASS\_TRACKING(N::C\#\#Instance,\ boost::serialization::track\_never)}}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00056\ \textcolor{preprocessor}{\#define\ TESSERACT\_STATE\_WAYPOINT\_EXPORT\_IMPLEMENT(inst)\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00057\ \textcolor{preprocessor}{\ \ BOOST\_CLASS\_EXPORT\_IMPLEMENT(inst\#\#InstanceBase)\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00058\ \textcolor{preprocessor}{\ \ BOOST\_CLASS\_EXPORT\_IMPLEMENT(inst\#\#Instance)}}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00064\ \textcolor{preprocessor}{\#define\ TESSERACT\_STATE\_WAYPOINT\_EXPORT(N,\ C)\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00065\ \textcolor{preprocessor}{\ \ TESSERACT\_JOINT\_WAYPOINT\_EXPORT\_KEY(N,\ C)\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00066\ \textcolor{preprocessor}{\ \ TESSERACT\_JOINT\_WAYPOINT\_EXPORT\_IMPLEMENT(N::C)}}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00068\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacetesseract__planning_1_1detail__state__waypoint}{tesseract\_planning::detail\_state\_waypoint}}}
+\DoxyCodeLine{00069\ \{}
+\DoxyCodeLine{00070\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00071\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structtesseract__planning_1_1detail__state__waypoint_1_1StateWaypointConcept}{StateWaypointConcept}}\ \ \textcolor{comment}{//\ NOLINT}}
+\DoxyCodeLine{00072\ \ \ :\ boost::Assignable<T>,}
+\DoxyCodeLine{00073\ \ \ \ \ boost::CopyConstructible<T>,}
+\DoxyCodeLine{00074\ \ \ \ \ boost::EqualityComparable<T>}
+\DoxyCodeLine{00075\ \{}
+\DoxyCodeLine{00076\ \ \ \mbox{\hyperlink{structtesseract__planning_1_1detail__state__waypoint_1_1StateWaypointConcept_af31da7797c1ecee218526e5d749411ab}{BOOST\_CONCEPT\_USAGE}}(\mbox{\hyperlink{structtesseract__planning_1_1detail__state__waypoint_1_1StateWaypointConcept}{StateWaypointConcept}})}
+\DoxyCodeLine{00077\ \ \ \{}
+\DoxyCodeLine{00078\ \ \ \ \ T\ cp(\mbox{\hyperlink{structtesseract__planning_1_1detail__state__waypoint_1_1StateWaypointConcept_a74dbf5d5895ce7ca852826eb74d8c1bc}{c}});}
+\DoxyCodeLine{00079\ \ \ \ \ T\ \mbox{\hyperlink{tesseract__task__composer__core__unit_8cpp_a195ed8c017ea4d4ed72c982e0f7badc2}{assign}}\ =\ \mbox{\hyperlink{structtesseract__planning_1_1detail__state__waypoint_1_1StateWaypointConcept_a74dbf5d5895ce7ca852826eb74d8c1bc}{c}};}
+\DoxyCodeLine{00080\ \ \ \ \ \textcolor{keywordtype}{bool}\ eq\ =\ (\mbox{\hyperlink{structtesseract__planning_1_1detail__state__waypoint_1_1StateWaypointConcept_a74dbf5d5895ce7ca852826eb74d8c1bc}{c}}\ ==\ cp);}
+\DoxyCodeLine{00081\ \ \ \ \ \textcolor{keywordtype}{bool}\ neq\ =\ (\mbox{\hyperlink{structtesseract__planning_1_1detail__state__waypoint_1_1StateWaypointConcept_a74dbf5d5895ce7ca852826eb74d8c1bc}{c}}\ !=\ cp);}
+\DoxyCodeLine{00082\ \ \ \ \ UNUSED(\mbox{\hyperlink{tesseract__task__composer__core__unit_8cpp_a195ed8c017ea4d4ed72c982e0f7badc2}{assign}});}
+\DoxyCodeLine{00083\ \ \ \ \ UNUSED(eq);}
+\DoxyCodeLine{00084\ \ \ \ \ UNUSED(neq);}
+\DoxyCodeLine{00085\ }
+\DoxyCodeLine{00086\ \ \ \ \ std::vector<std::string>\ names;}
+\DoxyCodeLine{00087\ \ \ \ \ \mbox{\hyperlink{structtesseract__planning_1_1detail__state__waypoint_1_1StateWaypointConcept_a74dbf5d5895ce7ca852826eb74d8c1bc}{c}}.setNames(names);}
+\DoxyCodeLine{00088\ }
+\DoxyCodeLine{00089\ \ \ \ \ std::vector<std::string>\&\ names\_ref\ =\ \mbox{\hyperlink{structtesseract__planning_1_1detail__state__waypoint_1_1StateWaypointConcept_a74dbf5d5895ce7ca852826eb74d8c1bc}{c}}.getNames();}
+\DoxyCodeLine{00090\ \ \ \ \ UNUSED(names\_ref);}
+\DoxyCodeLine{00091\ }
+\DoxyCodeLine{00092\ \ \ \ \ \textcolor{keyword}{const}\ std::vector<std::string>\&\ names\_const\_ref\ =\ \mbox{\hyperlink{structtesseract__planning_1_1detail__state__waypoint_1_1StateWaypointConcept_a74dbf5d5895ce7ca852826eb74d8c1bc}{c}}.getNames();}
+\DoxyCodeLine{00093\ \ \ \ \ UNUSED(names\_const\_ref);}
+\DoxyCodeLine{00094\ }
+\DoxyCodeLine{00095\ \ \ \ \ Eigen::VectorXd\ \mbox{\hyperlink{command__language__utils__unit_8cpp_a609dcef1ce3198d50c2c9b9ff8207552}{position}};}
+\DoxyCodeLine{00096\ \ \ \ \ \mbox{\hyperlink{structtesseract__planning_1_1detail__state__waypoint_1_1StateWaypointConcept_a74dbf5d5895ce7ca852826eb74d8c1bc}{c}}.setPosition(\mbox{\hyperlink{command__language__utils__unit_8cpp_a609dcef1ce3198d50c2c9b9ff8207552}{position}});}
+\DoxyCodeLine{00097\ }
+\DoxyCodeLine{00098\ \ \ \ \ Eigen::VectorXd\&\ position\_ref\ =\ \mbox{\hyperlink{structtesseract__planning_1_1detail__state__waypoint_1_1StateWaypointConcept_a74dbf5d5895ce7ca852826eb74d8c1bc}{c}}.getPosition();}
+\DoxyCodeLine{00099\ \ \ \ \ UNUSED(position\_ref);}
+\DoxyCodeLine{00100\ }
+\DoxyCodeLine{00101\ \ \ \ \ \textcolor{keyword}{const}\ Eigen::VectorXd\&\ position\_const\_ref\ =\ \mbox{\hyperlink{structtesseract__planning_1_1detail__state__waypoint_1_1StateWaypointConcept_a74dbf5d5895ce7ca852826eb74d8c1bc}{c}}.getPosition();}
+\DoxyCodeLine{00102\ \ \ \ \ UNUSED(position\_const\_ref);}
+\DoxyCodeLine{00103\ }
+\DoxyCodeLine{00104\ \ \ \ \ Eigen::VectorXd\ velocity;}
+\DoxyCodeLine{00105\ \ \ \ \ \mbox{\hyperlink{structtesseract__planning_1_1detail__state__waypoint_1_1StateWaypointConcept_a74dbf5d5895ce7ca852826eb74d8c1bc}{c}}.setVelocity(velocity);}
+\DoxyCodeLine{00106\ }
+\DoxyCodeLine{00107\ \ \ \ \ Eigen::VectorXd\&\ velocity\_ref\ =\ \mbox{\hyperlink{structtesseract__planning_1_1detail__state__waypoint_1_1StateWaypointConcept_a74dbf5d5895ce7ca852826eb74d8c1bc}{c}}.getVelocity();}
+\DoxyCodeLine{00108\ \ \ \ \ UNUSED(velocity\_ref);}
+\DoxyCodeLine{00109\ }
+\DoxyCodeLine{00110\ \ \ \ \ \textcolor{keyword}{const}\ Eigen::VectorXd\&\ velocity\_const\_ref\ =\ \mbox{\hyperlink{structtesseract__planning_1_1detail__state__waypoint_1_1StateWaypointConcept_a74dbf5d5895ce7ca852826eb74d8c1bc}{c}}.getVelocity();}
+\DoxyCodeLine{00111\ \ \ \ \ UNUSED(velocity\_const\_ref);}
+\DoxyCodeLine{00112\ }
+\DoxyCodeLine{00113\ \ \ \ \ Eigen::VectorXd\ acceleration;}
+\DoxyCodeLine{00114\ \ \ \ \ \mbox{\hyperlink{structtesseract__planning_1_1detail__state__waypoint_1_1StateWaypointConcept_a74dbf5d5895ce7ca852826eb74d8c1bc}{c}}.setAcceleration(acceleration);}
+\DoxyCodeLine{00115\ }
+\DoxyCodeLine{00116\ \ \ \ \ Eigen::VectorXd\&\ acceleration\_ref\ =\ \mbox{\hyperlink{structtesseract__planning_1_1detail__state__waypoint_1_1StateWaypointConcept_a74dbf5d5895ce7ca852826eb74d8c1bc}{c}}.getAcceleration();}
+\DoxyCodeLine{00117\ \ \ \ \ UNUSED(acceleration\_ref);}
+\DoxyCodeLine{00118\ }
+\DoxyCodeLine{00119\ \ \ \ \ \textcolor{keyword}{const}\ Eigen::VectorXd\&\ acceleration\_const\_ref\ =\ \mbox{\hyperlink{structtesseract__planning_1_1detail__state__waypoint_1_1StateWaypointConcept_a74dbf5d5895ce7ca852826eb74d8c1bc}{c}}.getAcceleration();}
+\DoxyCodeLine{00120\ \ \ \ \ UNUSED(acceleration\_const\_ref);}
+\DoxyCodeLine{00121\ }
+\DoxyCodeLine{00122\ \ \ \ \ Eigen::VectorXd\ effort;}
+\DoxyCodeLine{00123\ \ \ \ \ \mbox{\hyperlink{structtesseract__planning_1_1detail__state__waypoint_1_1StateWaypointConcept_a74dbf5d5895ce7ca852826eb74d8c1bc}{c}}.setEffort(effort);}
+\DoxyCodeLine{00124\ }
+\DoxyCodeLine{00125\ \ \ \ \ Eigen::VectorXd\&\ effort\_ref\ =\ \mbox{\hyperlink{structtesseract__planning_1_1detail__state__waypoint_1_1StateWaypointConcept_a74dbf5d5895ce7ca852826eb74d8c1bc}{c}}.getEffort();}
+\DoxyCodeLine{00126\ \ \ \ \ UNUSED(effort\_ref);}
+\DoxyCodeLine{00127\ }
+\DoxyCodeLine{00128\ \ \ \ \ \textcolor{keyword}{const}\ Eigen::VectorXd\&\ effort\_const\_ref\ =\ \mbox{\hyperlink{structtesseract__planning_1_1detail__state__waypoint_1_1StateWaypointConcept_a74dbf5d5895ce7ca852826eb74d8c1bc}{c}}.getEffort();}
+\DoxyCodeLine{00129\ \ \ \ \ UNUSED(effort\_const\_ref);}
+\DoxyCodeLine{00130\ }
+\DoxyCodeLine{00131\ \ \ \ \ \textcolor{keywordtype}{double}\ time\{\ 0\ \};}
+\DoxyCodeLine{00132\ \ \ \ \ \mbox{\hyperlink{structtesseract__planning_1_1detail__state__waypoint_1_1StateWaypointConcept_a74dbf5d5895ce7ca852826eb74d8c1bc}{c}}.setTime(time);}
+\DoxyCodeLine{00133\ }
+\DoxyCodeLine{00134\ \ \ \ \ \textcolor{keywordtype}{double}\ time\_copy\ =\ \mbox{\hyperlink{structtesseract__planning_1_1detail__state__waypoint_1_1StateWaypointConcept_a74dbf5d5895ce7ca852826eb74d8c1bc}{c}}.getTime();}
+\DoxyCodeLine{00135\ \ \ \ \ UNUSED(time\_copy);}
+\DoxyCodeLine{00136\ }
+\DoxyCodeLine{00137\ \ \ \ \ \mbox{\hyperlink{structtesseract__planning_1_1detail__state__waypoint_1_1StateWaypointConcept_a74dbf5d5895ce7ca852826eb74d8c1bc}{c}}.setName(\textcolor{stringliteral}{"{}name"{}});}
+\DoxyCodeLine{00138\ \ \ \ \ \mbox{\hyperlink{structtesseract__planning_1_1detail__state__waypoint_1_1StateWaypointConcept_a74dbf5d5895ce7ca852826eb74d8c1bc}{c}}.getName();}
+\DoxyCodeLine{00139\ \ \ \ \ \mbox{\hyperlink{structtesseract__planning_1_1detail__state__waypoint_1_1StateWaypointConcept_a74dbf5d5895ce7ca852826eb74d8c1bc}{c}}.print();}
+\DoxyCodeLine{00140\ \ \ \ \ \mbox{\hyperlink{structtesseract__planning_1_1detail__state__waypoint_1_1StateWaypointConcept_a74dbf5d5895ce7ca852826eb74d8c1bc}{c}}.print(\textcolor{stringliteral}{"{}prefix\_"{}});}
+\DoxyCodeLine{00141\ \ \ \}}
+\DoxyCodeLine{00142\ }
+\DoxyCodeLine{00143\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00144\ \ \ T\ \mbox{\hyperlink{structtesseract__planning_1_1detail__state__waypoint_1_1StateWaypointConcept_a74dbf5d5895ce7ca852826eb74d8c1bc}{c}};}
+\DoxyCodeLine{00145\ \};}
+\DoxyCodeLine{00146\ }
+\DoxyCodeLine{00147\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structtesseract__planning_1_1detail__state__waypoint_1_1StateWaypointInterface}{StateWaypointInterface}}\ :\ tesseract\_common::TypeErasureInterface}
+\DoxyCodeLine{00148\ \{}
+\DoxyCodeLine{00149\ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structtesseract__planning_1_1detail__state__waypoint_1_1StateWaypointInterface_a83aaf28e421a30fca7b17a4e82a41365}{setNames}}(\textcolor{keyword}{const}\ std::vector<std::string>\&\ names)\ =\ 0;}
+\DoxyCodeLine{00150\ \ \ \textcolor{keyword}{virtual}\ std::vector<std::string>\&\ \mbox{\hyperlink{structtesseract__planning_1_1detail__state__waypoint_1_1StateWaypointInterface_ab99833e16a7ea1ae4fae9371011afb06}{getNames}}()\ =\ 0;}
+\DoxyCodeLine{00151\ \ \ \textcolor{keyword}{virtual}\ \textcolor{keyword}{const}\ std::vector<std::string>\&\ \mbox{\hyperlink{structtesseract__planning_1_1detail__state__waypoint_1_1StateWaypointInterface_a6c8cfc0dcd7b41d2e00aa04655bdb9be}{getNames}}()\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{00152\ }
+\DoxyCodeLine{00153\ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structtesseract__planning_1_1detail__state__waypoint_1_1StateWaypointInterface_a3ec5a97d1fc89648a81d5d27ef2944a7}{setPosition}}(\textcolor{keyword}{const}\ Eigen::VectorXd\&\ \mbox{\hyperlink{command__language__utils__unit_8cpp_a609dcef1ce3198d50c2c9b9ff8207552}{position}})\ =\ 0;}
+\DoxyCodeLine{00154\ \ \ \textcolor{keyword}{virtual}\ Eigen::VectorXd\&\ \mbox{\hyperlink{structtesseract__planning_1_1detail__state__waypoint_1_1StateWaypointInterface_abf7ea814ba8900073337d9ebc4d4b9bf}{getPosition}}()\ =\ 0;}
+\DoxyCodeLine{00155\ \ \ \textcolor{keyword}{virtual}\ \textcolor{keyword}{const}\ Eigen::VectorXd\&\ \mbox{\hyperlink{structtesseract__planning_1_1detail__state__waypoint_1_1StateWaypointInterface_a55a330213e65668e91022c1186037faf}{getPosition}}()\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{00156\ }
+\DoxyCodeLine{00157\ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structtesseract__planning_1_1detail__state__waypoint_1_1StateWaypointInterface_a47687f1683f3f95164f9274e20af5a1f}{setVelocity}}(\textcolor{keyword}{const}\ Eigen::VectorXd\&\ velocity)\ =\ 0;}
+\DoxyCodeLine{00158\ \ \ \textcolor{keyword}{virtual}\ Eigen::VectorXd\&\ \mbox{\hyperlink{structtesseract__planning_1_1detail__state__waypoint_1_1StateWaypointInterface_ac8dd640467e4c2497e78c08cbe724979}{getVelocity}}()\ =\ 0;}
+\DoxyCodeLine{00159\ \ \ \textcolor{keyword}{virtual}\ \textcolor{keyword}{const}\ Eigen::VectorXd\&\ \mbox{\hyperlink{structtesseract__planning_1_1detail__state__waypoint_1_1StateWaypointInterface_afa1c0de7b2e096fe178af74b817f9c71}{getVelocity}}()\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{00160\ }
+\DoxyCodeLine{00161\ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structtesseract__planning_1_1detail__state__waypoint_1_1StateWaypointInterface_a9a4f6dd0458d143d06a3a30ae774b9df}{setAcceleration}}(\textcolor{keyword}{const}\ Eigen::VectorXd\&\ acceleration)\ =\ 0;}
+\DoxyCodeLine{00162\ \ \ \textcolor{keyword}{virtual}\ Eigen::VectorXd\&\ \mbox{\hyperlink{structtesseract__planning_1_1detail__state__waypoint_1_1StateWaypointInterface_a70fac7c86d1cb033f9fbd4e5cbdb1b8c}{getAcceleration}}()\ =\ 0;}
+\DoxyCodeLine{00163\ \ \ \textcolor{keyword}{virtual}\ \textcolor{keyword}{const}\ Eigen::VectorXd\&\ \mbox{\hyperlink{structtesseract__planning_1_1detail__state__waypoint_1_1StateWaypointInterface_a0967814b11b10b66e0f7a1eeb4bd2804}{getAcceleration}}()\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{00164\ }
+\DoxyCodeLine{00165\ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structtesseract__planning_1_1detail__state__waypoint_1_1StateWaypointInterface_ae46b4c73257789ad5360f14c9e33f469}{setEffort}}(\textcolor{keyword}{const}\ Eigen::VectorXd\&\ effort)\ =\ 0;}
+\DoxyCodeLine{00166\ \ \ \textcolor{keyword}{virtual}\ Eigen::VectorXd\&\ \mbox{\hyperlink{structtesseract__planning_1_1detail__state__waypoint_1_1StateWaypointInterface_ab248cf71dffff30aea7f9129480f3b36}{getEffort}}()\ =\ 0;}
+\DoxyCodeLine{00167\ \ \ \textcolor{keyword}{virtual}\ \textcolor{keyword}{const}\ Eigen::VectorXd\&\ \mbox{\hyperlink{structtesseract__planning_1_1detail__state__waypoint_1_1StateWaypointInterface_af6dc4adccfe2cb08f394d21498d50865}{getEffort}}()\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{00168\ }
+\DoxyCodeLine{00169\ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structtesseract__planning_1_1detail__state__waypoint_1_1StateWaypointInterface_a785f3a22ce3d967d2b1d5d1164044727}{setTime}}(\textcolor{keywordtype}{double}\ time)\ =\ 0;}
+\DoxyCodeLine{00170\ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{structtesseract__planning_1_1detail__state__waypoint_1_1StateWaypointInterface_aab87d4af95d71aafeeffc8073f3ae702}{getTime}}()\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{00171\ }
+\DoxyCodeLine{00172\ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structtesseract__planning_1_1detail__state__waypoint_1_1StateWaypointInterface_ad777817cf4d0cbf0a3b56587b52df858}{setName}}(\textcolor{keyword}{const}\ std::string\&\ \mbox{\hyperlink{tesseract__task__composer__core__unit_8cpp_a9b45b3e13bd9167aab02e17e08916231}{name}})\ =\ 0;}
+\DoxyCodeLine{00173\ \ \ \textcolor{keyword}{virtual}\ \textcolor{keyword}{const}\ std::string\&\ \mbox{\hyperlink{structtesseract__planning_1_1detail__state__waypoint_1_1StateWaypointInterface_ae3a440a4f9cbad762e85d4b8cbd91b1f}{getName}}()\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{00174\ }
+\DoxyCodeLine{00175\ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structtesseract__planning_1_1detail__state__waypoint_1_1StateWaypointInterface_a86eff1ac69f06c7d13c37111321605a4}{print}}(\textcolor{keyword}{const}\ std::string\&\ prefix)\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{00176\ }
+\DoxyCodeLine{00177\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00178\ \ \ \textcolor{keyword}{friend}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{structtesseract__planning_1_1detail__state__waypoint_1_1StateWaypointInterface_ac98d07dd8f7b70e16ccb9a01abf56b9c}{boost::serialization::access}};}
+\DoxyCodeLine{00179\ \ \ \textcolor{keyword}{friend}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structtesseract__planning_1_1detail__state__waypoint_1_1StateWaypointInterface_a9d42ad7bb40288a7ac1aad8d76809fe7}{tesseract\_common::Serialization}};}
+\DoxyCodeLine{00180\ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{class}\ Archive>}
+\DoxyCodeLine{00181\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structtesseract__planning_1_1detail__state__waypoint_1_1StateWaypointInterface_a0192e65ce1e61e6c0dafbfcc29323670}{serialize}}(Archive\&\ ar,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ version);\ \ \textcolor{comment}{//\ NOLINT}}
+\DoxyCodeLine{00182\ \};}
+\DoxyCodeLine{00183\ }
+\DoxyCodeLine{00184\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00185\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structtesseract__planning_1_1detail__state__waypoint_1_1StateWaypointInstance}{StateWaypointInstance}}\ :\ tesseract\_common::TypeErasureInstance<T,\ StateWaypointInterface>\ \ \textcolor{comment}{//\ NOLINT}}
+\DoxyCodeLine{00186\ \{}
+\DoxyCodeLine{00187\ \ \ \textcolor{keyword}{using\ }\mbox{\hyperlink{structtesseract__planning_1_1detail__state__waypoint_1_1StateWaypointInstance_ae9a2303771f2cfabcd7772c4d4ced175}{BaseType}}\ =\ tesseract\_common::TypeErasureInstance<T,\ StateWaypointInterface>;}
+\DoxyCodeLine{00188\ \ \ \mbox{\hyperlink{structtesseract__planning_1_1detail__state__waypoint_1_1StateWaypointInstance_ab655c644d5236d154995d39e508e5464}{StateWaypointInstance}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00189\ \ \ \mbox{\hyperlink{structtesseract__planning_1_1detail__state__waypoint_1_1StateWaypointInstance_a63f2b20fb47ccc7c77a10b5bc36841a2}{StateWaypointInstance}}(\textcolor{keyword}{const}\ T\&\ x)\ :\ \mbox{\hyperlink{structtesseract__planning_1_1detail__state__waypoint_1_1StateWaypointInstance_ae9a2303771f2cfabcd7772c4d4ced175}{BaseType}}(x)\ \{\}}
+\DoxyCodeLine{00190\ \ \ \mbox{\hyperlink{structtesseract__planning_1_1detail__state__waypoint_1_1StateWaypointInstance_a9dca9e2b9da38899107c0dab704156a6}{StateWaypointInstance}}(\mbox{\hyperlink{structtesseract__planning_1_1detail__state__waypoint_1_1StateWaypointInstance}{StateWaypointInstance}}\&\&\ x)\ noexcept\ :\ \mbox{\hyperlink{structtesseract__planning_1_1detail__state__waypoint_1_1StateWaypointInstance_ae9a2303771f2cfabcd7772c4d4ced175}{BaseType}}(std::move(x))\ \{\}}
+\DoxyCodeLine{00191\ }
+\DoxyCodeLine{00192\ \ \ \mbox{\hyperlink{structtesseract__planning_1_1detail__state__waypoint_1_1StateWaypointInstance_aa3afaf47ce2035855824045e1e1d3c5e}{BOOST\_CONCEPT\_ASSERT}}((\mbox{\hyperlink{structtesseract__planning_1_1detail__state__waypoint_1_1StateWaypointConcept}{StateWaypointConcept<T>}}));}
+\DoxyCodeLine{00193\ }
+\DoxyCodeLine{00194\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structtesseract__planning_1_1detail__state__waypoint_1_1StateWaypointInstance_aba51cd40fb8331f94bfa83a9bc08dcbd}{setNames}}(\textcolor{keyword}{const}\ std::vector<std::string>\&\ names)\ \textcolor{keyword}{final}\ \{\ this-\/>get().setNames(names);\ \}}
+\DoxyCodeLine{00195\ \ \ std::vector<std::string>\&\ \mbox{\hyperlink{structtesseract__planning_1_1detail__state__waypoint_1_1StateWaypointInstance_a23de0c96955496aa3fab4c464c442e90}{getNames}}()\ final\ \{\ \textcolor{keywordflow}{return}\ this-\/>get().getNames();\ \}}
+\DoxyCodeLine{00196\ \ \ \textcolor{keyword}{const}\ std::vector<std::string>\&\ \mbox{\hyperlink{structtesseract__planning_1_1detail__state__waypoint_1_1StateWaypointInstance_aa2e0f9010935d396c8ff2bb00a3f1e42}{getNames}}()\ const\ final\ \{\ \textcolor{keywordflow}{return}\ this-\/>get().getNames();\ \}}
+\DoxyCodeLine{00197\ }
+\DoxyCodeLine{00198\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structtesseract__planning_1_1detail__state__waypoint_1_1StateWaypointInstance_ad60d1e12dc87721e5d0e6a2233ff58e3}{setPosition}}(\textcolor{keyword}{const}\ Eigen::VectorXd\&\ \mbox{\hyperlink{command__language__utils__unit_8cpp_a609dcef1ce3198d50c2c9b9ff8207552}{position}})\ \textcolor{keyword}{final}\ \{\ this-\/>get().setPosition(\mbox{\hyperlink{command__language__utils__unit_8cpp_a609dcef1ce3198d50c2c9b9ff8207552}{position}});\ \}}
+\DoxyCodeLine{00199\ \ \ Eigen::VectorXd\&\ \mbox{\hyperlink{structtesseract__planning_1_1detail__state__waypoint_1_1StateWaypointInstance_a1d1a598e04387066c28024d78dee57a5}{getPosition}}()\ final\ \{\ \textcolor{keywordflow}{return}\ this-\/>get().getPosition();\ \}}
+\DoxyCodeLine{00200\ \ \ \textcolor{keyword}{const}\ Eigen::VectorXd\&\ \mbox{\hyperlink{structtesseract__planning_1_1detail__state__waypoint_1_1StateWaypointInstance_a1712c831514a6a52acce76ae42f88b92}{getPosition}}()\ const\ final\ \{\ \textcolor{keywordflow}{return}\ this-\/>get().getPosition();\ \}}
+\DoxyCodeLine{00201\ }
+\DoxyCodeLine{00202\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structtesseract__planning_1_1detail__state__waypoint_1_1StateWaypointInstance_ac12e2ae3403707948c88ff4e69eb7ed0}{setVelocity}}(\textcolor{keyword}{const}\ Eigen::VectorXd\&\ velocity)\ \textcolor{keyword}{final}\ \{\ this-\/>get().setVelocity(velocity);\ \}}
+\DoxyCodeLine{00203\ \ \ Eigen::VectorXd\&\ \mbox{\hyperlink{structtesseract__planning_1_1detail__state__waypoint_1_1StateWaypointInstance_a50a927065b61f6c51abe0626fa172997}{getVelocity}}()\ final\ \{\ \textcolor{keywordflow}{return}\ this-\/>get().getVelocity();\ \}}
+\DoxyCodeLine{00204\ \ \ \textcolor{keyword}{const}\ Eigen::VectorXd\&\ \mbox{\hyperlink{structtesseract__planning_1_1detail__state__waypoint_1_1StateWaypointInstance_ae5962cf120ab2901f891f6d4d9a59110}{getVelocity}}()\ const\ final\ \{\ \textcolor{keywordflow}{return}\ this-\/>get().getVelocity();\ \}}
+\DoxyCodeLine{00205\ }
+\DoxyCodeLine{00206\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structtesseract__planning_1_1detail__state__waypoint_1_1StateWaypointInstance_aba8e62e259e3af13c6f5700f564cc5d8}{setAcceleration}}(\textcolor{keyword}{const}\ Eigen::VectorXd\&\ acceleration)\ \textcolor{keyword}{final}\ \{\ this-\/>get().setAcceleration(acceleration);\ \}}
+\DoxyCodeLine{00207\ \ \ Eigen::VectorXd\&\ \mbox{\hyperlink{structtesseract__planning_1_1detail__state__waypoint_1_1StateWaypointInstance_a2ce3712e4a3c80ca5600945f0111fb73}{getAcceleration}}()\ final\ \{\ \textcolor{keywordflow}{return}\ this-\/>get().getAcceleration();\ \}}
+\DoxyCodeLine{00208\ \ \ \textcolor{keyword}{const}\ Eigen::VectorXd\&\ \mbox{\hyperlink{structtesseract__planning_1_1detail__state__waypoint_1_1StateWaypointInstance_a0cefd4e7d0bd26a53dd7184198766f9b}{getAcceleration}}()\ const\ final\ \{\ \textcolor{keywordflow}{return}\ this-\/>get().getAcceleration();\ \}}
+\DoxyCodeLine{00209\ }
+\DoxyCodeLine{00210\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structtesseract__planning_1_1detail__state__waypoint_1_1StateWaypointInstance_a429b0527369fecd40edd49188478d394}{setEffort}}(\textcolor{keyword}{const}\ Eigen::VectorXd\&\ effort)\ \textcolor{keyword}{final}\ \{\ this-\/>get().setEffort(effort);\ \}}
+\DoxyCodeLine{00211\ \ \ Eigen::VectorXd\&\ \mbox{\hyperlink{structtesseract__planning_1_1detail__state__waypoint_1_1StateWaypointInstance_ae0d178f7cc63a4fa3a69404d838ddc3d}{getEffort}}()\ final\ \{\ \textcolor{keywordflow}{return}\ this-\/>get().getEffort();\ \}}
+\DoxyCodeLine{00212\ \ \ \textcolor{keyword}{const}\ Eigen::VectorXd\&\ \mbox{\hyperlink{structtesseract__planning_1_1detail__state__waypoint_1_1StateWaypointInstance_ad74bb3e69a8c1023f25b504bb78472d0}{getEffort}}()\ const\ final\ \{\ \textcolor{keywordflow}{return}\ this-\/>get().getEffort();\ \}}
+\DoxyCodeLine{00213\ }
+\DoxyCodeLine{00214\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structtesseract__planning_1_1detail__state__waypoint_1_1StateWaypointInstance_a797613e38c1d0911f24776f2beee1078}{setTime}}(\textcolor{keywordtype}{double}\ time)\ \textcolor{keyword}{final}\ \{\ this-\/>get().setTime(time);\ \}}
+\DoxyCodeLine{00215\ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{structtesseract__planning_1_1detail__state__waypoint_1_1StateWaypointInstance_a42038f943869c79b97cfba979b216574}{getTime}}()\ const\ final\ \{\ \textcolor{keywordflow}{return}\ this-\/>get().getTime();\ \}}
+\DoxyCodeLine{00216\ }
+\DoxyCodeLine{00217\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structtesseract__planning_1_1detail__state__waypoint_1_1StateWaypointInstance_a4448ebb182d7a2485849e9d78445b79a}{setName}}(\textcolor{keyword}{const}\ std::string\&\ \mbox{\hyperlink{tesseract__task__composer__core__unit_8cpp_a9b45b3e13bd9167aab02e17e08916231}{name}})\ \textcolor{keyword}{final}\ \{\ this-\/>get().setName(\mbox{\hyperlink{tesseract__task__composer__core__unit_8cpp_a9b45b3e13bd9167aab02e17e08916231}{name}});\ \}}
+\DoxyCodeLine{00218\ \ \ \textcolor{keyword}{const}\ std::string\&\ \mbox{\hyperlink{structtesseract__planning_1_1detail__state__waypoint_1_1StateWaypointInstance_a8935dd04c8f69ae7593ae65d984948da}{getName}}()\ const\ final\ \{\ \textcolor{keywordflow}{return}\ this-\/>get().getName();\ \}}
+\DoxyCodeLine{00219\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structtesseract__planning_1_1detail__state__waypoint_1_1StateWaypointInstance_a98cae1505d23100f37c6abbdaa23bd02}{print}}(\textcolor{keyword}{const}\ std::string\&\ prefix)\ \textcolor{keyword}{const}\ \textcolor{keyword}{final}\ \{\ this-\/>get().print(prefix);\ \}}
+\DoxyCodeLine{00220\ }
+\DoxyCodeLine{00221\ \ \ std::unique\_ptr<tesseract\_common::TypeErasureInterface>\ \mbox{\hyperlink{structtesseract__planning_1_1detail__state__waypoint_1_1StateWaypointInstance_ae4d12bc92dda8ad427d870e70e3ede17}{clone}}()\ const\ final}
+\DoxyCodeLine{00222\ \ \ \{}
+\DoxyCodeLine{00223\ \ \ \ \ \textcolor{keywordflow}{return}\ std::make\_unique<StateWaypointInstance<T>>(this-\/>get());}
+\DoxyCodeLine{00224\ \ \ \}}
+\DoxyCodeLine{00225\ }
+\DoxyCodeLine{00226\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00227\ \ \ \textcolor{keyword}{friend}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{structtesseract__planning_1_1detail__state__waypoint_1_1StateWaypointInstance_ac98d07dd8f7b70e16ccb9a01abf56b9c}{boost::serialization::access}};}
+\DoxyCodeLine{00228\ \ \ \textcolor{keyword}{friend}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structtesseract__planning_1_1detail__state__waypoint_1_1StateWaypointInstance_a9d42ad7bb40288a7ac1aad8d76809fe7}{tesseract\_common::Serialization}};}
+\DoxyCodeLine{00229\ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{class}\ Archive>}
+\DoxyCodeLine{00230\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structtesseract__planning_1_1detail__state__waypoint_1_1StateWaypointInstance_a788f78cf2bdb34df4662a10ec9f2d4fd}{serialize}}(Archive\&\ ar,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \textcolor{comment}{/*version*/})\ \ \textcolor{comment}{//\ NOLINT}}
+\DoxyCodeLine{00231\ \ \ \{}
+\DoxyCodeLine{00232\ \ \ \ \ ar\&\ boost::serialization::make\_nvp(\textcolor{stringliteral}{"{}base"{}},\ boost::serialization::base\_object<BaseType>(*\textcolor{keyword}{this}));}
+\DoxyCodeLine{00233\ \ \ \}}
+\DoxyCodeLine{00234\ \};}
+\DoxyCodeLine{00235\ \}\ \ \textcolor{comment}{//\ namespace\ tesseract\_planning::detail\_state\_waypoint}}
+\DoxyCodeLine{00236\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacetesseract__planning}{tesseract\_planning}}}
+\DoxyCodeLine{00237\ \{}
+\DoxyCodeLine{00238\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespacetesseract__planning_ad000d7036e52bd6407cc1606d7d92a14}{StateWaypointPolyBase}}\ =\ tesseract\_common::TypeErasureBase<\mbox{\hyperlink{structtesseract__planning_1_1detail__state__waypoint_1_1StateWaypointInterface}{detail\_state\_waypoint::StateWaypointInterface}},}
+\DoxyCodeLine{00239\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structtesseract__planning_1_1detail__state__waypoint_1_1StateWaypointInstance}{detail\_state\_waypoint::StateWaypointInstance}}>;}
+\DoxyCodeLine{00240\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structtesseract__planning_1_1StateWaypointPoly}{StateWaypointPoly}}\ :\ \mbox{\hyperlink{namespacetesseract__planning_ad000d7036e52bd6407cc1606d7d92a14}{StateWaypointPolyBase}}}
+\DoxyCodeLine{00241\ \{}
+\DoxyCodeLine{00242\ \ \ \textcolor{keyword}{using\ }StateWaypointPolyBase::StateWaypointPolyBase;}
+\DoxyCodeLine{00243\ }
+\DoxyCodeLine{00244\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structtesseract__planning_1_1StateWaypointPoly_a84b3685a9ffd3674811db50d9ad1470f}{setNames}}(\textcolor{keyword}{const}\ std::vector<std::string>\&\ names);}
+\DoxyCodeLine{00245\ \ \ std::vector<std::string>\&\ \mbox{\hyperlink{structtesseract__planning_1_1StateWaypointPoly_a31feddd92e294f009c7579cd8edf7ad2}{getNames}}();}
+\DoxyCodeLine{00246\ \ \ \textcolor{keyword}{const}\ std::vector<std::string>\&\ \mbox{\hyperlink{structtesseract__planning_1_1StateWaypointPoly_a31feddd92e294f009c7579cd8edf7ad2}{getNames}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00247\ }
+\DoxyCodeLine{00248\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structtesseract__planning_1_1StateWaypointPoly_a5657e7cd4d313ad7fdd33c2a2d3e6732}{setPosition}}(\textcolor{keyword}{const}\ Eigen::VectorXd\&\ \mbox{\hyperlink{command__language__utils__unit_8cpp_a609dcef1ce3198d50c2c9b9ff8207552}{position}});}
+\DoxyCodeLine{00249\ \ \ Eigen::VectorXd\&\ \mbox{\hyperlink{structtesseract__planning_1_1StateWaypointPoly_abd3abc3a705fa9983e0bd43c28e47bc9}{getPosition}}();}
+\DoxyCodeLine{00250\ \ \ \textcolor{keyword}{const}\ Eigen::VectorXd\&\ \mbox{\hyperlink{structtesseract__planning_1_1StateWaypointPoly_abd3abc3a705fa9983e0bd43c28e47bc9}{getPosition}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00251\ }
+\DoxyCodeLine{00252\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structtesseract__planning_1_1StateWaypointPoly_a57f945cad35e10126263318b70578b53}{setVelocity}}(\textcolor{keyword}{const}\ Eigen::VectorXd\&\ velocity);}
+\DoxyCodeLine{00253\ \ \ Eigen::VectorXd\&\ \mbox{\hyperlink{structtesseract__planning_1_1StateWaypointPoly_a83402ce4913a9a6db27f34f59505335a}{getVelocity}}();}
+\DoxyCodeLine{00254\ \ \ \textcolor{keyword}{const}\ Eigen::VectorXd\&\ \mbox{\hyperlink{structtesseract__planning_1_1StateWaypointPoly_a83402ce4913a9a6db27f34f59505335a}{getVelocity}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00255\ }
+\DoxyCodeLine{00256\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structtesseract__planning_1_1StateWaypointPoly_a60b96e300071e5ff63e806c1c52588e2}{setAcceleration}}(\textcolor{keyword}{const}\ Eigen::VectorXd\&\ acceleration);}
+\DoxyCodeLine{00257\ \ \ Eigen::VectorXd\&\ \mbox{\hyperlink{structtesseract__planning_1_1StateWaypointPoly_a1241ba5f739529b6c85778613ee6833f}{getAcceleration}}();}
+\DoxyCodeLine{00258\ \ \ \textcolor{keyword}{const}\ Eigen::VectorXd\&\ \mbox{\hyperlink{structtesseract__planning_1_1StateWaypointPoly_a1241ba5f739529b6c85778613ee6833f}{getAcceleration}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00259\ }
+\DoxyCodeLine{00260\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structtesseract__planning_1_1StateWaypointPoly_adf8f52745bab5a2b694d5f9f94ebf018}{setEffort}}(\textcolor{keyword}{const}\ Eigen::VectorXd\&\ effort);}
+\DoxyCodeLine{00261\ \ \ Eigen::VectorXd\&\ \mbox{\hyperlink{structtesseract__planning_1_1StateWaypointPoly_a153126807803d6ec20f04a0af8921af8}{getEffort}}();}
+\DoxyCodeLine{00262\ \ \ \textcolor{keyword}{const}\ Eigen::VectorXd\&\ \mbox{\hyperlink{structtesseract__planning_1_1StateWaypointPoly_a153126807803d6ec20f04a0af8921af8}{getEffort}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00263\ }
+\DoxyCodeLine{00264\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structtesseract__planning_1_1StateWaypointPoly_ab43a86c5dbbfd91563a1761a1a5e1625}{setTime}}(\textcolor{keywordtype}{double}\ time);}
+\DoxyCodeLine{00265\ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{structtesseract__planning_1_1StateWaypointPoly_a09082f9a375332bfb5e2fd10b8c0be29}{getTime}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00266\ }
+\DoxyCodeLine{00267\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structtesseract__planning_1_1StateWaypointPoly_a184253a694f11eb601c9fcf30bf3a7bc}{setName}}(\textcolor{keyword}{const}\ std::string\&\ \mbox{\hyperlink{tesseract__task__composer__core__unit_8cpp_a9b45b3e13bd9167aab02e17e08916231}{name}});}
+\DoxyCodeLine{00268\ \ \ \textcolor{keyword}{const}\ std::string\&\ \mbox{\hyperlink{structtesseract__planning_1_1StateWaypointPoly_a519e0f25ae8261fd80f40a34dd47bb8c}{getName}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00269\ }
+\DoxyCodeLine{00270\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structtesseract__planning_1_1StateWaypointPoly_abb2f16a3a4158498e9b16a4d44375132}{print}}(\textcolor{keyword}{const}\ std::string\&\ prefix\ =\ \textcolor{stringliteral}{"{}"{}})\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00271\ }
+\DoxyCodeLine{00272\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00273\ \ \ \textcolor{keyword}{friend}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{structtesseract__planning_1_1StateWaypointPoly_ac98d07dd8f7b70e16ccb9a01abf56b9c}{boost::serialization::access}};}
+\DoxyCodeLine{00274\ \ \ \textcolor{keyword}{friend}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structtesseract__planning_1_1StateWaypointPoly_a9d42ad7bb40288a7ac1aad8d76809fe7}{tesseract\_common::Serialization}};}
+\DoxyCodeLine{00275\ }
+\DoxyCodeLine{00276\ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{class}\ Archive>}
+\DoxyCodeLine{00277\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structtesseract__planning_1_1StateWaypointPoly_a8161f73b35b6d90bcd8e4022a051a4df}{serialize}}(Archive\&\ ar,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \textcolor{comment}{/*version*/});\ \ \textcolor{comment}{//\ NOLINT}}
+\DoxyCodeLine{00278\ \};}
+\DoxyCodeLine{00279\ }
+\DoxyCodeLine{00280\ \}\ \ \textcolor{comment}{//\ namespace\ tesseract\_planning}}
+\DoxyCodeLine{00281\ }
+\DoxyCodeLine{00282\ BOOST\_CLASS\_EXPORT\_KEY(\mbox{\hyperlink{structtesseract__planning_1_1detail__state__waypoint_1_1StateWaypointInterface}{tesseract\_planning::detail\_state\_waypoint::StateWaypointInterface}})}
+\DoxyCodeLine{00283\ BOOST\_CLASS\_TRACKING(\mbox{\hyperlink{structtesseract__planning_1_1detail__state__waypoint_1_1StateWaypointInterface}{tesseract\_planning::detail\_state\_waypoint::StateWaypointInterface}},}
+\DoxyCodeLine{00284\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ boost::serialization::track\_never)}
+\DoxyCodeLine{00285\ }
+\DoxyCodeLine{00286\ BOOST\_CLASS\_EXPORT\_KEY(\mbox{\hyperlink{namespacetesseract__planning_ad000d7036e52bd6407cc1606d7d92a14}{tesseract\_planning::StateWaypointPolyBase}})}
+\DoxyCodeLine{00287\ BOOST\_CLASS\_TRACKING(\mbox{\hyperlink{namespacetesseract__planning_ad000d7036e52bd6407cc1606d7d92a14}{tesseract\_planning::StateWaypointPolyBase}},\ boost::serialization::track\_never)}
+\DoxyCodeLine{00288\ }
+\DoxyCodeLine{00289\ BOOST\_CLASS\_EXPORT\_KEY(\mbox{\hyperlink{structtesseract__planning_1_1StateWaypointPoly}{tesseract\_planning::StateWaypointPoly}})}
+\DoxyCodeLine{00290\ BOOST\_CLASS\_TRACKING(\mbox{\hyperlink{structtesseract__planning_1_1StateWaypointPoly}{tesseract\_planning::StateWaypointPoly}},\ boost::serialization::track\_never)}
+\DoxyCodeLine{00291\ }
+\DoxyCodeLine{00292\ \mbox{\hyperlink{waypoint__poly_8h_a0da884b648f0ad59d58613085d694a41}{TESSERACT\_WAYPOINT\_EXPORT\_KEY}}(\mbox{\hyperlink{namespacetesseract__planning}{tesseract\_planning}},\ StateWaypointPoly)}
+\DoxyCodeLine{00293\ }
+\DoxyCodeLine{00294\ \textcolor{preprocessor}{\#endif\ \ }\textcolor{comment}{//\ TESSERACT\_COMMAND\_LANGUAGE\_STATE\_WAYPOINT\_POLY\_H}}
+
+\end{DoxyCode}

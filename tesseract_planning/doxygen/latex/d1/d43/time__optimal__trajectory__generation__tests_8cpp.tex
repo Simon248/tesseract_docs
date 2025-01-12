@@ -1,0 +1,220 @@
+\doxysection{tesseract\+\_\+time\+\_\+parameterization/totg/test/time\+\_\+optimal\+\_\+trajectory\+\_\+generation\+\_\+tests.cpp File Reference}
+\hypertarget{time__optimal__trajectory__generation__tests_8cpp}{}\label{time__optimal__trajectory__generation__tests_8cpp}\index{tesseract\_time\_parameterization/totg/test/time\_optimal\_trajectory\_generation\_tests.cpp@{tesseract\_time\_parameterization/totg/test/time\_optimal\_trajectory\_generation\_tests.cpp}}
+{\ttfamily \#include $<$gtest/gtest.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+time\+\_\+parameterization/totg/time\+\_\+optimal\+\_\+trajectory\+\_\+generation.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+command\+\_\+language/poly/state\+\_\+waypoint\+\_\+poly.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+command\+\_\+language/poly/move\+\_\+instruction\+\_\+poly.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+command\+\_\+language/composite\+\_\+instruction.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+command\+\_\+language/state\+\_\+waypoint.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+command\+\_\+language/move\+\_\+instruction.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+time\+\_\+parameterization/core/instructions\+\_\+trajectory.\+h$>$}\newline
+Include dependency graph for time\+\_\+optimal\+\_\+trajectory\+\_\+generation\+\_\+tests.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{db/db4/time__optimal__trajectory__generation__tests_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+Eigen\+::\+Vector\+Xd \mbox{\hyperlink{time__optimal__trajectory__generation__tests_8cpp_a29ae1de1461b30dadd3b6752f8c72ba0}{max\+\_\+velocities}} (6)
+\item 
+Eigen\+::\+Vector\+Xd \mbox{\hyperlink{time__optimal__trajectory__generation__tests_8cpp_aed9d2dbb79a4d0fe87c3e8d3d1238bc6}{max\+\_\+accelerations}} (6)
+\item 
+\mbox{\hyperlink{time__optimal__trajectory__generation__tests_8cpp_ada5f18b1b44e7f889bc47bed22b625c7}{waypoint$<$$<$ 1.\+6113056281076339, -\/0.\+21400163389235427, -\/1.\+974502599739185, 9.\+9653618690354051e-\/12, -\/1.\+3810916877429624, 1.\+5293902838041467;waypoints.\+push\+\_\+back(waypoint);waypoint$<$$<$ 1.\+6088016187976597, -\/0.\+21792862470933924, -\/1.\+9758628799742952, 0.\+00010424017303217738, -\/1.\+3835690515335755, 1.\+5279972853269816;waypoints.\+push\+\_\+back(waypoint);waypoint$<$$<$ 1.\+5887695443178671, -\/0.\+24934455124521923, -\/1.\+9867451218551782, 0.\+00093816147756670078, -\/1.\+4033879618584812, 1.\+5168532975096607;waypoints.\+push\+\_\+back(waypoint);waypoint$<$$<$ 1.\+1647412393815282, -\/0.\+91434018564402375, -\/2.\+2170946337498498, 0.\+018590164397622583, -\/1.\+8229041212673529, 1.\+2809632867583278;waypoints.\+push\+\_\+back(waypoint);max\+\_\+velocities$<$$<$ 0.\+89535390627300004, 0.\+89535390627300004, 0.\+79587013890930003, 0.\+92022484811399996, 0.\+82074108075029995, 1.\+3927727430915;max\+\_\+accelerations$<$$<$ 0.\+82673490883799994, 0.\+78539816339699997, 0.\+60883578557700002, 3.\+2074759432319997, 1.\+4398966328939999, 4.\+7292792634680003;\+Trajectory parameterized(\+Path(waypoints, path\+\_\+tolerance), max\+\_\+velocities, max\+\_\+accelerations, 0.\+001);\+ASSERT\+\_\+\+TRUE(parameterized.\+is\+Valid());auto sample\+\_\+count=static\+\_\+cast$<$ size\+\_\+t $>$}} (std\+::ceil(parameterized.\+get\+Duration()/resample\+\_\+dt))
+\item 
+\mbox{\hyperlink{time__optimal__trajectory__generation__tests_8cpp_a0e5ecf8ff164827074a84673068c1810}{for}} (size\+\_\+t sample=0;sample$<$=sample\+\_\+count;++sample)
+\item 
+Eigen\+::\+Vector\+Xd \mbox{\hyperlink{time__optimal__trajectory__generation__tests_8cpp_a75a6469a5d5fc1a1c3c0c660916e5be5}{waypoint}} (6)
+\item 
+\mbox{\hyperlink{time__optimal__trajectory__generation__tests_8cpp_aa69e51751dad25045c35c22be9972c12}{plan\+\_\+f0}} \mbox{\hyperlink{time__optimal__trajectory__generation__tests_8cpp_a9b29d7770a1c44fd1abb96cf2f6f6c45}{set\+Description}} ("{}freespace\+\_\+motion"{})
+\item 
+\mbox{\hyperlink{command__language__utils__unit_8cpp_ab5a75a7fd217179774b21aaa94fccc66}{program}} \mbox{\hyperlink{time__optimal__trajectory__generation__tests_8cpp_a2f43d26ed3709cb2a2e53d42886336a8}{append\+Move\+Instruction}} (\mbox{\hyperlink{time__optimal__trajectory__generation__tests_8cpp_aa69e51751dad25045c35c22be9972c12}{plan\+\_\+f0}})
+\item 
+Eigen\+::\+Matrix\+X2d \mbox{\hyperlink{time__optimal__trajectory__generation__tests_8cpp_a0249426a158139712b43ec5a5b19fb74}{max\+\_\+velocities}} (6, 2)
+\item 
+\mbox{\hyperlink{time__optimal__trajectory__generation__tests_8cpp_a29ae1de1461b30dadd3b6752f8c72ba0}{max\+\_\+velocities}} \mbox{\hyperlink{time__optimal__trajectory__generation__tests_8cpp_a8ed6861c6db6968dec87f8c3c5c7e4cf}{col}} (0)
+\item 
+\mbox{\hyperlink{time__optimal__trajectory__generation__tests_8cpp_a29ae1de1461b30dadd3b6752f8c72ba0}{max\+\_\+velocities}} \mbox{\hyperlink{time__optimal__trajectory__generation__tests_8cpp_a320a9d2d6b3caf7062d9c0271e61accb}{col}} (1)
+\item 
+Eigen\+::\+Matrix\+X2d \mbox{\hyperlink{time__optimal__trajectory__generation__tests_8cpp_a3a88b38761f0fbeb58cd8b529823cc80}{max\+\_\+accelerations}} (6, 2)
+\item 
+Eigen\+::\+Matrix\+X2d \mbox{\hyperlink{time__optimal__trajectory__generation__tests_8cpp_a8600dd7cb6175548ffa242f297820a7a}{max\+\_\+jerks}} (6, 2)
+\item 
+\mbox{\hyperlink{time__optimal__trajectory__generation__tests_8cpp_a7729c33f509b700b1eef5cf9255fbfec}{EXPECT\+\_\+\+TRUE}} (solver.\+compute(\mbox{\hyperlink{time__optimal__trajectory__generation__tests_8cpp_a3178a54ab113e3911b3429773671ecbb}{traj\+\_\+wrapper}}, \mbox{\hyperlink{time__optimal__trajectory__generation__tests_8cpp_a29ae1de1461b30dadd3b6752f8c72ba0}{max\+\_\+velocities}}, \mbox{\hyperlink{time__optimal__trajectory__generation__tests_8cpp_aed9d2dbb79a4d0fe87c3e8d3d1238bc6}{max\+\_\+accelerations}}, \mbox{\hyperlink{time__optimal__trajectory__generation__tests_8cpp_a8600dd7cb6175548ffa242f297820a7a}{max\+\_\+jerks}}))
+\item 
+\mbox{\hyperlink{classtesseract__planning_1_1CompositeInstruction}{Composite\+Instruction}} \mbox{\hyperlink{time__optimal__trajectory__generation__tests_8cpp_a2517a990d50812c8b544130f3a1ff7e9}{create\+Straight\+Trajectory}} ()
+\item 
+void \mbox{\hyperlink{time__optimal__trajectory__generation__tests_8cpp_a07f42c8b3b09f2b5acc5456af3422576}{run\+Trajectory\+Container\+Interface\+Test}} (double path\+\_\+tolerance)
+\item 
+\mbox{\hyperlink{time__optimal__trajectory__generation__tests_8cpp_a9ac71e89e3498b82e7941b6a9ced2b55}{run\+Trajectory\+Container\+Interface\+Test}} (0.\+01)
+\item 
+int \mbox{\hyperlink{time__optimal__trajectory__generation__tests_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}{main}} (int argc, char \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}argv)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+std\+::list$<$ Eigen\+::\+Vector\+Xd $>$ \mbox{\hyperlink{time__optimal__trajectory__generation__tests_8cpp_a0be1575df29e489d847ff0063608a1f5}{waypoints}}
+\item 
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{time__optimal__trajectory__generation__tests_8cpp_a9e7923dd434ecb1c52b6789e40426c26}{joint\+\_\+names}} = \{ "{}j1"{}, "{}j2"{}, "{}j3"{}, "{}j4"{}, "{}j5"{}, "{}j6"{} \}
+\item 
+\mbox{\hyperlink{structtesseract__planning_1_1StateWaypointPoly}{State\+Waypoint\+Poly}} \mbox{\hyperlink{time__optimal__trajectory__generation__tests_8cpp_ae7b72440201264ba481477d5f5682747}{wp}} \{ \mbox{\hyperlink{classtesseract__planning_1_1StateWaypoint}{State\+Waypoint}}(\mbox{\hyperlink{command__language__utils__unit_8cpp_a5f85173ecc1ddcb342ebc27f28437f5c}{joint\+\_\+names}}, \mbox{\hyperlink{fix__state__collision__task__unit_8cpp_a597b56c2c0087f5d0637de0567f0fd77}{waypoint}}) \}
+\item 
+\mbox{\hyperlink{classtesseract__planning_1_1MoveInstruction}{Move\+Instruction}} \mbox{\hyperlink{time__optimal__trajectory__generation__tests_8cpp_aa69e51751dad25045c35c22be9972c12}{plan\+\_\+f0}} (\mbox{\hyperlink{fix__state__collision__task__unit_8cpp_a00d07bfc3dfed5ce5dcd0c8155074ff0}{wp}}, Move\+Instruction\+Type\+::\+FREESPACE, "{}profile\+\_\+name"{})
+\item 
+\mbox{\hyperlink{classtesseract__planning_1_1TimeOptimalTrajectoryGeneration}{Time\+Optimal\+Trajectory\+Generation}} \mbox{\hyperlink{time__optimal__trajectory__generation__tests_8cpp_a6b9f27c518ff7ce43f61077e740d2d10}{solver}} (0.\+001, 1e-\/3)
+\item 
+\mbox{\hyperlink{classtesseract__planning_1_1InstructionsTrajectory}{Instructions\+Trajectory}} \mbox{\hyperlink{time__optimal__trajectory__generation__tests_8cpp_a3178a54ab113e3911b3429773671ecbb}{traj\+\_\+wrapper}} (\mbox{\hyperlink{command__language__utils__unit_8cpp_ab5a75a7fd217179774b21aaa94fccc66}{program}})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{time__optimal__trajectory__generation__tests_8cpp_a2f43d26ed3709cb2a2e53d42886336a8}\label{time__optimal__trajectory__generation__tests_8cpp_a2f43d26ed3709cb2a2e53d42886336a8} 
+\index{time\_optimal\_trajectory\_generation\_tests.cpp@{time\_optimal\_trajectory\_generation\_tests.cpp}!appendMoveInstruction@{appendMoveInstruction}}
+\index{appendMoveInstruction@{appendMoveInstruction}!time\_optimal\_trajectory\_generation\_tests.cpp@{time\_optimal\_trajectory\_generation\_tests.cpp}}
+\doxysubsubsection{\texorpdfstring{appendMoveInstruction()}{appendMoveInstruction()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{command__language__utils__unit_8cpp_ab5a75a7fd217179774b21aaa94fccc66}{program}} append\+Move\+Instruction (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{time__optimal__trajectory__generation__tests_8cpp_aa69e51751dad25045c35c22be9972c12}{plan\+\_\+f0}}}]{ }\end{DoxyParamCaption})}
+
+\Hypertarget{time__optimal__trajectory__generation__tests_8cpp_a8ed6861c6db6968dec87f8c3c5c7e4cf}\label{time__optimal__trajectory__generation__tests_8cpp_a8ed6861c6db6968dec87f8c3c5c7e4cf} 
+\index{time\_optimal\_trajectory\_generation\_tests.cpp@{time\_optimal\_trajectory\_generation\_tests.cpp}!col@{col}}
+\index{col@{col}!time\_optimal\_trajectory\_generation\_tests.cpp@{time\_optimal\_trajectory\_generation\_tests.cpp}}
+\doxysubsubsection{\texorpdfstring{col()}{col()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{time__optimal__trajectory__generation__tests_8cpp_a29ae1de1461b30dadd3b6752f8c72ba0}{max\+\_\+velocities}} col (\begin{DoxyParamCaption}\item[{0}]{ }\end{DoxyParamCaption})}
+
+\Hypertarget{time__optimal__trajectory__generation__tests_8cpp_a320a9d2d6b3caf7062d9c0271e61accb}\label{time__optimal__trajectory__generation__tests_8cpp_a320a9d2d6b3caf7062d9c0271e61accb} 
+\index{time\_optimal\_trajectory\_generation\_tests.cpp@{time\_optimal\_trajectory\_generation\_tests.cpp}!col@{col}}
+\index{col@{col}!time\_optimal\_trajectory\_generation\_tests.cpp@{time\_optimal\_trajectory\_generation\_tests.cpp}}
+\doxysubsubsection{\texorpdfstring{col()}{col()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{time__optimal__trajectory__generation__tests_8cpp_a29ae1de1461b30dadd3b6752f8c72ba0}{max\+\_\+velocities}} col (\begin{DoxyParamCaption}\item[{1}]{ }\end{DoxyParamCaption})}
+
+\Hypertarget{time__optimal__trajectory__generation__tests_8cpp_a2517a990d50812c8b544130f3a1ff7e9}\label{time__optimal__trajectory__generation__tests_8cpp_a2517a990d50812c8b544130f3a1ff7e9} 
+\index{time\_optimal\_trajectory\_generation\_tests.cpp@{time\_optimal\_trajectory\_generation\_tests.cpp}!createStraightTrajectory@{createStraightTrajectory}}
+\index{createStraightTrajectory@{createStraightTrajectory}!time\_optimal\_trajectory\_generation\_tests.cpp@{time\_optimal\_trajectory\_generation\_tests.cpp}}
+\doxysubsubsection{\texorpdfstring{createStraightTrajectory()}{createStraightTrajectory()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classtesseract__planning_1_1CompositeInstruction}{Composite\+Instruction}} create\+Straight\+Trajectory (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{time__optimal__trajectory__generation__tests_8cpp_a7729c33f509b700b1eef5cf9255fbfec}\label{time__optimal__trajectory__generation__tests_8cpp_a7729c33f509b700b1eef5cf9255fbfec} 
+\index{time\_optimal\_trajectory\_generation\_tests.cpp@{time\_optimal\_trajectory\_generation\_tests.cpp}!EXPECT\_TRUE@{EXPECT\_TRUE}}
+\index{EXPECT\_TRUE@{EXPECT\_TRUE}!time\_optimal\_trajectory\_generation\_tests.cpp@{time\_optimal\_trajectory\_generation\_tests.cpp}}
+\doxysubsubsection{\texorpdfstring{EXPECT\_TRUE()}{EXPECT\_TRUE()}}
+{\footnotesize\ttfamily EXPECT\+\_\+\+TRUE (\begin{DoxyParamCaption}\item[{solver.}]{computetraj\+\_\+wrapper, max\+\_\+velocities, max\+\_\+accelerations, max\+\_\+jerks }\end{DoxyParamCaption})}
+
+\Hypertarget{time__optimal__trajectory__generation__tests_8cpp_a0e5ecf8ff164827074a84673068c1810}\label{time__optimal__trajectory__generation__tests_8cpp_a0e5ecf8ff164827074a84673068c1810} 
+\index{time\_optimal\_trajectory\_generation\_tests.cpp@{time\_optimal\_trajectory\_generation\_tests.cpp}!for@{for}}
+\index{for@{for}!time\_optimal\_trajectory\_generation\_tests.cpp@{time\_optimal\_trajectory\_generation\_tests.cpp}}
+\doxysubsubsection{\texorpdfstring{for()}{for()}}
+{\footnotesize\ttfamily for (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{sample = {\ttfamily 0;~sample~$<$=~sample\+\_\+count;~++sample} }\end{DoxyParamCaption})}
+
+\Hypertarget{time__optimal__trajectory__generation__tests_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}\label{time__optimal__trajectory__generation__tests_8cpp_a3c04138a5bfe5d72780bb7e82a18e627} 
+\index{time\_optimal\_trajectory\_generation\_tests.cpp@{time\_optimal\_trajectory\_generation\_tests.cpp}!main@{main}}
+\index{main@{main}!time\_optimal\_trajectory\_generation\_tests.cpp@{time\_optimal\_trajectory\_generation\_tests.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{argv }\end{DoxyParamCaption})}
+
+\Hypertarget{time__optimal__trajectory__generation__tests_8cpp_aed9d2dbb79a4d0fe87c3e8d3d1238bc6}\label{time__optimal__trajectory__generation__tests_8cpp_aed9d2dbb79a4d0fe87c3e8d3d1238bc6} 
+\index{time\_optimal\_trajectory\_generation\_tests.cpp@{time\_optimal\_trajectory\_generation\_tests.cpp}!max\_accelerations@{max\_accelerations}}
+\index{max\_accelerations@{max\_accelerations}!time\_optimal\_trajectory\_generation\_tests.cpp@{time\_optimal\_trajectory\_generation\_tests.cpp}}
+\doxysubsubsection{\texorpdfstring{max\_accelerations()}{max\_accelerations()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Eigen\+::\+Vector\+Xd max\+\_\+accelerations (\begin{DoxyParamCaption}\item[{6}]{ }\end{DoxyParamCaption})}
+
+\Hypertarget{time__optimal__trajectory__generation__tests_8cpp_a3a88b38761f0fbeb58cd8b529823cc80}\label{time__optimal__trajectory__generation__tests_8cpp_a3a88b38761f0fbeb58cd8b529823cc80} 
+\index{time\_optimal\_trajectory\_generation\_tests.cpp@{time\_optimal\_trajectory\_generation\_tests.cpp}!max\_accelerations@{max\_accelerations}}
+\index{max\_accelerations@{max\_accelerations}!time\_optimal\_trajectory\_generation\_tests.cpp@{time\_optimal\_trajectory\_generation\_tests.cpp}}
+\doxysubsubsection{\texorpdfstring{max\_accelerations()}{max\_accelerations()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Eigen\+::\+Matrix\+X2d max\+\_\+accelerations (\begin{DoxyParamCaption}\item[{6}]{,  }\item[{2}]{ }\end{DoxyParamCaption})}
+
+\Hypertarget{time__optimal__trajectory__generation__tests_8cpp_a8600dd7cb6175548ffa242f297820a7a}\label{time__optimal__trajectory__generation__tests_8cpp_a8600dd7cb6175548ffa242f297820a7a} 
+\index{time\_optimal\_trajectory\_generation\_tests.cpp@{time\_optimal\_trajectory\_generation\_tests.cpp}!max\_jerks@{max\_jerks}}
+\index{max\_jerks@{max\_jerks}!time\_optimal\_trajectory\_generation\_tests.cpp@{time\_optimal\_trajectory\_generation\_tests.cpp}}
+\doxysubsubsection{\texorpdfstring{max\_jerks()}{max\_jerks()}}
+{\footnotesize\ttfamily Eigen\+::\+Matrix\+X2d max\+\_\+jerks (\begin{DoxyParamCaption}\item[{6}]{,  }\item[{2}]{ }\end{DoxyParamCaption})}
+
+\Hypertarget{time__optimal__trajectory__generation__tests_8cpp_a29ae1de1461b30dadd3b6752f8c72ba0}\label{time__optimal__trajectory__generation__tests_8cpp_a29ae1de1461b30dadd3b6752f8c72ba0} 
+\index{time\_optimal\_trajectory\_generation\_tests.cpp@{time\_optimal\_trajectory\_generation\_tests.cpp}!max\_velocities@{max\_velocities}}
+\index{max\_velocities@{max\_velocities}!time\_optimal\_trajectory\_generation\_tests.cpp@{time\_optimal\_trajectory\_generation\_tests.cpp}}
+\doxysubsubsection{\texorpdfstring{max\_velocities()}{max\_velocities()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Eigen\+::\+Vector\+Xd max\+\_\+velocities (\begin{DoxyParamCaption}\item[{6}]{ }\end{DoxyParamCaption})}
+
+\Hypertarget{time__optimal__trajectory__generation__tests_8cpp_a0249426a158139712b43ec5a5b19fb74}\label{time__optimal__trajectory__generation__tests_8cpp_a0249426a158139712b43ec5a5b19fb74} 
+\index{time\_optimal\_trajectory\_generation\_tests.cpp@{time\_optimal\_trajectory\_generation\_tests.cpp}!max\_velocities@{max\_velocities}}
+\index{max\_velocities@{max\_velocities}!time\_optimal\_trajectory\_generation\_tests.cpp@{time\_optimal\_trajectory\_generation\_tests.cpp}}
+\doxysubsubsection{\texorpdfstring{max\_velocities()}{max\_velocities()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Eigen\+::\+Matrix\+X2d max\+\_\+velocities (\begin{DoxyParamCaption}\item[{6}]{,  }\item[{2}]{ }\end{DoxyParamCaption})}
+
+\Hypertarget{time__optimal__trajectory__generation__tests_8cpp_a9ac71e89e3498b82e7941b6a9ced2b55}\label{time__optimal__trajectory__generation__tests_8cpp_a9ac71e89e3498b82e7941b6a9ced2b55} 
+\index{time\_optimal\_trajectory\_generation\_tests.cpp@{time\_optimal\_trajectory\_generation\_tests.cpp}!runTrajectoryContainerInterfaceTest@{runTrajectoryContainerInterfaceTest}}
+\index{runTrajectoryContainerInterfaceTest@{runTrajectoryContainerInterfaceTest}!time\_optimal\_trajectory\_generation\_tests.cpp@{time\_optimal\_trajectory\_generation\_tests.cpp}}
+\doxysubsubsection{\texorpdfstring{runTrajectoryContainerInterfaceTest()}{runTrajectoryContainerInterfaceTest()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily run\+Trajectory\+Container\+Interface\+Test (\begin{DoxyParamCaption}\item[{0.}]{01 }\end{DoxyParamCaption})}
+
+\Hypertarget{time__optimal__trajectory__generation__tests_8cpp_a07f42c8b3b09f2b5acc5456af3422576}\label{time__optimal__trajectory__generation__tests_8cpp_a07f42c8b3b09f2b5acc5456af3422576} 
+\index{time\_optimal\_trajectory\_generation\_tests.cpp@{time\_optimal\_trajectory\_generation\_tests.cpp}!runTrajectoryContainerInterfaceTest@{runTrajectoryContainerInterfaceTest}}
+\index{runTrajectoryContainerInterfaceTest@{runTrajectoryContainerInterfaceTest}!time\_optimal\_trajectory\_generation\_tests.cpp@{time\_optimal\_trajectory\_generation\_tests.cpp}}
+\doxysubsubsection{\texorpdfstring{runTrajectoryContainerInterfaceTest()}{runTrajectoryContainerInterfaceTest()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void run\+Trajectory\+Container\+Interface\+Test (\begin{DoxyParamCaption}\item[{double}]{path\+\_\+tolerance }\end{DoxyParamCaption})}
+
+\Hypertarget{time__optimal__trajectory__generation__tests_8cpp_a9b29d7770a1c44fd1abb96cf2f6f6c45}\label{time__optimal__trajectory__generation__tests_8cpp_a9b29d7770a1c44fd1abb96cf2f6f6c45} 
+\index{time\_optimal\_trajectory\_generation\_tests.cpp@{time\_optimal\_trajectory\_generation\_tests.cpp}!setDescription@{setDescription}}
+\index{setDescription@{setDescription}!time\_optimal\_trajectory\_generation\_tests.cpp@{time\_optimal\_trajectory\_generation\_tests.cpp}}
+\doxysubsubsection{\texorpdfstring{setDescription()}{setDescription()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{time__optimal__trajectory__generation__tests_8cpp_aa69e51751dad25045c35c22be9972c12}{plan\+\_\+f0}} set\+Description (\begin{DoxyParamCaption}\item[{"{}freespace\+\_\+motion"{}}]{ }\end{DoxyParamCaption})}
+
+\Hypertarget{time__optimal__trajectory__generation__tests_8cpp_a75a6469a5d5fc1a1c3c0c660916e5be5}\label{time__optimal__trajectory__generation__tests_8cpp_a75a6469a5d5fc1a1c3c0c660916e5be5} 
+\index{time\_optimal\_trajectory\_generation\_tests.cpp@{time\_optimal\_trajectory\_generation\_tests.cpp}!waypoint@{waypoint}}
+\index{waypoint@{waypoint}!time\_optimal\_trajectory\_generation\_tests.cpp@{time\_optimal\_trajectory\_generation\_tests.cpp}}
+\doxysubsubsection{\texorpdfstring{waypoint()}{waypoint()}}
+{\footnotesize\ttfamily Eigen\+::\+Vector\+Xd waypoint (\begin{DoxyParamCaption}\item[{6}]{ }\end{DoxyParamCaption})}
+
+\Hypertarget{time__optimal__trajectory__generation__tests_8cpp_ada5f18b1b44e7f889bc47bed22b625c7}\label{time__optimal__trajectory__generation__tests_8cpp_ada5f18b1b44e7f889bc47bed22b625c7} 
+\index{time\_optimal\_trajectory\_generation\_tests.cpp@{time\_optimal\_trajectory\_generation\_tests.cpp}!waypoint$<$$<$ 1.6113056281076339, -\/0.21400163389235427, -\/1.974502599739185, 9.9653618690354051e-\/12, -\/1.3810916877429624, 1.5293902838041467;waypoints.push\_back(waypoint);waypoint$<$$<$ 1.6088016187976597, -\/0.21792862470933924, -\/1.9758628799742952, 0.00010424017303217738, -\/1.3835690515335755, 1.5279972853269816;waypoints.push\_back(waypoint);waypoint$<$$<$ 1.5887695443178671, -\/0.24934455124521923, -\/1.9867451218551782, 0.00093816147756670078, -\/1.4033879618584812, 1.5168532975096607;waypoints.push\_back(waypoint);waypoint$<$$<$ 1.1647412393815282, -\/0.91434018564402375, -\/2.2170946337498498, 0.018590164397622583, -\/1.8229041212673529, 1.2809632867583278;waypoints.push\_back(waypoint);max\_velocities$<$$<$ 0.89535390627300004, 0.89535390627300004, 0.79587013890930003, 0.92022484811399996, 0.82074108075029995, 1.3927727430915;max\_accelerations$<$$<$ 0.82673490883799994, 0.78539816339699997, 0.60883578557700002, 3.2074759432319997, 1.4398966328939999, 4.7292792634680003;Trajectory parameterized(Path(waypoints, path\_tolerance), max\_velocities, max\_accelerations, 0.001);ASSERT\_TRUE(parameterized.isValid());auto sample\_count=static\_cast$<$ size\_t $>$@{waypoint$<$$<$ 1.6113056281076339, -\/0.21400163389235427, -\/1.974502599739185, 9.9653618690354051e-\/12, -\/1.3810916877429624, 1.5293902838041467;waypoints.push\_back(waypoint);waypoint$<$$<$ 1.6088016187976597, -\/0.21792862470933924, -\/1.9758628799742952, 0.00010424017303217738, -\/1.3835690515335755, 1.5279972853269816;waypoints.push\_back(waypoint);waypoint$<$$<$ 1.5887695443178671, -\/0.24934455124521923, -\/1.9867451218551782, 0.00093816147756670078, -\/1.4033879618584812, 1.5168532975096607;waypoints.push\_back(waypoint);waypoint$<$$<$ 1.1647412393815282, -\/0.91434018564402375, -\/2.2170946337498498, 0.018590164397622583, -\/1.8229041212673529, 1.2809632867583278;waypoints.push\_back(waypoint);max\_velocities$<$$<$ 0.89535390627300004, 0.89535390627300004, 0.79587013890930003, 0.92022484811399996, 0.82074108075029995, 1.3927727430915;max\_accelerations$<$$<$ 0.82673490883799994, 0.78539816339699997, 0.60883578557700002, 3.2074759432319997, 1.4398966328939999, 4.7292792634680003;Trajectory parameterized(Path(waypoints, path\_tolerance), max\_velocities, max\_accelerations, 0.001);ASSERT\_TRUE(parameterized.isValid());auto sample\_count=static\_cast$<$ size\_t $>$}}
+\index{waypoint$<$$<$ 1.6113056281076339, -\/0.21400163389235427, -\/1.974502599739185, 9.9653618690354051e-\/12, -\/1.3810916877429624, 1.5293902838041467;waypoints.push\_back(waypoint);waypoint$<$$<$ 1.6088016187976597, -\/0.21792862470933924, -\/1.9758628799742952, 0.00010424017303217738, -\/1.3835690515335755, 1.5279972853269816;waypoints.push\_back(waypoint);waypoint$<$$<$ 1.5887695443178671, -\/0.24934455124521923, -\/1.9867451218551782, 0.00093816147756670078, -\/1.4033879618584812, 1.5168532975096607;waypoints.push\_back(waypoint);waypoint$<$$<$ 1.1647412393815282, -\/0.91434018564402375, -\/2.2170946337498498, 0.018590164397622583, -\/1.8229041212673529, 1.2809632867583278;waypoints.push\_back(waypoint);max\_velocities$<$$<$ 0.89535390627300004, 0.89535390627300004, 0.79587013890930003, 0.92022484811399996, 0.82074108075029995, 1.3927727430915;max\_accelerations$<$$<$ 0.82673490883799994, 0.78539816339699997, 0.60883578557700002, 3.2074759432319997, 1.4398966328939999, 4.7292792634680003;Trajectory parameterized(Path(waypoints, path\_tolerance), max\_velocities, max\_accelerations, 0.001);ASSERT\_TRUE(parameterized.isValid());auto sample\_count=static\_cast$<$ size\_t $>$@{waypoint$<$$<$ 1.6113056281076339, -\/0.21400163389235427, -\/1.974502599739185, 9.9653618690354051e-\/12, -\/1.3810916877429624, 1.5293902838041467;waypoints.push\_back(waypoint);waypoint$<$$<$ 1.6088016187976597, -\/0.21792862470933924, -\/1.9758628799742952, 0.00010424017303217738, -\/1.3835690515335755, 1.5279972853269816;waypoints.push\_back(waypoint);waypoint$<$$<$ 1.5887695443178671, -\/0.24934455124521923, -\/1.9867451218551782, 0.00093816147756670078, -\/1.4033879618584812, 1.5168532975096607;waypoints.push\_back(waypoint);waypoint$<$$<$ 1.1647412393815282, -\/0.91434018564402375, -\/2.2170946337498498, 0.018590164397622583, -\/1.8229041212673529, 1.2809632867583278;waypoints.push\_back(waypoint);max\_velocities$<$$<$ 0.89535390627300004, 0.89535390627300004, 0.79587013890930003, 0.92022484811399996, 0.82074108075029995, 1.3927727430915;max\_accelerations$<$$<$ 0.82673490883799994, 0.78539816339699997, 0.60883578557700002, 3.2074759432319997, 1.4398966328939999, 4.7292792634680003;Trajectory parameterized(Path(waypoints, path\_tolerance), max\_velocities, max\_accelerations, 0.001);ASSERT\_TRUE(parameterized.isValid());auto sample\_count=static\_cast$<$ size\_t $>$}!time\_optimal\_trajectory\_generation\_tests.cpp@{time\_optimal\_trajectory\_generation\_tests.cpp}}
+\doxysubsubsection{\texorpdfstring{waypoint$<$$<$ 1.6113056281076339, -\/0.21400163389235427, -\/1.974502599739185, 9.9653618690354051e-\/12, -\/1.3810916877429624, 1.5293902838041467;waypoints.push\_back(waypoint);waypoint$<$$<$ 1.6088016187976597, -\/0.21792862470933924, -\/1.9758628799742952, 0.00010424017303217738, -\/1.3835690515335755, 1.5279972853269816;waypoints.push\_back(waypoint);waypoint$<$$<$ 1.5887695443178671, -\/0.24934455124521923, -\/1.9867451218551782, 0.00093816147756670078, -\/1.4033879618584812, 1.5168532975096607;waypoints.push\_back(waypoint);waypoint$<$$<$ 1.1647412393815282, -\/0.91434018564402375, -\/2.2170946337498498, 0.018590164397622583, -\/1.8229041212673529, 1.2809632867583278;waypoints.push\_back(waypoint);max\_velocities$<$$<$ 0.89535390627300004, 0.89535390627300004, 0.79587013890930003, 0.92022484811399996, 0.82074108075029995, 1.3927727430915;max\_accelerations$<$$<$ 0.82673490883799994, 0.78539816339699997, 0.60883578557700002, 3.2074759432319997, 1.4398966328939999, 4.7292792634680003;Trajectory parameterized(Path(waypoints, path\_tolerance), max\_velocities, max\_accelerations, 0.001);ASSERT\_TRUE(parameterized.isValid());auto sample\_count=static\_cast$<$ size\_t $>$()}{waypoint<< 1.6113056281076339, -0.21400163389235427, -1.974502599739185, 9.9653618690354051e-12, -1.3810916877429624, 1.5293902838041467;waypoints.push\_back(waypoint);waypoint<< 1.6088016187976597, -0.21792862470933924, -1.9758628799742952, 0.00010424017303217738, -1.3835690515335755, 1.5279972853269816;waypoints.push\_back(waypoint);waypoint<< 1.5887695443178671, -0.24934455124521923, -1.9867451218551782, 0.00093816147756670078, -1.4033879618584812, 1.5168532975096607;waypoints.push\_back(waypoint);waypoint<< 1.1647412393815282, -0.91434018564402375, -2.2170946337498498, 0.018590164397622583, -1.8229041212673529, 1.2809632867583278;waypoints.push\_back(waypoint);max\_velocities<< 0.89535390627300004, 0.89535390627300004, 0.79587013890930003, 0.92022484811399996, 0.82074108075029995, 1.3927727430915;max\_accelerations<< 0.82673490883799994, 0.78539816339699997, 0.60883578557700002, 3.2074759432319997, 1.4398966328939999, 4.7292792634680003;Trajectory parameterized(Path(waypoints, path\_tolerance), max\_velocities, max\_accelerations, 0.001);ASSERT\_TRUE(parameterized.isValid());auto sample\_count=static\_cast< size\_t >()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{fix__state__collision__task__unit_8cpp_a597b56c2c0087f5d0637de0567f0fd77}{waypoint}}$<$$<$ 1.\+6113056281076339, -\/0.\+21400163389235427, -\/1.\+974502599739185, 9.\+9653618690354051e-\/12, -\/1.\+3810916877429624, 1.\+5293902838041467;\mbox{\hyperlink{ompl__constrained__planner__tests_8cpp_a51db79027e9b868bb1bfe6557085967d}{waypoints.\+push\+\_\+back}}(\mbox{\hyperlink{fix__state__collision__task__unit_8cpp_a597b56c2c0087f5d0637de0567f0fd77}{waypoint}});\mbox{\hyperlink{fix__state__collision__task__unit_8cpp_a597b56c2c0087f5d0637de0567f0fd77}{waypoint}}$<$$<$ 1.\+6088016187976597, -\/0.\+21792862470933924, -\/1.\+9758628799742952, 0.\+00010424017303217738, -\/1.\+3835690515335755, 1.\+5279972853269816;\mbox{\hyperlink{ompl__constrained__planner__tests_8cpp_a51db79027e9b868bb1bfe6557085967d}{waypoints.\+push\+\_\+back}}(\mbox{\hyperlink{fix__state__collision__task__unit_8cpp_a597b56c2c0087f5d0637de0567f0fd77}{waypoint}});\mbox{\hyperlink{fix__state__collision__task__unit_8cpp_a597b56c2c0087f5d0637de0567f0fd77}{waypoint}}$<$$<$ 1.\+5887695443178671, -\/0.\+24934455124521923, -\/1.\+9867451218551782, 0.\+00093816147756670078, -\/1.\+4033879618584812, 1.\+5168532975096607;\mbox{\hyperlink{ompl__constrained__planner__tests_8cpp_a51db79027e9b868bb1bfe6557085967d}{waypoints.\+push\+\_\+back}}(\mbox{\hyperlink{fix__state__collision__task__unit_8cpp_a597b56c2c0087f5d0637de0567f0fd77}{waypoint}});\mbox{\hyperlink{fix__state__collision__task__unit_8cpp_a597b56c2c0087f5d0637de0567f0fd77}{waypoint}}$<$$<$ 1.\+1647412393815282, -\/0.\+91434018564402375, -\/2.\+2170946337498498, 0.\+018590164397622583, -\/1.\+8229041212673529, 1.\+2809632867583278;\mbox{\hyperlink{ompl__constrained__planner__tests_8cpp_a51db79027e9b868bb1bfe6557085967d}{waypoints.\+push\+\_\+back}}(\mbox{\hyperlink{fix__state__collision__task__unit_8cpp_a597b56c2c0087f5d0637de0567f0fd77}{waypoint}});\mbox{\hyperlink{time__optimal__trajectory__generation__tests_8cpp_a29ae1de1461b30dadd3b6752f8c72ba0}{max\+\_\+velocities}}$<$$<$ 0.\+89535390627300004, 0.\+89535390627300004, 0.\+79587013890930003, 0.\+92022484811399996, 0.\+82074108075029995, 1.\+3927727430915;\mbox{\hyperlink{time__optimal__trajectory__generation__tests_8cpp_aed9d2dbb79a4d0fe87c3e8d3d1238bc6}{max\+\_\+accelerations}}$<$$<$ 0.\+82673490883799994, 0.\+78539816339699997, 0.\+60883578557700002, 3.\+2074759432319997, 1.\+4398966328939999, 4.\+7292792634680003;\mbox{\hyperlink{classtesseract__planning_1_1totg_1_1Trajectory}{Trajectory}} parameterized(\mbox{\hyperlink{classtesseract__planning_1_1totg_1_1Path}{Path}}(\mbox{\hyperlink{time__optimal__trajectory__generation__tests_8cpp_a0be1575df29e489d847ff0063608a1f5}{waypoints}}, path\+\_\+tolerance), \mbox{\hyperlink{time__optimal__trajectory__generation__tests_8cpp_a29ae1de1461b30dadd3b6752f8c72ba0}{max\+\_\+velocities}}, \mbox{\hyperlink{time__optimal__trajectory__generation__tests_8cpp_aed9d2dbb79a4d0fe87c3e8d3d1238bc6}{max\+\_\+accelerations}}, 0.\+001);ASSERT\+\_\+\+TRUE(parameterized.\+is\+Valid());auto sample\+\_\+count=static\+\_\+cast$<$ size\+\_\+t $>$ (\begin{DoxyParamCaption}\item[{std\+::ceil(parameterized.\+get\+Duration()/resample\+\_\+dt)}]{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{time__optimal__trajectory__generation__tests_8cpp_a9e7923dd434ecb1c52b6789e40426c26}\label{time__optimal__trajectory__generation__tests_8cpp_a9e7923dd434ecb1c52b6789e40426c26} 
+\index{time\_optimal\_trajectory\_generation\_tests.cpp@{time\_optimal\_trajectory\_generation\_tests.cpp}!joint\_names@{joint\_names}}
+\index{joint\_names@{joint\_names}!time\_optimal\_trajectory\_generation\_tests.cpp@{time\_optimal\_trajectory\_generation\_tests.cpp}}
+\doxysubsubsection{\texorpdfstring{joint\_names}{joint\_names}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::string$>$ joint\+\_\+names = \{ "{}j1"{}, "{}j2"{}, "{}j3"{}, "{}j4"{}, "{}j5"{}, "{}j6"{} \}}
+
+\Hypertarget{time__optimal__trajectory__generation__tests_8cpp_aa69e51751dad25045c35c22be9972c12}\label{time__optimal__trajectory__generation__tests_8cpp_aa69e51751dad25045c35c22be9972c12} 
+\index{time\_optimal\_trajectory\_generation\_tests.cpp@{time\_optimal\_trajectory\_generation\_tests.cpp}!plan\_f0@{plan\_f0}}
+\index{plan\_f0@{plan\_f0}!time\_optimal\_trajectory\_generation\_tests.cpp@{time\_optimal\_trajectory\_generation\_tests.cpp}}
+\doxysubsubsection{\texorpdfstring{plan\_f0}{plan\_f0}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classtesseract__planning_1_1MoveInstruction}{Move\+Instruction}} plan\+\_\+f0 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{fix__state__collision__task__unit_8cpp_a00d07bfc3dfed5ce5dcd0c8155074ff0}{wp}}}]{,  }\item[{Move\+Instruction\+Type\+::\+FREESPACE}]{,  }\item[{"{}profile\+\_\+name"{}}]{ }\end{DoxyParamCaption})}
+
+\Hypertarget{time__optimal__trajectory__generation__tests_8cpp_a6b9f27c518ff7ce43f61077e740d2d10}\label{time__optimal__trajectory__generation__tests_8cpp_a6b9f27c518ff7ce43f61077e740d2d10} 
+\index{time\_optimal\_trajectory\_generation\_tests.cpp@{time\_optimal\_trajectory\_generation\_tests.cpp}!solver@{solver}}
+\index{solver@{solver}!time\_optimal\_trajectory\_generation\_tests.cpp@{time\_optimal\_trajectory\_generation\_tests.cpp}}
+\doxysubsubsection{\texorpdfstring{solver}{solver}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classtesseract__planning_1_1TimeOptimalTrajectoryGeneration}{Time\+Optimal\+Trajectory\+Generation}} solver(0.\+001, 1e-\/3) (\begin{DoxyParamCaption}\item[{0.}]{001,  }\item[{1e-\/}]{3 }\end{DoxyParamCaption})}
+
+\Hypertarget{time__optimal__trajectory__generation__tests_8cpp_a3178a54ab113e3911b3429773671ecbb}\label{time__optimal__trajectory__generation__tests_8cpp_a3178a54ab113e3911b3429773671ecbb} 
+\index{time\_optimal\_trajectory\_generation\_tests.cpp@{time\_optimal\_trajectory\_generation\_tests.cpp}!traj\_wrapper@{traj\_wrapper}}
+\index{traj\_wrapper@{traj\_wrapper}!time\_optimal\_trajectory\_generation\_tests.cpp@{time\_optimal\_trajectory\_generation\_tests.cpp}}
+\doxysubsubsection{\texorpdfstring{traj\_wrapper}{traj\_wrapper}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classtesseract__planning_1_1InstructionsTrajectory}{Instructions\+Trajectory}} traj\+\_\+wrapper(\mbox{\hyperlink{command__language__utils__unit_8cpp_ab5a75a7fd217179774b21aaa94fccc66}{program}}) (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{command__language__utils__unit_8cpp_ab5a75a7fd217179774b21aaa94fccc66}{program}}}]{ }\end{DoxyParamCaption})}
+
+\Hypertarget{time__optimal__trajectory__generation__tests_8cpp_a0be1575df29e489d847ff0063608a1f5}\label{time__optimal__trajectory__generation__tests_8cpp_a0be1575df29e489d847ff0063608a1f5} 
+\index{time\_optimal\_trajectory\_generation\_tests.cpp@{time\_optimal\_trajectory\_generation\_tests.cpp}!waypoints@{waypoints}}
+\index{waypoints@{waypoints}!time\_optimal\_trajectory\_generation\_tests.cpp@{time\_optimal\_trajectory\_generation\_tests.cpp}}
+\doxysubsubsection{\texorpdfstring{waypoints}{waypoints}}
+{\footnotesize\ttfamily std\+::list$<$ Eigen\+::\+Vector\+Xd $>$ waypoints}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ Eigen::VectorXd\ \mbox{\hyperlink{fix__state__collision__task__unit_8cpp_a597b56c2c0087f5d0637de0567f0fd77}{waypoint}}(4)}
+
+\end{DoxyCode}
+\Hypertarget{time__optimal__trajectory__generation__tests_8cpp_ae7b72440201264ba481477d5f5682747}\label{time__optimal__trajectory__generation__tests_8cpp_ae7b72440201264ba481477d5f5682747} 
+\index{time\_optimal\_trajectory\_generation\_tests.cpp@{time\_optimal\_trajectory\_generation\_tests.cpp}!wp@{wp}}
+\index{wp@{wp}!time\_optimal\_trajectory\_generation\_tests.cpp@{time\_optimal\_trajectory\_generation\_tests.cpp}}
+\doxysubsubsection{\texorpdfstring{wp}{wp}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structtesseract__planning_1_1StateWaypointPoly}{State\+Waypoint\+Poly}} wp \{ \mbox{\hyperlink{classtesseract__planning_1_1StateWaypoint}{State\+Waypoint}}(\mbox{\hyperlink{command__language__utils__unit_8cpp_a5f85173ecc1ddcb342ebc27f28437f5c}{joint\+\_\+names}}, \mbox{\hyperlink{fix__state__collision__task__unit_8cpp_a597b56c2c0087f5d0637de0567f0fd77}{waypoint}}) \}}
+

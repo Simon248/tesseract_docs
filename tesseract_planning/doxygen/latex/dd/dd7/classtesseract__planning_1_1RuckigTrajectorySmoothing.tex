@@ -1,0 +1,176 @@
+\doxysection{tesseract\+\_\+planning\+::Ruckig\+Trajectory\+Smoothing Class Reference}
+\hypertarget{classtesseract__planning_1_1RuckigTrajectorySmoothing}{}\label{classtesseract__planning_1_1RuckigTrajectorySmoothing}\index{tesseract\_planning::RuckigTrajectorySmoothing@{tesseract\_planning::RuckigTrajectorySmoothing}}
+
+
+{\ttfamily \#include $<$ruckig\+\_\+trajectory\+\_\+smoothing.\+h$>$}
+
+
+
+Inheritance diagram for tesseract\+\_\+planning\+::Ruckig\+Trajectory\+Smoothing\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=220pt]{d8/dda/classtesseract__planning_1_1RuckigTrajectorySmoothing__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for tesseract\+\_\+planning\+::Ruckig\+Trajectory\+Smoothing\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=220pt]{d2/dd4/classtesseract__planning_1_1RuckigTrajectorySmoothing__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classtesseract__planning_1_1RuckigTrajectorySmoothing_afa14d9a9b39e2438eef109be590b0bc7}{Ruckig\+Trajectory\+Smoothing}} (double duration\+\_\+extension\+\_\+fraction=1.\+1, double max\+\_\+duration\+\_\+extension\+\_\+factor=10)
+\item 
+\mbox{\hyperlink{classtesseract__planning_1_1RuckigTrajectorySmoothing_a070064f4724f7787cf6fdfcbc24e347c}{\texorpdfstring{$\sim$}{\string~}\+Ruckig\+Trajectory\+Smoothing}} () override=default
+\item 
+\mbox{\hyperlink{classtesseract__planning_1_1RuckigTrajectorySmoothing_a8831ff146f2578b4ffce0b2e6d0eb5f8}{Ruckig\+Trajectory\+Smoothing}} (const \mbox{\hyperlink{classtesseract__planning_1_1RuckigTrajectorySmoothing}{Ruckig\+Trajectory\+Smoothing}} \&)=default
+\item 
+\mbox{\hyperlink{classtesseract__planning_1_1RuckigTrajectorySmoothing}{Ruckig\+Trajectory\+Smoothing}} \& \mbox{\hyperlink{classtesseract__planning_1_1RuckigTrajectorySmoothing_a9c89620c248349a6644959cbf389d89a}{operator=}} (const \mbox{\hyperlink{classtesseract__planning_1_1RuckigTrajectorySmoothing}{Ruckig\+Trajectory\+Smoothing}} \&)=default
+\item 
+\mbox{\hyperlink{classtesseract__planning_1_1RuckigTrajectorySmoothing_aac1d394cccebc5656febd5e3277d8b7a}{Ruckig\+Trajectory\+Smoothing}} (\mbox{\hyperlink{classtesseract__planning_1_1RuckigTrajectorySmoothing}{Ruckig\+Trajectory\+Smoothing}} \&\&)=default
+\item 
+\mbox{\hyperlink{classtesseract__planning_1_1RuckigTrajectorySmoothing}{Ruckig\+Trajectory\+Smoothing}} \& \mbox{\hyperlink{classtesseract__planning_1_1RuckigTrajectorySmoothing_a769f21b7122a715afd969e055e38cf21}{operator=}} (\mbox{\hyperlink{classtesseract__planning_1_1RuckigTrajectorySmoothing}{Ruckig\+Trajectory\+Smoothing}} \&\&)=default
+\item 
+void \mbox{\hyperlink{classtesseract__planning_1_1RuckigTrajectorySmoothing_afa8ddd97abeaf47c5a506af29d9da848}{set\+Duration\+Extension\+Fraction}} (double duration\+\_\+extension\+\_\+fraction)
+\begin{DoxyCompactList}\small\item\em Set the duration extension fraction. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classtesseract__planning_1_1RuckigTrajectorySmoothing_a506949bcf42dfb404406a4f51c255116}{set\+Max\+Duration\+Extension\+Factor}} (double max\+\_\+duration\+\_\+extension\+\_\+factor)
+\begin{DoxyCompactList}\small\item\em Set the max duration extension factor. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classtesseract__planning_1_1RuckigTrajectorySmoothing_a140370c2fb02a9d85e1db44efebd9d24}{compute}} (\mbox{\hyperlink{classtesseract__planning_1_1TrajectoryContainer}{Trajectory\+Container}} \&\mbox{\hyperlink{iterative__spline__tests_8cpp_a42770b019b3c810751d40ab5f2f25e20}{trajectory}}, const Eigen\+::\+Ref$<$ const Eigen\+::\+Matrix\+X2d $>$ \&velocity\+\_\+limits, const Eigen\+::\+Ref$<$ const Eigen\+::\+Matrix\+X2d $>$ \&acceleration\+\_\+limits, const Eigen\+::\+Ref$<$ const Eigen\+::\+Matrix\+X2d $>$ \&jerk\+\_\+limits, const Eigen\+::\+Ref$<$ const Eigen\+::\+Vector\+Xd $>$ \&velocity\+\_\+scaling\+\_\+factors=Eigen\+::\+Vector\+Xd\+::\+Ones(1), const Eigen\+::\+Ref$<$ const Eigen\+::\+Vector\+Xd $>$ \&acceleration\+\_\+scaling\+\_\+factors=Eigen\+::\+Vector\+Xd\+::\+Ones(1), const Eigen\+::\+Ref$<$ const Eigen\+::\+Vector\+Xd $>$ \&jerk\+\_\+scaling\+\_\+factors=Eigen\+::\+Vector\+Xd\+::\+Ones(1)) const override
+\begin{DoxyCompactList}\small\item\em Compute the time stamps for a flattened vector of move instruction. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classtesseract__planning_1_1TimeParameterization}{tesseract\+\_\+planning\+::\+Time\+Parameterization}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{classtesseract__planning_1_1TimeParameterization_ac9f26a0bfa3e088d43a596c09f62116e}{\texorpdfstring{$\sim$}{\string~}\+Time\+Parameterization}} ()=default
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+double \mbox{\hyperlink{classtesseract__planning_1_1RuckigTrajectorySmoothing_a4bbd41a28afbfc24d9294282d148c7cd}{duration\+\_\+extension\+\_\+fraction\+\_\+}}
+\item 
+double \mbox{\hyperlink{classtesseract__planning_1_1RuckigTrajectorySmoothing_ab690a31ebcb3054780bc9b5e2a70b54b}{max\+\_\+duration\+\_\+extension\+\_\+factor\+\_\+}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classtesseract__planning_1_1RuckigTrajectorySmoothing_afa14d9a9b39e2438eef109be590b0bc7}\label{classtesseract__planning_1_1RuckigTrajectorySmoothing_afa14d9a9b39e2438eef109be590b0bc7} 
+\index{tesseract\_planning::RuckigTrajectorySmoothing@{tesseract\_planning::RuckigTrajectorySmoothing}!RuckigTrajectorySmoothing@{RuckigTrajectorySmoothing}}
+\index{RuckigTrajectorySmoothing@{RuckigTrajectorySmoothing}!tesseract\_planning::RuckigTrajectorySmoothing@{tesseract\_planning::RuckigTrajectorySmoothing}}
+\doxysubsubsection{\texorpdfstring{RuckigTrajectorySmoothing()}{RuckigTrajectorySmoothing()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily tesseract\+\_\+planning\+::\+Ruckig\+Trajectory\+Smoothing\+::\+Ruckig\+Trajectory\+Smoothing (\begin{DoxyParamCaption}\item[{double}]{duration\+\_\+extension\+\_\+fraction = {\ttfamily 1.1},  }\item[{double}]{max\+\_\+duration\+\_\+extension\+\_\+factor = {\ttfamily 10} }\end{DoxyParamCaption})}
+
+\Hypertarget{classtesseract__planning_1_1RuckigTrajectorySmoothing_a070064f4724f7787cf6fdfcbc24e347c}\label{classtesseract__planning_1_1RuckigTrajectorySmoothing_a070064f4724f7787cf6fdfcbc24e347c} 
+\index{tesseract\_planning::RuckigTrajectorySmoothing@{tesseract\_planning::RuckigTrajectorySmoothing}!````~RuckigTrajectorySmoothing@{\texorpdfstring{$\sim$}{\string~}RuckigTrajectorySmoothing}}
+\index{````~RuckigTrajectorySmoothing@{\texorpdfstring{$\sim$}{\string~}RuckigTrajectorySmoothing}!tesseract\_planning::RuckigTrajectorySmoothing@{tesseract\_planning::RuckigTrajectorySmoothing}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}RuckigTrajectorySmoothing()}{\string~RuckigTrajectorySmoothing()}}
+{\footnotesize\ttfamily tesseract\+\_\+planning\+::\+Ruckig\+Trajectory\+Smoothing\+::\texorpdfstring{$\sim$}{\string~}\+Ruckig\+Trajectory\+Smoothing (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [default]}}
+
+\Hypertarget{classtesseract__planning_1_1RuckigTrajectorySmoothing_a8831ff146f2578b4ffce0b2e6d0eb5f8}\label{classtesseract__planning_1_1RuckigTrajectorySmoothing_a8831ff146f2578b4ffce0b2e6d0eb5f8} 
+\index{tesseract\_planning::RuckigTrajectorySmoothing@{tesseract\_planning::RuckigTrajectorySmoothing}!RuckigTrajectorySmoothing@{RuckigTrajectorySmoothing}}
+\index{RuckigTrajectorySmoothing@{RuckigTrajectorySmoothing}!tesseract\_planning::RuckigTrajectorySmoothing@{tesseract\_planning::RuckigTrajectorySmoothing}}
+\doxysubsubsection{\texorpdfstring{RuckigTrajectorySmoothing()}{RuckigTrajectorySmoothing()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily tesseract\+\_\+planning\+::\+Ruckig\+Trajectory\+Smoothing\+::\+Ruckig\+Trajectory\+Smoothing (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classtesseract__planning_1_1RuckigTrajectorySmoothing}{Ruckig\+Trajectory\+Smoothing}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\Hypertarget{classtesseract__planning_1_1RuckigTrajectorySmoothing_aac1d394cccebc5656febd5e3277d8b7a}\label{classtesseract__planning_1_1RuckigTrajectorySmoothing_aac1d394cccebc5656febd5e3277d8b7a} 
+\index{tesseract\_planning::RuckigTrajectorySmoothing@{tesseract\_planning::RuckigTrajectorySmoothing}!RuckigTrajectorySmoothing@{RuckigTrajectorySmoothing}}
+\index{RuckigTrajectorySmoothing@{RuckigTrajectorySmoothing}!tesseract\_planning::RuckigTrajectorySmoothing@{tesseract\_planning::RuckigTrajectorySmoothing}}
+\doxysubsubsection{\texorpdfstring{RuckigTrajectorySmoothing()}{RuckigTrajectorySmoothing()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily tesseract\+\_\+planning\+::\+Ruckig\+Trajectory\+Smoothing\+::\+Ruckig\+Trajectory\+Smoothing (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classtesseract__planning_1_1RuckigTrajectorySmoothing}{Ruckig\+Trajectory\+Smoothing}} \&\&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classtesseract__planning_1_1RuckigTrajectorySmoothing_a140370c2fb02a9d85e1db44efebd9d24}\label{classtesseract__planning_1_1RuckigTrajectorySmoothing_a140370c2fb02a9d85e1db44efebd9d24} 
+\index{tesseract\_planning::RuckigTrajectorySmoothing@{tesseract\_planning::RuckigTrajectorySmoothing}!compute@{compute}}
+\index{compute@{compute}!tesseract\_planning::RuckigTrajectorySmoothing@{tesseract\_planning::RuckigTrajectorySmoothing}}
+\doxysubsubsection{\texorpdfstring{compute()}{compute()}}
+{\footnotesize\ttfamily bool tesseract\+\_\+planning\+::\+Ruckig\+Trajectory\+Smoothing\+::compute (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classtesseract__planning_1_1TrajectoryContainer}{Trajectory\+Container}} \&}]{trajectory,  }\item[{const Eigen\+::\+Ref$<$ const Eigen\+::\+Matrix\+X2d $>$ \&}]{velocity\+\_\+limits,  }\item[{const Eigen\+::\+Ref$<$ const Eigen\+::\+Matrix\+X2d $>$ \&}]{acceleration\+\_\+limits,  }\item[{const Eigen\+::\+Ref$<$ const Eigen\+::\+Matrix\+X2d $>$ \&}]{jerk\+\_\+limits,  }\item[{const Eigen\+::\+Ref$<$ const Eigen\+::\+Vector\+Xd $>$ \&}]{velocity\+\_\+scaling\+\_\+factors = {\ttfamily Eigen\+:\+:VectorXd\+:\+:Ones(1)},  }\item[{const Eigen\+::\+Ref$<$ const Eigen\+::\+Vector\+Xd $>$ \&}]{acceleration\+\_\+scaling\+\_\+factors = {\ttfamily Eigen\+:\+:VectorXd\+:\+:Ones(1)},  }\item[{const Eigen\+::\+Ref$<$ const Eigen\+::\+Vector\+Xd $>$ \&}]{jerk\+\_\+scaling\+\_\+factors = {\ttfamily Eigen\+:\+:VectorXd\+:\+:Ones(1)} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Compute the time stamps for a flattened vector of move instruction. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em trajectory} & Flattended vector of move instruction \\
+\hline
+{\em velocity\+\_\+limits} & The min/max velocities for each joint \\
+\hline
+{\em acceleration\+\_\+limits} & The min/max acceleration for each joint \\
+\hline
+{\em jerk\+\_\+limits} & The min/max jerk for each joint \\
+\hline
+{\em velocity\+\_\+scaling\+\_\+factor} & The velocity scaling factor. Size should be trajectory.\+size() \\
+\hline
+{\em acceleration\+\_\+scaling\+\_\+factor} & The acceleration scaling factor. Size should be trajectory.\+size() \\
+\hline
+{\em jerk\+\_\+scaling\+\_\+factor} & The jerk scaling factor. Size should be trajectory.\+size() \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if successful, otherwise false 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classtesseract__planning_1_1TimeParameterization_a08c4e75278a13314e3a074f23c678544}{tesseract\+\_\+planning\+::\+Time\+Parameterization}}.
+
+\Hypertarget{classtesseract__planning_1_1RuckigTrajectorySmoothing_a9c89620c248349a6644959cbf389d89a}\label{classtesseract__planning_1_1RuckigTrajectorySmoothing_a9c89620c248349a6644959cbf389d89a} 
+\index{tesseract\_planning::RuckigTrajectorySmoothing@{tesseract\_planning::RuckigTrajectorySmoothing}!operator=@{operator=}}
+\index{operator=@{operator=}!tesseract\_planning::RuckigTrajectorySmoothing@{tesseract\_planning::RuckigTrajectorySmoothing}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classtesseract__planning_1_1RuckigTrajectorySmoothing}{Ruckig\+Trajectory\+Smoothing}} \& tesseract\+\_\+planning\+::\+Ruckig\+Trajectory\+Smoothing\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classtesseract__planning_1_1RuckigTrajectorySmoothing}{Ruckig\+Trajectory\+Smoothing}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\Hypertarget{classtesseract__planning_1_1RuckigTrajectorySmoothing_a769f21b7122a715afd969e055e38cf21}\label{classtesseract__planning_1_1RuckigTrajectorySmoothing_a769f21b7122a715afd969e055e38cf21} 
+\index{tesseract\_planning::RuckigTrajectorySmoothing@{tesseract\_planning::RuckigTrajectorySmoothing}!operator=@{operator=}}
+\index{operator=@{operator=}!tesseract\_planning::RuckigTrajectorySmoothing@{tesseract\_planning::RuckigTrajectorySmoothing}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classtesseract__planning_1_1RuckigTrajectorySmoothing}{Ruckig\+Trajectory\+Smoothing}} \& tesseract\+\_\+planning\+::\+Ruckig\+Trajectory\+Smoothing\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classtesseract__planning_1_1RuckigTrajectorySmoothing}{Ruckig\+Trajectory\+Smoothing}} \&\&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\Hypertarget{classtesseract__planning_1_1RuckigTrajectorySmoothing_afa8ddd97abeaf47c5a506af29d9da848}\label{classtesseract__planning_1_1RuckigTrajectorySmoothing_afa8ddd97abeaf47c5a506af29d9da848} 
+\index{tesseract\_planning::RuckigTrajectorySmoothing@{tesseract\_planning::RuckigTrajectorySmoothing}!setDurationExtensionFraction@{setDurationExtensionFraction}}
+\index{setDurationExtensionFraction@{setDurationExtensionFraction}!tesseract\_planning::RuckigTrajectorySmoothing@{tesseract\_planning::RuckigTrajectorySmoothing}}
+\doxysubsubsection{\texorpdfstring{setDurationExtensionFraction()}{setDurationExtensionFraction()}}
+{\footnotesize\ttfamily void tesseract\+\_\+planning\+::\+Ruckig\+Trajectory\+Smoothing\+::set\+Duration\+Extension\+Fraction (\begin{DoxyParamCaption}\item[{double}]{duration\+\_\+extension\+\_\+fraction }\end{DoxyParamCaption})}
+
+
+
+Set the duration extension fraction. 
+
+\Hypertarget{classtesseract__planning_1_1RuckigTrajectorySmoothing_a506949bcf42dfb404406a4f51c255116}\label{classtesseract__planning_1_1RuckigTrajectorySmoothing_a506949bcf42dfb404406a4f51c255116} 
+\index{tesseract\_planning::RuckigTrajectorySmoothing@{tesseract\_planning::RuckigTrajectorySmoothing}!setMaxDurationExtensionFactor@{setMaxDurationExtensionFactor}}
+\index{setMaxDurationExtensionFactor@{setMaxDurationExtensionFactor}!tesseract\_planning::RuckigTrajectorySmoothing@{tesseract\_planning::RuckigTrajectorySmoothing}}
+\doxysubsubsection{\texorpdfstring{setMaxDurationExtensionFactor()}{setMaxDurationExtensionFactor()}}
+{\footnotesize\ttfamily void tesseract\+\_\+planning\+::\+Ruckig\+Trajectory\+Smoothing\+::set\+Max\+Duration\+Extension\+Factor (\begin{DoxyParamCaption}\item[{double}]{max\+\_\+duration\+\_\+extension\+\_\+factor }\end{DoxyParamCaption})}
+
+
+
+Set the max duration extension factor. 
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classtesseract__planning_1_1RuckigTrajectorySmoothing_a4bbd41a28afbfc24d9294282d148c7cd}\label{classtesseract__planning_1_1RuckigTrajectorySmoothing_a4bbd41a28afbfc24d9294282d148c7cd} 
+\index{tesseract\_planning::RuckigTrajectorySmoothing@{tesseract\_planning::RuckigTrajectorySmoothing}!duration\_extension\_fraction\_@{duration\_extension\_fraction\_}}
+\index{duration\_extension\_fraction\_@{duration\_extension\_fraction\_}!tesseract\_planning::RuckigTrajectorySmoothing@{tesseract\_planning::RuckigTrajectorySmoothing}}
+\doxysubsubsection{\texorpdfstring{duration\_extension\_fraction\_}{duration\_extension\_fraction\_}}
+{\footnotesize\ttfamily double tesseract\+\_\+planning\+::\+Ruckig\+Trajectory\+Smoothing\+::duration\+\_\+extension\+\_\+fraction\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{classtesseract__planning_1_1RuckigTrajectorySmoothing_ab690a31ebcb3054780bc9b5e2a70b54b}\label{classtesseract__planning_1_1RuckigTrajectorySmoothing_ab690a31ebcb3054780bc9b5e2a70b54b} 
+\index{tesseract\_planning::RuckigTrajectorySmoothing@{tesseract\_planning::RuckigTrajectorySmoothing}!max\_duration\_extension\_factor\_@{max\_duration\_extension\_factor\_}}
+\index{max\_duration\_extension\_factor\_@{max\_duration\_extension\_factor\_}!tesseract\_planning::RuckigTrajectorySmoothing@{tesseract\_planning::RuckigTrajectorySmoothing}}
+\doxysubsubsection{\texorpdfstring{max\_duration\_extension\_factor\_}{max\_duration\_extension\_factor\_}}
+{\footnotesize\ttfamily double tesseract\+\_\+planning\+::\+Ruckig\+Trajectory\+Smoothing\+::max\+\_\+duration\+\_\+extension\+\_\+factor\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+tesseract\+\_\+time\+\_\+parameterization/ruckig/include/tesseract\+\_\+time\+\_\+parameterization/ruckig/\mbox{\hyperlink{ruckig__trajectory__smoothing_8h}{ruckig\+\_\+trajectory\+\_\+smoothing.\+h}}\item 
+tesseract\+\_\+time\+\_\+parameterization/ruckig/src/\mbox{\hyperlink{ruckig__trajectory__smoothing_8cpp}{ruckig\+\_\+trajectory\+\_\+smoothing.\+cpp}}\end{DoxyCompactItemize}

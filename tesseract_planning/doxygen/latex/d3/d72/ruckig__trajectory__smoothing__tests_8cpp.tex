@@ -1,0 +1,322 @@
+\doxysection{tesseract\+\_\+time\+\_\+parameterization/ruckig/test/ruckig\+\_\+trajectory\+\_\+smoothing\+\_\+tests.cpp File Reference}
+\hypertarget{ruckig__trajectory__smoothing__tests_8cpp}{}\label{ruckig__trajectory__smoothing__tests_8cpp}\index{tesseract\_time\_parameterization/ruckig/test/ruckig\_trajectory\_smoothing\_tests.cpp@{tesseract\_time\_parameterization/ruckig/test/ruckig\_trajectory\_smoothing\_tests.cpp}}
+{\ttfamily \#include $<$tesseract\+\_\+common/macros.\+h$>$}\newline
+{\ttfamily \#include $<$gtest/gtest.\+h$>$}\newline
+{\ttfamily \#include $<$console\+\_\+bridge/console.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+command\+\_\+language/composite\+\_\+instruction.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+command\+\_\+language/move\+\_\+instruction.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+command\+\_\+language/state\+\_\+waypoint.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+time\+\_\+parameterization/ruckig/ruckig\+\_\+trajectory\+\_\+smoothing.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+time\+\_\+parameterization/isp/iterative\+\_\+spline\+\_\+parameterization.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+time\+\_\+parameterization/core/instructions\+\_\+trajectory.\+h$>$}\newline
+{\ttfamily \#include $<$ruckig/input\+\_\+parameter.\+hpp$>$}\newline
+{\ttfamily \#include $<$ruckig/ruckig.\+hpp$>$}\newline
+{\ttfamily \#include $<$ruckig/trajectory.\+hpp$>$}\newline
+Include dependency graph for ruckig\+\_\+trajectory\+\_\+smoothing\+\_\+tests.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d4/d41/ruckig__trajectory__smoothing__tests_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classtesseract__planning_1_1CompositeInstruction}{Composite\+Instruction}} \mbox{\hyperlink{ruckig__trajectory__smoothing__tests_8cpp_a335759f56b7cbc95784d1ddda2447244}{create\+Repeated\+Point\+Trajectory}} ()
+\item 
+\mbox{\hyperlink{classtesseract__planning_1_1CompositeInstruction}{Composite\+Instruction}} \mbox{\hyperlink{ruckig__trajectory__smoothing__tests_8cpp_a2517a990d50812c8b544130f3a1ff7e9}{create\+Straight\+Trajectory}} ()
+\item 
+\mbox{\hyperlink{ruckig__trajectory__smoothing__tests_8cpp_adc8cb3e2ba02352704dee7ae7ec2afed}{if}} (\mbox{\hyperlink{ruckig__trajectory__smoothing__tests_8cpp_ace2146e480bb36669f455c211aad30a3}{result}}==ruckig\+::\+Result\+::\+Error\+Invalid\+Input)
+\item 
+\mbox{\hyperlink{iterative__spline__tests_8cpp_a42770b019b3c810751d40ab5f2f25e20}{trajectory}} \mbox{\hyperlink{ruckig__trajectory__smoothing__tests_8cpp_a6f321c5b2c551e644783832d9de731cf}{at\+\_\+time}} (new\+\_\+time, \mbox{\hyperlink{ruckig__trajectory__smoothing__tests_8cpp_a115c4ba0609036e1e93ffaff94643753}{new\+\_\+position}}, \mbox{\hyperlink{ruckig__trajectory__smoothing__tests_8cpp_afa3ec3b0ca7b537576e063b5011ba6a9}{new\+\_\+velocity}}, \mbox{\hyperlink{ruckig__trajectory__smoothing__tests_8cpp_a63b456fa6e536e858551d7a66d8a7501}{new\+\_\+acceleration}})
+\item 
+\mbox{\hyperlink{ruckig__trajectory__smoothing__tests_8cpp_a698fafba14c68c2d02c44cbcf75ff135}{std\+::cout$<$$<$ "{}\+Position extremas for Do\+F 4 are "{}$<$$<$ position\+\_\+extrema\mbox{[}2\mbox{]}.\+min$<$$<$ "{} (min) to "{}$<$$<$ position\+\_\+extrema\mbox{[}2\mbox{]}.\+max$<$$<$ "{} (max)"{}$<$$<$ std\+::endl;\} \{ Iterative\+Spline\+Parameterization time\+\_\+parameterization(false);\+Composite\+Instruction program=create\+Straight\+Trajectory();\+Eigen\+::\+Matrix\+X2d max\+\_\+velocity(6, 2);max\+\_\+velocity.\+col(0)$<$$<$ -\/2.\+088, -\/2.\+082, -\/3.\+27, -\/3.\+6, -\/3.\+3, -\/3.\+078;max\+\_\+velocity.\+col(1)$<$$<$ 2.\+088, 2.\+082, 3.\+27, 3.\+6, 3.\+3, 3.\+078;\+Eigen\+::\+Matrix\+X2d max\+\_\+acceleration(6, 2);max\+\_\+acceleration.\+col(0)=-\/1 \texorpdfstring{$\ast$}{*}\+Eigen\+::\+Vector\+Xd\+::\+Ones(6);max\+\_\+acceleration.\+col(1)=\+Eigen\+::\+Vector\+Xd\+::\+Ones(6);\+Eigen\+::\+Matrix\+X2d max\+\_\+jerk(6, 2);max\+\_\+jerk.\+col(0)=-\/1 \texorpdfstring{$\ast$}{*}\+Eigen\+::\+Vector\+Xd\+::\+Ones(6);max\+\_\+jerk.\+col(1)=\+Eigen\+::\+Vector\+Xd\+::\+Ones(6);\+Trajectory\+Container\+::\+Ptr trajectory=std\+::make\+\_\+shared$<$ Instructions\+Trajectory $>$}} (\mbox{\hyperlink{command__language__utils__unit_8cpp_ab5a75a7fd217179774b21aaa94fccc66}{program}})
+\item 
+\mbox{\hyperlink{ruckig__trajectory__smoothing__tests_8cpp_a2fd29ab454a02cac0dca09401426cfcc}{EXPECT\+\_\+\+TRUE}} (time\+\_\+parameterization.\+compute(\texorpdfstring{$\ast$}{*}\mbox{\hyperlink{iterative__spline__tests_8cpp_a42770b019b3c810751d40ab5f2f25e20}{trajectory}}, \mbox{\hyperlink{ruckig__trajectory__smoothing__tests_8cpp_a58256e86ce07011843dfe964919befdf}{max\+\_\+velocity}}, \mbox{\hyperlink{ruckig__trajectory__smoothing__tests_8cpp_a5bd959b1b19423a68dbe7be5891f9175}{max\+\_\+acceleration}}, \mbox{\hyperlink{ruckig__trajectory__smoothing__tests_8cpp_aede03937d039887a6344561cfa67f8b0}{max\+\_\+jerk}}))
+\item 
+\mbox{\hyperlink{ruckig__trajectory__smoothing__tests_8cpp_a6379a9a46f8ac0b413a44a5ec5429334}{ASSERT\+\_\+\+LT}} (program.\+back().as$<$ \mbox{\hyperlink{structtesseract__planning_1_1MoveInstructionPoly}{Move\+Instruction\+Poly}} $>$().get\+Waypoint().as$<$ \mbox{\hyperlink{structtesseract__planning_1_1StateWaypointPoly}{State\+Waypoint\+Poly}} $>$().get\+Time(), 5.\+0)
+\item 
+\mbox{\hyperlink{ruckig__trajectory__smoothing__tests_8cpp_aede03937d039887a6344561cfa67f8b0}{max\+\_\+jerk}} \mbox{\hyperlink{ruckig__trajectory__smoothing__tests_8cpp_a5697296858b1fec0ff24ab063ec0bb07}{col}} (0)$<$$<$ -\/1000
+\item 
+\mbox{\hyperlink{ruckig__trajectory__smoothing__tests_8cpp_aede03937d039887a6344561cfa67f8b0}{max\+\_\+jerk}} \mbox{\hyperlink{ruckig__trajectory__smoothing__tests_8cpp_aede03937d039887a6344561cfa67f8b0}{max\+\_\+jerk}} \mbox{\hyperlink{ruckig__trajectory__smoothing__tests_8cpp_ae956541a3465edffe062faab97bcf956}{col}} (1)$<$$<$ 1000
+\item 
+\mbox{\hyperlink{ruckig__trajectory__smoothing__tests_8cpp_aaaaf836f20b34f04fbb66f5a83e7ece9}{EXPECT\+\_\+\+TRUE}} (traj\+\_\+smoothing.\+compute(\texorpdfstring{$\ast$}{*}\mbox{\hyperlink{iterative__spline__tests_8cpp_a42770b019b3c810751d40ab5f2f25e20}{trajectory}}, \mbox{\hyperlink{ruckig__trajectory__smoothing__tests_8cpp_a58256e86ce07011843dfe964919befdf}{max\+\_\+velocity}}, \mbox{\hyperlink{ruckig__trajectory__smoothing__tests_8cpp_a5bd959b1b19423a68dbe7be5891f9175}{max\+\_\+acceleration}}, \mbox{\hyperlink{ruckig__trajectory__smoothing__tests_8cpp_aede03937d039887a6344561cfa67f8b0}{max\+\_\+jerk}}))
+\item 
+\mbox{\hyperlink{ruckig__trajectory__smoothing__tests_8cpp_a701168750c99535dc650d2af143d7b21}{ASSERT\+\_\+\+LT}} (program.\+back().as$<$ \mbox{\hyperlink{structtesseract__planning_1_1MoveInstructionPoly}{Move\+Instruction\+Poly}} $>$().get\+Waypoint().as$<$ \mbox{\hyperlink{structtesseract__planning_1_1StateWaypointPoly}{State\+Waypoint\+Poly}} $>$().get\+Time(), 8.\+0)
+\item 
+Eigen\+::\+Matrix\+X2d \mbox{\hyperlink{ruckig__trajectory__smoothing__tests_8cpp_aa83c416d350b4bdddfe0fb5ac19345f3}{max\+\_\+velocity}} (6, 2)
+\item 
+\mbox{\hyperlink{ruckig__trajectory__smoothing__tests_8cpp_a58256e86ce07011843dfe964919befdf}{max\+\_\+velocity}} \mbox{\hyperlink{ruckig__trajectory__smoothing__tests_8cpp_a58256e86ce07011843dfe964919befdf}{max\+\_\+velocity}} Eigen\+::\+Matrix\+X2d \mbox{\hyperlink{ruckig__trajectory__smoothing__tests_8cpp_a85b568e8cd6ff7bdfaad05282e068f00}{max\+\_\+acceleration}} (6, 2)
+\item 
+Eigen\+::\+Matrix\+X2d \mbox{\hyperlink{ruckig__trajectory__smoothing__tests_8cpp_a419a4225f45a4f6eed9a38fa61b7e645}{max\+\_\+jerk}} (6, 2)
+\item 
+\mbox{\hyperlink{ruckig__trajectory__smoothing__tests_8cpp_ac10e0e1182e07e45c13c166c2434af4c}{ASSERT\+\_\+\+LT}} (program.\+back().as$<$ \mbox{\hyperlink{structtesseract__planning_1_1MoveInstructionPoly}{Move\+Instruction\+Poly}} $>$().get\+Waypoint().as$<$ \mbox{\hyperlink{structtesseract__planning_1_1StateWaypointPoly}{State\+Waypoint\+Poly}} $>$().get\+Time(), 0.\+001)
+\item 
+int \mbox{\hyperlink{ruckig__trajectory__smoothing__tests_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}{main}} (int argc, char \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}argv)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+input \mbox{\hyperlink{ruckig__trajectory__smoothing__tests_8cpp_ab8b2796f60d29721ad479950e2297b61}{current\+\_\+position}} = \{ 0.\+0, 0.\+0, 0.\+5 \}
+\item 
+input \mbox{\hyperlink{ruckig__trajectory__smoothing__tests_8cpp_a83616be5e87998082da85338a63573eb}{current\+\_\+velocity}} = \{ 0.\+0, -\/2.\+2, -\/0.\+5 \}
+\item 
+input \mbox{\hyperlink{ruckig__trajectory__smoothing__tests_8cpp_a1f8611cab30ca252f64eab1f06007999}{current\+\_\+acceleration}} = \{ 0.\+0, 2.\+5, -\/0.\+5 \}
+\item 
+input \mbox{\hyperlink{ruckig__trajectory__smoothing__tests_8cpp_a335a1bd305daba0375ee6434caaed173}{target\+\_\+position}} = \{ 5.\+0, -\/2.\+0, -\/3.\+5 \}
+\item 
+input \mbox{\hyperlink{ruckig__trajectory__smoothing__tests_8cpp_a300cdf80c10ba21596be459f3c3d118d}{target\+\_\+velocity}} = \{ 0.\+0, -\/0.\+5, -\/2.\+0 \}
+\item 
+input \mbox{\hyperlink{ruckig__trajectory__smoothing__tests_8cpp_a925daa9d81558be5744aeb99396a5c35}{target\+\_\+acceleration}} = \{ 0.\+0, 0.\+0, 0.\+5 \}
+\item 
+input \mbox{\hyperlink{ruckig__trajectory__smoothing__tests_8cpp_a58256e86ce07011843dfe964919befdf}{max\+\_\+velocity}} = \{ 3.\+0, 1.\+0, 3.\+0 \}
+\item 
+input \mbox{\hyperlink{ruckig__trajectory__smoothing__tests_8cpp_a5bd959b1b19423a68dbe7be5891f9175}{max\+\_\+acceleration}} = \{ 3.\+0, 2.\+0, 1.\+0 \}
+\item 
+input \mbox{\hyperlink{ruckig__trajectory__smoothing__tests_8cpp_aede03937d039887a6344561cfa67f8b0}{max\+\_\+jerk}} = \{ 4.\+0, 3.\+0, 2.\+0 \}
+\item 
+input \mbox{\hyperlink{ruckig__trajectory__smoothing__tests_8cpp_a25b13fbf08903c5b864a5fd75c915110}{min\+\_\+velocity}} = \{ -\/2.\+0, -\/0.\+5, -\/3.\+0 \}
+\item 
+input \mbox{\hyperlink{ruckig__trajectory__smoothing__tests_8cpp_a8eda167b58b243c85002acebac95e774}{min\+\_\+acceleration}} = \{ -\/2.\+0, -\/2.\+0, -\/2.\+0 \}
+\item 
+ruckig\+::\+Ruckig$<$ 3 $>$ \mbox{\hyperlink{ruckig__trajectory__smoothing__tests_8cpp_a9e2b26b6e1a70c7bb419d02c703dea07}{otg}}
+\item 
+ruckig\+::\+Trajectory$<$ 3 $>$ \mbox{\hyperlink{ruckig__trajectory__smoothing__tests_8cpp_a42770b019b3c810751d40ab5f2f25e20}{trajectory}} = std\+::make\+\_\+shared$<$\mbox{\hyperlink{classtesseract__planning_1_1InstructionsTrajectory}{Instructions\+Trajectory}}$>$(\mbox{\hyperlink{command__language__utils__unit_8cpp_ab5a75a7fd217179774b21aaa94fccc66}{program}})
+\item 
+ruckig\+::\+Result \mbox{\hyperlink{ruckig__trajectory__smoothing__tests_8cpp_ace2146e480bb36669f455c211aad30a3}{result}} = otg.\+calculate(input, \mbox{\hyperlink{iterative__spline__tests_8cpp_a42770b019b3c810751d40ab5f2f25e20}{trajectory}})
+\item 
+std\+::cout$<$$<$ "{}Trajectory duration\+: "{}$<$$<$ trajectory.\+get\+\_\+duration()$<$$<$ "{} \mbox{[}s\mbox{]}."{}$<$$<$ std\+::endl;double new\+\_\+time\{ 1.\+0 \};std\+::array$<$ double, 3 $>$ \mbox{\hyperlink{ruckig__trajectory__smoothing__tests_8cpp_a115c4ba0609036e1e93ffaff94643753}{new\+\_\+position}} \{\}
+\item 
+std\+::cout$<$$<$ "{}Trajectory duration\+: "{}$<$$<$ trajectory.\+get\+\_\+duration()$<$$<$ "{} \mbox{[}s\mbox{]}."{}$<$$<$ std\+::endl;double new\+\_\+time\{ 1.\+0 \};std\+::array$<$ double, 3 $>$ \mbox{\hyperlink{ruckig__trajectory__smoothing__tests_8cpp_afa3ec3b0ca7b537576e063b5011ba6a9}{new\+\_\+velocity}} \{\}
+\item 
+std\+::cout$<$$<$ "{}Trajectory duration\+: "{}$<$$<$ trajectory.\+get\+\_\+duration()$<$$<$ "{} \mbox{[}s\mbox{]}."{}$<$$<$ std\+::endl;double new\+\_\+time\{ 1.\+0 \};std\+::array$<$ double, 3 $>$ \mbox{\hyperlink{ruckig__trajectory__smoothing__tests_8cpp_a63b456fa6e536e858551d7a66d8a7501}{new\+\_\+acceleration}} \{\}
+\item 
+std\+::cout$<$$<$ "{}Position at time "{}$<$$<$ new\+\_\+time$<$$<$ "{} \mbox{[}s\mbox{]}\+: "{}$<$$<$ new\+\_\+position\mbox{[}0\mbox{]}$<$$<$ "{}, "{}$<$$<$ \mbox{\hyperlink{ruckig__trajectory__smoothing__tests_8cpp_a115c4ba0609036e1e93ffaff94643753}{new\+\_\+position}}\mbox{[}1\mbox{]}$<$$<$ "{}, "{}$<$$<$ \mbox{\hyperlink{ruckig__trajectory__smoothing__tests_8cpp_a115c4ba0609036e1e93ffaff94643753}{new\+\_\+position}}\mbox{[}2\mbox{]}$<$$<$ std\+::endl;std\+::array$<$ ruckig\+::\+Position\+Extrema, 3 $>$ \mbox{\hyperlink{ruckig__trajectory__smoothing__tests_8cpp_a558fa6f57b362164796140c9ad939fe6}{position\+\_\+extrema}} = trajectory.\+get\+\_\+position\+\_\+extrema()
+\item 
+\mbox{\hyperlink{ruckig__trajectory__smoothing__tests_8cpp_aede03937d039887a6344561cfa67f8b0}{max\+\_\+jerk}} \mbox{\hyperlink{ruckig__trajectory__smoothing__tests_8cpp_aede03937d039887a6344561cfa67f8b0}{max\+\_\+jerk}} \mbox{\hyperlink{classtesseract__planning_1_1RuckigTrajectorySmoothing}{Ruckig\+Trajectory\+Smoothing}} \mbox{\hyperlink{ruckig__trajectory__smoothing__tests_8cpp_ad1491cfad772725f7163676a07e09a3a}{traj\+\_\+smoothing}}
+\item 
+\mbox{\hyperlink{classtesseract__planning_1_1CompositeInstruction}{Composite\+Instruction}} \mbox{\hyperlink{ruckig__trajectory__smoothing__tests_8cpp_ab5a75a7fd217179774b21aaa94fccc66}{program}} = \mbox{\hyperlink{iterative__spline__tests_8cpp_a335759f56b7cbc95784d1ddda2447244}{create\+Repeated\+Point\+Trajectory}}()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{ruckig__trajectory__smoothing__tests_8cpp_ac10e0e1182e07e45c13c166c2434af4c}\label{ruckig__trajectory__smoothing__tests_8cpp_ac10e0e1182e07e45c13c166c2434af4c} 
+\index{ruckig\_trajectory\_smoothing\_tests.cpp@{ruckig\_trajectory\_smoothing\_tests.cpp}!ASSERT\_LT@{ASSERT\_LT}}
+\index{ASSERT\_LT@{ASSERT\_LT}!ruckig\_trajectory\_smoothing\_tests.cpp@{ruckig\_trajectory\_smoothing\_tests.cpp}}
+\doxysubsubsection{\texorpdfstring{ASSERT\_LT()}{ASSERT\_LT()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily ASSERT\+\_\+\+LT (\begin{DoxyParamCaption}\item[{program.}]{back).\+as$<$ Move\+Instruction\+Poly $>$().\+get\+Waypoint().\+as$<$ State\+Waypoint\+Poly $>$().\+get\+Time(,  }\item[{0.}]{001 }\end{DoxyParamCaption})}
+
+\Hypertarget{ruckig__trajectory__smoothing__tests_8cpp_a6379a9a46f8ac0b413a44a5ec5429334}\label{ruckig__trajectory__smoothing__tests_8cpp_a6379a9a46f8ac0b413a44a5ec5429334} 
+\index{ruckig\_trajectory\_smoothing\_tests.cpp@{ruckig\_trajectory\_smoothing\_tests.cpp}!ASSERT\_LT@{ASSERT\_LT}}
+\index{ASSERT\_LT@{ASSERT\_LT}!ruckig\_trajectory\_smoothing\_tests.cpp@{ruckig\_trajectory\_smoothing\_tests.cpp}}
+\doxysubsubsection{\texorpdfstring{ASSERT\_LT()}{ASSERT\_LT()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily ASSERT\+\_\+\+LT (\begin{DoxyParamCaption}\item[{program.}]{back).\+as$<$ Move\+Instruction\+Poly $>$().\+get\+Waypoint().\+as$<$ State\+Waypoint\+Poly $>$().\+get\+Time(,  }\item[{5.}]{0 }\end{DoxyParamCaption})}
+
+\Hypertarget{ruckig__trajectory__smoothing__tests_8cpp_a701168750c99535dc650d2af143d7b21}\label{ruckig__trajectory__smoothing__tests_8cpp_a701168750c99535dc650d2af143d7b21} 
+\index{ruckig\_trajectory\_smoothing\_tests.cpp@{ruckig\_trajectory\_smoothing\_tests.cpp}!ASSERT\_LT@{ASSERT\_LT}}
+\index{ASSERT\_LT@{ASSERT\_LT}!ruckig\_trajectory\_smoothing\_tests.cpp@{ruckig\_trajectory\_smoothing\_tests.cpp}}
+\doxysubsubsection{\texorpdfstring{ASSERT\_LT()}{ASSERT\_LT()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily ASSERT\+\_\+\+LT (\begin{DoxyParamCaption}\item[{program.}]{back).\+as$<$ Move\+Instruction\+Poly $>$().\+get\+Waypoint().\+as$<$ State\+Waypoint\+Poly $>$().\+get\+Time(,  }\item[{8.}]{0 }\end{DoxyParamCaption})}
+
+\Hypertarget{ruckig__trajectory__smoothing__tests_8cpp_a6f321c5b2c551e644783832d9de731cf}\label{ruckig__trajectory__smoothing__tests_8cpp_a6f321c5b2c551e644783832d9de731cf} 
+\index{ruckig\_trajectory\_smoothing\_tests.cpp@{ruckig\_trajectory\_smoothing\_tests.cpp}!at\_time@{at\_time}}
+\index{at\_time@{at\_time}!ruckig\_trajectory\_smoothing\_tests.cpp@{ruckig\_trajectory\_smoothing\_tests.cpp}}
+\doxysubsubsection{\texorpdfstring{at\_time()}{at\_time()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{iterative__spline__tests_8cpp_a42770b019b3c810751d40ab5f2f25e20}{trajectory}} at\+\_\+time (\begin{DoxyParamCaption}\item[{new\+\_\+time}]{,  }\item[{\mbox{\hyperlink{ruckig__trajectory__smoothing__tests_8cpp_a115c4ba0609036e1e93ffaff94643753}{new\+\_\+position}}}]{,  }\item[{\mbox{\hyperlink{ruckig__trajectory__smoothing__tests_8cpp_afa3ec3b0ca7b537576e063b5011ba6a9}{new\+\_\+velocity}}}]{,  }\item[{\mbox{\hyperlink{ruckig__trajectory__smoothing__tests_8cpp_a63b456fa6e536e858551d7a66d8a7501}{new\+\_\+acceleration}}}]{ }\end{DoxyParamCaption})}
+
+\Hypertarget{ruckig__trajectory__smoothing__tests_8cpp_a5697296858b1fec0ff24ab063ec0bb07}\label{ruckig__trajectory__smoothing__tests_8cpp_a5697296858b1fec0ff24ab063ec0bb07} 
+\index{ruckig\_trajectory\_smoothing\_tests.cpp@{ruckig\_trajectory\_smoothing\_tests.cpp}!col@{col}}
+\index{col@{col}!ruckig\_trajectory\_smoothing\_tests.cpp@{ruckig\_trajectory\_smoothing\_tests.cpp}}
+\doxysubsubsection{\texorpdfstring{col()}{col()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{ruckig__trajectory__smoothing__tests_8cpp_aede03937d039887a6344561cfa67f8b0}{max\+\_\+jerk}} col (\begin{DoxyParamCaption}\item[{0}]{ }\end{DoxyParamCaption})}
+
+\Hypertarget{ruckig__trajectory__smoothing__tests_8cpp_ae956541a3465edffe062faab97bcf956}\label{ruckig__trajectory__smoothing__tests_8cpp_ae956541a3465edffe062faab97bcf956} 
+\index{ruckig\_trajectory\_smoothing\_tests.cpp@{ruckig\_trajectory\_smoothing\_tests.cpp}!col@{col}}
+\index{col@{col}!ruckig\_trajectory\_smoothing\_tests.cpp@{ruckig\_trajectory\_smoothing\_tests.cpp}}
+\doxysubsubsection{\texorpdfstring{col()}{col()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{ruckig__trajectory__smoothing__tests_8cpp_aede03937d039887a6344561cfa67f8b0}{max\+\_\+jerk}} \mbox{\hyperlink{ruckig__trajectory__smoothing__tests_8cpp_aede03937d039887a6344561cfa67f8b0}{max\+\_\+jerk}} col (\begin{DoxyParamCaption}\item[{1}]{ }\end{DoxyParamCaption})}
+
+\Hypertarget{ruckig__trajectory__smoothing__tests_8cpp_a335759f56b7cbc95784d1ddda2447244}\label{ruckig__trajectory__smoothing__tests_8cpp_a335759f56b7cbc95784d1ddda2447244} 
+\index{ruckig\_trajectory\_smoothing\_tests.cpp@{ruckig\_trajectory\_smoothing\_tests.cpp}!createRepeatedPointTrajectory@{createRepeatedPointTrajectory}}
+\index{createRepeatedPointTrajectory@{createRepeatedPointTrajectory}!ruckig\_trajectory\_smoothing\_tests.cpp@{ruckig\_trajectory\_smoothing\_tests.cpp}}
+\doxysubsubsection{\texorpdfstring{createRepeatedPointTrajectory()}{createRepeatedPointTrajectory()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classtesseract__planning_1_1CompositeInstruction}{Composite\+Instruction}} create\+Repeated\+Point\+Trajectory (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{ruckig__trajectory__smoothing__tests_8cpp_a2517a990d50812c8b544130f3a1ff7e9}\label{ruckig__trajectory__smoothing__tests_8cpp_a2517a990d50812c8b544130f3a1ff7e9} 
+\index{ruckig\_trajectory\_smoothing\_tests.cpp@{ruckig\_trajectory\_smoothing\_tests.cpp}!createStraightTrajectory@{createStraightTrajectory}}
+\index{createStraightTrajectory@{createStraightTrajectory}!ruckig\_trajectory\_smoothing\_tests.cpp@{ruckig\_trajectory\_smoothing\_tests.cpp}}
+\doxysubsubsection{\texorpdfstring{createStraightTrajectory()}{createStraightTrajectory()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classtesseract__planning_1_1CompositeInstruction}{Composite\+Instruction}} create\+Straight\+Trajectory (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{ruckig__trajectory__smoothing__tests_8cpp_a2fd29ab454a02cac0dca09401426cfcc}\label{ruckig__trajectory__smoothing__tests_8cpp_a2fd29ab454a02cac0dca09401426cfcc} 
+\index{ruckig\_trajectory\_smoothing\_tests.cpp@{ruckig\_trajectory\_smoothing\_tests.cpp}!EXPECT\_TRUE@{EXPECT\_TRUE}}
+\index{EXPECT\_TRUE@{EXPECT\_TRUE}!ruckig\_trajectory\_smoothing\_tests.cpp@{ruckig\_trajectory\_smoothing\_tests.cpp}}
+\doxysubsubsection{\texorpdfstring{EXPECT\_TRUE()}{EXPECT\_TRUE()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily EXPECT\+\_\+\+TRUE (\begin{DoxyParamCaption}\item[{time\+\_\+parameterization.\+compute \texorpdfstring{$\ast$}{*},,,}]{max\+\_\+jerk }\end{DoxyParamCaption})}
+
+\Hypertarget{ruckig__trajectory__smoothing__tests_8cpp_aaaaf836f20b34f04fbb66f5a83e7ece9}\label{ruckig__trajectory__smoothing__tests_8cpp_aaaaf836f20b34f04fbb66f5a83e7ece9} 
+\index{ruckig\_trajectory\_smoothing\_tests.cpp@{ruckig\_trajectory\_smoothing\_tests.cpp}!EXPECT\_TRUE@{EXPECT\_TRUE}}
+\index{EXPECT\_TRUE@{EXPECT\_TRUE}!ruckig\_trajectory\_smoothing\_tests.cpp@{ruckig\_trajectory\_smoothing\_tests.cpp}}
+\doxysubsubsection{\texorpdfstring{EXPECT\_TRUE()}{EXPECT\_TRUE()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily EXPECT\+\_\+\+TRUE (\begin{DoxyParamCaption}\item[{traj\+\_\+smoothing.\+compute \texorpdfstring{$\ast$}{*},,,}]{max\+\_\+jerk }\end{DoxyParamCaption})}
+
+\Hypertarget{ruckig__trajectory__smoothing__tests_8cpp_adc8cb3e2ba02352704dee7ae7ec2afed}\label{ruckig__trajectory__smoothing__tests_8cpp_adc8cb3e2ba02352704dee7ae7ec2afed} 
+\index{ruckig\_trajectory\_smoothing\_tests.cpp@{ruckig\_trajectory\_smoothing\_tests.cpp}!if@{if}}
+\index{if@{if}!ruckig\_trajectory\_smoothing\_tests.cpp@{ruckig\_trajectory\_smoothing\_tests.cpp}}
+\doxysubsubsection{\texorpdfstring{if()}{if()}}
+{\footnotesize\ttfamily if (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{ruckig__trajectory__smoothing__tests_8cpp_ace2146e480bb36669f455c211aad30a3}{result}}}]{ = {\ttfamily =~ruckig\+:\+:Result\+:\+:ErrorInvalidInput} }\end{DoxyParamCaption})}
+
+\Hypertarget{ruckig__trajectory__smoothing__tests_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}\label{ruckig__trajectory__smoothing__tests_8cpp_a3c04138a5bfe5d72780bb7e82a18e627} 
+\index{ruckig\_trajectory\_smoothing\_tests.cpp@{ruckig\_trajectory\_smoothing\_tests.cpp}!main@{main}}
+\index{main@{main}!ruckig\_trajectory\_smoothing\_tests.cpp@{ruckig\_trajectory\_smoothing\_tests.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{argv }\end{DoxyParamCaption})}
+
+\Hypertarget{ruckig__trajectory__smoothing__tests_8cpp_a85b568e8cd6ff7bdfaad05282e068f00}\label{ruckig__trajectory__smoothing__tests_8cpp_a85b568e8cd6ff7bdfaad05282e068f00} 
+\index{ruckig\_trajectory\_smoothing\_tests.cpp@{ruckig\_trajectory\_smoothing\_tests.cpp}!max\_acceleration@{max\_acceleration}}
+\index{max\_acceleration@{max\_acceleration}!ruckig\_trajectory\_smoothing\_tests.cpp@{ruckig\_trajectory\_smoothing\_tests.cpp}}
+\doxysubsubsection{\texorpdfstring{max\_acceleration()}{max\_acceleration()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{ruckig__trajectory__smoothing__tests_8cpp_a58256e86ce07011843dfe964919befdf}{max\+\_\+velocity}} \mbox{\hyperlink{ruckig__trajectory__smoothing__tests_8cpp_a58256e86ce07011843dfe964919befdf}{max\+\_\+velocity}} Eigen\+::\+Matrix\+X2d max\+\_\+acceleration (\begin{DoxyParamCaption}\item[{6}]{,  }\item[{2}]{ }\end{DoxyParamCaption})}
+
+\Hypertarget{ruckig__trajectory__smoothing__tests_8cpp_a419a4225f45a4f6eed9a38fa61b7e645}\label{ruckig__trajectory__smoothing__tests_8cpp_a419a4225f45a4f6eed9a38fa61b7e645} 
+\index{ruckig\_trajectory\_smoothing\_tests.cpp@{ruckig\_trajectory\_smoothing\_tests.cpp}!max\_jerk@{max\_jerk}}
+\index{max\_jerk@{max\_jerk}!ruckig\_trajectory\_smoothing\_tests.cpp@{ruckig\_trajectory\_smoothing\_tests.cpp}}
+\doxysubsubsection{\texorpdfstring{max\_jerk()}{max\_jerk()}}
+{\footnotesize\ttfamily Eigen\+::\+Matrix\+X2d max\+\_\+jerk (\begin{DoxyParamCaption}\item[{6}]{,  }\item[{2}]{ }\end{DoxyParamCaption})}
+
+\Hypertarget{ruckig__trajectory__smoothing__tests_8cpp_aa83c416d350b4bdddfe0fb5ac19345f3}\label{ruckig__trajectory__smoothing__tests_8cpp_aa83c416d350b4bdddfe0fb5ac19345f3} 
+\index{ruckig\_trajectory\_smoothing\_tests.cpp@{ruckig\_trajectory\_smoothing\_tests.cpp}!max\_velocity@{max\_velocity}}
+\index{max\_velocity@{max\_velocity}!ruckig\_trajectory\_smoothing\_tests.cpp@{ruckig\_trajectory\_smoothing\_tests.cpp}}
+\doxysubsubsection{\texorpdfstring{max\_velocity()}{max\_velocity()}}
+{\footnotesize\ttfamily Eigen\+::\+Matrix\+X2d max\+\_\+velocity (\begin{DoxyParamCaption}\item[{6}]{,  }\item[{2}]{ }\end{DoxyParamCaption})}
+
+\Hypertarget{ruckig__trajectory__smoothing__tests_8cpp_a698fafba14c68c2d02c44cbcf75ff135}\label{ruckig__trajectory__smoothing__tests_8cpp_a698fafba14c68c2d02c44cbcf75ff135} 
+\index{ruckig\_trajectory\_smoothing\_tests.cpp@{ruckig\_trajectory\_smoothing\_tests.cpp}!std::cout$<$$<$ "{}Position extremas for DoF 4 are "{}$<$$<$ position\_extrema\mbox{[}2\mbox{]}.min$<$$<$ "{} (min) to "{}$<$$<$ position\_extrema\mbox{[}2\mbox{]}.max$<$$<$ "{} (max)"{}$<$$<$ std::endl;\rcurly{} \lcurly{} IterativeSplineParameterization time\_parameterization(false);CompositeInstruction program=createStraightTrajectory();Eigen::MatrixX2d max\_velocity(6, 2);max\_velocity.col(0)$<$$<$ -\/2.088, -\/2.082, -\/3.27, -\/3.6, -\/3.3, -\/3.078;max\_velocity.col(1)$<$$<$ 2.088, 2.082, 3.27, 3.6, 3.3, 3.078;Eigen::MatrixX2d max\_acceleration(6, 2);max\_acceleration.col(0)=-\/1 \texorpdfstring{$\ast$}{*}Eigen::VectorXd::Ones(6);max\_acceleration.col(1)=Eigen::VectorXd::Ones(6);Eigen::MatrixX2d max\_jerk(6, 2);max\_jerk.col(0)=-\/1 \texorpdfstring{$\ast$}{*}Eigen::VectorXd::Ones(6);max\_jerk.col(1)=Eigen::VectorXd::Ones(6);TrajectoryContainer::Ptr trajectory=std::make\_shared$<$ InstructionsTrajectory $>$@{std::cout$<$$<$ ""Position extremas for DoF 4 are ""$<$$<$ position\_extrema[2].min$<$$<$ "" (min) to ""$<$$<$ position\_extrema[2].max$<$$<$ "" (max)""$<$$<$ std::endl;\rcurly{} \lcurly{} IterativeSplineParameterization time\_parameterization(false);CompositeInstruction program=createStraightTrajectory();Eigen::MatrixX2d max\_velocity(6, 2);max\_velocity.col(0)$<$$<$ -\/2.088, -\/2.082, -\/3.27, -\/3.6, -\/3.3, -\/3.078;max\_velocity.col(1)$<$$<$ 2.088, 2.082, 3.27, 3.6, 3.3, 3.078;Eigen::MatrixX2d max\_acceleration(6, 2);max\_acceleration.col(0)=-\/1 \texorpdfstring{$\ast$}{*}Eigen::VectorXd::Ones(6);max\_acceleration.col(1)=Eigen::VectorXd::Ones(6);Eigen::MatrixX2d max\_jerk(6, 2);max\_jerk.col(0)=-\/1 \texorpdfstring{$\ast$}{*}Eigen::VectorXd::Ones(6);max\_jerk.col(1)=Eigen::VectorXd::Ones(6);TrajectoryContainer::Ptr trajectory=std::make\_shared$<$ InstructionsTrajectory $>$}}
+\index{std::cout$<$$<$ "{}Position extremas for DoF 4 are "{}$<$$<$ position\_extrema\mbox{[}2\mbox{]}.min$<$$<$ "{} (min) to "{}$<$$<$ position\_extrema\mbox{[}2\mbox{]}.max$<$$<$ "{} (max)"{}$<$$<$ std::endl;\rcurly{} \lcurly{} IterativeSplineParameterization time\_parameterization(false);CompositeInstruction program=createStraightTrajectory();Eigen::MatrixX2d max\_velocity(6, 2);max\_velocity.col(0)$<$$<$ -\/2.088, -\/2.082, -\/3.27, -\/3.6, -\/3.3, -\/3.078;max\_velocity.col(1)$<$$<$ 2.088, 2.082, 3.27, 3.6, 3.3, 3.078;Eigen::MatrixX2d max\_acceleration(6, 2);max\_acceleration.col(0)=-\/1 \texorpdfstring{$\ast$}{*}Eigen::VectorXd::Ones(6);max\_acceleration.col(1)=Eigen::VectorXd::Ones(6);Eigen::MatrixX2d max\_jerk(6, 2);max\_jerk.col(0)=-\/1 \texorpdfstring{$\ast$}{*}Eigen::VectorXd::Ones(6);max\_jerk.col(1)=Eigen::VectorXd::Ones(6);TrajectoryContainer::Ptr trajectory=std::make\_shared$<$ InstructionsTrajectory $>$@{std::cout$<$$<$ ""Position extremas for DoF 4 are ""$<$$<$ position\_extrema[2].min$<$$<$ "" (min) to ""$<$$<$ position\_extrema[2].max$<$$<$ "" (max)""$<$$<$ std::endl;\rcurly{} \lcurly{} IterativeSplineParameterization time\_parameterization(false);CompositeInstruction program=createStraightTrajectory();Eigen::MatrixX2d max\_velocity(6, 2);max\_velocity.col(0)$<$$<$ -\/2.088, -\/2.082, -\/3.27, -\/3.6, -\/3.3, -\/3.078;max\_velocity.col(1)$<$$<$ 2.088, 2.082, 3.27, 3.6, 3.3, 3.078;Eigen::MatrixX2d max\_acceleration(6, 2);max\_acceleration.col(0)=-\/1 \texorpdfstring{$\ast$}{*}Eigen::VectorXd::Ones(6);max\_acceleration.col(1)=Eigen::VectorXd::Ones(6);Eigen::MatrixX2d max\_jerk(6, 2);max\_jerk.col(0)=-\/1 \texorpdfstring{$\ast$}{*}Eigen::VectorXd::Ones(6);max\_jerk.col(1)=Eigen::VectorXd::Ones(6);TrajectoryContainer::Ptr trajectory=std::make\_shared$<$ InstructionsTrajectory $>$}!ruckig\_trajectory\_smoothing\_tests.cpp@{ruckig\_trajectory\_smoothing\_tests.cpp}}
+\doxysubsubsection{\texorpdfstring{std::cout$<$$<$ ""Position extremas for DoF 4 are ""$<$$<$ position\_extrema[2].min$<$$<$ "" (min) to ""$<$$<$ position\_extrema[2].max$<$$<$ "" (max)""$<$$<$ std::endl;\rcurly{} \lcurly{} IterativeSplineParameterization time\_parameterization(false);CompositeInstruction program=createStraightTrajectory();Eigen::MatrixX2d max\_velocity(6, 2);max\_velocity.col(0)$<$$<$ -\/2.088, -\/2.082, -\/3.27, -\/3.6, -\/3.3, -\/3.078;max\_velocity.col(1)$<$$<$ 2.088, 2.082, 3.27, 3.6, 3.3, 3.078;Eigen::MatrixX2d max\_acceleration(6, 2);max\_acceleration.col(0)=-\/1 \texorpdfstring{$\ast$}{*}Eigen::VectorXd::Ones(6);max\_acceleration.col(1)=Eigen::VectorXd::Ones(6);Eigen::MatrixX2d max\_jerk(6, 2);max\_jerk.col(0)=-\/1 \texorpdfstring{$\ast$}{*}Eigen::VectorXd::Ones(6);max\_jerk.col(1)=Eigen::VectorXd::Ones(6);TrajectoryContainer::Ptr trajectory=std::make\_shared$<$ InstructionsTrajectory $>$()}{std::cout<< "Position extremas for DoF 4 are "<< position\_extrema[2].min<< " (min) to "<< position\_extrema[2].max<< " (max)"<< std::endl;\} \{ IterativeSplineParameterization time\_parameterization(false);CompositeInstruction program=createStraightTrajectory();Eigen::MatrixX2d max\_velocity(6, 2);max\_velocity.col(0)<< -2.088, -2.082, -3.27, -3.6, -3.3, -3.078;max\_velocity.col(1)<< 2.088, 2.082, 3.27, 3.6, 3.3, 3.078;Eigen::MatrixX2d max\_acceleration(6, 2);max\_acceleration.col(0)=-1 *Eigen::VectorXd::Ones(6);max\_acceleration.col(1)=Eigen::VectorXd::Ones(6);Eigen::MatrixX2d max\_jerk(6, 2);max\_jerk.col(0)=-1 *Eigen::VectorXd::Ones(6);max\_jerk.col(1)=Eigen::VectorXd::Ones(6);TrajectoryContainer::Ptr trajectory=std::make\_shared< InstructionsTrajectory >()}}
+{\footnotesize\ttfamily std\+::cout$<$$<$ "{}Position extremas \mbox{\hyperlink{command__language__utils__unit_8cpp_a18ab5c6011f695de7d3f24fee63334ac}{for}} DoF 4 are "{}$<$$<$ position\+\_\+extrema\mbox{[}2\mbox{]}.min$<$$<$ "{} (min) to "{}$<$$<$ position\+\_\+extrema\mbox{[}2\mbox{]}.max$<$$<$ "{} (max)"{}$<$$<$ std\+::endl;\} \{ \mbox{\hyperlink{classtesseract__planning_1_1IterativeSplineParameterization}{Iterative\+Spline\+Parameterization}} time\+\_\+parameterization(false);\mbox{\hyperlink{classtesseract__planning_1_1CompositeInstruction}{Composite\+Instruction}} \mbox{\hyperlink{command__language__utils__unit_8cpp_ab5a75a7fd217179774b21aaa94fccc66}{program}}=\mbox{\hyperlink{iterative__spline__tests_8cpp_a2517a990d50812c8b544130f3a1ff7e9}{create\+Straight\+Trajectory}}();Eigen\+::\+Matrix\+X2d \mbox{\hyperlink{ruckig__trajectory__smoothing__tests_8cpp_a58256e86ce07011843dfe964919befdf}{max\+\_\+velocity}}(6, 2);\mbox{\hyperlink{iterative__spline__tests_8cpp_ac0a6d35ed275f77ccf224090dffbc62a}{max\+\_\+velocity.\+col}}(0)$<$$<$ -\/2.\+088, -\/2.\+082, -\/3.\+27, -\/3.\+6, -\/3.\+3, -\/3.\+078;\mbox{\hyperlink{iterative__spline__tests_8cpp_ac0a6d35ed275f77ccf224090dffbc62a}{max\+\_\+velocity.\+col}}(1)$<$$<$ 2.\+088, 2.\+082, 3.\+27, 3.\+6, 3.\+3, 3.\+078;Eigen\+::\+Matrix\+X2d \mbox{\hyperlink{ruckig__trajectory__smoothing__tests_8cpp_a5bd959b1b19423a68dbe7be5891f9175}{max\+\_\+acceleration}}(6, 2);\mbox{\hyperlink{iterative__spline__tests_8cpp_ac0a6d35ed275f77ccf224090dffbc62a}{max\+\_\+acceleration.\+col}}(0)=-\/1 \texorpdfstring{$\ast$}{*}Eigen\+::\+Vector\+Xd\+::\+Ones(6);\mbox{\hyperlink{iterative__spline__tests_8cpp_ac0a6d35ed275f77ccf224090dffbc62a}{max\+\_\+acceleration.\+col}}(1)=Eigen\+::\+Vector\+Xd\+::\+Ones(6);Eigen\+::\+Matrix\+X2d \mbox{\hyperlink{ruckig__trajectory__smoothing__tests_8cpp_aede03937d039887a6344561cfa67f8b0}{max\+\_\+jerk}}(6, 2);\mbox{\hyperlink{iterative__spline__tests_8cpp_ac0a6d35ed275f77ccf224090dffbc62a}{max\+\_\+jerk.\+col}}(0)=-\/1 \texorpdfstring{$\ast$}{*}Eigen\+::\+Vector\+Xd\+::\+Ones(6);\mbox{\hyperlink{iterative__spline__tests_8cpp_ac0a6d35ed275f77ccf224090dffbc62a}{max\+\_\+jerk.\+col}}(1)=Eigen\+::\+Vector\+Xd\+::\+Ones(6);\mbox{\hyperlink{classtesseract__planning_1_1TrajectoryContainer_addac5779485104d03ae174b032df5e6a}{Trajectory\+Container\+::\+Ptr}} \mbox{\hyperlink{iterative__spline__tests_8cpp_a42770b019b3c810751d40ab5f2f25e20}{trajectory}}=std\+::make\+\_\+shared$<$ \mbox{\hyperlink{classtesseract__planning_1_1InstructionsTrajectory}{Instructions\+Trajectory}} $>$ (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{command__language__utils__unit_8cpp_ab5a75a7fd217179774b21aaa94fccc66}{program}}}]{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{ruckig__trajectory__smoothing__tests_8cpp_a1f8611cab30ca252f64eab1f06007999}\label{ruckig__trajectory__smoothing__tests_8cpp_a1f8611cab30ca252f64eab1f06007999} 
+\index{ruckig\_trajectory\_smoothing\_tests.cpp@{ruckig\_trajectory\_smoothing\_tests.cpp}!current\_acceleration@{current\_acceleration}}
+\index{current\_acceleration@{current\_acceleration}!ruckig\_trajectory\_smoothing\_tests.cpp@{ruckig\_trajectory\_smoothing\_tests.cpp}}
+\doxysubsubsection{\texorpdfstring{current\_acceleration}{current\_acceleration}}
+{\footnotesize\ttfamily input current\+\_\+acceleration = \{ 0.\+0, 2.\+5, -\/0.\+5 \}}
+
+\Hypertarget{ruckig__trajectory__smoothing__tests_8cpp_ab8b2796f60d29721ad479950e2297b61}\label{ruckig__trajectory__smoothing__tests_8cpp_ab8b2796f60d29721ad479950e2297b61} 
+\index{ruckig\_trajectory\_smoothing\_tests.cpp@{ruckig\_trajectory\_smoothing\_tests.cpp}!current\_position@{current\_position}}
+\index{current\_position@{current\_position}!ruckig\_trajectory\_smoothing\_tests.cpp@{ruckig\_trajectory\_smoothing\_tests.cpp}}
+\doxysubsubsection{\texorpdfstring{current\_position}{current\_position}}
+{\footnotesize\ttfamily input current\+\_\+position = \{ 0.\+0, 0.\+0, 0.\+5 \}}
+
+\Hypertarget{ruckig__trajectory__smoothing__tests_8cpp_a83616be5e87998082da85338a63573eb}\label{ruckig__trajectory__smoothing__tests_8cpp_a83616be5e87998082da85338a63573eb} 
+\index{ruckig\_trajectory\_smoothing\_tests.cpp@{ruckig\_trajectory\_smoothing\_tests.cpp}!current\_velocity@{current\_velocity}}
+\index{current\_velocity@{current\_velocity}!ruckig\_trajectory\_smoothing\_tests.cpp@{ruckig\_trajectory\_smoothing\_tests.cpp}}
+\doxysubsubsection{\texorpdfstring{current\_velocity}{current\_velocity}}
+{\footnotesize\ttfamily input current\+\_\+velocity = \{ 0.\+0, -\/2.\+2, -\/0.\+5 \}}
+
+\Hypertarget{ruckig__trajectory__smoothing__tests_8cpp_a5bd959b1b19423a68dbe7be5891f9175}\label{ruckig__trajectory__smoothing__tests_8cpp_a5bd959b1b19423a68dbe7be5891f9175} 
+\index{ruckig\_trajectory\_smoothing\_tests.cpp@{ruckig\_trajectory\_smoothing\_tests.cpp}!max\_acceleration@{max\_acceleration}}
+\index{max\_acceleration@{max\_acceleration}!ruckig\_trajectory\_smoothing\_tests.cpp@{ruckig\_trajectory\_smoothing\_tests.cpp}}
+\doxysubsubsection{\texorpdfstring{max\_acceleration}{max\_acceleration}}
+{\footnotesize\ttfamily \mbox{\hyperlink{ruckig__trajectory__smoothing__tests_8cpp_a58256e86ce07011843dfe964919befdf}{max\+\_\+velocity}} \mbox{\hyperlink{ruckig__trajectory__smoothing__tests_8cpp_a58256e86ce07011843dfe964919befdf}{max\+\_\+velocity}} Eigen\+::\+Matrix\+X2d max\+\_\+acceleration = \{ 3.\+0, 2.\+0, 1.\+0 \}}
+
+\Hypertarget{ruckig__trajectory__smoothing__tests_8cpp_aede03937d039887a6344561cfa67f8b0}\label{ruckig__trajectory__smoothing__tests_8cpp_aede03937d039887a6344561cfa67f8b0} 
+\index{ruckig\_trajectory\_smoothing\_tests.cpp@{ruckig\_trajectory\_smoothing\_tests.cpp}!max\_jerk@{max\_jerk}}
+\index{max\_jerk@{max\_jerk}!ruckig\_trajectory\_smoothing\_tests.cpp@{ruckig\_trajectory\_smoothing\_tests.cpp}}
+\doxysubsubsection{\texorpdfstring{max\_jerk}{max\_jerk}}
+{\footnotesize\ttfamily Eigen\+::\+Matrix\+X2d max\+\_\+jerk = \{ 4.\+0, 3.\+0, 2.\+0 \}}
+
+\Hypertarget{ruckig__trajectory__smoothing__tests_8cpp_a58256e86ce07011843dfe964919befdf}\label{ruckig__trajectory__smoothing__tests_8cpp_a58256e86ce07011843dfe964919befdf} 
+\index{ruckig\_trajectory\_smoothing\_tests.cpp@{ruckig\_trajectory\_smoothing\_tests.cpp}!max\_velocity@{max\_velocity}}
+\index{max\_velocity@{max\_velocity}!ruckig\_trajectory\_smoothing\_tests.cpp@{ruckig\_trajectory\_smoothing\_tests.cpp}}
+\doxysubsubsection{\texorpdfstring{max\_velocity}{max\_velocity}}
+{\footnotesize\ttfamily Eigen\+::\+Matrix\+X2d max\+\_\+velocity = \{ 3.\+0, 1.\+0, 3.\+0 \}}
+
+\Hypertarget{ruckig__trajectory__smoothing__tests_8cpp_a8eda167b58b243c85002acebac95e774}\label{ruckig__trajectory__smoothing__tests_8cpp_a8eda167b58b243c85002acebac95e774} 
+\index{ruckig\_trajectory\_smoothing\_tests.cpp@{ruckig\_trajectory\_smoothing\_tests.cpp}!min\_acceleration@{min\_acceleration}}
+\index{min\_acceleration@{min\_acceleration}!ruckig\_trajectory\_smoothing\_tests.cpp@{ruckig\_trajectory\_smoothing\_tests.cpp}}
+\doxysubsubsection{\texorpdfstring{min\_acceleration}{min\_acceleration}}
+{\footnotesize\ttfamily input min\+\_\+acceleration = \{ -\/2.\+0, -\/2.\+0, -\/2.\+0 \}}
+
+\Hypertarget{ruckig__trajectory__smoothing__tests_8cpp_a25b13fbf08903c5b864a5fd75c915110}\label{ruckig__trajectory__smoothing__tests_8cpp_a25b13fbf08903c5b864a5fd75c915110} 
+\index{ruckig\_trajectory\_smoothing\_tests.cpp@{ruckig\_trajectory\_smoothing\_tests.cpp}!min\_velocity@{min\_velocity}}
+\index{min\_velocity@{min\_velocity}!ruckig\_trajectory\_smoothing\_tests.cpp@{ruckig\_trajectory\_smoothing\_tests.cpp}}
+\doxysubsubsection{\texorpdfstring{min\_velocity}{min\_velocity}}
+{\footnotesize\ttfamily input min\+\_\+velocity = \{ -\/2.\+0, -\/0.\+5, -\/3.\+0 \}}
+
+\Hypertarget{ruckig__trajectory__smoothing__tests_8cpp_a63b456fa6e536e858551d7a66d8a7501}\label{ruckig__trajectory__smoothing__tests_8cpp_a63b456fa6e536e858551d7a66d8a7501} 
+\index{ruckig\_trajectory\_smoothing\_tests.cpp@{ruckig\_trajectory\_smoothing\_tests.cpp}!new\_acceleration@{new\_acceleration}}
+\index{new\_acceleration@{new\_acceleration}!ruckig\_trajectory\_smoothing\_tests.cpp@{ruckig\_trajectory\_smoothing\_tests.cpp}}
+\doxysubsubsection{\texorpdfstring{new\_acceleration}{new\_acceleration}}
+{\footnotesize\ttfamily std\+::cout$<$$<$ "{}Trajectory duration\+: "{} $<$$<$ trajectory.\+get\+\_\+duration() $<$$<$ "{} \mbox{[}s\mbox{]}."{} $<$$<$ std\+::endl; double new\+\_\+time\{ 1.\+0 \}; std\+::array$<$double, 3$>$ new\+\_\+acceleration \{\}}
+
+\Hypertarget{ruckig__trajectory__smoothing__tests_8cpp_a115c4ba0609036e1e93ffaff94643753}\label{ruckig__trajectory__smoothing__tests_8cpp_a115c4ba0609036e1e93ffaff94643753} 
+\index{ruckig\_trajectory\_smoothing\_tests.cpp@{ruckig\_trajectory\_smoothing\_tests.cpp}!new\_position@{new\_position}}
+\index{new\_position@{new\_position}!ruckig\_trajectory\_smoothing\_tests.cpp@{ruckig\_trajectory\_smoothing\_tests.cpp}}
+\doxysubsubsection{\texorpdfstring{new\_position}{new\_position}}
+{\footnotesize\ttfamily std\+::cout$<$$<$ "{}Trajectory duration\+: "{} $<$$<$ trajectory.\+get\+\_\+duration() $<$$<$ "{} \mbox{[}s\mbox{]}."{} $<$$<$ std\+::endl; double new\+\_\+time\{ 1.\+0 \}; std\+::array$<$double, 3$>$ new\+\_\+position \{\}}
+
+\Hypertarget{ruckig__trajectory__smoothing__tests_8cpp_afa3ec3b0ca7b537576e063b5011ba6a9}\label{ruckig__trajectory__smoothing__tests_8cpp_afa3ec3b0ca7b537576e063b5011ba6a9} 
+\index{ruckig\_trajectory\_smoothing\_tests.cpp@{ruckig\_trajectory\_smoothing\_tests.cpp}!new\_velocity@{new\_velocity}}
+\index{new\_velocity@{new\_velocity}!ruckig\_trajectory\_smoothing\_tests.cpp@{ruckig\_trajectory\_smoothing\_tests.cpp}}
+\doxysubsubsection{\texorpdfstring{new\_velocity}{new\_velocity}}
+{\footnotesize\ttfamily std\+::cout$<$$<$ "{}Trajectory duration\+: "{} $<$$<$ trajectory.\+get\+\_\+duration() $<$$<$ "{} \mbox{[}s\mbox{]}."{} $<$$<$ std\+::endl; double new\+\_\+time\{ 1.\+0 \}; std\+::array$<$double, 3$>$ new\+\_\+velocity \{\}}
+
+\Hypertarget{ruckig__trajectory__smoothing__tests_8cpp_a9e2b26b6e1a70c7bb419d02c703dea07}\label{ruckig__trajectory__smoothing__tests_8cpp_a9e2b26b6e1a70c7bb419d02c703dea07} 
+\index{ruckig\_trajectory\_smoothing\_tests.cpp@{ruckig\_trajectory\_smoothing\_tests.cpp}!otg@{otg}}
+\index{otg@{otg}!ruckig\_trajectory\_smoothing\_tests.cpp@{ruckig\_trajectory\_smoothing\_tests.cpp}}
+\doxysubsubsection{\texorpdfstring{otg}{otg}}
+{\footnotesize\ttfamily ruckig\+::\+Ruckig$<$3$>$ otg}
+
+\Hypertarget{ruckig__trajectory__smoothing__tests_8cpp_a558fa6f57b362164796140c9ad939fe6}\label{ruckig__trajectory__smoothing__tests_8cpp_a558fa6f57b362164796140c9ad939fe6} 
+\index{ruckig\_trajectory\_smoothing\_tests.cpp@{ruckig\_trajectory\_smoothing\_tests.cpp}!position\_extrema@{position\_extrema}}
+\index{position\_extrema@{position\_extrema}!ruckig\_trajectory\_smoothing\_tests.cpp@{ruckig\_trajectory\_smoothing\_tests.cpp}}
+\doxysubsubsection{\texorpdfstring{position\_extrema}{position\_extrema}}
+{\footnotesize\ttfamily std\+::cout$<$$<$ "{}Position at time "{} $<$$<$ new\+\_\+time $<$$<$ "{} \mbox{[}s\mbox{]}\+: "{} $<$$<$ new\+\_\+position\mbox{[}0\mbox{]} $<$$<$ "{}, "{} $<$$<$ \mbox{\hyperlink{ruckig__trajectory__smoothing__tests_8cpp_a115c4ba0609036e1e93ffaff94643753}{new\+\_\+position}}\mbox{[}1\mbox{]} $<$$<$ "{}, "{} $<$$<$ \mbox{\hyperlink{ruckig__trajectory__smoothing__tests_8cpp_a115c4ba0609036e1e93ffaff94643753}{new\+\_\+position}}\mbox{[}2\mbox{]} $<$$<$ std\+::endl; std\+::array$<$ruckig\+::\+Position\+Extrema, 3$>$ position\+\_\+extrema = trajectory.\+get\+\_\+position\+\_\+extrema()}
+
+\Hypertarget{ruckig__trajectory__smoothing__tests_8cpp_ab5a75a7fd217179774b21aaa94fccc66}\label{ruckig__trajectory__smoothing__tests_8cpp_ab5a75a7fd217179774b21aaa94fccc66} 
+\index{ruckig\_trajectory\_smoothing\_tests.cpp@{ruckig\_trajectory\_smoothing\_tests.cpp}!program@{program}}
+\index{program@{program}!ruckig\_trajectory\_smoothing\_tests.cpp@{ruckig\_trajectory\_smoothing\_tests.cpp}}
+\doxysubsubsection{\texorpdfstring{program}{program}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classtesseract__planning_1_1CompositeInstruction}{Composite\+Instruction}} program = \mbox{\hyperlink{iterative__spline__tests_8cpp_a335759f56b7cbc95784d1ddda2447244}{create\+Repeated\+Point\+Trajectory}}()}
+
+\Hypertarget{ruckig__trajectory__smoothing__tests_8cpp_ace2146e480bb36669f455c211aad30a3}\label{ruckig__trajectory__smoothing__tests_8cpp_ace2146e480bb36669f455c211aad30a3} 
+\index{ruckig\_trajectory\_smoothing\_tests.cpp@{ruckig\_trajectory\_smoothing\_tests.cpp}!result@{result}}
+\index{result@{result}!ruckig\_trajectory\_smoothing\_tests.cpp@{ruckig\_trajectory\_smoothing\_tests.cpp}}
+\doxysubsubsection{\texorpdfstring{result}{result}}
+{\footnotesize\ttfamily ruckig\+::\+Result result = otg.\+calculate(input, \mbox{\hyperlink{iterative__spline__tests_8cpp_a42770b019b3c810751d40ab5f2f25e20}{trajectory}})}
+
+\Hypertarget{ruckig__trajectory__smoothing__tests_8cpp_a925daa9d81558be5744aeb99396a5c35}\label{ruckig__trajectory__smoothing__tests_8cpp_a925daa9d81558be5744aeb99396a5c35} 
+\index{ruckig\_trajectory\_smoothing\_tests.cpp@{ruckig\_trajectory\_smoothing\_tests.cpp}!target\_acceleration@{target\_acceleration}}
+\index{target\_acceleration@{target\_acceleration}!ruckig\_trajectory\_smoothing\_tests.cpp@{ruckig\_trajectory\_smoothing\_tests.cpp}}
+\doxysubsubsection{\texorpdfstring{target\_acceleration}{target\_acceleration}}
+{\footnotesize\ttfamily input target\+\_\+acceleration = \{ 0.\+0, 0.\+0, 0.\+5 \}}
+
+\Hypertarget{ruckig__trajectory__smoothing__tests_8cpp_a335a1bd305daba0375ee6434caaed173}\label{ruckig__trajectory__smoothing__tests_8cpp_a335a1bd305daba0375ee6434caaed173} 
+\index{ruckig\_trajectory\_smoothing\_tests.cpp@{ruckig\_trajectory\_smoothing\_tests.cpp}!target\_position@{target\_position}}
+\index{target\_position@{target\_position}!ruckig\_trajectory\_smoothing\_tests.cpp@{ruckig\_trajectory\_smoothing\_tests.cpp}}
+\doxysubsubsection{\texorpdfstring{target\_position}{target\_position}}
+{\footnotesize\ttfamily input target\+\_\+position = \{ 5.\+0, -\/2.\+0, -\/3.\+5 \}}
+
+\Hypertarget{ruckig__trajectory__smoothing__tests_8cpp_a300cdf80c10ba21596be459f3c3d118d}\label{ruckig__trajectory__smoothing__tests_8cpp_a300cdf80c10ba21596be459f3c3d118d} 
+\index{ruckig\_trajectory\_smoothing\_tests.cpp@{ruckig\_trajectory\_smoothing\_tests.cpp}!target\_velocity@{target\_velocity}}
+\index{target\_velocity@{target\_velocity}!ruckig\_trajectory\_smoothing\_tests.cpp@{ruckig\_trajectory\_smoothing\_tests.cpp}}
+\doxysubsubsection{\texorpdfstring{target\_velocity}{target\_velocity}}
+{\footnotesize\ttfamily input target\+\_\+velocity = \{ 0.\+0, -\/0.\+5, -\/2.\+0 \}}
+
+\Hypertarget{ruckig__trajectory__smoothing__tests_8cpp_ad1491cfad772725f7163676a07e09a3a}\label{ruckig__trajectory__smoothing__tests_8cpp_ad1491cfad772725f7163676a07e09a3a} 
+\index{ruckig\_trajectory\_smoothing\_tests.cpp@{ruckig\_trajectory\_smoothing\_tests.cpp}!traj\_smoothing@{traj\_smoothing}}
+\index{traj\_smoothing@{traj\_smoothing}!ruckig\_trajectory\_smoothing\_tests.cpp@{ruckig\_trajectory\_smoothing\_tests.cpp}}
+\doxysubsubsection{\texorpdfstring{traj\_smoothing}{traj\_smoothing}}
+{\footnotesize\ttfamily \mbox{\hyperlink{ruckig__trajectory__smoothing__tests_8cpp_aede03937d039887a6344561cfa67f8b0}{max\+\_\+jerk}} \mbox{\hyperlink{ruckig__trajectory__smoothing__tests_8cpp_aede03937d039887a6344561cfa67f8b0}{max\+\_\+jerk}} \mbox{\hyperlink{classtesseract__planning_1_1RuckigTrajectorySmoothing}{Ruckig\+Trajectory\+Smoothing}} traj\+\_\+smoothing}
+
+\Hypertarget{ruckig__trajectory__smoothing__tests_8cpp_a42770b019b3c810751d40ab5f2f25e20}\label{ruckig__trajectory__smoothing__tests_8cpp_a42770b019b3c810751d40ab5f2f25e20} 
+\index{ruckig\_trajectory\_smoothing\_tests.cpp@{ruckig\_trajectory\_smoothing\_tests.cpp}!trajectory@{trajectory}}
+\index{trajectory@{trajectory}!ruckig\_trajectory\_smoothing\_tests.cpp@{ruckig\_trajectory\_smoothing\_tests.cpp}}
+\doxysubsubsection{\texorpdfstring{trajectory}{trajectory}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classtesseract__planning_1_1TrajectoryContainer_addac5779485104d03ae174b032df5e6a}{Trajectory\+Container\+::\+Ptr}} trajectory = std\+::make\+\_\+shared$<$\mbox{\hyperlink{classtesseract__planning_1_1InstructionsTrajectory}{Instructions\+Trajectory}}$>$(\mbox{\hyperlink{command__language__utils__unit_8cpp_ab5a75a7fd217179774b21aaa94fccc66}{program}})}
+

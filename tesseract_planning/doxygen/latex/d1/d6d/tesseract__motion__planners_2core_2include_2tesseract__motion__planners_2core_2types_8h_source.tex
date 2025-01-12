@@ -1,0 +1,68 @@
+\doxysection{types.\+h}
+\hypertarget{tesseract__motion__planners_2core_2include_2tesseract__motion__planners_2core_2types_8h_source}{}\label{tesseract__motion__planners_2core_2include_2tesseract__motion__planners_2core_2types_8h_source}\index{tesseract\_motion\_planners/core/include/tesseract\_motion\_planners/core/types.h@{tesseract\_motion\_planners/core/include/tesseract\_motion\_planners/core/types.h}}
+\mbox{\hyperlink{tesseract__motion__planners_2core_2include_2tesseract__motion__planners_2core_2types_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00026\ \textcolor{preprocessor}{\#ifndef\ TESSERACT\_MOTION\_PLANNERS\_PLANNER\_TYPES\_H}}
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#define\ TESSERACT\_MOTION\_PLANNERS\_PLANNER\_TYPES\_H}}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#include\ <tesseract\_common/macros.h>}}
+\DoxyCodeLine{00030\ TESSERACT\_COMMON\_IGNORE\_WARNINGS\_PUSH}
+\DoxyCodeLine{00031\ \textcolor{preprocessor}{\#include\ <Eigen/Core>}}
+\DoxyCodeLine{00032\ \textcolor{preprocessor}{\#include\ <memory>}}
+\DoxyCodeLine{00033\ \textcolor{preprocessor}{\#include\ <unordered\_map>}}
+\DoxyCodeLine{00034\ \mbox{\hyperlink{namespaceTESSERACT__COMMON__IGNORE__WARNINGS__POP}{TESSERACT\_COMMON\_IGNORE\_WARNINGS\_POP}}}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \textcolor{preprocessor}{\#include\ <tesseract\_common/fwd.h>}}
+\DoxyCodeLine{00037\ \textcolor{preprocessor}{\#include\ <tesseract\_environment/fwd.h>}}
+\DoxyCodeLine{00038\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{tesseract__command__language_2include_2tesseract__command__language_2fwd_8h}{tesseract\_command\_language/fwd.h}}>}}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \textcolor{preprocessor}{\#include\ <tesseract\_scene\_graph/scene\_state.h>}}
+\DoxyCodeLine{00041\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{composite__instruction_8h}{tesseract\_command\_language/composite\_instruction.h}}>}}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacetesseract__planning}{tesseract\_planning}}}
+\DoxyCodeLine{00044\ \{}
+\DoxyCodeLine{00045\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structtesseract__planning_1_1PlannerRequest}{PlannerRequest}}}
+\DoxyCodeLine{00046\ \{}
+\DoxyCodeLine{00047\ \ \ \textcolor{comment}{//\ LCOV\_EXCL\_START}}
+\DoxyCodeLine{00048\ \ \ EIGEN\_MAKE\_ALIGNED\_OPERATOR\_NEW}
+\DoxyCodeLine{00049\ \ \ \textcolor{comment}{//\ LCOV\_EXCL\_STOP}}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00051\ \ \ \mbox{\hyperlink{structtesseract__planning_1_1PlannerRequest_a9fd21df8f0726bc2e59e356dca055d75}{PlannerRequest}}();}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00054\ \ \ std::string\ \mbox{\hyperlink{structtesseract__planning_1_1PlannerRequest_afa12fe79c6dae69afc0e13d1cfd3c37d}{name}};}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00057\ \ \ std::shared\_ptr<const\ tesseract\_environment::Environment>\ \mbox{\hyperlink{structtesseract__planning_1_1PlannerRequest_a86a559380e4fdc6160765f4544372b1a}{env}};}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00060\ \ \ std::shared\_ptr<const\ ProfileDictionary>\ \mbox{\hyperlink{structtesseract__planning_1_1PlannerRequest_a78c9b6cd4963f046639cecede8ed2176}{profiles}};}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00066\ \ \ \mbox{\hyperlink{classtesseract__planning_1_1CompositeInstruction}{CompositeInstruction}}\ \mbox{\hyperlink{structtesseract__planning_1_1PlannerRequest_a8c6a68b833fbe425b10ff295be07cff7}{instructions}};}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00069\ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{structtesseract__planning_1_1PlannerRequest_acd0d5992c966354b676ee0041f6455f7}{verbose}}\{\ \textcolor{keyword}{false}\ \};}
+\DoxyCodeLine{00070\ }
+\DoxyCodeLine{00077\ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{structtesseract__planning_1_1PlannerRequest_a3cc92780142fff3e396c45bfce51e92b}{format\_result\_as\_input}}\{\ \textcolor{keyword}{false}\ \};}
+\DoxyCodeLine{00078\ }
+\DoxyCodeLine{00083\ \ \ std::shared\_ptr<void>\ \mbox{\hyperlink{structtesseract__planning_1_1PlannerRequest_a74225e42fe18279b21af4a922fa80995}{data}};}
+\DoxyCodeLine{00084\ \};}
+\DoxyCodeLine{00085\ }
+\DoxyCodeLine{00086\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structtesseract__planning_1_1PlannerResponse}{PlannerResponse}}}
+\DoxyCodeLine{00087\ \{}
+\DoxyCodeLine{00088\ \ \ \textcolor{comment}{//\ LCOV\_EXCL\_START}}
+\DoxyCodeLine{00089\ \ \ EIGEN\_MAKE\_ALIGNED\_OPERATOR\_NEW}
+\DoxyCodeLine{00090\ \ \ \textcolor{comment}{//\ LCOV\_EXCL\_STOP}}
+\DoxyCodeLine{00091\ }
+\DoxyCodeLine{00092\ \ \ \mbox{\hyperlink{classtesseract__planning_1_1CompositeInstruction}{CompositeInstruction}}\ \mbox{\hyperlink{structtesseract__planning_1_1PlannerResponse_a1534da4c2a888418218dc49fef77d0b1}{results}};}
+\DoxyCodeLine{00094\ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{structtesseract__planning_1_1PlannerResponse_a8e5306386326f61f9f94bd9313e90d19}{successful}}\{\ \textcolor{keyword}{false}\ \};}
+\DoxyCodeLine{00096\ \ \ std::string\ \mbox{\hyperlink{structtesseract__planning_1_1PlannerResponse_a4d975cf45733c36ee713e73dae6a2724}{message}};}
+\DoxyCodeLine{00098\ \ \ std::vector<std::reference\_wrapper<InstructionPoly>>\ \mbox{\hyperlink{structtesseract__planning_1_1PlannerResponse_acc314532cad43e1227b197e536bf0e22}{succeeded\_instructions}}\{\};}
+\DoxyCodeLine{00100\ \ \ std::vector<std::reference\_wrapper<InstructionPoly>>\ \mbox{\hyperlink{structtesseract__planning_1_1PlannerResponse_a74bff70aee2676ca10e2545eca5028b0}{failed\_instructions}}\{\};}
+\DoxyCodeLine{00103\ \ \ std::shared\_ptr<void>\ \mbox{\hyperlink{structtesseract__planning_1_1PlannerResponse_ab010e84ee5bd79ee47b0e45efb6419f6}{data}};}
+\DoxyCodeLine{00104\ }
+\DoxyCodeLine{00106\ \ \ \textcolor{keyword}{explicit}\ \textcolor{keyword}{operator}\ bool()\ const\ noexcept;}
+\DoxyCodeLine{00107\ \};}
+\DoxyCodeLine{00108\ }
+\DoxyCodeLine{00109\ \}\ \ \textcolor{comment}{//\ namespace\ tesseract\_planning}}
+\DoxyCodeLine{00110\ }
+\DoxyCodeLine{00111\ \textcolor{preprocessor}{\#endif\ \ }\textcolor{comment}{//\ TESSERACT\_PLANNING\_PLANNER\_TYPES\_H}}
+
+\end{DoxyCode}

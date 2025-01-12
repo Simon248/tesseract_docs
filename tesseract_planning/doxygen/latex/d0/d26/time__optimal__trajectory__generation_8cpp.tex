@@ -1,0 +1,50 @@
+\doxysection{tesseract\+\_\+time\+\_\+parameterization/totg/src/time\+\_\+optimal\+\_\+trajectory\+\_\+generation.cpp File Reference}
+\hypertarget{time__optimal__trajectory__generation_8cpp}{}\label{time__optimal__trajectory__generation_8cpp}\index{tesseract\_time\_parameterization/totg/src/time\_optimal\_trajectory\_generation.cpp@{tesseract\_time\_parameterization/totg/src/time\_optimal\_trajectory\_generation.cpp}}
+{\ttfamily \#include $<$tesseract\+\_\+common/macros.\+h$>$}\newline
+{\ttfamily \#include $<$limits$>$}\newline
+{\ttfamily \#include $<$Eigen/\+Geometry$>$}\newline
+{\ttfamily \#include $<$algorithm$>$}\newline
+{\ttfamily \#include $<$cmath$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$console\+\_\+bridge/console.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+time\+\_\+parameterization/totg/time\+\_\+optimal\+\_\+trajectory\+\_\+generation.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+time\+\_\+parameterization/core/trajectory\+\_\+container.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+command\+\_\+language/composite\+\_\+instruction.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+command\+\_\+language/utils.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+common/utils.\+h$>$}\newline
+Include dependency graph for time\+\_\+optimal\+\_\+trajectory\+\_\+generation.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d7/d9a/time__optimal__trajectory__generation_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classtesseract__planning_1_1totg_1_1LinearPathSegment}{tesseract\+\_\+planning\+::totg\+::\+Linear\+Path\+Segment}}
+\item 
+class \mbox{\hyperlink{classtesseract__planning_1_1totg_1_1CircularPathSegment}{tesseract\+\_\+planning\+::totg\+::\+Circular\+Path\+Segment}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespacetesseract__planning}{tesseract\+\_\+planning}}
+\item 
+namespace \mbox{\hyperlink{namespacetesseract__planning_1_1totg}{tesseract\+\_\+planning\+::totg}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+TESSERACT\+\_\+\+COMMON\+\_\+\+IGNORE\+\_\+\+WARNINGS\+\_\+\+PUSH TESSERACT\+\_\+\+COMMON\+\_\+\+IGNORE\+\_\+\+WARNINGS\+\_\+\+POP constexpr double \mbox{\hyperlink{time__optimal__trajectory__generation_8cpp_a150a3294c60aee13e929028d42aff17c}{EPS}} = 0.\+000001
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{time__optimal__trajectory__generation_8cpp_a150a3294c60aee13e929028d42aff17c}\label{time__optimal__trajectory__generation_8cpp_a150a3294c60aee13e929028d42aff17c} 
+\index{time\_optimal\_trajectory\_generation.cpp@{time\_optimal\_trajectory\_generation.cpp}!EPS@{EPS}}
+\index{EPS@{EPS}!time\_optimal\_trajectory\_generation.cpp@{time\_optimal\_trajectory\_generation.cpp}}
+\doxysubsubsection{\texorpdfstring{EPS}{EPS}}
+{\footnotesize\ttfamily TESSERACT\+\_\+\+COMMON\+\_\+\+IGNORE\+\_\+\+WARNINGS\+\_\+\+PUSH TESSERACT\+\_\+\+COMMON\+\_\+\+IGNORE\+\_\+\+WARNINGS\+\_\+\+POP constexpr double EPS = 0.\+000001\hspace{0.3cm}{\ttfamily [constexpr]}}
+

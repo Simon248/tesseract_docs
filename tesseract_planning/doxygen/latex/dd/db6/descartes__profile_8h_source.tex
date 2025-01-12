@@ -1,0 +1,88 @@
+\doxysection{descartes\+\_\+profile.\+h}
+\hypertarget{descartes__profile_8h_source}{}\label{descartes__profile_8h_source}\index{tesseract\_motion\_planners/descartes/include/tesseract\_motion\_planners/descartes/profile/descartes\_profile.h@{tesseract\_motion\_planners/descartes/include/tesseract\_motion\_planners/descartes/profile/descartes\_profile.h}}
+\mbox{\hyperlink{descartes__profile_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00026\ \textcolor{preprocessor}{\#ifndef\ TESSERACT\_MOTION\_PLANNERS\_DESCARTES\_DESCARTES\_PROFILE\_H}}
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#define\ TESSERACT\_MOTION\_PLANNERS\_DESCARTES\_DESCARTES\_PROFILE\_H}}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#include\ <tesseract\_common/macros.h>}}
+\DoxyCodeLine{00030\ TESSERACT\_COMMON\_IGNORE\_WARNINGS\_PUSH}
+\DoxyCodeLine{00031\ \textcolor{preprocessor}{\#include\ <memory>}}
+\DoxyCodeLine{00032\ \textcolor{preprocessor}{\#include\ <typeindex>}}
+\DoxyCodeLine{00033\ \textcolor{preprocessor}{\#include\ <Eigen/Geometry>}}
+\DoxyCodeLine{00034\ \mbox{\hyperlink{namespaceTESSERACT__COMMON__IGNORE__WARNINGS__POP}{TESSERACT\_COMMON\_IGNORE\_WARNINGS\_POP}}}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \textcolor{preprocessor}{\#include\ <tesseract\_common/fwd.h>}}
+\DoxyCodeLine{00037\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{tesseract__command__language_2include_2tesseract__command__language_2fwd_8h}{tesseract\_command\_language/fwd.h}}>}}
+\DoxyCodeLine{00038\ \textcolor{preprocessor}{\#include\ <tesseract\_kinematics/core/fwd.h>}}
+\DoxyCodeLine{00039\ \textcolor{preprocessor}{\#include\ <tesseract\_environment/fwd.h>}}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{profile_8h}{tesseract\_command\_language/profile.h}}>}}
+\DoxyCodeLine{00042\ \textcolor{preprocessor}{\#include\ <descartes\_light/core/solver.h>}}
+\DoxyCodeLine{00043\ \textcolor{preprocessor}{\#include\ <descartes\_light/core/waypoint\_sampler.h>}}
+\DoxyCodeLine{00044\ \textcolor{preprocessor}{\#include\ <descartes\_light/core/edge\_evaluator.h>}}
+\DoxyCodeLine{00045\ \textcolor{preprocessor}{\#include\ <descartes\_light/core/state\_evaluator.h>}}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00047\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacetesseract__planning}{tesseract\_planning}}}
+\DoxyCodeLine{00048\ \{}
+\DoxyCodeLine{00049\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ FloatType>}
+\DoxyCodeLine{00050\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classtesseract__planning_1_1DescartesSolverProfile}{DescartesSolverProfile}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classtesseract__planning_1_1Profile}{Profile}}}
+\DoxyCodeLine{00051\ \{}
+\DoxyCodeLine{00052\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00053\ \ \ \textcolor{keyword}{using\ }\mbox{\hyperlink{classtesseract__planning_1_1DescartesSolverProfile_a877e38bd75d7f9affcc99290cdf1528f}{Ptr}}\ =\ std::shared\_ptr<DescartesSolverProfile<FloatType>>;}
+\DoxyCodeLine{00054\ \ \ \textcolor{keyword}{using\ }\mbox{\hyperlink{classtesseract__planning_1_1DescartesSolverProfile_ab2cc7c71a1e0a281f962c6f50f4101bf}{ConstPtr}}\ =\ std::shared\_ptr<const\ DescartesSolverProfile<FloatType>>;}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00056\ \ \ \mbox{\hyperlink{classtesseract__planning_1_1DescartesSolverProfile_a71165e1be95c2c902c98138b3833df5b}{DescartesSolverProfile}}()\ :\ \mbox{\hyperlink{classtesseract__planning_1_1Profile}{Profile}}(\mbox{\hyperlink{classtesseract__planning_1_1DescartesSolverProfile}{DescartesSolverProfile}}<FloatType>::\mbox{\hyperlink{classtesseract__planning_1_1DescartesSolverProfile_a6a8b8cf521021518374d089b6e1f1289}{getStaticKey}}())\ \{\}}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00062\ \ \ \textcolor{keyword}{static}\ std::size\_t\ \mbox{\hyperlink{classtesseract__planning_1_1DescartesSolverProfile_a6a8b8cf521021518374d089b6e1f1289}{getStaticKey}}()\ \{\ \textcolor{keywordflow}{return}\ std::type\_index(\textcolor{keyword}{typeid}(\mbox{\hyperlink{classtesseract__planning_1_1DescartesSolverProfile}{DescartesSolverProfile<FloatType>}})).hash\_code();\ \}}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00064\ \ \ \textcolor{keyword}{virtual}\ std::unique\_ptr<descartes\_light::Solver<FloatType>>\ \mbox{\hyperlink{classtesseract__planning_1_1DescartesSolverProfile_abf1eeea00d3a4a2376ef6f04be3cad14}{create}}()\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00066\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00067\ \ \ \textcolor{keyword}{friend}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classtesseract__planning_1_1DescartesSolverProfile_ac98d07dd8f7b70e16ccb9a01abf56b9c}{boost::serialization::access}};}
+\DoxyCodeLine{00068\ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{class}\ Archive>}
+\DoxyCodeLine{00069\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classtesseract__planning_1_1DescartesSolverProfile_af74ec5dd369037cd03988b6860f616ca}{serialize}}(Archive\&\ ar,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int});\ \ \textcolor{comment}{//\ NOLINT}}
+\DoxyCodeLine{00070\ \};}
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00072\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ FloatType>}
+\DoxyCodeLine{00073\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classtesseract__planning_1_1DescartesPlanProfile}{DescartesPlanProfile}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classtesseract__planning_1_1Profile}{Profile}}}
+\DoxyCodeLine{00074\ \{}
+\DoxyCodeLine{00075\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00076\ \ \ \textcolor{keyword}{using\ }\mbox{\hyperlink{classtesseract__planning_1_1DescartesPlanProfile_ad78e94403b66cad018078421561c3c96}{Ptr}}\ =\ std::shared\_ptr<DescartesPlanProfile<FloatType>>;}
+\DoxyCodeLine{00077\ \ \ \textcolor{keyword}{using\ }\mbox{\hyperlink{classtesseract__planning_1_1DescartesPlanProfile_abe98e5195e9b401c4a06ce4e29399e5d}{ConstPtr}}\ =\ std::shared\_ptr<const\ DescartesPlanProfile<FloatType>>;}
+\DoxyCodeLine{00078\ }
+\DoxyCodeLine{00079\ \ \ \mbox{\hyperlink{classtesseract__planning_1_1DescartesPlanProfile_a5dcbf080f9372366c6ed7328ddfba804}{DescartesPlanProfile}}()\ :\ \mbox{\hyperlink{classtesseract__planning_1_1Profile}{Profile}}(\mbox{\hyperlink{classtesseract__planning_1_1DescartesPlanProfile}{DescartesPlanProfile}}<FloatType>::\mbox{\hyperlink{classtesseract__planning_1_1DescartesPlanProfile_ae5087653a29f5ad62b60679c38b93484}{getStaticKey}}())\ \{\}}
+\DoxyCodeLine{00080\ }
+\DoxyCodeLine{00085\ \ \ \textcolor{keyword}{static}\ std::size\_t\ \mbox{\hyperlink{classtesseract__planning_1_1DescartesPlanProfile_ae5087653a29f5ad62b60679c38b93484}{getStaticKey}}()\ \{\ \textcolor{keywordflow}{return}\ std::type\_index(\textcolor{keyword}{typeid}(\mbox{\hyperlink{classtesseract__planning_1_1DescartesPlanProfile}{DescartesPlanProfile<FloatType>}})).hash\_code();\ \}}
+\DoxyCodeLine{00086\ }
+\DoxyCodeLine{00087\ \ \ std::shared\_ptr<const\ tesseract\_kinematics::KinematicGroup>}
+\DoxyCodeLine{00088\ \ \ \mbox{\hyperlink{classtesseract__planning_1_1DescartesPlanProfile_a2429467fba3f4fbde2ccaab4f8dfd072}{createKinematicGroup}}(\textcolor{keyword}{const}\ tesseract\_common::ManipulatorInfo\&\ \mbox{\hyperlink{command__language__utils__unit_8cpp_af21d30c87e87931298afb1eb6f703551}{manip\_info}},}
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ tesseract\_environment::Environment\&\ \mbox{\hyperlink{basic__cartesian__example__unit_8cpp_a96ce750ee22ecbf4d17cc6cf146d9514}{env}})\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00090\ }
+\DoxyCodeLine{00091\ \ \ \textcolor{keyword}{virtual}\ std::unique\_ptr<descartes\_light::WaypointSampler<FloatType>>}
+\DoxyCodeLine{00092\ \ \ \mbox{\hyperlink{classtesseract__planning_1_1DescartesPlanProfile_a8d222cf6dc92fda761fbac8657b620e9}{createWaypointSampler}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{structtesseract__planning_1_1MoveInstructionPoly}{MoveInstructionPoly}}\&\ move\_instruction,}
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ tesseract\_common::ManipulatorInfo\&\ composite\_manip\_info,}
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::shared\_ptr<const\ tesseract\_environment::Environment>\&\ \mbox{\hyperlink{basic__cartesian__example__unit_8cpp_a96ce750ee22ecbf4d17cc6cf146d9514}{env}})\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{00095\ }
+\DoxyCodeLine{00096\ \ \ \textcolor{keyword}{virtual}\ std::unique\_ptr<descartes\_light::EdgeEvaluator<FloatType>>}
+\DoxyCodeLine{00097\ \ \ \mbox{\hyperlink{classtesseract__planning_1_1DescartesPlanProfile_a4ea3d67bf0d2f80f0993db8ff9d356dc}{createEdgeEvaluator}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{structtesseract__planning_1_1MoveInstructionPoly}{MoveInstructionPoly}}\&\ move\_instruction,}
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ tesseract\_common::ManipulatorInfo\&\ composite\_manip\_info,}
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::shared\_ptr<const\ tesseract\_environment::Environment>\&\ \mbox{\hyperlink{basic__cartesian__example__unit_8cpp_a96ce750ee22ecbf4d17cc6cf146d9514}{env}})\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{00100\ }
+\DoxyCodeLine{00101\ \ \ \textcolor{keyword}{virtual}\ std::unique\_ptr<descartes\_light::StateEvaluator<FloatType>>}
+\DoxyCodeLine{00102\ \ \ \mbox{\hyperlink{classtesseract__planning_1_1DescartesPlanProfile_aee3ac9dfadc99f440f3d85755653cfc1}{createStateEvaluator}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{structtesseract__planning_1_1MoveInstructionPoly}{MoveInstructionPoly}}\&\ move\_instruction,}
+\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ tesseract\_common::ManipulatorInfo\&\ composite\_manip\_info,}
+\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::shared\_ptr<const\ tesseract\_environment::Environment>\&\ \mbox{\hyperlink{basic__cartesian__example__unit_8cpp_a96ce750ee22ecbf4d17cc6cf146d9514}{env}})\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{00105\ }
+\DoxyCodeLine{00106\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00107\ \ \ \textcolor{keyword}{friend}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classtesseract__planning_1_1DescartesPlanProfile_ac98d07dd8f7b70e16ccb9a01abf56b9c}{boost::serialization::access}};}
+\DoxyCodeLine{00108\ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{class}\ Archive>}
+\DoxyCodeLine{00109\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classtesseract__planning_1_1DescartesPlanProfile_a21ed5a065779cc6d9e51b71a02ad8441}{serialize}}(Archive\&\ ar,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int});\ \ \textcolor{comment}{//\ NOLINT}}
+\DoxyCodeLine{00110\ \};}
+\DoxyCodeLine{00111\ }
+\DoxyCodeLine{00112\ \}\ \ \textcolor{comment}{//\ namespace\ tesseract\_planning}}
+\DoxyCodeLine{00113\ }
+\DoxyCodeLine{00114\ \textcolor{preprocessor}{\#endif\ \ }\textcolor{comment}{//\ TESSERACT\_MOTION\_PLANNERS\_DESCARTES\_DESCARTES\_PROFILE\_H}}
+
+\end{DoxyCode}

@@ -1,0 +1,120 @@
+\doxysection{ompl\+\_\+real\+\_\+vector\+\_\+plan\+\_\+profile.\+h}
+\hypertarget{ompl__real__vector__plan__profile_8h_source}{}\label{ompl__real__vector__plan__profile_8h_source}\index{tesseract\_motion\_planners/ompl/include/tesseract\_motion\_planners/ompl/profile/ompl\_real\_vector\_plan\_profile.h@{tesseract\_motion\_planners/ompl/include/tesseract\_motion\_planners/ompl/profile/ompl\_real\_vector\_plan\_profile.h}}
+\mbox{\hyperlink{ompl__real__vector__plan__profile_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00026\ \textcolor{preprocessor}{\#ifndef\ TESSERACT\_MOTION\_PLANNERS\_OMPL\_OMPL\_REAL\_VECTOR\_PLAN\_PROFILE\_H}}
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#define\ TESSERACT\_MOTION\_PLANNERS\_OMPL\_OMPL\_REAL\_VECTOR\_PLAN\_PROFILE\_H}}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#include\ <tesseract\_common/macros.h>}}
+\DoxyCodeLine{00030\ TESSERACT\_COMMON\_IGNORE\_WARNINGS\_PUSH}
+\DoxyCodeLine{00031\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00032\ \textcolor{preprocessor}{\#include\ <memory>}}
+\DoxyCodeLine{00033\ \textcolor{preprocessor}{\#include\ <functional>}}
+\DoxyCodeLine{00034\ \textcolor{preprocessor}{\#include\ <Eigen/Geometry>}}
+\DoxyCodeLine{00035\ \mbox{\hyperlink{namespaceTESSERACT__COMMON__IGNORE__WARNINGS__POP}{TESSERACT\_COMMON\_IGNORE\_WARNINGS\_POP}}}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{ompl__profile_8h}{tesseract\_motion\_planners/ompl/profile/ompl\_profile.h}}>}}
+\DoxyCodeLine{00038\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{ompl__solver__config_8h}{tesseract\_motion\_planners/ompl/ompl\_solver\_config.h}}>}}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \textcolor{preprocessor}{\#include\ <tesseract\_collision/core/fwd.h>}}
+\DoxyCodeLine{00041\ \textcolor{preprocessor}{\#include\ <tesseract\_collision/core/types.h>}}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{tesseract__command__language_2include_2tesseract__command__language_2fwd_8h}{tesseract\_command\_language/fwd.h}}>}}
+\DoxyCodeLine{00044\ \textcolor{preprocessor}{\#include\ <tesseract\_kinematics/core/fwd.h>}}
+\DoxyCodeLine{00045\ \textcolor{preprocessor}{\#include\ <tesseract\_common/fwd.h>}}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00047\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceompl_1_1base}{ompl::base}}}
+\DoxyCodeLine{00048\ \{}
+\DoxyCodeLine{00049\ \textcolor{keyword}{class\ }StateSampler;}
+\DoxyCodeLine{00050\ \textcolor{keyword}{class\ }StateSpace;}
+\DoxyCodeLine{00051\ \textcolor{keyword}{class\ }StateValidityChecker;}
+\DoxyCodeLine{00052\ \textcolor{keyword}{class\ }MotionValidator;}
+\DoxyCodeLine{00053\ \textcolor{keyword}{class\ }OptimizationObjective;}
+\DoxyCodeLine{00054\ \}\ \ \textcolor{comment}{//\ namespace\ ompl::base}}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00056\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacetesseract__planning}{tesseract\_planning}}}
+\DoxyCodeLine{00057\ \{}
+\DoxyCodeLine{00063\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classtesseract__planning_1_1OMPLRealVectorPlanProfile}{OMPLRealVectorPlanProfile}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classtesseract__planning_1_1OMPLPlanProfile}{OMPLPlanProfile}}}
+\DoxyCodeLine{00064\ \{}
+\DoxyCodeLine{00065\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00066\ \ \ \textcolor{keyword}{using\ }\mbox{\hyperlink{classtesseract__planning_1_1OMPLRealVectorPlanProfile_a808b12775ef4112604a295607b5dd59d}{Ptr}}\ =\ std::shared\_ptr<OMPLRealVectorPlanProfile>;}
+\DoxyCodeLine{00067\ \ \ \textcolor{keyword}{using\ }\mbox{\hyperlink{classtesseract__planning_1_1OMPLRealVectorPlanProfile_ab61d87574972b8c15fd880570dcf632b}{ConstPtr}}\ =\ std::shared\_ptr<const\ OMPLRealVectorPlanProfile>;}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00069\ \ \ \mbox{\hyperlink{classtesseract__planning_1_1OMPLRealVectorPlanProfile_a4433a41e8a651df2709ffcbe960121d4}{OMPLRealVectorPlanProfile}}();}
+\DoxyCodeLine{00070\ }
+\DoxyCodeLine{00072\ \ \ \mbox{\hyperlink{structtesseract__planning_1_1OMPLSolverConfig}{OMPLSolverConfig}}\ \mbox{\hyperlink{classtesseract__planning_1_1OMPLRealVectorPlanProfile_a0eb666111c3fb498bd39963b81ae0956}{solver\_config}};}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00075\ \ \ tesseract\_collision::CollisionCheckConfig\ \mbox{\hyperlink{classtesseract__planning_1_1OMPLRealVectorPlanProfile_a0514516dd2cd368cf83bb76527368c32}{collision\_check\_config}};}
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00077\ \ \ std::unique\_ptr<OMPLSolverConfig>\ \mbox{\hyperlink{classtesseract__planning_1_1OMPLRealVectorPlanProfile_aa4a54223d2e4bcb516737ccdb8e8a20e}{createSolverConfig}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00078\ }
+\DoxyCodeLine{00079\ \ \ \mbox{\hyperlink{namespacetesseract__planning_abb4bcd86c07988cf075625fde644e497}{OMPLStateExtractor}}\ \mbox{\hyperlink{classtesseract__planning_1_1OMPLRealVectorPlanProfile_a461babf9f84f7894c011910921ffc4c0}{createStateExtractor}}(\textcolor{keyword}{const}\ tesseract\_kinematics::JointGroup\&\ \mbox{\hyperlink{ompl__planner__tests_8cpp_aa0c9c5fd2281440db1e2dd97fc3358f7}{manip}})\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00080\ }
+\DoxyCodeLine{00081\ \ \ std::unique\_ptr<ompl::geometric::SimpleSetup>}
+\DoxyCodeLine{00082\ \ \ \mbox{\hyperlink{classtesseract__planning_1_1OMPLRealVectorPlanProfile_a37d56c9248ad36aa7681f98b3559559e}{createSimpleSetup}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{structtesseract__planning_1_1MoveInstructionPoly}{MoveInstructionPoly}}\&\ \mbox{\hyperlink{command__language__utils__unit_8cpp_ad78d1b93cb9ff6bade47c3e447fda78a}{start\_instruction}},}
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{structtesseract__planning_1_1MoveInstructionPoly}{MoveInstructionPoly}}\&\ \mbox{\hyperlink{command__language__utils__unit_8cpp_aee4421fb9a77d998ac23b1e88505a75a}{end\_instruction}},}
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ tesseract\_common::ManipulatorInfo\&\ composite\_mi,}
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::shared\_ptr<const\ tesseract\_environment::Environment>\&\ \mbox{\hyperlink{basic__cartesian__example__unit_8cpp_a96ce750ee22ecbf4d17cc6cf146d9514}{env}})\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00086\ }
+\DoxyCodeLine{00087\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00088\ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classtesseract__planning_1_1OMPLRealVectorPlanProfile_adfef776947ccfda2fa4ed079b345f631}{applyGoalStates}}(ompl::geometric::SimpleSetup\&\ simple\_setup,}
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ tesseract\_kinematics::KinGroupIKInput\&\ ik\_input,}
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ tesseract\_kinematics::KinematicGroup\&\ \mbox{\hyperlink{ompl__planner__tests_8cpp_aa0c9c5fd2281440db1e2dd97fc3358f7}{manip}},}
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ tesseract\_collision::DiscreteContactManager\&\ contact\_checker);}
+\DoxyCodeLine{00092\ }
+\DoxyCodeLine{00093\ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classtesseract__planning_1_1OMPLRealVectorPlanProfile_ae467f83418072634264026ed50f31b0c}{applyStartStates}}(ompl::geometric::SimpleSetup\&\ simple\_setup,}
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ tesseract\_kinematics::KinGroupIKInput\&\ ik\_input,}
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ tesseract\_kinematics::KinematicGroup\&\ \mbox{\hyperlink{ompl__planner__tests_8cpp_aa0c9c5fd2281440db1e2dd97fc3358f7}{manip}},}
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ tesseract\_collision::DiscreteContactManager\&\ contact\_checker);}
+\DoxyCodeLine{00097\ }
+\DoxyCodeLine{00098\ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classtesseract__planning_1_1OMPLRealVectorPlanProfile_adfef776947ccfda2fa4ed079b345f631}{applyGoalStates}}(ompl::geometric::SimpleSetup\&\ simple\_setup,}
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ Eigen::VectorXd\&\ joint\_waypoint,}
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ tesseract\_kinematics::JointGroup\&\ \mbox{\hyperlink{ompl__planner__tests_8cpp_aa0c9c5fd2281440db1e2dd97fc3358f7}{manip}},}
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ tesseract\_collision::DiscreteContactManager\&\ contact\_checker);}
+\DoxyCodeLine{00102\ }
+\DoxyCodeLine{00103\ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classtesseract__planning_1_1OMPLRealVectorPlanProfile_ae467f83418072634264026ed50f31b0c}{applyStartStates}}(ompl::geometric::SimpleSetup\&\ simple\_setup,}
+\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ Eigen::VectorXd\&\ joint\_waypoint,}
+\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ tesseract\_kinematics::JointGroup\&\ \mbox{\hyperlink{ompl__planner__tests_8cpp_aa0c9c5fd2281440db1e2dd97fc3358f7}{manip}},}
+\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ tesseract\_collision::DiscreteContactManager\&\ contact\_checker);}
+\DoxyCodeLine{00107\ }
+\DoxyCodeLine{00114\ \ \ \textcolor{keyword}{virtual}\ std::function<std::shared\_ptr<ompl::base::StateSampler>(\textcolor{keyword}{const}\ ompl::base::StateSpace*)>}
+\DoxyCodeLine{00115\ \ \ \mbox{\hyperlink{classtesseract__planning_1_1OMPLRealVectorPlanProfile_afc3b385bbcfcf4de481347429d76d17d}{createStateSamplerAllocator}}(\textcolor{keyword}{const}\ std::shared\_ptr<const\ tesseract\_environment::Environment>\&\ \textcolor{comment}{/*env*/},}
+\DoxyCodeLine{00116\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::shared\_ptr<const\ tesseract\_kinematics::JointGroup>\&\ \mbox{\hyperlink{ompl__planner__tests_8cpp_aa0c9c5fd2281440db1e2dd97fc3358f7}{manip}})\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00117\ }
+\DoxyCodeLine{00126\ \ \ \textcolor{keyword}{virtual}\ std::unique\_ptr<ompl::base::StateValidityChecker>}
+\DoxyCodeLine{00127\ \ \ \mbox{\hyperlink{classtesseract__planning_1_1OMPLRealVectorPlanProfile_a9a0959c3d9d95c15f7718933246096c9}{createStateValidator}}(\textcolor{keyword}{const}\ ompl::geometric::SimpleSetup\&\ simple\_setup,}
+\DoxyCodeLine{00128\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::shared\_ptr<const\ tesseract\_environment::Environment>\&\ \mbox{\hyperlink{basic__cartesian__example__unit_8cpp_a96ce750ee22ecbf4d17cc6cf146d9514}{env}},}
+\DoxyCodeLine{00129\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::shared\_ptr<const\ tesseract\_kinematics::JointGroup>\&\ \mbox{\hyperlink{ompl__planner__tests_8cpp_aa0c9c5fd2281440db1e2dd97fc3358f7}{manip}},}
+\DoxyCodeLine{00130\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{namespacetesseract__planning_abb4bcd86c07988cf075625fde644e497}{OMPLStateExtractor}}\&\ state\_extractor)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00131\ }
+\DoxyCodeLine{00140\ \ \ \textcolor{keyword}{virtual}\ std::unique\_ptr<ompl::base::StateValidityChecker>}
+\DoxyCodeLine{00141\ \ \ \mbox{\hyperlink{classtesseract__planning_1_1OMPLRealVectorPlanProfile_af619b1dad226fe4822da28079d1ec395}{createCollisionStateValidator}}(\textcolor{keyword}{const}\ ompl::geometric::SimpleSetup\&\ simple\_setup,}
+\DoxyCodeLine{00142\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::shared\_ptr<const\ tesseract\_environment::Environment>\&\ \mbox{\hyperlink{basic__cartesian__example__unit_8cpp_a96ce750ee22ecbf4d17cc6cf146d9514}{env}},}
+\DoxyCodeLine{00143\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::shared\_ptr<const\ tesseract\_kinematics::JointGroup>\&\ \mbox{\hyperlink{ompl__planner__tests_8cpp_aa0c9c5fd2281440db1e2dd97fc3358f7}{manip}},}
+\DoxyCodeLine{00144\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{namespacetesseract__planning_abb4bcd86c07988cf075625fde644e497}{OMPLStateExtractor}}\&\ state\_extractor)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00145\ }
+\DoxyCodeLine{00154\ \ \ \textcolor{keyword}{virtual}\ std::unique\_ptr<ompl::base::MotionValidator>}
+\DoxyCodeLine{00155\ \ \ \mbox{\hyperlink{classtesseract__planning_1_1OMPLRealVectorPlanProfile_af4603fbf9a66cd76c45ecd1ccf9fc88a}{createMotionValidator}}(\textcolor{keyword}{const}\ ompl::geometric::SimpleSetup\&\ simple\_setup,}
+\DoxyCodeLine{00156\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::shared\_ptr<const\ tesseract\_environment::Environment>\&\ \mbox{\hyperlink{basic__cartesian__example__unit_8cpp_a96ce750ee22ecbf4d17cc6cf146d9514}{env}},}
+\DoxyCodeLine{00157\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::shared\_ptr<const\ tesseract\_kinematics::JointGroup>\&\ \mbox{\hyperlink{ompl__planner__tests_8cpp_aa0c9c5fd2281440db1e2dd97fc3358f7}{manip}},}
+\DoxyCodeLine{00158\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{namespacetesseract__planning_abb4bcd86c07988cf075625fde644e497}{OMPLStateExtractor}}\&\ state\_extractor,}
+\DoxyCodeLine{00159\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::shared\_ptr<ompl::base::StateValidityChecker>\&\ svc\_without\_collision)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00160\ }
+\DoxyCodeLine{00169\ \ \ \textcolor{keyword}{virtual}\ std::unique\_ptr<ompl::base::OptimizationObjective>}
+\DoxyCodeLine{00170\ \ \ \mbox{\hyperlink{classtesseract__planning_1_1OMPLRealVectorPlanProfile_a8cda8abd597754e586e4870567771f66}{createOptimizationObjective}}(\textcolor{keyword}{const}\ ompl::geometric::SimpleSetup\&\ simple\_setup,}
+\DoxyCodeLine{00171\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::shared\_ptr<const\ tesseract\_environment::Environment>\&\ \mbox{\hyperlink{basic__cartesian__example__unit_8cpp_a96ce750ee22ecbf4d17cc6cf146d9514}{env}},}
+\DoxyCodeLine{00172\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::shared\_ptr<const\ tesseract\_kinematics::JointGroup>\&\ \mbox{\hyperlink{ompl__planner__tests_8cpp_aa0c9c5fd2281440db1e2dd97fc3358f7}{manip}},}
+\DoxyCodeLine{00173\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{namespacetesseract__planning_abb4bcd86c07988cf075625fde644e497}{OMPLStateExtractor}}\&\ state\_extractor)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00174\ }
+\DoxyCodeLine{00175\ \ \ \textcolor{keyword}{friend}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classtesseract__planning_1_1OMPLRealVectorPlanProfile_ac98d07dd8f7b70e16ccb9a01abf56b9c}{boost::serialization::access}};}
+\DoxyCodeLine{00176\ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{class}\ Archive>}
+\DoxyCodeLine{00177\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classtesseract__planning_1_1OMPLRealVectorPlanProfile_a6a0f6c596fc27a59c41a2e485d4323d9}{serialize}}(Archive\&,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int});\ \ \textcolor{comment}{//\ NOLINT}}
+\DoxyCodeLine{00178\ \};}
+\DoxyCodeLine{00179\ \}\ \ \textcolor{comment}{//\ namespace\ tesseract\_planning}}
+\DoxyCodeLine{00180\ }
+\DoxyCodeLine{00181\ BOOST\_CLASS\_EXPORT\_KEY(\mbox{\hyperlink{classtesseract__planning_1_1OMPLRealVectorPlanProfile}{tesseract\_planning::OMPLRealVectorPlanProfile}})}
+\DoxyCodeLine{00182\ }
+\DoxyCodeLine{00183\ \textcolor{preprocessor}{\#endif\ \ }\textcolor{comment}{//\ TESSERACT\_MOTION\_PLANNERS\_OMPL\_OMPL\_REAL\_VECTOR\_PLAN\_PROFILE\_H}}
+
+\end{DoxyCode}

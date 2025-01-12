@@ -1,0 +1,129 @@
+\doxysection{tesseract\+\_\+planning\+::Traj\+Opt\+Cartesian\+Waypoint\+Config Struct Reference}
+\hypertarget{structtesseract__planning_1_1TrajOptCartesianWaypointConfig}{}\label{structtesseract__planning_1_1TrajOptCartesianWaypointConfig}\index{tesseract\_planning::TrajOptCartesianWaypointConfig@{tesseract\_planning::TrajOptCartesianWaypointConfig}}
+
+
+Config settings for cartesian waypoints.  
+
+
+
+
+{\ttfamily \#include $<$trajopt\+\_\+waypoint\+\_\+config.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+EIGEN\+\_\+\+MAKE\+\_\+\+ALIGNED\+\_\+\+OPERATOR\+\_\+\+NEW \mbox{\hyperlink{structtesseract__planning_1_1TrajOptCartesianWaypointConfig_abcb623b425e73520f47ea0aafeab0907}{Traj\+Opt\+Cartesian\+Waypoint\+Config}} ()=default
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{structtesseract__planning_1_1TrajOptCartesianWaypointConfig_ae80e1a41e7396ca327fe606416b03140}{enabled}} \{ true \}
+\begin{DoxyCompactList}\small\item\em If true, a cost/constraint term will be added to the problem. Default\+: true. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{structtesseract__planning_1_1TrajOptCartesianWaypointConfig_acacaa890c3d22714e8ed92d721354b5b}{use\+\_\+tolerance\+\_\+override}} \{ false \}
+\begin{DoxyCompactList}\small\item\em If true, will override existing waypoint tolerance with described tolerance here. Default\+: false This is useful if you want to have a smaller tolerance for the cost than the constraint. \end{DoxyCompactList}\item 
+Eigen\+::\+Matrix$<$ double, 6, 1 $>$ \mbox{\hyperlink{structtesseract__planning_1_1TrajOptCartesianWaypointConfig_ab2fbcc6d980ad5eed0c00d4e6425723b}{lower\+\_\+tolerance}} \{ Eigen\+::\+Vector\+Xd\+::\+Zero(6) \}
+\begin{DoxyCompactList}\small\item\em Distance below waypoint that is allowed. Should be size = 6. First 3 elements are dx, dy, dz. The last 3 elements are angle axis error allowed (Eigen\+::\+Angle\+Axisd.\+axis() \texorpdfstring{$\ast$}{*} Eigen\+::\+Angle\+Axisd.\+angle()) \end{DoxyCompactList}\item 
+Eigen\+::\+Matrix$<$ double, 6, 1 $>$ \mbox{\hyperlink{structtesseract__planning_1_1TrajOptCartesianWaypointConfig_a1c660aca0e2b8050e4e1de83118a8ef9}{upper\+\_\+tolerance}} \{ Eigen\+::\+Vector\+Xd\+::\+Zero(6) \}
+\begin{DoxyCompactList}\small\item\em Distance above waypoint that is allowed. Should be size = 6. First 3 elements are dx, dy, dz. The last 3 elements are angle axis error allowed (Eigen\+::\+Angle\+Axisd.\+axis() \texorpdfstring{$\ast$}{*} Eigen\+::\+Angle\+Axisd.\+angle()) \end{DoxyCompactList}\item 
+Eigen\+::\+Matrix$<$ double, 6, 1 $>$ \mbox{\hyperlink{structtesseract__planning_1_1TrajOptCartesianWaypointConfig_a4390d5b9c917b4ed158cce16935ec2b9}{coeff}} \{ Eigen\+::\+Vector\+Xd\+::\+Constant(6, 5) \}
+\begin{DoxyCompactList}\small\item\em coefficients corresponsing to dx, dy, dz, rx, ry, rz \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$class Archive $>$ }\\void \mbox{\hyperlink{structtesseract__planning_1_1TrajOptCartesianWaypointConfig_ad2b026c0d266af74113ce0376143fcf3}{serialize}} (Archive \&, const unsigned int)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{structtesseract__planning_1_1TrajOptCartesianWaypointConfig_ac98d07dd8f7b70e16ccb9a01abf56b9c}{boost\+::serialization\+::access}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Config settings for cartesian waypoints. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{structtesseract__planning_1_1TrajOptCartesianWaypointConfig_abcb623b425e73520f47ea0aafeab0907}\label{structtesseract__planning_1_1TrajOptCartesianWaypointConfig_abcb623b425e73520f47ea0aafeab0907} 
+\index{tesseract\_planning::TrajOptCartesianWaypointConfig@{tesseract\_planning::TrajOptCartesianWaypointConfig}!TrajOptCartesianWaypointConfig@{TrajOptCartesianWaypointConfig}}
+\index{TrajOptCartesianWaypointConfig@{TrajOptCartesianWaypointConfig}!tesseract\_planning::TrajOptCartesianWaypointConfig@{tesseract\_planning::TrajOptCartesianWaypointConfig}}
+\doxysubsubsection{\texorpdfstring{TrajOptCartesianWaypointConfig()}{TrajOptCartesianWaypointConfig()}}
+{\footnotesize\ttfamily EIGEN\+\_\+\+MAKE\+\_\+\+ALIGNED\+\_\+\+OPERATOR\+\_\+\+NEW tesseract\+\_\+planning\+::\+Traj\+Opt\+Cartesian\+Waypoint\+Config\+::\+Traj\+Opt\+Cartesian\+Waypoint\+Config (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{structtesseract__planning_1_1TrajOptCartesianWaypointConfig_ad2b026c0d266af74113ce0376143fcf3}\label{structtesseract__planning_1_1TrajOptCartesianWaypointConfig_ad2b026c0d266af74113ce0376143fcf3} 
+\index{tesseract\_planning::TrajOptCartesianWaypointConfig@{tesseract\_planning::TrajOptCartesianWaypointConfig}!serialize@{serialize}}
+\index{serialize@{serialize}!tesseract\_planning::TrajOptCartesianWaypointConfig@{tesseract\_planning::TrajOptCartesianWaypointConfig}}
+\doxysubsubsection{\texorpdfstring{serialize()}{serialize()}}
+{\footnotesize\ttfamily template$<$class Archive $>$ \\
+void tesseract\+\_\+planning\+::\+Traj\+Opt\+Cartesian\+Waypoint\+Config\+::serialize (\begin{DoxyParamCaption}\item[{Archive \&}]{ar,  }\item[{const unsigned int}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+\doxysubsection{Friends And Related Symbol Documentation}
+\Hypertarget{structtesseract__planning_1_1TrajOptCartesianWaypointConfig_ac98d07dd8f7b70e16ccb9a01abf56b9c}\label{structtesseract__planning_1_1TrajOptCartesianWaypointConfig_ac98d07dd8f7b70e16ccb9a01abf56b9c} 
+\index{tesseract\_planning::TrajOptCartesianWaypointConfig@{tesseract\_planning::TrajOptCartesianWaypointConfig}!boost::serialization::access@{boost::serialization::access}}
+\index{boost::serialization::access@{boost::serialization::access}!tesseract\_planning::TrajOptCartesianWaypointConfig@{tesseract\_planning::TrajOptCartesianWaypointConfig}}
+\doxysubsubsection{\texorpdfstring{boost::serialization::access}{boost::serialization::access}}
+{\footnotesize\ttfamily friend class boost\+::serialization\+::access\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{structtesseract__planning_1_1TrajOptCartesianWaypointConfig_a4390d5b9c917b4ed158cce16935ec2b9}\label{structtesseract__planning_1_1TrajOptCartesianWaypointConfig_a4390d5b9c917b4ed158cce16935ec2b9} 
+\index{tesseract\_planning::TrajOptCartesianWaypointConfig@{tesseract\_planning::TrajOptCartesianWaypointConfig}!coeff@{coeff}}
+\index{coeff@{coeff}!tesseract\_planning::TrajOptCartesianWaypointConfig@{tesseract\_planning::TrajOptCartesianWaypointConfig}}
+\doxysubsubsection{\texorpdfstring{coeff}{coeff}}
+{\footnotesize\ttfamily Eigen\+::\+Matrix$<$double, 6, 1$>$ tesseract\+\_\+planning\+::\+Traj\+Opt\+Cartesian\+Waypoint\+Config\+::coeff \{ Eigen\+::\+Vector\+Xd\+::\+Constant(6, 5) \}}
+
+
+
+coefficients corresponsing to dx, dy, dz, rx, ry, rz 
+
+\Hypertarget{structtesseract__planning_1_1TrajOptCartesianWaypointConfig_ae80e1a41e7396ca327fe606416b03140}\label{structtesseract__planning_1_1TrajOptCartesianWaypointConfig_ae80e1a41e7396ca327fe606416b03140} 
+\index{tesseract\_planning::TrajOptCartesianWaypointConfig@{tesseract\_planning::TrajOptCartesianWaypointConfig}!enabled@{enabled}}
+\index{enabled@{enabled}!tesseract\_planning::TrajOptCartesianWaypointConfig@{tesseract\_planning::TrajOptCartesianWaypointConfig}}
+\doxysubsubsection{\texorpdfstring{enabled}{enabled}}
+{\footnotesize\ttfamily bool tesseract\+\_\+planning\+::\+Traj\+Opt\+Cartesian\+Waypoint\+Config\+::enabled \{ true \}}
+
+
+
+If true, a cost/constraint term will be added to the problem. Default\+: true. 
+
+\Hypertarget{structtesseract__planning_1_1TrajOptCartesianWaypointConfig_ab2fbcc6d980ad5eed0c00d4e6425723b}\label{structtesseract__planning_1_1TrajOptCartesianWaypointConfig_ab2fbcc6d980ad5eed0c00d4e6425723b} 
+\index{tesseract\_planning::TrajOptCartesianWaypointConfig@{tesseract\_planning::TrajOptCartesianWaypointConfig}!lower\_tolerance@{lower\_tolerance}}
+\index{lower\_tolerance@{lower\_tolerance}!tesseract\_planning::TrajOptCartesianWaypointConfig@{tesseract\_planning::TrajOptCartesianWaypointConfig}}
+\doxysubsubsection{\texorpdfstring{lower\_tolerance}{lower\_tolerance}}
+{\footnotesize\ttfamily Eigen\+::\+Matrix$<$double, 6, 1$>$ tesseract\+\_\+planning\+::\+Traj\+Opt\+Cartesian\+Waypoint\+Config\+::lower\+\_\+tolerance \{ Eigen\+::\+Vector\+Xd\+::\+Zero(6) \}}
+
+
+
+Distance below waypoint that is allowed. Should be size = 6. First 3 elements are dx, dy, dz. The last 3 elements are angle axis error allowed (Eigen\+::\+Angle\+Axisd.\+axis() \texorpdfstring{$\ast$}{*} Eigen\+::\+Angle\+Axisd.\+angle()) 
+
+\Hypertarget{structtesseract__planning_1_1TrajOptCartesianWaypointConfig_a1c660aca0e2b8050e4e1de83118a8ef9}\label{structtesseract__planning_1_1TrajOptCartesianWaypointConfig_a1c660aca0e2b8050e4e1de83118a8ef9} 
+\index{tesseract\_planning::TrajOptCartesianWaypointConfig@{tesseract\_planning::TrajOptCartesianWaypointConfig}!upper\_tolerance@{upper\_tolerance}}
+\index{upper\_tolerance@{upper\_tolerance}!tesseract\_planning::TrajOptCartesianWaypointConfig@{tesseract\_planning::TrajOptCartesianWaypointConfig}}
+\doxysubsubsection{\texorpdfstring{upper\_tolerance}{upper\_tolerance}}
+{\footnotesize\ttfamily Eigen\+::\+Matrix$<$double, 6, 1$>$ tesseract\+\_\+planning\+::\+Traj\+Opt\+Cartesian\+Waypoint\+Config\+::upper\+\_\+tolerance \{ Eigen\+::\+Vector\+Xd\+::\+Zero(6) \}}
+
+
+
+Distance above waypoint that is allowed. Should be size = 6. First 3 elements are dx, dy, dz. The last 3 elements are angle axis error allowed (Eigen\+::\+Angle\+Axisd.\+axis() \texorpdfstring{$\ast$}{*} Eigen\+::\+Angle\+Axisd.\+angle()) 
+
+\Hypertarget{structtesseract__planning_1_1TrajOptCartesianWaypointConfig_acacaa890c3d22714e8ed92d721354b5b}\label{structtesseract__planning_1_1TrajOptCartesianWaypointConfig_acacaa890c3d22714e8ed92d721354b5b} 
+\index{tesseract\_planning::TrajOptCartesianWaypointConfig@{tesseract\_planning::TrajOptCartesianWaypointConfig}!use\_tolerance\_override@{use\_tolerance\_override}}
+\index{use\_tolerance\_override@{use\_tolerance\_override}!tesseract\_planning::TrajOptCartesianWaypointConfig@{tesseract\_planning::TrajOptCartesianWaypointConfig}}
+\doxysubsubsection{\texorpdfstring{use\_tolerance\_override}{use\_tolerance\_override}}
+{\footnotesize\ttfamily bool tesseract\+\_\+planning\+::\+Traj\+Opt\+Cartesian\+Waypoint\+Config\+::use\+\_\+tolerance\+\_\+override \{ false \}}
+
+
+
+If true, will override existing waypoint tolerance with described tolerance here. Default\+: false This is useful if you want to have a smaller tolerance for the cost than the constraint. 
+
+
+
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+tesseract\+\_\+motion\+\_\+planners/trajopt/include/tesseract\+\_\+motion\+\_\+planners/trajopt/\mbox{\hyperlink{trajopt__waypoint__config_8h}{trajopt\+\_\+waypoint\+\_\+config.\+h}}\item 
+tesseract\+\_\+motion\+\_\+planners/trajopt/src/\mbox{\hyperlink{trajopt__waypoint__config_8cpp}{trajopt\+\_\+waypoint\+\_\+config.\+cpp}}\end{DoxyCompactItemize}

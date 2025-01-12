@@ -1,0 +1,97 @@
+\doxysection{taskflow\+\_\+task\+\_\+composer\+\_\+executor.\+h}
+\hypertarget{taskflow__task__composer__executor_8h_source}{}\label{taskflow__task__composer__executor_8h_source}\index{tesseract\_task\_composer/taskflow/include/tesseract\_task\_composer/taskflow/taskflow\_task\_composer\_executor.h@{tesseract\_task\_composer/taskflow/include/tesseract\_task\_composer/taskflow/taskflow\_task\_composer\_executor.h}}
+\mbox{\hyperlink{taskflow__task__composer__executor_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00026\ \textcolor{preprocessor}{\#ifndef\ TESSERACT\_TASK\_COMPOSER\_TASKFLOW\_TASK\_COMPOSER\_EXECUTOR\_H}}
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#define\ TESSERACT\_TASK\_COMPOSER\_TASKFLOW\_TASK\_COMPOSER\_EXECUTOR\_H}}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#include\ <tesseract\_common/macros.h>}}
+\DoxyCodeLine{00030\ TESSERACT\_COMMON\_IGNORE\_WARNINGS\_PUSH}
+\DoxyCodeLine{00031\ \textcolor{preprocessor}{\#include\ <memory>}}
+\DoxyCodeLine{00032\ \textcolor{preprocessor}{\#include\ <mutex>}}
+\DoxyCodeLine{00033\ \textcolor{preprocessor}{\#include\ <map>}}
+\DoxyCodeLine{00034\ \textcolor{preprocessor}{\#include\ <thread>}}
+\DoxyCodeLine{00035\ \mbox{\hyperlink{namespaceTESSERACT__COMMON__IGNORE__WARNINGS__POP}{TESSERACT\_COMMON\_IGNORE\_WARNINGS\_POP}}}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{task__composer__executor_8h}{tesseract\_task\_composer/core/task\_composer\_executor.h}}>}}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacetf}{tf}}}
+\DoxyCodeLine{00040\ \{}
+\DoxyCodeLine{00041\ \textcolor{keyword}{class\ }Executor;}
+\DoxyCodeLine{00042\ \textcolor{keyword}{class\ }Taskflow;}
+\DoxyCodeLine{00043\ \textcolor{keyword}{class\ }Subflow;}
+\DoxyCodeLine{00044\ \textcolor{keyword}{class\ }Task;}
+\DoxyCodeLine{00045\ \}\ \ \textcolor{comment}{//\ namespace\ tf}}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00047\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceYAML}{YAML}}}
+\DoxyCodeLine{00048\ \{}
+\DoxyCodeLine{00049\ \textcolor{keyword}{class\ }Node;}
+\DoxyCodeLine{00050\ \}}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00052\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceboost_1_1uuids}{boost::uuids}}}
+\DoxyCodeLine{00053\ \{}
+\DoxyCodeLine{00054\ \textcolor{keyword}{struct\ }uuid;}
+\DoxyCodeLine{00055\ \}}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00057\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacetesseract__planning}{tesseract\_planning}}}
+\DoxyCodeLine{00058\ \{}
+\DoxyCodeLine{00059\ \textcolor{keyword}{class\ }TaskComposerPipeline;}
+\DoxyCodeLine{00060\ \textcolor{keyword}{class\ }TaskComposerTask;}
+\DoxyCodeLine{00061\ \textcolor{keyword}{class\ }TaskComposerGraph;}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00063\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classtesseract__planning_1_1TaskflowTaskComposerExecutor}{TaskflowTaskComposerExecutor}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerExecutor}{TaskComposerExecutor}}}
+\DoxyCodeLine{00064\ \{}
+\DoxyCodeLine{00065\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00066\ \ \ \textcolor{keyword}{using\ }\mbox{\hyperlink{classtesseract__planning_1_1TaskflowTaskComposerExecutor_a841d7261ccdd64724bfab8142657d8fc}{Ptr}}\ =\ std::shared\_ptr<TaskflowTaskComposerExecutor>;}
+\DoxyCodeLine{00067\ \ \ \textcolor{keyword}{using\ }\mbox{\hyperlink{classtesseract__planning_1_1TaskflowTaskComposerExecutor_a0f09911ab80cae9118f892dbcbbad51d}{ConstPtr}}\ =\ std::shared\_ptr<const\ TaskflowTaskComposerExecutor>;}
+\DoxyCodeLine{00068\ \ \ \textcolor{keyword}{using\ }\mbox{\hyperlink{classtesseract__planning_1_1TaskflowTaskComposerExecutor_a5b63c9dbad6ed265f3101270570d29c0}{UPtr}}\ =\ std::unique\_ptr<TaskflowTaskComposerExecutor>;}
+\DoxyCodeLine{00069\ \ \ \textcolor{keyword}{using\ }\mbox{\hyperlink{classtesseract__planning_1_1TaskflowTaskComposerExecutor_abd3ddacc31dfcae3a4db5435e7e729cd}{ConstUPtr}}\ =\ std::unique\_ptr<const\ TaskflowTaskComposerExecutor>;}
+\DoxyCodeLine{00070\ }
+\DoxyCodeLine{00071\ \ \ \mbox{\hyperlink{classtesseract__planning_1_1TaskflowTaskComposerExecutor}{TaskflowTaskComposerExecutor}}(std::string\ \mbox{\hyperlink{tesseract__task__composer__core__unit_8cpp_a9b45b3e13bd9167aab02e17e08916231}{name}}\ =\ \textcolor{stringliteral}{"{}TaskflowExecutor"{}},}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{size\_t}\ \mbox{\hyperlink{descartes__planner__tests_8cpp_a25d8d1c773ae4be4c54269b39a4fc203}{num\_threads}}\ =\ std::thread::hardware\_concurrency());}
+\DoxyCodeLine{00073\ \ \ \mbox{\hyperlink{classtesseract__planning_1_1TaskflowTaskComposerExecutor}{TaskflowTaskComposerExecutor}}(std::string\ \mbox{\hyperlink{tesseract__task__composer__core__unit_8cpp_a9b45b3e13bd9167aab02e17e08916231}{name}},\ \textcolor{keyword}{const}\ YAML::Node\&\ \mbox{\hyperlink{tesseract__task__composer__core__unit_8cpp_a01d92a800904faa16b8c1c1372c40fb3}{config}});}
+\DoxyCodeLine{00074\ \ \ \mbox{\hyperlink{classtesseract__planning_1_1TaskflowTaskComposerExecutor}{TaskflowTaskComposerExecutor}}(\textcolor{keywordtype}{size\_t}\ \mbox{\hyperlink{descartes__planner__tests_8cpp_a25d8d1c773ae4be4c54269b39a4fc203}{num\_threads}});}
+\DoxyCodeLine{00075\ \ \ \mbox{\hyperlink{classtesseract__planning_1_1TaskflowTaskComposerExecutor_a05c1e50dc5cb428e210158ec85ee2f52}{\string~TaskflowTaskComposerExecutor}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00076\ \ \ \mbox{\hyperlink{classtesseract__planning_1_1TaskflowTaskComposerExecutor_a9616859785740069f13650d7e6900e8f}{TaskflowTaskComposerExecutor}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classtesseract__planning_1_1TaskflowTaskComposerExecutor}{TaskflowTaskComposerExecutor}}\&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00077\ \ \ \mbox{\hyperlink{classtesseract__planning_1_1TaskflowTaskComposerExecutor}{TaskflowTaskComposerExecutor}}\&\ \mbox{\hyperlink{classtesseract__planning_1_1TaskflowTaskComposerExecutor_a0d11831fac8de90846140bcd3330bc05}{operator=}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classtesseract__planning_1_1TaskflowTaskComposerExecutor}{TaskflowTaskComposerExecutor}}\&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00078\ \ \ \mbox{\hyperlink{classtesseract__planning_1_1TaskflowTaskComposerExecutor_ad6a49584c445a70523849bd4e71f7719}{TaskflowTaskComposerExecutor}}(\mbox{\hyperlink{classtesseract__planning_1_1TaskflowTaskComposerExecutor}{TaskflowTaskComposerExecutor}}\&\&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00079\ \ \ \mbox{\hyperlink{classtesseract__planning_1_1TaskflowTaskComposerExecutor}{TaskflowTaskComposerExecutor}}\&\ \mbox{\hyperlink{classtesseract__planning_1_1TaskflowTaskComposerExecutor_aa24581553e29a79304979ecacc727e4c}{operator=}}(\mbox{\hyperlink{classtesseract__planning_1_1TaskflowTaskComposerExecutor}{TaskflowTaskComposerExecutor}}\&\&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00080\ }
+\DoxyCodeLine{00081\ \ \ \textcolor{keywordtype}{long}\ \mbox{\hyperlink{classtesseract__planning_1_1TaskflowTaskComposerExecutor_abbad29549822dc24ca36177a1acf0cc5}{getWorkerCount}}()\ const\ override\ final;}
+\DoxyCodeLine{00082\ }
+\DoxyCodeLine{00083\ \ \ \textcolor{keywordtype}{long}\ \mbox{\hyperlink{classtesseract__planning_1_1TaskflowTaskComposerExecutor_ab97508747f1cbe45cab214eed660fe6a}{getTaskCount}}()\ const\ override\ final;}
+\DoxyCodeLine{00084\ }
+\DoxyCodeLine{00085\ \ \ \textcolor{keywordtype}{bool}\ operator==(const\ \mbox{\hyperlink{classtesseract__planning_1_1TaskflowTaskComposerExecutor}{TaskflowTaskComposerExecutor}}\&\ rhs)\ const;}
+\DoxyCodeLine{00086\ \ \ \textcolor{keywordtype}{bool}\ operator!=(const\ \mbox{\hyperlink{classtesseract__planning_1_1TaskflowTaskComposerExecutor}{TaskflowTaskComposerExecutor}}\&\ rhs)\ const;}
+\DoxyCodeLine{00087\ }
+\DoxyCodeLine{00088\ protected:}
+\DoxyCodeLine{00089\ \ \ friend\ struct\ tesseract\_common::\mbox{\hyperlink{classtesseract__planning_1_1TaskflowTaskComposerExecutor_a9d42ad7bb40288a7ac1aad8d76809fe7}{Serialization}};}
+\DoxyCodeLine{00090\ \ \ friend\ class\ \mbox{\hyperlink{namespaceboost}{boost}}::serialization::\mbox{\hyperlink{classtesseract__planning_1_1TaskflowTaskComposerExecutor_ac98d07dd8f7b70e16ccb9a01abf56b9c}{access}};}
+\DoxyCodeLine{00091\ }
+\DoxyCodeLine{00092\ \ \ template\ <class\ Archive>}
+\DoxyCodeLine{00093\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classtesseract__planning_1_1TaskflowTaskComposerExecutor_a6e275e09fbd07c0dea3af317394d45ba}{save}}(Archive\&\ ar,\ const\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ version)\ const;\ \ \textcolor{comment}{//\ NOLINT}}
+\DoxyCodeLine{00094\ }
+\DoxyCodeLine{00095\ \ \ template\ <class\ Archive>}
+\DoxyCodeLine{00096\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classtesseract__planning_1_1TaskflowTaskComposerExecutor_a4234e8c6845e789beeadf06574232c0b}{load}}(Archive\&\ ar,\ const\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ version);\ \ \textcolor{comment}{//\ NOLINT}}
+\DoxyCodeLine{00097\ }
+\DoxyCodeLine{00098\ \ \ template\ <class\ Archive>}
+\DoxyCodeLine{00099\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classtesseract__planning_1_1TaskflowTaskComposerExecutor_a26e1425d2f3f75b6ef7b529405952d72}{serialize}}(Archive\&\ ar,\ const\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ version);\ \ \textcolor{comment}{//\ NOLINT}}
+\DoxyCodeLine{00100\ }
+\DoxyCodeLine{00101\ \ \ std::\textcolor{keywordtype}{size\_t}\ \mbox{\hyperlink{classtesseract__planning_1_1TaskflowTaskComposerExecutor_a8d15f7096b2ae5644bf20aafa5d8ecc5}{num\_threads\_}};}
+\DoxyCodeLine{00102\ \ \ std::unique\_ptr<\mbox{\hyperlink{namespacetf}{tf}}::Executor>\ \mbox{\hyperlink{classtesseract__planning_1_1TaskflowTaskComposerExecutor_a97cbd0a187ce0ff9ed788d0fe25f44ea}{executor\_}};}
+\DoxyCodeLine{00103\ }
+\DoxyCodeLine{00104\ \ \ std::mutex\ \mbox{\hyperlink{classtesseract__planning_1_1TaskflowTaskComposerExecutor_a4a38cad238bf5c8255be2d7ad38f7fe6}{futures\_mutex\_}};}
+\DoxyCodeLine{00105\ \ \ std::\mbox{\hyperlink{tesseract__task__composer__plugin__factories__unit_8cpp_a9ec9dda576db2a36c42c1c3af155d07c}{map}}<\mbox{\hyperlink{namespaceboost}{boost}}::uuids::uuid,\ std::unique\_ptr<\mbox{\hyperlink{classtesseract__planning_1_1TaskComposerFuture}{TaskComposerFuture}}>>\ \mbox{\hyperlink{classtesseract__planning_1_1TaskflowTaskComposerExecutor_a703590b21e67a2c074317c9c4a32425c}{futures\_}};}
+\DoxyCodeLine{00106\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classtesseract__planning_1_1TaskflowTaskComposerExecutor_a8bd3910540af5e1a5ebbc7a62e8acfd3}{removeFuture}}(const\ \mbox{\hyperlink{namespaceboost}{boost}}::uuids::uuid\&\ uuid);}
+\DoxyCodeLine{00107\ }
+\DoxyCodeLine{00108\ \ \ std::unique\_ptr<\mbox{\hyperlink{classtesseract__planning_1_1TaskComposerFuture}{TaskComposerFuture}}>\ \mbox{\hyperlink{classtesseract__planning_1_1TaskflowTaskComposerExecutor_a8df339781591cb4a01c562d678dcc821}{run}}(const\ \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerNode}{TaskComposerNode}}\&\ \mbox{\hyperlink{tesseract__task__composer__core__unit_8cpp_add125cc6aa882efdc9627c1bb886aebb}{node}},}
+\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::shared\_ptr<\mbox{\hyperlink{classtesseract__planning_1_1TaskComposerContext}{TaskComposerContext}}>\ \mbox{\hyperlink{tesseract__task__composer__core__unit_8cpp_adf0dd2db07cdbb966d6e385d3cd2605c}{context}})\ override\ final;}
+\DoxyCodeLine{00110\ \};}
+\DoxyCodeLine{00111\ \}\ \ \textcolor{comment}{//\ namespace\ tesseract\_planning}}
+\DoxyCodeLine{00112\ }
+\DoxyCodeLine{00113\ BOOST\_CLASS\_EXPORT\_KEY(\mbox{\hyperlink{namespacetesseract__planning}{tesseract\_planning}}::\mbox{\hyperlink{classtesseract__planning_1_1TaskflowTaskComposerExecutor}{TaskflowTaskComposerExecutor}})}
+\DoxyCodeLine{00114\ }
+\DoxyCodeLine{00115\ \textcolor{preprocessor}{\#endif\ \ }\textcolor{comment}{//\ TESSERACT\_TASK\_COMPOSER\_TASKFLOW\_TASK\_COMPOSER\_EXECUTOR\_H}}
+
+\end{DoxyCode}

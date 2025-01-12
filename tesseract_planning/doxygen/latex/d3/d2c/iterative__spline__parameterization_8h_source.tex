@@ -1,0 +1,81 @@
+\doxysection{iterative\+\_\+spline\+\_\+parameterization.\+h}
+\hypertarget{iterative__spline__parameterization_8h_source}{}\label{iterative__spline__parameterization_8h_source}\index{tesseract\_time\_parameterization/isp/include/tesseract\_time\_parameterization/isp/iterative\_spline\_parameterization.h@{tesseract\_time\_parameterization/isp/include/tesseract\_time\_parameterization/isp/iterative\_spline\_parameterization.h}}
+\mbox{\hyperlink{iterative__spline__parameterization_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*********************************************************************}}
+\DoxyCodeLine{00002\ \textcolor{comment}{\ *\ Software\ License\ Agreement\ (BSD\ License)}}
+\DoxyCodeLine{00003\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00004\ \textcolor{comment}{\ *\ \ Copyright\ (c)\ 2011,\ Willow\ Garage,\ Inc.}}
+\DoxyCodeLine{00005\ \textcolor{comment}{\ *\ \ Copyright\ (c)\ 2017,\ Ken\ Anderson}}
+\DoxyCodeLine{00006\ \textcolor{comment}{\ *\ \ All\ rights\ reserved.}}
+\DoxyCodeLine{00007\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00008\ \textcolor{comment}{\ *\ \ Redistribution\ and\ use\ in\ source\ and\ binary\ forms,\ with\ or\ without}}
+\DoxyCodeLine{00009\ \textcolor{comment}{\ *\ \ modification,\ are\ permitted\ provided\ that\ the\ following\ conditions}}
+\DoxyCodeLine{00010\ \textcolor{comment}{\ *\ \ are\ met:}}
+\DoxyCodeLine{00011\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00012\ \textcolor{comment}{\ *\ \ \ *\ Redistributions\ of\ source\ code\ must\ retain\ the\ above\ copyright}}
+\DoxyCodeLine{00013\ \textcolor{comment}{\ *\ \ \ \ \ notice,\ this\ list\ of\ conditions\ and\ the\ following\ disclaimer.}}
+\DoxyCodeLine{00014\ \textcolor{comment}{\ *\ \ \ *\ Redistributions\ in\ binary\ form\ must\ reproduce\ the\ above}}
+\DoxyCodeLine{00015\ \textcolor{comment}{\ *\ \ \ \ \ copyright\ notice,\ this\ list\ of\ conditions\ and\ the\ following}}
+\DoxyCodeLine{00016\ \textcolor{comment}{\ *\ \ \ \ \ disclaimer\ in\ the\ documentation\ and/or\ other\ materials\ provided}}
+\DoxyCodeLine{00017\ \textcolor{comment}{\ *\ \ \ \ \ with\ the\ distribution.}}
+\DoxyCodeLine{00018\ \textcolor{comment}{\ *\ \ \ *\ Neither\ the\ name\ of\ Willow\ Garage\ nor\ the\ names\ of\ its}}
+\DoxyCodeLine{00019\ \textcolor{comment}{\ *\ \ \ \ \ contributors\ may\ be\ used\ to\ endorse\ or\ promote\ products\ derived}}
+\DoxyCodeLine{00020\ \textcolor{comment}{\ *\ \ \ \ \ from\ this\ software\ without\ specific\ prior\ written\ permission.}}
+\DoxyCodeLine{00021\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00022\ \textcolor{comment}{\ *\ \ THIS\ SOFTWARE\ IS\ PROVIDED\ BY\ THE\ COPYRIGHT\ HOLDERS\ AND\ CONTRIBUTORS}}
+\DoxyCodeLine{00023\ \textcolor{comment}{\ *\ \ "{}AS\ IS"{}\ AND\ ANY\ EXPRESS\ OR\ IMPLIED\ WARRANTIES,\ INCLUDING,\ BUT\ NOT}}
+\DoxyCodeLine{00024\ \textcolor{comment}{\ *\ \ LIMITED\ TO,\ THE\ IMPLIED\ WARRANTIES\ OF\ MERCHANTABILITY\ AND\ FITNESS}}
+\DoxyCodeLine{00025\ \textcolor{comment}{\ *\ \ FOR\ A\ PARTICULAR\ PURPOSE\ ARE\ DISCLAIMED.\ IN\ NO\ EVENT\ SHALL\ THE}}
+\DoxyCodeLine{00026\ \textcolor{comment}{\ *\ \ COPYRIGHT\ OWNER\ OR\ CONTRIBUTORS\ BE\ LIABLE\ FOR\ ANY\ DIRECT,\ INDIRECT,}}
+\DoxyCodeLine{00027\ \textcolor{comment}{\ *\ \ INCIDENTAL,\ SPECIAL,\ EXEMPLARY,\ OR\ CONSEQUENTIAL\ DAMAGES\ (INCLUDING,}}
+\DoxyCodeLine{00028\ \textcolor{comment}{\ *\ \ BUT\ NOT\ LIMITED\ TO,\ PROCUREMENT\ OF\ SUBSTITUTE\ GOODS\ OR\ SERVICES;}}
+\DoxyCodeLine{00029\ \textcolor{comment}{\ *\ \ LOSS\ OF\ USE,\ DATA,\ OR\ PROFITS;\ OR\ BUSINESS\ INTERRUPTION)\ HOWEVER}}
+\DoxyCodeLine{00030\ \textcolor{comment}{\ *\ \ CAUSED\ AND\ ON\ ANY\ THEORY\ OF\ LIABILITY,\ WHETHER\ IN\ CONTRACT,\ STRICT}}
+\DoxyCodeLine{00031\ \textcolor{comment}{\ *\ \ LIABILITY,\ OR\ TORT\ (INCLUDING\ NEGLIGENCE\ OR\ OTHERWISE)\ ARISING\ IN}}
+\DoxyCodeLine{00032\ \textcolor{comment}{\ *\ \ ANY\ WAY\ OUT\ OF\ THE\ USE\ OF\ THIS\ SOFTWARE,\ EVEN\ IF\ ADVISED\ OF\ THE}}
+\DoxyCodeLine{00033\ \textcolor{comment}{\ *\ \ POSSIBILITY\ OF\ SUCH\ DAMAGE.}}
+\DoxyCodeLine{00034\ \textcolor{comment}{\ *********************************************************************/}}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \textcolor{comment}{/*\ Author:\ Ken\ Anderson\ */}}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \textcolor{preprocessor}{\#ifndef\ TESSERACT\_TIME\_PARAMETERIZATION\_ITERATIVE\_SPLINE\_PARAMETERIZATION\_H}}
+\DoxyCodeLine{00039\ \textcolor{preprocessor}{\#define\ TESSERACT\_TIME\_PARAMETERIZATION\_ITERATIVE\_SPLINE\_PARAMETERIZATION\_H}}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ \textcolor{preprocessor}{\#include\ <tesseract\_common/macros.h>}}
+\DoxyCodeLine{00042\ TESSERACT\_COMMON\_IGNORE\_WARNINGS\_PUSH}
+\DoxyCodeLine{00043\ \textcolor{preprocessor}{\#include\ <Eigen/Core>}}
+\DoxyCodeLine{00044\ \mbox{\hyperlink{namespaceTESSERACT__COMMON__IGNORE__WARNINGS__POP}{TESSERACT\_COMMON\_IGNORE\_WARNINGS\_POP}}}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{tesseract__time__parameterization_2core_2include_2tesseract__time__parameterization_2core_2fwd_8h}{tesseract\_time\_parameterization/core/fwd.h}}>}}
+\DoxyCodeLine{00047\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{time__parameterization_8h}{tesseract\_time\_parameterization/core/time\_parameterization.h}}>}}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00049\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacetesseract__planning}{tesseract\_planning}}}
+\DoxyCodeLine{00050\ \{}
+\DoxyCodeLine{00077\ }
+\DoxyCodeLine{00078\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classtesseract__planning_1_1IterativeSplineParameterization}{IterativeSplineParameterization}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classtesseract__planning_1_1TimeParameterization}{TimeParameterization}}}
+\DoxyCodeLine{00079\ \{}
+\DoxyCodeLine{00080\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00081\ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{classtesseract__planning_1_1IterativeSplineParameterization}{IterativeSplineParameterization}}(\textcolor{keywordtype}{bool}\ add\_points\ =\ \textcolor{keyword}{true});}
+\DoxyCodeLine{00082\ \ \ \mbox{\hyperlink{classtesseract__planning_1_1IterativeSplineParameterization_a3418a74d6d10dba83997bfdc777eaa7a}{\string~IterativeSplineParameterization}}()\ \textcolor{keyword}{override}\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00083\ \ \ \mbox{\hyperlink{classtesseract__planning_1_1IterativeSplineParameterization_a743cebf39c03aa8f47a4c2e111252437}{IterativeSplineParameterization}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classtesseract__planning_1_1IterativeSplineParameterization}{IterativeSplineParameterization}}\&)\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00084\ \ \ \mbox{\hyperlink{classtesseract__planning_1_1IterativeSplineParameterization}{IterativeSplineParameterization}}\&\ \mbox{\hyperlink{classtesseract__planning_1_1IterativeSplineParameterization_acf74eb9d88545d37aa36db4f9d64a55e}{operator=}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classtesseract__planning_1_1IterativeSplineParameterization}{IterativeSplineParameterization}}\&)\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00085\ \ \ \mbox{\hyperlink{classtesseract__planning_1_1IterativeSplineParameterization_a935ada7ee7932b61446acb8890ec69c9}{IterativeSplineParameterization}}(\mbox{\hyperlink{classtesseract__planning_1_1IterativeSplineParameterization}{IterativeSplineParameterization}}\&\&)\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00086\ \ \ \mbox{\hyperlink{classtesseract__planning_1_1IterativeSplineParameterization}{IterativeSplineParameterization}}\&\ \mbox{\hyperlink{classtesseract__planning_1_1IterativeSplineParameterization_a034caa505b0ae9f372e4821c04ab1dc3}{operator=}}(\mbox{\hyperlink{classtesseract__planning_1_1IterativeSplineParameterization}{IterativeSplineParameterization}}\&\&)\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00087\ }
+\DoxyCodeLine{00088\ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classtesseract__planning_1_1IterativeSplineParameterization_a5115cad8dba596e290d6c913510156d3}{compute}}(\mbox{\hyperlink{classtesseract__planning_1_1TrajectoryContainer}{TrajectoryContainer}}\&\ \mbox{\hyperlink{iterative__spline__tests_8cpp_a42770b019b3c810751d40ab5f2f25e20}{trajectory}},}
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ Eigen::Ref<const\ Eigen::MatrixX2d>\&\ velocity\_limits,}
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ Eigen::Ref<const\ Eigen::MatrixX2d>\&\ acceleration\_limits,}
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ Eigen::Ref<const\ Eigen::MatrixX2d>\&\ jerk\_limits,}
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ Eigen::Ref<const\ Eigen::VectorXd>\&\ velocity\_scaling\_factors\ =\ Eigen::VectorXd::Ones(1),}
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ Eigen::Ref<const\ Eigen::VectorXd>\&\ acceleration\_scaling\_factors\ =\ Eigen::VectorXd::Ones(1),}
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ Eigen::Ref<const\ Eigen::VectorXd>\&\ jerk\_scaling\_factors\ =\ Eigen::VectorXd::Ones(1))\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00095\ }
+\DoxyCodeLine{00096\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00102\ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classtesseract__planning_1_1IterativeSplineParameterization_af59064894e97d7861a3b44ed76d5db20}{add\_points\_}};}
+\DoxyCodeLine{00103\ \};}
+\DoxyCodeLine{00104\ \}\ \ \textcolor{comment}{//\ namespace\ tesseract\_planning}}
+\DoxyCodeLine{00105\ }
+\DoxyCodeLine{00106\ \textcolor{preprocessor}{\#endif\ \ }\textcolor{comment}{//\ TESSERACT\_TIME\_PARAMETERIZATION\_ITERATIVE\_SPLINE\_PARAMETERIZATION\_H}}
+
+\end{DoxyCode}

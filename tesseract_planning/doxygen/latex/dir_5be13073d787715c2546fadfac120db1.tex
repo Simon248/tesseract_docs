@@ -1,0 +1,53 @@
+\doxysection{tesseract\+\_\+task\+\_\+composer/planning/include/tesseract\+\_\+task\+\_\+composer/planning/nodes Directory Reference}
+\hypertarget{dir_5be13073d787715c2546fadfac120db1}{}\label{dir_5be13073d787715c2546fadfac120db1}\index{tesseract\_task\_composer/planning/include/tesseract\_task\_composer/planning/nodes Directory Reference@{tesseract\_task\_composer/planning/include/tesseract\_task\_composer/planning/nodes Directory Reference}}
+Directory dependency graph for nodes\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dir_5be13073d787715c2546fadfac120db1_dep}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Files}
+\begin{DoxyCompactItemize}
+\item 
+file \mbox{\hyperlink{continuous__contact__check__task_8h}{continuous\+\_\+contact\+\_\+check\+\_\+task.\+h}}
+\begin{DoxyCompactList}\small\item\em Continuous Collision check trajectory task. \end{DoxyCompactList}\item 
+file \mbox{\hyperlink{discrete__contact__check__task_8h}{discrete\+\_\+contact\+\_\+check\+\_\+task.\+h}}
+\begin{DoxyCompactList}\small\item\em Discrete Collision check trajectory task. \end{DoxyCompactList}\item 
+file \mbox{\hyperlink{fix__state__bounds__task_8h}{fix\+\_\+state\+\_\+bounds\+\_\+task.\+h}}
+\begin{DoxyCompactList}\small\item\em Task that pushes plan instructions back within joint limits. \end{DoxyCompactList}\item 
+file \mbox{\hyperlink{fix__state__collision__task_8h}{fix\+\_\+state\+\_\+collision\+\_\+task.\+h}}
+\begin{DoxyCompactList}\small\item\em Task that pushes plan instructions to be out of collision. \end{DoxyCompactList}\item 
+file \mbox{\hyperlink{format__as__input__task_8h}{format\+\_\+as\+\_\+input\+\_\+task.\+h}}
+\begin{DoxyCompactList}\small\item\em This is used in the case where you run trajopt with collision as a cost and then you post check it for collision and it fails. Then you run trajopt with collision as a constraint but the output from trajopt with collision as a cost must be formated as input for trajopt with collision as a constraint planner. \end{DoxyCompactList}\item 
+file \mbox{\hyperlink{format__as__result__task_8h}{format\+\_\+as\+\_\+result\+\_\+task.\+h}}
+\item 
+file \mbox{\hyperlink{format__planning__input__task_8h}{format\+\_\+planning\+\_\+input\+\_\+task.\+h}}
+\begin{DoxyCompactList}\small\item\em This is used to format a composite instruction for motion planning. C Currently it reformats joint waypoint, state waypoint and cartesian seed such that it aligns with the manipulator joint names ordering. \end{DoxyCompactList}\item 
+file \mbox{\hyperlink{iterative__spline__parameterization__task_8h}{iterative\+\_\+spline\+\_\+parameterization\+\_\+task.\+h}}
+\begin{DoxyCompactList}\small\item\em Perform iterative spline time parameterization. \end{DoxyCompactList}\item 
+file \mbox{\hyperlink{min__length__task_8h}{min\+\_\+length\+\_\+task.\+h}}
+\begin{DoxyCompactList}\small\item\em Task for processing the input data so it meets a minimum length. Planners like trajopt need at least 10 states in the trajectory to perform velocity, acceleration and jerk smoothing. \end{DoxyCompactList}\item 
+file \mbox{\hyperlink{motion__planner__task_8hpp}{motion\+\_\+planner\+\_\+task.\+hpp}}
+\item 
+file \mbox{\hyperlink{process__planning__input__task_8h}{process\+\_\+planning\+\_\+input\+\_\+task.\+h}}
+\item 
+file \mbox{\hyperlink{profile__switch__task_8h}{profile\+\_\+switch\+\_\+task.\+h}}
+\begin{DoxyCompactList}\small\item\em Task that returns a value based on the profile. \end{DoxyCompactList}\item 
+file \mbox{\hyperlink{raster__motion__task_8h}{raster\+\_\+motion\+\_\+task.\+h}}
+\begin{DoxyCompactList}\small\item\em Raster motion task with transitions. \end{DoxyCompactList}\item 
+file \mbox{\hyperlink{raster__only__motion__task_8h}{raster\+\_\+only\+\_\+motion\+\_\+task.\+h}}
+\begin{DoxyCompactList}\small\item\em Plans raster paths only. \end{DoxyCompactList}\item 
+file \mbox{\hyperlink{ruckig__trajectory__smoothing__task_8h}{ruckig\+\_\+trajectory\+\_\+smoothing\+\_\+task.\+h}}
+\begin{DoxyCompactList}\small\item\em Leveraging Ruckig to smooth trajectory. \end{DoxyCompactList}\item 
+file \mbox{\hyperlink{time__optimal__parameterization__task_8h}{time\+\_\+optimal\+\_\+parameterization\+\_\+task.\+h}}
+\begin{DoxyCompactList}\small\item\em Perform TOTG. \end{DoxyCompactList}\item 
+file \mbox{\hyperlink{update__end__state__task_8h}{update\+\_\+end\+\_\+state\+\_\+task.\+h}}
+\item 
+file \mbox{\hyperlink{update__start__and__end__state__task_8h}{update\+\_\+start\+\_\+and\+\_\+end\+\_\+state\+\_\+task.\+h}}
+\item 
+file \mbox{\hyperlink{update__start__state__task_8h}{update\+\_\+start\+\_\+state\+\_\+task.\+h}}
+\item 
+file \mbox{\hyperlink{upsample__trajectory__task_8h}{upsample\+\_\+trajectory\+\_\+task.\+h}}
+\end{DoxyCompactItemize}

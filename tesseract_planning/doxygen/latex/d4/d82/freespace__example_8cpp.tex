@@ -1,0 +1,101 @@
+\doxysection{tesseract\+\_\+motion\+\_\+planners/examples/freespace\+\_\+example.cpp File Reference}
+\hypertarget{freespace__example_8cpp}{}\label{freespace__example_8cpp}\index{tesseract\_motion\_planners/examples/freespace\_example.cpp@{tesseract\_motion\_planners/examples/freespace\_example.cpp}}
+
+
+Freespace motion planning example.  
+
+
+{\ttfamily \#include $<$tesseract\+\_\+common/macros.\+h$>$}\newline
+{\ttfamily \#include $<$console\+\_\+bridge/console.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+common/types.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+kinematics/core/utils.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+environment/environment.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+motion\+\_\+planners/ompl/profile/ompl\+\_\+real\+\_\+vector\+\_\+plan\+\_\+profile.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+motion\+\_\+planners/ompl/ompl\+\_\+motion\+\_\+planner.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+motion\+\_\+planners/trajopt/trajopt\+\_\+motion\+\_\+planner.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+motion\+\_\+planners/trajopt/profile/trajopt\+\_\+default\+\_\+plan\+\_\+profile.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+motion\+\_\+planners/trajopt/profile/trajopt\+\_\+default\+\_\+composite\+\_\+profile.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+motion\+\_\+planners/trajopt/profile/trajopt\+\_\+default\+\_\+solver\+\_\+profile.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+motion\+\_\+planners/core/types.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+motion\+\_\+planners/core/utils.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+motion\+\_\+planners/simple/interpolation.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+visualization/visualization\+\_\+loader.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+command\+\_\+language/state\+\_\+waypoint.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+command\+\_\+language/cartesian\+\_\+waypoint.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+command\+\_\+language/move\+\_\+instruction.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+command\+\_\+language/utils.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+common/resource\+\_\+locator.\+h$>$}\newline
+Include dependency graph for freespace\+\_\+example.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{da/d7f/freespace__example_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{freespace__example_8cpp_a2c3f6775325c30275d11c6abee2db6a0}{main}} (int, char \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*})
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+static const std\+::string \mbox{\hyperlink{freespace__example_8cpp_a8926f8facf8bb84b469412046babbead}{OMPL\+\_\+\+DEFAULT\+\_\+\+NAMESPACE}} = "{}OMPLMotion\+Planner\+Task"{}
+\item 
+static const std\+::string \mbox{\hyperlink{freespace__example_8cpp_aa787e5ed28bd385091840a6d523ddc33}{TRAJOPT\+\_\+\+DEFAULT\+\_\+\+NAMESPACE}} = "{}Traj\+Opt\+Motion\+Planner\+Task"{}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Freespace motion planning example. 
+
+\begin{DoxyAuthor}{Author}
+Levi Armstrong 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+August 31, 2020 
+\end{DoxyDate}
+\begin{DoxyVersion}{Version}
+TODO 
+\end{DoxyVersion}
+\begin{DoxyRefDesc}{Bug}
+\item[\mbox{\hyperlink{bug__bug000114}{Bug}}]No known bugs\end{DoxyRefDesc}
+
+
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2020, Southwest Research Institute
+\end{DoxyCopyright}
+\begin{DoxyParagraph}{License}
+Software License Agreement (Apache License) 
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{}
+Licensed under the Apache License, Version 2.\+0 (the "{}\+License"{}); you may not use this file except in compliance with the License. You may obtain a copy of the License at \href{http://www.apache.org/licenses/LICENSE-2.0}{\texttt{ http\+://www.\+apache.\+org/licenses/\+LICENSE-\/2.\+0}} 
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{}
+Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "{}\+AS IS"{} BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License. 
+\end{DoxyParagraph}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{freespace__example_8cpp_a2c3f6775325c30275d11c6abee2db6a0}\label{freespace__example_8cpp_a2c3f6775325c30275d11c6abee2db6a0} 
+\index{freespace\_example.cpp@{freespace\_example.cpp}!main@{main}}
+\index{main@{main}!freespace\_example.cpp@{freespace\_example.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{,  }\item[{char \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{freespace__example_8cpp_a8926f8facf8bb84b469412046babbead}\label{freespace__example_8cpp_a8926f8facf8bb84b469412046babbead} 
+\index{freespace\_example.cpp@{freespace\_example.cpp}!OMPL\_DEFAULT\_NAMESPACE@{OMPL\_DEFAULT\_NAMESPACE}}
+\index{OMPL\_DEFAULT\_NAMESPACE@{OMPL\_DEFAULT\_NAMESPACE}!freespace\_example.cpp@{freespace\_example.cpp}}
+\doxysubsubsection{\texorpdfstring{OMPL\_DEFAULT\_NAMESPACE}{OMPL\_DEFAULT\_NAMESPACE}}
+{\footnotesize\ttfamily const std\+::string OMPL\+\_\+\+DEFAULT\+\_\+\+NAMESPACE = "{}OMPLMotion\+Planner\+Task"{}\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{freespace__example_8cpp_aa787e5ed28bd385091840a6d523ddc33}\label{freespace__example_8cpp_aa787e5ed28bd385091840a6d523ddc33} 
+\index{freespace\_example.cpp@{freespace\_example.cpp}!TRAJOPT\_DEFAULT\_NAMESPACE@{TRAJOPT\_DEFAULT\_NAMESPACE}}
+\index{TRAJOPT\_DEFAULT\_NAMESPACE@{TRAJOPT\_DEFAULT\_NAMESPACE}!freespace\_example.cpp@{freespace\_example.cpp}}
+\doxysubsubsection{\texorpdfstring{TRAJOPT\_DEFAULT\_NAMESPACE}{TRAJOPT\_DEFAULT\_NAMESPACE}}
+{\footnotesize\ttfamily const std\+::string TRAJOPT\+\_\+\+DEFAULT\+\_\+\+NAMESPACE = "{}Traj\+Opt\+Motion\+Planner\+Task"{}\hspace{0.3cm}{\ttfamily [static]}}
+

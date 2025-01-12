@@ -1,0 +1,284 @@
+\doxysection{tesseract\+\_\+task\+\_\+composer/core/src/task\+\_\+composer\+\_\+task\+\_\+plugin\+\_\+factory.cpp File Reference}
+\hypertarget{task__composer__task__plugin__factory_8cpp}{}\label{task__composer__task__plugin__factory_8cpp}\index{tesseract\_task\_composer/core/src/task\_composer\_task\_plugin\_factory.cpp@{tesseract\_task\_composer/core/src/task\_composer\_task\_plugin\_factory.cpp}}
+
+
+A task in the pipeline.  
+
+
+{\ttfamily \#include $<$tesseract\+\_\+task\+\_\+composer/core/task\+\_\+composer\+\_\+task\+\_\+plugin\+\_\+factory.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+task\+\_\+composer/core/task\+\_\+composer\+\_\+plugin\+\_\+factory\+\_\+utils.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+task\+\_\+composer/core/task\+\_\+composer\+\_\+graph.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+task\+\_\+composer/core/task\+\_\+composer\+\_\+pipeline.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+task\+\_\+composer/core/nodes/done\+\_\+task.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+task\+\_\+composer/core/nodes/error\+\_\+task.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+task\+\_\+composer/core/nodes/has\+\_\+data\+\_\+storage\+\_\+entry\+\_\+task.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+task\+\_\+composer/core/nodes/remap\+\_\+task.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+task\+\_\+composer/core/nodes/start\+\_\+task.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+task\+\_\+composer/core/nodes/sync\+\_\+task.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+task\+\_\+composer/core/test\+\_\+suite/test\+\_\+task.\+h$>$}\newline
+Include dependency graph for task\+\_\+composer\+\_\+task\+\_\+plugin\+\_\+factory.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d3/d61/task__composer__task__plugin__factory_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespacetesseract__planning}{tesseract\+\_\+planning}}
+\item 
+namespace \mbox{\hyperlink{namespacetesseract__planning_1_1test__suite}{tesseract\+\_\+planning\+::test\+\_\+suite}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{namespacetesseract__planning_a95da550022380d0b59c43caae32ddf73}{tesseract\+\_\+planning\+::\+Done\+Task\+Factory}} = \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerTaskFactory}{Task\+Composer\+Task\+Factory}}$<$ \mbox{\hyperlink{classtesseract__planning_1_1DoneTask}{Done\+Task}} $>$
+\item 
+using \mbox{\hyperlink{namespacetesseract__planning_a015dc004ad02471db6622ff35f75086a}{tesseract\+\_\+planning\+::\+Error\+Task\+Factory}} = \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerTaskFactory}{Task\+Composer\+Task\+Factory}}$<$ \mbox{\hyperlink{classtesseract__planning_1_1ErrorTask}{Error\+Task}} $>$
+\item 
+using \mbox{\hyperlink{namespacetesseract__planning_afa143be7d43a9e78b8f738e80f402f5d}{tesseract\+\_\+planning\+::\+Has\+Data\+Storage\+Entry\+Task\+Factory}} = \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerTaskFactory}{Task\+Composer\+Task\+Factory}}$<$ \mbox{\hyperlink{classtesseract__planning_1_1HasDataStorageEntryTask}{Has\+Data\+Storage\+Entry\+Task}} $>$
+\item 
+using \mbox{\hyperlink{namespacetesseract__planning_ad4993135d4817f690b3e4053d415b9b1}{tesseract\+\_\+planning\+::\+Remap\+Task\+Factory}} = \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerTaskFactory}{Task\+Composer\+Task\+Factory}}$<$ \mbox{\hyperlink{classtesseract__planning_1_1RemapTask}{Remap\+Task}} $>$
+\item 
+using \mbox{\hyperlink{namespacetesseract__planning_a325f536b78a719b9a50869623489ddee}{tesseract\+\_\+planning\+::\+Start\+Task\+Factory}} = \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerTaskFactory}{Task\+Composer\+Task\+Factory}}$<$ \mbox{\hyperlink{classtesseract__planning_1_1StartTask}{Start\+Task}} $>$
+\item 
+using \mbox{\hyperlink{namespacetesseract__planning_a691a387773f687bf7522020280c8064a}{tesseract\+\_\+planning\+::\+Sync\+Task\+Factory}} = \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerTaskFactory}{Task\+Composer\+Task\+Factory}}$<$ \mbox{\hyperlink{classtesseract__planning_1_1SyncTask}{Sync\+Task}} $>$
+\item 
+using \mbox{\hyperlink{namespacetesseract__planning_ac83628c7718ab95d0b295e590e307840}{tesseract\+\_\+planning\+::\+Graph\+Task\+Factory}} = \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerTaskFactory}{Task\+Composer\+Task\+Factory}}$<$ \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerGraph}{Task\+Composer\+Graph}} $>$
+\item 
+using \mbox{\hyperlink{namespacetesseract__planning_a06003b44aed515b702b6b4f1fdc76524}{tesseract\+\_\+planning\+::\+Pipeline\+Task\+Factory}} = \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerTaskFactory}{Task\+Composer\+Task\+Factory}}$<$ \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerPipeline}{Task\+Composer\+Pipeline}} $>$
+\item 
+using \mbox{\hyperlink{namespacetesseract__planning_1_1test__suite_a47a6dc93007bd0b094152d80e0ba906b}{tesseract\+\_\+planning\+::test\+\_\+suite\+::\+Test\+Task\+Factory}} = \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerTaskFactory}{Task\+Composer\+Task\+Factory}}$<$ \mbox{\hyperlink{classtesseract__planning_1_1test__suite_1_1TestTask}{Test\+Task}} $>$
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A task in the pipeline. 
+
+\begin{DoxyAuthor}{Author}
+Levi Armstrong 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+July 29. 2022 
+\end{DoxyDate}
+\begin{DoxyVersion}{Version}
+TODO 
+\end{DoxyVersion}
+\begin{DoxyRefDesc}{Bug}
+\item[\mbox{\hyperlink{bug__bug000225}{Bug}}]No known bugs\end{DoxyRefDesc}
+
+
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2023, Levi Armstrong
+\end{DoxyCopyright}
+\begin{DoxyParagraph}{License}
+Software License Agreement (Apache License) 
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{}
+Licensed under the Apache License, Version 2.\+0 (the "{}\+License"{}); you may not use this file except in compliance with the License. You may obtain a copy of the License at \href{http://www.apache.org/licenses/LICENSE-2.0}{\texttt{ http\+://www.\+apache.\+org/licenses/\+LICENSE-\/2.\+0}} 
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{}
+Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "{}\+AS IS"{} BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.
+\end{DoxyParagraph}
+\begin{DoxyAuthor}{Author}
+Levi Armstrong 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+July 29. 2022 
+\end{DoxyDate}
+\begin{DoxyVersion}{Version}
+TODO 
+\end{DoxyVersion}
+\begin{DoxyRefDesc}{Bug}
+\item[\mbox{\hyperlink{bug__bug000255}{Bug}}]No known bugs\end{DoxyRefDesc}
+
+
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2023, Levi Armstrong
+\end{DoxyCopyright}
+\begin{DoxyParagraph}{License}
+Software License Agreement (Apache License) 
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{}
+Licensed under the Apache License, Version 2.\+0 (the "{}\+License"{}); you may not use this file except in compliance with the License. You may obtain a copy of the License at \href{http://www.apache.org/licenses/LICENSE-2.0}{\texttt{ http\+://www.\+apache.\+org/licenses/\+LICENSE-\/2.\+0}} 
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{}
+Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "{}\+AS IS"{} BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.
+\end{DoxyParagraph}
+\begin{DoxyAuthor}{Author}
+Levi Armstrong 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+July 29. 2022 
+\end{DoxyDate}
+\begin{DoxyVersion}{Version}
+TODO 
+\end{DoxyVersion}
+\begin{DoxyRefDesc}{Bug}
+\item[\mbox{\hyperlink{bug__bug000256}{Bug}}]No known bugs\end{DoxyRefDesc}
+
+
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2023, Levi Armstrong
+\end{DoxyCopyright}
+\begin{DoxyParagraph}{License}
+Software License Agreement (Apache License) 
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{}
+Licensed under the Apache License, Version 2.\+0 (the "{}\+License"{}); you may not use this file except in compliance with the License. You may obtain a copy of the License at \href{http://www.apache.org/licenses/LICENSE-2.0}{\texttt{ http\+://www.\+apache.\+org/licenses/\+LICENSE-\/2.\+0}} 
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{}
+Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "{}\+AS IS"{} BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.
+\end{DoxyParagraph}
+\begin{DoxyAuthor}{Author}
+Levi Armstrong 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+July 29. 2022 
+\end{DoxyDate}
+\begin{DoxyVersion}{Version}
+TODO 
+\end{DoxyVersion}
+\begin{DoxyRefDesc}{Bug}
+\item[\mbox{\hyperlink{bug__bug000257}{Bug}}]No known bugs\end{DoxyRefDesc}
+
+
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2023, Levi Armstrong
+\end{DoxyCopyright}
+\begin{DoxyParagraph}{License}
+Software License Agreement (Apache License) 
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{}
+Licensed under the Apache License, Version 2.\+0 (the "{}\+License"{}); you may not use this file except in compliance with the License. You may obtain a copy of the License at \href{http://www.apache.org/licenses/LICENSE-2.0}{\texttt{ http\+://www.\+apache.\+org/licenses/\+LICENSE-\/2.\+0}} 
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{}
+Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "{}\+AS IS"{} BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.
+\end{DoxyParagraph}
+\begin{DoxyAuthor}{Author}
+Levi Armstrong 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+July 29. 2022 
+\end{DoxyDate}
+\begin{DoxyVersion}{Version}
+TODO 
+\end{DoxyVersion}
+\begin{DoxyRefDesc}{Bug}
+\item[\mbox{\hyperlink{bug__bug000258}{Bug}}]No known bugs\end{DoxyRefDesc}
+
+
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2023, Levi Armstrong
+\end{DoxyCopyright}
+\begin{DoxyParagraph}{License}
+Software License Agreement (Apache License) 
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{}
+Licensed under the Apache License, Version 2.\+0 (the "{}\+License"{}); you may not use this file except in compliance with the License. You may obtain a copy of the License at \href{http://www.apache.org/licenses/LICENSE-2.0}{\texttt{ http\+://www.\+apache.\+org/licenses/\+LICENSE-\/2.\+0}} 
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{}
+Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "{}\+AS IS"{} BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.
+\end{DoxyParagraph}
+\begin{DoxyAuthor}{Author}
+Levi Armstrong 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+July 29. 2022 
+\end{DoxyDate}
+\begin{DoxyVersion}{Version}
+TODO 
+\end{DoxyVersion}
+\begin{DoxyRefDesc}{Bug}
+\item[\mbox{\hyperlink{bug__bug000259}{Bug}}]No known bugs\end{DoxyRefDesc}
+
+
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2023, Levi Armstrong
+\end{DoxyCopyright}
+\begin{DoxyParagraph}{License}
+Software License Agreement (Apache License) 
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{}
+Licensed under the Apache License, Version 2.\+0 (the "{}\+License"{}); you may not use this file except in compliance with the License. You may obtain a copy of the License at \href{http://www.apache.org/licenses/LICENSE-2.0}{\texttt{ http\+://www.\+apache.\+org/licenses/\+LICENSE-\/2.\+0}} 
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{}
+Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "{}\+AS IS"{} BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.
+\end{DoxyParagraph}
+\begin{DoxyAuthor}{Author}
+Levi Armstrong 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+July 29. 2022 
+\end{DoxyDate}
+\begin{DoxyVersion}{Version}
+TODO 
+\end{DoxyVersion}
+\begin{DoxyRefDesc}{Bug}
+\item[\mbox{\hyperlink{bug__bug000260}{Bug}}]No known bugs\end{DoxyRefDesc}
+
+
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2023, Levi Armstrong
+\end{DoxyCopyright}
+\begin{DoxyParagraph}{License}
+Software License Agreement (Apache License) 
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{}
+Licensed under the Apache License, Version 2.\+0 (the "{}\+License"{}); you may not use this file except in compliance with the License. You may obtain a copy of the License at \href{http://www.apache.org/licenses/LICENSE-2.0}{\texttt{ http\+://www.\+apache.\+org/licenses/\+LICENSE-\/2.\+0}} 
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{}
+Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "{}\+AS IS"{} BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.
+\end{DoxyParagraph}
+\begin{DoxyAuthor}{Author}
+Levi Armstrong 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+July 29. 2022 
+\end{DoxyDate}
+\begin{DoxyVersion}{Version}
+TODO 
+\end{DoxyVersion}
+\begin{DoxyRefDesc}{Bug}
+\item[\mbox{\hyperlink{bug__bug000261}{Bug}}]No known bugs\end{DoxyRefDesc}
+
+
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2023, Levi Armstrong
+\end{DoxyCopyright}
+\begin{DoxyParagraph}{License}
+Software License Agreement (Apache License) 
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{}
+Licensed under the Apache License, Version 2.\+0 (the "{}\+License"{}); you may not use this file except in compliance with the License. You may obtain a copy of the License at \href{http://www.apache.org/licenses/LICENSE-2.0}{\texttt{ http\+://www.\+apache.\+org/licenses/\+LICENSE-\/2.\+0}} 
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{}
+Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "{}\+AS IS"{} BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.
+\end{DoxyParagraph}
+\begin{DoxyAuthor}{Author}
+Levi Armstrong 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+July 29. 2022 
+\end{DoxyDate}
+\begin{DoxyVersion}{Version}
+TODO 
+\end{DoxyVersion}
+\begin{DoxyRefDesc}{Bug}
+\item[\mbox{\hyperlink{bug__bug000262}{Bug}}]No known bugs\end{DoxyRefDesc}
+
+
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2023, Levi Armstrong
+\end{DoxyCopyright}
+\begin{DoxyParagraph}{License}
+Software License Agreement (Apache License) 
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{}
+Licensed under the Apache License, Version 2.\+0 (the "{}\+License"{}); you may not use this file except in compliance with the License. You may obtain a copy of the License at \href{http://www.apache.org/licenses/LICENSE-2.0}{\texttt{ http\+://www.\+apache.\+org/licenses/\+LICENSE-\/2.\+0}} 
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{}
+Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "{}\+AS IS"{} BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License. 
+\end{DoxyParagraph}

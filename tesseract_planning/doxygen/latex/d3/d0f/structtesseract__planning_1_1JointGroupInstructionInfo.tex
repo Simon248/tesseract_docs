@@ -1,0 +1,221 @@
+\doxysection{tesseract\+\_\+planning\+::Joint\+Group\+Instruction\+Info Struct Reference}
+\hypertarget{structtesseract__planning_1_1JointGroupInstructionInfo}{}\label{structtesseract__planning_1_1JointGroupInstructionInfo}\index{tesseract\_planning::JointGroupInstructionInfo@{tesseract\_planning::JointGroupInstructionInfo}}
+
+
+The Joint Group Instruction Information struct.  
+
+
+
+
+{\ttfamily \#include $<$interpolation.\+h$>$}
+
+
+
+Collaboration diagram for tesseract\+\_\+planning\+::Joint\+Group\+Instruction\+Info\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d0/d1f/structtesseract__planning_1_1JointGroupInstructionInfo__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structtesseract__planning_1_1JointGroupInstructionInfo_a4fb10894622d01816f91b310cfd18327}{Joint\+Group\+Instruction\+Info}} (const \mbox{\hyperlink{structtesseract__planning_1_1MoveInstructionPoly}{Move\+Instruction\+Poly}} \&plan\+\_\+instruction, const tesseract\+\_\+environment\+::\+Environment \&\mbox{\hyperlink{basic__cartesian__example__unit_8cpp_a96ce750ee22ecbf4d17cc6cf146d9514}{env}}, const tesseract\+\_\+common\+::\+Manipulator\+Info \&\mbox{\hyperlink{command__language__utils__unit_8cpp_af21d30c87e87931298afb1eb6f703551}{manip\+\_\+info}})
+\item 
+\mbox{\hyperlink{structtesseract__planning_1_1JointGroupInstructionInfo_a5a8ea4e4eb870ba71e4355abcbd2a4e2}{\texorpdfstring{$\sim$}{\string~}\+Joint\+Group\+Instruction\+Info}} ()
+\item 
+\mbox{\hyperlink{structtesseract__planning_1_1JointGroupInstructionInfo_ac6e306ee2b8f314c8bfc5e8e0d9edcdc}{Joint\+Group\+Instruction\+Info}} (const \mbox{\hyperlink{structtesseract__planning_1_1JointGroupInstructionInfo}{Joint\+Group\+Instruction\+Info}} \&)=delete
+\item 
+\mbox{\hyperlink{structtesseract__planning_1_1JointGroupInstructionInfo}{Joint\+Group\+Instruction\+Info}} \& \mbox{\hyperlink{structtesseract__planning_1_1JointGroupInstructionInfo_aeb8e1839ffef3270a897abc32c99dafc}{operator=}} (const \mbox{\hyperlink{structtesseract__planning_1_1JointGroupInstructionInfo}{Joint\+Group\+Instruction\+Info}} \&)=delete
+\item 
+\mbox{\hyperlink{structtesseract__planning_1_1JointGroupInstructionInfo_a3c47b95e9dd6d5132d262c7deb11c81b}{Joint\+Group\+Instruction\+Info}} (\mbox{\hyperlink{structtesseract__planning_1_1JointGroupInstructionInfo}{Joint\+Group\+Instruction\+Info}} \&\&)=default
+\item 
+\mbox{\hyperlink{structtesseract__planning_1_1JointGroupInstructionInfo}{Joint\+Group\+Instruction\+Info}} \& \mbox{\hyperlink{structtesseract__planning_1_1JointGroupInstructionInfo_a80bb2cae67a9b95f544b40578a807379}{operator=}} (\mbox{\hyperlink{structtesseract__planning_1_1JointGroupInstructionInfo}{Joint\+Group\+Instruction\+Info}} \&\&)=delete
+\item 
+Eigen\+::\+Isometry3d \mbox{\hyperlink{structtesseract__planning_1_1JointGroupInstructionInfo_a5033bc1163757be1b484d02bb68ddf87}{get\+Working\+Frame}} () const
+\begin{DoxyCompactList}\small\item\em Get the working frame. \end{DoxyCompactList}\item 
+Eigen\+::\+Isometry3d \mbox{\hyperlink{structtesseract__planning_1_1JointGroupInstructionInfo_ac2321b08926c7f4a2ceafb1f095e0f51}{calc\+Cartesian\+Pose}} (const Eigen\+::\+Vector\+Xd \&\mbox{\hyperlink{command__language__utils__unit_8cpp_a83ecd9e2360f26bfc3430d39a228afe6}{jp}}, bool in\+\_\+world=true) const
+\begin{DoxyCompactList}\small\item\em Calculate the cartesian pose given the joint solution. \end{DoxyCompactList}\item 
+Eigen\+::\+Isometry3d \mbox{\hyperlink{structtesseract__planning_1_1JointGroupInstructionInfo_aa4bc29aa58b110da65cdbefe6f818fc6}{extract\+Cartesian\+Pose}} (bool in\+\_\+world=true) const
+\begin{DoxyCompactList}\small\item\em Extract the cartesian pose from the instruction. \end{DoxyCompactList}\item 
+const Eigen\+::\+Vector\+Xd \& \mbox{\hyperlink{structtesseract__planning_1_1JointGroupInstructionInfo_a349a09bf21a6b8847f543dbb3d468b17}{extract\+Joint\+Position}} () const
+\begin{DoxyCompactList}\small\item\em Extract the joint position from the instruction waypoint. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+const \mbox{\hyperlink{structtesseract__planning_1_1MoveInstructionPoly}{Move\+Instruction\+Poly}} \& \mbox{\hyperlink{structtesseract__planning_1_1JointGroupInstructionInfo_ae63daf07346ec6b72ae961ee56fe2788}{instruction}}
+\item 
+std\+::shared\+\_\+ptr$<$ const tesseract\+\_\+kinematics\+::\+Joint\+Group $>$ \mbox{\hyperlink{structtesseract__planning_1_1JointGroupInstructionInfo_aa93210f83e317abc44eeb2cd5b419e16}{manip}}
+\item 
+std\+::string \mbox{\hyperlink{structtesseract__planning_1_1JointGroupInstructionInfo_a28b9536a0b150e7252039d7fc49189f3}{working\+\_\+frame}}
+\item 
+Eigen\+::\+Isometry3d \mbox{\hyperlink{structtesseract__planning_1_1JointGroupInstructionInfo_afb7eab2f34a756855ff5027643e00a36}{working\+\_\+frame\+\_\+transform}} \{ Eigen\+::\+Isometry3d\+::\+Identity() \}
+\item 
+std\+::string \mbox{\hyperlink{structtesseract__planning_1_1JointGroupInstructionInfo_a9be5829f56e092d8f6e66fd6a1d34ff4}{tcp\+\_\+frame}}
+\item 
+Eigen\+::\+Isometry3d \mbox{\hyperlink{structtesseract__planning_1_1JointGroupInstructionInfo_a03227d4a466c0a55da1baa88c8b7645a}{tcp\+\_\+offset}} \{ Eigen\+::\+Isometry3d\+::\+Identity() \}
+\item 
+bool \mbox{\hyperlink{structtesseract__planning_1_1JointGroupInstructionInfo_a39bc11f28bfbbf5fe8943bc7e5b1c112}{has\+\_\+cartesian\+\_\+waypoint}} \{ false \}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The Joint Group Instruction Information struct. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{structtesseract__planning_1_1JointGroupInstructionInfo_a4fb10894622d01816f91b310cfd18327}\label{structtesseract__planning_1_1JointGroupInstructionInfo_a4fb10894622d01816f91b310cfd18327} 
+\index{tesseract\_planning::JointGroupInstructionInfo@{tesseract\_planning::JointGroupInstructionInfo}!JointGroupInstructionInfo@{JointGroupInstructionInfo}}
+\index{JointGroupInstructionInfo@{JointGroupInstructionInfo}!tesseract\_planning::JointGroupInstructionInfo@{tesseract\_planning::JointGroupInstructionInfo}}
+\doxysubsubsection{\texorpdfstring{JointGroupInstructionInfo()}{JointGroupInstructionInfo()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily tesseract\+\_\+planning\+::\+Joint\+Group\+Instruction\+Info\+::\+Joint\+Group\+Instruction\+Info (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structtesseract__planning_1_1MoveInstructionPoly}{Move\+Instruction\+Poly}} \&}]{plan\+\_\+instruction,  }\item[{const tesseract\+\_\+environment\+::\+Environment \&}]{env,  }\item[{const tesseract\+\_\+common\+::\+Manipulator\+Info \&}]{manip\+\_\+info }\end{DoxyParamCaption})}
+
+\Hypertarget{structtesseract__planning_1_1JointGroupInstructionInfo_a5a8ea4e4eb870ba71e4355abcbd2a4e2}\label{structtesseract__planning_1_1JointGroupInstructionInfo_a5a8ea4e4eb870ba71e4355abcbd2a4e2} 
+\index{tesseract\_planning::JointGroupInstructionInfo@{tesseract\_planning::JointGroupInstructionInfo}!````~JointGroupInstructionInfo@{\texorpdfstring{$\sim$}{\string~}JointGroupInstructionInfo}}
+\index{````~JointGroupInstructionInfo@{\texorpdfstring{$\sim$}{\string~}JointGroupInstructionInfo}!tesseract\_planning::JointGroupInstructionInfo@{tesseract\_planning::JointGroupInstructionInfo}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}JointGroupInstructionInfo()}{\string~JointGroupInstructionInfo()}}
+{\footnotesize\ttfamily tesseract\+\_\+planning\+::\+Joint\+Group\+Instruction\+Info\+::\texorpdfstring{$\sim$}{\string~}\+Joint\+Group\+Instruction\+Info (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\Hypertarget{structtesseract__planning_1_1JointGroupInstructionInfo_ac6e306ee2b8f314c8bfc5e8e0d9edcdc}\label{structtesseract__planning_1_1JointGroupInstructionInfo_ac6e306ee2b8f314c8bfc5e8e0d9edcdc} 
+\index{tesseract\_planning::JointGroupInstructionInfo@{tesseract\_planning::JointGroupInstructionInfo}!JointGroupInstructionInfo@{JointGroupInstructionInfo}}
+\index{JointGroupInstructionInfo@{JointGroupInstructionInfo}!tesseract\_planning::JointGroupInstructionInfo@{tesseract\_planning::JointGroupInstructionInfo}}
+\doxysubsubsection{\texorpdfstring{JointGroupInstructionInfo()}{JointGroupInstructionInfo()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily tesseract\+\_\+planning\+::\+Joint\+Group\+Instruction\+Info\+::\+Joint\+Group\+Instruction\+Info (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structtesseract__planning_1_1JointGroupInstructionInfo}{Joint\+Group\+Instruction\+Info}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+\Hypertarget{structtesseract__planning_1_1JointGroupInstructionInfo_a3c47b95e9dd6d5132d262c7deb11c81b}\label{structtesseract__planning_1_1JointGroupInstructionInfo_a3c47b95e9dd6d5132d262c7deb11c81b} 
+\index{tesseract\_planning::JointGroupInstructionInfo@{tesseract\_planning::JointGroupInstructionInfo}!JointGroupInstructionInfo@{JointGroupInstructionInfo}}
+\index{JointGroupInstructionInfo@{JointGroupInstructionInfo}!tesseract\_planning::JointGroupInstructionInfo@{tesseract\_planning::JointGroupInstructionInfo}}
+\doxysubsubsection{\texorpdfstring{JointGroupInstructionInfo()}{JointGroupInstructionInfo()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily tesseract\+\_\+planning\+::\+Joint\+Group\+Instruction\+Info\+::\+Joint\+Group\+Instruction\+Info (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structtesseract__planning_1_1JointGroupInstructionInfo}{Joint\+Group\+Instruction\+Info}} \&\&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{structtesseract__planning_1_1JointGroupInstructionInfo_ac2321b08926c7f4a2ceafb1f095e0f51}\label{structtesseract__planning_1_1JointGroupInstructionInfo_ac2321b08926c7f4a2ceafb1f095e0f51} 
+\index{tesseract\_planning::JointGroupInstructionInfo@{tesseract\_planning::JointGroupInstructionInfo}!calcCartesianPose@{calcCartesianPose}}
+\index{calcCartesianPose@{calcCartesianPose}!tesseract\_planning::JointGroupInstructionInfo@{tesseract\_planning::JointGroupInstructionInfo}}
+\doxysubsubsection{\texorpdfstring{calcCartesianPose()}{calcCartesianPose()}}
+{\footnotesize\ttfamily Eigen\+::\+Isometry3d tesseract\+\_\+planning\+::\+Joint\+Group\+Instruction\+Info\+::calc\+Cartesian\+Pose (\begin{DoxyParamCaption}\item[{const Eigen\+::\+Vector\+Xd \&}]{jp,  }\item[{bool}]{in\+\_\+world = {\ttfamily true} }\end{DoxyParamCaption}) const}
+
+
+
+Calculate the cartesian pose given the joint solution. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em jp} & The joint solution to calculate the pose \\
+\hline
+{\em in\+\_\+world} & Indicate if the results should be in world or relative to working frame \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The pose give the joint solution 
+\end{DoxyReturn}
+\Hypertarget{structtesseract__planning_1_1JointGroupInstructionInfo_aa4bc29aa58b110da65cdbefe6f818fc6}\label{structtesseract__planning_1_1JointGroupInstructionInfo_aa4bc29aa58b110da65cdbefe6f818fc6} 
+\index{tesseract\_planning::JointGroupInstructionInfo@{tesseract\_planning::JointGroupInstructionInfo}!extractCartesianPose@{extractCartesianPose}}
+\index{extractCartesianPose@{extractCartesianPose}!tesseract\_planning::JointGroupInstructionInfo@{tesseract\_planning::JointGroupInstructionInfo}}
+\doxysubsubsection{\texorpdfstring{extractCartesianPose()}{extractCartesianPose()}}
+{\footnotesize\ttfamily Eigen\+::\+Isometry3d tesseract\+\_\+planning\+::\+Joint\+Group\+Instruction\+Info\+::extract\+Cartesian\+Pose (\begin{DoxyParamCaption}\item[{bool}]{in\+\_\+world = {\ttfamily true} }\end{DoxyParamCaption}) const}
+
+
+
+Extract the cartesian pose from the instruction. 
+
+If the instruction does not have a cartesian waypoint this throws an exception 
+\begin{DoxyParams}{Parameters}
+{\em in\+\_\+world} & Indicate if the results should be in world or relative to working frame \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Cartesian pose 
+\end{DoxyReturn}
+\Hypertarget{structtesseract__planning_1_1JointGroupInstructionInfo_a349a09bf21a6b8847f543dbb3d468b17}\label{structtesseract__planning_1_1JointGroupInstructionInfo_a349a09bf21a6b8847f543dbb3d468b17} 
+\index{tesseract\_planning::JointGroupInstructionInfo@{tesseract\_planning::JointGroupInstructionInfo}!extractJointPosition@{extractJointPosition}}
+\index{extractJointPosition@{extractJointPosition}!tesseract\_planning::JointGroupInstructionInfo@{tesseract\_planning::JointGroupInstructionInfo}}
+\doxysubsubsection{\texorpdfstring{extractJointPosition()}{extractJointPosition()}}
+{\footnotesize\ttfamily const Eigen\+::\+Vector\+Xd \& tesseract\+\_\+planning\+::\+Joint\+Group\+Instruction\+Info\+::extract\+Joint\+Position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Extract the joint position from the instruction waypoint. 
+
+If the instruction does not have a joint/state waypoint this throws an exception \begin{DoxyReturn}{Returns}
+Joint Position 
+\end{DoxyReturn}
+\Hypertarget{structtesseract__planning_1_1JointGroupInstructionInfo_a5033bc1163757be1b484d02bb68ddf87}\label{structtesseract__planning_1_1JointGroupInstructionInfo_a5033bc1163757be1b484d02bb68ddf87} 
+\index{tesseract\_planning::JointGroupInstructionInfo@{tesseract\_planning::JointGroupInstructionInfo}!getWorkingFrame@{getWorkingFrame}}
+\index{getWorkingFrame@{getWorkingFrame}!tesseract\_planning::JointGroupInstructionInfo@{tesseract\_planning::JointGroupInstructionInfo}}
+\doxysubsubsection{\texorpdfstring{getWorkingFrame()}{getWorkingFrame()}}
+{\footnotesize\ttfamily Eigen\+::\+Isometry3d tesseract\+\_\+planning\+::\+Joint\+Group\+Instruction\+Info\+::get\+Working\+Frame (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the working frame. 
+
+\begin{DoxyReturn}{Returns}
+The working frame transfrom relative world 
+\end{DoxyReturn}
+\Hypertarget{structtesseract__planning_1_1JointGroupInstructionInfo_aeb8e1839ffef3270a897abc32c99dafc}\label{structtesseract__planning_1_1JointGroupInstructionInfo_aeb8e1839ffef3270a897abc32c99dafc} 
+\index{tesseract\_planning::JointGroupInstructionInfo@{tesseract\_planning::JointGroupInstructionInfo}!operator=@{operator=}}
+\index{operator=@{operator=}!tesseract\_planning::JointGroupInstructionInfo@{tesseract\_planning::JointGroupInstructionInfo}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structtesseract__planning_1_1JointGroupInstructionInfo}{Joint\+Group\+Instruction\+Info}} \& tesseract\+\_\+planning\+::\+Joint\+Group\+Instruction\+Info\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structtesseract__planning_1_1JointGroupInstructionInfo}{Joint\+Group\+Instruction\+Info}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+\Hypertarget{structtesseract__planning_1_1JointGroupInstructionInfo_a80bb2cae67a9b95f544b40578a807379}\label{structtesseract__planning_1_1JointGroupInstructionInfo_a80bb2cae67a9b95f544b40578a807379} 
+\index{tesseract\_planning::JointGroupInstructionInfo@{tesseract\_planning::JointGroupInstructionInfo}!operator=@{operator=}}
+\index{operator=@{operator=}!tesseract\_planning::JointGroupInstructionInfo@{tesseract\_planning::JointGroupInstructionInfo}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structtesseract__planning_1_1JointGroupInstructionInfo}{Joint\+Group\+Instruction\+Info}} \& tesseract\+\_\+planning\+::\+Joint\+Group\+Instruction\+Info\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structtesseract__planning_1_1JointGroupInstructionInfo}{Joint\+Group\+Instruction\+Info}} \&\&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{structtesseract__planning_1_1JointGroupInstructionInfo_a39bc11f28bfbbf5fe8943bc7e5b1c112}\label{structtesseract__planning_1_1JointGroupInstructionInfo_a39bc11f28bfbbf5fe8943bc7e5b1c112} 
+\index{tesseract\_planning::JointGroupInstructionInfo@{tesseract\_planning::JointGroupInstructionInfo}!has\_cartesian\_waypoint@{has\_cartesian\_waypoint}}
+\index{has\_cartesian\_waypoint@{has\_cartesian\_waypoint}!tesseract\_planning::JointGroupInstructionInfo@{tesseract\_planning::JointGroupInstructionInfo}}
+\doxysubsubsection{\texorpdfstring{has\_cartesian\_waypoint}{has\_cartesian\_waypoint}}
+{\footnotesize\ttfamily bool tesseract\+\_\+planning\+::\+Joint\+Group\+Instruction\+Info\+::has\+\_\+cartesian\+\_\+waypoint \{ false \}}
+
+\Hypertarget{structtesseract__planning_1_1JointGroupInstructionInfo_ae63daf07346ec6b72ae961ee56fe2788}\label{structtesseract__planning_1_1JointGroupInstructionInfo_ae63daf07346ec6b72ae961ee56fe2788} 
+\index{tesseract\_planning::JointGroupInstructionInfo@{tesseract\_planning::JointGroupInstructionInfo}!instruction@{instruction}}
+\index{instruction@{instruction}!tesseract\_planning::JointGroupInstructionInfo@{tesseract\_planning::JointGroupInstructionInfo}}
+\doxysubsubsection{\texorpdfstring{instruction}{instruction}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{structtesseract__planning_1_1MoveInstructionPoly}{Move\+Instruction\+Poly}}\& tesseract\+\_\+planning\+::\+Joint\+Group\+Instruction\+Info\+::instruction}
+
+\Hypertarget{structtesseract__planning_1_1JointGroupInstructionInfo_aa93210f83e317abc44eeb2cd5b419e16}\label{structtesseract__planning_1_1JointGroupInstructionInfo_aa93210f83e317abc44eeb2cd5b419e16} 
+\index{tesseract\_planning::JointGroupInstructionInfo@{tesseract\_planning::JointGroupInstructionInfo}!manip@{manip}}
+\index{manip@{manip}!tesseract\_planning::JointGroupInstructionInfo@{tesseract\_planning::JointGroupInstructionInfo}}
+\doxysubsubsection{\texorpdfstring{manip}{manip}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$const tesseract\+\_\+kinematics\+::\+Joint\+Group$>$ tesseract\+\_\+planning\+::\+Joint\+Group\+Instruction\+Info\+::manip}
+
+\Hypertarget{structtesseract__planning_1_1JointGroupInstructionInfo_a9be5829f56e092d8f6e66fd6a1d34ff4}\label{structtesseract__planning_1_1JointGroupInstructionInfo_a9be5829f56e092d8f6e66fd6a1d34ff4} 
+\index{tesseract\_planning::JointGroupInstructionInfo@{tesseract\_planning::JointGroupInstructionInfo}!tcp\_frame@{tcp\_frame}}
+\index{tcp\_frame@{tcp\_frame}!tesseract\_planning::JointGroupInstructionInfo@{tesseract\_planning::JointGroupInstructionInfo}}
+\doxysubsubsection{\texorpdfstring{tcp\_frame}{tcp\_frame}}
+{\footnotesize\ttfamily std\+::string tesseract\+\_\+planning\+::\+Joint\+Group\+Instruction\+Info\+::tcp\+\_\+frame}
+
+\Hypertarget{structtesseract__planning_1_1JointGroupInstructionInfo_a03227d4a466c0a55da1baa88c8b7645a}\label{structtesseract__planning_1_1JointGroupInstructionInfo_a03227d4a466c0a55da1baa88c8b7645a} 
+\index{tesseract\_planning::JointGroupInstructionInfo@{tesseract\_planning::JointGroupInstructionInfo}!tcp\_offset@{tcp\_offset}}
+\index{tcp\_offset@{tcp\_offset}!tesseract\_planning::JointGroupInstructionInfo@{tesseract\_planning::JointGroupInstructionInfo}}
+\doxysubsubsection{\texorpdfstring{tcp\_offset}{tcp\_offset}}
+{\footnotesize\ttfamily Eigen\+::\+Isometry3d tesseract\+\_\+planning\+::\+Joint\+Group\+Instruction\+Info\+::tcp\+\_\+offset \{ Eigen\+::\+Isometry3d\+::\+Identity() \}}
+
+\Hypertarget{structtesseract__planning_1_1JointGroupInstructionInfo_a28b9536a0b150e7252039d7fc49189f3}\label{structtesseract__planning_1_1JointGroupInstructionInfo_a28b9536a0b150e7252039d7fc49189f3} 
+\index{tesseract\_planning::JointGroupInstructionInfo@{tesseract\_planning::JointGroupInstructionInfo}!working\_frame@{working\_frame}}
+\index{working\_frame@{working\_frame}!tesseract\_planning::JointGroupInstructionInfo@{tesseract\_planning::JointGroupInstructionInfo}}
+\doxysubsubsection{\texorpdfstring{working\_frame}{working\_frame}}
+{\footnotesize\ttfamily std\+::string tesseract\+\_\+planning\+::\+Joint\+Group\+Instruction\+Info\+::working\+\_\+frame}
+
+\Hypertarget{structtesseract__planning_1_1JointGroupInstructionInfo_afb7eab2f34a756855ff5027643e00a36}\label{structtesseract__planning_1_1JointGroupInstructionInfo_afb7eab2f34a756855ff5027643e00a36} 
+\index{tesseract\_planning::JointGroupInstructionInfo@{tesseract\_planning::JointGroupInstructionInfo}!working\_frame\_transform@{working\_frame\_transform}}
+\index{working\_frame\_transform@{working\_frame\_transform}!tesseract\_planning::JointGroupInstructionInfo@{tesseract\_planning::JointGroupInstructionInfo}}
+\doxysubsubsection{\texorpdfstring{working\_frame\_transform}{working\_frame\_transform}}
+{\footnotesize\ttfamily Eigen\+::\+Isometry3d tesseract\+\_\+planning\+::\+Joint\+Group\+Instruction\+Info\+::working\+\_\+frame\+\_\+transform \{ Eigen\+::\+Isometry3d\+::\+Identity() \}}
+
+
+
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+tesseract\+\_\+motion\+\_\+planners/simple/include/tesseract\+\_\+motion\+\_\+planners/simple/\mbox{\hyperlink{interpolation_8h}{interpolation.\+h}}\item 
+tesseract\+\_\+motion\+\_\+planners/simple/src/\mbox{\hyperlink{interpolation_8cpp}{interpolation.\+cpp}}\end{DoxyCompactItemize}

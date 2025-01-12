@@ -1,0 +1,23 @@
+<map id="tesseract_motion_planners/trajopt_ifopt/include/tesseract_motion_planners/trajopt_ifopt/trajopt_ifopt_waypoint_config.h" name="tesseract_motion_planners/trajopt_ifopt/include/tesseract_motion_planners/trajopt_ifopt/trajopt_ifopt_waypoint_config.h">
+<area shape="rect" id="Node000001" title="TrajOpt IFOPT waypoint configuration settings." alt="" coords="764,5,945,91"/>
+<area shape="rect" id="Node000002" href="$dd/d35/trajopt__ifopt__default__plan__profile_8h.html" title=" " alt="" coords="663,139,844,225"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="815,105,788,140,783,137,811,102"/>
+<area shape="rect" id="Node000011" href="$d9/d06/trajopt__ifopt__waypoint__config_8cpp.html" title="TrajOpt Ifopt Waypoint configuration settings." alt="" coords="869,154,1046,210"/>
+<area shape="poly" id="edge10_Node000001_Node000011" title=" " alt="" coords="899,101,938,152,934,155,894,105"/>
+<area shape="rect" id="Node000003" href="$da/d69/basic__cartesian__example_8cpp.html" title=" " alt="" coords="5,280,144,336"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="647,194,543,204,420,221,287,244,157,275,136,282,134,277,155,270,286,239,419,216,543,199,647,188"/>
+<area shape="rect" id="Node000004" href="$d0/d87/car__seat__example_8cpp.html" title="Car seat example implementation." alt="" coords="168,288,344,328"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="648,206,509,237,357,275,311,290,309,285,355,270,508,231,647,201"/>
+<area shape="rect" id="Node000005" href="$dc/da1/glass__upright__example_8cpp.html" title="Glass upright example implementation." alt="" coords="368,288,571,328"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="650,231,515,290,513,285,648,226"/>
+<area shape="rect" id="Node000006" href="$d9/d6a/pick__and__place__example_8cpp.html" title="Pick and place implementation." alt="" coords="595,280,733,336"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="716,239,685,281,681,278,712,236"/>
+<area shape="rect" id="Node000007" href="$d3/d7e/puzzle__piece__auxillary__axes__example_8cpp.html" title="Puzzle piece auxillary axes implementation." alt="" coords="757,280,931,336"/>
+<area shape="poly" id="edge6_Node000002_Node000007" title=" " alt="" coords="795,236,826,278,822,281,791,239"/>
+<area shape="rect" id="Node000008" href="$dd/d8f/puzzle__piece__example_8cpp.html" title="Puzzle piece example implementation." alt="" coords="956,288,1156,328"/>
+<area shape="poly" id="edge7_Node000002_Node000008" title=" " alt="" coords="860,224,1009,285,1007,290,857,229"/>
+<area shape="rect" id="Node000009" href="$d9/d01/trajopt__ifopt__default__plan__profile_8cpp.html" title=" " alt="" coords="1181,273,1358,343"/>
+<area shape="poly" id="edge8_Node000002_Node000009" title=" " alt="" coords="859,222,946,240,1015,247,1084,254,1168,270,1181,273,1179,278,1167,275,1083,259,1015,253,946,245,858,227"/>
+<area shape="rect" id="Node000010" href="$d8/d69/trajopt__ifopt__motion__planner_8cpp.html" title=" " alt="" coords="1382,280,1559,336"/>
+<area shape="poly" id="edge9_Node000002_Node000010" title=" " alt="" coords="859,222,936,237,1003,245,1116,248,1230,250,1295,257,1371,270,1398,277,1397,282,1370,275,1294,262,1229,255,1116,253,1002,250,936,242,858,227"/>
+</map>

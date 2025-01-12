@@ -1,0 +1,72 @@
+\doxysection{trajopt\+\_\+default\+\_\+composite\+\_\+profile.\+h}
+\hypertarget{trajopt__default__composite__profile_8h_source}{}\label{trajopt__default__composite__profile_8h_source}\index{tesseract\_motion\_planners/trajopt/include/tesseract\_motion\_planners/trajopt/profile/trajopt\_default\_composite\_profile.h@{tesseract\_motion\_planners/trajopt/include/tesseract\_motion\_planners/trajopt/profile/trajopt\_default\_composite\_profile.h}}
+\mbox{\hyperlink{trajopt__default__composite__profile_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#ifndef\ TESSERACT\_MOTION\_PLANNERS\_TRAJOPT\_DEFAULT\_COMPOSITE\_PROFILE\_H}}
+\DoxyCodeLine{00028\ \textcolor{preprocessor}{\#define\ TESSERACT\_MOTION\_PLANNERS\_TRAJOPT\_DEFAULT\_COMPOSITE\_PROFILE\_H}}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \textcolor{preprocessor}{\#include\ <tesseract\_common/macros.h>}}
+\DoxyCodeLine{00031\ TESSERACT\_COMMON\_IGNORE\_WARNINGS\_PUSH}
+\DoxyCodeLine{00032\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00033\ \textcolor{preprocessor}{\#include\ <memory>}}
+\DoxyCodeLine{00034\ \textcolor{preprocessor}{\#include\ <Eigen/Core>}}
+\DoxyCodeLine{00035\ \textcolor{preprocessor}{\#include\ <trajopt/fwd.hpp>}}
+\DoxyCodeLine{00036\ \textcolor{preprocessor}{\#include\ <trajopt\_common/fwd.h>}}
+\DoxyCodeLine{00037\ \mbox{\hyperlink{namespaceTESSERACT__COMMON__IGNORE__WARNINGS__POP}{TESSERACT\_COMMON\_IGNORE\_WARNINGS\_POP}}}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{trajopt__collision__config_8h}{tesseract\_motion\_planners/trajopt/trajopt\_collision\_config.h}}>}}
+\DoxyCodeLine{00040\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{trajopt__profile_8h}{tesseract\_motion\_planners/trajopt/profile/trajopt\_profile.h}}>}}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00042\ \textcolor{preprocessor}{\#include\ <tesseract\_collision/core/fwd.h>}}
+\DoxyCodeLine{00043\ \textcolor{preprocessor}{\#include\ <tesseract\_collision/core/types.h>}}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00045\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacetesseract__planning}{tesseract\_planning}}}
+\DoxyCodeLine{00046\ \{}
+\DoxyCodeLine{00047\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classtesseract__planning_1_1TrajOptDefaultCompositeProfile}{TrajOptDefaultCompositeProfile}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classtesseract__planning_1_1TrajOptCompositeProfile}{TrajOptCompositeProfile}}}
+\DoxyCodeLine{00048\ \{}
+\DoxyCodeLine{00049\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00050\ \ \ \textcolor{keyword}{using\ }\mbox{\hyperlink{classtesseract__planning_1_1TrajOptDefaultCompositeProfile_a5481161160f86b086c6deda85aa97868}{Ptr}}\ =\ std::shared\_ptr<TrajOptDefaultCompositeProfile>;}
+\DoxyCodeLine{00051\ \ \ \textcolor{keyword}{using\ }\mbox{\hyperlink{classtesseract__planning_1_1TrajOptDefaultCompositeProfile_a3864070dcc2158cd701c5eb4824d6afd}{ConstPtr}}\ =\ std::shared\_ptr<const\ TrajOptDefaultCompositeProfile>;}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00053\ \ \ \mbox{\hyperlink{classtesseract__planning_1_1TrajOptDefaultCompositeProfile_a90840e7fbe33509ca804e400ba819659}{TrajOptDefaultCompositeProfile}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00056\ \ \ tesseract\_collision::ContactTestType\ \mbox{\hyperlink{classtesseract__planning_1_1TrajOptDefaultCompositeProfile_ab6aa8ce19ffec6fdd5e944ad0443d168}{contact\_test\_type}}\{\ tesseract\_collision::ContactTestType::ALL\ \};}
+\DoxyCodeLine{00058\ \ \ \mbox{\hyperlink{structtesseract__planning_1_1CollisionCostConfig}{CollisionCostConfig}}\ \mbox{\hyperlink{classtesseract__planning_1_1TrajOptDefaultCompositeProfile_a37a5b0cbb87e7810f70a018fe1d9fd6b}{collision\_cost\_config}};}
+\DoxyCodeLine{00060\ \ \ \mbox{\hyperlink{structtesseract__planning_1_1CollisionConstraintConfig}{CollisionConstraintConfig}}\ \mbox{\hyperlink{classtesseract__planning_1_1TrajOptDefaultCompositeProfile_a004c5cdec890e6a34fef3b7fcfb2869b}{collision\_constraint\_config}};}
+\DoxyCodeLine{00062\ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classtesseract__planning_1_1TrajOptDefaultCompositeProfile_adcae3c87505c04c48126902fd5042383}{smooth\_velocities}}\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00064\ \ \ Eigen::VectorXd\ \mbox{\hyperlink{classtesseract__planning_1_1TrajOptDefaultCompositeProfile_a1c6aafa1a476e164f551d8026cf58034}{velocity\_coeff}}\{\};}
+\DoxyCodeLine{00066\ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classtesseract__planning_1_1TrajOptDefaultCompositeProfile_a007597f435fd1fcf313dcd4873471f92}{smooth\_accelerations}}\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00068\ \ \ Eigen::VectorXd\ \mbox{\hyperlink{classtesseract__planning_1_1TrajOptDefaultCompositeProfile_a2fd7bd1df8495f7dea9246759f5015e3}{acceleration\_coeff}}\{\};}
+\DoxyCodeLine{00070\ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classtesseract__planning_1_1TrajOptDefaultCompositeProfile_a3b7ad329e19d9fe2219531e52fdc0812}{smooth\_jerks}}\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00072\ \ \ Eigen::VectorXd\ \mbox{\hyperlink{classtesseract__planning_1_1TrajOptDefaultCompositeProfile_adfa3a1db05d20b87089f6f994ee5e202}{jerk\_coeff}}\{\};}
+\DoxyCodeLine{00074\ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classtesseract__planning_1_1TrajOptDefaultCompositeProfile_aa0399bd6a20eadede21465587a3b7f74}{avoid\_singularity}}\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00076\ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classtesseract__planning_1_1TrajOptDefaultCompositeProfile_ad5aa2fac9e62ff50b97a5313f5b56a14}{avoid\_singularity\_coeff}}\ =\ 5.0;}
+\DoxyCodeLine{00077\ }
+\DoxyCodeLine{00085\ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classtesseract__planning_1_1TrajOptDefaultCompositeProfile_a91565a6b32d3aa130916c37800e3c3bc}{longest\_valid\_segment\_fraction}}\ =\ 0.01;\ \ \textcolor{comment}{//\ 1\%}}
+\DoxyCodeLine{00086\ }
+\DoxyCodeLine{00093\ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classtesseract__planning_1_1TrajOptDefaultCompositeProfile_adea6397a994725d00d0efff42acbc5fa}{longest\_valid\_segment\_length}}\ =\ 0.1;}
+\DoxyCodeLine{00094\ }
+\DoxyCodeLine{00096\ \ \ std::shared\_ptr<trajopt\_common::SafetyMarginData>\ \mbox{\hyperlink{classtesseract__planning_1_1TrajOptDefaultCompositeProfile_abd89cefd136b2143e590b8d9dec7f35a}{special\_collision\_cost}}\{\ \textcolor{keyword}{nullptr}\ \};}
+\DoxyCodeLine{00098\ \ \ std::shared\_ptr<trajopt\_common::SafetyMarginData>\ \mbox{\hyperlink{classtesseract__planning_1_1TrajOptDefaultCompositeProfile_aba72620746362a4b3c36587b0fc14ddf}{special\_collision\_constraint}}\{\ \textcolor{keyword}{nullptr}\ \};}
+\DoxyCodeLine{00099\ }
+\DoxyCodeLine{00100\ \ \ \mbox{\hyperlink{structtesseract__planning_1_1TrajOptTermInfos}{TrajOptTermInfos}}\ \mbox{\hyperlink{classtesseract__planning_1_1TrajOptDefaultCompositeProfile_ad0eeac2975ed410ff6d902b618742604}{create}}(\textcolor{keyword}{const}\ tesseract\_common::ManipulatorInfo\&\ composite\_manip\_info,}
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::shared\_ptr<const\ tesseract\_environment::Environment>\&\ \mbox{\hyperlink{basic__cartesian__example__unit_8cpp_a96ce750ee22ecbf4d17cc6cf146d9514}{env}},}
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::vector<int>\&\ fixed\_indices,}
+\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ start\_index,}
+\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ end\_index)\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00105\ }
+\DoxyCodeLine{00106\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00107\ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classtesseract__planning_1_1TrajOptDefaultCompositeProfile_aa87db28d2fb4759cac29ac04f2e79b8d}{computeLongestValidSegmentLength}}(\textcolor{keyword}{const}\ Eigen::MatrixX2d\&\ \mbox{\hyperlink{fix__state__bounds__task__unit_8cpp_a6d60373e976cb81b4852bcd9864a54b5}{joint\_limits}})\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00108\ }
+\DoxyCodeLine{00109\ \ \ \textcolor{keyword}{friend}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classtesseract__planning_1_1TrajOptDefaultCompositeProfile_ac98d07dd8f7b70e16ccb9a01abf56b9c}{boost::serialization::access}};}
+\DoxyCodeLine{00110\ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{class}\ Archive>}
+\DoxyCodeLine{00111\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classtesseract__planning_1_1TrajOptDefaultCompositeProfile_add5ed01a96d2f174494acda924a5111c}{serialize}}(Archive\&,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int});\ \ \textcolor{comment}{//\ NOLINT}}
+\DoxyCodeLine{00112\ \};}
+\DoxyCodeLine{00113\ \}\ \ \textcolor{comment}{//\ namespace\ tesseract\_planning}}
+\DoxyCodeLine{00114\ }
+\DoxyCodeLine{00115\ BOOST\_CLASS\_EXPORT\_KEY(\mbox{\hyperlink{classtesseract__planning_1_1TrajOptDefaultCompositeProfile}{tesseract\_planning::TrajOptDefaultCompositeProfile}})}
+\DoxyCodeLine{00116\ }
+\DoxyCodeLine{00117\ \textcolor{preprocessor}{\#endif\ \ }\textcolor{comment}{//\ TESSERACT\_MOTION\_PLANNERS\_TRAJOPT\_DEFAULT\_COMPOSITE\_PROFILE\_H}}
+
+\end{DoxyCode}

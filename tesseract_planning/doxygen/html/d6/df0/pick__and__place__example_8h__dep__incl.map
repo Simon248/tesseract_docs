@@ -1,0 +1,9 @@
+<map id="tesseract_examples/include/tesseract_examples/pick_and_place_example.h" name="tesseract_examples/include/tesseract_examples/pick_and_place_example.h">
+<area shape="rect" id="Node000001" title="An example of a robot picking up a box and placing it on a shelf." alt="" coords="142,5,329,61"/>
+<area shape="rect" id="Node000002" href="$d9/d6a/pick__and__place__example_8cpp.html" title="Pick and place implementation." alt="" coords="5,109,143,165"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="181,72,119,111,116,106,178,67"/>
+<area shape="rect" id="Node000003" href="$df/db2/pick__and__place__example__node_8cpp.html" title="Pick and place example node." alt="" coords="167,109,304,165"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="238,77,238,108,233,108,233,77"/>
+<area shape="rect" id="Node000004" href="$d9/d82/pick__and__place__example__unit_8cpp.html" title=" " alt="" coords="329,109,470,165"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="293,67,357,106,354,111,290,72"/>
+</map>

@@ -1,0 +1,36 @@
+<map id="tesseract_planning::TaskflowTaskComposerFuture" name="tesseract_planning::TaskflowTaskComposerFuture">
+<area shape="rect" id="Node000001" title=" " alt="" coords="2078,326,2283,367"/>
+<area shape="rect" id="Node000002" href="$d4/dc6/classtesseract__planning_1_1TaskComposerFuture.html" title="This contains the result for the task composer request." alt="" coords="1820,278,1972,319"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="1989,311,2078,327,2078,332,1988,317"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="1502,278,1727,319"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="1743,296,1820,296,1820,301,1743,301"/>
+<area shape="rect" id="Node000004" href="$dd/d25/classtesseract__planning_1_1TaskComposerContext.html" title="This class is passed as an input to each process in the decision tree." alt="" coords="1276,278,1436,319"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="1451,296,1501,296,1501,301,1451,301"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="178,242,255,267"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="255,272,324,302,365,313,407,317,1025,317,1157,313,1276,304,1276,309,1158,318,1025,322,407,322,364,318,322,307,253,277"/>
+<area shape="rect" id="Node000008" href="$d9/d84/classtesseract__planning_1_1TaskComposerDataStorage.html" title="A thread save data storage." alt="" coords="593,172,780,212"/>
+<area shape="poly" id="edge9_Node000008_Node000005" title=" " alt="" coords="262,233,333,212,400,201,468,194,592,188,592,194,469,199,401,206,334,217,264,238"/>
+<area shape="rect" id="Node000010" title=" " alt="" coords="333,227,483,282"/>
+<area shape="poly" id="edge11_Node000010_Node000005" title=" " alt="" coords="271,252,333,252,333,257,271,257"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="5,234,129,275"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="144,252,178,252,178,257,144,257"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="897,220,1150,260"/>
+<area shape="poly" id="edge6_Node000004_Node000007" title=" " alt="" coords="1158,261,1276,282,1275,287,1157,266"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="796,205,897,219,896,224,795,210"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="345,100,471,126"/>
+<area shape="poly" id="edge8_Node000008_Node000009" title=" " alt="" coords="471,128,612,168,611,173,470,133"/>
+<area shape="rect" id="Node000011" href="$d4/da3/classtesseract__planning_1_1TaskComposerNodeInfoContainer.html" title="A threadsafe container for TaskComposerNodeInfo." alt="" coords="912,80,1135,120"/>
+<area shape="poly" id="edge13_Node000011_Node000009" title=" " alt="" coords="487,109,911,100,912,105,487,114"/>
+<area shape="poly" id="edge10_Node000008_Node000010" title=" " alt="" coords="498,232,592,210,593,215,499,237"/>
+<area shape="poly" id="edge12_Node000004_Node000011" title=" " alt="" coords="1074,126,1321,275,1319,280,1071,131"/>
+<area shape="rect" id="Node000012" title=" " alt="" coords="587,5,786,61"/>
+<area shape="poly" id="edge14_Node000011_Node000012" title=" " alt="" coords="802,53,918,76,917,82,801,58"/>
+<area shape="rect" id="Node000013" title=" " alt="" coords="340,20,476,46"/>
+<area shape="poly" id="edge15_Node000012_Node000013" title=" " alt="" coords="491,31,586,31,586,36,491,36"/>
+<area shape="rect" id="Node000014" title=" " alt="" coords="197,20,236,46"/>
+<area shape="poly" id="edge16_Node000013_Node000014" title=" " alt="" coords="252,31,340,31,340,36,252,36"/>
+<area shape="rect" id="Node000015" title=" " alt="" coords="959,358,1089,383"/>
+<area shape="poly" id="edge17_Node000004_Node000015" title=" " alt="" coords="1104,370,1177,365,1252,351,1289,336,1323,317,1325,322,1291,341,1253,356,1178,371,1105,375"/>
+<area shape="rect" id="Node000016" title=" " alt="" coords="1834,344,1959,384"/>
+<area shape="poly" id="edge18_Node000001_Node000016" title=" " alt="" coords="1974,356,2078,350,2078,355,1975,362"/>
+</map>

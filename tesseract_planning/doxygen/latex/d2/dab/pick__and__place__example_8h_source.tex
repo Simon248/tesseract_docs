@@ -1,0 +1,46 @@
+\doxysection{pick\+\_\+and\+\_\+place\+\_\+example.\+h}
+\hypertarget{pick__and__place__example_8h_source}{}\label{pick__and__place__example_8h_source}\index{tesseract\_examples/include/tesseract\_examples/pick\_and\_place\_example.h@{tesseract\_examples/include/tesseract\_examples/pick\_and\_place\_example.h}}
+\mbox{\hyperlink{pick__and__place__example_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00026\ \textcolor{preprocessor}{\#ifndef\ TESSERACT\_EXAMPLES\_PICK\_AND\_PLACE\_EXAMPLE\_H}}
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#define\ TESSERACT\_EXAMPLES\_PICK\_AND\_PLACE\_EXAMPLE\_H}}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#include\ <tesseract\_common/macros.h>}}
+\DoxyCodeLine{00030\ TESSERACT\_COMMON\_IGNORE\_WARNINGS\_PUSH}
+\DoxyCodeLine{00031\ \textcolor{preprocessor}{\#include\ <array>}}
+\DoxyCodeLine{00032\ \mbox{\hyperlink{namespaceTESSERACT__COMMON__IGNORE__WARNINGS__POP}{TESSERACT\_COMMON\_IGNORE\_WARNINGS\_POP}}}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{example_8h}{tesseract\_examples/example.h}}>}}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacetesseract__examples}{tesseract\_examples}}}
+\DoxyCodeLine{00037\ \{}
+\DoxyCodeLine{00042\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classtesseract__examples_1_1PickAndPlaceExample}{PickAndPlaceExample}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classtesseract__examples_1_1Example}{Example}}}
+\DoxyCodeLine{00043\ \{}
+\DoxyCodeLine{00044\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00045\ \ \ \mbox{\hyperlink{classtesseract__examples_1_1PickAndPlaceExample}{PickAndPlaceExample}}(std::shared\_ptr<tesseract\_environment::Environment>\ \mbox{\hyperlink{basic__cartesian__example__unit_8cpp_a96ce750ee22ecbf4d17cc6cf146d9514}{env}},}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::shared\_ptr<tesseract\_visualization::Visualization>\ plotter\ =\ \textcolor{keyword}{nullptr},}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{namespaceifopt}{ifopt}}\ =\ \textcolor{keyword}{false},}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ debug\ =\ \textcolor{keyword}{false},}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ box\_size\ =\ 0.2,}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::array<double,\ 2>\ box\_position\ =\ \{\ 0.15,\ 0.4\ \});}
+\DoxyCodeLine{00051\ \ \ \mbox{\hyperlink{classtesseract__examples_1_1PickAndPlaceExample_ac23aa8813eb41c51c0e6bed91edcbc0b}{\string~PickAndPlaceExample}}()\ \textcolor{keyword}{override}\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00052\ \ \ \mbox{\hyperlink{classtesseract__examples_1_1PickAndPlaceExample_a3a99a6431254698eda60fa0083602d6f}{PickAndPlaceExample}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classtesseract__examples_1_1PickAndPlaceExample}{PickAndPlaceExample}}\&)\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00053\ \ \ \mbox{\hyperlink{classtesseract__examples_1_1PickAndPlaceExample}{PickAndPlaceExample}}\&\ \mbox{\hyperlink{classtesseract__examples_1_1PickAndPlaceExample_afcaf832c3df3366d22972c4b0469dd42}{operator=}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classtesseract__examples_1_1PickAndPlaceExample}{PickAndPlaceExample}}\&)\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00054\ \ \ \mbox{\hyperlink{classtesseract__examples_1_1PickAndPlaceExample_a1f0e641d6c68e39aaeb10dadbfe8eeb4}{PickAndPlaceExample}}(\mbox{\hyperlink{classtesseract__examples_1_1PickAndPlaceExample}{PickAndPlaceExample}}\&\&)\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00055\ \ \ \mbox{\hyperlink{classtesseract__examples_1_1PickAndPlaceExample}{PickAndPlaceExample}}\&\ \mbox{\hyperlink{classtesseract__examples_1_1PickAndPlaceExample_a82693608f74623f18c5e8270c982cd19}{operator=}}(\mbox{\hyperlink{classtesseract__examples_1_1PickAndPlaceExample}{PickAndPlaceExample}}\&\&)\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00057\ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classtesseract__examples_1_1PickAndPlaceExample_a56be9f8349ddbdba805cb99cf5d5ced5}{run}}()\ override\ final;}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00059\ private:}
+\DoxyCodeLine{00060\ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classtesseract__examples_1_1PickAndPlaceExample_a36b1847d4f3412f9eba297b20061eca1}{ifopt\_}};}
+\DoxyCodeLine{00061\ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classtesseract__examples_1_1PickAndPlaceExample_a8e2e9420bb2fd2ae46356a937efcb3b4}{debug\_}};}
+\DoxyCodeLine{00062\ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classtesseract__examples_1_1PickAndPlaceExample_a707e9fa987324e01ad6d19e0858a06fd}{box\_size\_}};}
+\DoxyCodeLine{00063\ \ \ std::array<\textcolor{keywordtype}{double},\ 2>\ \mbox{\hyperlink{classtesseract__examples_1_1PickAndPlaceExample_a73e5832abbe38ab922d4a471ce0f2fed}{box\_position\_}};}
+\DoxyCodeLine{00064\ \};}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00066\ \}\ \ \textcolor{comment}{//\ namespace\ tesseract\_examples}}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00068\ \textcolor{preprocessor}{\#endif\ \ }\textcolor{comment}{//\ TESSERACT\_EXAMPLES\_PICK\_AND\_PLACE\_EXAMPLE\_H}}
+
+\end{DoxyCode}

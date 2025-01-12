@@ -1,0 +1,172 @@
+\doxysection{descartes\+\_\+default\+\_\+plan\+\_\+profile.\+hpp}
+\hypertarget{descartes__default__plan__profile_8hpp_source}{}\label{descartes__default__plan__profile_8hpp_source}\index{tesseract\_motion\_planners/descartes/include/tesseract\_motion\_planners/descartes/impl/profile/descartes\_default\_plan\_profile.hpp@{tesseract\_motion\_planners/descartes/include/tesseract\_motion\_planners/descartes/impl/profile/descartes\_default\_plan\_profile.hpp}}
+\mbox{\hyperlink{descartes__default__plan__profile_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00026\ \textcolor{preprocessor}{\#ifndef\ TESSERACT\_MOTION\_PLANNERS\_DESCARTES\_IMPL\_DESCARTES\_DEFAULT\_PLAN\_PROFILE\_HPP}}
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#define\ TESSERACT\_MOTION\_PLANNERS\_DESCARTES\_IMPL\_DESCARTES\_DEFAULT\_PLAN\_PROFILE\_HPP}}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#include\ <tesseract\_common/macros.h>}}
+\DoxyCodeLine{00030\ TESSERACT\_COMMON\_IGNORE\_WARNINGS\_PUSH}
+\DoxyCodeLine{00031\ \textcolor{preprocessor}{\#include\ <descartes\_light/edge\_evaluators/euclidean\_distance\_edge\_evaluator.h>}}
+\DoxyCodeLine{00032\ \textcolor{preprocessor}{\#include\ <descartes\_light/edge\_evaluators/compound\_edge\_evaluator.h>}}
+\DoxyCodeLine{00033\ \textcolor{preprocessor}{\#include\ <descartes\_light/samplers/fixed\_joint\_waypoint\_sampler.h>}}
+\DoxyCodeLine{00034\ \mbox{\hyperlink{namespaceTESSERACT__COMMON__IGNORE__WARNINGS__POP}{TESSERACT\_COMMON\_IGNORE\_WARNINGS\_POP}}}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{tesseract__motion__planners_2core_2include_2tesseract__motion__planners_2core_2types_8h}{tesseract\_motion\_planners/core/types.h}}>}}
+\DoxyCodeLine{00037\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{descartes__default__plan__profile_8h}{tesseract\_motion\_planners/descartes/profile/descartes\_default\_plan\_profile.h}}>}}
+\DoxyCodeLine{00038\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{descartes__profile_8hpp}{tesseract\_motion\_planners/descartes/impl/profile/descartes\_profile.hpp}}>}}
+\DoxyCodeLine{00039\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{descartes__robot__sampler_8h}{tesseract\_motion\_planners/descartes/descartes\_robot\_sampler.h}}>}}
+\DoxyCodeLine{00040\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{descartes__collision_8h}{tesseract\_motion\_planners/descartes/descartes\_collision.h}}>}}
+\DoxyCodeLine{00041\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{descartes__collision__edge__evaluator_8h}{tesseract\_motion\_planners/descartes/descartes\_collision\_edge\_evaluator.h}}>}}
+\DoxyCodeLine{00042\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{descartes__vertex__evaluator_8h}{tesseract\_motion\_planners/descartes/descartes\_vertex\_evaluator.h}}>}}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ \textcolor{preprocessor}{\#include\ <tesseract\_common/utils.h>}}
+\DoxyCodeLine{00045\ \textcolor{preprocessor}{\#include\ <tesseract\_common/manipulator\_info.h>}}
+\DoxyCodeLine{00046\ \textcolor{preprocessor}{\#include\ <tesseract\_kinematics/core/kinematic\_group.h>}}
+\DoxyCodeLine{00047\ \textcolor{preprocessor}{\#include\ <tesseract\_environment/environment.h>}}
+\DoxyCodeLine{00048\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{move__instruction__poly_8h}{tesseract\_command\_language/poly/move\_instruction\_poly.h}}>}}
+\DoxyCodeLine{00049\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{cartesian__waypoint__poly_8h}{tesseract\_command\_language/poly/cartesian\_waypoint\_poly.h}}>}}
+\DoxyCodeLine{00050\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{tesseract__command__language_2include_2tesseract__command__language_2utils_8h}{tesseract\_command\_language/utils.h}}>}}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00052\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacetesseract__planning}{tesseract\_planning}}}
+\DoxyCodeLine{00053\ \{}
+\DoxyCodeLine{00054\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ FloatType>}
+\DoxyCodeLine{00055\ std::unique\_ptr<DescartesVertexEvaluator>\ \mbox{\hyperlink{classtesseract__planning_1_1DescartesDefaultPlanProfile_aee5edf58518c04163a84db6b4c0e0c72}{DescartesDefaultPlanProfile<FloatType>::createVertexEvaluator}}(}
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{structtesseract__planning_1_1MoveInstructionPoly}{MoveInstructionPoly}}\&\ \textcolor{comment}{/*move\_instruction*/},}
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keyword}{const}\ std::shared\_ptr<const\ tesseract\_kinematics::KinematicGroup>\&\ \mbox{\hyperlink{ompl__planner__tests_8cpp_aa0c9c5fd2281440db1e2dd97fc3358f7}{manip}},}
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{keyword}{const}\ std::shared\_ptr<const\ tesseract\_environment::Environment>\&\ \textcolor{comment}{/*env*/})\textcolor{keyword}{\ const}}
+\DoxyCodeLine{00059\ \textcolor{keyword}{}\{}
+\DoxyCodeLine{00060\ \ \ \textcolor{keywordflow}{return}\ std::make\_unique<DescartesJointLimitsVertexEvaluator>(\mbox{\hyperlink{ompl__planner__tests_8cpp_aa0c9c5fd2281440db1e2dd97fc3358f7}{manip}}-\/>getLimits().joint\_limits);}
+\DoxyCodeLine{00061\ \}}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00063\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ FloatType>}
+\DoxyCodeLine{00064\ \mbox{\hyperlink{namespacetesseract__planning_ae98ce6e841caa404388d1689b4ffe1db}{PoseSamplerFn}}\ \mbox{\hyperlink{classtesseract__planning_1_1DescartesDefaultPlanProfile_a8a4a764ad76c9e7d859b8d51a07b702c}{DescartesDefaultPlanProfile<FloatType>::createPoseSampler}}(}
+\DoxyCodeLine{00065\ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{structtesseract__planning_1_1MoveInstructionPoly}{MoveInstructionPoly}}\&\ \textcolor{comment}{/*move\_instruction*/},}
+\DoxyCodeLine{00066\ \ \ \ \ \textcolor{keyword}{const}\ std::shared\_ptr<const\ tesseract\_kinematics::KinematicGroup>\&\ \textcolor{comment}{/*manip*/},}
+\DoxyCodeLine{00067\ \ \ \ \ \textcolor{keyword}{const}\ std::shared\_ptr<const\ tesseract\_environment::Environment>\&\ \textcolor{comment}{/*env*/})\textcolor{keyword}{\ const}}
+\DoxyCodeLine{00068\ \textcolor{keyword}{}\{}
+\DoxyCodeLine{00069\ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{descartes__planner__tests_8cpp_aa38ef518452e35f54120f3a6506ad682}{target\_pose\_fixed}})}
+\DoxyCodeLine{00070\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{namespacetesseract__planning_a7783726ef3508bc3baf1bd8b96829e07}{sampleFixed}};}
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00072\ \ \ \textcolor{keywordflow}{return}\ [axis\ =\ \mbox{\hyperlink{descartes__planner__tests_8cpp_a974f09a381cd1f4971021e59200edeae}{target\_pose\_sample\_axis}},}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \ \ resolution\ =\ \mbox{\hyperlink{descartes__planner__tests_8cpp_ac7cf59df8aa2a213bebf7680fc85b305}{target\_pose\_sample\_resolution}},}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \ \ minimum\ =\ target\_pose\_sample\_min,}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \ \ maximum\ =\ target\_pose\_sample\_max](\textcolor{keyword}{const}\ Eigen::Isometry3d\&\ tool\_pose)\ \{}
+\DoxyCodeLine{00076\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{namespacetesseract__planning_a0d40b8cf26a5d895afc2b8c7a3e805c5}{sampleToolAxis}}(tool\_pose,\ axis,\ resolution,\ minimum,\ maximum);}
+\DoxyCodeLine{00077\ \ \ \};}
+\DoxyCodeLine{00078\ \}}
+\DoxyCodeLine{00079\ }
+\DoxyCodeLine{00080\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ FloatType>}
+\DoxyCodeLine{00081\ std::unique\_ptr<descartes\_light::WaypointSampler<FloatType>>}
+\DoxyCodeLine{00082\ \mbox{\hyperlink{classtesseract__planning_1_1DescartesDefaultPlanProfile_a0868d032ea1be3d2ad2ff9cdc3cb2bbc}{DescartesDefaultPlanProfile<FloatType>::createWaypointSampler}}(}
+\DoxyCodeLine{00083\ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{structtesseract__planning_1_1MoveInstructionPoly}{MoveInstructionPoly}}\&\ move\_instruction,}
+\DoxyCodeLine{00084\ \ \ \ \ \textcolor{keyword}{const}\ tesseract\_common::ManipulatorInfo\&\ composite\_manip\_info,}
+\DoxyCodeLine{00085\ \ \ \ \ \textcolor{keyword}{const}\ std::shared\_ptr<const\ tesseract\_environment::Environment>\&\ \mbox{\hyperlink{basic__cartesian__example__unit_8cpp_a96ce750ee22ecbf4d17cc6cf146d9514}{env}})\textcolor{keyword}{\ const}}
+\DoxyCodeLine{00086\ \textcolor{keyword}{}\{}
+\DoxyCodeLine{00087\ \ \ \textcolor{comment}{//\ If\ plan\ instruction\ has\ manipulator\ information\ then\ use\ it\ over\ the\ one\ provided\ by\ the\ composite.}}
+\DoxyCodeLine{00088\ \ \ tesseract\_common::ManipulatorInfo\ \mbox{\hyperlink{command__language__utils__unit_8cpp_af21d30c87e87931298afb1eb6f703551}{manip\_info}}\ =}
+\DoxyCodeLine{00089\ \ \ \ \ \ \ composite\_manip\_info.getCombined(move\_instruction.\mbox{\hyperlink{structtesseract__planning_1_1MoveInstructionPoly_a49c534f1858f62e5e39246e7c3cdd36c}{getManipulatorInfo}}());}
+\DoxyCodeLine{00090\ \ \ \textcolor{keywordflow}{if}\ (!manipulator\_ik\_solver.empty())}
+\DoxyCodeLine{00091\ \ \ \ \ \mbox{\hyperlink{command__language__utils__unit_8cpp_af21d30c87e87931298afb1eb6f703551}{manip\_info}}.manipulator\_ik\_solver\ =\ manipulator\_ik\_solver;}
+\DoxyCodeLine{00092\ }
+\DoxyCodeLine{00093\ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{command__language__utils__unit_8cpp_af21d30c87e87931298afb1eb6f703551}{manip\_info}}.empty())}
+\DoxyCodeLine{00094\ \ \ \ \ \textcolor{keywordflow}{throw}\ std::runtime\_error(\textcolor{stringliteral}{"{}Descartes,\ manipulator\ info\ is\ empty!"{}});}
+\DoxyCodeLine{00095\ }
+\DoxyCodeLine{00096\ \ \ \textcolor{keyword}{auto}\ \mbox{\hyperlink{ompl__planner__tests_8cpp_aa0c9c5fd2281440db1e2dd97fc3358f7}{manip}}\ =\ \mbox{\hyperlink{classtesseract__planning_1_1DescartesPlanProfile_a2429467fba3f4fbde2ccaab4f8dfd072}{DescartesPlanProfile<FloatType>::createKinematicGroup}}(\mbox{\hyperlink{command__language__utils__unit_8cpp_af21d30c87e87931298afb1eb6f703551}{manip\_info}},\ *\mbox{\hyperlink{basic__cartesian__example__unit_8cpp_a96ce750ee22ecbf4d17cc6cf146d9514}{env}});}
+\DoxyCodeLine{00097\ }
+\DoxyCodeLine{00098\ \ \ \textcolor{keywordflow}{if}\ (!move\_instruction.\mbox{\hyperlink{structtesseract__planning_1_1MoveInstructionPoly_a37f8f257d3921e718b072afd9d4e2fbb}{getWaypoint}}().\mbox{\hyperlink{structtesseract__planning_1_1WaypointPoly_a5bdd55b987aed7b278dbe18d25d1d5df}{isCartesianWaypoint}}())}
+\DoxyCodeLine{00099\ \ \ \{}
+\DoxyCodeLine{00100\ \ \ \ \ assert(\mbox{\hyperlink{namespacetesseract__planning_a000daf954599df6eb5aa5ffa51ccdeff}{checkJointPositionFormat}}(\mbox{\hyperlink{ompl__planner__tests_8cpp_aa0c9c5fd2281440db1e2dd97fc3358f7}{manip}}-\/>getJointNames(),\ move\_instruction.\mbox{\hyperlink{structtesseract__planning_1_1MoveInstructionPoly_a37f8f257d3921e718b072afd9d4e2fbb}{getWaypoint}}()));}
+\DoxyCodeLine{00101\ \ \ \ \ \textcolor{keyword}{const}\ Eigen::VectorXd\&\ joint\_waypoint\ =\ \mbox{\hyperlink{namespacetesseract__planning_a49306b610c951ca98df499be491a51c0}{getJointPosition}}(move\_instruction.\mbox{\hyperlink{structtesseract__planning_1_1MoveInstructionPoly_a37f8f257d3921e718b072afd9d4e2fbb}{getWaypoint}}());}
+\DoxyCodeLine{00102\ \ \ \ \ \textcolor{keyword}{auto}\ \mbox{\hyperlink{fix__state__collision__task__unit_8cpp_afeafa25c1ddf0622559ed3eaa523e063}{state}}\ =\ std::make\_shared<descartes\_light::State<FloatType>>(joint\_waypoint.cast<FloatType>());}
+\DoxyCodeLine{00103\ \ \ \ \ \textcolor{keywordflow}{return}\ std::make\_unique<descartes\_light::FixedJointWaypointSampler<FloatType>>(\mbox{\hyperlink{fix__state__collision__task__unit_8cpp_afeafa25c1ddf0622559ed3eaa523e063}{state}});}
+\DoxyCodeLine{00104\ \ \ \}}
+\DoxyCodeLine{00105\ }
+\DoxyCodeLine{00106\ \ \ Eigen::Isometry3d\ tcp\_offset\ =\ \mbox{\hyperlink{basic__cartesian__example__unit_8cpp_a96ce750ee22ecbf4d17cc6cf146d9514}{env}}-\/>findTCPOffset(\mbox{\hyperlink{command__language__utils__unit_8cpp_af21d30c87e87931298afb1eb6f703551}{manip\_info}});}
+\DoxyCodeLine{00107\ }
+\DoxyCodeLine{00108\ \ \ \textcolor{comment}{/*\ Check\ if\ this\ cartesian\ waypoint\ is\ dynamic}}
+\DoxyCodeLine{00109\ \textcolor{comment}{\ \ \ *\ (i.e.\ defined\ relative\ to\ a\ frame\ that\ will\ move\ with\ the\ kinematic\ chain)\ */}}
+\DoxyCodeLine{00110\ \ \ \textcolor{comment}{//\ \ auto\ it\ =\ std::find(active\_links.begin(),\ active\_links.end(),\ prob.manip\_inv\_kin-\/>getBaseLinkName());}}
+\DoxyCodeLine{00111\ \ \ \textcolor{comment}{//\ \ if\ (it\ !=\ active\_links.end()\ \&\&\ prob.manip\_inv\_kin-\/>getBaseLinkName()\ !=\ mi.working\_frame)}}
+\DoxyCodeLine{00112\ \ \ \textcolor{comment}{//\ \ \ \ throw\ std::runtime\_error("{}DescartesDefaultPlanProfile:\ Assigned\ dynamic\ waypoint\ but\ parent\ instruction\ working}}
+\DoxyCodeLine{00113\ \ \ \textcolor{comment}{//\ \ \ \ is\ "{}}}
+\DoxyCodeLine{00114\ \ \ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ "{}not\ set\ to\ the\ base\ link\ of\ manipulator!"{});}}
+\DoxyCodeLine{00115\ }
+\DoxyCodeLine{00116\ \ \ \mbox{\hyperlink{classtesseract__planning_1_1DescartesCollision_aaeaeca3bdae2070fe34bdbd64fa19eb9}{DescartesCollision::Ptr}}\ ci\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00117\ \ \ \textcolor{keywordflow}{if}\ (enable\_collision)}
+\DoxyCodeLine{00118\ \ \ \ \ ci\ =\ std::make\_shared<DescartesCollision>(*\mbox{\hyperlink{basic__cartesian__example__unit_8cpp_a96ce750ee22ecbf4d17cc6cf146d9514}{env}},\ \mbox{\hyperlink{ompl__planner__tests_8cpp_aa0c9c5fd2281440db1e2dd97fc3358f7}{manip}},\ vertex\_collision\_check\_config,\ debug);}
+\DoxyCodeLine{00119\ }
+\DoxyCodeLine{00120\ \ \ \textcolor{keyword}{auto}\ ve\ =\ createVertexEvaluator(move\_instruction,\ \mbox{\hyperlink{ompl__planner__tests_8cpp_aa0c9c5fd2281440db1e2dd97fc3358f7}{manip}},\ \mbox{\hyperlink{basic__cartesian__example__unit_8cpp_a96ce750ee22ecbf4d17cc6cf146d9514}{env}});}
+\DoxyCodeLine{00121\ \ \ \textcolor{keyword}{auto}\ pose\_sampler\ =\ createPoseSampler(move\_instruction,\ \mbox{\hyperlink{ompl__planner__tests_8cpp_aa0c9c5fd2281440db1e2dd97fc3358f7}{manip}},\ \mbox{\hyperlink{basic__cartesian__example__unit_8cpp_a96ce750ee22ecbf4d17cc6cf146d9514}{env}});}
+\DoxyCodeLine{00122\ \ \ \textcolor{keywordflow}{return}\ std::make\_unique<DescartesRobotSampler<FloatType>>(}
+\DoxyCodeLine{00123\ \ \ \ \ \ \ \mbox{\hyperlink{command__language__utils__unit_8cpp_af21d30c87e87931298afb1eb6f703551}{manip\_info}}.working\_frame,}
+\DoxyCodeLine{00124\ \ \ \ \ \ \ move\_instruction.\mbox{\hyperlink{structtesseract__planning_1_1MoveInstructionPoly_a37f8f257d3921e718b072afd9d4e2fbb}{getWaypoint}}().as<\mbox{\hyperlink{structtesseract__planning_1_1CartesianWaypointPoly}{CartesianWaypointPoly}}>().\mbox{\hyperlink{simple__planner__fixed__size__interpolation_8cpp_a08321a59f7119e4e7db1695718d32c9f}{getTransform}}(),}
+\DoxyCodeLine{00125\ \ \ \ \ \ \ pose\_sampler,}
+\DoxyCodeLine{00126\ \ \ \ \ \ \ \mbox{\hyperlink{ompl__planner__tests_8cpp_aa0c9c5fd2281440db1e2dd97fc3358f7}{manip}},}
+\DoxyCodeLine{00127\ \ \ \ \ \ \ ci,}
+\DoxyCodeLine{00128\ \ \ \ \ \ \ \mbox{\hyperlink{command__language__utils__unit_8cpp_af21d30c87e87931298afb1eb6f703551}{manip\_info}}.tcp\_frame,}
+\DoxyCodeLine{00129\ \ \ \ \ \ \ tcp\_offset,}
+\DoxyCodeLine{00130\ \ \ \ \ \ \ allow\_collision,}
+\DoxyCodeLine{00131\ \ \ \ \ \ \ std::move(ve),}
+\DoxyCodeLine{00132\ \ \ \ \ \ \ use\_redundant\_joint\_solutions);}
+\DoxyCodeLine{00133\ \}}
+\DoxyCodeLine{00134\ }
+\DoxyCodeLine{00135\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ FloatType>}
+\DoxyCodeLine{00136\ std::unique\_ptr<descartes\_light::EdgeEvaluator<FloatType>>\ \mbox{\hyperlink{classtesseract__planning_1_1DescartesDefaultPlanProfile_a6b5c35c505c1a4af43fd9586edefd13c}{DescartesDefaultPlanProfile<FloatType>::createEdgeEvaluator}}(}
+\DoxyCodeLine{00137\ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{structtesseract__planning_1_1MoveInstructionPoly}{MoveInstructionPoly}}\&\ move\_instruction,}
+\DoxyCodeLine{00138\ \ \ \ \ \textcolor{keyword}{const}\ tesseract\_common::ManipulatorInfo\&\ composite\_manip\_info,}
+\DoxyCodeLine{00139\ \ \ \ \ \textcolor{keyword}{const}\ std::shared\_ptr<const\ tesseract\_environment::Environment>\&\ \mbox{\hyperlink{basic__cartesian__example__unit_8cpp_a96ce750ee22ecbf4d17cc6cf146d9514}{env}})\textcolor{keyword}{\ const}}
+\DoxyCodeLine{00140\ \textcolor{keyword}{}\{}
+\DoxyCodeLine{00141\ \ \ \textcolor{comment}{//\ If\ plan\ instruction\ has\ manipulator\ information\ then\ use\ it\ over\ the\ one\ provided\ by\ the\ composite.}}
+\DoxyCodeLine{00142\ \ \ tesseract\_common::ManipulatorInfo\ \mbox{\hyperlink{command__language__utils__unit_8cpp_af21d30c87e87931298afb1eb6f703551}{manip\_info}}\ =}
+\DoxyCodeLine{00143\ \ \ \ \ \ \ composite\_manip\_info.getCombined(move\_instruction.\mbox{\hyperlink{structtesseract__planning_1_1MoveInstructionPoly_a49c534f1858f62e5e39246e7c3cdd36c}{getManipulatorInfo}}());}
+\DoxyCodeLine{00144\ \ \ \textcolor{keywordflow}{if}\ (!manipulator\_ik\_solver.empty())}
+\DoxyCodeLine{00145\ \ \ \ \ \mbox{\hyperlink{command__language__utils__unit_8cpp_af21d30c87e87931298afb1eb6f703551}{manip\_info}}.manipulator\_ik\_solver\ =\ manipulator\_ik\_solver;}
+\DoxyCodeLine{00146\ }
+\DoxyCodeLine{00147\ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{command__language__utils__unit_8cpp_af21d30c87e87931298afb1eb6f703551}{manip\_info}}.empty())}
+\DoxyCodeLine{00148\ \ \ \ \ \textcolor{keywordflow}{throw}\ std::runtime\_error(\textcolor{stringliteral}{"{}Descartes,\ manipulator\ info\ is\ empty!"{}});}
+\DoxyCodeLine{00149\ }
+\DoxyCodeLine{00150\ \ \ \textcolor{keyword}{auto}\ \mbox{\hyperlink{ompl__planner__tests_8cpp_aa0c9c5fd2281440db1e2dd97fc3358f7}{manip}}\ =\ \mbox{\hyperlink{classtesseract__planning_1_1DescartesPlanProfile_a2429467fba3f4fbde2ccaab4f8dfd072}{DescartesPlanProfile<FloatType>::createKinematicGroup}}(\mbox{\hyperlink{command__language__utils__unit_8cpp_af21d30c87e87931298afb1eb6f703551}{manip\_info}},\ *\mbox{\hyperlink{basic__cartesian__example__unit_8cpp_a96ce750ee22ecbf4d17cc6cf146d9514}{env}});}
+\DoxyCodeLine{00151\ }
+\DoxyCodeLine{00152\ \ \ \textcolor{keywordflow}{if}\ (move\_instruction.\mbox{\hyperlink{structtesseract__planning_1_1MoveInstructionPoly_a37f8f257d3921e718b072afd9d4e2fbb}{getWaypoint}}().\mbox{\hyperlink{structtesseract__planning_1_1WaypointPoly_a5bdd55b987aed7b278dbe18d25d1d5df}{isCartesianWaypoint}}())}
+\DoxyCodeLine{00153\ \ \ \{}
+\DoxyCodeLine{00154\ \ \ \ \ \textcolor{keywordflow}{if}\ (!\mbox{\hyperlink{descartes__planner__tests_8cpp_a54234c02ffbccadf4c2f2e571e0a18ff}{enable\_edge\_collision}})}
+\DoxyCodeLine{00155\ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ std::make\_unique<descartes\_light::EuclideanDistanceEdgeEvaluator<FloatType>>();}
+\DoxyCodeLine{00156\ }
+\DoxyCodeLine{00157\ \ \ \ \ \textcolor{keyword}{auto}\ compound\_evaluator\ =\ std::make\_unique<descartes\_light::CompoundEdgeEvaluator<FloatType>>();}
+\DoxyCodeLine{00158\ \ \ \ \ compound\_evaluator-\/>evaluators.push\_back(}
+\DoxyCodeLine{00159\ \ \ \ \ \ \ \ \ std::make\_shared<descartes\_light::EuclideanDistanceEdgeEvaluator<FloatType>>());}
+\DoxyCodeLine{00160\ \ \ \ \ compound\_evaluator-\/>evaluators.push\_back(std::make\_shared<\mbox{\hyperlink{classtesseract__planning_1_1DescartesCollisionEdgeEvaluator}{DescartesCollisionEdgeEvaluator<FloatType>}}>(}
+\DoxyCodeLine{00161\ \ \ \ \ \ \ \ \ *\mbox{\hyperlink{basic__cartesian__example__unit_8cpp_a96ce750ee22ecbf4d17cc6cf146d9514}{env}},\ \mbox{\hyperlink{ompl__planner__tests_8cpp_aa0c9c5fd2281440db1e2dd97fc3358f7}{manip}},\ edge\_collision\_check\_config,\ allow\_collision,\ debug));}
+\DoxyCodeLine{00162\ }
+\DoxyCodeLine{00163\ \ \ \ \ \textcolor{keywordflow}{return}\ compound\_evaluator;}
+\DoxyCodeLine{00164\ \ \ \}}
+\DoxyCodeLine{00165\ }
+\DoxyCodeLine{00166\ \ \ \textcolor{keywordflow}{if}\ (!\mbox{\hyperlink{descartes__planner__tests_8cpp_a54234c02ffbccadf4c2f2e571e0a18ff}{enable\_edge\_collision}})}
+\DoxyCodeLine{00167\ \ \ \ \ \textcolor{keywordflow}{return}\ std::make\_unique<descartes\_light::EuclideanDistanceEdgeEvaluator<FloatType>>();}
+\DoxyCodeLine{00168\ }
+\DoxyCodeLine{00169\ \ \ \textcolor{keyword}{auto}\ compound\_evaluator\ =\ std::make\_unique<descartes\_light::CompoundEdgeEvaluator<FloatType>>();}
+\DoxyCodeLine{00170\ \ \ compound\_evaluator-\/>evaluators.push\_back(}
+\DoxyCodeLine{00171\ \ \ \ \ \ \ std::make\_shared<descartes\_light::EuclideanDistanceEdgeEvaluator<FloatType>>());}
+\DoxyCodeLine{00172\ \ \ compound\_evaluator-\/>evaluators.push\_back(std::make\_shared<\mbox{\hyperlink{classtesseract__planning_1_1DescartesCollisionEdgeEvaluator}{DescartesCollisionEdgeEvaluator<FloatType>}}>(}
+\DoxyCodeLine{00173\ \ \ \ \ \ \ *\mbox{\hyperlink{basic__cartesian__example__unit_8cpp_a96ce750ee22ecbf4d17cc6cf146d9514}{env}},\ \mbox{\hyperlink{ompl__planner__tests_8cpp_aa0c9c5fd2281440db1e2dd97fc3358f7}{manip}},\ edge\_collision\_check\_config,\ allow\_collision,\ debug));}
+\DoxyCodeLine{00174\ }
+\DoxyCodeLine{00175\ \ \ \textcolor{keywordflow}{return}\ compound\_evaluator;}
+\DoxyCodeLine{00176\ \}}
+\DoxyCodeLine{00177\ }
+\DoxyCodeLine{00178\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ FloatType>}
+\DoxyCodeLine{00179\ std::unique\_ptr<descartes\_light::StateEvaluator<FloatType>>}
+\DoxyCodeLine{00180\ \mbox{\hyperlink{classtesseract__planning_1_1DescartesDefaultPlanProfile_a9af496c2f14ac84a7c3eb89fa2fabe82}{DescartesDefaultPlanProfile<FloatType>::createStateEvaluator}}(}
+\DoxyCodeLine{00181\ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{structtesseract__planning_1_1MoveInstructionPoly}{MoveInstructionPoly}}\&\ \textcolor{comment}{/*move\_instruction*/},}
+\DoxyCodeLine{00182\ \ \ \ \ \textcolor{keyword}{const}\ tesseract\_common::ManipulatorInfo\&\ \textcolor{comment}{/*composite\_manip\_info*/},}
+\DoxyCodeLine{00183\ \ \ \ \ \textcolor{keyword}{const}\ std::shared\_ptr<const\ tesseract\_environment::Environment>\&\ \textcolor{comment}{/*env*/})\textcolor{keyword}{\ const}}
+\DoxyCodeLine{00184\ \textcolor{keyword}{}\{}
+\DoxyCodeLine{00185\ \ \ \textcolor{keywordflow}{return}\ std::make\_unique<descartes\_light::StateEvaluator<FloatType>>();}
+\DoxyCodeLine{00186\ \}}
+\DoxyCodeLine{00187\ }
+\DoxyCodeLine{00188\ \}\ \ \textcolor{comment}{//\ namespace\ tesseract\_planning}}
+\DoxyCodeLine{00189\ }
+\DoxyCodeLine{00190\ \textcolor{preprocessor}{\#endif\ \ }\textcolor{comment}{//\ TESSERACT\_MOTION\_PLANNERS\_DESCARTES\_IMPL\_DESCARTES\_DEFAULT\_PLAN\_PROFILE\_HPP}}
+
+\end{DoxyCode}

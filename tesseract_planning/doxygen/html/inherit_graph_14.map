@@ -1,0 +1,15 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="Node000000" title=" " alt="" coords="5,213,216,254"/>
+<area shape="rect" id="Node000001" href="$db/db3/structtesseract__planning_1_1detail__cartesian__waypoint_1_1CartesianWaypointInterface.html" title=" " alt="" coords="264,5,450,61"/>
+<area shape="poly" id="edge41_Node000000_Node000001" title=" " alt="" coords="134,199,189,135,224,101,262,71,281,59,284,64,265,75,228,105,193,139,138,202"/>
+<area shape="rect" id="Node000002" href="$d0/d4e/structtesseract__planning_1_1detail__instruction_1_1InstructionInterface.html" title=" " alt="" coords="287,85,427,141"/>
+<area shape="poly" id="edge42_Node000000_Node000002" title=" " alt="" coords="162,203,262,151,287,139,290,144,265,156,164,208"/>
+<area shape="rect" id="Node000003" href="$d3/d53/structtesseract__planning_1_1detail__joint__waypoint_1_1JointWaypointInterface.html" title=" " alt="" coords="277,165,437,221"/>
+<area shape="poly" id="edge43_Node000000_Node000003" title=" " alt="" coords="231,211,276,203,277,209,231,216"/>
+<area shape="rect" id="Node000004" href="$d8/d41/structtesseract__planning_1_1detail__move__instruction_1_1MoveInstructionInterface.html" title=" " alt="" coords="271,245,443,301"/>
+<area shape="poly" id="edge44_Node000000_Node000004" title=" " alt="" coords="232,250,271,257,270,262,231,255"/>
+<area shape="rect" id="Node000005" href="$d4/d29/structtesseract__planning_1_1detail__state__waypoint_1_1StateWaypointInterface.html" title=" " alt="" coords="276,325,438,381"/>
+<area shape="poly" id="edge45_Node000000_Node000005" title=" " alt="" coords="164,259,265,311,290,322,287,327,262,316,162,264"/>
+<area shape="rect" id="Node000006" href="$dd/de3/structtesseract__planning_1_1detail__waypoint_1_1WaypointInterface.html" title=" " alt="" coords="269,405,445,461"/>
+<area shape="poly" id="edge46_Node000000_Node000006" title=" " alt="" coords="138,264,193,327,228,361,265,391,284,403,281,407,262,395,224,365,189,331,134,268"/>
+</map>

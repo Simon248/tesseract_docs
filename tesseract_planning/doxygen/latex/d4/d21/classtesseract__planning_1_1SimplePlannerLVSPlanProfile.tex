@@ -1,0 +1,271 @@
+\doxysection{tesseract\+\_\+planning\+::Simple\+Planner\+LVSPlan\+Profile Class Reference}
+\hypertarget{classtesseract__planning_1_1SimplePlannerLVSPlanProfile}{}\label{classtesseract__planning_1_1SimplePlannerLVSPlanProfile}\index{tesseract\_planning::SimplePlannerLVSPlanProfile@{tesseract\_planning::SimplePlannerLVSPlanProfile}}
+
+
+{\ttfamily \#include $<$simple\+\_\+planner\+\_\+lvs\+\_\+plan\+\_\+profile.\+h$>$}
+
+
+
+Inheritance diagram for tesseract\+\_\+planning\+::Simple\+Planner\+LVSPlan\+Profile\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=230pt]{d7/d74/classtesseract__planning_1_1SimplePlannerLVSPlanProfile__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for tesseract\+\_\+planning\+::Simple\+Planner\+LVSPlan\+Profile\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=230pt]{d3/d73/classtesseract__planning_1_1SimplePlannerLVSPlanProfile__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{classtesseract__planning_1_1SimplePlannerLVSPlanProfile_ac2d38d37fcf377f9b5efe6c92f90aba3}{Ptr}} = std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classtesseract__planning_1_1SimplePlannerLVSPlanProfile}{Simple\+Planner\+LVSPlan\+Profile}} $>$
+\item 
+using \mbox{\hyperlink{classtesseract__planning_1_1SimplePlannerLVSPlanProfile_a57a1563f13ba10c59f34f2cff6934440}{Const\+Ptr}} = std\+::shared\+\_\+ptr$<$ const \mbox{\hyperlink{classtesseract__planning_1_1SimplePlannerLVSPlanProfile}{Simple\+Planner\+LVSPlan\+Profile}} $>$
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Types inherited from \mbox{\hyperlink{classtesseract__planning_1_1SimplePlannerPlanProfile}{tesseract\+\_\+planning\+::\+Simple\+Planner\+Plan\+Profile}}}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{classtesseract__planning_1_1SimplePlannerPlanProfile_a50c8067ba16c7427b0d4a0db9519d5ba}{Ptr}} = std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classtesseract__planning_1_1SimplePlannerPlanProfile}{Simple\+Planner\+Plan\+Profile}} $>$
+\item 
+using \mbox{\hyperlink{classtesseract__planning_1_1SimplePlannerPlanProfile_ab3e9b839cfdea0466f7a4428502bd065}{Const\+Ptr}} = std\+::shared\+\_\+ptr$<$ const \mbox{\hyperlink{classtesseract__planning_1_1SimplePlannerPlanProfile}{Simple\+Planner\+Plan\+Profile}} $>$
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Types inherited from \mbox{\hyperlink{classtesseract__planning_1_1Profile}{tesseract\+\_\+planning\+::\+Profile}}}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{classtesseract__planning_1_1Profile_a97eccfaeed5efa7bc023b252058fc011}{Ptr}} = std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classtesseract__planning_1_1Profile}{Profile}} $>$
+\item 
+using \mbox{\hyperlink{classtesseract__planning_1_1Profile_a8331936b7fcc7edcd7f2e9dca19aa8ec}{Const\+Ptr}} = std\+::shared\+\_\+ptr$<$ const \mbox{\hyperlink{classtesseract__planning_1_1Profile}{Profile}} $>$
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classtesseract__planning_1_1SimplePlannerLVSPlanProfile_a41f148fc552f9c4243c6760cf8c826b0}{Simple\+Planner\+LVSPlan\+Profile}} (double \mbox{\hyperlink{classtesseract__planning_1_1SimplePlannerLVSPlanProfile_a58ee7a1921b88ff7137f2b120f7dfef1}{state\+\_\+longest\+\_\+valid\+\_\+segment\+\_\+length}}=5 \texorpdfstring{$\ast$}{*}M\+\_\+\+PI/180, double \mbox{\hyperlink{classtesseract__planning_1_1SimplePlannerLVSPlanProfile_a7f5a90a2b2503640fcdc511f600d6bdc}{translation\+\_\+longest\+\_\+valid\+\_\+segment\+\_\+length}}=0.\+1, double \mbox{\hyperlink{classtesseract__planning_1_1SimplePlannerLVSPlanProfile_a8ae5221cb38f1afe3c9a6a5fe2d69be4}{rotation\+\_\+longest\+\_\+valid\+\_\+segment\+\_\+length}}=5 \texorpdfstring{$\ast$}{*}M\+\_\+\+PI/180, int \mbox{\hyperlink{classtesseract__planning_1_1SimplePlannerLVSPlanProfile_a094adae734ad0ba03704b781b51b68a6}{min\+\_\+steps}}=1, int \mbox{\hyperlink{classtesseract__planning_1_1SimplePlannerLVSPlanProfile_aedffef04b87316484aa6c8501a472978}{max\+\_\+steps}}=std\+::numeric\+\_\+limits$<$ int $>$\+::max())
+\begin{DoxyCompactList}\small\item\em \doxylink{classtesseract__planning_1_1SimplePlannerLVSPlanProfile}{Simple\+Planner\+LVSPlan\+Profile}. \end{DoxyCompactList}\item 
+std\+::vector$<$ \mbox{\hyperlink{structtesseract__planning_1_1MoveInstructionPoly}{Move\+Instruction\+Poly}} $>$ \mbox{\hyperlink{classtesseract__planning_1_1SimplePlannerLVSPlanProfile_af541a89675b1eabfedd1ab6443da195c}{generate}} (const \mbox{\hyperlink{structtesseract__planning_1_1MoveInstructionPoly}{Move\+Instruction\+Poly}} \&prev\+\_\+instruction, const \mbox{\hyperlink{structtesseract__planning_1_1MoveInstructionPoly}{Move\+Instruction\+Poly}} \&prev\+\_\+seed, const \mbox{\hyperlink{structtesseract__planning_1_1MoveInstructionPoly}{Move\+Instruction\+Poly}} \&base\+\_\+instruction, const \mbox{\hyperlink{structtesseract__planning_1_1InstructionPoly}{Instruction\+Poly}} \&next\+\_\+instruction, const std\+::shared\+\_\+ptr$<$ const tesseract\+\_\+environment\+::\+Environment $>$ \&\mbox{\hyperlink{basic__cartesian__example__unit_8cpp_a96ce750ee22ecbf4d17cc6cf146d9514}{env}}, const tesseract\+\_\+common\+::\+Manipulator\+Info \&global\+\_\+manip\+\_\+info) const override
+\begin{DoxyCompactList}\small\item\em Generate a seed for the provided base\+\_\+instruction. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classtesseract__planning_1_1SimplePlannerPlanProfile}{tesseract\+\_\+planning\+::\+Simple\+Planner\+Plan\+Profile}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classtesseract__planning_1_1SimplePlannerPlanProfile_a81ab66a758258c01838980c5219db0d2}{Simple\+Planner\+Plan\+Profile}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classtesseract__planning_1_1Profile}{tesseract\+\_\+planning\+::\+Profile}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classtesseract__planning_1_1Profile_ad25e3cd86696d894bbd251aec86b67df}{Profile}} ()=default
+\item 
+\mbox{\hyperlink{classtesseract__planning_1_1Profile_ae0d400ff6d72eb724e11679cf00bde26}{Profile}} (std\+::size\+\_\+t key)
+\item 
+virtual \mbox{\hyperlink{classtesseract__planning_1_1Profile_ab1f8b9ae3844d23ebca972187b7f64c5}{\texorpdfstring{$\sim$}{\string~}\+Profile}} ()=default
+\item 
+std\+::size\+\_\+t \mbox{\hyperlink{classtesseract__planning_1_1Profile_ae2abbb72b85a3086467a8fdf436f0d53}{get\+Key}} () const
+\begin{DoxyCompactList}\small\item\em Get the hash code associated with the profile. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+double \mbox{\hyperlink{classtesseract__planning_1_1SimplePlannerLVSPlanProfile_a58ee7a1921b88ff7137f2b120f7dfef1}{state\+\_\+longest\+\_\+valid\+\_\+segment\+\_\+length}}
+\begin{DoxyCompactList}\small\item\em The maximum joint distance, the norm of changes to all joint positions between successive steps. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classtesseract__planning_1_1SimplePlannerLVSPlanProfile_a7f5a90a2b2503640fcdc511f600d6bdc}{translation\+\_\+longest\+\_\+valid\+\_\+segment\+\_\+length}}
+\begin{DoxyCompactList}\small\item\em The maximum translation distance between successive steps. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classtesseract__planning_1_1SimplePlannerLVSPlanProfile_a8ae5221cb38f1afe3c9a6a5fe2d69be4}{rotation\+\_\+longest\+\_\+valid\+\_\+segment\+\_\+length}}
+\begin{DoxyCompactList}\small\item\em The maximum rotational distance between successive steps. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classtesseract__planning_1_1SimplePlannerLVSPlanProfile_a094adae734ad0ba03704b781b51b68a6}{min\+\_\+steps}}
+\begin{DoxyCompactList}\small\item\em The minimum number of steps for the plan. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classtesseract__planning_1_1SimplePlannerLVSPlanProfile_aedffef04b87316484aa6c8501a472978}{max\+\_\+steps}}
+\begin{DoxyCompactList}\small\item\em The maximum number of steps for the plan. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$class Archive $>$ }\\void \mbox{\hyperlink{classtesseract__planning_1_1SimplePlannerLVSPlanProfile_a3ce91ddd89dbe17ff47a477fafc0d04c}{serialize}} (Archive \&, const unsigned int)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{classtesseract__planning_1_1SimplePlannerPlanProfile}{tesseract\+\_\+planning\+::\+Simple\+Planner\+Plan\+Profile}}}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$class Archive $>$ }\\void \mbox{\hyperlink{classtesseract__planning_1_1SimplePlannerPlanProfile_afdeff71fa666cc5423bcdf11af1d4a58}{serialize}} (Archive \&, const unsigned int)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{classtesseract__planning_1_1Profile}{tesseract\+\_\+planning\+::\+Profile}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classtesseract__planning_1_1Profile_ac6073a166cf5c61aa9c1e04310df2120}{Profile}} (const \mbox{\hyperlink{classtesseract__planning_1_1Profile}{Profile}} \&)=default
+\item 
+\mbox{\hyperlink{classtesseract__planning_1_1Profile}{Profile}} \& \mbox{\hyperlink{classtesseract__planning_1_1Profile_a0e230bd826d4ee0536abeaade88fba2c}{operator=}} (const \mbox{\hyperlink{classtesseract__planning_1_1Profile}{Profile}} \&)=default
+\item 
+\mbox{\hyperlink{classtesseract__planning_1_1Profile_a2fc58bcb3c96b280df807bd2edd08523}{Profile}} (\mbox{\hyperlink{classtesseract__planning_1_1Profile}{Profile}} \&\&)=default
+\item 
+\mbox{\hyperlink{classtesseract__planning_1_1Profile}{Profile}} \& \mbox{\hyperlink{classtesseract__planning_1_1Profile_a4fee076d70a119b76550d176d085dc33}{operator=}} (\mbox{\hyperlink{classtesseract__planning_1_1Profile}{Profile}} \&\&)=default
+\item 
+{\footnotesize template$<$class Archive $>$ }\\void \mbox{\hyperlink{classtesseract__planning_1_1Profile_aa284fcaab6e1d36cfb3a7ce8ab947eb2}{serialize}} (Archive \&, const unsigned int)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classtesseract__planning_1_1SimplePlannerLVSPlanProfile_ac98d07dd8f7b70e16ccb9a01abf56b9c}{boost\+::serialization\+::access}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Static Public Member Functions inherited from \mbox{\hyperlink{classtesseract__planning_1_1SimplePlannerPlanProfile}{tesseract\+\_\+planning\+::\+Simple\+Planner\+Plan\+Profile}}}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::size\+\_\+t \mbox{\hyperlink{classtesseract__planning_1_1SimplePlannerPlanProfile_aa0b0604daae52a09adcd133e8ef0478f}{get\+Static\+Key}} ()
+\begin{DoxyCompactList}\small\item\em A utility function for getting profile ID. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{classtesseract__planning_1_1Profile}{tesseract\+\_\+planning\+::\+Profile}}}
+\begin{DoxyCompactItemize}
+\item 
+std\+::size\+\_\+t \mbox{\hyperlink{classtesseract__planning_1_1Profile_acafd9e0f65e1a54ca3803dd66bf22f4b}{key\+\_\+}} \{ 0 \}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Typedef Documentation}
+\Hypertarget{classtesseract__planning_1_1SimplePlannerLVSPlanProfile_a57a1563f13ba10c59f34f2cff6934440}\label{classtesseract__planning_1_1SimplePlannerLVSPlanProfile_a57a1563f13ba10c59f34f2cff6934440} 
+\index{tesseract\_planning::SimplePlannerLVSPlanProfile@{tesseract\_planning::SimplePlannerLVSPlanProfile}!ConstPtr@{ConstPtr}}
+\index{ConstPtr@{ConstPtr}!tesseract\_planning::SimplePlannerLVSPlanProfile@{tesseract\_planning::SimplePlannerLVSPlanProfile}}
+\doxysubsubsection{\texorpdfstring{ConstPtr}{ConstPtr}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classtesseract__planning_1_1SimplePlannerLVSPlanProfile_a57a1563f13ba10c59f34f2cff6934440}{tesseract\+\_\+planning\+::\+Simple\+Planner\+LVSPlan\+Profile\+::\+Const\+Ptr}} =  std\+::shared\+\_\+ptr$<$const \mbox{\hyperlink{classtesseract__planning_1_1SimplePlannerLVSPlanProfile}{Simple\+Planner\+LVSPlan\+Profile}}$>$}
+
+\Hypertarget{classtesseract__planning_1_1SimplePlannerLVSPlanProfile_ac2d38d37fcf377f9b5efe6c92f90aba3}\label{classtesseract__planning_1_1SimplePlannerLVSPlanProfile_ac2d38d37fcf377f9b5efe6c92f90aba3} 
+\index{tesseract\_planning::SimplePlannerLVSPlanProfile@{tesseract\_planning::SimplePlannerLVSPlanProfile}!Ptr@{Ptr}}
+\index{Ptr@{Ptr}!tesseract\_planning::SimplePlannerLVSPlanProfile@{tesseract\_planning::SimplePlannerLVSPlanProfile}}
+\doxysubsubsection{\texorpdfstring{Ptr}{Ptr}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classtesseract__planning_1_1SimplePlannerLVSPlanProfile_ac2d38d37fcf377f9b5efe6c92f90aba3}{tesseract\+\_\+planning\+::\+Simple\+Planner\+LVSPlan\+Profile\+::\+Ptr}} =  std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classtesseract__planning_1_1SimplePlannerLVSPlanProfile}{Simple\+Planner\+LVSPlan\+Profile}}$>$}
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classtesseract__planning_1_1SimplePlannerLVSPlanProfile_a41f148fc552f9c4243c6760cf8c826b0}\label{classtesseract__planning_1_1SimplePlannerLVSPlanProfile_a41f148fc552f9c4243c6760cf8c826b0} 
+\index{tesseract\_planning::SimplePlannerLVSPlanProfile@{tesseract\_planning::SimplePlannerLVSPlanProfile}!SimplePlannerLVSPlanProfile@{SimplePlannerLVSPlanProfile}}
+\index{SimplePlannerLVSPlanProfile@{SimplePlannerLVSPlanProfile}!tesseract\_planning::SimplePlannerLVSPlanProfile@{tesseract\_planning::SimplePlannerLVSPlanProfile}}
+\doxysubsubsection{\texorpdfstring{SimplePlannerLVSPlanProfile()}{SimplePlannerLVSPlanProfile()}}
+{\footnotesize\ttfamily tesseract\+\_\+planning\+::\+Simple\+Planner\+LVSPlan\+Profile\+::\+Simple\+Planner\+LVSPlan\+Profile (\begin{DoxyParamCaption}\item[{double}]{state\+\_\+longest\+\_\+valid\+\_\+segment\+\_\+length = {\ttfamily 5~\texorpdfstring{$\ast$}{*}~M\+\_\+PI~/~180},  }\item[{double}]{translation\+\_\+longest\+\_\+valid\+\_\+segment\+\_\+length = {\ttfamily 0.1},  }\item[{double}]{rotation\+\_\+longest\+\_\+valid\+\_\+segment\+\_\+length = {\ttfamily 5~\texorpdfstring{$\ast$}{*}~M\+\_\+PI~/~180},  }\item[{int}]{min\+\_\+steps = {\ttfamily 1},  }\item[{int}]{max\+\_\+steps = {\ttfamily std\+:\+:numeric\+\_\+limits$<$int$>$\+:\+:max()} }\end{DoxyParamCaption})}
+
+
+
+\doxylink{classtesseract__planning_1_1SimplePlannerLVSPlanProfile}{Simple\+Planner\+LVSPlan\+Profile}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em state\+\_\+longest\+\_\+valid\+\_\+segment\+\_\+length} & The maximum joint distance (norm of changes to all joint positions) between successive steps \\
+\hline
+{\em translation\+\_\+longest\+\_\+valid\+\_\+segment\+\_\+length} & The maximum translation distance between successive steps \\
+\hline
+{\em rotation\+\_\+longest\+\_\+valid\+\_\+segment\+\_\+length} & The maximum rotational distance between successive steps \\
+\hline
+{\em min\+\_\+steps} & The minimum number of steps for the plan \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classtesseract__planning_1_1SimplePlannerLVSPlanProfile_af541a89675b1eabfedd1ab6443da195c}\label{classtesseract__planning_1_1SimplePlannerLVSPlanProfile_af541a89675b1eabfedd1ab6443da195c} 
+\index{tesseract\_planning::SimplePlannerLVSPlanProfile@{tesseract\_planning::SimplePlannerLVSPlanProfile}!generate@{generate}}
+\index{generate@{generate}!tesseract\_planning::SimplePlannerLVSPlanProfile@{tesseract\_planning::SimplePlannerLVSPlanProfile}}
+\doxysubsubsection{\texorpdfstring{generate()}{generate()}}
+{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{structtesseract__planning_1_1MoveInstructionPoly}{Move\+Instruction\+Poly}} $>$ tesseract\+\_\+planning\+::\+Simple\+Planner\+LVSPlan\+Profile\+::generate (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structtesseract__planning_1_1MoveInstructionPoly}{Move\+Instruction\+Poly}} \&}]{prev\+\_\+instruction,  }\item[{const \mbox{\hyperlink{structtesseract__planning_1_1MoveInstructionPoly}{Move\+Instruction\+Poly}} \&}]{prev\+\_\+seed,  }\item[{const \mbox{\hyperlink{structtesseract__planning_1_1MoveInstructionPoly}{Move\+Instruction\+Poly}} \&}]{base\+\_\+instruction,  }\item[{const \mbox{\hyperlink{structtesseract__planning_1_1InstructionPoly}{Instruction\+Poly}} \&}]{next\+\_\+instruction,  }\item[{const std\+::shared\+\_\+ptr$<$ const tesseract\+\_\+environment\+::\+Environment $>$ \&}]{env,  }\item[{const tesseract\+\_\+common\+::\+Manipulator\+Info \&}]{global\+\_\+manip\+\_\+info }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Generate a seed for the provided base\+\_\+instruction. 
+
+This should not include the prev\+\_\+instruction but must include the base\+\_\+instruction 
+\begin{DoxyParams}{Parameters}
+{\em prev\+\_\+instruction} & The previous instruction \\
+\hline
+{\em prev\+\_\+seed} & The previous seed \\
+\hline
+{\em base\+\_\+instruction} & The base/current instruction to generate the seed for \\
+\hline
+{\em next\+\_\+instruction} & The next instruction. This will be a null instruction for the final instruction \\
+\hline
+{\em request} & The planning request \\
+\hline
+{\em global\+\_\+manip\+\_\+info} & The global manipulator information \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A vector of move instrucitons 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classtesseract__planning_1_1SimplePlannerPlanProfile_a36cd666d27cd041c50166c993278fa33}{tesseract\+\_\+planning\+::\+Simple\+Planner\+Plan\+Profile}}.
+
+\Hypertarget{classtesseract__planning_1_1SimplePlannerLVSPlanProfile_a3ce91ddd89dbe17ff47a477fafc0d04c}\label{classtesseract__planning_1_1SimplePlannerLVSPlanProfile_a3ce91ddd89dbe17ff47a477fafc0d04c} 
+\index{tesseract\_planning::SimplePlannerLVSPlanProfile@{tesseract\_planning::SimplePlannerLVSPlanProfile}!serialize@{serialize}}
+\index{serialize@{serialize}!tesseract\_planning::SimplePlannerLVSPlanProfile@{tesseract\_planning::SimplePlannerLVSPlanProfile}}
+\doxysubsubsection{\texorpdfstring{serialize()}{serialize()}}
+{\footnotesize\ttfamily template$<$class Archive $>$ \\
+void tesseract\+\_\+planning\+::\+Simple\+Planner\+LVSPlan\+Profile\+::serialize (\begin{DoxyParamCaption}\item[{Archive \&}]{ar,  }\item[{const unsigned int}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+\doxysubsection{Friends And Related Symbol Documentation}
+\Hypertarget{classtesseract__planning_1_1SimplePlannerLVSPlanProfile_ac98d07dd8f7b70e16ccb9a01abf56b9c}\label{classtesseract__planning_1_1SimplePlannerLVSPlanProfile_ac98d07dd8f7b70e16ccb9a01abf56b9c} 
+\index{tesseract\_planning::SimplePlannerLVSPlanProfile@{tesseract\_planning::SimplePlannerLVSPlanProfile}!boost::serialization::access@{boost::serialization::access}}
+\index{boost::serialization::access@{boost::serialization::access}!tesseract\_planning::SimplePlannerLVSPlanProfile@{tesseract\_planning::SimplePlannerLVSPlanProfile}}
+\doxysubsubsection{\texorpdfstring{boost::serialization::access}{boost::serialization::access}}
+{\footnotesize\ttfamily friend class boost\+::serialization\+::access\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classtesseract__planning_1_1SimplePlannerLVSPlanProfile_aedffef04b87316484aa6c8501a472978}\label{classtesseract__planning_1_1SimplePlannerLVSPlanProfile_aedffef04b87316484aa6c8501a472978} 
+\index{tesseract\_planning::SimplePlannerLVSPlanProfile@{tesseract\_planning::SimplePlannerLVSPlanProfile}!max\_steps@{max\_steps}}
+\index{max\_steps@{max\_steps}!tesseract\_planning::SimplePlannerLVSPlanProfile@{tesseract\_planning::SimplePlannerLVSPlanProfile}}
+\doxysubsubsection{\texorpdfstring{max\_steps}{max\_steps}}
+{\footnotesize\ttfamily int tesseract\+\_\+planning\+::\+Simple\+Planner\+LVSPlan\+Profile\+::max\+\_\+steps}
+
+
+
+The maximum number of steps for the plan. 
+
+\Hypertarget{classtesseract__planning_1_1SimplePlannerLVSPlanProfile_a094adae734ad0ba03704b781b51b68a6}\label{classtesseract__planning_1_1SimplePlannerLVSPlanProfile_a094adae734ad0ba03704b781b51b68a6} 
+\index{tesseract\_planning::SimplePlannerLVSPlanProfile@{tesseract\_planning::SimplePlannerLVSPlanProfile}!min\_steps@{min\_steps}}
+\index{min\_steps@{min\_steps}!tesseract\_planning::SimplePlannerLVSPlanProfile@{tesseract\_planning::SimplePlannerLVSPlanProfile}}
+\doxysubsubsection{\texorpdfstring{min\_steps}{min\_steps}}
+{\footnotesize\ttfamily int tesseract\+\_\+planning\+::\+Simple\+Planner\+LVSPlan\+Profile\+::min\+\_\+steps}
+
+
+
+The minimum number of steps for the plan. 
+
+\Hypertarget{classtesseract__planning_1_1SimplePlannerLVSPlanProfile_a8ae5221cb38f1afe3c9a6a5fe2d69be4}\label{classtesseract__planning_1_1SimplePlannerLVSPlanProfile_a8ae5221cb38f1afe3c9a6a5fe2d69be4} 
+\index{tesseract\_planning::SimplePlannerLVSPlanProfile@{tesseract\_planning::SimplePlannerLVSPlanProfile}!rotation\_longest\_valid\_segment\_length@{rotation\_longest\_valid\_segment\_length}}
+\index{rotation\_longest\_valid\_segment\_length@{rotation\_longest\_valid\_segment\_length}!tesseract\_planning::SimplePlannerLVSPlanProfile@{tesseract\_planning::SimplePlannerLVSPlanProfile}}
+\doxysubsubsection{\texorpdfstring{rotation\_longest\_valid\_segment\_length}{rotation\_longest\_valid\_segment\_length}}
+{\footnotesize\ttfamily double tesseract\+\_\+planning\+::\+Simple\+Planner\+LVSPlan\+Profile\+::rotation\+\_\+longest\+\_\+valid\+\_\+segment\+\_\+length}
+
+
+
+The maximum rotational distance between successive steps. 
+
+\Hypertarget{classtesseract__planning_1_1SimplePlannerLVSPlanProfile_a58ee7a1921b88ff7137f2b120f7dfef1}\label{classtesseract__planning_1_1SimplePlannerLVSPlanProfile_a58ee7a1921b88ff7137f2b120f7dfef1} 
+\index{tesseract\_planning::SimplePlannerLVSPlanProfile@{tesseract\_planning::SimplePlannerLVSPlanProfile}!state\_longest\_valid\_segment\_length@{state\_longest\_valid\_segment\_length}}
+\index{state\_longest\_valid\_segment\_length@{state\_longest\_valid\_segment\_length}!tesseract\_planning::SimplePlannerLVSPlanProfile@{tesseract\_planning::SimplePlannerLVSPlanProfile}}
+\doxysubsubsection{\texorpdfstring{state\_longest\_valid\_segment\_length}{state\_longest\_valid\_segment\_length}}
+{\footnotesize\ttfamily double tesseract\+\_\+planning\+::\+Simple\+Planner\+LVSPlan\+Profile\+::state\+\_\+longest\+\_\+valid\+\_\+segment\+\_\+length}
+
+
+
+The maximum joint distance, the norm of changes to all joint positions between successive steps. 
+
+\Hypertarget{classtesseract__planning_1_1SimplePlannerLVSPlanProfile_a7f5a90a2b2503640fcdc511f600d6bdc}\label{classtesseract__planning_1_1SimplePlannerLVSPlanProfile_a7f5a90a2b2503640fcdc511f600d6bdc} 
+\index{tesseract\_planning::SimplePlannerLVSPlanProfile@{tesseract\_planning::SimplePlannerLVSPlanProfile}!translation\_longest\_valid\_segment\_length@{translation\_longest\_valid\_segment\_length}}
+\index{translation\_longest\_valid\_segment\_length@{translation\_longest\_valid\_segment\_length}!tesseract\_planning::SimplePlannerLVSPlanProfile@{tesseract\_planning::SimplePlannerLVSPlanProfile}}
+\doxysubsubsection{\texorpdfstring{translation\_longest\_valid\_segment\_length}{translation\_longest\_valid\_segment\_length}}
+{\footnotesize\ttfamily double tesseract\+\_\+planning\+::\+Simple\+Planner\+LVSPlan\+Profile\+::translation\+\_\+longest\+\_\+valid\+\_\+segment\+\_\+length}
+
+
+
+The maximum translation distance between successive steps. 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+tesseract\+\_\+motion\+\_\+planners/simple/include/tesseract\+\_\+motion\+\_\+planners/simple/profile/\mbox{\hyperlink{simple__planner__lvs__plan__profile_8h}{simple\+\_\+planner\+\_\+lvs\+\_\+plan\+\_\+profile.\+h}}\item 
+tesseract\+\_\+motion\+\_\+planners/simple/src/profile/\mbox{\hyperlink{simple__planner__lvs__plan__profile_8cpp}{simple\+\_\+planner\+\_\+lvs\+\_\+plan\+\_\+profile.\+cpp}}\end{DoxyCompactItemize}

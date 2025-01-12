@@ -1,0 +1,76 @@
+\doxysection{tesseract\+\_\+task\+\_\+composer/test/tesseract\+\_\+task\+\_\+composer\+\_\+taskflow\+\_\+unit.cpp File Reference}
+\hypertarget{tesseract__task__composer__taskflow__unit_8cpp}{}\label{tesseract__task__composer__taskflow__unit_8cpp}\index{tesseract\_task\_composer/test/tesseract\_task\_composer\_taskflow\_unit.cpp@{tesseract\_task\_composer/test/tesseract\_task\_composer\_taskflow\_unit.cpp}}
+{\ttfamily \#include $<$tesseract\+\_\+common/macros.\+h$>$}\newline
+{\ttfamily \#include $<$gtest/gtest.\+h$>$}\newline
+{\ttfamily \#include $<$yaml-\/cpp/yaml.\+h$>$}\newline
+{\ttfamily \#include $<$memory$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+task\+\_\+composer/taskflow/taskflow\+\_\+task\+\_\+composer\+\_\+executor.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+task\+\_\+composer/core/test\+\_\+suite/task\+\_\+composer\+\_\+executor\+\_\+unit.\+hpp$>$}\newline
+Include dependency graph for tesseract\+\_\+task\+\_\+composer\+\_\+taskflow\+\_\+unit.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d0/d73/tesseract__task__composer__taskflow__unit_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{tesseract__task__composer__taskflow__unit_8cpp_a530acb618805c0bd18833856e09d20ba}{EXPECT\+\_\+\+EQ}} (executor.\+get\+Name(), "{}Task\+Composer\+Executor\+Tests"{})
+\item 
+\mbox{\hyperlink{tesseract__task__composer__taskflow__unit_8cpp_af92aeb632014513c2954b3fa62134bb4}{EXPECT\+\_\+\+EQ}} (executor.\+get\+Worker\+Count(), 3)
+\item 
+\mbox{\hyperlink{tesseract__task__composer__taskflow__unit_8cpp_a185fe574245fcc94d1d15ae05f1d47f1}{EXPECT\+\_\+\+ANY\+\_\+\+THROW}} (std\+::make\+\_\+unique$<$ \mbox{\hyperlink{classtesseract__planning_1_1TaskflowTaskComposerExecutor}{Taskflow\+Task\+Composer\+Executor}} $>$("{}Task\+Composer\+Executor\+Tests"{}, \mbox{\hyperlink{tesseract__task__composer__core__unit_8cpp_a01d92a800904faa16b8c1c1372c40fb3}{config}}\mbox{[}"{}config"{}\mbox{]}))
+\item 
+int \mbox{\hyperlink{tesseract__task__composer__taskflow__unit_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}{main}} (int argc, char \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}argv)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+YAML\+::\+Node \mbox{\hyperlink{tesseract__task__composer__taskflow__unit_8cpp_a01d92a800904faa16b8c1c1372c40fb3}{config}} = YAML\+::\+Load(\mbox{\hyperlink{tesseract__task__composer__core__unit_8cpp_a5d55e2558544e2ad2ea0b54f8e3d41fc}{str}})
+\item 
+\mbox{\hyperlink{classtesseract__planning_1_1TaskflowTaskComposerExecutor}{Taskflow\+Task\+Composer\+Executor}} \mbox{\hyperlink{tesseract__task__composer__taskflow__unit_8cpp_ab85065e5a325fc5bf8675e6c55a3e72f}{executor}} ("{}Task\+Composer\+Executor\+Tests"{}, \mbox{\hyperlink{tesseract__task__composer__core__unit_8cpp_a01d92a800904faa16b8c1c1372c40fb3}{config}}\mbox{[}"{}config"{}\mbox{]})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{tesseract__task__composer__taskflow__unit_8cpp_a185fe574245fcc94d1d15ae05f1d47f1}\label{tesseract__task__composer__taskflow__unit_8cpp_a185fe574245fcc94d1d15ae05f1d47f1} 
+\index{tesseract\_task\_composer\_taskflow\_unit.cpp@{tesseract\_task\_composer\_taskflow\_unit.cpp}!EXPECT\_ANY\_THROW@{EXPECT\_ANY\_THROW}}
+\index{EXPECT\_ANY\_THROW@{EXPECT\_ANY\_THROW}!tesseract\_task\_composer\_taskflow\_unit.cpp@{tesseract\_task\_composer\_taskflow\_unit.cpp}}
+\doxysubsubsection{\texorpdfstring{EXPECT\_ANY\_THROW()}{EXPECT\_ANY\_THROW()}}
+{\footnotesize\ttfamily EXPECT\+\_\+\+ANY\+\_\+\+THROW (\begin{DoxyParamCaption}\item[{std\+::make\+\_\+unique$<$ \mbox{\hyperlink{classtesseract__planning_1_1TaskflowTaskComposerExecutor}{Taskflow\+Task\+Composer\+Executor}} $>$}]{"{}\+Task\+Composer\+Executor\+Tests"{}, config\mbox{[}"{}config"{}\mbox{]} }\end{DoxyParamCaption})}
+
+\Hypertarget{tesseract__task__composer__taskflow__unit_8cpp_a530acb618805c0bd18833856e09d20ba}\label{tesseract__task__composer__taskflow__unit_8cpp_a530acb618805c0bd18833856e09d20ba} 
+\index{tesseract\_task\_composer\_taskflow\_unit.cpp@{tesseract\_task\_composer\_taskflow\_unit.cpp}!EXPECT\_EQ@{EXPECT\_EQ}}
+\index{EXPECT\_EQ@{EXPECT\_EQ}!tesseract\_task\_composer\_taskflow\_unit.cpp@{tesseract\_task\_composer\_taskflow\_unit.cpp}}
+\doxysubsubsection{\texorpdfstring{EXPECT\_EQ()}{EXPECT\_EQ()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily EXPECT\+\_\+\+EQ (\begin{DoxyParamCaption}\item[{executor.}]{get\+Name(),  }\item[{"{}Task\+Composer\+Executor\+Tests"{}}]{ }\end{DoxyParamCaption})}
+
+\Hypertarget{tesseract__task__composer__taskflow__unit_8cpp_af92aeb632014513c2954b3fa62134bb4}\label{tesseract__task__composer__taskflow__unit_8cpp_af92aeb632014513c2954b3fa62134bb4} 
+\index{tesseract\_task\_composer\_taskflow\_unit.cpp@{tesseract\_task\_composer\_taskflow\_unit.cpp}!EXPECT\_EQ@{EXPECT\_EQ}}
+\index{EXPECT\_EQ@{EXPECT\_EQ}!tesseract\_task\_composer\_taskflow\_unit.cpp@{tesseract\_task\_composer\_taskflow\_unit.cpp}}
+\doxysubsubsection{\texorpdfstring{EXPECT\_EQ()}{EXPECT\_EQ()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily EXPECT\+\_\+\+EQ (\begin{DoxyParamCaption}\item[{executor.}]{get\+Worker\+Count(),  }\item[{3}]{ }\end{DoxyParamCaption})}
+
+\Hypertarget{tesseract__task__composer__taskflow__unit_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}\label{tesseract__task__composer__taskflow__unit_8cpp_a3c04138a5bfe5d72780bb7e82a18e627} 
+\index{tesseract\_task\_composer\_taskflow\_unit.cpp@{tesseract\_task\_composer\_taskflow\_unit.cpp}!main@{main}}
+\index{main@{main}!tesseract\_task\_composer\_taskflow\_unit.cpp@{tesseract\_task\_composer\_taskflow\_unit.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{argv }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{tesseract__task__composer__taskflow__unit_8cpp_a01d92a800904faa16b8c1c1372c40fb3}\label{tesseract__task__composer__taskflow__unit_8cpp_a01d92a800904faa16b8c1c1372c40fb3} 
+\index{tesseract\_task\_composer\_taskflow\_unit.cpp@{tesseract\_task\_composer\_taskflow\_unit.cpp}!config@{config}}
+\index{config@{config}!tesseract\_task\_composer\_taskflow\_unit.cpp@{tesseract\_task\_composer\_taskflow\_unit.cpp}}
+\doxysubsubsection{\texorpdfstring{config}{config}}
+{\footnotesize\ttfamily YAML\+::\+Node config = YAML\+::\+Load(\mbox{\hyperlink{tesseract__task__composer__core__unit_8cpp_a5d55e2558544e2ad2ea0b54f8e3d41fc}{str}})}
+
+\Hypertarget{tesseract__task__composer__taskflow__unit_8cpp_ab85065e5a325fc5bf8675e6c55a3e72f}\label{tesseract__task__composer__taskflow__unit_8cpp_ab85065e5a325fc5bf8675e6c55a3e72f} 
+\index{tesseract\_task\_composer\_taskflow\_unit.cpp@{tesseract\_task\_composer\_taskflow\_unit.cpp}!executor@{executor}}
+\index{executor@{executor}!tesseract\_task\_composer\_taskflow\_unit.cpp@{tesseract\_task\_composer\_taskflow\_unit.cpp}}
+\doxysubsubsection{\texorpdfstring{executor}{executor}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classtesseract__planning_1_1TaskflowTaskComposerExecutor}{Taskflow\+Task\+Composer\+Executor}} executor("{}Task\+Composer\+Executor\+Tests"{}, \mbox{\hyperlink{tesseract__task__composer__core__unit_8cpp_a01d92a800904faa16b8c1c1372c40fb3}{config}}\mbox{[}"{}config"{}\mbox{]}) (\begin{DoxyParamCaption}\item[{"{}Task\+Composer\+Executor\+Tests"{}}]{,  }\item[{\mbox{\hyperlink{tesseract__task__composer__core__unit_8cpp_a01d92a800904faa16b8c1c1372c40fb3}{config}}}]{\mbox{[}"{}config"{}\mbox{]} }\end{DoxyParamCaption})}
+

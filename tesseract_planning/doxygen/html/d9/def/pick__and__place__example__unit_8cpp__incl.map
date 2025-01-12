@@ -1,0 +1,27 @@
+<map id="tesseract_examples/test/pick_and_place_example_unit.cpp" name="tesseract_examples/test/pick_and_place_example_unit.cpp">
+<area shape="rect" id="Node000001" title=" " alt="" coords="351,5,492,61"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,294,195,320"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="351,43,278,52,202,66,136,85,111,97,95,111,84,130,77,151,74,197,81,242,92,279,87,280,76,243,69,197,71,150,79,128,91,107,108,93,134,80,200,61,278,47,350,38"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="105,117,199,142"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="351,62,202,113,200,108,349,57"/>
+<area shape="rect" id="Node000004" href="$d2/dab/pick__and__place__example_8h.html" title="An example of a robot picking up a box and placing it on a shelf." alt="" coords="223,109,404,150"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="392,64,349,101,346,97,388,60"/>
+<area shape="rect" id="Node000010" title=" " alt="" coords="427,117,632,142"/>
+<area shape="poly" id="edge11_Node000001_Node000010" title=" " alt="" coords="454,60,506,105,503,109,451,64"/>
+<area shape="rect" id="Node000011" title=" " alt="" coords="655,109,809,150"/>
+<area shape="poly" id="edge12_Node000001_Node000011" title=" " alt="" coords="493,53,653,102,652,107,492,59"/>
+<area shape="rect" id="Node000012" title=" " alt="" coords="832,109,1019,150"/>
+<area shape="poly" id="edge13_Node000001_Node000012" title=" " alt="" coords="493,45,818,105,817,111,492,50"/>
+<area shape="poly" id="edge4_Node000004_Node000002" title=" " alt="" coords="272,152,234,174,196,200,153,242,119,283,115,280,149,238,193,196,231,169,270,148"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="207,205,257,231"/>
+<area shape="poly" id="edge5_Node000004_Node000005" title=" " alt="" coords="297,152,255,196,251,192,293,148"/>
+<area shape="rect" id="Node000006" href="$df/d24/example_8h.html" title=" " alt="" coords="281,198,418,238"/>
+<area shape="poly" id="edge6_Node000004_Node000006" title=" " alt="" coords="324,149,338,182,333,184,319,151"/>
+<area shape="poly" id="edge7_Node000006_Node000002" title=" " alt="" coords="294,241,150,291,149,286,292,236"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="218,294,286,320"/>
+<area shape="poly" id="edge8_Node000006_Node000007" title=" " alt="" coords="329,241,278,286,275,282,325,237"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="310,286,463,327"/>
+<area shape="poly" id="edge9_Node000006_Node000008" title=" " alt="" coords="360,238,375,271,370,273,355,240"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="487,286,641,327"/>
+<area shape="poly" id="edge10_Node000006_Node000009" title=" " alt="" coords="399,236,502,278,500,283,397,241"/>
+</map>

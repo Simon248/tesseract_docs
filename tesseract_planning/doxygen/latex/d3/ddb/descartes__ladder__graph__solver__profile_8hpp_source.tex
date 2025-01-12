@@ -1,0 +1,24 @@
+\doxysection{descartes\+\_\+ladder\+\_\+graph\+\_\+solver\+\_\+profile.\+hpp}
+\hypertarget{descartes__ladder__graph__solver__profile_8hpp_source}{}\label{descartes__ladder__graph__solver__profile_8hpp_source}\index{tesseract\_motion\_planners/descartes/include/tesseract\_motion\_planners/descartes/impl/profile/descartes\_ladder\_graph\_solver\_profile.hpp@{tesseract\_motion\_planners/descartes/include/tesseract\_motion\_planners/descartes/impl/profile/descartes\_ladder\_graph\_solver\_profile.hpp}}
+\mbox{\hyperlink{descartes__ladder__graph__solver__profile_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00026\ \textcolor{preprocessor}{\#ifndef\ TESSERACT\_MOTION\_PLANNERS\_DESCARTES\_IMPL\_DESCARTES\_DESCARTES\_LADDER\_GRAPH\_SOLVER\_PROFILE\_HPP}}
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#define\ TESSERACT\_MOTION\_PLANNERS\_DESCARTES\_IMPL\_DESCARTES\_DESCARTES\_LADDER\_GRAPH\_SOLVER\_PROFILE\_HPP}}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{descartes__ladder__graph__solver__profile_8h}{tesseract\_motion\_planners/descartes/profile/descartes\_ladder\_graph\_solver\_profile.h}}>}}
+\DoxyCodeLine{00030\ \textcolor{preprocessor}{\#include\ <descartes\_light/solvers/ladder\_graph/ladder\_graph\_solver.h>}}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacetesseract__planning}{tesseract\_planning}}}
+\DoxyCodeLine{00033\ \{}
+\DoxyCodeLine{00034\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ FloatType>}
+\DoxyCodeLine{00035\ std::unique\_ptr<descartes\_light::Solver<FloatType>>\ \mbox{\hyperlink{classtesseract__planning_1_1DescartesLadderGraphSolverProfile_ae6d525afd566f5c3742c789c67c6eb86}{DescartesLadderGraphSolverProfile<FloatType>::create}}()\textcolor{keyword}{\ const}}
+\DoxyCodeLine{00036\ \textcolor{keyword}{}\{}
+\DoxyCodeLine{00037\ \ \ \textcolor{keywordflow}{return}\ std::make\_unique<descartes\_light::LadderGraphSolver<FloatType>>(\mbox{\hyperlink{descartes__planner__tests_8cpp_a25d8d1c773ae4be4c54269b39a4fc203}{num\_threads}});}
+\DoxyCodeLine{00038\ \}}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \}\ \ \textcolor{comment}{//\ namespace\ tesseract\_planning}}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00042\ \textcolor{preprocessor}{\#endif\ \ }\textcolor{comment}{//\ TESSERACT\_MOTION\_PLANNERS\_DESCARTES\_IMPL\_DESCARTES\_DESCARTES\_LADDER\_GRAPH\_SOLVER\_PROFILE\_HPP}}
+
+\end{DoxyCode}

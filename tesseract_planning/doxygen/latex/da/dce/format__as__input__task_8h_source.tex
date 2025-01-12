@@ -1,0 +1,69 @@
+\doxysection{format\+\_\+as\+\_\+input\+\_\+task.\+h}
+\hypertarget{format__as__input__task_8h_source}{}\label{format__as__input__task_8h_source}\index{tesseract\_task\_composer/planning/include/tesseract\_task\_composer/planning/nodes/format\_as\_input\_task.h@{tesseract\_task\_composer/planning/include/tesseract\_task\_composer/planning/nodes/format\_as\_input\_task.h}}
+\mbox{\hyperlink{format__as__input__task_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#ifndef\ TESSERACT\_TASK\_COMPOSER\_FORMAT\_AS\_INPUT\_TASK\_H}}
+\DoxyCodeLine{00030\ \textcolor{preprocessor}{\#define\ TESSERACT\_TASK\_COMPOSER\_FORMAT\_AS\_INPUT\_TASK\_H}}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \textcolor{preprocessor}{\#include\ <tesseract\_common/macros.h>}}
+\DoxyCodeLine{00033\ TESSERACT\_COMMON\_IGNORE\_WARNINGS\_PUSH}
+\DoxyCodeLine{00034\ \textcolor{preprocessor}{\#include\ <boost/serialization/access.hpp>}}
+\DoxyCodeLine{00035\ \textcolor{preprocessor}{\#include\ <boost/serialization/export.hpp>}}
+\DoxyCodeLine{00036\ \textcolor{preprocessor}{\#include\ <tesseract\_task\_composer/planning/tesseract\_task\_composer\_planning\_nodes\_export.h>}}
+\DoxyCodeLine{00037\ \mbox{\hyperlink{namespaceTESSERACT__COMMON__IGNORE__WARNINGS__POP}{TESSERACT\_COMMON\_IGNORE\_WARNINGS\_POP}}}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{task__composer__task_8h}{tesseract\_task\_composer/core/task\_composer\_task.h}}>}}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacetesseract__planning}{tesseract\_planning}}}
+\DoxyCodeLine{00042\ \{}
+\DoxyCodeLine{00043\ \textcolor{keyword}{class\ }TaskComposerPluginFactory;}
+\DoxyCodeLine{00055\ \textcolor{keyword}{class\ }TESSERACT\_TASK\_COMPOSER\_PLANNING\_NODES\_EXPORT\ \mbox{\hyperlink{classtesseract__planning_1_1FormatAsInputTask}{FormatAsInputTask}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerTask}{TaskComposerTask}}}
+\DoxyCodeLine{00056\ \{}
+\DoxyCodeLine{00057\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00058\ \ \ \textcolor{comment}{//\ Requried}}
+\DoxyCodeLine{00059\ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ std::string\ \mbox{\hyperlink{classtesseract__planning_1_1FormatAsInputTask_ab730eea2ba6646f070d067a84ff413d9}{INPUT\_PRE\_PLANNING\_PROGRAM\_PORT}};}
+\DoxyCodeLine{00060\ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ std::string\ \mbox{\hyperlink{classtesseract__planning_1_1FormatAsInputTask_a8022d8bb307db4c684fa2d3d143fb9c3}{INPUT\_POST\_PLANNING\_PROGRAM\_PORT}};}
+\DoxyCodeLine{00061\ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ std::string\ \mbox{\hyperlink{classtesseract__planning_1_1FormatAsInputTask_a3883bf6ac896f3ea6da14908fd090144}{OUTPUT\_PROGRAM\_PORT}};}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00063\ \ \ \textcolor{keyword}{using\ }\mbox{\hyperlink{classtesseract__planning_1_1FormatAsInputTask_ab0f3223938187936650ab576a53d4506}{Ptr}}\ =\ std::shared\_ptr<FormatAsInputTask>;}
+\DoxyCodeLine{00064\ \ \ \textcolor{keyword}{using\ }\mbox{\hyperlink{classtesseract__planning_1_1FormatAsInputTask_a7397966dd6df53806d954ee3830976a3}{ConstPtr}}\ =\ std::shared\_ptr<const\ FormatAsInputTask>;}
+\DoxyCodeLine{00065\ \ \ \textcolor{keyword}{using\ }\mbox{\hyperlink{classtesseract__planning_1_1FormatAsInputTask_acf37843314f7e3f1b4c5054c9ab74ee8}{UPtr}}\ =\ std::unique\_ptr<FormatAsInputTask>;}
+\DoxyCodeLine{00066\ \ \ \textcolor{keyword}{using\ }\mbox{\hyperlink{classtesseract__planning_1_1FormatAsInputTask_a023b697994f94bceade1a19ca35ba2ba}{ConstUPtr}}\ =\ std::unique\_ptr<const\ FormatAsInputTask>;}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00068\ \ \ \mbox{\hyperlink{classtesseract__planning_1_1FormatAsInputTask}{FormatAsInputTask}}();}
+\DoxyCodeLine{00069\ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{classtesseract__planning_1_1FormatAsInputTask}{FormatAsInputTask}}(std::string\ \mbox{\hyperlink{tesseract__task__composer__core__unit_8cpp_a9b45b3e13bd9167aab02e17e08916231}{name}},}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::string\ input\_pre\_planning\_program\_key,}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::string\ input\_post\_planning\_program\_key,}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::string\ output\_program\_key,}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ conditional\ =\ \textcolor{keyword}{true});}
+\DoxyCodeLine{00074\ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{classtesseract__planning_1_1FormatAsInputTask}{FormatAsInputTask}}(std::string\ \mbox{\hyperlink{tesseract__task__composer__core__unit_8cpp_a9b45b3e13bd9167aab02e17e08916231}{name}},}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ YAML::Node\&\ \mbox{\hyperlink{tesseract__task__composer__core__unit_8cpp_a01d92a800904faa16b8c1c1372c40fb3}{config}},}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerPluginFactory}{TaskComposerPluginFactory}}\&\ plugin\_factory);}
+\DoxyCodeLine{00077\ \ \ \mbox{\hyperlink{classtesseract__planning_1_1FormatAsInputTask_a9d3398ad486e0fe592568ecf884c4757}{\string~FormatAsInputTask}}()\ \textcolor{keyword}{override}\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00078\ \ \ \mbox{\hyperlink{classtesseract__planning_1_1FormatAsInputTask_ab21bf1393fe4a1dfe698721acda1f600}{FormatAsInputTask}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classtesseract__planning_1_1FormatAsInputTask}{FormatAsInputTask}}\&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00079\ \ \ \mbox{\hyperlink{classtesseract__planning_1_1FormatAsInputTask}{FormatAsInputTask}}\&\ \mbox{\hyperlink{classtesseract__planning_1_1FormatAsInputTask_a79cd7d2731ac86071c28796afaf10de9}{operator=}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classtesseract__planning_1_1FormatAsInputTask}{FormatAsInputTask}}\&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00080\ \ \ \mbox{\hyperlink{classtesseract__planning_1_1FormatAsInputTask_a9d648fe8280657ef3d384f0801b29b2f}{FormatAsInputTask}}(\mbox{\hyperlink{classtesseract__planning_1_1FormatAsInputTask}{FormatAsInputTask}}\&\&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00081\ \ \ \mbox{\hyperlink{classtesseract__planning_1_1FormatAsInputTask}{FormatAsInputTask}}\&\ \mbox{\hyperlink{classtesseract__planning_1_1FormatAsInputTask_a8eb37b61bc7d34e26894235f15839bd6}{operator=}}(\mbox{\hyperlink{classtesseract__planning_1_1FormatAsInputTask}{FormatAsInputTask}}\&\&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00082\ }
+\DoxyCodeLine{00083\ \ \ \textcolor{keywordtype}{bool}\ operator==(\textcolor{keyword}{const}\ \mbox{\hyperlink{classtesseract__planning_1_1FormatAsInputTask}{FormatAsInputTask}}\&\ rhs)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00084\ \ \ \textcolor{keywordtype}{bool}\ operator!=(\textcolor{keyword}{const}\ \mbox{\hyperlink{classtesseract__planning_1_1FormatAsInputTask}{FormatAsInputTask}}\&\ rhs)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00085\ }
+\DoxyCodeLine{00086\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00087\ \ \ \textcolor{keyword}{friend}\ \textcolor{keyword}{struct\ }tesseract\_common::Serialization;}
+\DoxyCodeLine{00088\ \ \ \textcolor{keyword}{friend}\ \textcolor{keyword}{class\ }boost::serialization::access;}
+\DoxyCodeLine{00089\ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{class}\ Archive>}
+\DoxyCodeLine{00090\ \ \ \textcolor{keywordtype}{void}\ serialize(Archive\&\ ar,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ version);\ \ \textcolor{comment}{//\ NOLINT}}
+\DoxyCodeLine{00091\ }
+\DoxyCodeLine{00092\ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{structtesseract__planning_1_1TaskComposerNodePorts}{TaskComposerNodePorts}}\ ports();}
+\DoxyCodeLine{00093\ }
+\DoxyCodeLine{00094\ \ \ std::unique\_ptr<TaskComposerNodeInfo>}
+\DoxyCodeLine{00095\ \ \ runImpl(\mbox{\hyperlink{classtesseract__planning_1_1TaskComposerContext}{TaskComposerContext}}\&\ \mbox{\hyperlink{tesseract__task__composer__core__unit_8cpp_adf0dd2db07cdbb966d6e385d3cd2605c}{context}},\ \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerNode_a51670db70ccba1ce21a77a5448e474d7}{OptionalTaskComposerExecutor}}\ \mbox{\hyperlink{tesseract__task__composer__taskflow__unit_8cpp_ab85065e5a325fc5bf8675e6c55a3e72f}{executor}}\ =\ std::nullopt)\ \textcolor{keyword}{const}\ \textcolor{keyword}{override}\ \textcolor{keyword}{final};}
+\DoxyCodeLine{00096\ \};}
+\DoxyCodeLine{00097\ }
+\DoxyCodeLine{00098\ \}\ \ \textcolor{comment}{//\ namespace\ tesseract\_planning}}
+\DoxyCodeLine{00099\ }
+\DoxyCodeLine{00100\ BOOST\_CLASS\_EXPORT\_KEY(\mbox{\hyperlink{classtesseract__planning_1_1FormatAsInputTask}{tesseract\_planning::FormatAsInputTask}})}
+\DoxyCodeLine{00101\ \textcolor{preprocessor}{\#endif\ \ }\textcolor{comment}{//\ TESSERACT\_TASK\_COMPOSER\_FORMAT\_AS\_INPUT\_TASK\_H}}
+
+\end{DoxyCode}

@@ -1,0 +1,78 @@
+\doxysection{tesseract\+\_\+examples/src/basic\+\_\+cartesian\+\_\+example.cpp File Reference}
+\hypertarget{basic__cartesian__example_8cpp}{}\label{basic__cartesian__example_8cpp}\index{tesseract\_examples/src/basic\_cartesian\_example.cpp@{tesseract\_examples/src/basic\_cartesian\_example.cpp}}
+{\ttfamily \#include $<$tesseract\+\_\+common/macros.\+h$>$}\newline
+{\ttfamily \#include $<$pcl/point\+\_\+cloud.\+h$>$}\newline
+{\ttfamily \#include $<$pcl/point\+\_\+types.\+h$>$}\newline
+{\ttfamily \#include $<$console\+\_\+bridge/console.\+h$>$}\newline
+{\ttfamily \#include $<$trajopt\+\_\+common/collision\+\_\+types.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+examples/basic\+\_\+cartesian\+\_\+example.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+common/stopwatch.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+collision/core/types.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+scene\+\_\+graph/link.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+scene\+\_\+graph/joint.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+state\+\_\+solver/state\+\_\+solver.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+environment/environment.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+environment/utils.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+environment/commands/add\+\_\+link\+\_\+command.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+command\+\_\+language/profile\+\_\+dictionary.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+command\+\_\+language/composite\+\_\+instruction.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+command\+\_\+language/state\+\_\+waypoint.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+command\+\_\+language/cartesian\+\_\+waypoint.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+command\+\_\+language/joint\+\_\+waypoint.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+command\+\_\+language/move\+\_\+instruction.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+command\+\_\+language/utils.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+visualization/visualization.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+visualization/markers/toolpath\+\_\+marker.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+motion\+\_\+planners/core/utils.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+motion\+\_\+planners/trajopt\+\_\+ifopt/profile/trajopt\+\_\+ifopt\+\_\+default\+\_\+composite\+\_\+profile.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+motion\+\_\+planners/trajopt/profile/trajopt\+\_\+default\+\_\+composite\+\_\+profile.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+motion\+\_\+planners/trajopt\+\_\+ifopt/profile/trajopt\+\_\+ifopt\+\_\+default\+\_\+plan\+\_\+profile.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+motion\+\_\+planners/trajopt/profile/trajopt\+\_\+default\+\_\+plan\+\_\+profile.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+task\+\_\+composer/core/task\+\_\+composer\+\_\+context.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+task\+\_\+composer/core/task\+\_\+composer\+\_\+data\+\_\+storage.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+task\+\_\+composer/core/task\+\_\+composer\+\_\+future.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+task\+\_\+composer/core/task\+\_\+composer\+\_\+executor.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+task\+\_\+composer/core/task\+\_\+composer\+\_\+node.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+task\+\_\+composer/core/task\+\_\+composer\+\_\+plugin\+\_\+factory.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+geometry/impl/octree.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+geometry/impl/octree\+\_\+utils.\+h$>$}\newline
+Include dependency graph for basic\+\_\+cartesian\+\_\+example.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dd/d9f/basic__cartesian__example_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespacetesseract__examples}{tesseract\+\_\+examples}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+Command\+::\+Ptr \mbox{\hyperlink{namespacetesseract__examples_ad3b5984e32aac64631dd8fa2c32485de}{tesseract\+\_\+examples\+::add\+Point\+Cloud}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+static const std\+::string \mbox{\hyperlink{basic__cartesian__example_8cpp_acebe899cb191df62bca811635ca01093}{TRAJOPT\+\_\+\+IFOPT\+\_\+\+DEFAULT\+\_\+\+NAMESPACE}} = "{}Traj\+Opt\+Ifopt\+Motion\+Planner\+Task"{}
+\item 
+static const std\+::string \mbox{\hyperlink{basic__cartesian__example_8cpp_aa787e5ed28bd385091840a6d523ddc33}{TRAJOPT\+\_\+\+DEFAULT\+\_\+\+NAMESPACE}} = "{}Traj\+Opt\+Motion\+Planner\+Task"{}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{basic__cartesian__example_8cpp_aa787e5ed28bd385091840a6d523ddc33}\label{basic__cartesian__example_8cpp_aa787e5ed28bd385091840a6d523ddc33} 
+\index{basic\_cartesian\_example.cpp@{basic\_cartesian\_example.cpp}!TRAJOPT\_DEFAULT\_NAMESPACE@{TRAJOPT\_DEFAULT\_NAMESPACE}}
+\index{TRAJOPT\_DEFAULT\_NAMESPACE@{TRAJOPT\_DEFAULT\_NAMESPACE}!basic\_cartesian\_example.cpp@{basic\_cartesian\_example.cpp}}
+\doxysubsubsection{\texorpdfstring{TRAJOPT\_DEFAULT\_NAMESPACE}{TRAJOPT\_DEFAULT\_NAMESPACE}}
+{\footnotesize\ttfamily const std\+::string TRAJOPT\+\_\+\+DEFAULT\+\_\+\+NAMESPACE = "{}Traj\+Opt\+Motion\+Planner\+Task"{}\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{basic__cartesian__example_8cpp_acebe899cb191df62bca811635ca01093}\label{basic__cartesian__example_8cpp_acebe899cb191df62bca811635ca01093} 
+\index{basic\_cartesian\_example.cpp@{basic\_cartesian\_example.cpp}!TRAJOPT\_IFOPT\_DEFAULT\_NAMESPACE@{TRAJOPT\_IFOPT\_DEFAULT\_NAMESPACE}}
+\index{TRAJOPT\_IFOPT\_DEFAULT\_NAMESPACE@{TRAJOPT\_IFOPT\_DEFAULT\_NAMESPACE}!basic\_cartesian\_example.cpp@{basic\_cartesian\_example.cpp}}
+\doxysubsubsection{\texorpdfstring{TRAJOPT\_IFOPT\_DEFAULT\_NAMESPACE}{TRAJOPT\_IFOPT\_DEFAULT\_NAMESPACE}}
+{\footnotesize\ttfamily const std\+::string TRAJOPT\+\_\+\+IFOPT\+\_\+\+DEFAULT\+\_\+\+NAMESPACE = "{}Traj\+Opt\+Ifopt\+Motion\+Planner\+Task"{}\hspace{0.3cm}{\ttfamily [static]}}
+

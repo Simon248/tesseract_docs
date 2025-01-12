@@ -1,0 +1,25 @@
+<map id="tesseract_planning::DescartesCollisionEdgeEvaluator&lt; FloatType &gt;" name="tesseract_planning::DescartesCollisionEdgeEvaluator&lt; FloatType &gt;">
+<area shape="rect" id="Node000001" title=" " alt="" coords="962,209,1180,264"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="540,5,738,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="754,31,847,51,895,67,939,89,975,115,1007,146,1054,206,1050,210,1003,150,972,119,936,93,892,72,846,56,753,37"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="564,70,714,126"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="729,102,831,119,886,132,939,150,990,176,1035,206,1032,210,988,181,937,155,884,137,830,124,728,108"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="559,150,719,176"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="734,166,833,177,938,194,985,205,983,210,937,199,832,182,734,172"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="266,150,343,176"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="358,160,559,160,559,166,358,166"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="5,143,129,183"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="144,160,265,160,265,166,144,166"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="187,227,422,267"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="437,241,768,235,961,234,961,239,768,240,437,246"/>
+<area shape="rect" id="Node000011" title=" " alt="" coords="543,264,735,334"/>
+<area shape="poly" id="edge12_Node000011_Node000007" title=" " alt="" coords="438,265,543,281,542,287,437,270"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="178,397,430,438"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="446,413,590,401,668,389,743,373,819,350,893,320,1016,262,1018,267,896,325,821,355,744,378,669,394,591,406,446,418"/>
+<area shape="rect" id="Node000010" title=" " alt="" coords="534,437,744,508"/>
+<area shape="poly" id="edge10_Node000010_Node000008" title=" " alt="" coords="446,438,534,453,533,458,445,443"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="599,532,679,557"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="695,548,750,550,813,545,878,530,908,517,936,500,964,475,988,446,1008,415,1025,381,1049,316,1062,264,1067,265,1054,318,1030,383,1013,417,992,450,968,479,939,504,911,522,879,535,814,550,750,555,695,553"/>
+<area shape="poly" id="edge9_Node000001_Node000010" title=" " alt="" coords="759,478,804,475,850,468,895,455,936,435,959,418,980,398,1015,351,1040,304,1057,264,1062,266,1045,306,1019,354,984,401,963,422,939,439,897,460,851,473,804,481,759,483"/>
+<area shape="poly" id="edge11_Node000001_Node000011" title=" " alt="" coords="750,280,961,249,962,255,751,286"/>
+</map>

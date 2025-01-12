@@ -1,0 +1,7 @@
+<map id="tesseract_task_composer/planning/include/tesseract_task_composer/planning/profiles/ruckig_trajectory_smoothing_profile.h" name="tesseract_task_composer/planning/include/tesseract_task_composer/planning/profiles/ruckig_trajectory_smoothing_profile.h">
+<area shape="rect" id="Node000001" title="Leveraging Ruckig to smooth trajectory." alt="" coords="98,5,336,76"/>
+<area shape="rect" id="Node000002" href="$d6/d36/ruckig__trajectory__smoothing__task_8cpp.html" title=" " alt="" coords="5,132,210,187"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="176,89,135,133,131,129,172,85"/>
+<area shape="rect" id="Node000003" href="$d2/db5/ruckig__trajectory__smoothing__profile_8cpp.html" title="Leveraging Ruckig to smooth trajectory." alt="" coords="234,124,421,195"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="262,85,297,122,293,126,258,89"/>
+</map>

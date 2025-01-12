@@ -1,0 +1,13 @@
+<map id="tesseract_examples/include/tesseract_examples/puzzle_piece_auxillary_axes_example.h" name="tesseract_examples/include/tesseract_examples/puzzle_piece_auxillary_axes_example.h">
+<area shape="rect" id="Node000001" title="An example of a robot with a two axis position leveraging trajopt and tesseract to leverage all DOF t..." alt="" coords="226,5,412,76"/>
+<area shape="rect" id="Node000002" href="$df/d24/example_8h.html" title=" " alt="" coords="250,124,387,165"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="321,76,321,108,316,108,316,76"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="5,220,195,246"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="270,168,146,217,144,212,268,163"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="218,220,286,246"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="306,167,273,209,268,206,301,164"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="310,213,463,253"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="336,164,364,199,360,202,332,167"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="487,213,641,253"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="375,163,495,205,493,210,373,168"/>
+</map>

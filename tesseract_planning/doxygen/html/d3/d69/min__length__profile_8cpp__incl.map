@@ -1,0 +1,24 @@
+<map id="tesseract_task_composer/planning/src/profiles/min_length_profile.cpp" name="tesseract_task_composer/planning/src/profiles/min_length_profile.cpp">
+<area shape="rect" id="Node000001" title="Profile for task that processing the program so it meets a minimum length. Planners like trajopt need..." alt="" coords="468,5,639,61"/>
+<area shape="rect" id="Node000002" href="$d7/d02/min__length__profile_8h.html" title="Profile for task that processing the program so it meets a minimum length. Planners like trajopt need..." alt="" coords="146,109,318,165"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="468,64,333,107,331,101,466,59"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="341,117,467,157"/>
+<area shape="poly" id="edge8_Node000001_Node000008" title=" " alt="" coords="515,64,447,110,444,105,512,59"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="491,117,616,157"/>
+<area shape="poly" id="edge9_Node000001_Node000009" title=" " alt="" coords="556,62,556,101,551,101,551,62"/>
+<area shape="rect" id="Node000010" title=" " alt="" coords="640,124,715,150"/>
+<area shape="poly" id="edge10_Node000001_Node000010" title=" " alt="" coords="588,59,652,112,649,116,585,64"/>
+<area shape="rect" id="Node000011" title=" " alt="" coords="740,124,954,150"/>
+<area shape="poly" id="edge11_Node000001_Node000011" title=" " alt="" coords="633,59,798,116,796,121,631,64"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="5,220,195,246"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="195,167,131,213,127,209,192,163"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="206,309,274,335"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="236,165,241,293,236,293,231,165"/>
+<area shape="rect" id="Node000005" href="$de/d45/profile_8h.html" title="This is a profile base class." alt="" coords="269,213,467,253"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="273,163,329,201,326,206,270,167"/>
+<area shape="poly" id="edge5_Node000005_Node000004" title=" " alt="" coords="340,256,272,302,269,298,337,252"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="301,301,427,342"/>
+<area shape="poly" id="edge6_Node000005_Node000006" title=" " alt="" coords="370,254,368,286,363,286,364,254"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="451,301,576,342"/>
+<area shape="poly" id="edge7_Node000005_Node000007" title=" " alt="" coords="402,252,469,291,466,296,400,256"/>
+</map>

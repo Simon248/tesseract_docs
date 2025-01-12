@@ -1,0 +1,16 @@
+<map id="tesseract_planning::MoveInstruction" name="tesseract_planning::MoveInstruction">
+<area shape="rect" id="Node000001" title="The move instruction is used when defining the results of a motion planning request." alt="" coords="723,134,853,175"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="204,63,281,89"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="296,63,376,52,478,47,534,48,590,54,646,65,700,81,739,104,770,131,766,135,736,108,698,86,645,70,590,59,534,54,478,52,377,57,297,68"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="411,97,546,153"/>
+<area shape="poly" id="edge4_Node000004_Node000002" title=" " alt="" coords="297,87,332,95,411,111,410,116,331,100,296,92"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="5,55,129,96"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="144,73,203,73,203,78,144,78"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="561,130,722,146,722,151,561,135"/>
+<area shape="rect" id="Node000005" href="$df/d14/structtesseract__planning_1_1WaypointPoly.html" title=" " alt="" coords="413,177,544,217"/>
+<area shape="poly" id="edge5_Node000001_Node000005" title=" " alt="" coords="558,183,698,164,722,161,723,166,699,169,559,189"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="178,184,307,210"/>
+<area shape="poly" id="edge6_Node000005_Node000006" title=" " alt="" coords="323,194,413,194,413,200,323,200"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="423,242,534,267"/>
+<area shape="poly" id="edge7_Node000001_Node000007" title=" " alt="" coords="549,241,621,225,698,202,753,173,756,178,700,206,623,230,550,246"/>
+</map>

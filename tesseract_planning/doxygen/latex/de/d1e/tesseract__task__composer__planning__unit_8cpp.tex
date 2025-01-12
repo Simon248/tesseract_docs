@@ -1,0 +1,59 @@
+\doxysection{tesseract\+\_\+task\+\_\+composer/test/tesseract\+\_\+task\+\_\+composer\+\_\+planning\+\_\+unit.cpp File Reference}
+\hypertarget{tesseract__task__composer__planning__unit_8cpp}{}\label{tesseract__task__composer__planning__unit_8cpp}\index{tesseract\_task\_composer/test/tesseract\_task\_composer\_planning\_unit.cpp@{tesseract\_task\_composer/test/tesseract\_task\_composer\_planning\_unit.cpp}}
+{\ttfamily \#include $<$tesseract\+\_\+common/macros.\+h$>$}\newline
+{\ttfamily \#include $<$gtest/gtest.\+h$>$}\newline
+{\ttfamily \#include $<$yaml-\/cpp/yaml.\+h$>$}\newline
+{\ttfamily \#include $<$memory$>$}\newline
+{\ttfamily \#include $<$boost/algorithm/string.\+hpp$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+task\+\_\+composer/planning/nodes/continuous\+\_\+contact\+\_\+check\+\_\+task.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+task\+\_\+composer/planning/nodes/discrete\+\_\+contact\+\_\+check\+\_\+task.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+task\+\_\+composer/planning/nodes/format\+\_\+as\+\_\+input\+\_\+task.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+task\+\_\+composer/planning/nodes/format\+\_\+as\+\_\+result\+\_\+task.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+task\+\_\+composer/planning/nodes/format\+\_\+planning\+\_\+input\+\_\+task.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+task\+\_\+composer/planning/nodes/min\+\_\+length\+\_\+task.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+task\+\_\+composer/planning/nodes/fix\+\_\+state\+\_\+bounds\+\_\+task.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+task\+\_\+composer/planning/nodes/fix\+\_\+state\+\_\+collision\+\_\+task.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+task\+\_\+composer/planning/nodes/profile\+\_\+switch\+\_\+task.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+task\+\_\+composer/planning/nodes/update\+\_\+end\+\_\+state\+\_\+task.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+task\+\_\+composer/planning/nodes/update\+\_\+start\+\_\+and\+\_\+end\+\_\+state\+\_\+task.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+task\+\_\+composer/planning/nodes/update\+\_\+start\+\_\+state\+\_\+task.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+task\+\_\+composer/planning/nodes/upsample\+\_\+trajectory\+\_\+task.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+task\+\_\+composer/planning/nodes/iterative\+\_\+spline\+\_\+parameterization\+\_\+task.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+task\+\_\+composer/planning/nodes/time\+\_\+optimal\+\_\+parameterization\+\_\+task.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+task\+\_\+composer/planning/nodes/ruckig\+\_\+trajectory\+\_\+smoothing\+\_\+task.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+task\+\_\+composer/planning/nodes/motion\+\_\+planner\+\_\+task.\+hpp$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+task\+\_\+composer/planning/nodes/raster\+\_\+motion\+\_\+task.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+task\+\_\+composer/planning/nodes/raster\+\_\+only\+\_\+motion\+\_\+task.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+task\+\_\+composer/planning/profiles/contact\+\_\+check\+\_\+profile.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+motion\+\_\+planners/trajopt/trajopt\+\_\+motion\+\_\+planner.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+task\+\_\+composer/core/task\+\_\+composer\+\_\+context.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+task\+\_\+composer/core/task\+\_\+composer\+\_\+executor.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+task\+\_\+composer/core/task\+\_\+composer\+\_\+future.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+task\+\_\+composer/core/task\+\_\+composer\+\_\+log.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+task\+\_\+composer/core/task\+\_\+composer\+\_\+plugin\+\_\+factory.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+task\+\_\+composer/core/test\+\_\+suite/task\+\_\+composer\+\_\+serialization\+\_\+utils.\+hpp$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+task\+\_\+composer/core/test\+\_\+suite/test\+\_\+programs.\+hpp$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+command\+\_\+language/profile\+\_\+dictionary.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+command\+\_\+language/composite\+\_\+instruction.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+command\+\_\+language/state\+\_\+waypoint.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+command\+\_\+language/cartesian\+\_\+waypoint.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+command\+\_\+language/move\+\_\+instruction.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+command\+\_\+language/utils.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+common/types.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+common/resource\+\_\+locator.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+common/manipulator\+\_\+info.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+common/joint\+\_\+state.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+environment/environment.\+h$>$}\newline
+Include dependency graph for tesseract\+\_\+task\+\_\+composer\+\_\+planning\+\_\+unit.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d3/d25/tesseract__task__composer__planning__unit_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classTesseractTaskComposerPlanningUnit}{Tesseract\+Task\+Composer\+Planning\+Unit}}
+\end{DoxyCompactItemize}

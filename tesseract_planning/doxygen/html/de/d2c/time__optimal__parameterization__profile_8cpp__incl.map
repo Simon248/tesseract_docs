@@ -1,0 +1,24 @@
+<map id="tesseract_task_composer/planning/src/profiles/time_optimal_parameterization_profile.cpp" name="tesseract_task_composer/planning/src/profiles/time_optimal_parameterization_profile.cpp">
+<area shape="rect" id="Node000001" title="Profile for TOTG process." alt="" coords="454,5,655,76"/>
+<area shape="rect" id="Node000002" href="$d1/de8/time__optimal__parameterization__profile_8h.html" title="Profile for TOTG process." alt="" coords="146,124,318,195"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="459,79,333,124,332,119,457,74"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="343,139,468,180"/>
+<area shape="poly" id="edge8_Node000001_Node000008" title=" " alt="" coords="512,79,444,131,441,127,509,74"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="492,139,617,180"/>
+<area shape="poly" id="edge9_Node000001_Node000009" title=" " alt="" coords="557,76,557,124,552,124,552,76"/>
+<area shape="rect" id="Node000010" title=" " alt="" coords="641,147,716,172"/>
+<area shape="poly" id="edge10_Node000001_Node000010" title=" " alt="" coords="593,75,656,134,653,137,590,78"/>
+<area shape="rect" id="Node000011" title=" " alt="" coords="741,147,955,172"/>
+<area shape="poly" id="edge11_Node000001_Node000011" title=" " alt="" coords="643,74,804,138,802,143,641,79"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="5,250,195,276"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="189,197,129,243,126,239,185,193"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="206,339,274,365"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="236,195,242,323,236,323,231,195"/>
+<area shape="rect" id="Node000005" href="$de/d45/profile_8h.html" title="This is a profile base class." alt="" coords="269,243,467,283"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="280,193,331,231,328,235,277,197"/>
+<area shape="poly" id="edge5_Node000005_Node000004" title=" " alt="" coords="340,286,272,332,269,328,337,282"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="301,331,427,372"/>
+<area shape="poly" id="edge6_Node000005_Node000006" title=" " alt="" coords="370,284,368,316,363,316,364,284"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="451,331,576,372"/>
+<area shape="poly" id="edge7_Node000005_Node000007" title=" " alt="" coords="402,282,469,321,466,326,400,286"/>
+</map>

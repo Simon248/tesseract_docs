@@ -1,0 +1,7 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="Node000000" title=" " alt="" coords="5,46,185,72"/>
+<area shape="rect" id="Node000001" href="$d5/dc0/classtesseract__planning_1_1ContinuousMotionValidator.html" title="Continuous collision check between two states." alt="" coords="233,5,415,46"/>
+<area shape="poly" id="edge28_Node000000_Node000001" title=" " alt="" coords="200,41,232,36,233,42,200,46"/>
+<area shape="rect" id="Node000002" href="$d5/d9c/classtesseract__planning_1_1DiscreteMotionValidator.html" title="Continuous collision check between two states." alt="" coords="241,71,407,111"/>
+<area shape="poly" id="edge29_Node000000_Node000002" title=" " alt="" coords="201,71,241,77,240,82,200,76"/>
+</map>

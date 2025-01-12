@@ -1,0 +1,7 @@
+<map id="TesseractPlanningTrajoptUnit" name="TesseractPlanningTrajoptUnit">
+<area shape="rect" id="Node000001" title=" " alt="" coords="18,94,211,120"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,5,98,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="71,42,108,92,103,95,67,45"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="122,5,232,31"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="161,45,125,95,121,92,157,42"/>
+</map>

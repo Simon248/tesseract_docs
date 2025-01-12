@@ -1,0 +1,11 @@
+<map id="tesseract_examples/include/tesseract_examples/example.h" name="tesseract_examples/include/tesseract_examples/example.h">
+<area shape="rect" id="Node000001" title=" " alt="" coords="226,5,412,61"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,117,195,142"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="256,64,143,113,141,108,254,59"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="218,117,286,142"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="302,63,271,106,267,103,297,60"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="310,109,463,150"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="340,60,366,95,362,98,336,63"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="487,109,641,150"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="391,59,500,101,498,106,389,64"/>
+</map>

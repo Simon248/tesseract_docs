@@ -1,0 +1,14 @@
+<map id="tesseract_task_composer/core/include/tesseract_task_composer/core/test_suite/task_composer_serialization_utils.hpp" name="tesseract_task_composer/core/include/tesseract_task_composer/core/test_suite/task_composer_serialization_utils.hpp">
+<area shape="rect" id="Node000001" title=" " alt="" coords="279,5,503,91"/>
+<area shape="rect" id="Node000002" href="$df/de0/task__composer__executor__unit_8hpp.html" title="Collection of unit tests for TaskComposerExecutor." alt="" coords="5,139,211,225"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="287,100,200,141,197,136,285,96"/>
+<area shape="rect" id="Node000004" href="$dc/dbb/task__composer__node__info__unit_8hpp.html" title="Collection of unit tests for TaskComposerNodeInfo." alt="" coords="235,139,419,225"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="366,106,350,140,345,137,361,104"/>
+<area shape="rect" id="Node000005" href="$d7/d92/tesseract__task__composer__core__unit_8cpp.html" title=" " alt="" coords="294,273,495,328"/>
+<area shape="poly" id="edge5_Node000001_Node000005" title=" " alt="" coords="422,105,433,138,439,182,433,225,425,251,414,273,409,271,420,249,428,224,434,182,428,140,417,106"/>
+<area shape="rect" id="Node000006" href="$de/d1e/tesseract__task__composer__planning__unit_8cpp.html" title=" " alt="" coords="494,154,695,210"/>
+<area shape="poly" id="edge6_Node000001_Node000006" title=" " alt="" coords="470,97,554,151,551,156,467,102"/>
+<area shape="rect" id="Node000003" href="$da/dfb/tesseract__task__composer__taskflow__unit_8cpp.html" title=" " alt="" coords="7,273,209,328"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="111,240,111,272,105,272,105,240"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="361,237,381,271,377,274,357,240"/>
+</map>

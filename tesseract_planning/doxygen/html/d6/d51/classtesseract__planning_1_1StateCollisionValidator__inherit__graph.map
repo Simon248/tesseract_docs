@@ -1,0 +1,5 @@
+<map id="tesseract_planning::StateCollisionValidator" name="tesseract_planning::StateCollisionValidator">
+<area shape="rect" id="Node000001" title="Continuous collision check between two states." alt="" coords="7,94,166,135"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,5,168,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="89,62,89,94,84,94,84,62"/>
+</map>

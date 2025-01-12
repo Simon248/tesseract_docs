@@ -1,0 +1,145 @@
+\doxysection{tesseract\+\_\+planning\+::detail\+\_\+instruction\+::Instruction\+Interface Struct Reference}
+\hypertarget{structtesseract__planning_1_1detail__instruction_1_1InstructionInterface}{}\label{structtesseract__planning_1_1detail__instruction_1_1InstructionInterface}\index{tesseract\_planning::detail\_instruction::InstructionInterface@{tesseract\_planning::detail\_instruction::InstructionInterface}}
+
+
+{\ttfamily \#include $<$instruction\+\_\+poly.\+h$>$}
+
+
+
+Inheritance diagram for tesseract\+\_\+planning\+::detail\+\_\+instruction\+::Instruction\+Interface\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=238pt]{db/da7/structtesseract__planning_1_1detail__instruction_1_1InstructionInterface__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for tesseract\+\_\+planning\+::detail\+\_\+instruction\+::Instruction\+Interface\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=238pt]{d4/d64/structtesseract__planning_1_1detail__instruction_1_1InstructionInterface__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual const boost\+::uuids\+::uuid \& \mbox{\hyperlink{structtesseract__planning_1_1detail__instruction_1_1InstructionInterface_a34f3126215fa8e2ee9d1b4a307c6e917}{get\+UUID}} () const =0
+\item 
+virtual void \mbox{\hyperlink{structtesseract__planning_1_1detail__instruction_1_1InstructionInterface_a2fdb329e06ab6c0d67b0d3d53df23143}{set\+UUID}} (const boost\+::uuids\+::uuid \&uuid)=0
+\item 
+virtual void \mbox{\hyperlink{structtesseract__planning_1_1detail__instruction_1_1InstructionInterface_acfc21a4667cbf964b07a0e78f99412e0}{regenerate\+UUID}} ()=0
+\item 
+virtual const boost\+::uuids\+::uuid \& \mbox{\hyperlink{structtesseract__planning_1_1detail__instruction_1_1InstructionInterface_a7efbdfb4bb4f14e75602981fd375927f}{get\+Parent\+UUID}} () const =0
+\item 
+virtual void \mbox{\hyperlink{structtesseract__planning_1_1detail__instruction_1_1InstructionInterface_a145dba690382ca755bd664584364f3e2}{set\+Parent\+UUID}} (const boost\+::uuids\+::uuid \&uuid)=0
+\item 
+virtual const std\+::string \& \mbox{\hyperlink{structtesseract__planning_1_1detail__instruction_1_1InstructionInterface_ae6f35ff38442000e6a6141feb3529c94}{get\+Description}} () const =0
+\item 
+virtual void \mbox{\hyperlink{structtesseract__planning_1_1detail__instruction_1_1InstructionInterface_a9cc0b812d86087a3c280283425fd585b}{set\+Description}} (const std\+::string \&description)=0
+\item 
+virtual void \mbox{\hyperlink{structtesseract__planning_1_1detail__instruction_1_1InstructionInterface_a8c945e9ca783756f821c62d58cd0278d}{print}} (const std\+::string \&prefix) const =0
+\item 
+{\footnotesize template$<$class Archive $>$ }\\TESSERACT\+\_\+\+COMMON\+\_\+\+IGNORE\+\_\+\+WARNINGS\+\_\+\+PUSH TESSERACT\+\_\+\+COMMON\+\_\+\+IGNORE\+\_\+\+WARNINGS\+\_\+\+POP void \mbox{\hyperlink{structtesseract__planning_1_1detail__instruction_1_1InstructionInterface_aafcf2f896908e34602553dc229579530}{serialize}} (Archive \&ar, const unsigned int)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$class Archive $>$ }\\void \mbox{\hyperlink{structtesseract__planning_1_1detail__instruction_1_1InstructionInterface_afbff5d9eb58a805dad0fda3949bf78bc}{serialize}} (Archive \&ar, const unsigned int version)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{structtesseract__planning_1_1detail__instruction_1_1InstructionInterface_ac98d07dd8f7b70e16ccb9a01abf56b9c}{boost\+::serialization\+::access}}
+\item 
+struct \mbox{\hyperlink{structtesseract__planning_1_1detail__instruction_1_1InstructionInterface_a9d42ad7bb40288a7ac1aad8d76809fe7}{tesseract\+\_\+common\+::\+Serialization}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{structtesseract__planning_1_1detail__instruction_1_1InstructionInterface_ae6f35ff38442000e6a6141feb3529c94}\label{structtesseract__planning_1_1detail__instruction_1_1InstructionInterface_ae6f35ff38442000e6a6141feb3529c94} 
+\index{tesseract\_planning::detail\_instruction::InstructionInterface@{tesseract\_planning::detail\_instruction::InstructionInterface}!getDescription@{getDescription}}
+\index{getDescription@{getDescription}!tesseract\_planning::detail\_instruction::InstructionInterface@{tesseract\_planning::detail\_instruction::InstructionInterface}}
+\doxysubsubsection{\texorpdfstring{getDescription()}{getDescription()}}
+{\footnotesize\ttfamily virtual const std\+::string \& tesseract\+\_\+planning\+::detail\+\_\+instruction\+::\+Instruction\+Interface\+::get\+Description (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+\Hypertarget{structtesseract__planning_1_1detail__instruction_1_1InstructionInterface_a7efbdfb4bb4f14e75602981fd375927f}\label{structtesseract__planning_1_1detail__instruction_1_1InstructionInterface_a7efbdfb4bb4f14e75602981fd375927f} 
+\index{tesseract\_planning::detail\_instruction::InstructionInterface@{tesseract\_planning::detail\_instruction::InstructionInterface}!getParentUUID@{getParentUUID}}
+\index{getParentUUID@{getParentUUID}!tesseract\_planning::detail\_instruction::InstructionInterface@{tesseract\_planning::detail\_instruction::InstructionInterface}}
+\doxysubsubsection{\texorpdfstring{getParentUUID()}{getParentUUID()}}
+{\footnotesize\ttfamily virtual const boost\+::uuids\+::uuid \& tesseract\+\_\+planning\+::detail\+\_\+instruction\+::\+Instruction\+Interface\+::get\+Parent\+UUID (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+\Hypertarget{structtesseract__planning_1_1detail__instruction_1_1InstructionInterface_a34f3126215fa8e2ee9d1b4a307c6e917}\label{structtesseract__planning_1_1detail__instruction_1_1InstructionInterface_a34f3126215fa8e2ee9d1b4a307c6e917} 
+\index{tesseract\_planning::detail\_instruction::InstructionInterface@{tesseract\_planning::detail\_instruction::InstructionInterface}!getUUID@{getUUID}}
+\index{getUUID@{getUUID}!tesseract\_planning::detail\_instruction::InstructionInterface@{tesseract\_planning::detail\_instruction::InstructionInterface}}
+\doxysubsubsection{\texorpdfstring{getUUID()}{getUUID()}}
+{\footnotesize\ttfamily virtual const boost\+::uuids\+::uuid \& tesseract\+\_\+planning\+::detail\+\_\+instruction\+::\+Instruction\+Interface\+::get\+UUID (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+\Hypertarget{structtesseract__planning_1_1detail__instruction_1_1InstructionInterface_a8c945e9ca783756f821c62d58cd0278d}\label{structtesseract__planning_1_1detail__instruction_1_1InstructionInterface_a8c945e9ca783756f821c62d58cd0278d} 
+\index{tesseract\_planning::detail\_instruction::InstructionInterface@{tesseract\_planning::detail\_instruction::InstructionInterface}!print@{print}}
+\index{print@{print}!tesseract\_planning::detail\_instruction::InstructionInterface@{tesseract\_planning::detail\_instruction::InstructionInterface}}
+\doxysubsubsection{\texorpdfstring{print()}{print()}}
+{\footnotesize\ttfamily virtual void tesseract\+\_\+planning\+::detail\+\_\+instruction\+::\+Instruction\+Interface\+::print (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{prefix }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+\Hypertarget{structtesseract__planning_1_1detail__instruction_1_1InstructionInterface_acfc21a4667cbf964b07a0e78f99412e0}\label{structtesseract__planning_1_1detail__instruction_1_1InstructionInterface_acfc21a4667cbf964b07a0e78f99412e0} 
+\index{tesseract\_planning::detail\_instruction::InstructionInterface@{tesseract\_planning::detail\_instruction::InstructionInterface}!regenerateUUID@{regenerateUUID}}
+\index{regenerateUUID@{regenerateUUID}!tesseract\_planning::detail\_instruction::InstructionInterface@{tesseract\_planning::detail\_instruction::InstructionInterface}}
+\doxysubsubsection{\texorpdfstring{regenerateUUID()}{regenerateUUID()}}
+{\footnotesize\ttfamily virtual void tesseract\+\_\+planning\+::detail\+\_\+instruction\+::\+Instruction\+Interface\+::regenerate\+UUID (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+\Hypertarget{structtesseract__planning_1_1detail__instruction_1_1InstructionInterface_afbff5d9eb58a805dad0fda3949bf78bc}\label{structtesseract__planning_1_1detail__instruction_1_1InstructionInterface_afbff5d9eb58a805dad0fda3949bf78bc} 
+\index{tesseract\_planning::detail\_instruction::InstructionInterface@{tesseract\_planning::detail\_instruction::InstructionInterface}!serialize@{serialize}}
+\index{serialize@{serialize}!tesseract\_planning::detail\_instruction::InstructionInterface@{tesseract\_planning::detail\_instruction::InstructionInterface}}
+\doxysubsubsection{\texorpdfstring{serialize()}{serialize()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class Archive $>$ \\
+void tesseract\+\_\+planning\+::detail\+\_\+instruction\+::\+Instruction\+Interface\+::serialize (\begin{DoxyParamCaption}\item[{Archive \&}]{ar,  }\item[{const unsigned int}]{version }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{structtesseract__planning_1_1detail__instruction_1_1InstructionInterface_aafcf2f896908e34602553dc229579530}\label{structtesseract__planning_1_1detail__instruction_1_1InstructionInterface_aafcf2f896908e34602553dc229579530} 
+\index{tesseract\_planning::detail\_instruction::InstructionInterface@{tesseract\_planning::detail\_instruction::InstructionInterface}!serialize@{serialize}}
+\index{serialize@{serialize}!tesseract\_planning::detail\_instruction::InstructionInterface@{tesseract\_planning::detail\_instruction::InstructionInterface}}
+\doxysubsubsection{\texorpdfstring{serialize()}{serialize()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class Archive $>$ \\
+TESSERACT\+\_\+\+COMMON\+\_\+\+IGNORE\+\_\+\+WARNINGS\+\_\+\+PUSH TESSERACT\+\_\+\+COMMON\+\_\+\+IGNORE\+\_\+\+WARNINGS\+\_\+\+POP void tesseract\+\_\+planning\+::detail\+\_\+instruction\+::\+Instruction\+Interface\+::serialize (\begin{DoxyParamCaption}\item[{Archive \&}]{ar,  }\item[{const unsigned int}]{ }\end{DoxyParamCaption})}
+
+\Hypertarget{structtesseract__planning_1_1detail__instruction_1_1InstructionInterface_a9cc0b812d86087a3c280283425fd585b}\label{structtesseract__planning_1_1detail__instruction_1_1InstructionInterface_a9cc0b812d86087a3c280283425fd585b} 
+\index{tesseract\_planning::detail\_instruction::InstructionInterface@{tesseract\_planning::detail\_instruction::InstructionInterface}!setDescription@{setDescription}}
+\index{setDescription@{setDescription}!tesseract\_planning::detail\_instruction::InstructionInterface@{tesseract\_planning::detail\_instruction::InstructionInterface}}
+\doxysubsubsection{\texorpdfstring{setDescription()}{setDescription()}}
+{\footnotesize\ttfamily virtual void tesseract\+\_\+planning\+::detail\+\_\+instruction\+::\+Instruction\+Interface\+::set\+Description (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{description }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+\Hypertarget{structtesseract__planning_1_1detail__instruction_1_1InstructionInterface_a145dba690382ca755bd664584364f3e2}\label{structtesseract__planning_1_1detail__instruction_1_1InstructionInterface_a145dba690382ca755bd664584364f3e2} 
+\index{tesseract\_planning::detail\_instruction::InstructionInterface@{tesseract\_planning::detail\_instruction::InstructionInterface}!setParentUUID@{setParentUUID}}
+\index{setParentUUID@{setParentUUID}!tesseract\_planning::detail\_instruction::InstructionInterface@{tesseract\_planning::detail\_instruction::InstructionInterface}}
+\doxysubsubsection{\texorpdfstring{setParentUUID()}{setParentUUID()}}
+{\footnotesize\ttfamily virtual void tesseract\+\_\+planning\+::detail\+\_\+instruction\+::\+Instruction\+Interface\+::set\+Parent\+UUID (\begin{DoxyParamCaption}\item[{const boost\+::uuids\+::uuid \&}]{uuid }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+\Hypertarget{structtesseract__planning_1_1detail__instruction_1_1InstructionInterface_a2fdb329e06ab6c0d67b0d3d53df23143}\label{structtesseract__planning_1_1detail__instruction_1_1InstructionInterface_a2fdb329e06ab6c0d67b0d3d53df23143} 
+\index{tesseract\_planning::detail\_instruction::InstructionInterface@{tesseract\_planning::detail\_instruction::InstructionInterface}!setUUID@{setUUID}}
+\index{setUUID@{setUUID}!tesseract\_planning::detail\_instruction::InstructionInterface@{tesseract\_planning::detail\_instruction::InstructionInterface}}
+\doxysubsubsection{\texorpdfstring{setUUID()}{setUUID()}}
+{\footnotesize\ttfamily virtual void tesseract\+\_\+planning\+::detail\+\_\+instruction\+::\+Instruction\+Interface\+::set\+UUID (\begin{DoxyParamCaption}\item[{const boost\+::uuids\+::uuid \&}]{uuid }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+\doxysubsection{Friends And Related Symbol Documentation}
+\Hypertarget{structtesseract__planning_1_1detail__instruction_1_1InstructionInterface_ac98d07dd8f7b70e16ccb9a01abf56b9c}\label{structtesseract__planning_1_1detail__instruction_1_1InstructionInterface_ac98d07dd8f7b70e16ccb9a01abf56b9c} 
+\index{tesseract\_planning::detail\_instruction::InstructionInterface@{tesseract\_planning::detail\_instruction::InstructionInterface}!boost::serialization::access@{boost::serialization::access}}
+\index{boost::serialization::access@{boost::serialization::access}!tesseract\_planning::detail\_instruction::InstructionInterface@{tesseract\_planning::detail\_instruction::InstructionInterface}}
+\doxysubsubsection{\texorpdfstring{boost::serialization::access}{boost::serialization::access}}
+{\footnotesize\ttfamily friend class boost\+::serialization\+::access\hspace{0.3cm}{\ttfamily [friend]}}
+
+\Hypertarget{structtesseract__planning_1_1detail__instruction_1_1InstructionInterface_a9d42ad7bb40288a7ac1aad8d76809fe7}\label{structtesseract__planning_1_1detail__instruction_1_1InstructionInterface_a9d42ad7bb40288a7ac1aad8d76809fe7} 
+\index{tesseract\_planning::detail\_instruction::InstructionInterface@{tesseract\_planning::detail\_instruction::InstructionInterface}!tesseract\_common::Serialization@{tesseract\_common::Serialization}}
+\index{tesseract\_common::Serialization@{tesseract\_common::Serialization}!tesseract\_planning::detail\_instruction::InstructionInterface@{tesseract\_planning::detail\_instruction::InstructionInterface}}
+\doxysubsubsection{\texorpdfstring{tesseract\_common::Serialization}{tesseract\_common::Serialization}}
+{\footnotesize\ttfamily friend struct tesseract\+\_\+common\+::\+Serialization\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+tesseract\+\_\+command\+\_\+language/include/tesseract\+\_\+command\+\_\+language/poly/\mbox{\hyperlink{instruction__poly_8h}{instruction\+\_\+poly.\+h}}\item 
+tesseract\+\_\+command\+\_\+language/src/poly/\mbox{\hyperlink{instruction__poly_8cpp}{instruction\+\_\+poly.\+cpp}}\end{DoxyCompactItemize}

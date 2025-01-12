@@ -1,0 +1,110 @@
+\doxysection{tesseract\+\_\+motion\+\_\+planners/simple/src/interpolation.cpp File Reference}
+\hypertarget{interpolation_8cpp}{}\label{interpolation_8cpp}\index{tesseract\_motion\_planners/simple/src/interpolation.cpp@{tesseract\_motion\_planners/simple/src/interpolation.cpp}}
+
+
+Provides interpolation utils structs.  
+
+
+{\ttfamily \#include $<$tesseract\+\_\+common/macros.\+h$>$}\newline
+{\ttfamily \#include $<$console\+\_\+bridge/console.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+motion\+\_\+planners/simple/interpolation.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+motion\+\_\+planners/simple/simple\+\_\+motion\+\_\+planner.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+motion\+\_\+planners/simple/profile/simple\+\_\+planner\+\_\+profile.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+motion\+\_\+planners/simple/profile/simple\+\_\+planner\+\_\+lvs\+\_\+no\+\_\+ik\+\_\+plan\+\_\+profile.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+motion\+\_\+planners/core/types.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+common/manipulator\+\_\+info.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+common/joint\+\_\+state.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+scene\+\_\+graph/scene\+\_\+state.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+kinematics/core/joint\+\_\+group.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+kinematics/core/kinematic\+\_\+group.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+kinematics/core/utils.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+environment/environment.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+command\+\_\+language/poly/move\+\_\+instruction\+\_\+poly.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+command\+\_\+language/profile\+\_\+dictionary.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+command\+\_\+language/utils.\+h$>$}\newline
+Include dependency graph for interpolation.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d9/d3f/interpolation_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespacetesseract__planning}{tesseract\+\_\+planning}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{structtesseract__planning_1_1MoveInstructionPoly}{Move\+Instruction\+Poly}} $>$ \mbox{\hyperlink{namespacetesseract__planning_a2fcf77e5d442e63cf893108bfb586d0d}{tesseract\+\_\+planning\+::interpolate\+Joint\+Joint\+Waypoint}} (const \mbox{\hyperlink{structtesseract__planning_1_1KinematicGroupInstructionInfo}{Kinematic\+Group\+Instruction\+Info}} \&prev, const \mbox{\hyperlink{structtesseract__planning_1_1KinematicGroupInstructionInfo}{Kinematic\+Group\+Instruction\+Info}} \&base, int linear\+\_\+steps, int freespace\+\_\+steps)
+\item 
+std\+::vector$<$ \mbox{\hyperlink{structtesseract__planning_1_1MoveInstructionPoly}{Move\+Instruction\+Poly}} $>$ \mbox{\hyperlink{namespacetesseract__planning_af23a0bfb1bc88714bbc3959ffdd6b80e}{tesseract\+\_\+planning\+::interpolate\+Joint\+Cart\+Waypoint}} (const \mbox{\hyperlink{structtesseract__planning_1_1KinematicGroupInstructionInfo}{Kinematic\+Group\+Instruction\+Info}} \&prev, const \mbox{\hyperlink{structtesseract__planning_1_1KinematicGroupInstructionInfo}{Kinematic\+Group\+Instruction\+Info}} \&base, int linear\+\_\+steps, int freespace\+\_\+steps)
+\item 
+std\+::vector$<$ \mbox{\hyperlink{structtesseract__planning_1_1MoveInstructionPoly}{Move\+Instruction\+Poly}} $>$ \mbox{\hyperlink{namespacetesseract__planning_a55ebb8b8b51198baf3a700366af06450}{tesseract\+\_\+planning\+::interpolate\+Cart\+Joint\+Waypoint}} (const \mbox{\hyperlink{structtesseract__planning_1_1KinematicGroupInstructionInfo}{Kinematic\+Group\+Instruction\+Info}} \&prev, const \mbox{\hyperlink{structtesseract__planning_1_1KinematicGroupInstructionInfo}{Kinematic\+Group\+Instruction\+Info}} \&base, int linear\+\_\+steps, int freespace\+\_\+steps)
+\item 
+std\+::vector$<$ \mbox{\hyperlink{structtesseract__planning_1_1MoveInstructionPoly}{Move\+Instruction\+Poly}} $>$ \mbox{\hyperlink{namespacetesseract__planning_afe82bde773fd418145db05673cf7e509}{tesseract\+\_\+planning\+::interpolate\+Cart\+Cart\+Waypoint}} (const \mbox{\hyperlink{structtesseract__planning_1_1KinematicGroupInstructionInfo}{Kinematic\+Group\+Instruction\+Info}} \&prev, const \mbox{\hyperlink{structtesseract__planning_1_1KinematicGroupInstructionInfo}{Kinematic\+Group\+Instruction\+Info}} \&base, int linear\+\_\+steps, int freespace\+\_\+steps, const tesseract\+\_\+scene\+\_\+graph\+::\+Scene\+State \&scene\+\_\+state)
+\item 
+std\+::vector$<$ \mbox{\hyperlink{structtesseract__planning_1_1MoveInstructionPoly}{Move\+Instruction\+Poly}} $>$ \mbox{\hyperlink{namespacetesseract__planning_ad62adead0de37cab1668e526c0c0b4e3}{tesseract\+\_\+planning\+::interpolate\+Joint\+Joint\+Waypoint}} (const \mbox{\hyperlink{structtesseract__planning_1_1KinematicGroupInstructionInfo}{Kinematic\+Group\+Instruction\+Info}} \&prev, const \mbox{\hyperlink{structtesseract__planning_1_1KinematicGroupInstructionInfo}{Kinematic\+Group\+Instruction\+Info}} \&base, double state\+\_\+lvs\+\_\+length, double translation\+\_\+lvs\+\_\+length, double rotation\+\_\+lvs\+\_\+length, int \mbox{\hyperlink{simple__planner__lvs__interpolation_8cpp_a2eb7c7e24e6632f45847edf8a59bce5b}{min\+\_\+steps}}, int max\+\_\+steps)
+\begin{DoxyCompactList}\small\item\em \doxylink{classtesseract__planning_1_1JointWaypoint}{Joint\+Waypoint} to \doxylink{classtesseract__planning_1_1JointWaypoint}{Joint\+Waypoint}. \end{DoxyCompactList}\item 
+std\+::vector$<$ \mbox{\hyperlink{structtesseract__planning_1_1MoveInstructionPoly}{Move\+Instruction\+Poly}} $>$ \mbox{\hyperlink{namespacetesseract__planning_ad2e7127d1e938bf401e5d37fbc90bd29}{tesseract\+\_\+planning\+::interpolate\+Joint\+Cart\+Waypoint}} (const \mbox{\hyperlink{structtesseract__planning_1_1KinematicGroupInstructionInfo}{Kinematic\+Group\+Instruction\+Info}} \&prev, const \mbox{\hyperlink{structtesseract__planning_1_1KinematicGroupInstructionInfo}{Kinematic\+Group\+Instruction\+Info}} \&base, double state\+\_\+lvs\+\_\+length, double translation\+\_\+lvs\+\_\+length, double rotation\+\_\+lvs\+\_\+length, int \mbox{\hyperlink{simple__planner__lvs__interpolation_8cpp_a2eb7c7e24e6632f45847edf8a59bce5b}{min\+\_\+steps}}, int max\+\_\+steps)
+\begin{DoxyCompactList}\small\item\em \doxylink{classtesseract__planning_1_1JointWaypoint}{Joint\+Waypoint} to \doxylink{classtesseract__planning_1_1CartesianWaypoint}{Cartesian\+Waypoint}. \end{DoxyCompactList}\item 
+std\+::vector$<$ \mbox{\hyperlink{structtesseract__planning_1_1MoveInstructionPoly}{Move\+Instruction\+Poly}} $>$ \mbox{\hyperlink{namespacetesseract__planning_ade5a470b1909aef41b79b74df15ae418}{tesseract\+\_\+planning\+::interpolate\+Cart\+Joint\+Waypoint}} (const \mbox{\hyperlink{structtesseract__planning_1_1KinematicGroupInstructionInfo}{Kinematic\+Group\+Instruction\+Info}} \&prev, const \mbox{\hyperlink{structtesseract__planning_1_1KinematicGroupInstructionInfo}{Kinematic\+Group\+Instruction\+Info}} \&base, double state\+\_\+lvs\+\_\+length, double translation\+\_\+lvs\+\_\+length, double rotation\+\_\+lvs\+\_\+length, int \mbox{\hyperlink{simple__planner__lvs__interpolation_8cpp_a2eb7c7e24e6632f45847edf8a59bce5b}{min\+\_\+steps}}, int max\+\_\+steps)
+\begin{DoxyCompactList}\small\item\em \doxylink{classtesseract__planning_1_1CartesianWaypoint}{Cartesian\+Waypoint} to \doxylink{classtesseract__planning_1_1JointWaypoint}{Joint\+Waypoint}. \end{DoxyCompactList}\item 
+std\+::vector$<$ \mbox{\hyperlink{structtesseract__planning_1_1MoveInstructionPoly}{Move\+Instruction\+Poly}} $>$ \mbox{\hyperlink{namespacetesseract__planning_a0696dcbe6dc69b1e15c4ab36a43bffc8}{tesseract\+\_\+planning\+::interpolate\+Cart\+Cart\+Waypoint}} (const \mbox{\hyperlink{structtesseract__planning_1_1KinematicGroupInstructionInfo}{Kinematic\+Group\+Instruction\+Info}} \&prev, const \mbox{\hyperlink{structtesseract__planning_1_1KinematicGroupInstructionInfo}{Kinematic\+Group\+Instruction\+Info}} \&base, double state\+\_\+lvs\+\_\+length, double translation\+\_\+lvs\+\_\+length, double rotation\+\_\+lvs\+\_\+length, int \mbox{\hyperlink{simple__planner__lvs__interpolation_8cpp_a2eb7c7e24e6632f45847edf8a59bce5b}{min\+\_\+steps}}, int max\+\_\+steps, const tesseract\+\_\+scene\+\_\+graph\+::\+Scene\+State \&scene\+\_\+state)
+\begin{DoxyCompactList}\small\item\em \doxylink{classtesseract__planning_1_1CartesianWaypoint}{Cartesian\+Waypoint} to \doxylink{classtesseract__planning_1_1CartesianWaypoint}{Cartesian\+Waypoint}. \end{DoxyCompactList}\item 
+std\+::vector$<$ \mbox{\hyperlink{structtesseract__planning_1_1MoveInstructionPoly}{Move\+Instruction\+Poly}} $>$ \mbox{\hyperlink{namespacetesseract__planning_a711cd1a41106480e52bffd8a5aaad5bf}{tesseract\+\_\+planning\+::interpolate\+Joint\+Joint\+Waypoint}} (const \mbox{\hyperlink{structtesseract__planning_1_1JointGroupInstructionInfo}{Joint\+Group\+Instruction\+Info}} \&prev, const \mbox{\hyperlink{structtesseract__planning_1_1JointGroupInstructionInfo}{Joint\+Group\+Instruction\+Info}} \&base, double state\+\_\+lvs\+\_\+length, double translation\+\_\+lvs\+\_\+length, double rotation\+\_\+lvs\+\_\+length, int \mbox{\hyperlink{simple__planner__lvs__interpolation_8cpp_a2eb7c7e24e6632f45847edf8a59bce5b}{min\+\_\+steps}}, int max\+\_\+steps)
+\begin{DoxyCompactList}\small\item\em \doxylink{classtesseract__planning_1_1JointWaypoint}{Joint\+Waypoint} to \doxylink{classtesseract__planning_1_1JointWaypoint}{Joint\+Waypoint}. \end{DoxyCompactList}\item 
+std\+::vector$<$ \mbox{\hyperlink{structtesseract__planning_1_1MoveInstructionPoly}{Move\+Instruction\+Poly}} $>$ \mbox{\hyperlink{namespacetesseract__planning_a9fb8051e0524d8957708798287fd2f81}{tesseract\+\_\+planning\+::interpolate\+Joint\+Cart\+Waypoint}} (const \mbox{\hyperlink{structtesseract__planning_1_1JointGroupInstructionInfo}{Joint\+Group\+Instruction\+Info}} \&prev, const \mbox{\hyperlink{structtesseract__planning_1_1JointGroupInstructionInfo}{Joint\+Group\+Instruction\+Info}} \&base, double state\+\_\+lvs\+\_\+length, double translation\+\_\+lvs\+\_\+length, double rotation\+\_\+lvs\+\_\+length, int \mbox{\hyperlink{simple__planner__lvs__interpolation_8cpp_a2eb7c7e24e6632f45847edf8a59bce5b}{min\+\_\+steps}}, int max\+\_\+steps)
+\begin{DoxyCompactList}\small\item\em \doxylink{classtesseract__planning_1_1JointWaypoint}{Joint\+Waypoint} to \doxylink{classtesseract__planning_1_1CartesianWaypoint}{Cartesian\+Waypoint}. \end{DoxyCompactList}\item 
+std\+::vector$<$ \mbox{\hyperlink{structtesseract__planning_1_1MoveInstructionPoly}{Move\+Instruction\+Poly}} $>$ \mbox{\hyperlink{namespacetesseract__planning_a44ea03351465184f73e1245ee5cc06eb}{tesseract\+\_\+planning\+::interpolate\+Cart\+Joint\+Waypoint}} (const \mbox{\hyperlink{structtesseract__planning_1_1JointGroupInstructionInfo}{Joint\+Group\+Instruction\+Info}} \&prev, const \mbox{\hyperlink{structtesseract__planning_1_1JointGroupInstructionInfo}{Joint\+Group\+Instruction\+Info}} \&base, double state\+\_\+lvs\+\_\+length, double translation\+\_\+lvs\+\_\+length, double rotation\+\_\+lvs\+\_\+length, int \mbox{\hyperlink{simple__planner__lvs__interpolation_8cpp_a2eb7c7e24e6632f45847edf8a59bce5b}{min\+\_\+steps}}, int max\+\_\+steps)
+\begin{DoxyCompactList}\small\item\em \doxylink{classtesseract__planning_1_1CartesianWaypoint}{Cartesian\+Waypoint} to \doxylink{classtesseract__planning_1_1JointWaypoint}{Joint\+Waypoint}. \end{DoxyCompactList}\item 
+std\+::vector$<$ \mbox{\hyperlink{structtesseract__planning_1_1MoveInstructionPoly}{Move\+Instruction\+Poly}} $>$ \mbox{\hyperlink{namespacetesseract__planning_a2c7a87d3b1078d2d2acf3a8cf30f22e2}{tesseract\+\_\+planning\+::interpolate\+Cart\+Cart\+Waypoint}} (const \mbox{\hyperlink{structtesseract__planning_1_1JointGroupInstructionInfo}{Joint\+Group\+Instruction\+Info}} \&prev, const \mbox{\hyperlink{structtesseract__planning_1_1JointGroupInstructionInfo}{Joint\+Group\+Instruction\+Info}} \&base, double state\+\_\+lvs\+\_\+length, double translation\+\_\+lvs\+\_\+length, double rotation\+\_\+lvs\+\_\+length, int \mbox{\hyperlink{simple__planner__lvs__interpolation_8cpp_a2eb7c7e24e6632f45847edf8a59bce5b}{min\+\_\+steps}}, int max\+\_\+steps, const tesseract\+\_\+scene\+\_\+graph\+::\+Scene\+State \&scene\+\_\+state)
+\begin{DoxyCompactList}\small\item\em \doxylink{classtesseract__planning_1_1CartesianWaypoint}{Cartesian\+Waypoint} to \doxylink{classtesseract__planning_1_1CartesianWaypoint}{Cartesian\+Waypoint}. \end{DoxyCompactList}\item 
+tesseract\+\_\+common\+::\+Vector\+Isometry3d \mbox{\hyperlink{namespacetesseract__planning_a71ea10c42f51ae6e4d014ad054c900f6}{tesseract\+\_\+planning\+::interpolate}} (const Eigen\+::\+Isometry3d \&\mbox{\hyperlink{ompl__planner__tests_8cpp_a62ebfcefbc3b45ade04ab058f594e835}{start}}, const Eigen\+::\+Isometry3d \&stop, long \mbox{\hyperlink{simple__planner__lvs__interpolation_8cpp_ab4ae7205573977222eadd0795db193e2}{steps}})
+\begin{DoxyCompactList}\small\item\em Interpolate between two transforms return a vector of Eigen\+::\+Isometry transforms. \end{DoxyCompactList}\item 
+Eigen\+::\+Matrix\+Xd \mbox{\hyperlink{namespacetesseract__planning_a4d235e9e8929e3538792a8226ba8b855}{tesseract\+\_\+planning\+::interpolate}} (const Eigen\+::\+Ref$<$ const Eigen\+::\+Vector\+Xd $>$ \&\mbox{\hyperlink{ompl__planner__tests_8cpp_a62ebfcefbc3b45ade04ab058f594e835}{start}}, const Eigen\+::\+Ref$<$ const Eigen\+::\+Vector\+Xd $>$ \&stop, long \mbox{\hyperlink{simple__planner__lvs__interpolation_8cpp_ab4ae7205573977222eadd0795db193e2}{steps}})
+\begin{DoxyCompactList}\small\item\em Interpolate between two Eigen\+::\+Vector\+Xd and return a Matrix. \end{DoxyCompactList}\item 
+std\+::vector$<$ \mbox{\hyperlink{structtesseract__planning_1_1WaypointPoly}{Waypoint\+Poly}} $>$ \mbox{\hyperlink{namespacetesseract__planning_ace3fb6e4566978aa9ae8c72ab20a939f}{tesseract\+\_\+planning\+::interpolate\+\_\+waypoint}} (const \mbox{\hyperlink{structtesseract__planning_1_1WaypointPoly}{Waypoint\+Poly}} \&\mbox{\hyperlink{ompl__planner__tests_8cpp_a62ebfcefbc3b45ade04ab058f594e835}{start}}, const \mbox{\hyperlink{structtesseract__planning_1_1WaypointPoly}{Waypoint\+Poly}} \&stop, long \mbox{\hyperlink{simple__planner__lvs__interpolation_8cpp_ab4ae7205573977222eadd0795db193e2}{steps}})
+\begin{DoxyCompactList}\small\item\em Interpolate between two waypoints return a vector of waypoints. \end{DoxyCompactList}\item 
+std\+::vector$<$ \mbox{\hyperlink{structtesseract__planning_1_1MoveInstructionPoly}{Move\+Instruction\+Poly}} $>$ \mbox{\hyperlink{namespacetesseract__planning_a3eb5693b1699344d8da461070c03da3a}{tesseract\+\_\+planning\+::get\+Interpolated\+Instructions}} (const std\+::vector$<$ std\+::string $>$ \&\mbox{\hyperlink{command__language__utils__unit_8cpp_a5f85173ecc1ddcb342ebc27f28437f5c}{joint\+\_\+names}}, const Eigen\+::\+Matrix\+Xd \&states, const \mbox{\hyperlink{structtesseract__planning_1_1MoveInstructionPoly}{Move\+Instruction\+Poly}} \&base\+\_\+instruction)
+\begin{DoxyCompactList}\small\item\em This takes the provided seed state for the base\+\_\+instruction and create a vector of move instruction. \end{DoxyCompactList}\item 
+std\+::vector$<$ \mbox{\hyperlink{structtesseract__planning_1_1MoveInstructionPoly}{Move\+Instruction\+Poly}} $>$ \mbox{\hyperlink{namespacetesseract__planning_a8670810be1d4f57505db0a620bd0390d}{tesseract\+\_\+planning\+::get\+Interpolated\+Instructions}} (const tesseract\+\_\+common\+::\+Vector\+Isometry3d \&poses, const std\+::vector$<$ std\+::string $>$ \&\mbox{\hyperlink{command__language__utils__unit_8cpp_a5f85173ecc1ddcb342ebc27f28437f5c}{joint\+\_\+names}}, const Eigen\+::\+Matrix\+Xd \&states, const \mbox{\hyperlink{structtesseract__planning_1_1MoveInstructionPoly}{Move\+Instruction\+Poly}} \&base\+\_\+instruction)
+\begin{DoxyCompactList}\small\item\em This takes the provided seed state for the base\+\_\+instruction and create a vector of move instruction. \end{DoxyCompactList}\item 
+Eigen\+::\+Vector\+Xd \mbox{\hyperlink{namespacetesseract__planning_a2c73959c536f2f1f881910a889315465}{tesseract\+\_\+planning\+::get\+Closest\+Joint\+Solution}} (const \mbox{\hyperlink{structtesseract__planning_1_1KinematicGroupInstructionInfo}{Kinematic\+Group\+Instruction\+Info}} \&\mbox{\hyperlink{tesseract__task__composer__plugin__factories__unit_8cpp_aa6da7335b22cc3d25f52f4d282118c55}{info}}, const Eigen\+::\+Vector\+Xd \&seed)
+\begin{DoxyCompactList}\small\item\em Find the closest joint solution for p to the provided seed. \end{DoxyCompactList}\item 
+std\+::array$<$ Eigen\+::\+Vector\+Xd, 2 $>$ \mbox{\hyperlink{namespacetesseract__planning_af6d0dfd4f3bf9af354959f93dc8dcaa4}{tesseract\+\_\+planning\+::get\+Closest\+Joint\+Solution}} (const \mbox{\hyperlink{structtesseract__planning_1_1KinematicGroupInstructionInfo}{Kinematic\+Group\+Instruction\+Info}} \&info1, const \mbox{\hyperlink{structtesseract__planning_1_1KinematicGroupInstructionInfo}{Kinematic\+Group\+Instruction\+Info}} \&info2, const Eigen\+::\+Vector\+Xd \&seed)
+\begin{DoxyCompactList}\small\item\em Find the closest joint solution for the two provided cartesian poses. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classtesseract__planning_1_1CompositeInstruction}{Composite\+Instruction}} \mbox{\hyperlink{namespacetesseract__planning_a7920578aac3025e147d6951c23d4056a}{tesseract\+\_\+planning\+::generate\+Interpolated\+Program}} (const \mbox{\hyperlink{classtesseract__planning_1_1CompositeInstruction}{Composite\+Instruction}} \&\mbox{\hyperlink{descartes__planner__tests_8cpp_a540933d401a016e1bb8a7a67aeba9e19}{instructions}}, const std\+::shared\+\_\+ptr$<$ const tesseract\+\_\+environment\+::\+Environment $>$ \&\mbox{\hyperlink{basic__cartesian__example__unit_8cpp_a96ce750ee22ecbf4d17cc6cf146d9514}{env}}, double state\+\_\+longest\+\_\+valid\+\_\+segment\+\_\+length=5 \texorpdfstring{$\ast$}{*}M\+\_\+\+PI/180, double \mbox{\hyperlink{simple__planner__lvs__interpolation_8cpp_aeb206e98287e12d469962ec670e227b2}{translation\+\_\+longest\+\_\+valid\+\_\+segment\+\_\+length}}=0.\+15, double \mbox{\hyperlink{simple__planner__lvs__interpolation_8cpp_a78e060bb016be1e83ee53af92e390844}{rotation\+\_\+longest\+\_\+valid\+\_\+segment\+\_\+length}}=5 \texorpdfstring{$\ast$}{*}M\+\_\+\+PI/180, int \mbox{\hyperlink{simple__planner__lvs__interpolation_8cpp_a2eb7c7e24e6632f45847edf8a59bce5b}{min\+\_\+steps}}=1)
+\begin{DoxyCompactList}\small\item\em Provided for backwards compatibility. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Provides interpolation utils structs. 
+
+\begin{DoxyAuthor}{Author}
+Levi Armstrong 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+January 12, 2021 
+\end{DoxyDate}
+\begin{DoxyVersion}{Version}
+TODO 
+\end{DoxyVersion}
+\begin{DoxyRefDesc}{Bug}
+\item[\mbox{\hyperlink{bug__bug000146}{Bug}}]No known bugs\end{DoxyRefDesc}
+
+
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2021, Southwest Research Institute
+\end{DoxyCopyright}
+\begin{DoxyParagraph}{License}
+Software License Agreement (Apache License) 
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{}
+Licensed under the Apache License, Version 2.\+0 (the "{}\+License"{}); you may not use this file except in compliance with the License. You may obtain a copy of the License at \href{http://www.apache.org/licenses/LICENSE-2.0}{\texttt{ http\+://www.\+apache.\+org/licenses/\+LICENSE-\/2.\+0}} 
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{}
+Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "{}\+AS IS"{} BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License. 
+\end{DoxyParagraph}

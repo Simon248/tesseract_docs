@@ -1,0 +1,63 @@
+\doxysection{tesseract\+\_\+task\+\_\+composer/planning/src/factories/planning\+\_\+task\+\_\+composer\+\_\+core\+\_\+plugin\+\_\+factories.cpp File Reference}
+\hypertarget{planning__task__composer__core__plugin__factories_8cpp}{}\label{planning__task__composer__core__plugin__factories_8cpp}\index{tesseract\_task\_composer/planning/src/factories/planning\_task\_composer\_core\_plugin\_factories.cpp@{tesseract\_task\_composer/planning/src/factories/planning\_task\_composer\_core\_plugin\_factories.cpp}}
+{\ttfamily \#include $<$tesseract\+\_\+task\+\_\+composer/planning/planning\+\_\+task\+\_\+composer\+\_\+plugin\+\_\+factories.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+task\+\_\+composer/core/task\+\_\+composer\+\_\+plugin\+\_\+factory\+\_\+utils.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+task\+\_\+composer/planning/nodes/continuous\+\_\+contact\+\_\+check\+\_\+task.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+task\+\_\+composer/planning/nodes/discrete\+\_\+contact\+\_\+check\+\_\+task.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+task\+\_\+composer/planning/nodes/fix\+\_\+state\+\_\+bounds\+\_\+task.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+task\+\_\+composer/planning/nodes/fix\+\_\+state\+\_\+collision\+\_\+task.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+task\+\_\+composer/planning/nodes/format\+\_\+as\+\_\+input\+\_\+task.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+task\+\_\+composer/planning/nodes/format\+\_\+as\+\_\+result\+\_\+task.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+task\+\_\+composer/planning/nodes/format\+\_\+planning\+\_\+input\+\_\+task.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+task\+\_\+composer/planning/nodes/min\+\_\+length\+\_\+task.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+task\+\_\+composer/planning/nodes/profile\+\_\+switch\+\_\+task.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+task\+\_\+composer/planning/nodes/upsample\+\_\+trajectory\+\_\+task.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+task\+\_\+composer/planning/nodes/raster\+\_\+motion\+\_\+task.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+task\+\_\+composer/planning/nodes/raster\+\_\+only\+\_\+motion\+\_\+task.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+task\+\_\+composer/planning/nodes/motion\+\_\+planner\+\_\+task.\+hpp$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+task\+\_\+composer/planning/nodes/process\+\_\+planning\+\_\+input\+\_\+task.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+motion\+\_\+planners/simple/simple\+\_\+motion\+\_\+planner.\+h$>$}\newline
+Include dependency graph for planning\+\_\+task\+\_\+composer\+\_\+core\+\_\+plugin\+\_\+factories.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d5/de7/planning__task__composer__core__plugin__factories_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespacetesseract__planning}{tesseract\+\_\+planning}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{namespacetesseract__planning_acca2e716f27d703e401c27d11d519035}{tesseract\+\_\+planning\+::\+Continuous\+Contact\+Check\+Task\+Factory}} = \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerTaskFactory}{Task\+Composer\+Task\+Factory}}$<$ \mbox{\hyperlink{classtesseract__planning_1_1ContinuousContactCheckTask}{Continuous\+Contact\+Check\+Task}} $>$
+\item 
+using \mbox{\hyperlink{namespacetesseract__planning_a0315a3c803394f85e9a493502f341c16}{tesseract\+\_\+planning\+::\+Discrete\+Contact\+Check\+Task\+Factory}} = \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerTaskFactory}{Task\+Composer\+Task\+Factory}}$<$ \mbox{\hyperlink{classtesseract__planning_1_1DiscreteContactCheckTask}{Discrete\+Contact\+Check\+Task}} $>$
+\item 
+using \mbox{\hyperlink{namespacetesseract__planning_a06320f5d2852b1aa559aa919592caba3}{tesseract\+\_\+planning\+::\+Fix\+State\+Bounds\+Task\+Factory}} = \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerTaskFactory}{Task\+Composer\+Task\+Factory}}$<$ \mbox{\hyperlink{classtesseract__planning_1_1FixStateBoundsTask}{Fix\+State\+Bounds\+Task}} $>$
+\item 
+using \mbox{\hyperlink{namespacetesseract__planning_ad578ba7972c234aeaf261b84e6039144}{tesseract\+\_\+planning\+::\+Fix\+State\+Collision\+Task\+Factory}} = \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerTaskFactory}{Task\+Composer\+Task\+Factory}}$<$ \mbox{\hyperlink{classtesseract__planning_1_1FixStateCollisionTask}{Fix\+State\+Collision\+Task}} $>$
+\item 
+using \mbox{\hyperlink{namespacetesseract__planning_a422c83639f714ce6cdf0caa5a76d533b}{tesseract\+\_\+planning\+::\+Format\+As\+Input\+Task\+Factory}} = \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerTaskFactory}{Task\+Composer\+Task\+Factory}}$<$ \mbox{\hyperlink{classtesseract__planning_1_1FormatAsInputTask}{Format\+As\+Input\+Task}} $>$
+\item 
+using \mbox{\hyperlink{namespacetesseract__planning_ad13908983a991805752d7362b9870756}{tesseract\+\_\+planning\+::\+Format\+As\+Result\+Task\+Factory}} = \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerTaskFactory}{Task\+Composer\+Task\+Factory}}$<$ \mbox{\hyperlink{classtesseract__planning_1_1FormatAsResultTask}{Format\+As\+Result\+Task}} $>$
+\item 
+using \mbox{\hyperlink{namespacetesseract__planning_adcd18679dda5208cf7c21abea07d22fe}{tesseract\+\_\+planning\+::\+Format\+Planning\+Input\+Task\+Factory}} = \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerTaskFactory}{Task\+Composer\+Task\+Factory}}$<$ \mbox{\hyperlink{classtesseract__planning_1_1FormatPlanningInputTask}{Format\+Planning\+Input\+Task}} $>$
+\item 
+using \mbox{\hyperlink{namespacetesseract__planning_a9a59e0c003aeeee1d3e0d28dcaa979b5}{tesseract\+\_\+planning\+::\+Min\+Length\+Task\+Factory}} = \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerTaskFactory}{Task\+Composer\+Task\+Factory}}$<$ \mbox{\hyperlink{classtesseract__planning_1_1MinLengthTask}{Min\+Length\+Task}} $>$
+\item 
+using \mbox{\hyperlink{namespacetesseract__planning_a9cf1b0af37dc27f0b08eeb5b9d0784b8}{tesseract\+\_\+planning\+::\+Profile\+Switch\+Task\+Factory}} = \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerTaskFactory}{Task\+Composer\+Task\+Factory}}$<$ \mbox{\hyperlink{classtesseract__planning_1_1ProfileSwitchTask}{Profile\+Switch\+Task}} $>$
+\item 
+using \mbox{\hyperlink{namespacetesseract__planning_a5354887ef54cb461dc96075d6ee8b988}{tesseract\+\_\+planning\+::\+Upsample\+Trajectory\+Task\+Factory}} = \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerTaskFactory}{Task\+Composer\+Task\+Factory}}$<$ \mbox{\hyperlink{classtesseract__planning_1_1UpsampleTrajectoryTask}{Upsample\+Trajectory\+Task}} $>$
+\item 
+using \mbox{\hyperlink{namespacetesseract__planning_ab30d05906a1f81d5e02428fda0614ff0}{tesseract\+\_\+planning\+::\+Raster\+Motion\+Task\+Factory}} = \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerTaskFactory}{Task\+Composer\+Task\+Factory}}$<$ \mbox{\hyperlink{classtesseract__planning_1_1RasterMotionTask}{Raster\+Motion\+Task}} $>$
+\item 
+using \mbox{\hyperlink{namespacetesseract__planning_ac4ed124920acbec6295456767033f8a3}{tesseract\+\_\+planning\+::\+Raster\+Only\+Motion\+Task\+Factory}} = \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerTaskFactory}{Task\+Composer\+Task\+Factory}}$<$ \mbox{\hyperlink{classtesseract__planning_1_1RasterOnlyMotionTask}{Raster\+Only\+Motion\+Task}} $>$
+\item 
+using \mbox{\hyperlink{namespacetesseract__planning_a68c7cff0ecf6580b3b9c737960c13c25}{tesseract\+\_\+planning\+::\+Simple\+Motion\+Planner\+Task\+Factory}} = \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerTaskFactory}{Task\+Composer\+Task\+Factory}}$<$ \mbox{\hyperlink{classtesseract__planning_1_1MotionPlannerTask}{Motion\+Planner\+Task}}$<$ \mbox{\hyperlink{classtesseract__planning_1_1SimpleMotionPlanner}{Simple\+Motion\+Planner}} $>$ $>$
+\item 
+using \mbox{\hyperlink{namespacetesseract__planning_afcf865edc77607fa96cd37195714d926}{tesseract\+\_\+planning\+::\+Process\+Planning\+Input\+Task\+Factory}} = \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerTaskFactory}{Task\+Composer\+Task\+Factory}}$<$ \mbox{\hyperlink{classtesseract__planning_1_1ProcessPlanningInputTask}{Process\+Planning\+Input\+Task}} $>$
+\end{DoxyCompactItemize}

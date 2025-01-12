@@ -1,0 +1,39 @@
+\doxysection{discrete\+\_\+motion\+\_\+validator.\+h}
+\hypertarget{discrete__motion__validator_8h_source}{}\label{discrete__motion__validator_8h_source}\index{tesseract\_motion\_planners/ompl/include/tesseract\_motion\_planners/ompl/discrete\_motion\_validator.h@{tesseract\_motion\_planners/ompl/include/tesseract\_motion\_planners/ompl/discrete\_motion\_validator.h}}
+\mbox{\hyperlink{discrete__motion__validator_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00026\ \textcolor{preprocessor}{\#ifndef\ TESSERACT\_MOTION\_PLANNERS\_OMPL\_DISCRETE\_MOTION\_VALIDATOR\_H}}
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#define\ TESSERACT\_MOTION\_PLANNERS\_OMPL\_DISCRETE\_MOTION\_VALIDATOR\_H}}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#include\ <tesseract\_common/macros.h>}}
+\DoxyCodeLine{00030\ TESSERACT\_COMMON\_IGNORE\_WARNINGS\_PUSH}
+\DoxyCodeLine{00031\ \textcolor{preprocessor}{\#include\ <ompl/base/MotionValidator.h>}}
+\DoxyCodeLine{00032\ \mbox{\hyperlink{namespaceTESSERACT__COMMON__IGNORE__WARNINGS__POP}{TESSERACT\_COMMON\_IGNORE\_WARNINGS\_POP}}}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceompl_1_1base}{ompl::base}}}
+\DoxyCodeLine{00035\ \{}
+\DoxyCodeLine{00036\ \textcolor{keyword}{class\ }SpaceInformation;}
+\DoxyCodeLine{00037\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespaceompl_1_1base_ae73f334140f4220265bfcdf39d3e94ed}{SpaceInformationPtr}}\ =\ std::shared\_ptr<SpaceInformation>;}
+\DoxyCodeLine{00038\ \textcolor{keyword}{class\ }StateValidityChecker;}
+\DoxyCodeLine{00039\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespaceompl_1_1base_a1c56e559b9d34edb1027d8d9569d4ad8}{StateValidityCheckerPtr}}\ =\ std::shared\_ptr<StateValidityChecker>;}
+\DoxyCodeLine{00040\ \}\ \ \textcolor{comment}{//\ namespace\ ompl::base}}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00042\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacetesseract__planning}{tesseract\_planning}}}
+\DoxyCodeLine{00043\ \{}
+\DoxyCodeLine{00045\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classtesseract__planning_1_1DiscreteMotionValidator}{DiscreteMotionValidator}}\ :\ \textcolor{keyword}{public}\ ompl::base::MotionValidator}
+\DoxyCodeLine{00046\ \{}
+\DoxyCodeLine{00047\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00048\ \ \ \mbox{\hyperlink{classtesseract__planning_1_1DiscreteMotionValidator}{DiscreteMotionValidator}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{namespaceompl_1_1base_ae73f334140f4220265bfcdf39d3e94ed}{ompl::base::SpaceInformationPtr}}\&\ space\_info);}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00050\ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classtesseract__planning_1_1DiscreteMotionValidator_af03cb8f2108e2063f0ef55352b2e078c}{checkMotion}}(\textcolor{keyword}{const}\ ompl::base::State*\ s1,\ \textcolor{keyword}{const}\ ompl::base::State*\ s2)\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00052\ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classtesseract__planning_1_1DiscreteMotionValidator_af03cb8f2108e2063f0ef55352b2e078c}{checkMotion}}(\textcolor{keyword}{const}\ ompl::base::State*\ s1,}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ ompl::base::State*\ s2,}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::pair<ompl::base::State*,\ double>\&\ lastValid)\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00055\ \};}
+\DoxyCodeLine{00056\ \}\ \ \textcolor{comment}{//\ namespace\ tesseract\_planning}}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00058\ \textcolor{preprocessor}{\#endif\ \ }\textcolor{comment}{//\ TESSERACT\_MOTION\_PLANNERS\_OMPL\_DISCRETE\_MOTION\_VALIDATOR\_H}}
+
+\end{DoxyCode}

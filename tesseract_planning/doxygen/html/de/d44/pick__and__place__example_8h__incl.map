@@ -1,0 +1,16 @@
+<map id="tesseract_examples/include/tesseract_examples/pick_and_place_example.h" name="tesseract_examples/include/tesseract_examples/pick_and_place_example.h">
+<area shape="rect" id="Node000001" title="An example of a robot picking up a box and placing it on a shelf." alt="" coords="70,5,256,61"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,205,195,231"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="150,63,128,110,115,152,107,191,102,190,110,151,123,108,145,60"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="138,117,187,142"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="165,62,165,101,160,101,160,62"/>
+<area shape="rect" id="Node000004" href="$df/d24/example_8h.html" title=" " alt="" coords="211,109,349,150"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="198,59,245,97,242,101,195,64"/>
+<area shape="poly" id="edge4_Node000004_Node000002" title=" " alt="" coords="240,153,140,201,138,196,238,148"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="218,205,286,231"/>
+<area shape="poly" id="edge5_Node000004_Node000005" title=" " alt="" coords="276,151,263,191,258,190,271,149"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="310,198,463,238"/>
+<area shape="poly" id="edge6_Node000004_Node000006" title=" " alt="" coords="306,148,353,186,349,190,303,152"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="487,198,641,238"/>
+<area shape="poly" id="edge7_Node000004_Node000007" title=" " alt="" coords="346,148,486,190,484,195,344,153"/>
+</map>

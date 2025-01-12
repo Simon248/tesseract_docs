@@ -1,0 +1,290 @@
+\doxysection{state\+\_\+waypoint\+\_\+poly\+\_\+unit.\+hpp}
+\hypertarget{state__waypoint__poly__unit_8hpp_source}{}\label{state__waypoint__poly__unit_8hpp_source}\index{tesseract\_command\_language/include/tesseract\_command\_language/test\_suite/state\_waypoint\_poly\_unit.hpp@{tesseract\_command\_language/include/tesseract\_command\_language/test\_suite/state\_waypoint\_poly\_unit.hpp}}
+\mbox{\hyperlink{state__waypoint__poly__unit_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00026\ \textcolor{preprocessor}{\#ifndef\ TESSERACT\_COMMAND\_LANGUAGE\_STATE\_WAYPOINT\_POLY\_UNIT\_HPP}}
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#define\ TESSERACT\_COMMAND\_LANGUAGE\_STATE\_WAYPOINT\_POLY\_UNIT\_HPP}}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{state__waypoint__poly_8h}{tesseract\_command\_language/poly/state\_waypoint\_poly.h}}>}}
+\DoxyCodeLine{00030\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{waypoint__poly__unit_8hpp}{tesseract\_command\_language/test\_suite/waypoint\_poly\_unit.hpp}}>}}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacetesseract__planning_1_1test__suite}{tesseract\_planning::test\_suite}}}
+\DoxyCodeLine{00033\ \{}
+\DoxyCodeLine{00034\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00035\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{namespacetesseract__planning_1_1test__suite_a649392f40e98699476029076c606e7ca}{runStateWaypointTest}}()}
+\DoxyCodeLine{00036\ \{}
+\DoxyCodeLine{00037\ \ \ runWaypointInterfaceTest<T>();}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ \ \ \{\ \ \textcolor{comment}{//\ WaypointPoly\ Interface\ Test}}
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keyword}{const}\ std::string\ \mbox{\hyperlink{tesseract__task__composer__core__unit_8cpp_a9b45b3e13bd9167aab02e17e08916231}{name}}\{\ \textcolor{stringliteral}{"{}tesseract\_planning::test\_suite::WaypointPoly"{}}\ \};}
+\DoxyCodeLine{00041\ \ \ \ \ \mbox{\hyperlink{structtesseract__planning_1_1StateWaypointPoly}{StateWaypointPoly}}\ \mbox{\hyperlink{fix__state__collision__task__unit_8cpp_a00d07bfc3dfed5ce5dcd0c8155074ff0}{wp}}\{\ T()\ \};}
+\DoxyCodeLine{00042\ \ \ \ \ \mbox{\hyperlink{command__language__utils__unit_8cpp_a87b7f2690021fd8f1f348928f30fb2f9}{EXPECT\_FALSE}}(\mbox{\hyperlink{fix__state__collision__task__unit_8cpp_a00d07bfc3dfed5ce5dcd0c8155074ff0}{wp}}.isNull());}
+\DoxyCodeLine{00043\ \ \ \ \ \mbox{\hyperlink{tesseract__task__composer__core__unit_8cpp_a640fac771b9d780d96b6a697903f0db2}{EXPECT\_NE}}(\mbox{\hyperlink{tesseract__task__composer__core__unit_8cpp_a9b45b3e13bd9167aab02e17e08916231}{name}},\ \mbox{\hyperlink{fix__state__collision__task__unit_8cpp_a00d07bfc3dfed5ce5dcd0c8155074ff0}{wp}}.getName());}
+\DoxyCodeLine{00044\ \ \ \ \ \mbox{\hyperlink{fix__state__collision__task__unit_8cpp_a00d07bfc3dfed5ce5dcd0c8155074ff0}{wp}}.setName(\mbox{\hyperlink{tesseract__task__composer__core__unit_8cpp_a9b45b3e13bd9167aab02e17e08916231}{name}});}
+\DoxyCodeLine{00045\ \ \ \ \ \mbox{\hyperlink{command__language__utils__unit_8cpp_ac9999b1938b6048a1222396d6821eab6}{EXPECT\_EQ}}(\mbox{\hyperlink{tesseract__task__composer__core__unit_8cpp_a9b45b3e13bd9167aab02e17e08916231}{name}},\ \mbox{\hyperlink{fix__state__collision__task__unit_8cpp_a00d07bfc3dfed5ce5dcd0c8155074ff0}{wp}}.getName());}
+\DoxyCodeLine{00046\ \ \ \ \ \mbox{\hyperlink{tesseract__task__composer__core__unit_8cpp_aa1e35645c5fc259a1e3e5d0ee6c99a39}{EXPECT\_NO\_THROW}}(\mbox{\hyperlink{fix__state__collision__task__unit_8cpp_a00d07bfc3dfed5ce5dcd0c8155074ff0}{wp}}.print());\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ NOLINT}}
+\DoxyCodeLine{00047\ \ \ \ \ \mbox{\hyperlink{tesseract__task__composer__core__unit_8cpp_aa1e35645c5fc259a1e3e5d0ee6c99a39}{EXPECT\_NO\_THROW}}(\mbox{\hyperlink{fix__state__collision__task__unit_8cpp_a00d07bfc3dfed5ce5dcd0c8155074ff0}{wp}}.print(\textcolor{stringliteral}{"{}test\_"{}}));\ \ \textcolor{comment}{//\ NOLINT}}
+\DoxyCodeLine{00048\ \ \ \ \ \mbox{\hyperlink{command__language__utils__unit_8cpp_a32b7bf22a514cfcff5d4e14d57ab1a8b}{EXPECT\_TRUE}}(\mbox{\hyperlink{fix__state__collision__task__unit_8cpp_a00d07bfc3dfed5ce5dcd0c8155074ff0}{wp}}.getType()\ ==\ std::type\_index(\textcolor{keyword}{typeid}(T)));}
+\DoxyCodeLine{00049\ \ \ \ \ \mbox{\hyperlink{structtesseract__planning_1_1WaypointPoly}{WaypointPoly}}\ base\ =\ \mbox{\hyperlink{fix__state__collision__task__unit_8cpp_a00d07bfc3dfed5ce5dcd0c8155074ff0}{wp}};}
+\DoxyCodeLine{00050\ \ \ \ \ \mbox{\hyperlink{command__language__utils__unit_8cpp_a87b7f2690021fd8f1f348928f30fb2f9}{EXPECT\_FALSE}}(base.\mbox{\hyperlink{structtesseract__planning_1_1WaypointPoly_a5bdd55b987aed7b278dbe18d25d1d5df}{isCartesianWaypoint}}());}
+\DoxyCodeLine{00051\ \ \ \ \ \mbox{\hyperlink{command__language__utils__unit_8cpp_a87b7f2690021fd8f1f348928f30fb2f9}{EXPECT\_FALSE}}(base.\mbox{\hyperlink{structtesseract__planning_1_1WaypointPoly_a1f3162cac3fcc5193945d491e8e8c857}{isJointWaypoint}}());}
+\DoxyCodeLine{00052\ \ \ \ \ \mbox{\hyperlink{command__language__utils__unit_8cpp_a32b7bf22a514cfcff5d4e14d57ab1a8b}{EXPECT\_TRUE}}(base.\mbox{\hyperlink{structtesseract__planning_1_1WaypointPoly_a9b17e1e86fa4e6ae5e1c5d75d1c4313c}{isStateWaypoint}}());}
+\DoxyCodeLine{00053\ \ \ \}}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00055\ \ \ \{\ \ \textcolor{comment}{//\ Test\ construction}}
+\DoxyCodeLine{00056\ \ \ \ \ \{}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \mbox{\hyperlink{structtesseract__planning_1_1StateWaypointPoly}{StateWaypointPoly}}\ \mbox{\hyperlink{fix__state__collision__task__unit_8cpp_a00d07bfc3dfed5ce5dcd0c8155074ff0}{wp}}\{\ T()\ \};}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \mbox{\hyperlink{command__language__utils__unit_8cpp_a32b7bf22a514cfcff5d4e14d57ab1a8b}{EXPECT\_TRUE}}(\mbox{\hyperlink{fix__state__collision__task__unit_8cpp_a00d07bfc3dfed5ce5dcd0c8155074ff0}{wp}}.getNames().empty());}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \mbox{\hyperlink{command__language__utils__unit_8cpp_a32b7bf22a514cfcff5d4e14d57ab1a8b}{EXPECT\_TRUE}}(\mbox{\hyperlink{fix__state__collision__task__unit_8cpp_a00d07bfc3dfed5ce5dcd0c8155074ff0}{wp}}.getPosition().rows()\ ==\ 0);}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \mbox{\hyperlink{command__language__utils__unit_8cpp_a32b7bf22a514cfcff5d4e14d57ab1a8b}{EXPECT\_TRUE}}(\mbox{\hyperlink{fix__state__collision__task__unit_8cpp_a00d07bfc3dfed5ce5dcd0c8155074ff0}{wp}}.getVelocity().rows()\ ==\ 0);}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \mbox{\hyperlink{command__language__utils__unit_8cpp_a32b7bf22a514cfcff5d4e14d57ab1a8b}{EXPECT\_TRUE}}(\mbox{\hyperlink{fix__state__collision__task__unit_8cpp_a00d07bfc3dfed5ce5dcd0c8155074ff0}{wp}}.getAcceleration().rows()\ ==\ 0);}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \mbox{\hyperlink{command__language__utils__unit_8cpp_a32b7bf22a514cfcff5d4e14d57ab1a8b}{EXPECT\_TRUE}}(\mbox{\hyperlink{fix__state__collision__task__unit_8cpp_a00d07bfc3dfed5ce5dcd0c8155074ff0}{wp}}.getEffort().rows()\ ==\ 0);}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \mbox{\hyperlink{command__language__utils__unit_8cpp_a32b7bf22a514cfcff5d4e14d57ab1a8b}{EXPECT\_TRUE}}(tesseract\_common::almostEqualRelativeAndAbs(\mbox{\hyperlink{fix__state__collision__task__unit_8cpp_a00d07bfc3dfed5ce5dcd0c8155074ff0}{wp}}.getTime(),\ 0.0));}
+\DoxyCodeLine{00064\ \ \ \ \ \}}
+\DoxyCodeLine{00065\ \ \ \ \ \{}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ std::vector<std::string>\ names\{\ \textcolor{stringliteral}{"{}j1"{}},\ \textcolor{stringliteral}{"{}j2"{}},\ \textcolor{stringliteral}{"{}j3"{}}\ \};}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ Eigen::VectorXd\ positions\ =\ Eigen::VectorXd::Constant(3,\ 0.0);}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \mbox{\hyperlink{structtesseract__planning_1_1StateWaypointPoly}{StateWaypointPoly}}\ \mbox{\hyperlink{fix__state__collision__task__unit_8cpp_a00d07bfc3dfed5ce5dcd0c8155074ff0}{wp}}\{\ T(names,\ positions)\ \};}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \mbox{\hyperlink{command__language__utils__unit_8cpp_ac9999b1938b6048a1222396d6821eab6}{EXPECT\_EQ}}(\mbox{\hyperlink{fix__state__collision__task__unit_8cpp_a00d07bfc3dfed5ce5dcd0c8155074ff0}{wp}}.getNames(),\ names);}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \mbox{\hyperlink{command__language__utils__unit_8cpp_a32b7bf22a514cfcff5d4e14d57ab1a8b}{EXPECT\_TRUE}}(\mbox{\hyperlink{fix__state__collision__task__unit_8cpp_a00d07bfc3dfed5ce5dcd0c8155074ff0}{wp}}.getPosition().isApprox(positions));}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \mbox{\hyperlink{command__language__utils__unit_8cpp_a32b7bf22a514cfcff5d4e14d57ab1a8b}{EXPECT\_TRUE}}(\mbox{\hyperlink{fix__state__collision__task__unit_8cpp_a00d07bfc3dfed5ce5dcd0c8155074ff0}{wp}}.getVelocity().rows()\ ==\ 0);}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \mbox{\hyperlink{command__language__utils__unit_8cpp_a32b7bf22a514cfcff5d4e14d57ab1a8b}{EXPECT\_TRUE}}(\mbox{\hyperlink{fix__state__collision__task__unit_8cpp_a00d07bfc3dfed5ce5dcd0c8155074ff0}{wp}}.getAcceleration().rows()\ ==\ 0);}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \mbox{\hyperlink{command__language__utils__unit_8cpp_a32b7bf22a514cfcff5d4e14d57ab1a8b}{EXPECT\_TRUE}}(\mbox{\hyperlink{fix__state__collision__task__unit_8cpp_a00d07bfc3dfed5ce5dcd0c8155074ff0}{wp}}.getEffort().rows()\ ==\ 0);}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \mbox{\hyperlink{command__language__utils__unit_8cpp_a32b7bf22a514cfcff5d4e14d57ab1a8b}{EXPECT\_TRUE}}(tesseract\_common::almostEqualRelativeAndAbs(\mbox{\hyperlink{fix__state__collision__task__unit_8cpp_a00d07bfc3dfed5ce5dcd0c8155074ff0}{wp}}.getTime(),\ 0.0));}
+\DoxyCodeLine{00075\ \ \ \ \ \}}
+\DoxyCodeLine{00076\ \ \ \ \ \{}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ std::vector<std::string>\ names\{\ \textcolor{stringliteral}{"{}j1"{}},\ \textcolor{stringliteral}{"{}j2"{}},\ \textcolor{stringliteral}{"{}j3"{}}\ \};}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ Eigen::VectorXd\ positions\ =\ Eigen::VectorXd::Constant(3,\ 0.0);}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ Eigen::VectorXd\ velocities\ =\ Eigen::VectorXd::Constant(3,\ -\/5);}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ Eigen::VectorXd\ accelerations\ =\ Eigen::VectorXd::Constant(3,\ 5);}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \mbox{\hyperlink{structtesseract__planning_1_1StateWaypointPoly}{StateWaypointPoly}}\ \mbox{\hyperlink{fix__state__collision__task__unit_8cpp_a00d07bfc3dfed5ce5dcd0c8155074ff0}{wp}}\{\ T(names,\ positions,\ velocities,\ accelerations,\ 5)\ \};}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \mbox{\hyperlink{command__language__utils__unit_8cpp_ac9999b1938b6048a1222396d6821eab6}{EXPECT\_EQ}}(\mbox{\hyperlink{fix__state__collision__task__unit_8cpp_a00d07bfc3dfed5ce5dcd0c8155074ff0}{wp}}.getNames(),\ names);}
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \mbox{\hyperlink{command__language__utils__unit_8cpp_a32b7bf22a514cfcff5d4e14d57ab1a8b}{EXPECT\_TRUE}}(\mbox{\hyperlink{fix__state__collision__task__unit_8cpp_a00d07bfc3dfed5ce5dcd0c8155074ff0}{wp}}.getPosition().isApprox(positions));}
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \mbox{\hyperlink{command__language__utils__unit_8cpp_a32b7bf22a514cfcff5d4e14d57ab1a8b}{EXPECT\_TRUE}}(\mbox{\hyperlink{fix__state__collision__task__unit_8cpp_a00d07bfc3dfed5ce5dcd0c8155074ff0}{wp}}.getVelocity().isApprox(velocities));}
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \mbox{\hyperlink{command__language__utils__unit_8cpp_a32b7bf22a514cfcff5d4e14d57ab1a8b}{EXPECT\_TRUE}}(\mbox{\hyperlink{fix__state__collision__task__unit_8cpp_a00d07bfc3dfed5ce5dcd0c8155074ff0}{wp}}.getAcceleration().isApprox(accelerations));}
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \mbox{\hyperlink{command__language__utils__unit_8cpp_a32b7bf22a514cfcff5d4e14d57ab1a8b}{EXPECT\_TRUE}}(\mbox{\hyperlink{fix__state__collision__task__unit_8cpp_a00d07bfc3dfed5ce5dcd0c8155074ff0}{wp}}.getEffort().rows()\ ==\ 0);}
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \mbox{\hyperlink{command__language__utils__unit_8cpp_a32b7bf22a514cfcff5d4e14d57ab1a8b}{EXPECT\_TRUE}}(tesseract\_common::almostEqualRelativeAndAbs(\mbox{\hyperlink{fix__state__collision__task__unit_8cpp_a00d07bfc3dfed5ce5dcd0c8155074ff0}{wp}}.getTime(),\ 5));}
+\DoxyCodeLine{00088\ \ \ \ \ \}}
+\DoxyCodeLine{00089\ \ \ \ \ \{}
+\DoxyCodeLine{00090\ \ \ \ \ \ \ std::vector<std::string>\ names\{\ \textcolor{stringliteral}{"{}j1"{}},\ \textcolor{stringliteral}{"{}j2"{}}\ \};}
+\DoxyCodeLine{00091\ \ \ \ \ \ \ Eigen::VectorXd\ positions\ =\ Eigen::VectorXd::Constant(3,\ 0.0);}
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \mbox{\hyperlink{command__language__utils__unit_8cpp_a0ec0f5fb498af7e810a320d8c93d5908}{EXPECT\_ANY\_THROW}}(\mbox{\hyperlink{structtesseract__planning_1_1StateWaypointPoly}{StateWaypointPoly}}\{\ T(names,\ positions)\ \});\ \ \textcolor{comment}{//\ NOLINT}}
+\DoxyCodeLine{00093\ \ \ \ \ \}}
+\DoxyCodeLine{00094\ \ \ \ \ \{}
+\DoxyCodeLine{00095\ \ \ \ \ \ \ std::vector<std::string>\ names\{\ \textcolor{stringliteral}{"{}j1"{}},\ \textcolor{stringliteral}{"{}j2"{}},\ \textcolor{stringliteral}{"{}j3"{}}\ \};}
+\DoxyCodeLine{00096\ \ \ \ \ \ \ Eigen::VectorXd\ positions\ =\ Eigen::VectorXd::Constant(2,\ 0.0);}
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \mbox{\hyperlink{command__language__utils__unit_8cpp_a0ec0f5fb498af7e810a320d8c93d5908}{EXPECT\_ANY\_THROW}}(\mbox{\hyperlink{structtesseract__planning_1_1StateWaypointPoly}{StateWaypointPoly}}\{\ T(names,\ positions)\ \});\ \ \textcolor{comment}{//\ NOLINT}}
+\DoxyCodeLine{00098\ \ \ \ \ \}}
+\DoxyCodeLine{00099\ \ \ \ \ \{}
+\DoxyCodeLine{00100\ \ \ \ \ \ \ std::vector<std::string>\ names\{\ \textcolor{stringliteral}{"{}j1"{}},\ \textcolor{stringliteral}{"{}j2"{}},\ \textcolor{stringliteral}{"{}j3"{}}\ \};}
+\DoxyCodeLine{00101\ \ \ \ \ \ \ Eigen::VectorXd\ positions\ =\ Eigen::VectorXd::Constant(3,\ 0.0);}
+\DoxyCodeLine{00102\ \ \ \ \ \ \ Eigen::VectorXd\ velocities\ =\ Eigen::VectorXd::Constant(2,\ -\/5);}
+\DoxyCodeLine{00103\ \ \ \ \ \ \ Eigen::VectorXd\ accelerations\ =\ Eigen::VectorXd::Constant(3,\ 5);}
+\DoxyCodeLine{00104\ \ \ \ \ \ \ \mbox{\hyperlink{command__language__utils__unit_8cpp_a0ec0f5fb498af7e810a320d8c93d5908}{EXPECT\_ANY\_THROW}}(\mbox{\hyperlink{structtesseract__planning_1_1StateWaypointPoly}{StateWaypointPoly}}\{\ T(names,\ positions,\ velocities,\ accelerations,\ 5)\ \});\ \ \textcolor{comment}{//\ NOLINT}}
+\DoxyCodeLine{00105\ \ \ \ \ \}}
+\DoxyCodeLine{00106\ \ \ \ \ \{}
+\DoxyCodeLine{00107\ \ \ \ \ \ \ std::vector<std::string>\ names\{\ \textcolor{stringliteral}{"{}j1"{}},\ \textcolor{stringliteral}{"{}j2"{}},\ \textcolor{stringliteral}{"{}j3"{}}\ \};}
+\DoxyCodeLine{00108\ \ \ \ \ \ \ Eigen::VectorXd\ positions\ =\ Eigen::VectorXd::Constant(3,\ 0.0);}
+\DoxyCodeLine{00109\ \ \ \ \ \ \ Eigen::VectorXd\ velocities\ =\ Eigen::VectorXd::Constant(3,\ -\/5);}
+\DoxyCodeLine{00110\ \ \ \ \ \ \ Eigen::VectorXd\ accelerations\ =\ Eigen::VectorXd::Constant(2,\ 5);}
+\DoxyCodeLine{00111\ \ \ \ \ \ \ \mbox{\hyperlink{command__language__utils__unit_8cpp_a0ec0f5fb498af7e810a320d8c93d5908}{EXPECT\_ANY\_THROW}}(\mbox{\hyperlink{structtesseract__planning_1_1StateWaypointPoly}{StateWaypointPoly}}\{\ T(names,\ positions,\ velocities,\ accelerations,\ 5)\ \});\ \ \textcolor{comment}{//\ NOLINT}}
+\DoxyCodeLine{00112\ \ \ \ \ \}}
+\DoxyCodeLine{00113\ \ \ \}\ \ \textcolor{comment}{//\ namespace\ tesseract\_planning::test\_suite}}
+\DoxyCodeLine{00114\ }
+\DoxyCodeLine{00115\ \ \ \{\ \ \textcolor{comment}{//\ Set/Get\ Names}}
+\DoxyCodeLine{00116\ \ \ \ \ \textcolor{keyword}{const}\ std::vector<std::string>\ names\{\ \textcolor{stringliteral}{"{}j1"{}},\ \textcolor{stringliteral}{"{}j2"{}},\ \textcolor{stringliteral}{"{}j3"{}}\ \};}
+\DoxyCodeLine{00117\ \ \ \ \ \{\ \ \textcolor{comment}{//\ Test\ set}}
+\DoxyCodeLine{00118\ \ \ \ \ \ \ \mbox{\hyperlink{structtesseract__planning_1_1StateWaypointPoly}{StateWaypointPoly}}\ \mbox{\hyperlink{fix__state__collision__task__unit_8cpp_a00d07bfc3dfed5ce5dcd0c8155074ff0}{wp}}\{\ T()\ \};}
+\DoxyCodeLine{00119\ \ \ \ \ \ \ \mbox{\hyperlink{fix__state__collision__task__unit_8cpp_a00d07bfc3dfed5ce5dcd0c8155074ff0}{wp}}.\mbox{\hyperlink{structtesseract__planning_1_1StateWaypointPoly_a84b3685a9ffd3674811db50d9ad1470f}{setNames}}(names);}
+\DoxyCodeLine{00120\ \ \ \ \ \ \ \mbox{\hyperlink{command__language__utils__unit_8cpp_a32b7bf22a514cfcff5d4e14d57ab1a8b}{EXPECT\_TRUE}}(\mbox{\hyperlink{fix__state__collision__task__unit_8cpp_a00d07bfc3dfed5ce5dcd0c8155074ff0}{wp}}.getNames()\ ==\ names);}
+\DoxyCodeLine{00121\ \ \ \ \ \}}
+\DoxyCodeLine{00122\ }
+\DoxyCodeLine{00123\ \ \ \ \ \{\ \ \textcolor{comment}{//\ Test\ assigning}}
+\DoxyCodeLine{00124\ \ \ \ \ \ \ \mbox{\hyperlink{structtesseract__planning_1_1StateWaypointPoly}{StateWaypointPoly}}\ \mbox{\hyperlink{fix__state__collision__task__unit_8cpp_a00d07bfc3dfed5ce5dcd0c8155074ff0}{wp}}\{\ T()\ \};}
+\DoxyCodeLine{00125\ \ \ \ \ \ \ \mbox{\hyperlink{fix__state__collision__task__unit_8cpp_a00d07bfc3dfed5ce5dcd0c8155074ff0}{wp}}.\mbox{\hyperlink{structtesseract__planning_1_1StateWaypointPoly_a31feddd92e294f009c7579cd8edf7ad2}{getNames}}()\ =\ names;}
+\DoxyCodeLine{00126\ \ \ \ \ \ \ \mbox{\hyperlink{command__language__utils__unit_8cpp_a32b7bf22a514cfcff5d4e14d57ab1a8b}{EXPECT\_TRUE}}(std::as\_const(\mbox{\hyperlink{fix__state__collision__task__unit_8cpp_a00d07bfc3dfed5ce5dcd0c8155074ff0}{wp}}).getNames()\ ==\ names);}
+\DoxyCodeLine{00127\ \ \ \ \ \}}
+\DoxyCodeLine{00128\ \ \ \}}
+\DoxyCodeLine{00129\ }
+\DoxyCodeLine{00130\ \ \ \{\ \ \textcolor{comment}{//\ Set/Get\ Positions}}
+\DoxyCodeLine{00131\ \ \ \ \ Eigen::VectorXd\ \mbox{\hyperlink{ompl__planner__tests_8cpp_a1ac79e92f7645f205bdbfb90f97d6af6}{data}};}
+\DoxyCodeLine{00132\ \ \ \ \ \mbox{\hyperlink{ompl__planner__tests_8cpp_a1ac79e92f7645f205bdbfb90f97d6af6}{data}}.resize(3);}
+\DoxyCodeLine{00133\ \ \ \ \ \mbox{\hyperlink{ompl__planner__tests_8cpp_a1ac79e92f7645f205bdbfb90f97d6af6}{data}}\ <<\ 1.0,\ 2.0,\ 3.0;}
+\DoxyCodeLine{00134\ }
+\DoxyCodeLine{00135\ \ \ \ \ \{\ \ \textcolor{comment}{//\ Test\ set}}
+\DoxyCodeLine{00136\ \ \ \ \ \ \ \mbox{\hyperlink{structtesseract__planning_1_1StateWaypointPoly}{StateWaypointPoly}}\ \mbox{\hyperlink{fix__state__collision__task__unit_8cpp_a00d07bfc3dfed5ce5dcd0c8155074ff0}{wp}}\{\ T()\ \};}
+\DoxyCodeLine{00137\ \ \ \ \ \ \ \mbox{\hyperlink{fix__state__collision__task__unit_8cpp_a00d07bfc3dfed5ce5dcd0c8155074ff0}{wp}}.\mbox{\hyperlink{structtesseract__planning_1_1StateWaypointPoly_a5657e7cd4d313ad7fdd33c2a2d3e6732}{setPosition}}(\mbox{\hyperlink{ompl__planner__tests_8cpp_a1ac79e92f7645f205bdbfb90f97d6af6}{data}});}
+\DoxyCodeLine{00138\ \ \ \ \ \ \ \mbox{\hyperlink{command__language__utils__unit_8cpp_a32b7bf22a514cfcff5d4e14d57ab1a8b}{EXPECT\_TRUE}}(\mbox{\hyperlink{fix__state__collision__task__unit_8cpp_a00d07bfc3dfed5ce5dcd0c8155074ff0}{wp}}.getPosition().isApprox(\mbox{\hyperlink{ompl__planner__tests_8cpp_a1ac79e92f7645f205bdbfb90f97d6af6}{data}}));}
+\DoxyCodeLine{00139\ \ \ \ \ \}}
+\DoxyCodeLine{00140\ }
+\DoxyCodeLine{00141\ \ \ \ \ \{\ \ \textcolor{comment}{//\ Test\ assigning}}
+\DoxyCodeLine{00142\ \ \ \ \ \ \ \mbox{\hyperlink{structtesseract__planning_1_1StateWaypointPoly}{StateWaypointPoly}}\ \mbox{\hyperlink{fix__state__collision__task__unit_8cpp_a00d07bfc3dfed5ce5dcd0c8155074ff0}{wp}}\{\ T()\ \};}
+\DoxyCodeLine{00143\ \ \ \ \ \ \ \mbox{\hyperlink{fix__state__collision__task__unit_8cpp_a00d07bfc3dfed5ce5dcd0c8155074ff0}{wp}}.\mbox{\hyperlink{structtesseract__planning_1_1StateWaypointPoly_abd3abc3a705fa9983e0bd43c28e47bc9}{getPosition}}()\ =\ \mbox{\hyperlink{ompl__planner__tests_8cpp_a1ac79e92f7645f205bdbfb90f97d6af6}{data}};}
+\DoxyCodeLine{00144\ \ \ \ \ \ \ \mbox{\hyperlink{command__language__utils__unit_8cpp_a32b7bf22a514cfcff5d4e14d57ab1a8b}{EXPECT\_TRUE}}(std::as\_const(\mbox{\hyperlink{fix__state__collision__task__unit_8cpp_a00d07bfc3dfed5ce5dcd0c8155074ff0}{wp}}).\mbox{\hyperlink{trajopt__planner__tests_8cpp_a5224d9f3f38aae0c4028178a2f3604f3}{getPosition}}().isApprox(\mbox{\hyperlink{ompl__planner__tests_8cpp_a1ac79e92f7645f205bdbfb90f97d6af6}{data}}));}
+\DoxyCodeLine{00145\ \ \ \ \ \}}
+\DoxyCodeLine{00146\ \ \ \}}
+\DoxyCodeLine{00147\ }
+\DoxyCodeLine{00148\ \ \ \{\ \ \textcolor{comment}{//\ Set/Get\ Velocity}}
+\DoxyCodeLine{00149\ \ \ \ \ Eigen::VectorXd\ \mbox{\hyperlink{ompl__planner__tests_8cpp_a1ac79e92f7645f205bdbfb90f97d6af6}{data}};}
+\DoxyCodeLine{00150\ \ \ \ \ \mbox{\hyperlink{ompl__planner__tests_8cpp_a1ac79e92f7645f205bdbfb90f97d6af6}{data}}.resize(3);}
+\DoxyCodeLine{00151\ \ \ \ \ \mbox{\hyperlink{ompl__planner__tests_8cpp_a1ac79e92f7645f205bdbfb90f97d6af6}{data}}\ <<\ 1.0,\ 2.0,\ 3.0;}
+\DoxyCodeLine{00152\ }
+\DoxyCodeLine{00153\ \ \ \ \ \{\ \ \textcolor{comment}{//\ Test\ set}}
+\DoxyCodeLine{00154\ \ \ \ \ \ \ \mbox{\hyperlink{structtesseract__planning_1_1StateWaypointPoly}{StateWaypointPoly}}\ \mbox{\hyperlink{fix__state__collision__task__unit_8cpp_a00d07bfc3dfed5ce5dcd0c8155074ff0}{wp}}\{\ T()\ \};}
+\DoxyCodeLine{00155\ \ \ \ \ \ \ \mbox{\hyperlink{fix__state__collision__task__unit_8cpp_a00d07bfc3dfed5ce5dcd0c8155074ff0}{wp}}.\mbox{\hyperlink{structtesseract__planning_1_1StateWaypointPoly_a57f945cad35e10126263318b70578b53}{setVelocity}}(\mbox{\hyperlink{ompl__planner__tests_8cpp_a1ac79e92f7645f205bdbfb90f97d6af6}{data}});}
+\DoxyCodeLine{00156\ \ \ \ \ \ \ \mbox{\hyperlink{command__language__utils__unit_8cpp_a32b7bf22a514cfcff5d4e14d57ab1a8b}{EXPECT\_TRUE}}(\mbox{\hyperlink{fix__state__collision__task__unit_8cpp_a00d07bfc3dfed5ce5dcd0c8155074ff0}{wp}}.getVelocity().isApprox(\mbox{\hyperlink{ompl__planner__tests_8cpp_a1ac79e92f7645f205bdbfb90f97d6af6}{data}}));}
+\DoxyCodeLine{00157\ \ \ \ \ \}}
+\DoxyCodeLine{00158\ }
+\DoxyCodeLine{00159\ \ \ \ \ \{\ \ \textcolor{comment}{//\ Test\ assigning}}
+\DoxyCodeLine{00160\ \ \ \ \ \ \ \mbox{\hyperlink{structtesseract__planning_1_1StateWaypointPoly}{StateWaypointPoly}}\ \mbox{\hyperlink{fix__state__collision__task__unit_8cpp_a00d07bfc3dfed5ce5dcd0c8155074ff0}{wp}}\{\ T()\ \};}
+\DoxyCodeLine{00161\ \ \ \ \ \ \ \mbox{\hyperlink{fix__state__collision__task__unit_8cpp_a00d07bfc3dfed5ce5dcd0c8155074ff0}{wp}}.\mbox{\hyperlink{structtesseract__planning_1_1StateWaypointPoly_a83402ce4913a9a6db27f34f59505335a}{getVelocity}}()\ =\ \mbox{\hyperlink{ompl__planner__tests_8cpp_a1ac79e92f7645f205bdbfb90f97d6af6}{data}};}
+\DoxyCodeLine{00162\ \ \ \ \ \ \ \mbox{\hyperlink{command__language__utils__unit_8cpp_a32b7bf22a514cfcff5d4e14d57ab1a8b}{EXPECT\_TRUE}}(std::as\_const(\mbox{\hyperlink{fix__state__collision__task__unit_8cpp_a00d07bfc3dfed5ce5dcd0c8155074ff0}{wp}}).getVelocity().isApprox(\mbox{\hyperlink{ompl__planner__tests_8cpp_a1ac79e92f7645f205bdbfb90f97d6af6}{data}}));}
+\DoxyCodeLine{00163\ \ \ \ \ \}}
+\DoxyCodeLine{00164\ \ \ \}}
+\DoxyCodeLine{00165\ }
+\DoxyCodeLine{00166\ \ \ \{\ \ \textcolor{comment}{//\ Set/Get\ Acceleration}}
+\DoxyCodeLine{00167\ \ \ \ \ Eigen::VectorXd\ \mbox{\hyperlink{ompl__planner__tests_8cpp_a1ac79e92f7645f205bdbfb90f97d6af6}{data}};}
+\DoxyCodeLine{00168\ \ \ \ \ \mbox{\hyperlink{ompl__planner__tests_8cpp_a1ac79e92f7645f205bdbfb90f97d6af6}{data}}.resize(3);}
+\DoxyCodeLine{00169\ \ \ \ \ \mbox{\hyperlink{ompl__planner__tests_8cpp_a1ac79e92f7645f205bdbfb90f97d6af6}{data}}\ <<\ 1.0,\ 2.0,\ 3.0;}
+\DoxyCodeLine{00170\ }
+\DoxyCodeLine{00171\ \ \ \ \ \{\ \ \textcolor{comment}{//\ Test\ set}}
+\DoxyCodeLine{00172\ \ \ \ \ \ \ \mbox{\hyperlink{structtesseract__planning_1_1StateWaypointPoly}{StateWaypointPoly}}\ \mbox{\hyperlink{fix__state__collision__task__unit_8cpp_a00d07bfc3dfed5ce5dcd0c8155074ff0}{wp}}\{\ T()\ \};}
+\DoxyCodeLine{00173\ \ \ \ \ \ \ \mbox{\hyperlink{fix__state__collision__task__unit_8cpp_a00d07bfc3dfed5ce5dcd0c8155074ff0}{wp}}.\mbox{\hyperlink{structtesseract__planning_1_1StateWaypointPoly_a60b96e300071e5ff63e806c1c52588e2}{setAcceleration}}(\mbox{\hyperlink{ompl__planner__tests_8cpp_a1ac79e92f7645f205bdbfb90f97d6af6}{data}});}
+\DoxyCodeLine{00174\ \ \ \ \ \ \ \mbox{\hyperlink{command__language__utils__unit_8cpp_a32b7bf22a514cfcff5d4e14d57ab1a8b}{EXPECT\_TRUE}}(\mbox{\hyperlink{fix__state__collision__task__unit_8cpp_a00d07bfc3dfed5ce5dcd0c8155074ff0}{wp}}.getAcceleration().isApprox(\mbox{\hyperlink{ompl__planner__tests_8cpp_a1ac79e92f7645f205bdbfb90f97d6af6}{data}}));}
+\DoxyCodeLine{00175\ \ \ \ \ \}}
+\DoxyCodeLine{00176\ }
+\DoxyCodeLine{00177\ \ \ \ \ \{\ \ \textcolor{comment}{//\ Test\ assigning}}
+\DoxyCodeLine{00178\ \ \ \ \ \ \ \mbox{\hyperlink{structtesseract__planning_1_1StateWaypointPoly}{StateWaypointPoly}}\ \mbox{\hyperlink{fix__state__collision__task__unit_8cpp_a00d07bfc3dfed5ce5dcd0c8155074ff0}{wp}}\{\ T()\ \};}
+\DoxyCodeLine{00179\ \ \ \ \ \ \ \mbox{\hyperlink{fix__state__collision__task__unit_8cpp_a00d07bfc3dfed5ce5dcd0c8155074ff0}{wp}}.\mbox{\hyperlink{structtesseract__planning_1_1StateWaypointPoly_a1241ba5f739529b6c85778613ee6833f}{getAcceleration}}()\ =\ \mbox{\hyperlink{ompl__planner__tests_8cpp_a1ac79e92f7645f205bdbfb90f97d6af6}{data}};}
+\DoxyCodeLine{00180\ \ \ \ \ \ \ \mbox{\hyperlink{command__language__utils__unit_8cpp_a32b7bf22a514cfcff5d4e14d57ab1a8b}{EXPECT\_TRUE}}(std::as\_const(\mbox{\hyperlink{fix__state__collision__task__unit_8cpp_a00d07bfc3dfed5ce5dcd0c8155074ff0}{wp}}).getAcceleration().isApprox(\mbox{\hyperlink{ompl__planner__tests_8cpp_a1ac79e92f7645f205bdbfb90f97d6af6}{data}}));}
+\DoxyCodeLine{00181\ \ \ \ \ \}}
+\DoxyCodeLine{00182\ \ \ \}}
+\DoxyCodeLine{00183\ }
+\DoxyCodeLine{00184\ \ \ \{\ \ \textcolor{comment}{//\ Set/Get\ Effort}}
+\DoxyCodeLine{00185\ \ \ \ \ Eigen::VectorXd\ \mbox{\hyperlink{ompl__planner__tests_8cpp_a1ac79e92f7645f205bdbfb90f97d6af6}{data}};}
+\DoxyCodeLine{00186\ \ \ \ \ \mbox{\hyperlink{ompl__planner__tests_8cpp_a1ac79e92f7645f205bdbfb90f97d6af6}{data}}.resize(3);}
+\DoxyCodeLine{00187\ \ \ \ \ \mbox{\hyperlink{ompl__planner__tests_8cpp_a1ac79e92f7645f205bdbfb90f97d6af6}{data}}\ <<\ 1.0,\ 2.0,\ 3.0;}
+\DoxyCodeLine{00188\ }
+\DoxyCodeLine{00189\ \ \ \ \ \{\ \ \textcolor{comment}{//\ Test\ set}}
+\DoxyCodeLine{00190\ \ \ \ \ \ \ \mbox{\hyperlink{structtesseract__planning_1_1StateWaypointPoly}{StateWaypointPoly}}\ \mbox{\hyperlink{fix__state__collision__task__unit_8cpp_a00d07bfc3dfed5ce5dcd0c8155074ff0}{wp}}\{\ T()\ \};}
+\DoxyCodeLine{00191\ \ \ \ \ \ \ \mbox{\hyperlink{fix__state__collision__task__unit_8cpp_a00d07bfc3dfed5ce5dcd0c8155074ff0}{wp}}.\mbox{\hyperlink{structtesseract__planning_1_1StateWaypointPoly_adf8f52745bab5a2b694d5f9f94ebf018}{setEffort}}(\mbox{\hyperlink{ompl__planner__tests_8cpp_a1ac79e92f7645f205bdbfb90f97d6af6}{data}});}
+\DoxyCodeLine{00192\ \ \ \ \ \ \ \mbox{\hyperlink{command__language__utils__unit_8cpp_a32b7bf22a514cfcff5d4e14d57ab1a8b}{EXPECT\_TRUE}}(\mbox{\hyperlink{fix__state__collision__task__unit_8cpp_a00d07bfc3dfed5ce5dcd0c8155074ff0}{wp}}.getEffort().isApprox(\mbox{\hyperlink{ompl__planner__tests_8cpp_a1ac79e92f7645f205bdbfb90f97d6af6}{data}}));}
+\DoxyCodeLine{00193\ \ \ \ \ \}}
+\DoxyCodeLine{00194\ }
+\DoxyCodeLine{00195\ \ \ \ \ \{\ \ \textcolor{comment}{//\ Test\ assigning}}
+\DoxyCodeLine{00196\ \ \ \ \ \ \ \mbox{\hyperlink{structtesseract__planning_1_1StateWaypointPoly}{StateWaypointPoly}}\ \mbox{\hyperlink{fix__state__collision__task__unit_8cpp_a00d07bfc3dfed5ce5dcd0c8155074ff0}{wp}}\{\ T()\ \};}
+\DoxyCodeLine{00197\ \ \ \ \ \ \ \mbox{\hyperlink{fix__state__collision__task__unit_8cpp_a00d07bfc3dfed5ce5dcd0c8155074ff0}{wp}}.\mbox{\hyperlink{structtesseract__planning_1_1StateWaypointPoly_a153126807803d6ec20f04a0af8921af8}{getEffort}}()\ =\ \mbox{\hyperlink{ompl__planner__tests_8cpp_a1ac79e92f7645f205bdbfb90f97d6af6}{data}};}
+\DoxyCodeLine{00198\ \ \ \ \ \ \ \mbox{\hyperlink{command__language__utils__unit_8cpp_a32b7bf22a514cfcff5d4e14d57ab1a8b}{EXPECT\_TRUE}}(std::as\_const(\mbox{\hyperlink{fix__state__collision__task__unit_8cpp_a00d07bfc3dfed5ce5dcd0c8155074ff0}{wp}}).getEffort().isApprox(\mbox{\hyperlink{ompl__planner__tests_8cpp_a1ac79e92f7645f205bdbfb90f97d6af6}{data}}));}
+\DoxyCodeLine{00199\ \ \ \ \ \}}
+\DoxyCodeLine{00200\ \ \ \}}
+\DoxyCodeLine{00201\ }
+\DoxyCodeLine{00202\ \ \ \{\ \ \textcolor{comment}{//\ Set/Get\ Time}}
+\DoxyCodeLine{00203\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{ompl__planner__tests_8cpp_a1ac79e92f7645f205bdbfb90f97d6af6}{data}}\{\ 3\ \};}
+\DoxyCodeLine{00204\ \ \ \ \ \mbox{\hyperlink{structtesseract__planning_1_1StateWaypointPoly}{StateWaypointPoly}}\ \mbox{\hyperlink{fix__state__collision__task__unit_8cpp_a00d07bfc3dfed5ce5dcd0c8155074ff0}{wp}}\{\ T()\ \};}
+\DoxyCodeLine{00205\ \ \ \ \ \mbox{\hyperlink{fix__state__collision__task__unit_8cpp_a00d07bfc3dfed5ce5dcd0c8155074ff0}{wp}}.\mbox{\hyperlink{structtesseract__planning_1_1StateWaypointPoly_ab43a86c5dbbfd91563a1761a1a5e1625}{setTime}}(\mbox{\hyperlink{ompl__planner__tests_8cpp_a1ac79e92f7645f205bdbfb90f97d6af6}{data}});}
+\DoxyCodeLine{00206\ \ \ \ \ \mbox{\hyperlink{command__language__utils__unit_8cpp_a32b7bf22a514cfcff5d4e14d57ab1a8b}{EXPECT\_TRUE}}(tesseract\_common::almostEqualRelativeAndAbs(\mbox{\hyperlink{fix__state__collision__task__unit_8cpp_a00d07bfc3dfed5ce5dcd0c8155074ff0}{wp}}.getTime(),\ \mbox{\hyperlink{ompl__planner__tests_8cpp_a1ac79e92f7645f205bdbfb90f97d6af6}{data}}));}
+\DoxyCodeLine{00207\ \ \ \}}
+\DoxyCodeLine{00208\ }
+\DoxyCodeLine{00209\ \ \ \{\ \ \textcolor{comment}{//\ Test\ Equality\ and\ Serialization}}
+\DoxyCodeLine{00210\ \ \ \ \ \{}
+\DoxyCodeLine{00211\ \ \ \ \ \ \ \mbox{\hyperlink{structtesseract__planning_1_1StateWaypointPoly}{StateWaypointPoly}}\ \mbox{\hyperlink{command__language__utils__unit_8cpp_ae64db9b4e6bc99309ba972a308668172}{wp1}}\{\ T(\{\ \textcolor{stringliteral}{"{}j1"{}},\ \textcolor{stringliteral}{"{}j2"{}},\ \textcolor{stringliteral}{"{}j3"{}}\ \},\ \{\ 0.0,\ 0.0,\ 0.0\ \})\ \};}
+\DoxyCodeLine{00212\ \ \ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{structtesseract__planning_1_1StateWaypointPoly}{StateWaypointPoly}}\ \mbox{\hyperlink{command__language__utils__unit_8cpp_a6a7c0153c4436a5cb1d544fb68aa6847}{wp2}}(\mbox{\hyperlink{command__language__utils__unit_8cpp_ae64db9b4e6bc99309ba972a308668172}{wp1}});\ \ \textcolor{comment}{//\ NOLINT}}
+\DoxyCodeLine{00213\ \ \ \ \ \ \ \mbox{\hyperlink{command__language__utils__unit_8cpp_a32b7bf22a514cfcff5d4e14d57ab1a8b}{EXPECT\_TRUE}}(\mbox{\hyperlink{command__language__utils__unit_8cpp_ae64db9b4e6bc99309ba972a308668172}{wp1}}\ ==\ \mbox{\hyperlink{command__language__utils__unit_8cpp_a6a7c0153c4436a5cb1d544fb68aa6847}{wp2}});}
+\DoxyCodeLine{00214\ \ \ \ \ \ \ \mbox{\hyperlink{command__language__utils__unit_8cpp_a32b7bf22a514cfcff5d4e14d57ab1a8b}{EXPECT\_TRUE}}(\mbox{\hyperlink{command__language__utils__unit_8cpp_a6a7c0153c4436a5cb1d544fb68aa6847}{wp2}}\ ==\ \mbox{\hyperlink{command__language__utils__unit_8cpp_ae64db9b4e6bc99309ba972a308668172}{wp1}});}
+\DoxyCodeLine{00215\ \ \ \ \ \ \ \mbox{\hyperlink{command__language__utils__unit_8cpp_a87b7f2690021fd8f1f348928f30fb2f9}{EXPECT\_FALSE}}(\mbox{\hyperlink{command__language__utils__unit_8cpp_a6a7c0153c4436a5cb1d544fb68aa6847}{wp2}}\ !=\ \mbox{\hyperlink{command__language__utils__unit_8cpp_ae64db9b4e6bc99309ba972a308668172}{wp1}});}
+\DoxyCodeLine{00216\ \ \ \ \ \ \ \mbox{\hyperlink{namespacetesseract__planning_1_1test__suite_a3e222d531141b6c852db827ef57ea3f4}{runWaypointSerializationTest}}(\mbox{\hyperlink{command__language__utils__unit_8cpp_ae64db9b4e6bc99309ba972a308668172}{wp1}});}
+\DoxyCodeLine{00217\ \ \ \ \ \}}
+\DoxyCodeLine{00218\ \ \ \ \ \{}
+\DoxyCodeLine{00219\ \ \ \ \ \ \ \mbox{\hyperlink{structtesseract__planning_1_1StateWaypointPoly}{StateWaypointPoly}}\ \mbox{\hyperlink{command__language__utils__unit_8cpp_ae64db9b4e6bc99309ba972a308668172}{wp1}}\{\ T(\{\ \textcolor{stringliteral}{"{}j1"{}},\ \textcolor{stringliteral}{"{}j2"{}},\ \textcolor{stringliteral}{"{}j3"{}}\ \},\ \{\ 0,\ -\/1e6,\ 1e6\ \})\ \};}
+\DoxyCodeLine{00220\ \ \ \ \ \ \ \mbox{\hyperlink{structtesseract__planning_1_1StateWaypointPoly}{StateWaypointPoly}}\ \mbox{\hyperlink{command__language__utils__unit_8cpp_a6a7c0153c4436a5cb1d544fb68aa6847}{wp2}}(\mbox{\hyperlink{command__language__utils__unit_8cpp_ae64db9b4e6bc99309ba972a308668172}{wp1}});\ \ \textcolor{comment}{//\ NOLINT}}
+\DoxyCodeLine{00221\ \ \ \ \ \ \ \mbox{\hyperlink{command__language__utils__unit_8cpp_a32b7bf22a514cfcff5d4e14d57ab1a8b}{EXPECT\_TRUE}}(\mbox{\hyperlink{command__language__utils__unit_8cpp_ae64db9b4e6bc99309ba972a308668172}{wp1}}\ ==\ \mbox{\hyperlink{command__language__utils__unit_8cpp_a6a7c0153c4436a5cb1d544fb68aa6847}{wp2}});}
+\DoxyCodeLine{00222\ \ \ \ \ \ \ \mbox{\hyperlink{command__language__utils__unit_8cpp_a32b7bf22a514cfcff5d4e14d57ab1a8b}{EXPECT\_TRUE}}(\mbox{\hyperlink{command__language__utils__unit_8cpp_a6a7c0153c4436a5cb1d544fb68aa6847}{wp2}}\ ==\ \mbox{\hyperlink{command__language__utils__unit_8cpp_ae64db9b4e6bc99309ba972a308668172}{wp1}});}
+\DoxyCodeLine{00223\ \ \ \ \ \ \ \mbox{\hyperlink{command__language__utils__unit_8cpp_a87b7f2690021fd8f1f348928f30fb2f9}{EXPECT\_FALSE}}(\mbox{\hyperlink{command__language__utils__unit_8cpp_a6a7c0153c4436a5cb1d544fb68aa6847}{wp2}}\ !=\ \mbox{\hyperlink{command__language__utils__unit_8cpp_ae64db9b4e6bc99309ba972a308668172}{wp1}});}
+\DoxyCodeLine{00224\ \ \ \ \ \ \ \mbox{\hyperlink{namespacetesseract__planning_1_1test__suite_a3e222d531141b6c852db827ef57ea3f4}{runWaypointSerializationTest}}(\mbox{\hyperlink{command__language__utils__unit_8cpp_ae64db9b4e6bc99309ba972a308668172}{wp1}});}
+\DoxyCodeLine{00225\ \ \ \ \ \}}
+\DoxyCodeLine{00226\ \ \ \ \ \{}
+\DoxyCodeLine{00227\ \ \ \ \ \ \ std::vector<std::string>\ names\{\ \textcolor{stringliteral}{"{}j1"{}},\ \textcolor{stringliteral}{"{}j2"{}},\ \textcolor{stringliteral}{"{}j3"{}}\ \};}
+\DoxyCodeLine{00228\ \ \ \ \ \ \ Eigen::VectorXd\ positions,\ velocities,\ accelerations,\ efforts;}
+\DoxyCodeLine{00229\ \ \ \ \ \ \ positions.resize(3);}
+\DoxyCodeLine{00230\ \ \ \ \ \ \ velocities.resize(3);}
+\DoxyCodeLine{00231\ \ \ \ \ \ \ accelerations.resize(3);}
+\DoxyCodeLine{00232\ \ \ \ \ \ \ efforts.resize(3);}
+\DoxyCodeLine{00233\ \ \ \ \ \ \ positions\ <<\ 0,\ -\/1e6,\ 1e6;}
+\DoxyCodeLine{00234\ \ \ \ \ \ \ velocities\ <<\ 1,\ 2,\ 3;}
+\DoxyCodeLine{00235\ \ \ \ \ \ \ accelerations\ <<\ -\/4,\ -\/5,\ -\/6;}
+\DoxyCodeLine{00236\ \ \ \ \ \ \ efforts\ <<\ 4,\ 5,\ 6;}
+\DoxyCodeLine{00237\ }
+\DoxyCodeLine{00238\ \ \ \ \ \ \ \mbox{\hyperlink{structtesseract__planning_1_1StateWaypointPoly}{StateWaypointPoly}}\ \mbox{\hyperlink{command__language__utils__unit_8cpp_ae64db9b4e6bc99309ba972a308668172}{wp1}}\{\ T(names,\ positions,\ velocities,\ accelerations,\ 5)\ \};}
+\DoxyCodeLine{00239\ \ \ \ \ \ \ \mbox{\hyperlink{command__language__utils__unit_8cpp_ae64db9b4e6bc99309ba972a308668172}{wp1}}.\mbox{\hyperlink{structtesseract__planning_1_1StateWaypointPoly_a153126807803d6ec20f04a0af8921af8}{getEffort}}()\ =\ efforts;}
+\DoxyCodeLine{00240\ \ \ \ \ \ \ \mbox{\hyperlink{structtesseract__planning_1_1StateWaypointPoly}{StateWaypointPoly}}\ \mbox{\hyperlink{command__language__utils__unit_8cpp_a6a7c0153c4436a5cb1d544fb68aa6847}{wp2}}(\mbox{\hyperlink{command__language__utils__unit_8cpp_ae64db9b4e6bc99309ba972a308668172}{wp1}});}
+\DoxyCodeLine{00241\ \ \ \ \ \ \ \mbox{\hyperlink{command__language__utils__unit_8cpp_a32b7bf22a514cfcff5d4e14d57ab1a8b}{EXPECT\_TRUE}}(\mbox{\hyperlink{command__language__utils__unit_8cpp_ae64db9b4e6bc99309ba972a308668172}{wp1}}\ ==\ \mbox{\hyperlink{command__language__utils__unit_8cpp_a6a7c0153c4436a5cb1d544fb68aa6847}{wp2}});}
+\DoxyCodeLine{00242\ \ \ \ \ \ \ \mbox{\hyperlink{command__language__utils__unit_8cpp_a32b7bf22a514cfcff5d4e14d57ab1a8b}{EXPECT\_TRUE}}(\mbox{\hyperlink{command__language__utils__unit_8cpp_a6a7c0153c4436a5cb1d544fb68aa6847}{wp2}}\ ==\ \mbox{\hyperlink{command__language__utils__unit_8cpp_ae64db9b4e6bc99309ba972a308668172}{wp1}});}
+\DoxyCodeLine{00243\ \ \ \ \ \ \ \mbox{\hyperlink{command__language__utils__unit_8cpp_a87b7f2690021fd8f1f348928f30fb2f9}{EXPECT\_FALSE}}(\mbox{\hyperlink{command__language__utils__unit_8cpp_a6a7c0153c4436a5cb1d544fb68aa6847}{wp2}}\ !=\ \mbox{\hyperlink{command__language__utils__unit_8cpp_ae64db9b4e6bc99309ba972a308668172}{wp1}});}
+\DoxyCodeLine{00244\ \ \ \ \ \ \ \mbox{\hyperlink{namespacetesseract__planning_1_1test__suite_a3e222d531141b6c852db827ef57ea3f4}{runWaypointSerializationTest}}(\mbox{\hyperlink{command__language__utils__unit_8cpp_ae64db9b4e6bc99309ba972a308668172}{wp1}});}
+\DoxyCodeLine{00245\ \ \ \ \ \}}
+\DoxyCodeLine{00246\ \ \ \ \ \{}
+\DoxyCodeLine{00247\ \ \ \ \ \ \ Eigen::VectorXd\ efforts;}
+\DoxyCodeLine{00248\ \ \ \ \ \ \ efforts.resize(3);}
+\DoxyCodeLine{00249\ \ \ \ \ \ \ efforts\ <<\ 4,\ 5,\ 6;}
+\DoxyCodeLine{00250\ }
+\DoxyCodeLine{00251\ \ \ \ \ \ \ \mbox{\hyperlink{structtesseract__planning_1_1StateWaypointPoly}{StateWaypointPoly}}\ \mbox{\hyperlink{command__language__utils__unit_8cpp_ae64db9b4e6bc99309ba972a308668172}{wp1}}\{\ T(\{\ \textcolor{stringliteral}{"{}j1"{}},\ \textcolor{stringliteral}{"{}j2"{}},\ \textcolor{stringliteral}{"{}j3"{}}\ \},\ \{\ 0,\ -\/1e6,\ 1e6\ \},\ \{\ 1,\ 2,\ 3\ \},\ \{\ -\/4,\ -\/5,\ -\/6\ \},\ 5)\ \};}
+\DoxyCodeLine{00252\ \ \ \ \ \ \ \mbox{\hyperlink{command__language__utils__unit_8cpp_ae64db9b4e6bc99309ba972a308668172}{wp1}}.\mbox{\hyperlink{structtesseract__planning_1_1StateWaypointPoly_a153126807803d6ec20f04a0af8921af8}{getEffort}}()\ =\ efforts;}
+\DoxyCodeLine{00253\ \ \ \ \ \ \ \mbox{\hyperlink{structtesseract__planning_1_1StateWaypointPoly}{StateWaypointPoly}}\ \mbox{\hyperlink{command__language__utils__unit_8cpp_a6a7c0153c4436a5cb1d544fb68aa6847}{wp2}}(\mbox{\hyperlink{command__language__utils__unit_8cpp_ae64db9b4e6bc99309ba972a308668172}{wp1}});}
+\DoxyCodeLine{00254\ \ \ \ \ \ \ \mbox{\hyperlink{command__language__utils__unit_8cpp_a32b7bf22a514cfcff5d4e14d57ab1a8b}{EXPECT\_TRUE}}(\mbox{\hyperlink{command__language__utils__unit_8cpp_ae64db9b4e6bc99309ba972a308668172}{wp1}}\ ==\ \mbox{\hyperlink{command__language__utils__unit_8cpp_a6a7c0153c4436a5cb1d544fb68aa6847}{wp2}});}
+\DoxyCodeLine{00255\ \ \ \ \ \ \ \mbox{\hyperlink{command__language__utils__unit_8cpp_a32b7bf22a514cfcff5d4e14d57ab1a8b}{EXPECT\_TRUE}}(\mbox{\hyperlink{command__language__utils__unit_8cpp_a6a7c0153c4436a5cb1d544fb68aa6847}{wp2}}\ ==\ \mbox{\hyperlink{command__language__utils__unit_8cpp_ae64db9b4e6bc99309ba972a308668172}{wp1}});}
+\DoxyCodeLine{00256\ \ \ \ \ \ \ \mbox{\hyperlink{command__language__utils__unit_8cpp_a87b7f2690021fd8f1f348928f30fb2f9}{EXPECT\_FALSE}}(\mbox{\hyperlink{command__language__utils__unit_8cpp_a6a7c0153c4436a5cb1d544fb68aa6847}{wp2}}\ !=\ \mbox{\hyperlink{command__language__utils__unit_8cpp_ae64db9b4e6bc99309ba972a308668172}{wp1}});}
+\DoxyCodeLine{00257\ \ \ \ \ \ \ \mbox{\hyperlink{namespacetesseract__planning_1_1test__suite_a3e222d531141b6c852db827ef57ea3f4}{runWaypointSerializationTest}}(\mbox{\hyperlink{command__language__utils__unit_8cpp_ae64db9b4e6bc99309ba972a308668172}{wp1}});}
+\DoxyCodeLine{00258\ \ \ \ \ \}}
+\DoxyCodeLine{00259\ \ \ \ \ \textcolor{comment}{//\ Not\ equal}}
+\DoxyCodeLine{00260\ \ \ \ \ \{}
+\DoxyCodeLine{00261\ \ \ \ \ \ \ \mbox{\hyperlink{structtesseract__planning_1_1StateWaypointPoly}{StateWaypointPoly}}\ \mbox{\hyperlink{command__language__utils__unit_8cpp_ae64db9b4e6bc99309ba972a308668172}{wp1}}\{\ T(\{\ \textcolor{stringliteral}{"{}j1"{}},\ \textcolor{stringliteral}{"{}j2"{}},\ \textcolor{stringliteral}{"{}j3"{}}\ \},\ \{\ 0,\ 0,\ 0\ \})\ \};}
+\DoxyCodeLine{00262\ \ \ \ \ \ \ \mbox{\hyperlink{structtesseract__planning_1_1StateWaypointPoly}{StateWaypointPoly}}\ \mbox{\hyperlink{command__language__utils__unit_8cpp_a6a7c0153c4436a5cb1d544fb68aa6847}{wp2}}\{\ T(std::vector<std::string>(\{\ \textcolor{stringliteral}{"{}j1"{}}\ \}),\ Eigen::VectorXd::Zero(1))\ \};}
+\DoxyCodeLine{00263\ \ \ \ \ \ \ \mbox{\hyperlink{command__language__utils__unit_8cpp_a87b7f2690021fd8f1f348928f30fb2f9}{EXPECT\_FALSE}}(\mbox{\hyperlink{command__language__utils__unit_8cpp_ae64db9b4e6bc99309ba972a308668172}{wp1}}\ ==\ \mbox{\hyperlink{command__language__utils__unit_8cpp_a6a7c0153c4436a5cb1d544fb68aa6847}{wp2}});}
+\DoxyCodeLine{00264\ \ \ \ \ \ \ \mbox{\hyperlink{command__language__utils__unit_8cpp_a87b7f2690021fd8f1f348928f30fb2f9}{EXPECT\_FALSE}}(\mbox{\hyperlink{command__language__utils__unit_8cpp_a6a7c0153c4436a5cb1d544fb68aa6847}{wp2}}\ ==\ \mbox{\hyperlink{command__language__utils__unit_8cpp_ae64db9b4e6bc99309ba972a308668172}{wp1}});}
+\DoxyCodeLine{00265\ \ \ \ \ \ \ \mbox{\hyperlink{command__language__utils__unit_8cpp_a32b7bf22a514cfcff5d4e14d57ab1a8b}{EXPECT\_TRUE}}(\mbox{\hyperlink{command__language__utils__unit_8cpp_a6a7c0153c4436a5cb1d544fb68aa6847}{wp2}}\ !=\ \mbox{\hyperlink{command__language__utils__unit_8cpp_ae64db9b4e6bc99309ba972a308668172}{wp1}});}
+\DoxyCodeLine{00266\ \ \ \ \ \ \ \mbox{\hyperlink{namespacetesseract__planning_1_1test__suite_a3e222d531141b6c852db827ef57ea3f4}{runWaypointSerializationTest}}(\mbox{\hyperlink{command__language__utils__unit_8cpp_ae64db9b4e6bc99309ba972a308668172}{wp1}});}
+\DoxyCodeLine{00267\ \ \ \ \ \ \ \mbox{\hyperlink{namespacetesseract__planning_1_1test__suite_a3e222d531141b6c852db827ef57ea3f4}{runWaypointSerializationTest}}(\mbox{\hyperlink{command__language__utils__unit_8cpp_a6a7c0153c4436a5cb1d544fb68aa6847}{wp2}});}
+\DoxyCodeLine{00268\ \ \ \ \ \}}
+\DoxyCodeLine{00269\ \ \ \ \ \{}
+\DoxyCodeLine{00270\ \ \ \ \ \ \ \mbox{\hyperlink{structtesseract__planning_1_1StateWaypointPoly}{StateWaypointPoly}}\ \mbox{\hyperlink{command__language__utils__unit_8cpp_ae64db9b4e6bc99309ba972a308668172}{wp1}}\{\ T(\{\ \textcolor{stringliteral}{"{}j1"{}},\ \textcolor{stringliteral}{"{}j2"{}},\ \textcolor{stringliteral}{"{}j3"{}}\ \},\ \{\ 0,\ 0,\ 0\ \})\ \};}
+\DoxyCodeLine{00271\ \ \ \ \ \ \ \mbox{\hyperlink{structtesseract__planning_1_1StateWaypointPoly}{StateWaypointPoly}}\ \mbox{\hyperlink{command__language__utils__unit_8cpp_a6a7c0153c4436a5cb1d544fb68aa6847}{wp2}}\{\ T(\{\ \textcolor{stringliteral}{"{}j1"{}},\ \textcolor{stringliteral}{"{}j2"{}},\ \textcolor{stringliteral}{"{}j4"{}}\ \},\ \{\ 0,\ 0,\ 0\ \})\ \};}
+\DoxyCodeLine{00272\ \ \ \ \ \ \ \mbox{\hyperlink{command__language__utils__unit_8cpp_a87b7f2690021fd8f1f348928f30fb2f9}{EXPECT\_FALSE}}(\mbox{\hyperlink{command__language__utils__unit_8cpp_ae64db9b4e6bc99309ba972a308668172}{wp1}}\ ==\ \mbox{\hyperlink{command__language__utils__unit_8cpp_a6a7c0153c4436a5cb1d544fb68aa6847}{wp2}});}
+\DoxyCodeLine{00273\ \ \ \ \ \ \ \mbox{\hyperlink{command__language__utils__unit_8cpp_a87b7f2690021fd8f1f348928f30fb2f9}{EXPECT\_FALSE}}(\mbox{\hyperlink{command__language__utils__unit_8cpp_a6a7c0153c4436a5cb1d544fb68aa6847}{wp2}}\ ==\ \mbox{\hyperlink{command__language__utils__unit_8cpp_ae64db9b4e6bc99309ba972a308668172}{wp1}});}
+\DoxyCodeLine{00274\ \ \ \ \ \ \ \mbox{\hyperlink{command__language__utils__unit_8cpp_a32b7bf22a514cfcff5d4e14d57ab1a8b}{EXPECT\_TRUE}}(\mbox{\hyperlink{command__language__utils__unit_8cpp_a6a7c0153c4436a5cb1d544fb68aa6847}{wp2}}\ !=\ \mbox{\hyperlink{command__language__utils__unit_8cpp_ae64db9b4e6bc99309ba972a308668172}{wp1}});}
+\DoxyCodeLine{00275\ \ \ \ \ \ \ \mbox{\hyperlink{namespacetesseract__planning_1_1test__suite_a3e222d531141b6c852db827ef57ea3f4}{runWaypointSerializationTest}}(\mbox{\hyperlink{command__language__utils__unit_8cpp_ae64db9b4e6bc99309ba972a308668172}{wp1}});}
+\DoxyCodeLine{00276\ \ \ \ \ \ \ \mbox{\hyperlink{namespacetesseract__planning_1_1test__suite_a3e222d531141b6c852db827ef57ea3f4}{runWaypointSerializationTest}}(\mbox{\hyperlink{command__language__utils__unit_8cpp_a6a7c0153c4436a5cb1d544fb68aa6847}{wp2}});}
+\DoxyCodeLine{00277\ \ \ \ \ \}}
+\DoxyCodeLine{00278\ \ \ \ \ \{}
+\DoxyCodeLine{00279\ \ \ \ \ \ \ std::vector<std::string>\ names\{\ \textcolor{stringliteral}{"{}j1"{}},\ \textcolor{stringliteral}{"{}j2"{}},\ \textcolor{stringliteral}{"{}j3"{}}\ \};}
+\DoxyCodeLine{00280\ \ \ \ \ \ \ Eigen::VectorXd\ positions,\ velocities,\ accelerations,\ efforts;}
+\DoxyCodeLine{00281\ \ \ \ \ \ \ positions.resize(3);}
+\DoxyCodeLine{00282\ \ \ \ \ \ \ velocities.resize(3);}
+\DoxyCodeLine{00283\ \ \ \ \ \ \ accelerations.resize(3);}
+\DoxyCodeLine{00284\ \ \ \ \ \ \ efforts.resize(3);}
+\DoxyCodeLine{00285\ \ \ \ \ \ \ positions\ <<\ 0,\ -\/1e6,\ 1e6;}
+\DoxyCodeLine{00286\ \ \ \ \ \ \ velocities\ <<\ 1,\ 2,\ 3;}
+\DoxyCodeLine{00287\ \ \ \ \ \ \ accelerations\ <<\ -\/4,\ -\/5,\ -\/6;}
+\DoxyCodeLine{00288\ \ \ \ \ \ \ efforts\ <<\ 4,\ 5,\ 6;}
+\DoxyCodeLine{00289\ }
+\DoxyCodeLine{00290\ \ \ \ \ \ \ \mbox{\hyperlink{structtesseract__planning_1_1StateWaypointPoly}{StateWaypointPoly}}\ \mbox{\hyperlink{command__language__utils__unit_8cpp_ae64db9b4e6bc99309ba972a308668172}{wp1}}\{\ T(\{\ \textcolor{stringliteral}{"{}j1"{}},\ \textcolor{stringliteral}{"{}j2"{}},\ \textcolor{stringliteral}{"{}j3"{}}\ \},\ \{\ 0,\ 0,\ 0\ \})\ \};}
+\DoxyCodeLine{00291\ \ \ \ \ \ \ \mbox{\hyperlink{structtesseract__planning_1_1StateWaypointPoly}{StateWaypointPoly}}\ \mbox{\hyperlink{command__language__utils__unit_8cpp_a6a7c0153c4436a5cb1d544fb68aa6847}{wp2}}\{\ \mbox{\hyperlink{command__language__utils__unit_8cpp_ae64db9b4e6bc99309ba972a308668172}{wp1}}\ \};}
+\DoxyCodeLine{00292\ \ \ \ \ \ \ \mbox{\hyperlink{command__language__utils__unit_8cpp_ae64db9b4e6bc99309ba972a308668172}{wp1}}.\mbox{\hyperlink{structtesseract__planning_1_1StateWaypointPoly_a31feddd92e294f009c7579cd8edf7ad2}{getNames}}()\ =\ names;}
+\DoxyCodeLine{00293\ \ \ \ \ \ \ \mbox{\hyperlink{command__language__utils__unit_8cpp_ae64db9b4e6bc99309ba972a308668172}{wp1}}.getPosition()\ =\ positions;}
+\DoxyCodeLine{00294\ \ \ \ \ \ \ \mbox{\hyperlink{command__language__utils__unit_8cpp_ae64db9b4e6bc99309ba972a308668172}{wp1}}.getVelocity()\ =\ velocities;}
+\DoxyCodeLine{00295\ \ \ \ \ \ \ \mbox{\hyperlink{command__language__utils__unit_8cpp_ae64db9b4e6bc99309ba972a308668172}{wp1}}.getAcceleration()\ =\ accelerations;}
+\DoxyCodeLine{00296\ \ \ \ \ \ \ \mbox{\hyperlink{command__language__utils__unit_8cpp_ae64db9b4e6bc99309ba972a308668172}{wp1}}.getEffort()\ =\ efforts;}
+\DoxyCodeLine{00297\ \ \ \ \ \ \ \mbox{\hyperlink{command__language__utils__unit_8cpp_ae64db9b4e6bc99309ba972a308668172}{wp1}}.setTime(5);}
+\DoxyCodeLine{00298\ \ \ \ \ \ \ \mbox{\hyperlink{command__language__utils__unit_8cpp_a87b7f2690021fd8f1f348928f30fb2f9}{EXPECT\_FALSE}}(\mbox{\hyperlink{command__language__utils__unit_8cpp_ae64db9b4e6bc99309ba972a308668172}{wp1}}\ ==\ \mbox{\hyperlink{command__language__utils__unit_8cpp_a6a7c0153c4436a5cb1d544fb68aa6847}{wp2}});}
+\DoxyCodeLine{00299\ \ \ \ \ \ \ \mbox{\hyperlink{command__language__utils__unit_8cpp_a87b7f2690021fd8f1f348928f30fb2f9}{EXPECT\_FALSE}}(\mbox{\hyperlink{command__language__utils__unit_8cpp_a6a7c0153c4436a5cb1d544fb68aa6847}{wp2}}\ ==\ \mbox{\hyperlink{command__language__utils__unit_8cpp_ae64db9b4e6bc99309ba972a308668172}{wp1}});}
+\DoxyCodeLine{00300\ \ \ \ \ \ \ \mbox{\hyperlink{command__language__utils__unit_8cpp_a32b7bf22a514cfcff5d4e14d57ab1a8b}{EXPECT\_TRUE}}(\mbox{\hyperlink{command__language__utils__unit_8cpp_a6a7c0153c4436a5cb1d544fb68aa6847}{wp2}}\ !=\ \mbox{\hyperlink{command__language__utils__unit_8cpp_ae64db9b4e6bc99309ba972a308668172}{wp1}});}
+\DoxyCodeLine{00301\ \ \ \ \ \ \ \mbox{\hyperlink{namespacetesseract__planning_1_1test__suite_a3e222d531141b6c852db827ef57ea3f4}{runWaypointSerializationTest}}(\mbox{\hyperlink{command__language__utils__unit_8cpp_ae64db9b4e6bc99309ba972a308668172}{wp1}});}
+\DoxyCodeLine{00302\ \ \ \ \ \ \ \mbox{\hyperlink{namespacetesseract__planning_1_1test__suite_a3e222d531141b6c852db827ef57ea3f4}{runWaypointSerializationTest}}(\mbox{\hyperlink{command__language__utils__unit_8cpp_a6a7c0153c4436a5cb1d544fb68aa6847}{wp2}});}
+\DoxyCodeLine{00303\ \ \ \ \ \}}
+\DoxyCodeLine{00304\ \ \ \}}
+\DoxyCodeLine{00305\ \}}
+\DoxyCodeLine{00306\ \}\ \ \textcolor{comment}{//\ namespace\ tesseract\_planning::test\_suite}}
+\DoxyCodeLine{00307\ }
+\DoxyCodeLine{00308\ \textcolor{preprocessor}{\#endif\ \ }\textcolor{comment}{//\ TESSERACT\_COMMAND\_LANGUAGE\_STATE\_WAYPOINT\_POLY\_UNIT\_HPP}}
+
+\end{DoxyCode}

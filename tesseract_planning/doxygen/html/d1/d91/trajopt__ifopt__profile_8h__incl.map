@@ -1,0 +1,28 @@
+<map id="tesseract_motion_planners/trajopt_ifopt/include/tesseract_motion_planners/trajopt_ifopt/profile/trajopt_ifopt_profile.h" name="tesseract_motion_planners/trajopt_ifopt/include/tesseract_motion_planners/trajopt_ifopt/profile/trajopt_ifopt_profile.h">
+<area shape="rect" id="Node000001" title=" " alt="" coords="505,5,687,91"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,147,195,172"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="506,72,171,145,169,140,504,67"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="219,147,277,172"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="506,77,297,142,292,143,290,138,295,136,504,72"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="786,235,854,261"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="505,66,433,82,368,107,345,122,332,138,330,157,342,178,371,199,416,215,472,227,535,235,664,244,771,245,770,250,664,249,534,240,471,232,414,220,369,203,338,181,325,158,327,136,342,118,366,102,431,77,504,60"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="353,147,437,172"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="519,94,431,141,429,136,517,89"/>
+<area shape="rect" id="Node000006" href="$d7/dc6/tesseract__motion__planners_2trajopt__ifopt_2include_2tesseract__motion__planners_2trajopt__ifopt_2fwd_8h.html" title=" " alt="" coords="461,147,585,172"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="570,93,542,135,537,132,566,90"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="609,147,730,172"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="626,90,655,132,650,135,622,93"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="754,147,921,172"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="688,88,798,137,796,142,686,93"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="945,139,1098,180"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="688,70,930,132,929,137,687,75"/>
+<area shape="rect" id="Node000010" href="$d4/d9f/tesseract__command__language_2include_2tesseract__command__language_2fwd_8h.html" title=" " alt="" coords="1122,139,1321,180"/>
+<area shape="poly" id="edge9_Node000001_Node000010" title=" " alt="" coords="688,63,1107,135,1106,141,687,68"/>
+<area shape="rect" id="Node000011" href="$de/d45/profile_8h.html" title="This is a profile base class." alt="" coords="1345,139,1543,180"/>
+<area shape="poly" id="edge10_Node000001_Node000011" title=" " alt="" coords="687,57,969,89,1330,136,1329,141,969,94,687,62"/>
+<area shape="poly" id="edge11_Node000011_Node000004" title=" " alt="" coords="1345,180,1332,182,1071,218,869,244,869,238,1071,213,1332,177,1344,175"/>
+<area shape="rect" id="Node000012" title=" " alt="" coords="1307,228,1432,268"/>
+<area shape="poly" id="edge12_Node000011_Node000012" title=" " alt="" coords="1429,182,1398,218,1394,214,1425,178"/>
+<area shape="rect" id="Node000013" title=" " alt="" coords="1456,228,1581,268"/>
+<area shape="poly" id="edge13_Node000011_Node000013" title=" " alt="" coords="1463,178,1494,214,1490,218,1459,182"/>
+</map>

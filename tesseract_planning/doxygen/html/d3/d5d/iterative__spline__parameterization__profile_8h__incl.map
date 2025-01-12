@@ -1,0 +1,14 @@
+<map id="tesseract_task_composer/planning/include/tesseract_task_composer/planning/profiles/iterative_spline_parameterization_profile.h" name="tesseract_task_composer/planning/include/tesseract_task_composer/planning/profiles/iterative_spline_parameterization_profile.h">
+<area shape="rect" id="Node000001" title="Profile for iterative spline time parameterization." alt="" coords="125,5,339,91"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,147,195,172"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="183,94,128,139,124,135,179,89"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="202,235,270,261"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="236,91,238,219,233,220,230,91"/>
+<area shape="rect" id="Node000004" href="$de/d45/profile_8h.html" title="This is a profile base class." alt="" coords="269,139,467,180"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="286,89,333,127,330,131,283,94"/>
+<area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="340,182,268,229,265,224,337,178"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="301,228,427,268"/>
+<area shape="poly" id="edge5_Node000004_Node000005" title=" " alt="" coords="370,180,368,212,363,212,364,180"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="451,228,576,268"/>
+<area shape="poly" id="edge6_Node000004_Node000006" title=" " alt="" coords="402,178,469,217,466,222,400,182"/>
+</map>

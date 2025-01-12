@@ -1,0 +1,17 @@
+<map id="tesseract_motion_planners/descartes/include/tesseract_motion_planners/descartes/descartes_collision.h" name="tesseract_motion_planners/descartes/include/tesseract_motion_planners/descartes/descartes_collision.h">
+<area shape="rect" id="Node000001" title="Tesseract Descartes Collision Implementation." alt="" coords="390,5,575,76"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,132,195,157"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="390,69,161,130,160,124,389,64"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="218,132,286,157"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="405,79,295,127,293,122,403,74"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="310,132,394,157"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="440,79,381,124,378,120,436,74"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="418,124,547,165"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="485,76,485,108,480,108,480,76"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="571,124,717,165"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="539,74,601,113,599,118,536,79"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="741,124,894,165"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="577,68,739,117,737,122,575,73"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="918,124,1047,165"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="576,56,903,121,902,126,575,61"/>
+</map>

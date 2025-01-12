@@ -1,0 +1,5 @@
+<map id="tesseract_examples::GlassUprightExample" name="tesseract_examples::GlassUprightExample">
+<area shape="rect" id="Node000001" title="An example of a robot with fixed orientation but free to move in cartesian space leveraging tesseract..." alt="" coords="5,94,158,135"/>
+<area shape="rect" id="Node000002" href="$d3/d3b/classtesseract__examples_1_1Example.html" title="The Example base class." alt="" coords="13,5,150,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="84,62,84,94,79,94,79,62"/>
+</map>

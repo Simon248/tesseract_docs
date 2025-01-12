@@ -1,0 +1,80 @@
+\doxysection{trajopt\+\_\+ifopt\+\_\+utils.\+h}
+\hypertarget{trajopt__ifopt__utils_8h_source}{}\label{trajopt__ifopt__utils_8h_source}\index{tesseract\_motion\_planners/trajopt\_ifopt/include/tesseract\_motion\_planners/trajopt\_ifopt/trajopt\_ifopt\_utils.h@{tesseract\_motion\_planners/trajopt\_ifopt/include/tesseract\_motion\_planners/trajopt\_ifopt/trajopt\_ifopt\_utils.h}}
+\mbox{\hyperlink{trajopt__ifopt__utils_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00026\ \textcolor{preprocessor}{\#ifndef\ TESSERACT\_MOTION\_PLANNERS\_TRAJOPT\_IFOPT\_UTILS\_H}}
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#define\ TESSERACT\_MOTION\_PLANNERS\_TRAJOPT\_IFOPT\_UTILS\_H}}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#include\ <tesseract\_common/macros.h>}}
+\DoxyCodeLine{00030\ TESSERACT\_COMMON\_IGNORE\_WARNINGS\_PUSH}
+\DoxyCodeLine{00031\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00032\ \textcolor{preprocessor}{\#include\ <memory>}}
+\DoxyCodeLine{00033\ \textcolor{preprocessor}{\#include\ <Eigen/Geometry>}}
+\DoxyCodeLine{00034\ \textcolor{preprocessor}{\#include\ <trajopt\_common/fwd.h>}}
+\DoxyCodeLine{00035\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{tesseract__motion__planners_2trajopt__ifopt_2include_2tesseract__motion__planners_2trajopt__ifopt_2fwd_8h}{trajopt\_ifopt/fwd.h}}>}}
+\DoxyCodeLine{00036\ \textcolor{preprocessor}{\#include\ <trajopt\_sqp/fwd.h>}}
+\DoxyCodeLine{00037\ \mbox{\hyperlink{namespaceTESSERACT__COMMON__IGNORE__WARNINGS__POP}{TESSERACT\_COMMON\_IGNORE\_WARNINGS\_POP}}}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ \textcolor{preprocessor}{\#include\ <tesseract\_common/fwd.h>}}
+\DoxyCodeLine{00040\ \textcolor{preprocessor}{\#include\ <tesseract\_kinematics/core/fwd.h>}}
+\DoxyCodeLine{00041\ \textcolor{preprocessor}{\#include\ <tesseract\_collision/core/fwd.h>}}
+\DoxyCodeLine{00042\ \textcolor{preprocessor}{\#include\ <tesseract\_environment/fwd.h>}}
+\DoxyCodeLine{00043\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{tesseract__command__language_2include_2tesseract__command__language_2fwd_8h}{tesseract\_command\_language/fwd.h}}>}}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00045\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceOsqpEigen}{OsqpEigen}}}
+\DoxyCodeLine{00046\ \{}
+\DoxyCodeLine{00047\ \textcolor{keyword}{class\ }Settings;}
+\DoxyCodeLine{00048\ \}}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00050\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceifopt}{ifopt}}}
+\DoxyCodeLine{00051\ \{}
+\DoxyCodeLine{00052\ \textcolor{keyword}{class\ }ConstraintSet;}
+\DoxyCodeLine{00053\ \}}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00055\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacetesseract__planning}{tesseract\_planning}}}
+\DoxyCodeLine{00056\ \{}
+\DoxyCodeLine{00057\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{namespacetesseract__planning_a4d34c70ef2d1a9c96eb23bdf0e48c46d}{copyOSQPEigenSettings}}(OsqpEigen::Settings\&\ lhs,\ \textcolor{keyword}{const}\ OsqpEigen::Settings\&\ rhs);}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00059\ std::shared\_ptr<ifopt::ConstraintSet>}
+\DoxyCodeLine{00060\ \mbox{\hyperlink{namespacetesseract__planning_a7145db1f734f00aa04d2a7f6089fb302}{createCartesianPositionConstraint}}(\textcolor{keyword}{const}\ std::shared\_ptr<const\ trajopt\_ifopt::JointPosition>\&\ var,}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::shared\_ptr<const\ tesseract\_kinematics::JointGroup>\&\ \mbox{\hyperlink{ompl__planner__tests_8cpp_aa0c9c5fd2281440db1e2dd97fc3358f7}{manip}},}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::string\&\ source\_frame,}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::string\&\ target\_frame,}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ Eigen::Isometry3d\&\ source\_frame\_offset,}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ Eigen::Isometry3d\&\ target\_frame\_offset,}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ Eigen::Ref<const\ Eigen::VectorXd>\&\ coeffs);}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00068\ std::shared\_ptr<ifopt::ConstraintSet>}
+\DoxyCodeLine{00069\ \mbox{\hyperlink{namespacetesseract__planning_a627c5bf9f91f1608b9ddbdfe7984e2a6}{createJointPositionConstraint}}(\textcolor{keyword}{const}\ JointWaypointPoly\&\ joint\_waypoint,}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::shared\_ptr<const\ trajopt\_ifopt::JointPosition>\&\ var,}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ Eigen::VectorXd\&\ coeffs);}
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00073\ std::vector<std::shared\_ptr<ifopt::ConstraintSet>>}
+\DoxyCodeLine{00074\ \mbox{\hyperlink{namespacetesseract__planning_a88396026bfe2ce32a66d81af2f229e60}{createCollisionConstraints}}(\textcolor{keyword}{const}\ std::vector<std::shared\_ptr<const\ trajopt\_ifopt::JointPosition>>\&\ vars,}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::shared\_ptr<const\ tesseract\_environment::Environment>\&\ \mbox{\hyperlink{basic__cartesian__example__unit_8cpp_a96ce750ee22ecbf4d17cc6cf146d9514}{env}},}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ tesseract\_common::ManipulatorInfo\&\ \mbox{\hyperlink{command__language__utils__unit_8cpp_af21d30c87e87931298afb1eb6f703551}{manip\_info}},}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::shared\_ptr<const\ trajopt\_common::TrajOptCollisionConfig>\&\ \mbox{\hyperlink{tesseract__task__composer__core__unit_8cpp_a01d92a800904faa16b8c1c1372c40fb3}{config}},}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::vector<int>\&\ fixed\_indices,}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ fixed\_sparsity);}
+\DoxyCodeLine{00080\ }
+\DoxyCodeLine{00081\ std::shared\_ptr<ifopt::ConstraintSet>}
+\DoxyCodeLine{00082\ \mbox{\hyperlink{namespacetesseract__planning_aebfb2c9e974b8cdc958564f748ac9dd4}{createJointVelocityConstraint}}(\textcolor{keyword}{const}\ Eigen::Ref<const\ Eigen::VectorXd>\&\ target,}
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::vector<std::shared\_ptr<const\ trajopt\_ifopt::JointPosition>>\&\ vars,}
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ Eigen::VectorXd\&\ coeffs);}
+\DoxyCodeLine{00085\ }
+\DoxyCodeLine{00086\ std::shared\_ptr<ifopt::ConstraintSet>}
+\DoxyCodeLine{00087\ \mbox{\hyperlink{namespacetesseract__planning_af062f8897dc3bf78786a6d54857d648e}{createJointAccelerationConstraint}}(\textcolor{keyword}{const}\ Eigen::Ref<const\ Eigen::VectorXd>\&\ target,}
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::vector<std::shared\_ptr<const\ trajopt\_ifopt::JointPosition>>\&\ vars,}
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ Eigen::VectorXd\&\ coeffs);}
+\DoxyCodeLine{00090\ }
+\DoxyCodeLine{00091\ std::shared\_ptr<ifopt::ConstraintSet>}
+\DoxyCodeLine{00092\ \mbox{\hyperlink{namespacetesseract__planning_add3136b607dd1b165660e5d95c1de9aa}{createJointJerkConstraint}}(\textcolor{keyword}{const}\ Eigen::Ref<const\ Eigen::VectorXd>\&\ target,}
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::vector<std::shared\_ptr<const\ trajopt\_ifopt::JointPosition>>\&\ vars,}
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ Eigen::VectorXd\&\ coeffs);}
+\DoxyCodeLine{00095\ }
+\DoxyCodeLine{00096\ \}\ \ \textcolor{comment}{//\ namespace\ tesseract\_planning}}
+\DoxyCodeLine{00097\ }
+\DoxyCodeLine{00098\ \textcolor{preprocessor}{\#endif\ \ }\textcolor{comment}{//\ TESSERACT\_MOTION\_PLANNERS\_TRAJOPT\_IFOPT\_UTILS\_H}}
+
+\end{DoxyCode}

@@ -1,0 +1,11 @@
+<map id="tesseract_planning::TrajOptDefaultPlanProfile" name="tesseract_planning::TrajOptDefaultPlanProfile">
+<area shape="rect" id="Node000001" title=" " alt="" coords="552,77,726,118"/>
+<area shape="rect" id="Node000002" href="$d2/dd4/classtesseract__planning_1_1TrajOptPlanProfile.html" title=" " alt="" coords="213,5,345,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="360,24,442,30,529,46,567,59,601,74,599,79,565,64,528,51,442,35,360,29"/>
+<area shape="rect" id="Node000003" href="$db/d41/classtesseract__planning_1_1Profile.html" title="The Profile class." alt="" coords="5,5,136,46"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="151,23,212,23,212,28,151,28"/>
+<area shape="rect" id="Node000004" href="$d1/d2e/structtesseract__planning_1_1TrajOptCartesianWaypointConfig.html" title="Config settings for cartesian waypoints." alt="" coords="190,70,368,126"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="384,95,552,95,552,100,384,100"/>
+<area shape="rect" id="Node000005" href="$d7/d37/structtesseract__planning_1_1TrajOptJointWaypointConfig.html" title="Config settings for joint waypoints." alt="" coords="185,149,372,190"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="387,155,528,130,578,116,580,121,529,136,388,160"/>
+</map>

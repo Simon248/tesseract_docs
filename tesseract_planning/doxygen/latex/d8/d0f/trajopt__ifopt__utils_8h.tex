@@ -1,0 +1,56 @@
+\doxysection{tesseract\+\_\+motion\+\_\+planners/trajopt\+\_\+ifopt/include/tesseract\+\_\+motion\+\_\+planners/trajopt\+\_\+ifopt/trajopt\+\_\+ifopt\+\_\+utils.h File Reference}
+\hypertarget{trajopt__ifopt__utils_8h}{}\label{trajopt__ifopt__utils_8h}\index{tesseract\_motion\_planners/trajopt\_ifopt/include/tesseract\_motion\_planners/trajopt\_ifopt/trajopt\_ifopt\_utils.h@{tesseract\_motion\_planners/trajopt\_ifopt/include/tesseract\_motion\_planners/trajopt\_ifopt/trajopt\_ifopt\_utils.h}}
+{\ttfamily \#include $<$tesseract\+\_\+common/macros.\+h$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$memory$>$}\newline
+{\ttfamily \#include $<$Eigen/\+Geometry$>$}\newline
+{\ttfamily \#include $<$trajopt\+\_\+common/fwd.\+h$>$}\newline
+{\ttfamily \#include $<$trajopt\+\_\+ifopt/fwd.\+h$>$}\newline
+{\ttfamily \#include $<$trajopt\+\_\+sqp/fwd.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+common/fwd.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+kinematics/core/fwd.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+collision/core/fwd.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+environment/fwd.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+command\+\_\+language/fwd.\+h$>$}\newline
+Include dependency graph for trajopt\+\_\+ifopt\+\_\+utils.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d7/d04/trajopt__ifopt__utils_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d9/dd4/trajopt__ifopt__utils_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespaceOsqpEigen}{Osqp\+Eigen}}
+\item 
+namespace \mbox{\hyperlink{namespaceifopt}{ifopt}}
+\item 
+namespace \mbox{\hyperlink{namespacetesseract__planning}{tesseract\+\_\+planning}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{namespacetesseract__planning_a4d34c70ef2d1a9c96eb23bdf0e48c46d}{tesseract\+\_\+planning\+::copy\+OSQPEigen\+Settings}} (Osqp\+Eigen\+::\+Settings \&lhs, const Osqp\+Eigen\+::\+Settings \&rhs)
+\item 
+std\+::shared\+\_\+ptr$<$ ifopt\+::\+Constraint\+Set $>$ \mbox{\hyperlink{namespacetesseract__planning_a7145db1f734f00aa04d2a7f6089fb302}{tesseract\+\_\+planning\+::create\+Cartesian\+Position\+Constraint}} (const std\+::shared\+\_\+ptr$<$ const trajopt\+\_\+ifopt\+::\+Joint\+Position $>$ \&var, const std\+::shared\+\_\+ptr$<$ const tesseract\+\_\+kinematics\+::\+Joint\+Group $>$ \&\mbox{\hyperlink{ompl__planner__tests_8cpp_aa0c9c5fd2281440db1e2dd97fc3358f7}{manip}}, const std\+::string \&source\+\_\+frame, const std\+::string \&target\+\_\+frame, const Eigen\+::\+Isometry3d \&source\+\_\+frame\+\_\+offset, const Eigen\+::\+Isometry3d \&target\+\_\+frame\+\_\+offset, const Eigen\+::\+Ref$<$ const Eigen\+::\+Vector\+Xd $>$ \&coeffs)
+\item 
+std\+::shared\+\_\+ptr$<$ ifopt\+::\+Constraint\+Set $>$ \mbox{\hyperlink{namespacetesseract__planning_a627c5bf9f91f1608b9ddbdfe7984e2a6}{tesseract\+\_\+planning\+::create\+Joint\+Position\+Constraint}} (const \mbox{\hyperlink{structtesseract__planning_1_1JointWaypointPoly}{Joint\+Waypoint\+Poly}} \&joint\+\_\+waypoint, const std\+::shared\+\_\+ptr$<$ const trajopt\+\_\+ifopt\+::\+Joint\+Position $>$ \&var, const Eigen\+::\+Vector\+Xd \&coeffs)
+\item 
+std\+::vector$<$ std\+::shared\+\_\+ptr$<$ ifopt\+::\+Constraint\+Set $>$ $>$ \mbox{\hyperlink{namespacetesseract__planning_a88396026bfe2ce32a66d81af2f229e60}{tesseract\+\_\+planning\+::create\+Collision\+Constraints}} (const std\+::vector$<$ std\+::shared\+\_\+ptr$<$ const trajopt\+\_\+ifopt\+::\+Joint\+Position $>$ $>$ \&vars, const std\+::shared\+\_\+ptr$<$ const tesseract\+\_\+environment\+::\+Environment $>$ \&\mbox{\hyperlink{basic__cartesian__example__unit_8cpp_a96ce750ee22ecbf4d17cc6cf146d9514}{env}}, const tesseract\+\_\+common\+::\+Manipulator\+Info \&\mbox{\hyperlink{command__language__utils__unit_8cpp_af21d30c87e87931298afb1eb6f703551}{manip\+\_\+info}}, const std\+::shared\+\_\+ptr$<$ const trajopt\+\_\+common\+::\+Traj\+Opt\+Collision\+Config $>$ \&\mbox{\hyperlink{tesseract__task__composer__core__unit_8cpp_a01d92a800904faa16b8c1c1372c40fb3}{config}}, const std\+::vector$<$ int $>$ \&fixed\+\_\+indices, bool fixed\+\_\+sparsity)
+\item 
+std\+::shared\+\_\+ptr$<$ ifopt\+::\+Constraint\+Set $>$ \mbox{\hyperlink{namespacetesseract__planning_aebfb2c9e974b8cdc958564f748ac9dd4}{tesseract\+\_\+planning\+::create\+Joint\+Velocity\+Constraint}} (const Eigen\+::\+Ref$<$ const Eigen\+::\+Vector\+Xd $>$ \&target, const std\+::vector$<$ std\+::shared\+\_\+ptr$<$ const trajopt\+\_\+ifopt\+::\+Joint\+Position $>$ $>$ \&vars, const Eigen\+::\+Vector\+Xd \&coeffs)
+\item 
+std\+::shared\+\_\+ptr$<$ ifopt\+::\+Constraint\+Set $>$ \mbox{\hyperlink{namespacetesseract__planning_af062f8897dc3bf78786a6d54857d648e}{tesseract\+\_\+planning\+::create\+Joint\+Acceleration\+Constraint}} (const Eigen\+::\+Ref$<$ const Eigen\+::\+Vector\+Xd $>$ \&target, const std\+::vector$<$ std\+::shared\+\_\+ptr$<$ const trajopt\+\_\+ifopt\+::\+Joint\+Position $>$ $>$ \&vars, const Eigen\+::\+Vector\+Xd \&coeffs)
+\item 
+std\+::shared\+\_\+ptr$<$ ifopt\+::\+Constraint\+Set $>$ \mbox{\hyperlink{namespacetesseract__planning_add3136b607dd1b165660e5d95c1de9aa}{tesseract\+\_\+planning\+::create\+Joint\+Jerk\+Constraint}} (const Eigen\+::\+Ref$<$ const Eigen\+::\+Vector\+Xd $>$ \&target, const std\+::vector$<$ std\+::shared\+\_\+ptr$<$ const trajopt\+\_\+ifopt\+::\+Joint\+Position $>$ $>$ \&vars, const Eigen\+::\+Vector\+Xd \&coeffs)
+\end{DoxyCompactItemize}

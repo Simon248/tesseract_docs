@@ -1,0 +1,247 @@
+\doxysection{tesseract\+\_\+planning\+::Simple\+Motion\+Planner Class Reference}
+\hypertarget{classtesseract__planning_1_1SimpleMotionPlanner}{}\label{classtesseract__planning_1_1SimpleMotionPlanner}\index{tesseract\_planning::SimpleMotionPlanner@{tesseract\_planning::SimpleMotionPlanner}}
+
+
+The simple planner is meant to be a tool for assigning values to the seed. The planner simply loops over all of the Move\+Instructions and then calls the appropriate function from the profile. These functions do not depend on the seed, so this may be used to initialize the seed appropriately using e.\+g. linear interpolation.  
+
+
+
+
+{\ttfamily \#include $<$simple\+\_\+motion\+\_\+planner.\+h$>$}
+
+
+
+Inheritance diagram for tesseract\+\_\+planning\+::Simple\+Motion\+Planner\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=193pt]{d2/db9/classtesseract__planning_1_1SimpleMotionPlanner__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for tesseract\+\_\+planning\+::Simple\+Motion\+Planner\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=193pt]{d7/dc7/classtesseract__planning_1_1SimpleMotionPlanner__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{classtesseract__planning_1_1SimpleMotionPlanner_af53b9e0c76ccbacf890bac5ee2f28365}{Ptr}} = std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classtesseract__planning_1_1SimpleMotionPlanner}{Simple\+Motion\+Planner}} $>$
+\item 
+using \mbox{\hyperlink{classtesseract__planning_1_1SimpleMotionPlanner_a82aaf5bc5f664b0841e8aeb169c1394e}{Const\+Ptr}} = std\+::shared\+\_\+ptr$<$ const \mbox{\hyperlink{classtesseract__planning_1_1SimpleMotionPlanner}{Simple\+Motion\+Planner}} $>$
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Types inherited from \mbox{\hyperlink{classtesseract__planning_1_1MotionPlanner}{tesseract\+\_\+planning\+::\+Motion\+Planner}}}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{classtesseract__planning_1_1MotionPlanner_a5b4a8c1043a08c4dd022240333a5ee36}{Ptr}} = std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classtesseract__planning_1_1MotionPlanner}{Motion\+Planner}} $>$
+\item 
+using \mbox{\hyperlink{classtesseract__planning_1_1MotionPlanner_a8b54d1293cf621f5eca532509328d50a}{Const\+Ptr}} = std\+::shared\+\_\+ptr$<$ const \mbox{\hyperlink{classtesseract__planning_1_1MotionPlanner}{Motion\+Planner}} $>$
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classtesseract__planning_1_1SimpleMotionPlanner_a21fda9f2621449da89c7e0535606440e}{Simple\+Motion\+Planner}} (std\+::string \mbox{\hyperlink{tesseract__task__composer__core__unit_8cpp_a9b45b3e13bd9167aab02e17e08916231}{name}})
+\begin{DoxyCompactList}\small\item\em Construct a basic planner. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classtesseract__planning_1_1SimpleMotionPlanner_ac71dc47ead7f83197cfaa8a1ec56323c}{\texorpdfstring{$\sim$}{\string~}\+Simple\+Motion\+Planner}} () override=default
+\item 
+\mbox{\hyperlink{classtesseract__planning_1_1SimpleMotionPlanner_a75a8b050004703d2328f70a957192fcc}{Simple\+Motion\+Planner}} (const \mbox{\hyperlink{classtesseract__planning_1_1SimpleMotionPlanner}{Simple\+Motion\+Planner}} \&)=delete
+\item 
+\mbox{\hyperlink{classtesseract__planning_1_1SimpleMotionPlanner}{Simple\+Motion\+Planner}} \& \mbox{\hyperlink{classtesseract__planning_1_1SimpleMotionPlanner_ae995d879d77c29105847750f796c7851}{operator=}} (const \mbox{\hyperlink{classtesseract__planning_1_1SimpleMotionPlanner}{Simple\+Motion\+Planner}} \&)=delete
+\item 
+\mbox{\hyperlink{classtesseract__planning_1_1SimpleMotionPlanner_abd00b8b105e5880eb5444ed0e44c8077}{Simple\+Motion\+Planner}} (\mbox{\hyperlink{classtesseract__planning_1_1SimpleMotionPlanner}{Simple\+Motion\+Planner}} \&\&)=delete
+\item 
+\mbox{\hyperlink{classtesseract__planning_1_1SimpleMotionPlanner}{Simple\+Motion\+Planner}} \& \mbox{\hyperlink{classtesseract__planning_1_1SimpleMotionPlanner_adfe8fcdf81a9a2fc76aef76d09766af2}{operator=}} (\mbox{\hyperlink{classtesseract__planning_1_1SimpleMotionPlanner}{Simple\+Motion\+Planner}} \&\&)=delete
+\item 
+\mbox{\hyperlink{structtesseract__planning_1_1PlannerResponse}{Planner\+Response}} \mbox{\hyperlink{classtesseract__planning_1_1SimpleMotionPlanner_a193f90492c392ac162cd31777f1895dd}{solve}} (const \mbox{\hyperlink{structtesseract__planning_1_1PlannerRequest}{Planner\+Request}} \&\mbox{\hyperlink{descartes__planner__tests_8cpp_abf1f9730cb985d80f279a7faa7e5f42a}{request}}) const override
+\begin{DoxyCompactList}\small\item\em Solve the planner request problem. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classtesseract__planning_1_1SimpleMotionPlanner_a13a6df1d08a2fa9507cf4b9983e55d17}{terminate}} () override
+\begin{DoxyCompactList}\small\item\em If \doxylink{classtesseract__planning_1_1SimpleMotionPlanner_a193f90492c392ac162cd31777f1895dd}{solve()} is running, terminate the computation. Return false if termination not possible. No-\/op if \doxylink{classtesseract__planning_1_1SimpleMotionPlanner_a193f90492c392ac162cd31777f1895dd}{solve()} is not running (returns true). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classtesseract__planning_1_1SimpleMotionPlanner_a61c68448ab3ca6f602f97a24044518f8}{clear}} () override
+\begin{DoxyCompactList}\small\item\em Clear the data structures used by the planner. \end{DoxyCompactList}\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classtesseract__planning_1_1MotionPlanner}{Motion\+Planner}} $>$ \mbox{\hyperlink{classtesseract__planning_1_1SimpleMotionPlanner_a22845049178f56c13f68feb3a0f035b1}{clone}} () const override
+\begin{DoxyCompactList}\small\item\em Clone the motion planner. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classtesseract__planning_1_1MotionPlanner}{tesseract\+\_\+planning\+::\+Motion\+Planner}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classtesseract__planning_1_1MotionPlanner_ab6e2f55b62502723e0285132649555b0}{Motion\+Planner}} ()=default
+\begin{DoxyCompactList}\small\item\em Construct a basic planner. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classtesseract__planning_1_1MotionPlanner_a7d04d7f6afd19f955fdc5739f7a9d79e}{Motion\+Planner}} (std\+::string \mbox{\hyperlink{tesseract__task__composer__core__unit_8cpp_a9b45b3e13bd9167aab02e17e08916231}{name}})
+\item 
+virtual \mbox{\hyperlink{classtesseract__planning_1_1MotionPlanner_acd173ef2cf620a955303418b2a4bebfe}{\texorpdfstring{$\sim$}{\string~}\+Motion\+Planner}} ()=default
+\item 
+\mbox{\hyperlink{classtesseract__planning_1_1MotionPlanner_a73f5bd3ff39f9eb31540deca90631018}{Motion\+Planner}} (const \mbox{\hyperlink{classtesseract__planning_1_1MotionPlanner}{Motion\+Planner}} \&)=delete
+\item 
+\mbox{\hyperlink{classtesseract__planning_1_1MotionPlanner}{Motion\+Planner}} \& \mbox{\hyperlink{classtesseract__planning_1_1MotionPlanner_a3f03ccb0d7d4eb7cc20722cb609a7fb4}{operator=}} (const \mbox{\hyperlink{classtesseract__planning_1_1MotionPlanner}{Motion\+Planner}} \&)=delete
+\item 
+\mbox{\hyperlink{classtesseract__planning_1_1MotionPlanner_a3267df017a92564c2991c8285074e4c8}{Motion\+Planner}} (\mbox{\hyperlink{classtesseract__planning_1_1MotionPlanner}{Motion\+Planner}} \&\&)=delete
+\item 
+\mbox{\hyperlink{classtesseract__planning_1_1MotionPlanner}{Motion\+Planner}} \& \mbox{\hyperlink{classtesseract__planning_1_1MotionPlanner_a6ed2cd78c246c7f7f4f38b3e5d7df5e8}{operator=}} (\mbox{\hyperlink{classtesseract__planning_1_1MotionPlanner}{Motion\+Planner}} \&\&)=delete
+\item 
+const std\+::string \& \mbox{\hyperlink{classtesseract__planning_1_1MotionPlanner_a8c3cc153aa4a3474197882e4a02f9e9c}{get\+Name}} () const
+\begin{DoxyCompactList}\small\item\em Get the name of this planner. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classtesseract__planning_1_1CompositeInstruction}{Composite\+Instruction}} \mbox{\hyperlink{classtesseract__planning_1_1SimpleMotionPlanner_af20238a480693ac5d0941a6046dfe3c1}{process\+Composite\+Instruction}} (\mbox{\hyperlink{structtesseract__planning_1_1MoveInstructionPoly}{Move\+Instruction\+Poly}} \&prev\+\_\+instruction, \mbox{\hyperlink{structtesseract__planning_1_1MoveInstructionPoly}{Move\+Instruction\+Poly}} \&prev\+\_\+seed, const \mbox{\hyperlink{classtesseract__planning_1_1CompositeInstruction}{Composite\+Instruction}} \&\mbox{\hyperlink{descartes__planner__tests_8cpp_a540933d401a016e1bb8a7a67aeba9e19}{instructions}}, const tesseract\+\_\+scene\+\_\+graph\+::\+Scene\+State \&\mbox{\hyperlink{ompl__constrained__planner__tests_8cpp_a484547b7c0c0900a1491bad799bec8b2}{start\+\_\+state}}, const \mbox{\hyperlink{structtesseract__planning_1_1PlannerRequest}{Planner\+Request}} \&\mbox{\hyperlink{descartes__planner__tests_8cpp_abf1f9730cb985d80f279a7faa7e5f42a}{request}}) const
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Static Public Member Functions inherited from \mbox{\hyperlink{classtesseract__planning_1_1MotionPlanner}{tesseract\+\_\+planning\+::\+Motion\+Planner}}}
+\begin{DoxyCompactItemize}
+\item 
+static bool \mbox{\hyperlink{classtesseract__planning_1_1MotionPlanner_a354882304601d30d17f0884e30f0748b}{check\+Request}} (const \mbox{\hyperlink{structtesseract__planning_1_1PlannerRequest}{Planner\+Request}} \&\mbox{\hyperlink{descartes__planner__tests_8cpp_abf1f9730cb985d80f279a7faa7e5f42a}{request}})
+\begin{DoxyCompactList}\small\item\em Check planning request. \end{DoxyCompactList}\item 
+static bool \mbox{\hyperlink{classtesseract__planning_1_1MotionPlanner_a4914b84395f54762bbe214db4ac7b1ab}{check\+Request}} (const \mbox{\hyperlink{structtesseract__planning_1_1PlannerRequest}{Planner\+Request}} \&\mbox{\hyperlink{descartes__planner__tests_8cpp_abf1f9730cb985d80f279a7faa7e5f42a}{request}}, std\+::string \&reason)
+\begin{DoxyCompactList}\small\item\em Check planning request and give reason for failure. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classtesseract__planning_1_1MotionPlanner_ae01cd65dbc5c91a04c527b30544b500d}{assign\+Solution}} (\mbox{\hyperlink{structtesseract__planning_1_1MoveInstructionPoly}{Move\+Instruction\+Poly}} \&\mbox{\hyperlink{simple__planner__fixed__size__assign__position_8cpp_aacf8f831786eae51fba4caaedbde9cf0}{mi}}, const std\+::vector$<$ std\+::string $>$ \&\mbox{\hyperlink{command__language__utils__unit_8cpp_a5f85173ecc1ddcb342ebc27f28437f5c}{joint\+\_\+names}}, const Eigen\+::\+Ref$<$ const Eigen\+::\+Vector\+Xd $>$ \&\mbox{\hyperlink{tesseract__task__composer__core__unit_8cpp_a38b581d82a66e19aa9d807496d4400cb}{joint\+\_\+values}}, bool format\+\_\+result\+\_\+as\+\_\+input)
+\begin{DoxyCompactList}\small\item\em Assign a solution to the move instruction. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{classtesseract__planning_1_1MotionPlanner}{tesseract\+\_\+planning\+::\+Motion\+Planner}}}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{classtesseract__planning_1_1MotionPlanner_a64d7fb8437e795c63db88fdaff953a16}{name\+\_\+}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The simple planner is meant to be a tool for assigning values to the seed. The planner simply loops over all of the Move\+Instructions and then calls the appropriate function from the profile. These functions do not depend on the seed, so this may be used to initialize the seed appropriately using e.\+g. linear interpolation. 
+
+\doxysubsection{Member Typedef Documentation}
+\Hypertarget{classtesseract__planning_1_1SimpleMotionPlanner_a82aaf5bc5f664b0841e8aeb169c1394e}\label{classtesseract__planning_1_1SimpleMotionPlanner_a82aaf5bc5f664b0841e8aeb169c1394e} 
+\index{tesseract\_planning::SimpleMotionPlanner@{tesseract\_planning::SimpleMotionPlanner}!ConstPtr@{ConstPtr}}
+\index{ConstPtr@{ConstPtr}!tesseract\_planning::SimpleMotionPlanner@{tesseract\_planning::SimpleMotionPlanner}}
+\doxysubsubsection{\texorpdfstring{ConstPtr}{ConstPtr}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classtesseract__planning_1_1SimpleMotionPlanner_a82aaf5bc5f664b0841e8aeb169c1394e}{tesseract\+\_\+planning\+::\+Simple\+Motion\+Planner\+::\+Const\+Ptr}} =  std\+::shared\+\_\+ptr$<$const \mbox{\hyperlink{classtesseract__planning_1_1SimpleMotionPlanner}{Simple\+Motion\+Planner}}$>$}
+
+\Hypertarget{classtesseract__planning_1_1SimpleMotionPlanner_af53b9e0c76ccbacf890bac5ee2f28365}\label{classtesseract__planning_1_1SimpleMotionPlanner_af53b9e0c76ccbacf890bac5ee2f28365} 
+\index{tesseract\_planning::SimpleMotionPlanner@{tesseract\_planning::SimpleMotionPlanner}!Ptr@{Ptr}}
+\index{Ptr@{Ptr}!tesseract\_planning::SimpleMotionPlanner@{tesseract\_planning::SimpleMotionPlanner}}
+\doxysubsubsection{\texorpdfstring{Ptr}{Ptr}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classtesseract__planning_1_1SimpleMotionPlanner_af53b9e0c76ccbacf890bac5ee2f28365}{tesseract\+\_\+planning\+::\+Simple\+Motion\+Planner\+::\+Ptr}} =  std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classtesseract__planning_1_1SimpleMotionPlanner}{Simple\+Motion\+Planner}}$>$}
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classtesseract__planning_1_1SimpleMotionPlanner_a21fda9f2621449da89c7e0535606440e}\label{classtesseract__planning_1_1SimpleMotionPlanner_a21fda9f2621449da89c7e0535606440e} 
+\index{tesseract\_planning::SimpleMotionPlanner@{tesseract\_planning::SimpleMotionPlanner}!SimpleMotionPlanner@{SimpleMotionPlanner}}
+\index{SimpleMotionPlanner@{SimpleMotionPlanner}!tesseract\_planning::SimpleMotionPlanner@{tesseract\_planning::SimpleMotionPlanner}}
+\doxysubsubsection{\texorpdfstring{SimpleMotionPlanner()}{SimpleMotionPlanner()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily tesseract\+\_\+planning\+::\+Simple\+Motion\+Planner\+::\+Simple\+Motion\+Planner (\begin{DoxyParamCaption}\item[{std\+::string}]{name }\end{DoxyParamCaption})}
+
+
+
+Construct a basic planner. 
+
+\Hypertarget{classtesseract__planning_1_1SimpleMotionPlanner_ac71dc47ead7f83197cfaa8a1ec56323c}\label{classtesseract__planning_1_1SimpleMotionPlanner_ac71dc47ead7f83197cfaa8a1ec56323c} 
+\index{tesseract\_planning::SimpleMotionPlanner@{tesseract\_planning::SimpleMotionPlanner}!````~SimpleMotionPlanner@{\texorpdfstring{$\sim$}{\string~}SimpleMotionPlanner}}
+\index{````~SimpleMotionPlanner@{\texorpdfstring{$\sim$}{\string~}SimpleMotionPlanner}!tesseract\_planning::SimpleMotionPlanner@{tesseract\_planning::SimpleMotionPlanner}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}SimpleMotionPlanner()}{\string~SimpleMotionPlanner()}}
+{\footnotesize\ttfamily tesseract\+\_\+planning\+::\+Simple\+Motion\+Planner\+::\texorpdfstring{$\sim$}{\string~}\+Simple\+Motion\+Planner (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [default]}}
+
+\Hypertarget{classtesseract__planning_1_1SimpleMotionPlanner_a75a8b050004703d2328f70a957192fcc}\label{classtesseract__planning_1_1SimpleMotionPlanner_a75a8b050004703d2328f70a957192fcc} 
+\index{tesseract\_planning::SimpleMotionPlanner@{tesseract\_planning::SimpleMotionPlanner}!SimpleMotionPlanner@{SimpleMotionPlanner}}
+\index{SimpleMotionPlanner@{SimpleMotionPlanner}!tesseract\_planning::SimpleMotionPlanner@{tesseract\_planning::SimpleMotionPlanner}}
+\doxysubsubsection{\texorpdfstring{SimpleMotionPlanner()}{SimpleMotionPlanner()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily tesseract\+\_\+planning\+::\+Simple\+Motion\+Planner\+::\+Simple\+Motion\+Planner (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classtesseract__planning_1_1SimpleMotionPlanner}{Simple\+Motion\+Planner}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+\Hypertarget{classtesseract__planning_1_1SimpleMotionPlanner_abd00b8b105e5880eb5444ed0e44c8077}\label{classtesseract__planning_1_1SimpleMotionPlanner_abd00b8b105e5880eb5444ed0e44c8077} 
+\index{tesseract\_planning::SimpleMotionPlanner@{tesseract\_planning::SimpleMotionPlanner}!SimpleMotionPlanner@{SimpleMotionPlanner}}
+\index{SimpleMotionPlanner@{SimpleMotionPlanner}!tesseract\_planning::SimpleMotionPlanner@{tesseract\_planning::SimpleMotionPlanner}}
+\doxysubsubsection{\texorpdfstring{SimpleMotionPlanner()}{SimpleMotionPlanner()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily tesseract\+\_\+planning\+::\+Simple\+Motion\+Planner\+::\+Simple\+Motion\+Planner (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classtesseract__planning_1_1SimpleMotionPlanner}{Simple\+Motion\+Planner}} \&\&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classtesseract__planning_1_1SimpleMotionPlanner_a61c68448ab3ca6f602f97a24044518f8}\label{classtesseract__planning_1_1SimpleMotionPlanner_a61c68448ab3ca6f602f97a24044518f8} 
+\index{tesseract\_planning::SimpleMotionPlanner@{tesseract\_planning::SimpleMotionPlanner}!clear@{clear}}
+\index{clear@{clear}!tesseract\_planning::SimpleMotionPlanner@{tesseract\_planning::SimpleMotionPlanner}}
+\doxysubsubsection{\texorpdfstring{clear()}{clear()}}
+{\footnotesize\ttfamily void tesseract\+\_\+planning\+::\+Simple\+Motion\+Planner\+::clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Clear the data structures used by the planner. 
+
+
+
+Implements \mbox{\hyperlink{classtesseract__planning_1_1MotionPlanner_ae4bed503b1e52732b3908858be1ccfcc}{tesseract\+\_\+planning\+::\+Motion\+Planner}}.
+
+\Hypertarget{classtesseract__planning_1_1SimpleMotionPlanner_a22845049178f56c13f68feb3a0f035b1}\label{classtesseract__planning_1_1SimpleMotionPlanner_a22845049178f56c13f68feb3a0f035b1} 
+\index{tesseract\_planning::SimpleMotionPlanner@{tesseract\_planning::SimpleMotionPlanner}!clone@{clone}}
+\index{clone@{clone}!tesseract\_planning::SimpleMotionPlanner@{tesseract\_planning::SimpleMotionPlanner}}
+\doxysubsubsection{\texorpdfstring{clone()}{clone()}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classtesseract__planning_1_1MotionPlanner}{Motion\+Planner}} $>$ tesseract\+\_\+planning\+::\+Simple\+Motion\+Planner\+::clone (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Clone the motion planner. 
+
+
+
+Implements \mbox{\hyperlink{classtesseract__planning_1_1MotionPlanner_a0b59f9eb4bf96be372ef8defdb025d55}{tesseract\+\_\+planning\+::\+Motion\+Planner}}.
+
+\Hypertarget{classtesseract__planning_1_1SimpleMotionPlanner_ae995d879d77c29105847750f796c7851}\label{classtesseract__planning_1_1SimpleMotionPlanner_ae995d879d77c29105847750f796c7851} 
+\index{tesseract\_planning::SimpleMotionPlanner@{tesseract\_planning::SimpleMotionPlanner}!operator=@{operator=}}
+\index{operator=@{operator=}!tesseract\_planning::SimpleMotionPlanner@{tesseract\_planning::SimpleMotionPlanner}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classtesseract__planning_1_1SimpleMotionPlanner}{Simple\+Motion\+Planner}} \& tesseract\+\_\+planning\+::\+Simple\+Motion\+Planner\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classtesseract__planning_1_1SimpleMotionPlanner}{Simple\+Motion\+Planner}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+\Hypertarget{classtesseract__planning_1_1SimpleMotionPlanner_adfe8fcdf81a9a2fc76aef76d09766af2}\label{classtesseract__planning_1_1SimpleMotionPlanner_adfe8fcdf81a9a2fc76aef76d09766af2} 
+\index{tesseract\_planning::SimpleMotionPlanner@{tesseract\_planning::SimpleMotionPlanner}!operator=@{operator=}}
+\index{operator=@{operator=}!tesseract\_planning::SimpleMotionPlanner@{tesseract\_planning::SimpleMotionPlanner}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classtesseract__planning_1_1SimpleMotionPlanner}{Simple\+Motion\+Planner}} \& tesseract\+\_\+planning\+::\+Simple\+Motion\+Planner\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classtesseract__planning_1_1SimpleMotionPlanner}{Simple\+Motion\+Planner}} \&\&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+\Hypertarget{classtesseract__planning_1_1SimpleMotionPlanner_af20238a480693ac5d0941a6046dfe3c1}\label{classtesseract__planning_1_1SimpleMotionPlanner_af20238a480693ac5d0941a6046dfe3c1} 
+\index{tesseract\_planning::SimpleMotionPlanner@{tesseract\_planning::SimpleMotionPlanner}!processCompositeInstruction@{processCompositeInstruction}}
+\index{processCompositeInstruction@{processCompositeInstruction}!tesseract\_planning::SimpleMotionPlanner@{tesseract\_planning::SimpleMotionPlanner}}
+\doxysubsubsection{\texorpdfstring{processCompositeInstruction()}{processCompositeInstruction()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classtesseract__planning_1_1CompositeInstruction}{Composite\+Instruction}} tesseract\+\_\+planning\+::\+Simple\+Motion\+Planner\+::process\+Composite\+Instruction (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structtesseract__planning_1_1MoveInstructionPoly}{Move\+Instruction\+Poly}} \&}]{prev\+\_\+instruction,  }\item[{\mbox{\hyperlink{structtesseract__planning_1_1MoveInstructionPoly}{Move\+Instruction\+Poly}} \&}]{prev\+\_\+seed,  }\item[{const \mbox{\hyperlink{classtesseract__planning_1_1CompositeInstruction}{Composite\+Instruction}} \&}]{instructions,  }\item[{const tesseract\+\_\+scene\+\_\+graph\+::\+Scene\+State \&}]{start\+\_\+state,  }\item[{const \mbox{\hyperlink{structtesseract__planning_1_1PlannerRequest}{Planner\+Request}} \&}]{request }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{classtesseract__planning_1_1SimpleMotionPlanner_a193f90492c392ac162cd31777f1895dd}\label{classtesseract__planning_1_1SimpleMotionPlanner_a193f90492c392ac162cd31777f1895dd} 
+\index{tesseract\_planning::SimpleMotionPlanner@{tesseract\_planning::SimpleMotionPlanner}!solve@{solve}}
+\index{solve@{solve}!tesseract\_planning::SimpleMotionPlanner@{tesseract\_planning::SimpleMotionPlanner}}
+\doxysubsubsection{\texorpdfstring{solve()}{solve()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structtesseract__planning_1_1PlannerResponse}{Planner\+Response}} tesseract\+\_\+planning\+::\+Simple\+Motion\+Planner\+::solve (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structtesseract__planning_1_1PlannerRequest}{Planner\+Request}} \&}]{request }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Solve the planner request problem. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em request} & The planning request \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A planner reponse 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classtesseract__planning_1_1MotionPlanner_a60a757c5560f495611be282220fff9d2}{tesseract\+\_\+planning\+::\+Motion\+Planner}}.
+
+\Hypertarget{classtesseract__planning_1_1SimpleMotionPlanner_a13a6df1d08a2fa9507cf4b9983e55d17}\label{classtesseract__planning_1_1SimpleMotionPlanner_a13a6df1d08a2fa9507cf4b9983e55d17} 
+\index{tesseract\_planning::SimpleMotionPlanner@{tesseract\_planning::SimpleMotionPlanner}!terminate@{terminate}}
+\index{terminate@{terminate}!tesseract\_planning::SimpleMotionPlanner@{tesseract\_planning::SimpleMotionPlanner}}
+\doxysubsubsection{\texorpdfstring{terminate()}{terminate()}}
+{\footnotesize\ttfamily bool tesseract\+\_\+planning\+::\+Simple\+Motion\+Planner\+::terminate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+If \doxylink{classtesseract__planning_1_1SimpleMotionPlanner_a193f90492c392ac162cd31777f1895dd}{solve()} is running, terminate the computation. Return false if termination not possible. No-\/op if \doxylink{classtesseract__planning_1_1SimpleMotionPlanner_a193f90492c392ac162cd31777f1895dd}{solve()} is not running (returns true). 
+
+
+
+Implements \mbox{\hyperlink{classtesseract__planning_1_1MotionPlanner_a44afac05675a12abc7df47df8f495148}{tesseract\+\_\+planning\+::\+Motion\+Planner}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+tesseract\+\_\+motion\+\_\+planners/simple/include/tesseract\+\_\+motion\+\_\+planners/simple/\mbox{\hyperlink{simple__motion__planner_8h}{simple\+\_\+motion\+\_\+planner.\+h}}\item 
+tesseract\+\_\+motion\+\_\+planners/simple/src/\mbox{\hyperlink{simple__motion__planner_8cpp}{simple\+\_\+motion\+\_\+planner.\+cpp}}\end{DoxyCompactItemize}

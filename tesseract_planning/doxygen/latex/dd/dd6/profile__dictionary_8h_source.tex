@@ -1,0 +1,64 @@
+\doxysection{profile\+\_\+dictionary.\+h}
+\hypertarget{profile__dictionary_8h_source}{}\label{profile__dictionary_8h_source}\index{tesseract\_command\_language/include/tesseract\_command\_language/profile\_dictionary.h@{tesseract\_command\_language/include/tesseract\_command\_language/profile\_dictionary.h}}
+\mbox{\hyperlink{profile__dictionary_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00026\ \textcolor{preprocessor}{\#ifndef\ TESSERACT\_MOTION\_PLANNERS\_PROFILE\_DICTIONARY\_H}}
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#define\ TESSERACT\_MOTION\_PLANNERS\_PROFILE\_DICTIONARY\_H}}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#include\ <tesseract\_common/macros.h>}}
+\DoxyCodeLine{00030\ TESSERACT\_COMMON\_IGNORE\_WARNINGS\_PUSH}
+\DoxyCodeLine{00031\ \textcolor{preprocessor}{\#include\ <unordered\_map>}}
+\DoxyCodeLine{00032\ \textcolor{preprocessor}{\#include\ <memory>}}
+\DoxyCodeLine{00033\ \textcolor{preprocessor}{\#include\ <shared\_mutex>}}
+\DoxyCodeLine{00034\ \mbox{\hyperlink{namespaceTESSERACT__COMMON__IGNORE__WARNINGS__POP}{TESSERACT\_COMMON\_IGNORE\_WARNINGS\_POP}}}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{profile_8h}{tesseract\_command\_language/profile.h}}>}}
+\DoxyCodeLine{00037\ \textcolor{preprocessor}{\#include\ <tesseract\_common/any\_poly.h>}}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacetesseract__planning}{tesseract\_planning}}}
+\DoxyCodeLine{00040\ \{}
+\DoxyCodeLine{00045\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classtesseract__planning_1_1ProfileDictionary}{ProfileDictionary}}}
+\DoxyCodeLine{00046\ \{}
+\DoxyCodeLine{00047\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00048\ \ \ \textcolor{keyword}{using\ }\mbox{\hyperlink{classtesseract__planning_1_1ProfileDictionary_a6ca9e4457bcf32d459ca8d89121a963d}{Ptr}}\ =\ std::shared\_ptr<ProfileDictionary>;}
+\DoxyCodeLine{00049\ \ \ \textcolor{keyword}{using\ }\mbox{\hyperlink{classtesseract__planning_1_1ProfileDictionary_ab9e6bb9185d333d45264d7c17c636bb4}{ConstPtr}}\ =\ std::shared\_ptr<const\ ProfileDictionary>;}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00058\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classtesseract__planning_1_1ProfileDictionary_ad6f06ad5d6f97c95ca5a26c262fd4416}{addProfile}}(\textcolor{keyword}{const}\ std::string\&\ ns,\ \textcolor{keyword}{const}\ std::string\&\ profile\_name,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classtesseract__planning_1_1Profile_a8331936b7fcc7edcd7f2e9dca19aa8ec}{Profile::ConstPtr}}\&\ \mbox{\hyperlink{profile__dictionary__tests_8cpp_abef2081b208ab62011ea9a1557a0be70}{profile}});}
+\DoxyCodeLine{00059\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classtesseract__planning_1_1ProfileDictionary_ad6f06ad5d6f97c95ca5a26c262fd4416}{addProfile}}(\textcolor{keyword}{const}\ std::string\&\ ns,}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::vector<std::string>\&\ profile\_names,}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{classtesseract__planning_1_1Profile_a8331936b7fcc7edcd7f2e9dca19aa8ec}{Profile::ConstPtr}}\&\ \mbox{\hyperlink{profile__dictionary__tests_8cpp_abef2081b208ab62011ea9a1557a0be70}{profile}});}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00071\ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classtesseract__planning_1_1ProfileDictionary_a0a78196be2773d869eeb43693cb396a2}{hasProfile}}(std::size\_t\ key,\ \textcolor{keyword}{const}\ std::string\&\ ns,\ \textcolor{keyword}{const}\ std::string\&\ profile\_name)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00081\ \ \ \mbox{\hyperlink{classtesseract__planning_1_1Profile_a8331936b7fcc7edcd7f2e9dca19aa8ec}{Profile::ConstPtr}}\ \mbox{\hyperlink{classtesseract__planning_1_1ProfileDictionary_a2cf436e97a82f87ed3514a8f8e742273}{getProfile}}(std::size\_t\ key,\ \textcolor{keyword}{const}\ std::string\&\ ns,\ \textcolor{keyword}{const}\ std::string\&\ profile\_name)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00082\ }
+\DoxyCodeLine{00089\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classtesseract__planning_1_1ProfileDictionary_a361291a925333e0e529a518523acb759}{removeProfile}}(std::size\_t\ key,\ \textcolor{keyword}{const}\ std::string\&\ ns,\ \textcolor{keyword}{const}\ std::string\&\ profile\_name);}
+\DoxyCodeLine{00090\ }
+\DoxyCodeLine{00097\ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classtesseract__planning_1_1ProfileDictionary_ace32bb45dc88d7bc77d07b972747332f}{hasProfileEntry}}(std::size\_t\ key,\ \textcolor{keyword}{const}\ std::string\&\ ns)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00098\ }
+\DoxyCodeLine{00104\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classtesseract__planning_1_1ProfileDictionary_a5f9d4f650d9b701f096e8b75a3365497}{removeProfileEntry}}(std::size\_t\ key,\ \textcolor{keyword}{const}\ std::string\&\ ns);}
+\DoxyCodeLine{00105\ }
+\DoxyCodeLine{00112\ \ \ std::unordered\_map<std::string,\ Profile::ConstPtr>\ \mbox{\hyperlink{classtesseract__planning_1_1ProfileDictionary_adce17c0b19eef6f539719a0acb1edf09}{getProfileEntry}}(std::size\_t\ key,\ \textcolor{keyword}{const}\ std::string\&\ ns)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00113\ }
+\DoxyCodeLine{00115\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classtesseract__planning_1_1ProfileDictionary_abd4e3dcb55aeaeb5ecb416ae6d24c94e}{clear}}();}
+\DoxyCodeLine{00116\ }
+\DoxyCodeLine{00117\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00118\ \ \ \textcolor{keyword}{mutable}\ std::shared\_mutex\ \mbox{\hyperlink{classtesseract__planning_1_1ProfileDictionary_a303b4cae55aa2bfcaea9aba7adc5d983}{mutex\_}};}
+\DoxyCodeLine{00119\ \ \ std::unordered\_map<std::string,\ std::unordered\_map<std::size\_t,\ std::unordered\_map<std::string,\ Profile::ConstPtr>>>}
+\DoxyCodeLine{00120\ \ \ \ \ \ \ \mbox{\hyperlink{classtesseract__planning_1_1ProfileDictionary_a9b09458d942320319584523be274acac}{profiles\_}};}
+\DoxyCodeLine{00121\ }
+\DoxyCodeLine{00122\ \ \ \textcolor{keyword}{friend}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classtesseract__planning_1_1ProfileDictionary_ac98d07dd8f7b70e16ccb9a01abf56b9c}{boost::serialization::access}};}
+\DoxyCodeLine{00123\ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{class}\ Archive>}
+\DoxyCodeLine{00124\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classtesseract__planning_1_1ProfileDictionary_ab48232487269fa2862174b0dd2e3c560}{serialize}}(Archive\&\ ar,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ version);\ \ \textcolor{comment}{//\ NOLINT}}
+\DoxyCodeLine{00125\ \};}
+\DoxyCodeLine{00126\ }
+\DoxyCodeLine{00127\ \}\ \ \textcolor{comment}{//\ namespace\ tesseract\_planning}}
+\DoxyCodeLine{00128\ }
+\DoxyCodeLine{00129\ BOOST\_CLASS\_EXPORT\_KEY(\mbox{\hyperlink{classtesseract__planning_1_1ProfileDictionary}{tesseract\_planning::ProfileDictionary}})}
+\DoxyCodeLine{00130\ TESSERACT\_ANY\_EXPORT\_KEY(std::shared\_ptr<tesseract\_planning::ProfileDictionary>,}
+\DoxyCodeLine{00131\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ TesseractPlanningProfileDictionarySharedPtr)}
+\DoxyCodeLine{00132\ }
+\DoxyCodeLine{00133\ \textcolor{preprocessor}{\#endif\ \ }\textcolor{comment}{//\ TESSERACT\_MOTION\_PLANNERS\_PROFILE\_DICTIONARY\_H}}
+
+\end{DoxyCode}

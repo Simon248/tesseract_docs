@@ -1,0 +1,206 @@
+\doxysection{tesseract\+\_\+planning\+::test\+\_\+suite Namespace Reference}
+\hypertarget{namespacetesseract__planning_1_1test__suite}{}\label{namespacetesseract__planning_1_1test__suite}\index{tesseract\_planning::test\_suite@{tesseract\_planning::test\_suite}}
+\doxysubsubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespacetesseract__planning_1_1test__suite_1_1details}{details}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classtesseract__planning_1_1test__suite_1_1DummyTaskComposerNode}{Dummy\+Task\+Composer\+Node}}
+\item 
+class \mbox{\hyperlink{classtesseract__planning_1_1test__suite_1_1TestTask}{Test\+Task}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{namespacetesseract__planning_1_1test__suite_a47a6dc93007bd0b094152d80e0ba906b}{Test\+Task\+Factory}} = \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerTaskFactory}{Task\+Composer\+Task\+Factory}}$<$ \mbox{\hyperlink{classtesseract__planning_1_1test__suite_1_1TestTask}{Test\+Task}} $>$
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T $>$ }\\void \mbox{\hyperlink{namespacetesseract__planning_1_1test__suite_a9897a8f6b90a4e90aa9be9abcd164ea8}{run\+Cartesian\+Waypoint\+Test}} ()
+\item 
+{\footnotesize template$<$typename T $>$ }\\void \mbox{\hyperlink{namespacetesseract__planning_1_1test__suite_a93e28c470035b0a500a7891b696a9735}{run\+Instruction\+Interface\+Test}} (bool expect\+\_\+uuid\+\_\+null=true)
+\item 
+void \mbox{\hyperlink{namespacetesseract__planning_1_1test__suite_a7e1e35a1ee51d166c8f4a1b12dcbb3dc}{run\+Instruction\+Serialization\+Test}} (const \mbox{\hyperlink{structtesseract__planning_1_1InstructionPoly}{Instruction\+Poly}} \&inst)
+\begin{DoxyCompactList}\small\item\em This will test the serialization of any waypoint implementation. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\void \mbox{\hyperlink{namespacetesseract__planning_1_1test__suite_a6871540f7513b880d120359df88f1d27}{run\+Joint\+Waypoint\+Test}} ()
+\item 
+{\footnotesize template$<$typename T $>$ }\\void \mbox{\hyperlink{namespacetesseract__planning_1_1test__suite_a41052f51fe24bd2a495db655425a0c48}{run\+Move\+Instruction\+Test}} ()
+\item 
+{\footnotesize template$<$typename T $>$ }\\void \mbox{\hyperlink{namespacetesseract__planning_1_1test__suite_a649392f40e98699476029076c606e7ca}{run\+State\+Waypoint\+Test}} ()
+\item 
+{\footnotesize template$<$typename T $>$ }\\void \mbox{\hyperlink{namespacetesseract__planning_1_1test__suite_aa778d264a22ab85d7c5f4bd2fa2b39b4}{run\+Waypoint\+Interface\+Test}} ()
+\item 
+void \mbox{\hyperlink{namespacetesseract__planning_1_1test__suite_a3e222d531141b6c852db827ef57ea3f4}{run\+Waypoint\+Serialization\+Test}} (const \mbox{\hyperlink{structtesseract__planning_1_1WaypointPoly}{Waypoint\+Poly}} \&\mbox{\hyperlink{fix__state__collision__task__unit_8cpp_a597b56c2c0087f5d0637de0567f0fd77}{waypoint}})
+\begin{DoxyCompactList}\small\item\em This will test the serialization of any waypoint implementation. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\void \mbox{\hyperlink{namespacetesseract__planning_1_1test__suite_a649946c89a3a88974ce23682a200d74f}{run\+Task\+Composer\+Executor\+Test}} ()
+\item 
+{\footnotesize template$<$typename T $>$ }\\void \mbox{\hyperlink{namespacetesseract__planning_1_1test__suite_aaf80842d34df8b0ddedd52a4d5a83dbb}{run\+Task\+Composer\+Node\+Info\+Test}} ()
+\item 
+{\footnotesize template$<$typename T $>$ }\\void \mbox{\hyperlink{namespacetesseract__planning_1_1test__suite_a6ef3a1020b198ea62a7363f826ad3d53}{run\+Serialization\+Test}} (const T \&input, const std\+::string \&file\+\_\+name)
+\item 
+{\footnotesize template$<$typename T $>$ }\\void \mbox{\hyperlink{namespacetesseract__planning_1_1test__suite_a3fbdef14cb25929313c8c35236cb7491}{run\+Serialization\+Pointer\+Test}} (const T \&input, const std\+::string \&file\+\_\+name)
+\item 
+\mbox{\hyperlink{classtesseract__planning_1_1CompositeInstruction}{Composite\+Instruction}} \mbox{\hyperlink{namespacetesseract__planning_1_1test__suite_a73ec837772fb3b47de43e8c4901204d0}{freespace\+Example\+Program\+IIWA}} (const Eigen\+::\+Isometry3d \&\mbox{\hyperlink{ompl__planner__tests_8cpp_a1d56b5bb1315b0251477761181ee4cb9}{goal}}=Eigen\+::\+Isometry3d\+::\+Identity() \texorpdfstring{$\ast$}{*}Eigen\+::\+Translation3d(0.\+2, 0.\+2, 1.\+0), const std\+::string \&\mbox{\hyperlink{trajopt__planner__tests_8cpp_ab5ca2bc3543c598ab7780590481d7d34}{composite\+\_\+profile}}=\mbox{\hyperlink{namespacetesseract__planning_a2c7f691c616d8edb55709be6ced8d565}{DEFAULT\+\_\+\+PROFILE\+\_\+\+KEY}}, const std\+::string \&freespace\+\_\+profile=\mbox{\hyperlink{namespacetesseract__planning_a2c7f691c616d8edb55709be6ced8d565}{DEFAULT\+\_\+\+PROFILE\+\_\+\+KEY}})
+\item 
+\mbox{\hyperlink{classtesseract__planning_1_1CompositeInstruction}{Composite\+Instruction}} \mbox{\hyperlink{namespacetesseract__planning_1_1test__suite_aa5ce13d21bdf4579a9142fbf409499a4}{freespace\+Example\+Program\+ABB}} (const Eigen\+::\+Isometry3d \&\mbox{\hyperlink{ompl__planner__tests_8cpp_a1d56b5bb1315b0251477761181ee4cb9}{goal}}=Eigen\+::\+Isometry3d\+::\+Identity() \texorpdfstring{$\ast$}{*}Eigen\+::\+Translation3d(0.\+2, 0.\+2, 1.\+0), const std\+::string \&\mbox{\hyperlink{trajopt__planner__tests_8cpp_ab5ca2bc3543c598ab7780590481d7d34}{composite\+\_\+profile}}=\mbox{\hyperlink{namespacetesseract__planning_a2c7f691c616d8edb55709be6ced8d565}{DEFAULT\+\_\+\+PROFILE\+\_\+\+KEY}}, const std\+::string \&freespace\+\_\+profile=\mbox{\hyperlink{namespacetesseract__planning_a2c7f691c616d8edb55709be6ced8d565}{DEFAULT\+\_\+\+PROFILE\+\_\+\+KEY}})
+\item 
+\mbox{\hyperlink{classtesseract__planning_1_1CompositeInstruction}{Composite\+Instruction}} \mbox{\hyperlink{namespacetesseract__planning_1_1test__suite_a7b9ccc9db8f9dc175a3c0af7172f9206}{joint\+Interpolated\+Example\+Solution\+IIWA}} (bool use\+\_\+joint\+\_\+waypoint=false, const std\+::string \&\mbox{\hyperlink{trajopt__planner__tests_8cpp_ab5ca2bc3543c598ab7780590481d7d34}{composite\+\_\+profile}}=\mbox{\hyperlink{namespacetesseract__planning_a2c7f691c616d8edb55709be6ced8d565}{DEFAULT\+\_\+\+PROFILE\+\_\+\+KEY}}, const std\+::string \&freespace\+\_\+profile=\mbox{\hyperlink{namespacetesseract__planning_a2c7f691c616d8edb55709be6ced8d565}{DEFAULT\+\_\+\+PROFILE\+\_\+\+KEY}})
+\item 
+\mbox{\hyperlink{classtesseract__planning_1_1CompositeInstruction}{Composite\+Instruction}} \mbox{\hyperlink{namespacetesseract__planning_1_1test__suite_a64dd246f4cab54e2092f583d1a6d3cd3}{joint\+Interpolate\+Example\+Program\+ABB}} (bool use\+\_\+joint\+\_\+waypoint=false, const std\+::string \&\mbox{\hyperlink{trajopt__planner__tests_8cpp_ab5ca2bc3543c598ab7780590481d7d34}{composite\+\_\+profile}}=\mbox{\hyperlink{namespacetesseract__planning_a2c7f691c616d8edb55709be6ced8d565}{DEFAULT\+\_\+\+PROFILE\+\_\+\+KEY}}, const std\+::string \&freespace\+\_\+profile=\mbox{\hyperlink{namespacetesseract__planning_a2c7f691c616d8edb55709be6ced8d565}{DEFAULT\+\_\+\+PROFILE\+\_\+\+KEY}})
+\item 
+\mbox{\hyperlink{classtesseract__planning_1_1CompositeInstruction}{Composite\+Instruction}} \mbox{\hyperlink{namespacetesseract__planning_1_1test__suite_acadc2934d9a849ca58cceeb0adced5d3}{raster\+Example\+Program}} (const std\+::string \&freespace\+\_\+profile=\mbox{\hyperlink{namespacetesseract__planning_a2c7f691c616d8edb55709be6ced8d565}{DEFAULT\+\_\+\+PROFILE\+\_\+\+KEY}}, const std\+::string \&process\+\_\+profile="{}PROCESS"{})
+\item 
+\mbox{\hyperlink{classtesseract__planning_1_1CompositeInstruction}{Composite\+Instruction}} \mbox{\hyperlink{namespacetesseract__planning_1_1test__suite_a2bc58584c3cc413e45b8c37ae6820ee5}{raster\+Only\+Example\+Program}} (const std\+::string \&freespace\+\_\+profile=\mbox{\hyperlink{namespacetesseract__planning_a2c7f691c616d8edb55709be6ced8d565}{DEFAULT\+\_\+\+PROFILE\+\_\+\+KEY}}, const std\+::string \&process\+\_\+profile="{}PROCESS"{})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Typedef Documentation}
+\Hypertarget{namespacetesseract__planning_1_1test__suite_a47a6dc93007bd0b094152d80e0ba906b}\label{namespacetesseract__planning_1_1test__suite_a47a6dc93007bd0b094152d80e0ba906b} 
+\index{tesseract\_planning::test\_suite@{tesseract\_planning::test\_suite}!TestTaskFactory@{TestTaskFactory}}
+\index{TestTaskFactory@{TestTaskFactory}!tesseract\_planning::test\_suite@{tesseract\_planning::test\_suite}}
+\doxysubsubsection{\texorpdfstring{TestTaskFactory}{TestTaskFactory}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{namespacetesseract__planning_1_1test__suite_a47a6dc93007bd0b094152d80e0ba906b}{tesseract\+\_\+planning\+::test\+\_\+suite\+::\+Test\+Task\+Factory}} = typedef \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerTaskFactory}{Task\+Composer\+Task\+Factory}}$<$\mbox{\hyperlink{classtesseract__planning_1_1test__suite_1_1TestTask}{Test\+Task}}$>$}
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{namespacetesseract__planning_1_1test__suite_aa5ce13d21bdf4579a9142fbf409499a4}\label{namespacetesseract__planning_1_1test__suite_aa5ce13d21bdf4579a9142fbf409499a4} 
+\index{tesseract\_planning::test\_suite@{tesseract\_planning::test\_suite}!freespaceExampleProgramABB@{freespaceExampleProgramABB}}
+\index{freespaceExampleProgramABB@{freespaceExampleProgramABB}!tesseract\_planning::test\_suite@{tesseract\_planning::test\_suite}}
+\doxysubsubsection{\texorpdfstring{freespaceExampleProgramABB()}{freespaceExampleProgramABB()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classtesseract__planning_1_1CompositeInstruction}{Composite\+Instruction}} tesseract\+\_\+planning\+::test\+\_\+suite\+::freespace\+Example\+Program\+ABB (\begin{DoxyParamCaption}\item[{const Eigen\+::\+Isometry3d \&}]{goal = {\ttfamily Eigen\+:\+:Isometry3d\+:\+:Identity()~\texorpdfstring{$\ast$}{*}~Eigen\+:\+:Translation3d(0.2,~0.2,~1.0)},  }\item[{const std\+::string \&}]{composite\+\_\+profile = {\ttfamily \mbox{\hyperlink{namespacetesseract__planning_a2c7f691c616d8edb55709be6ced8d565}{DEFAULT\+\_\+\+PROFILE\+\_\+\+KEY}}},  }\item[{const std\+::string \&}]{freespace\+\_\+profile = {\ttfamily \mbox{\hyperlink{namespacetesseract__planning_a2c7f691c616d8edb55709be6ced8d565}{DEFAULT\+\_\+\+PROFILE\+\_\+\+KEY}}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{namespacetesseract__planning_1_1test__suite_a73ec837772fb3b47de43e8c4901204d0}\label{namespacetesseract__planning_1_1test__suite_a73ec837772fb3b47de43e8c4901204d0} 
+\index{tesseract\_planning::test\_suite@{tesseract\_planning::test\_suite}!freespaceExampleProgramIIWA@{freespaceExampleProgramIIWA}}
+\index{freespaceExampleProgramIIWA@{freespaceExampleProgramIIWA}!tesseract\_planning::test\_suite@{tesseract\_planning::test\_suite}}
+\doxysubsubsection{\texorpdfstring{freespaceExampleProgramIIWA()}{freespaceExampleProgramIIWA()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classtesseract__planning_1_1CompositeInstruction}{Composite\+Instruction}} tesseract\+\_\+planning\+::test\+\_\+suite\+::freespace\+Example\+Program\+IIWA (\begin{DoxyParamCaption}\item[{const Eigen\+::\+Isometry3d \&}]{goal = {\ttfamily Eigen\+:\+:Isometry3d\+:\+:Identity()~\texorpdfstring{$\ast$}{*}~Eigen\+:\+:Translation3d(0.2,~0.2,~1.0)},  }\item[{const std\+::string \&}]{composite\+\_\+profile = {\ttfamily \mbox{\hyperlink{namespacetesseract__planning_a2c7f691c616d8edb55709be6ced8d565}{DEFAULT\+\_\+\+PROFILE\+\_\+\+KEY}}},  }\item[{const std\+::string \&}]{freespace\+\_\+profile = {\ttfamily \mbox{\hyperlink{namespacetesseract__planning_a2c7f691c616d8edb55709be6ced8d565}{DEFAULT\+\_\+\+PROFILE\+\_\+\+KEY}}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{namespacetesseract__planning_1_1test__suite_a7b9ccc9db8f9dc175a3c0af7172f9206}\label{namespacetesseract__planning_1_1test__suite_a7b9ccc9db8f9dc175a3c0af7172f9206} 
+\index{tesseract\_planning::test\_suite@{tesseract\_planning::test\_suite}!jointInterpolatedExampleSolutionIIWA@{jointInterpolatedExampleSolutionIIWA}}
+\index{jointInterpolatedExampleSolutionIIWA@{jointInterpolatedExampleSolutionIIWA}!tesseract\_planning::test\_suite@{tesseract\_planning::test\_suite}}
+\doxysubsubsection{\texorpdfstring{jointInterpolatedExampleSolutionIIWA()}{jointInterpolatedExampleSolutionIIWA()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classtesseract__planning_1_1CompositeInstruction}{Composite\+Instruction}} tesseract\+\_\+planning\+::test\+\_\+suite\+::joint\+Interpolated\+Example\+Solution\+IIWA (\begin{DoxyParamCaption}\item[{bool}]{use\+\_\+joint\+\_\+waypoint = {\ttfamily false},  }\item[{const std\+::string \&}]{composite\+\_\+profile = {\ttfamily \mbox{\hyperlink{namespacetesseract__planning_a2c7f691c616d8edb55709be6ced8d565}{DEFAULT\+\_\+\+PROFILE\+\_\+\+KEY}}},  }\item[{const std\+::string \&}]{freespace\+\_\+profile = {\ttfamily \mbox{\hyperlink{namespacetesseract__planning_a2c7f691c616d8edb55709be6ced8d565}{DEFAULT\+\_\+\+PROFILE\+\_\+\+KEY}}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{namespacetesseract__planning_1_1test__suite_a64dd246f4cab54e2092f583d1a6d3cd3}\label{namespacetesseract__planning_1_1test__suite_a64dd246f4cab54e2092f583d1a6d3cd3} 
+\index{tesseract\_planning::test\_suite@{tesseract\_planning::test\_suite}!jointInterpolateExampleProgramABB@{jointInterpolateExampleProgramABB}}
+\index{jointInterpolateExampleProgramABB@{jointInterpolateExampleProgramABB}!tesseract\_planning::test\_suite@{tesseract\_planning::test\_suite}}
+\doxysubsubsection{\texorpdfstring{jointInterpolateExampleProgramABB()}{jointInterpolateExampleProgramABB()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classtesseract__planning_1_1CompositeInstruction}{Composite\+Instruction}} tesseract\+\_\+planning\+::test\+\_\+suite\+::joint\+Interpolate\+Example\+Program\+ABB (\begin{DoxyParamCaption}\item[{bool}]{use\+\_\+joint\+\_\+waypoint = {\ttfamily false},  }\item[{const std\+::string \&}]{composite\+\_\+profile = {\ttfamily \mbox{\hyperlink{namespacetesseract__planning_a2c7f691c616d8edb55709be6ced8d565}{DEFAULT\+\_\+\+PROFILE\+\_\+\+KEY}}},  }\item[{const std\+::string \&}]{freespace\+\_\+profile = {\ttfamily \mbox{\hyperlink{namespacetesseract__planning_a2c7f691c616d8edb55709be6ced8d565}{DEFAULT\+\_\+\+PROFILE\+\_\+\+KEY}}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{namespacetesseract__planning_1_1test__suite_acadc2934d9a849ca58cceeb0adced5d3}\label{namespacetesseract__planning_1_1test__suite_acadc2934d9a849ca58cceeb0adced5d3} 
+\index{tesseract\_planning::test\_suite@{tesseract\_planning::test\_suite}!rasterExampleProgram@{rasterExampleProgram}}
+\index{rasterExampleProgram@{rasterExampleProgram}!tesseract\_planning::test\_suite@{tesseract\_planning::test\_suite}}
+\doxysubsubsection{\texorpdfstring{rasterExampleProgram()}{rasterExampleProgram()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classtesseract__planning_1_1CompositeInstruction}{Composite\+Instruction}} tesseract\+\_\+planning\+::test\+\_\+suite\+::raster\+Example\+Program (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{freespace\+\_\+profile = {\ttfamily \mbox{\hyperlink{namespacetesseract__planning_a2c7f691c616d8edb55709be6ced8d565}{DEFAULT\+\_\+\+PROFILE\+\_\+\+KEY}}},  }\item[{const std\+::string \&}]{process\+\_\+profile = {\ttfamily "{}PROCESS"{}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{namespacetesseract__planning_1_1test__suite_a2bc58584c3cc413e45b8c37ae6820ee5}\label{namespacetesseract__planning_1_1test__suite_a2bc58584c3cc413e45b8c37ae6820ee5} 
+\index{tesseract\_planning::test\_suite@{tesseract\_planning::test\_suite}!rasterOnlyExampleProgram@{rasterOnlyExampleProgram}}
+\index{rasterOnlyExampleProgram@{rasterOnlyExampleProgram}!tesseract\_planning::test\_suite@{tesseract\_planning::test\_suite}}
+\doxysubsubsection{\texorpdfstring{rasterOnlyExampleProgram()}{rasterOnlyExampleProgram()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classtesseract__planning_1_1CompositeInstruction}{Composite\+Instruction}} tesseract\+\_\+planning\+::test\+\_\+suite\+::raster\+Only\+Example\+Program (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{freespace\+\_\+profile = {\ttfamily \mbox{\hyperlink{namespacetesseract__planning_a2c7f691c616d8edb55709be6ced8d565}{DEFAULT\+\_\+\+PROFILE\+\_\+\+KEY}}},  }\item[{const std\+::string \&}]{process\+\_\+profile = {\ttfamily "{}PROCESS"{}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{namespacetesseract__planning_1_1test__suite_a9897a8f6b90a4e90aa9be9abcd164ea8}\label{namespacetesseract__planning_1_1test__suite_a9897a8f6b90a4e90aa9be9abcd164ea8} 
+\index{tesseract\_planning::test\_suite@{tesseract\_planning::test\_suite}!runCartesianWaypointTest@{runCartesianWaypointTest}}
+\index{runCartesianWaypointTest@{runCartesianWaypointTest}!tesseract\_planning::test\_suite@{tesseract\_planning::test\_suite}}
+\doxysubsubsection{\texorpdfstring{runCartesianWaypointTest()}{runCartesianWaypointTest()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void tesseract\+\_\+planning\+::test\+\_\+suite\+::run\+Cartesian\+Waypoint\+Test (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{namespacetesseract__planning_1_1test__suite_a93e28c470035b0a500a7891b696a9735}\label{namespacetesseract__planning_1_1test__suite_a93e28c470035b0a500a7891b696a9735} 
+\index{tesseract\_planning::test\_suite@{tesseract\_planning::test\_suite}!runInstructionInterfaceTest@{runInstructionInterfaceTest}}
+\index{runInstructionInterfaceTest@{runInstructionInterfaceTest}!tesseract\_planning::test\_suite@{tesseract\_planning::test\_suite}}
+\doxysubsubsection{\texorpdfstring{runInstructionInterfaceTest()}{runInstructionInterfaceTest()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void tesseract\+\_\+planning\+::test\+\_\+suite\+::run\+Instruction\+Interface\+Test (\begin{DoxyParamCaption}\item[{bool}]{expect\+\_\+uuid\+\_\+null = {\ttfamily true} }\end{DoxyParamCaption})}
+
+\Hypertarget{namespacetesseract__planning_1_1test__suite_a7e1e35a1ee51d166c8f4a1b12dcbb3dc}\label{namespacetesseract__planning_1_1test__suite_a7e1e35a1ee51d166c8f4a1b12dcbb3dc} 
+\index{tesseract\_planning::test\_suite@{tesseract\_planning::test\_suite}!runInstructionSerializationTest@{runInstructionSerializationTest}}
+\index{runInstructionSerializationTest@{runInstructionSerializationTest}!tesseract\_planning::test\_suite@{tesseract\_planning::test\_suite}}
+\doxysubsubsection{\texorpdfstring{runInstructionSerializationTest()}{runInstructionSerializationTest()}}
+{\footnotesize\ttfamily void tesseract\+\_\+planning\+::test\+\_\+suite\+::run\+Instruction\+Serialization\+Test (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structtesseract__planning_1_1InstructionPoly}{Instruction\+Poly}} \&}]{inst }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+This will test the serialization of any waypoint implementation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em waypoint} & The waypoint to test serialization \\
+\hline
+\end{DoxyParams}
+\Hypertarget{namespacetesseract__planning_1_1test__suite_a6871540f7513b880d120359df88f1d27}\label{namespacetesseract__planning_1_1test__suite_a6871540f7513b880d120359df88f1d27} 
+\index{tesseract\_planning::test\_suite@{tesseract\_planning::test\_suite}!runJointWaypointTest@{runJointWaypointTest}}
+\index{runJointWaypointTest@{runJointWaypointTest}!tesseract\_planning::test\_suite@{tesseract\_planning::test\_suite}}
+\doxysubsubsection{\texorpdfstring{runJointWaypointTest()}{runJointWaypointTest()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void tesseract\+\_\+planning\+::test\+\_\+suite\+::run\+Joint\+Waypoint\+Test (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{namespacetesseract__planning_1_1test__suite_a41052f51fe24bd2a495db655425a0c48}\label{namespacetesseract__planning_1_1test__suite_a41052f51fe24bd2a495db655425a0c48} 
+\index{tesseract\_planning::test\_suite@{tesseract\_planning::test\_suite}!runMoveInstructionTest@{runMoveInstructionTest}}
+\index{runMoveInstructionTest@{runMoveInstructionTest}!tesseract\_planning::test\_suite@{tesseract\_planning::test\_suite}}
+\doxysubsubsection{\texorpdfstring{runMoveInstructionTest()}{runMoveInstructionTest()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void tesseract\+\_\+planning\+::test\+\_\+suite\+::run\+Move\+Instruction\+Test (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{namespacetesseract__planning_1_1test__suite_a3fbdef14cb25929313c8c35236cb7491}\label{namespacetesseract__planning_1_1test__suite_a3fbdef14cb25929313c8c35236cb7491} 
+\index{tesseract\_planning::test\_suite@{tesseract\_planning::test\_suite}!runSerializationPointerTest@{runSerializationPointerTest}}
+\index{runSerializationPointerTest@{runSerializationPointerTest}!tesseract\_planning::test\_suite@{tesseract\_planning::test\_suite}}
+\doxysubsubsection{\texorpdfstring{runSerializationPointerTest()}{runSerializationPointerTest()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void tesseract\+\_\+planning\+::test\+\_\+suite\+::run\+Serialization\+Pointer\+Test (\begin{DoxyParamCaption}\item[{const T \&}]{input,  }\item[{const std\+::string \&}]{file\+\_\+name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{namespacetesseract__planning_1_1test__suite_a6ef3a1020b198ea62a7363f826ad3d53}\label{namespacetesseract__planning_1_1test__suite_a6ef3a1020b198ea62a7363f826ad3d53} 
+\index{tesseract\_planning::test\_suite@{tesseract\_planning::test\_suite}!runSerializationTest@{runSerializationTest}}
+\index{runSerializationTest@{runSerializationTest}!tesseract\_planning::test\_suite@{tesseract\_planning::test\_suite}}
+\doxysubsubsection{\texorpdfstring{runSerializationTest()}{runSerializationTest()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void tesseract\+\_\+planning\+::test\+\_\+suite\+::run\+Serialization\+Test (\begin{DoxyParamCaption}\item[{const T \&}]{input,  }\item[{const std\+::string \&}]{file\+\_\+name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{namespacetesseract__planning_1_1test__suite_a649392f40e98699476029076c606e7ca}\label{namespacetesseract__planning_1_1test__suite_a649392f40e98699476029076c606e7ca} 
+\index{tesseract\_planning::test\_suite@{tesseract\_planning::test\_suite}!runStateWaypointTest@{runStateWaypointTest}}
+\index{runStateWaypointTest@{runStateWaypointTest}!tesseract\_planning::test\_suite@{tesseract\_planning::test\_suite}}
+\doxysubsubsection{\texorpdfstring{runStateWaypointTest()}{runStateWaypointTest()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void tesseract\+\_\+planning\+::test\+\_\+suite\+::run\+State\+Waypoint\+Test (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{namespacetesseract__planning_1_1test__suite_a649946c89a3a88974ce23682a200d74f}\label{namespacetesseract__planning_1_1test__suite_a649946c89a3a88974ce23682a200d74f} 
+\index{tesseract\_planning::test\_suite@{tesseract\_planning::test\_suite}!runTaskComposerExecutorTest@{runTaskComposerExecutorTest}}
+\index{runTaskComposerExecutorTest@{runTaskComposerExecutorTest}!tesseract\_planning::test\_suite@{tesseract\_planning::test\_suite}}
+\doxysubsubsection{\texorpdfstring{runTaskComposerExecutorTest()}{runTaskComposerExecutorTest()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void tesseract\+\_\+planning\+::test\+\_\+suite\+::run\+Task\+Composer\+Executor\+Test (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{namespacetesseract__planning_1_1test__suite_aaf80842d34df8b0ddedd52a4d5a83dbb}\label{namespacetesseract__planning_1_1test__suite_aaf80842d34df8b0ddedd52a4d5a83dbb} 
+\index{tesseract\_planning::test\_suite@{tesseract\_planning::test\_suite}!runTaskComposerNodeInfoTest@{runTaskComposerNodeInfoTest}}
+\index{runTaskComposerNodeInfoTest@{runTaskComposerNodeInfoTest}!tesseract\_planning::test\_suite@{tesseract\_planning::test\_suite}}
+\doxysubsubsection{\texorpdfstring{runTaskComposerNodeInfoTest()}{runTaskComposerNodeInfoTest()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void tesseract\+\_\+planning\+::test\+\_\+suite\+::run\+Task\+Composer\+Node\+Info\+Test (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{namespacetesseract__planning_1_1test__suite_aa778d264a22ab85d7c5f4bd2fa2b39b4}\label{namespacetesseract__planning_1_1test__suite_aa778d264a22ab85d7c5f4bd2fa2b39b4} 
+\index{tesseract\_planning::test\_suite@{tesseract\_planning::test\_suite}!runWaypointInterfaceTest@{runWaypointInterfaceTest}}
+\index{runWaypointInterfaceTest@{runWaypointInterfaceTest}!tesseract\_planning::test\_suite@{tesseract\_planning::test\_suite}}
+\doxysubsubsection{\texorpdfstring{runWaypointInterfaceTest()}{runWaypointInterfaceTest()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void tesseract\+\_\+planning\+::test\+\_\+suite\+::run\+Waypoint\+Interface\+Test (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{namespacetesseract__planning_1_1test__suite_a3e222d531141b6c852db827ef57ea3f4}\label{namespacetesseract__planning_1_1test__suite_a3e222d531141b6c852db827ef57ea3f4} 
+\index{tesseract\_planning::test\_suite@{tesseract\_planning::test\_suite}!runWaypointSerializationTest@{runWaypointSerializationTest}}
+\index{runWaypointSerializationTest@{runWaypointSerializationTest}!tesseract\_planning::test\_suite@{tesseract\_planning::test\_suite}}
+\doxysubsubsection{\texorpdfstring{runWaypointSerializationTest()}{runWaypointSerializationTest()}}
+{\footnotesize\ttfamily void tesseract\+\_\+planning\+::test\+\_\+suite\+::run\+Waypoint\+Serialization\+Test (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structtesseract__planning_1_1WaypointPoly}{Waypoint\+Poly}} \&}]{waypoint }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+This will test the serialization of any waypoint implementation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em waypoint} & The waypoint to test serialization \\
+\hline
+\end{DoxyParams}

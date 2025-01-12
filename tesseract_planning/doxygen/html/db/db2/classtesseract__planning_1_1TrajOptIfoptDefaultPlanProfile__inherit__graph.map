@@ -1,0 +1,7 @@
+<map id="tesseract_planning::TrajOptIfoptDefaultPlanProfile" name="tesseract_planning::TrajOptIfoptDefaultPlanProfile">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,183,205,223"/>
+<area shape="rect" id="Node000002" href="$d2/d10/classtesseract__planning_1_1TrajOptIfoptPlanProfile.html" title=" " alt="" coords="26,94,184,135"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="108,150,108,182,102,182,102,150"/>
+<area shape="rect" id="Node000003" href="$db/d41/classtesseract__planning_1_1Profile.html" title="The Profile class." alt="" coords="40,5,170,46"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="108,62,108,94,102,94,102,62"/>
+</map>

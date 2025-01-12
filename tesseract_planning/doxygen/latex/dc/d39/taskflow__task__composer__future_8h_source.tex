@@ -1,0 +1,64 @@
+\doxysection{taskflow\+\_\+task\+\_\+composer\+\_\+future.\+h}
+\hypertarget{taskflow__task__composer__future_8h_source}{}\label{taskflow__task__composer__future_8h_source}\index{tesseract\_task\_composer/taskflow/include/tesseract\_task\_composer/taskflow/taskflow\_task\_composer\_future.h@{tesseract\_task\_composer/taskflow/include/tesseract\_task\_composer/taskflow/taskflow\_task\_composer\_future.h}}
+\mbox{\hyperlink{taskflow__task__composer__future_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00026\ \textcolor{preprocessor}{\#ifndef\ TESSERACT\_TASK\_COMPOSER\_TASKFLOW\_TASK\_COMPOSER\_FUTURE\_H}}
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#define\ TESSERACT\_TASK\_COMPOSER\_TASKFLOW\_TASK\_COMPOSER\_FUTURE\_H}}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#include\ <tesseract\_common/macros.h>}}
+\DoxyCodeLine{00030\ TESSERACT\_COMMON\_IGNORE\_WARNINGS\_PUSH}
+\DoxyCodeLine{00031\ \textcolor{preprocessor}{\#include\ <memory>}}
+\DoxyCodeLine{00032\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00033\ \mbox{\hyperlink{namespaceTESSERACT__COMMON__IGNORE__WARNINGS__POP}{TESSERACT\_COMMON\_IGNORE\_WARNINGS\_POP}}}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{task__composer__future_8h}{tesseract\_task\_composer/core/task\_composer\_future.h}}>}}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacetf}{tf}}}
+\DoxyCodeLine{00038\ \{}
+\DoxyCodeLine{00039\ \textcolor{keyword}{class\ }Taskflow;}
+\DoxyCodeLine{00040\ \}}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00042\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacetesseract__planning}{tesseract\_planning}}}
+\DoxyCodeLine{00043\ \{}
+\DoxyCodeLine{00044\ \textcolor{keyword}{struct\ }TaskComposerTaskflowContainer;}
+\DoxyCodeLine{00045\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classtesseract__planning_1_1TaskflowTaskComposerFuture}{TaskflowTaskComposerFuture}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerFuture}{TaskComposerFuture}}}
+\DoxyCodeLine{00046\ \{}
+\DoxyCodeLine{00047\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00048\ \ \ \mbox{\hyperlink{classtesseract__planning_1_1TaskflowTaskComposerFuture_a59ac19c560edb5f46ab7aba614673832}{TaskflowTaskComposerFuture}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00049\ \ \ \mbox{\hyperlink{classtesseract__planning_1_1TaskflowTaskComposerFuture_a59ac19c560edb5f46ab7aba614673832}{TaskflowTaskComposerFuture}}(std::shared\_future<void>\ future,}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::unique\_ptr<tf::Taskflow>\ taskflow,}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::shared\_ptr<TaskComposerContext>\ \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerFuture_a52619f9c67ecbdc7b284ac18fec55833}{context}});}
+\DoxyCodeLine{00052\ \ \ \mbox{\hyperlink{classtesseract__planning_1_1TaskflowTaskComposerFuture_a1b8415a3b5b4ea7a3c3e9a2b624e9762}{\string~TaskflowTaskComposerFuture}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00053\ \ \ \mbox{\hyperlink{classtesseract__planning_1_1TaskflowTaskComposerFuture_abec271fc9e598f19f7bfe1bf2f665f00}{TaskflowTaskComposerFuture}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classtesseract__planning_1_1TaskflowTaskComposerFuture}{TaskflowTaskComposerFuture}}\&)\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00054\ \ \ \mbox{\hyperlink{classtesseract__planning_1_1TaskflowTaskComposerFuture}{TaskflowTaskComposerFuture}}\&\ \mbox{\hyperlink{classtesseract__planning_1_1TaskflowTaskComposerFuture_a2e51a721335ed25e0fdc94a66c1bb84d}{operator=}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classtesseract__planning_1_1TaskflowTaskComposerFuture}{TaskflowTaskComposerFuture}}\&)\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00055\ \ \ \mbox{\hyperlink{classtesseract__planning_1_1TaskflowTaskComposerFuture_ab5a0605b34f51b7a4a03da87240bd7fe}{TaskflowTaskComposerFuture}}(\mbox{\hyperlink{classtesseract__planning_1_1TaskflowTaskComposerFuture}{TaskflowTaskComposerFuture}}\&\&)\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00056\ \ \ \mbox{\hyperlink{classtesseract__planning_1_1TaskflowTaskComposerFuture}{TaskflowTaskComposerFuture}}\&\ \mbox{\hyperlink{classtesseract__planning_1_1TaskflowTaskComposerFuture_af7f6dcc4e70976f40eb699edf1e824e6}{operator=}}(\mbox{\hyperlink{classtesseract__planning_1_1TaskflowTaskComposerFuture}{TaskflowTaskComposerFuture}}\&\&)\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00058\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classtesseract__planning_1_1TaskflowTaskComposerFuture_a4f80499e583dea93c4ded51b8781c4fa}{clear}}()\ override\ final;}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00060\ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classtesseract__planning_1_1TaskflowTaskComposerFuture_a7f552a276176ced9355e1fafd5281faa}{valid}}()\ const\ override\ final;}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00062\ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classtesseract__planning_1_1TaskflowTaskComposerFuture_a5ed72c150f6691d24fc536c755544a0e}{ready}}()\ const\ override\ final;}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00064\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classtesseract__planning_1_1TaskflowTaskComposerFuture_a8d207dc6aba61358678e9560e0c1716e}{wait}}()\ const\ override\ final;}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00066\ \ \ std::future\_status\ \mbox{\hyperlink{classtesseract__planning_1_1TaskflowTaskComposerFuture_ad7293784c5779b65317a2baae74e5543}{waitFor}}(const\ std::chrono::duration<\textcolor{keywordtype}{double}>\&\ duration)\ const\ override\ final;}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00068\ \ \ std::future\_status}
+\DoxyCodeLine{00069\ \ \ \mbox{\hyperlink{classtesseract__planning_1_1TaskflowTaskComposerFuture_a991df752311ac72d9140f741161d7d44}{waitUntil}}(const\ std::chrono::time\_point<std::chrono::high\_resolution\_clock>\&\ abs)\ const\ override\ final;}
+\DoxyCodeLine{00070\ }
+\DoxyCodeLine{00071\ \ \ \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerFuture}{TaskComposerFuture}}::\mbox{\hyperlink{classtesseract__planning_1_1TaskComposerFuture_ad8f9f27ba611e63ecd12ad1ad91a4b66}{UPtr}}\ \mbox{\hyperlink{classtesseract__planning_1_1TaskflowTaskComposerFuture_a9fbd0968f988f4a1663b3f04f683b57b}{copy}}()\ const\ override\ final;}
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00074\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classtesseract__planning_1_1TaskflowTaskComposerFuture_aba6b01c5d3628a6bd7514232407d8225}{dump}}(std::ostream\&\ \mbox{\hyperlink{tesseract__task__composer__core__unit_8cpp_a7df50db74401cf06af9a0a50d734e447}{os}})\ const;}
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00076\ private:}
+\DoxyCodeLine{00078\ \ \ std::shared\_future<\textcolor{keywordtype}{void}>\ \mbox{\hyperlink{classtesseract__planning_1_1TaskflowTaskComposerFuture_ab4fd8e6c5d3d1dc786144331424b6ae8}{future\_}};}
+\DoxyCodeLine{00079\ }
+\DoxyCodeLine{00081\ \ \ std::shared\_ptr<\mbox{\hyperlink{namespacetf}{tf}}::Taskflow>\ \mbox{\hyperlink{classtesseract__planning_1_1TaskflowTaskComposerFuture_af6a486b8d5028fe8835bd5e9b1da19f3}{taskflow\_}};}
+\DoxyCodeLine{00082\ \};}
+\DoxyCodeLine{00083\ \}\ \ \textcolor{comment}{//\ namespace\ tesseract\_planning}}
+\DoxyCodeLine{00084\ }
+\DoxyCodeLine{00085\ \textcolor{preprocessor}{\#endif\ \ }\textcolor{comment}{//\ TESSERACT\_TASK\_COMPOSER\_TASKFLOW\_TASK\_COMPOSER\_FUTURE\_H}}
+
+\end{DoxyCode}

@@ -1,0 +1,30 @@
+<map id="tesseract_command_language/src/profile_dictionary.cpp" name="tesseract_command_language/src/profile_dictionary.cpp">
+<area shape="rect" id="Node000001" title="This is a profile dictionary for storing all profiles." alt="" coords="645,5,843,46"/>
+<area shape="rect" id="Node000002" href="$dd/dd6/profile__dictionary_8h.html" title="This is a profile dictionary for storing all profiles." alt="" coords="310,94,509,135"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="668,49,501,92,499,87,667,44"/>
+<area shape="rect" id="Node000011" title=" " alt="" coords="532,94,657,135"/>
+<area shape="poly" id="edge11_Node000001_Node000011" title=" " alt="" coords="711,49,643,88,640,84,709,44"/>
+<area shape="rect" id="Node000012" title=" " alt="" coords="681,94,807,135"/>
+<area shape="poly" id="edge12_Node000001_Node000012" title=" " alt="" coords="747,47,747,78,741,78,741,47"/>
+<area shape="rect" id="Node000013" title=" " alt="" coords="831,94,969,135"/>
+<area shape="poly" id="edge13_Node000001_Node000013" title=" " alt="" coords="781,44,853,84,850,89,778,49"/>
+<area shape="rect" id="Node000014" title=" " alt="" coords="993,102,1207,127"/>
+<area shape="poly" id="edge14_Node000001_Node000014" title=" " alt="" coords="826,44,1036,95,1035,100,825,49"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="5,190,195,216"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="339,138,159,188,157,183,338,133"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="218,190,329,216"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="380,137,306,184,304,179,377,133"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="402,279,470,305"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="403,136,392,177,390,200,393,223,403,245,417,265,413,268,399,248,388,224,384,200,386,176,398,134"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="402,190,505,216"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="422,134,443,175,438,178,417,136"/>
+<area shape="rect" id="Node000007" href="$de/d45/profile_8h.html" title="This is a profile base class." alt="" coords="529,183,727,223"/>
+<area shape="poly" id="edge6_Node000002_Node000007" title=" " alt="" coords="460,133,565,174,563,179,458,138"/>
+<area shape="rect" id="Node000010" title=" " alt="" coords="751,183,908,223"/>
+<area shape="poly" id="edge10_Node000002_Node000010" title=" " alt="" coords="507,133,736,180,735,185,506,138"/>
+<area shape="poly" id="edge7_Node000007_Node000005" title=" " alt="" coords="586,226,477,275,475,270,583,221"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="529,271,655,312"/>
+<area shape="poly" id="edge8_Node000007_Node000008" title=" " alt="" coords="622,225,608,258,604,256,617,223"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="679,271,804,312"/>
+<area shape="poly" id="edge9_Node000007_Node000009" title=" " alt="" coords="655,222,705,260,702,264,652,226"/>
+</map>

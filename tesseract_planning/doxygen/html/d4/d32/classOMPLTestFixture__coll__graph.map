@@ -1,0 +1,15 @@
+<map id="OMPLTestFixture&lt; Configurator &gt;" name="OMPLTestFixture&lt; Configurator &gt;">
+<area shape="rect" id="Node000001" title=" " alt="" coords="850,55,1066,80"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="578,5,670,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="686,24,827,45,870,51,869,57,826,50,685,29"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="525,55,722,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="738,65,850,65,850,70,738,70"/>
+<area shape="rect" id="Node000004" href="$dd/dd3/classtesseract__planning_1_1OMPLMotionPlanner.html" title="This planner is intended to provide an easy to use interface to OMPL for freespace planning...." alt="" coords="550,105,698,145"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="713,107,879,78,879,84,714,112"/>
+<area shape="rect" id="Node000005" href="$dd/d5f/classtesseract__planning_1_1MotionPlanner.html" title=" " alt="" coords="345,105,476,145"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="491,122,549,122,549,128,491,128"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="178,112,255,138"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="271,122,345,122,345,128,271,128"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="5,105,129,145"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="144,122,178,122,178,128,144,128"/>
+</map>

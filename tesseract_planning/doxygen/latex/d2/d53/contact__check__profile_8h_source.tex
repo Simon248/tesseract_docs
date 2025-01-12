@@ -1,0 +1,42 @@
+\doxysection{contact\+\_\+check\+\_\+profile.\+h}
+\hypertarget{contact__check__profile_8h_source}{}\label{contact__check__profile_8h_source}\index{tesseract\_task\_composer/planning/include/tesseract\_task\_composer/planning/profiles/contact\_check\_profile.h@{tesseract\_task\_composer/planning/include/tesseract\_task\_composer/planning/profiles/contact\_check\_profile.h}}
+\mbox{\hyperlink{contact__check__profile_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00026\ \textcolor{preprocessor}{\#ifndef\ TESSERACT\_TASK\_COMPOSER\_CONTACT\_CHECK\_PROFILE\_H}}
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#define\ TESSERACT\_TASK\_COMPOSER\_CONTACT\_CHECK\_PROFILE\_H}}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#include\ <tesseract\_common/macros.h>}}
+\DoxyCodeLine{00030\ TESSERACT\_COMMON\_IGNORE\_WARNINGS\_PUSH}
+\DoxyCodeLine{00031\ \textcolor{preprocessor}{\#include\ <memory>}}
+\DoxyCodeLine{00032\ \mbox{\hyperlink{namespaceTESSERACT__COMMON__IGNORE__WARNINGS__POP}{TESSERACT\_COMMON\_IGNORE\_WARNINGS\_POP}}}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \textcolor{preprocessor}{\#include\ <tesseract\_collision/core/types.h>}}
+\DoxyCodeLine{00035\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{profile_8h}{tesseract\_command\_language/profile.h}}>}}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacetesseract__planning}{tesseract\_planning}}}
+\DoxyCodeLine{00038\ \{}
+\DoxyCodeLine{00039\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structtesseract__planning_1_1ContactCheckProfile}{ContactCheckProfile}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classtesseract__planning_1_1Profile}{Profile}}}
+\DoxyCodeLine{00040\ \{}
+\DoxyCodeLine{00041\ \ \ \textcolor{keyword}{using\ }\mbox{\hyperlink{structtesseract__planning_1_1ContactCheckProfile_ad7fa7cf037d3a6583d7233d2b9861fe5}{Ptr}}\ =\ std::shared\_ptr<ContactCheckProfile>;}
+\DoxyCodeLine{00042\ \ \ \textcolor{keyword}{using\ }\mbox{\hyperlink{structtesseract__planning_1_1ContactCheckProfile_a54ab4acdd3c6386d57c4b228f908d393}{ConstPtr}}\ =\ std::shared\_ptr<const\ ContactCheckProfile>;}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ \ \ \mbox{\hyperlink{structtesseract__planning_1_1ContactCheckProfile_ac269c2f1aa10a971a3b59e0f34e2d116}{ContactCheckProfile}}();}
+\DoxyCodeLine{00045\ \ \ \mbox{\hyperlink{structtesseract__planning_1_1ContactCheckProfile_ac269c2f1aa10a971a3b59e0f34e2d116}{ContactCheckProfile}}(\textcolor{keywordtype}{double}\ \mbox{\hyperlink{ompl__planner__tests_8cpp_ad4614839bb63e579d5ebd9c2324dca9f}{longest\_valid\_segment\_length}},\ \textcolor{keywordtype}{double}\ contact\_distance);}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00051\ \ \ \textcolor{keyword}{static}\ std::size\_t\ \mbox{\hyperlink{structtesseract__planning_1_1ContactCheckProfile_a5fcee12950a6905ad701f7e610610abf}{getStaticKey}}();}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00054\ \ \ tesseract\_collision::CollisionCheckConfig\ \mbox{\hyperlink{structtesseract__planning_1_1ContactCheckProfile_a6be50113444231bf821037b7af2efa43}{config}};}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00056\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00057\ \ \ \textcolor{keyword}{friend}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{structtesseract__planning_1_1ContactCheckProfile_ac98d07dd8f7b70e16ccb9a01abf56b9c}{boost::serialization::access}};}
+\DoxyCodeLine{00058\ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{class}\ Archive>}
+\DoxyCodeLine{00059\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structtesseract__planning_1_1ContactCheckProfile_a761194521b69e6e7f215216700eede48}{serialize}}(Archive\&,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int});\ \ \textcolor{comment}{//\ NOLINT}}
+\DoxyCodeLine{00060\ \};}
+\DoxyCodeLine{00061\ \}\ \ \textcolor{comment}{//\ namespace\ tesseract\_planning}}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00063\ BOOST\_CLASS\_EXPORT\_KEY(\mbox{\hyperlink{structtesseract__planning_1_1ContactCheckProfile}{tesseract\_planning::ContactCheckProfile}})}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00065\ \textcolor{preprocessor}{\#endif\ \ }\textcolor{comment}{//\ TESSERACT\_TASK\_COMPOSER\_CONTACT\_CHECK\_PROFILE\_H}}
+
+\end{DoxyCode}

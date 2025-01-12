@@ -1,0 +1,43 @@
+\doxysection{iterative\+\_\+spline\+\_\+parameterization\+\_\+profile.\+h}
+\hypertarget{iterative__spline__parameterization__profile_8h_source}{}\label{iterative__spline__parameterization__profile_8h_source}\index{tesseract\_task\_composer/planning/include/tesseract\_task\_composer/planning/profiles/iterative\_spline\_parameterization\_profile.h@{tesseract\_task\_composer/planning/include/tesseract\_task\_composer/planning/profiles/iterative\_spline\_parameterization\_profile.h}}
+\mbox{\hyperlink{iterative__spline__parameterization__profile_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00026\ \textcolor{preprocessor}{\#ifndef\ TESSERACT\_TASK\_COMPOSER\_ITERATIVE\_SPLINE\_PARAMETERIZATION\_PROFILE\_H}}
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#define\ TESSERACT\_TASK\_COMPOSER\_ITERATIVE\_SPLINE\_PARAMETERIZATION\_PROFILE\_H}}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#include\ <tesseract\_common/macros.h>}}
+\DoxyCodeLine{00030\ TESSERACT\_COMMON\_IGNORE\_WARNINGS\_PUSH}
+\DoxyCodeLine{00031\ \textcolor{preprocessor}{\#include\ <memory>}}
+\DoxyCodeLine{00032\ \mbox{\hyperlink{namespaceTESSERACT__COMMON__IGNORE__WARNINGS__POP}{TESSERACT\_COMMON\_IGNORE\_WARNINGS\_POP}}}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{profile_8h}{tesseract\_command\_language/profile.h}}>}}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacetesseract__planning}{tesseract\_planning}}}
+\DoxyCodeLine{00037\ \{}
+\DoxyCodeLine{00038\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structtesseract__planning_1_1IterativeSplineParameterizationProfile}{IterativeSplineParameterizationProfile}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classtesseract__planning_1_1Profile}{Profile}}}
+\DoxyCodeLine{00039\ \{}
+\DoxyCodeLine{00040\ \ \ \textcolor{keyword}{using\ }\mbox{\hyperlink{structtesseract__planning_1_1IterativeSplineParameterizationProfile_a52fea0b0e87283a083b8a3b12170a576}{Ptr}}\ =\ std::shared\_ptr<IterativeSplineParameterizationProfile>;}
+\DoxyCodeLine{00041\ \ \ \textcolor{keyword}{using\ }\mbox{\hyperlink{structtesseract__planning_1_1IterativeSplineParameterizationProfile_ad8b06635b63e3acfad61bed7b9730f94}{ConstPtr}}\ =\ std::shared\_ptr<const\ IterativeSplineParameterizationProfile>;}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ \ \ \mbox{\hyperlink{structtesseract__planning_1_1IterativeSplineParameterizationProfile_a97d4cba8a23526e4bab6c83d943db37f}{IterativeSplineParameterizationProfile}}();}
+\DoxyCodeLine{00044\ \ \ \mbox{\hyperlink{structtesseract__planning_1_1IterativeSplineParameterizationProfile_a97d4cba8a23526e4bab6c83d943db37f}{IterativeSplineParameterizationProfile}}(\textcolor{keywordtype}{double}\ \mbox{\hyperlink{structtesseract__planning_1_1IterativeSplineParameterizationProfile_a308d7c08bb7c3b024103571c3cd42241}{max\_velocity\_scaling\_factor}},\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{structtesseract__planning_1_1IterativeSplineParameterizationProfile_a2a2895299b9d49820d70515a2e040214}{max\_acceleration\_scaling\_factor}});}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00050\ \ \ \textcolor{keyword}{static}\ std::size\_t\ \mbox{\hyperlink{structtesseract__planning_1_1IterativeSplineParameterizationProfile_a329ad6de77bb2fb7d99a14b2607d3999}{getStaticKey}}();}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00053\ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{structtesseract__planning_1_1IterativeSplineParameterizationProfile_a308d7c08bb7c3b024103571c3cd42241}{max\_velocity\_scaling\_factor}}\{\ 1.0\ \};}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00056\ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{structtesseract__planning_1_1IterativeSplineParameterizationProfile_a2a2895299b9d49820d70515a2e040214}{max\_acceleration\_scaling\_factor}}\{\ 1.0\ \};}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00058\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00059\ \ \ \textcolor{keyword}{friend}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{structtesseract__planning_1_1IterativeSplineParameterizationProfile_ac98d07dd8f7b70e16ccb9a01abf56b9c}{boost::serialization::access}};}
+\DoxyCodeLine{00060\ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{class}\ Archive>}
+\DoxyCodeLine{00061\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structtesseract__planning_1_1IterativeSplineParameterizationProfile_a2b0fe9d69de40dc3d21646094b9bb368}{serialize}}(Archive\&,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int});\ \ \textcolor{comment}{//\ NOLINT}}
+\DoxyCodeLine{00062\ \};}
+\DoxyCodeLine{00063\ \}\ \ \textcolor{comment}{//\ namespace\ tesseract\_planning}}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00065\ BOOST\_CLASS\_EXPORT\_KEY(\mbox{\hyperlink{structtesseract__planning_1_1IterativeSplineParameterizationProfile}{tesseract\_planning::IterativeSplineParameterizationProfile}})}
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00067\ \textcolor{preprocessor}{\#endif\ \ }\textcolor{comment}{//\ TESSERACT\_TASK\_COMPOSER\_ITERATIVE\_SPLINE\_PARAMETERIZATION\_PROFILE\_H}}
+
+\end{DoxyCode}
