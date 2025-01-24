@@ -31,48 +31,47 @@
 \DoxyCodeLine{00051\ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ std::string\ \mbox{\hyperlink{classtesseract__planning_1_1DiscreteContactCheckTask_af3ffb001ea238b48d3f035b8524e84ff}{INPUT\_PROFILES\_PORT}};}
 \DoxyCodeLine{00052\ }
 \DoxyCodeLine{00053\ \ \ \textcolor{comment}{//\ Optional}}
-\DoxyCodeLine{00054\ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ std::string\ \mbox{\hyperlink{classtesseract__planning_1_1DiscreteContactCheckTask_a0ef826e526e497854e5308b2c1b83cf2}{INPUT\_MANIP\_INFO\_PORT}};}
-\DoxyCodeLine{00055\ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ std::string\ \mbox{\hyperlink{classtesseract__planning_1_1DiscreteContactCheckTask_aeef15496e00720ab2c1b05b0c9d76bfe}{OUTPUT\_CONTACT\_RESULTS\_PORT}};}
-\DoxyCodeLine{00056\ }
-\DoxyCodeLine{00057\ \ \ \textcolor{keyword}{using\ }\mbox{\hyperlink{classtesseract__planning_1_1DiscreteContactCheckTask_a0ce6363b71e0ca6a2be4b9897e56f79f}{Ptr}}\ =\ std::shared\_ptr<DiscreteContactCheckTask>;}
-\DoxyCodeLine{00058\ \ \ \textcolor{keyword}{using\ }\mbox{\hyperlink{classtesseract__planning_1_1DiscreteContactCheckTask_ab4ba8d655618c43491cf8f3afbf3c3cc}{ConstPtr}}\ =\ std::shared\_ptr<const\ DiscreteContactCheckTask>;}
-\DoxyCodeLine{00059\ \ \ \textcolor{keyword}{using\ }\mbox{\hyperlink{classtesseract__planning_1_1DiscreteContactCheckTask_abdd5f912f770e271c8737a7b31b10023}{UPtr}}\ =\ std::unique\_ptr<DiscreteContactCheckTask>;}
-\DoxyCodeLine{00060\ \ \ \textcolor{keyword}{using\ }\mbox{\hyperlink{classtesseract__planning_1_1DiscreteContactCheckTask_a89872455e596fe27dbdc07408a28eabb}{ConstUPtr}}\ =\ std::unique\_ptr<const\ DiscreteContactCheckTask>;}
-\DoxyCodeLine{00061\ }
-\DoxyCodeLine{00062\ \ \ \mbox{\hyperlink{classtesseract__planning_1_1DiscreteContactCheckTask}{DiscreteContactCheckTask}}();}
-\DoxyCodeLine{00063\ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{classtesseract__planning_1_1DiscreteContactCheckTask}{DiscreteContactCheckTask}}(std::string\ \mbox{\hyperlink{tesseract__task__composer__core__unit_8cpp_a9b45b3e13bd9167aab02e17e08916231}{name}},}
-\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::string\ input\_program\_key,}
-\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::string\ input\_environment\_key,}
-\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::string\ input\_profiles\_key,}
-\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ conditional\ =\ \textcolor{keyword}{true});}
-\DoxyCodeLine{00068\ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{classtesseract__planning_1_1DiscreteContactCheckTask}{DiscreteContactCheckTask}}(std::string\ \mbox{\hyperlink{tesseract__task__composer__core__unit_8cpp_a9b45b3e13bd9167aab02e17e08916231}{name}},}
-\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ YAML::Node\&\ \mbox{\hyperlink{tesseract__task__composer__core__unit_8cpp_a01d92a800904faa16b8c1c1372c40fb3}{config}},}
-\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerPluginFactory}{TaskComposerPluginFactory}}\&\ plugin\_factory);}
-\DoxyCodeLine{00071\ }
-\DoxyCodeLine{00072\ \ \ \mbox{\hyperlink{classtesseract__planning_1_1DiscreteContactCheckTask_afc42ea1db4cdf77a1b1e78cdd19bcdbf}{\string~DiscreteContactCheckTask}}()\ \textcolor{keyword}{override}\ =\ \textcolor{keywordflow}{default};}
-\DoxyCodeLine{00073\ \ \ \mbox{\hyperlink{classtesseract__planning_1_1DiscreteContactCheckTask_a9f7d2e992708d34ea9ac89267fc50e65}{DiscreteContactCheckTask}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classtesseract__planning_1_1DiscreteContactCheckTask}{DiscreteContactCheckTask}}\&)\ =\ \textcolor{keyword}{delete};}
-\DoxyCodeLine{00074\ \ \ \mbox{\hyperlink{classtesseract__planning_1_1DiscreteContactCheckTask}{DiscreteContactCheckTask}}\&\ \mbox{\hyperlink{classtesseract__planning_1_1DiscreteContactCheckTask_a9a191a8b63b7308f4c4e088be5570800}{operator=}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classtesseract__planning_1_1DiscreteContactCheckTask}{DiscreteContactCheckTask}}\&)\ =\ \textcolor{keyword}{delete};}
-\DoxyCodeLine{00075\ \ \ \mbox{\hyperlink{classtesseract__planning_1_1DiscreteContactCheckTask_a26ea26912c2b35fa18e6e6f71ed74053}{DiscreteContactCheckTask}}(\mbox{\hyperlink{classtesseract__planning_1_1DiscreteContactCheckTask}{DiscreteContactCheckTask}}\&\&)\ =\ \textcolor{keyword}{delete};}
-\DoxyCodeLine{00076\ \ \ \mbox{\hyperlink{classtesseract__planning_1_1DiscreteContactCheckTask}{DiscreteContactCheckTask}}\&\ \mbox{\hyperlink{classtesseract__planning_1_1DiscreteContactCheckTask_af1cd7aced4f3ba7d8de7e76781b4cc8b}{operator=}}(\mbox{\hyperlink{classtesseract__planning_1_1DiscreteContactCheckTask}{DiscreteContactCheckTask}}\&\&)\ =\ \textcolor{keyword}{delete};}
-\DoxyCodeLine{00077\ }
-\DoxyCodeLine{00078\ \ \ \textcolor{keywordtype}{bool}\ operator==(\textcolor{keyword}{const}\ \mbox{\hyperlink{classtesseract__planning_1_1DiscreteContactCheckTask}{DiscreteContactCheckTask}}\&\ rhs)\ \textcolor{keyword}{const};}
-\DoxyCodeLine{00079\ \ \ \textcolor{keywordtype}{bool}\ operator!=(\textcolor{keyword}{const}\ \mbox{\hyperlink{classtesseract__planning_1_1DiscreteContactCheckTask}{DiscreteContactCheckTask}}\&\ rhs)\ \textcolor{keyword}{const};}
-\DoxyCodeLine{00080\ }
-\DoxyCodeLine{00081\ \textcolor{keyword}{protected}:}
-\DoxyCodeLine{00082\ \ \ \textcolor{keyword}{friend}\ \textcolor{keyword}{struct\ }tesseract\_common::Serialization;}
-\DoxyCodeLine{00083\ \ \ \textcolor{keyword}{friend}\ \textcolor{keyword}{class\ }boost::serialization::access;}
-\DoxyCodeLine{00084\ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{class}\ Archive>}
-\DoxyCodeLine{00085\ \ \ \textcolor{keywordtype}{void}\ serialize(Archive\&\ ar,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ version);\ \ \textcolor{comment}{//\ NOLINT}}
-\DoxyCodeLine{00086\ }
-\DoxyCodeLine{00087\ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{structtesseract__planning_1_1TaskComposerNodePorts}{TaskComposerNodePorts}}\ ports();}
-\DoxyCodeLine{00088\ }
-\DoxyCodeLine{00089\ \ \ std::unique\_ptr<TaskComposerNodeInfo>}
-\DoxyCodeLine{00090\ \ \ runImpl(\mbox{\hyperlink{classtesseract__planning_1_1TaskComposerContext}{TaskComposerContext}}\&\ \mbox{\hyperlink{tesseract__task__composer__core__unit_8cpp_adf0dd2db07cdbb966d6e385d3cd2605c}{context}},\ \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerNode_a51670db70ccba1ce21a77a5448e474d7}{OptionalTaskComposerExecutor}}\ \mbox{\hyperlink{tesseract__task__composer__taskflow__unit_8cpp_ab85065e5a325fc5bf8675e6c55a3e72f}{executor}}\ =\ std::nullopt)\ \textcolor{keyword}{const}\ \textcolor{keyword}{override}\ \textcolor{keyword}{final};}
-\DoxyCodeLine{00091\ \};}
-\DoxyCodeLine{00092\ }
-\DoxyCodeLine{00093\ \}\ \ \textcolor{comment}{//\ namespace\ tesseract\_planning}}
-\DoxyCodeLine{00094\ }
-\DoxyCodeLine{00095\ BOOST\_CLASS\_EXPORT\_KEY(\mbox{\hyperlink{classtesseract__planning_1_1DiscreteContactCheckTask}{tesseract\_planning::DiscreteContactCheckTask}})}
-\DoxyCodeLine{00096\ \textcolor{preprocessor}{\#endif\ \ }\textcolor{comment}{//\ TESSERACT\_TASK\_COMPOSER\_DISCRETE\_CONTACT\_CHECK\_TASK\_H}}
+\DoxyCodeLine{00054\ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ std::string\ \mbox{\hyperlink{classtesseract__planning_1_1DiscreteContactCheckTask_aeef15496e00720ab2c1b05b0c9d76bfe}{OUTPUT\_CONTACT\_RESULTS\_PORT}};}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00056\ \ \ \textcolor{keyword}{using\ }\mbox{\hyperlink{classtesseract__planning_1_1DiscreteContactCheckTask_a0ce6363b71e0ca6a2be4b9897e56f79f}{Ptr}}\ =\ std::shared\_ptr<DiscreteContactCheckTask>;}
+\DoxyCodeLine{00057\ \ \ \textcolor{keyword}{using\ }\mbox{\hyperlink{classtesseract__planning_1_1DiscreteContactCheckTask_ab4ba8d655618c43491cf8f3afbf3c3cc}{ConstPtr}}\ =\ std::shared\_ptr<const\ DiscreteContactCheckTask>;}
+\DoxyCodeLine{00058\ \ \ \textcolor{keyword}{using\ }\mbox{\hyperlink{classtesseract__planning_1_1DiscreteContactCheckTask_abdd5f912f770e271c8737a7b31b10023}{UPtr}}\ =\ std::unique\_ptr<DiscreteContactCheckTask>;}
+\DoxyCodeLine{00059\ \ \ \textcolor{keyword}{using\ }\mbox{\hyperlink{classtesseract__planning_1_1DiscreteContactCheckTask_a89872455e596fe27dbdc07408a28eabb}{ConstUPtr}}\ =\ std::unique\_ptr<const\ DiscreteContactCheckTask>;}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00061\ \ \ \mbox{\hyperlink{classtesseract__planning_1_1DiscreteContactCheckTask}{DiscreteContactCheckTask}}();}
+\DoxyCodeLine{00062\ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{classtesseract__planning_1_1DiscreteContactCheckTask}{DiscreteContactCheckTask}}(std::string\ \mbox{\hyperlink{tesseract__task__composer__core__unit_8cpp_a9b45b3e13bd9167aab02e17e08916231}{name}},}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::string\ input\_program\_key,}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::string\ input\_environment\_key,}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::string\ input\_profiles\_key,}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ conditional\ =\ \textcolor{keyword}{true});}
+\DoxyCodeLine{00067\ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{classtesseract__planning_1_1DiscreteContactCheckTask}{DiscreteContactCheckTask}}(std::string\ \mbox{\hyperlink{tesseract__task__composer__core__unit_8cpp_a9b45b3e13bd9167aab02e17e08916231}{name}},}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ YAML::Node\&\ \mbox{\hyperlink{tesseract__task__composer__core__unit_8cpp_a01d92a800904faa16b8c1c1372c40fb3}{config}},}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerPluginFactory}{TaskComposerPluginFactory}}\&\ plugin\_factory);}
+\DoxyCodeLine{00070\ }
+\DoxyCodeLine{00071\ \ \ \mbox{\hyperlink{classtesseract__planning_1_1DiscreteContactCheckTask_afc42ea1db4cdf77a1b1e78cdd19bcdbf}{\string~DiscreteContactCheckTask}}()\ \textcolor{keyword}{override}\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00072\ \ \ \mbox{\hyperlink{classtesseract__planning_1_1DiscreteContactCheckTask_a9f7d2e992708d34ea9ac89267fc50e65}{DiscreteContactCheckTask}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classtesseract__planning_1_1DiscreteContactCheckTask}{DiscreteContactCheckTask}}\&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00073\ \ \ \mbox{\hyperlink{classtesseract__planning_1_1DiscreteContactCheckTask}{DiscreteContactCheckTask}}\&\ \mbox{\hyperlink{classtesseract__planning_1_1DiscreteContactCheckTask_a9a191a8b63b7308f4c4e088be5570800}{operator=}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classtesseract__planning_1_1DiscreteContactCheckTask}{DiscreteContactCheckTask}}\&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00074\ \ \ \mbox{\hyperlink{classtesseract__planning_1_1DiscreteContactCheckTask_a26ea26912c2b35fa18e6e6f71ed74053}{DiscreteContactCheckTask}}(\mbox{\hyperlink{classtesseract__planning_1_1DiscreteContactCheckTask}{DiscreteContactCheckTask}}\&\&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00075\ \ \ \mbox{\hyperlink{classtesseract__planning_1_1DiscreteContactCheckTask}{DiscreteContactCheckTask}}\&\ \mbox{\hyperlink{classtesseract__planning_1_1DiscreteContactCheckTask_af1cd7aced4f3ba7d8de7e76781b4cc8b}{operator=}}(\mbox{\hyperlink{classtesseract__planning_1_1DiscreteContactCheckTask}{DiscreteContactCheckTask}}\&\&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00077\ \ \ \textcolor{keywordtype}{bool}\ operator==(\textcolor{keyword}{const}\ \mbox{\hyperlink{classtesseract__planning_1_1DiscreteContactCheckTask}{DiscreteContactCheckTask}}\&\ rhs)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00078\ \ \ \textcolor{keywordtype}{bool}\ operator!=(\textcolor{keyword}{const}\ \mbox{\hyperlink{classtesseract__planning_1_1DiscreteContactCheckTask}{DiscreteContactCheckTask}}\&\ rhs)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00079\ }
+\DoxyCodeLine{00080\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00081\ \ \ \textcolor{keyword}{friend}\ \textcolor{keyword}{struct\ }tesseract\_common::Serialization;}
+\DoxyCodeLine{00082\ \ \ \textcolor{keyword}{friend}\ \textcolor{keyword}{class\ }boost::serialization::access;}
+\DoxyCodeLine{00083\ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{class}\ Archive>}
+\DoxyCodeLine{00084\ \ \ \textcolor{keywordtype}{void}\ serialize(Archive\&\ ar,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ version);\ \ \textcolor{comment}{//\ NOLINT}}
+\DoxyCodeLine{00085\ }
+\DoxyCodeLine{00086\ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{structtesseract__planning_1_1TaskComposerNodePorts}{TaskComposerNodePorts}}\ ports();}
+\DoxyCodeLine{00087\ }
+\DoxyCodeLine{00088\ \ \ std::unique\_ptr<TaskComposerNodeInfo>}
+\DoxyCodeLine{00089\ \ \ runImpl(\mbox{\hyperlink{classtesseract__planning_1_1TaskComposerContext}{TaskComposerContext}}\&\ \mbox{\hyperlink{tesseract__task__composer__core__unit_8cpp_adf0dd2db07cdbb966d6e385d3cd2605c}{context}},\ \mbox{\hyperlink{classtesseract__planning_1_1TaskComposerNode_a51670db70ccba1ce21a77a5448e474d7}{OptionalTaskComposerExecutor}}\ \mbox{\hyperlink{tesseract__task__composer__taskflow__unit_8cpp_ab85065e5a325fc5bf8675e6c55a3e72f}{executor}}\ =\ std::nullopt)\ \textcolor{keyword}{const}\ \textcolor{keyword}{override}\ \textcolor{keyword}{final};}
+\DoxyCodeLine{00090\ \};}
+\DoxyCodeLine{00091\ }
+\DoxyCodeLine{00092\ \}\ \ \textcolor{comment}{//\ namespace\ tesseract\_planning}}
+\DoxyCodeLine{00093\ }
+\DoxyCodeLine{00094\ BOOST\_CLASS\_EXPORT\_KEY(\mbox{\hyperlink{classtesseract__planning_1_1DiscreteContactCheckTask}{tesseract\_planning::DiscreteContactCheckTask}})}
+\DoxyCodeLine{00095\ \textcolor{preprocessor}{\#endif\ \ }\textcolor{comment}{//\ TESSERACT\_TASK\_COMPOSER\_DISCRETE\_CONTACT\_CHECK\_TASK\_H}}
 
 \end{DoxyCode}
